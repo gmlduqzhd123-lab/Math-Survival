@@ -4,6 +4,31 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>매쓰 서바이벌 2.1</title>
+  <meta name="description" content="수학으로 강해지는 나만의 모험 · 초등 1~6학년 수학 문제를 풀며 몬스터와 보스를 물리치는 서바이벌 게임" />
+  <meta name="theme-color" content="#15803d" />
+  <!-- 링크 공유 미리보기 (카카오톡·문자 등) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="엽쌤스쿨" />
+  <meta property="og:title" content="매쓰 서바이벌 2.1" />
+  <meta property="og:description" content="수학으로 강해지는 나만의 모험 · 초등 1~6학년 29개 단원, 캐릭터·무기·보스와 학습 결과 분석" />
+  <meta property="og:url" content="https://gmlduqzhd123-lab.github.io/Math-Survival/" />
+  <meta property="og:locale" content="ko_KR" />
+  <meta property="og:image" content="https://gmlduqzhd123-lab.github.io/Math-Survival/og-image.jpg" />
+  <meta property="og:image:secure_url" content="https://gmlduqzhd123-lab.github.io/Math-Survival/og-image.jpg" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="매쓰 서바이벌 2.1" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://gmlduqzhd123-lab.github.io/Math-Survival/og-image.jpg" />
+  <!-- 📱 앱처럼 설치 (홈 화면에 추가) -->
+  <link rel="manifest" href="./manifest.webmanifest" />
+  <link rel="icon" type="image/png" sizes="192x192" href="./icons/icon-192.png" />
+  <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-title" content="매쓰 서바이벌" />
+  <script src="./ys-install.js"></script>
   <link rel="stylesheet" href="./src/original.css"><link rel="stylesheet" href="./src/v2.css"><link rel="stylesheet" href="./src/layout.css">
 </head>
 <body>
@@ -44,7 +69,7 @@
 
     <section id="startPanel" class="panel">
       <div class="card">
-        <h1>🌍 매쓰 서바이벌 <span class="edition">2.1</span></h1>
+        <div class="titleRow"><h1>🌍 매쓰 서바이벌 <span class="edition">2.1</span></h1><button type="button" class="installChip" data-ys-install>📲 앱 설치</button></div>
         <div class="subtitle">
           수학으로 강해지는 나만의 모험. 정답 구슬을 찾고, 귀여운 친구와 함께 세 개의 월드를 탐험하세요.
         </div>
@@ -106,6 +131,7 @@
         <p class="small">
           큰 맵에서는 캐릭터가 움직이면 화면이 따라갑니다. 정답 구슬과 아이템도 캐릭터 주변에 등장하므로 계속 이동하며 문제를 풀 수 있습니다.
         </p>
+        <p class="small copyright">© 2026 엽쌤. All rights reserved. · <a href="https://gmlduqzhd123-lab.github.io/YScode/">엽쌤의 다른 앱 보기 →</a></p>
       </div>
     </section>
 
@@ -136,5 +162,11 @@
   </div>
 
   <script type="module" src="./src/main.js"></script>
+  <script>
+  // 📱 오프라인 열기 (서비스 워커) — 인터넷이 끊겨도 한 번 열어 본 게임은 다시 열림
+  if ('serviceWorker' in navigator && location.protocol.indexOf('http') === 0) {
+    window.addEventListener('load', function () { navigator.serviceWorker.register('sw.js').catch(function () { /* 설치·오프라인 기능만 빠지고 게임은 그대로 동작 */ }); });
+  }
+  </script>
 </body>
 </html>

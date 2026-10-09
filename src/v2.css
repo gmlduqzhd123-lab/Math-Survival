@@ -35,3 +35,11 @@ body:not(.game-running) #weaponInfo,body:not(.game-running) #missionInfo,body:no
  #missionInfo{bottom:130px;left:12px;max-width:70vw;font-size:10px;padding:4px}#weaponInfo{bottom:6px;left:130px;right:88px;max-width:none;font-size:9px;padding:4px;z-index:4}#activeItems{display:none}#toast{bottom:245px;font-size:11px}#achievementPop{top:236px;font-size:11px}.resultStats{grid-template-columns:repeat(2,1fr)}.domainResult{gap:6px;font-size:10px}.domainResult progress{width:70px}.row select{width:100%;flex-basis:100%}.row #startBtn,.row #muteBtn{flex-basis:100%}
 }
 @media(max-height:550px) and (orientation:landscape){#wrap{padding:110px 8px 65px}canvas{max-height:calc(100dvh - 180px)}#questionBox{top:90px;width:50vw;padding:5px}#questionText{font-size:17px}#questionSub{display:none}#hud{display:flex}.hudBox{font-size:10px}#playControls,#mainMenuBtn,#quitGameBtn{top:43px}#answerAccess{bottom:35px;width:50vw}#explanation{bottom:77px;width:55vw}#missionInfo{bottom:10px}#weaponInfo{display:none}#bossHUD{top:142px;width:40vw}#skillBtn{bottom:90px}#joystickZone{width:80px;height:80px}#toast{bottom:110px}}
+/* 📲 앱 설치 버튼과 하단 문구 */
+.titleRow{display:flex;align-items:center;justify-content:space-between;gap:10px 16px;flex-wrap:wrap;margin-bottom:10px}
+.titleRow h1{margin:0}
+.installChip{flex:none;width:auto;margin:0;padding:9px 16px;border-radius:999px;border:1px solid #2f6b55;background:#2f6b55;color:#fff;font:inherit;font-size:15px;font-weight:800;cursor:pointer;box-shadow:0 6px 16px #244e4826}
+.installChip:hover{background:#245645}
+.copyright{margin-top:6px}
+.copyright a{color:inherit;text-decoration:underline;text-underline-offset:3px}
+@media (max-width:520px){.installChip{padding:7px 12px;font-size:13px}}
