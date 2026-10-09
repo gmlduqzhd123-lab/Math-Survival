@@ -1,0 +1,2874 @@
+{
+  "schemaVersion": 2,
+  "records": [
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-09T03:43:04.964Z",
+      "config": {
+        "grade": 2
+      },
+      "answers": [
+        {
+          "id": "x",
+          "unit": "g2-add",
+          "level": 2,
+          "text": "1+2",
+          "answer": "3",
+          "selected": "3",
+          "correct": true
+        }
+      ],
+      "accuracy": 100,
+      "sessionId": "legacy-0-2026-10-09T03:43:04.964Z",
+      "outcome": "legacy",
+      "legacy": true
+    },
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-09T03:43:04.964Z",
+      "config": {
+        "grade": 2
+      },
+      "answers": [
+        {
+          "id": "x",
+          "unit": "g2-add",
+          "level": 2,
+          "text": "1+2",
+          "answer": "3",
+          "selected": "3",
+          "correct": true
+        }
+      ],
+      "accuracy": 100,
+      "sessionId": "legacy-1-2026-10-09T03:43:04.964Z",
+      "outcome": "legacy",
+      "legacy": true
+    },
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-09T03:43:04.964Z",
+      "config": {
+        "grade": 2
+      },
+      "answers": [
+        {
+          "id": "x",
+          "unit": "g2-add",
+          "level": 2,
+          "text": "1+2",
+          "answer": "3",
+          "selected": "3",
+          "correct": true
+        }
+      ],
+      "accuracy": 100,
+      "sessionId": "legacy-2-2026-10-09T03:43:04.964Z",
+      "outcome": "legacy",
+      "legacy": true
+    },
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-09T03:43:04.964Z",
+      "config": {
+        "grade": 2
+      },
+      "answers": [
+        {
+          "id": "x",
+          "unit": "g2-add",
+          "level": 2,
+          "text": "1+2",
+          "answer": "3",
+          "selected": "3",
+          "correct": true
+        }
+      ],
+      "accuracy": 100,
+      "sessionId": "legacy-3-2026-10-09T03:43:04.964Z",
+      "outcome": "legacy",
+      "legacy": true
+    },
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-09T03:43:04.964Z",
+      "config": {
+        "grade": 2
+      },
+      "answers": [
+        {
+          "id": "x",
+          "unit": "g2-add",
+          "level": 2,
+          "text": "1+2",
+          "answer": "3",
+          "selected": "3",
+          "correct": true
+        }
+      ],
+      "accuracy": 100,
+      "sessionId": "legacy-4-2026-10-09T03:43:04.964Z",
+      "outcome": "legacy",
+      "legacy": true
+    },
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-09T03:43:04.964Z",
+      "config": {
+        "grade": 2
+      },
+      "answers": [
+        {
+          "id": "x",
+          "unit": "g2-add",
+          "level": 2,
+          "text": "1+2",
+          "answer": "3",
+          "selected": "3",
+          "correct": true
+        }
+      ],
+      "accuracy": 100,
+      "sessionId": "legacy-5-2026-10-09T03:43:04.964Z",
+      "outcome": "legacy",
+      "legacy": true
+    },
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-09T03:43:04.964Z",
+      "config": {
+        "grade": 2
+      },
+      "answers": [
+        {
+          "id": "x",
+          "unit": "g2-add",
+          "level": 2,
+          "text": "1+2",
+          "answer": "3",
+          "selected": "3",
+          "correct": true
+        }
+      ],
+      "accuracy": 100,
+      "sessionId": "legacy-6-2026-10-09T03:43:04.964Z",
+      "outcome": "legacy",
+      "legacy": true
+    },
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-09T03:43:04.964Z",
+      "config": {
+        "grade": 2
+      },
+      "answers": [
+        {
+          "id": "x",
+          "unit": "g2-add",
+          "level": 2,
+          "text": "1+2",
+          "answer": "3",
+          "selected": "3",
+          "correct": true
+        }
+      ],
+      "accuracy": 100,
+      "sessionId": "legacy-7-2026-10-09T03:43:04.964Z",
+      "outcome": "legacy",
+      "legacy": true
+    },
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-09T03:43:04.964Z",
+      "config": {
+        "grade": 2
+      },
+      "answers": [
+        {
+          "id": "x",
+          "unit": "g2-add",
+          "level": 2,
+          "text": "1+2",
+          "answer": "3",
+          "selected": "3",
+          "correct": true
+        }
+      ],
+      "accuracy": 100,
+      "sessionId": "legacy-8-2026-10-09T03:43:04.964Z",
+      "outcome": "legacy",
+      "legacy": true
+    },
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-09T03:43:04.964Z",
+      "config": {
+        "grade": 2
+      },
+      "answers": [
+        {
+          "id": "x",
+          "unit": "g2-add",
+          "level": 2,
+          "text": "1+2",
+          "answer": "3",
+          "selected": "3",
+          "correct": true
+        }
+      ],
+      "accuracy": 100,
+      "sessionId": "legacy-9-2026-10-09T03:43:04.964Z",
+      "outcome": "legacy",
+      "legacy": true
+    },
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-09T03:43:04.964Z",
+      "config": {
+        "grade": 2
+      },
+      "answers": [
+        {
+          "id": "x",
+          "unit": "g2-add",
+          "level": 2,
+          "text": "1+2",
+          "answer": "3",
+          "selected": "3",
+          "correct": true
+        }
+      ],
+      "accuracy": 100,
+      "sessionId": "legacy-10-2026-10-09T03:43:04.964Z",
+      "outcome": "legacy",
+      "legacy": true
+    },
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-09T03:43:04.964Z",
+      "config": {
+        "grade": 2
+      },
+      "answers": [
+        {
+          "id": "x",
+          "unit": "g2-add",
+          "level": 2,
+          "text": "1+2",
+          "answer": "3",
+          "selected": "3",
+          "correct": true
+        }
+      ],
+      "accuracy": 100,
+      "sessionId": "legacy-11-2026-10-09T03:43:04.964Z",
+      "outcome": "legacy",
+      "legacy": true
+    },
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-09T03:43:04.964Z",
+      "config": {
+        "grade": 2
+      },
+      "answers": [
+        {
+          "id": "x",
+          "unit": "g2-add",
+          "level": 2,
+          "text": "1+2",
+          "answer": "3",
+          "selected": "3",
+          "correct": true
+        }
+      ],
+      "accuracy": 100,
+      "sessionId": "legacy-12-2026-10-09T03:43:04.964Z",
+      "outcome": "legacy",
+      "legacy": true
+    },
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-09T03:43:04.964Z",
+      "config": {
+        "grade": 2
+      },
+      "answers": [
+        {
+          "id": "x",
+          "unit": "g2-add",
+          "level": 2,
+          "text": "1+2",
+          "answer": "3",
+          "selected": "3",
+          "correct": true
+        }
+      ],
+      "accuracy": 100,
+      "sessionId": "legacy-13-2026-10-09T03:43:04.964Z",
+      "outcome": "legacy",
+      "legacy": true
+    },
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-09T03:43:04.964Z",
+      "config": {
+        "grade": 2
+      },
+      "answers": [
+        {
+          "id": "x",
+          "unit": "g2-add",
+          "level": 2,
+          "text": "1+2",
+          "answer": "3",
+          "selected": "3",
+          "correct": true
+        }
+      ],
+      "accuracy": 100,
+      "sessionId": "legacy-14-2026-10-09T03:43:04.964Z",
+      "outcome": "legacy",
+      "legacy": true
+    },
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-09T03:43:04.964Z",
+      "config": {
+        "grade": 2
+      },
+      "answers": [
+        {
+          "id": "x",
+          "unit": "g2-add",
+          "level": 2,
+          "text": "1+2",
+          "answer": "3",
+          "selected": "3",
+          "correct": true
+        }
+      ],
+      "accuracy": 100,
+      "sessionId": "legacy-15-2026-10-09T03:43:04.964Z",
+      "outcome": "legacy",
+      "legacy": true
+    },
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-09T03:43:04.964Z",
+      "config": {
+        "grade": 2
+      },
+      "answers": [
+        {
+          "id": "x",
+          "unit": "g2-add",
+          "level": 2,
+          "text": "1+2",
+          "answer": "3",
+          "selected": "3",
+          "correct": true
+        }
+      ],
+      "accuracy": 100,
+      "sessionId": "legacy-16-2026-10-09T03:43:04.964Z",
+      "outcome": "legacy",
+      "legacy": true
+    },
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-09T03:43:04.964Z",
+      "config": {
+        "grade": 2
+      },
+      "answers": [
+        {
+          "id": "x",
+          "unit": "g2-add",
+          "level": 2,
+          "text": "1+2",
+          "answer": "3",
+          "selected": "3",
+          "correct": true
+        }
+      ],
+      "accuracy": 100,
+      "sessionId": "legacy-17-2026-10-09T03:43:04.964Z",
+      "outcome": "legacy",
+      "legacy": true
+    },
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-09T03:43:04.964Z",
+      "config": {
+        "grade": 2
+      },
+      "answers": [
+        {
+          "id": "x",
+          "unit": "g2-add",
+          "level": 2,
+          "text": "1+2",
+          "answer": "3",
+          "selected": "3",
+          "correct": true
+        }
+      ],
+      "accuracy": 100,
+      "sessionId": "legacy-18-2026-10-09T03:43:04.964Z",
+      "outcome": "legacy",
+      "legacy": true
+    },
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-09T03:43:04.964Z",
+      "config": {
+        "grade": 2
+      },
+      "answers": [
+        {
+          "id": "x",
+          "unit": "g2-add",
+          "level": 2,
+          "text": "1+2",
+          "answer": "3",
+          "selected": "3",
+          "correct": true
+        }
+      ],
+      "accuracy": 100,
+      "sessionId": "legacy-19-2026-10-09T03:43:04.964Z",
+      "outcome": "legacy",
+      "legacy": true
+    },
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-09T03:43:04.964Z",
+      "config": {
+        "grade": 2
+      },
+      "answers": [
+        {
+          "id": "x",
+          "unit": "g2-add",
+          "level": 2,
+          "text": "1+2",
+          "answer": "3",
+          "selected": "3",
+          "correct": true
+        }
+      ],
+      "accuracy": 100,
+      "sessionId": "legacy-20-2026-10-09T03:43:04.964Z",
+      "outcome": "legacy",
+      "legacy": true
+    },
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-09T03:43:04.964Z",
+      "config": {
+        "grade": 2
+      },
+      "answers": [
+        {
+          "id": "x",
+          "unit": "g2-add",
+          "level": 2,
+          "text": "1+2",
+          "answer": "3",
+          "selected": "3",
+          "correct": true
+        }
+      ],
+      "accuracy": 100,
+      "sessionId": "legacy-21-2026-10-09T03:43:04.964Z",
+      "outcome": "legacy",
+      "legacy": true
+    },
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-09T03:43:04.964Z",
+      "config": {
+        "grade": 2
+      },
+      "answers": [
+        {
+          "id": "x",
+          "unit": "g2-add",
+          "level": 2,
+          "text": "1+2",
+          "answer": "3",
+          "selected": "3",
+          "correct": true
+        }
+      ],
+      "accuracy": 100,
+      "sessionId": "legacy-22-2026-10-09T03:43:04.964Z",
+      "outcome": "legacy",
+      "legacy": true
+    },
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-09T03:43:04.964Z",
+      "config": {
+        "grade": 2
+      },
+      "answers": [
+        {
+          "id": "x",
+          "unit": "g2-add",
+          "level": 2,
+          "text": "1+2",
+          "answer": "3",
+          "selected": "3",
+          "correct": true
+        }
+      ],
+      "accuracy": 100,
+      "sessionId": "legacy-23-2026-10-09T03:43:04.964Z",
+      "outcome": "legacy",
+      "legacy": true
+    },
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-09T03:43:04.964Z",
+      "config": {
+        "grade": 2
+      },
+      "answers": [
+        {
+          "id": "x",
+          "unit": "g2-add",
+          "level": 2,
+          "text": "1+2",
+          "answer": "3",
+          "selected": "3",
+          "correct": true
+        }
+      ],
+      "accuracy": 100,
+      "sessionId": "legacy-24-2026-10-09T03:43:04.964Z",
+      "outcome": "legacy",
+      "legacy": true
+    },
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-09T03:43:04.964Z",
+      "config": {
+        "grade": 2
+      },
+      "answers": [
+        {
+          "id": "x",
+          "unit": "g2-add",
+          "level": 2,
+          "text": "1+2",
+          "answer": "3",
+          "selected": "3",
+          "correct": true
+        }
+      ],
+      "accuracy": 100,
+      "sessionId": "legacy-25-2026-10-09T03:43:04.964Z",
+      "outcome": "legacy",
+      "legacy": true
+    },
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-09T03:43:04.964Z",
+      "config": {
+        "grade": 2
+      },
+      "answers": [
+        {
+          "id": "x",
+          "unit": "g2-add",
+          "level": 2,
+          "text": "1+2",
+          "answer": "3",
+          "selected": "3",
+          "correct": true
+        }
+      ],
+      "accuracy": 100,
+      "sessionId": "legacy-26-2026-10-09T03:43:04.964Z",
+      "outcome": "legacy",
+      "legacy": true
+    },
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-09T03:43:04.964Z",
+      "config": {
+        "grade": 2
+      },
+      "answers": [
+        {
+          "id": "x",
+          "unit": "g2-add",
+          "level": 2,
+          "text": "1+2",
+          "answer": "3",
+          "selected": "3",
+          "correct": true
+        }
+      ],
+      "accuracy": 100,
+      "sessionId": "legacy-27-2026-10-09T03:43:04.964Z",
+      "outcome": "legacy",
+      "legacy": true
+    },
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-09T03:43:04.964Z",
+      "config": {
+        "grade": 2
+      },
+      "answers": [
+        {
+          "id": "x",
+          "unit": "g2-add",
+          "level": 2,
+          "text": "1+2",
+          "answer": "3",
+          "selected": "3",
+          "correct": true
+        }
+      ],
+      "accuracy": 100,
+      "sessionId": "legacy-28-2026-10-09T03:43:04.964Z",
+      "outcome": "legacy",
+      "legacy": true
+    },
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-09T03:43:04.964Z",
+      "config": {
+        "grade": 2
+      },
+      "answers": [
+        {
+          "id": "x",
+          "unit": "g2-add",
+          "level": 2,
+          "text": "1+2",
+          "answer": "3",
+          "selected": "3",
+          "correct": true
+        }
+      ],
+      "accuracy": 100,
+      "sessionId": "legacy-29-2026-10-09T03:43:04.964Z",
+      "outcome": "legacy",
+      "legacy": true
+    },
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-09T03:43:04.964Z",
+      "config": {
+        "grade": 2
+      },
+      "answers": [
+        {
+          "id": "x",
+          "unit": "g2-add",
+          "level": 2,
+          "text": "1+2",
+          "answer": "3",
+          "selected": "3",
+          "correct": true
+        }
+      ],
+      "accuracy": 100,
+      "sessionId": "legacy-30-2026-10-09T03:43:04.964Z",
+      "outcome": "legacy",
+      "legacy": true
+    },
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-09T03:43:04.964Z",
+      "config": {
+        "grade": 2
+      },
+      "answers": [
+        {
+          "id": "x",
+          "unit": "g2-add",
+          "level": 2,
+          "text": "1+2",
+          "answer": "3",
+          "selected": "3",
+          "correct": true
+        }
+      ],
+      "accuracy": 100,
+      "sessionId": "legacy-31-2026-10-09T03:43:04.964Z",
+      "outcome": "legacy",
+      "legacy": true
+    },
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-09T03:43:04.964Z",
+      "config": {
+        "grade": 2
+      },
+      "answers": [
+        {
+          "id": "x",
+          "unit": "g2-add",
+          "level": 2,
+          "text": "1+2",
+          "answer": "3",
+          "selected": "3",
+          "correct": true
+        }
+      ],
+      "accuracy": 100,
+      "sessionId": "legacy-32-2026-10-09T03:43:04.964Z",
+      "outcome": "legacy",
+      "legacy": true
+    },
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-09T03:43:04.964Z",
+      "config": {
+        "grade": 2
+      },
+      "answers": [
+        {
+          "id": "x",
+          "unit": "g2-add",
+          "level": 2,
+          "text": "1+2",
+          "answer": "3",
+          "selected": "3",
+          "correct": true
+        }
+      ],
+      "accuracy": 100,
+      "sessionId": "legacy-33-2026-10-09T03:43:04.964Z",
+      "outcome": "legacy",
+      "legacy": true
+    },
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-09T03:43:04.964Z",
+      "config": {
+        "grade": 2
+      },
+      "answers": [
+        {
+          "id": "x",
+          "unit": "g2-add",
+          "level": 2,
+          "text": "1+2",
+          "answer": "3",
+          "selected": "3",
+          "correct": true
+        }
+      ],
+      "accuracy": 100,
+      "sessionId": "legacy-34-2026-10-09T03:43:04.964Z",
+      "outcome": "legacy",
+      "legacy": true
+    },
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-09T03:43:04.964Z",
+      "config": {
+        "grade": 2
+      },
+      "answers": [
+        {
+          "id": "x",
+          "unit": "g2-add",
+          "level": 2,
+          "text": "1+2",
+          "answer": "3",
+          "selected": "3",
+          "correct": true
+        }
+      ],
+      "accuracy": 100,
+      "sessionId": "legacy-35-2026-10-09T03:43:04.964Z",
+      "outcome": "legacy",
+      "legacy": true
+    },
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-09T03:43:04.964Z",
+      "config": {
+        "grade": 2
+      },
+      "answers": [
+        {
+          "id": "x",
+          "unit": "g2-add",
+          "level": 2,
+          "text": "1+2",
+          "answer": "3",
+          "selected": "3",
+          "correct": true
+        }
+      ],
+      "accuracy": 100,
+      "sessionId": "legacy-36-2026-10-09T03:43:04.964Z",
+      "outcome": "legacy",
+      "legacy": true
+    },
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-09T03:43:04.964Z",
+      "config": {
+        "grade": 2
+      },
+      "answers": [
+        {
+          "id": "x",
+          "unit": "g2-add",
+          "level": 2,
+          "text": "1+2",
+          "answer": "3",
+          "selected": "3",
+          "correct": true
+        }
+      ],
+      "accuracy": 100,
+      "sessionId": "legacy-37-2026-10-09T03:43:04.964Z",
+      "outcome": "legacy",
+      "legacy": true
+    },
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-09T03:43:04.964Z",
+      "config": {
+        "grade": 2
+      },
+      "answers": [
+        {
+          "id": "x",
+          "unit": "g2-add",
+          "level": 2,
+          "text": "1+2",
+          "answer": "3",
+          "selected": "3",
+          "correct": true
+        }
+      ],
+      "accuracy": 100,
+      "sessionId": "legacy-38-2026-10-09T03:43:04.964Z",
+      "outcome": "legacy",
+      "legacy": true
+    },
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-09T03:43:04.964Z",
+      "config": {
+        "grade": 2
+      },
+      "answers": [
+        {
+          "id": "x",
+          "unit": "g2-add",
+          "level": 2,
+          "text": "1+2",
+          "answer": "3",
+          "selected": "3",
+          "correct": true
+        }
+      ],
+      "accuracy": 100,
+      "sessionId": "legacy-39-2026-10-09T03:43:04.964Z",
+      "outcome": "legacy",
+      "legacy": true
+    },
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-09T03:43:04.964Z",
+      "config": {
+        "grade": 2
+      },
+      "answers": [
+        {
+          "id": "x",
+          "unit": "g2-add",
+          "level": 2,
+          "text": "1+2",
+          "answer": "3",
+          "selected": "3",
+          "correct": true
+        }
+      ],
+      "accuracy": 100,
+      "sessionId": "legacy-40-2026-10-09T03:43:04.964Z",
+      "outcome": "legacy",
+      "legacy": true
+    },
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-09T03:43:04.964Z",
+      "config": {
+        "grade": 2
+      },
+      "answers": [
+        {
+          "id": "x",
+          "unit": "g2-add",
+          "level": 2,
+          "text": "1+2",
+          "answer": "3",
+          "selected": "3",
+          "correct": true
+        }
+      ],
+      "accuracy": 100,
+      "sessionId": "legacy-41-2026-10-09T03:43:04.964Z",
+      "outcome": "legacy",
+      "legacy": true
+    },
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-09T03:43:04.964Z",
+      "config": {
+        "grade": 2
+      },
+      "answers": [
+        {
+          "id": "x",
+          "unit": "g2-add",
+          "level": 2,
+          "text": "1+2",
+          "answer": "3",
+          "selected": "3",
+          "correct": true
+        }
+      ],
+      "accuracy": 100,
+      "sessionId": "legacy-42-2026-10-09T03:43:04.964Z",
+      "outcome": "legacy",
+      "legacy": true
+    },
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-09T03:43:04.964Z",
+      "config": {
+        "grade": 2
+      },
+      "answers": [
+        {
+          "id": "x",
+          "unit": "g2-add",
+          "level": 2,
+          "text": "1+2",
+          "answer": "3",
+          "selected": "3",
+          "correct": true
+        }
+      ],
+      "accuracy": 100,
+      "sessionId": "legacy-43-2026-10-09T03:43:04.964Z",
+      "outcome": "legacy",
+      "legacy": true
+    },
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-09T03:43:04.964Z",
+      "config": {
+        "grade": 2
+      },
+      "answers": [
+        {
+          "id": "x",
+          "unit": "g2-add",
+          "level": 2,
+          "text": "1+2",
+          "answer": "3",
+          "selected": "3",
+          "correct": true
+        }
+      ],
+      "accuracy": 100,
+      "sessionId": "legacy-44-2026-10-09T03:43:04.964Z",
+      "outcome": "legacy",
+      "legacy": true
+    },
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-09T03:43:04.964Z",
+      "config": {
+        "grade": 2
+      },
+      "answers": [
+        {
+          "id": "x",
+          "unit": "g2-add",
+          "level": 2,
+          "text": "1+2",
+          "answer": "3",
+          "selected": "3",
+          "correct": true
+        }
+      ],
+      "accuracy": 100,
+      "sessionId": "legacy-45-2026-10-09T03:43:04.964Z",
+      "outcome": "legacy",
+      "legacy": true
+    },
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-09T03:43:04.964Z",
+      "config": {
+        "grade": 2
+      },
+      "answers": [
+        {
+          "id": "x",
+          "unit": "g2-add",
+          "level": 2,
+          "text": "1+2",
+          "answer": "3",
+          "selected": "3",
+          "correct": true
+        }
+      ],
+      "accuracy": 100,
+      "sessionId": "legacy-46-2026-10-09T03:43:04.964Z",
+      "outcome": "legacy",
+      "legacy": true
+    },
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-09T03:43:04.964Z",
+      "config": {
+        "grade": 2
+      },
+      "answers": [
+        {
+          "id": "x",
+          "unit": "g2-add",
+          "level": 2,
+          "text": "1+2",
+          "answer": "3",
+          "selected": "3",
+          "correct": true
+        }
+      ],
+      "accuracy": 100,
+      "sessionId": "legacy-47-2026-10-09T03:43:04.964Z",
+      "outcome": "legacy",
+      "legacy": true
+    },
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-09T03:43:04.964Z",
+      "config": {
+        "grade": 2
+      },
+      "answers": [
+        {
+          "id": "x",
+          "unit": "g2-add",
+          "level": 2,
+          "text": "1+2",
+          "answer": "3",
+          "selected": "3",
+          "correct": true
+        }
+      ],
+      "accuracy": 100,
+      "sessionId": "legacy-48-2026-10-09T03:43:04.964Z",
+      "outcome": "legacy",
+      "legacy": true
+    },
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-09T03:43:04.964Z",
+      "config": {
+        "grade": 2
+      },
+      "answers": [
+        {
+          "id": "x",
+          "unit": "g2-add",
+          "level": 2,
+          "text": "1+2",
+          "answer": "3",
+          "selected": "3",
+          "correct": true
+        }
+      ],
+      "accuracy": 100,
+      "sessionId": "legacy-49-2026-10-09T03:43:04.964Z",
+      "outcome": "legacy",
+      "legacy": true
+    },
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-09T03:43:04.964Z",
+      "config": {
+        "grade": 2
+      },
+      "answers": [
+        {
+          "id": "x",
+          "unit": "g2-add",
+          "level": 2,
+          "text": "1+2",
+          "answer": "3",
+          "selected": "3",
+          "correct": true
+        }
+      ],
+      "accuracy": 100,
+      "sessionId": "legacy-50-2026-10-09T03:43:04.964Z",
+      "outcome": "legacy",
+      "legacy": true
+    },
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-09T03:43:04.964Z",
+      "config": {
+        "grade": 2
+      },
+      "answers": [
+        {
+          "id": "x",
+          "unit": "g2-add",
+          "level": 2,
+          "text": "1+2",
+          "answer": "3",
+          "selected": "3",
+          "correct": true
+        }
+      ],
+      "accuracy": 100,
+      "sessionId": "legacy-51-2026-10-09T03:43:04.964Z",
+      "outcome": "legacy",
+      "legacy": true
+    },
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-09T03:43:04.964Z",
+      "config": {
+        "grade": 2
+      },
+      "answers": [
+        {
+          "id": "x",
+          "unit": "g2-add",
+          "level": 2,
+          "text": "1+2",
+          "answer": "3",
+          "selected": "3",
+          "correct": true
+        }
+      ],
+      "accuracy": 100,
+      "sessionId": "legacy-52-2026-10-09T03:43:04.964Z",
+      "outcome": "legacy",
+      "legacy": true
+    },
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-09T03:43:04.964Z",
+      "config": {
+        "grade": 2
+      },
+      "answers": [
+        {
+          "id": "x",
+          "unit": "g2-add",
+          "level": 2,
+          "text": "1+2",
+          "answer": "3",
+          "selected": "3",
+          "correct": true
+        }
+      ],
+      "accuracy": 100,
+      "sessionId": "legacy-53-2026-10-09T03:43:04.964Z",
+      "outcome": "legacy",
+      "legacy": true
+    },
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-09T03:43:04.964Z",
+      "config": {
+        "grade": 2
+      },
+      "answers": [
+        {
+          "id": "x",
+          "unit": "g2-add",
+          "level": 2,
+          "text": "1+2",
+          "answer": "3",
+          "selected": "3",
+          "correct": true
+        }
+      ],
+      "accuracy": 100,
+      "sessionId": "legacy-54-2026-10-09T03:43:04.964Z",
+      "outcome": "legacy",
+      "legacy": true
+    },
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-09T03:43:04.964Z",
+      "config": {
+        "grade": 2
+      },
+      "answers": [
+        {
+          "id": "x",
+          "unit": "g2-add",
+          "level": 2,
+          "text": "1+2",
+          "answer": "3",
+          "selected": "3",
+          "correct": true
+        }
+      ],
+      "accuracy": 100,
+      "sessionId": "legacy-55-2026-10-09T03:43:04.964Z",
+      "outcome": "legacy",
+      "legacy": true
+    },
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-09T03:43:04.964Z",
+      "config": {
+        "grade": 2
+      },
+      "answers": [
+        {
+          "id": "x",
+          "unit": "g2-add",
+          "level": 2,
+          "text": "1+2",
+          "answer": "3",
+          "selected": "3",
+          "correct": true
+        }
+      ],
+      "accuracy": 100,
+      "sessionId": "legacy-56-2026-10-09T03:43:04.964Z",
+      "outcome": "legacy",
+      "legacy": true
+    },
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-09T03:43:04.964Z",
+      "config": {
+        "grade": 2
+      },
+      "answers": [
+        {
+          "id": "x",
+          "unit": "g2-add",
+          "level": 2,
+          "text": "1+2",
+          "answer": "3",
+          "selected": "3",
+          "correct": true
+        }
+      ],
+      "accuracy": 100,
+      "sessionId": "legacy-57-2026-10-09T03:43:04.964Z",
+      "outcome": "legacy",
+      "legacy": true
+    },
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-09T03:43:04.964Z",
+      "config": {
+        "grade": 2
+      },
+      "answers": [
+        {
+          "id": "x",
+          "unit": "g2-add",
+          "level": 2,
+          "text": "1+2",
+          "answer": "3",
+          "selected": "3",
+          "correct": true
+        }
+      ],
+      "accuracy": 100,
+      "sessionId": "legacy-58-2026-10-09T03:43:04.964Z",
+      "outcome": "legacy",
+      "legacy": true
+    },
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-09T03:43:04.964Z",
+      "config": {
+        "grade": 2
+      },
+      "answers": [
+        {
+          "id": "x",
+          "unit": "g2-add",
+          "level": 2,
+          "text": "1+2",
+          "answer": "3",
+          "selected": "3",
+          "correct": true
+        }
+      ],
+      "accuracy": 100,
+      "sessionId": "legacy-59-2026-10-09T03:43:04.964Z",
+      "outcome": "legacy",
+      "legacy": true
+    },
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-09T03:43:04.964Z",
+      "config": {
+        "grade": 2
+      },
+      "answers": [
+        {
+          "id": "x",
+          "unit": "g2-add",
+          "level": 2,
+          "text": "1+2",
+          "answer": "3",
+          "selected": "3",
+          "correct": true
+        }
+      ],
+      "accuracy": 100,
+      "sessionId": "legacy-60-2026-10-09T03:43:04.964Z",
+      "outcome": "legacy",
+      "legacy": true
+    },
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-09T03:43:04.964Z",
+      "config": {
+        "grade": 2
+      },
+      "answers": [
+        {
+          "id": "x",
+          "unit": "g2-add",
+          "level": 2,
+          "text": "1+2",
+          "answer": "3",
+          "selected": "3",
+          "correct": true
+        }
+      ],
+      "accuracy": 100,
+      "sessionId": "legacy-61-2026-10-09T03:43:04.964Z",
+      "outcome": "legacy",
+      "legacy": true
+    },
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-09T03:43:04.964Z",
+      "config": {
+        "grade": 2
+      },
+      "answers": [
+        {
+          "id": "x",
+          "unit": "g2-add",
+          "level": 2,
+          "text": "1+2",
+          "answer": "3",
+          "selected": "3",
+          "correct": true
+        }
+      ],
+      "accuracy": 100,
+      "sessionId": "legacy-62-2026-10-09T03:43:04.964Z",
+      "outcome": "legacy",
+      "legacy": true
+    },
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-09T03:43:04.964Z",
+      "config": {
+        "grade": 2
+      },
+      "answers": [
+        {
+          "id": "x",
+          "unit": "g2-add",
+          "level": 2,
+          "text": "1+2",
+          "answer": "3",
+          "selected": "3",
+          "correct": true
+        }
+      ],
+      "accuracy": 100,
+      "sessionId": "legacy-63-2026-10-09T03:43:04.964Z",
+      "outcome": "legacy",
+      "legacy": true
+    },
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-09T03:43:04.964Z",
+      "config": {
+        "grade": 2
+      },
+      "answers": [
+        {
+          "id": "x",
+          "unit": "g2-add",
+          "level": 2,
+          "text": "1+2",
+          "answer": "3",
+          "selected": "3",
+          "correct": true
+        }
+      ],
+      "accuracy": 100,
+      "sessionId": "legacy-64-2026-10-09T03:43:04.964Z",
+      "outcome": "legacy",
+      "legacy": true
+    },
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-09T03:43:04.964Z",
+      "config": {
+        "grade": 2
+      },
+      "answers": [
+        {
+          "id": "x",
+          "unit": "g2-add",
+          "level": 2,
+          "text": "1+2",
+          "answer": "3",
+          "selected": "3",
+          "correct": true
+        }
+      ],
+      "accuracy": 100,
+      "sessionId": "legacy-65-2026-10-09T03:43:04.964Z",
+      "outcome": "legacy",
+      "legacy": true
+    },
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-09T03:43:04.964Z",
+      "config": {
+        "grade": 2
+      },
+      "answers": [
+        {
+          "id": "x",
+          "unit": "g2-add",
+          "level": 2,
+          "text": "1+2",
+          "answer": "3",
+          "selected": "3",
+          "correct": true
+        }
+      ],
+      "accuracy": 100,
+      "sessionId": "legacy-66-2026-10-09T03:43:04.964Z",
+      "outcome": "legacy",
+      "legacy": true
+    },
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-09T03:43:04.964Z",
+      "config": {
+        "grade": 2
+      },
+      "answers": [
+        {
+          "id": "x",
+          "unit": "g2-add",
+          "level": 2,
+          "text": "1+2",
+          "answer": "3",
+          "selected": "3",
+          "correct": true
+        }
+      ],
+      "accuracy": 100,
+      "sessionId": "legacy-67-2026-10-09T03:43:04.964Z",
+      "outcome": "legacy",
+      "legacy": true
+    },
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-09T03:43:04.964Z",
+      "config": {
+        "grade": 2
+      },
+      "answers": [
+        {
+          "id": "x",
+          "unit": "g2-add",
+          "level": 2,
+          "text": "1+2",
+          "answer": "3",
+          "selected": "3",
+          "correct": true
+        }
+      ],
+      "accuracy": 100,
+      "sessionId": "legacy-68-2026-10-09T03:43:04.964Z",
+      "outcome": "legacy",
+      "legacy": true
+    },
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-09T03:43:04.964Z",
+      "config": {
+        "grade": 2
+      },
+      "answers": [
+        {
+          "id": "x",
+          "unit": "g2-add",
+          "level": 2,
+          "text": "1+2",
+          "answer": "3",
+          "selected": "3",
+          "correct": true
+        }
+      ],
+      "accuracy": 100,
+      "sessionId": "legacy-69-2026-10-09T03:43:04.964Z",
+      "outcome": "legacy",
+      "legacy": true
+    },
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-09T03:43:04.964Z",
+      "config": {
+        "grade": 2
+      },
+      "answers": [
+        {
+          "id": "x",
+          "unit": "g2-add",
+          "level": 2,
+          "text": "1+2",
+          "answer": "3",
+          "selected": "3",
+          "correct": true
+        }
+      ],
+      "accuracy": 100,
+      "sessionId": "legacy-70-2026-10-09T03:43:04.964Z",
+      "outcome": "legacy",
+      "legacy": true
+    },
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-09T03:43:04.964Z",
+      "config": {
+        "grade": 2
+      },
+      "answers": [
+        {
+          "id": "x",
+          "unit": "g2-add",
+          "level": 2,
+          "text": "1+2",
+          "answer": "3",
+          "selected": "3",
+          "correct": true
+        }
+      ],
+      "accuracy": 100,
+      "sessionId": "legacy-71-2026-10-09T03:43:04.964Z",
+      "outcome": "legacy",
+      "legacy": true
+    },
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-09T03:43:04.964Z",
+      "config": {
+        "grade": 2
+      },
+      "answers": [
+        {
+          "id": "x",
+          "unit": "g2-add",
+          "level": 2,
+          "text": "1+2",
+          "answer": "3",
+          "selected": "3",
+          "correct": true
+        }
+      ],
+      "accuracy": 100,
+      "sessionId": "legacy-72-2026-10-09T03:43:04.964Z",
+      "outcome": "legacy",
+      "legacy": true
+    },
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-09T03:43:04.964Z",
+      "config": {
+        "grade": 2
+      },
+      "answers": [
+        {
+          "id": "x",
+          "unit": "g2-add",
+          "level": 2,
+          "text": "1+2",
+          "answer": "3",
+          "selected": "3",
+          "correct": true
+        }
+      ],
+      "accuracy": 100,
+      "sessionId": "legacy-73-2026-10-09T03:43:04.964Z",
+      "outcome": "legacy",
+      "legacy": true
+    },
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-09T03:43:04.964Z",
+      "config": {
+        "grade": 2
+      },
+      "answers": [
+        {
+          "id": "x",
+          "unit": "g2-add",
+          "level": 2,
+          "text": "1+2",
+          "answer": "3",
+          "selected": "3",
+          "correct": true
+        }
+      ],
+      "accuracy": 100,
+      "sessionId": "legacy-74-2026-10-09T03:43:04.964Z",
+      "outcome": "legacy",
+      "legacy": true
+    },
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-09T03:43:04.964Z",
+      "config": {
+        "grade": 2
+      },
+      "answers": [
+        {
+          "id": "x",
+          "unit": "g2-add",
+          "level": 2,
+          "text": "1+2",
+          "answer": "3",
+          "selected": "3",
+          "correct": true
+        }
+      ],
+      "accuracy": 100,
+      "sessionId": "legacy-75-2026-10-09T03:43:04.964Z",
+      "outcome": "legacy",
+      "legacy": true
+    },
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-09T03:43:04.964Z",
+      "config": {
+        "grade": 2
+      },
+      "answers": [
+        {
+          "id": "x",
+          "unit": "g2-add",
+          "level": 2,
+          "text": "1+2",
+          "answer": "3",
+          "selected": "3",
+          "correct": true
+        }
+      ],
+      "accuracy": 100,
+      "sessionId": "legacy-76-2026-10-09T03:43:04.964Z",
+      "outcome": "legacy",
+      "legacy": true
+    },
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-09T03:43:04.964Z",
+      "config": {
+        "grade": 2
+      },
+      "answers": [
+        {
+          "id": "x",
+          "unit": "g2-add",
+          "level": 2,
+          "text": "1+2",
+          "answer": "3",
+          "selected": "3",
+          "correct": true
+        }
+      ],
+      "accuracy": 100,
+      "sessionId": "legacy-77-2026-10-09T03:43:04.964Z",
+      "outcome": "legacy",
+      "legacy": true
+    },
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-09T03:43:04.964Z",
+      "config": {
+        "grade": 2
+      },
+      "answers": [
+        {
+          "id": "x",
+          "unit": "g2-add",
+          "level": 2,
+          "text": "1+2",
+          "answer": "3",
+          "selected": "3",
+          "correct": true
+        }
+      ],
+      "accuracy": 100,
+      "sessionId": "legacy-78-2026-10-09T03:43:04.964Z",
+      "outcome": "legacy",
+      "legacy": true
+    },
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-09T03:43:04.964Z",
+      "config": {
+        "grade": 2
+      },
+      "answers": [
+        {
+          "id": "x",
+          "unit": "g2-add",
+          "level": 2,
+          "text": "1+2",
+          "answer": "3",
+          "selected": "3",
+          "correct": true
+        }
+      ],
+      "accuracy": 100,
+      "sessionId": "legacy-79-2026-10-09T03:43:04.964Z",
+      "outcome": "legacy",
+      "legacy": true
+    },
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-09T03:43:04.964Z",
+      "config": {
+        "grade": 2
+      },
+      "answers": [
+        {
+          "id": "x",
+          "unit": "g2-add",
+          "level": 2,
+          "text": "1+2",
+          "answer": "3",
+          "selected": "3",
+          "correct": true
+        }
+      ],
+      "accuracy": 100,
+      "sessionId": "legacy-80-2026-10-09T03:43:04.964Z",
+      "outcome": "legacy",
+      "legacy": true
+    },
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-09T03:43:04.964Z",
+      "config": {
+        "grade": 2
+      },
+      "answers": [
+        {
+          "id": "x",
+          "unit": "g2-add",
+          "level": 2,
+          "text": "1+2",
+          "answer": "3",
+          "selected": "3",
+          "correct": true
+        }
+      ],
+      "accuracy": 100,
+      "sessionId": "legacy-81-2026-10-09T03:43:04.964Z",
+      "outcome": "legacy",
+      "legacy": true
+    },
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-09T03:43:04.964Z",
+      "config": {
+        "grade": 2
+      },
+      "answers": [
+        {
+          "id": "x",
+          "unit": "g2-add",
+          "level": 2,
+          "text": "1+2",
+          "answer": "3",
+          "selected": "3",
+          "correct": true
+        }
+      ],
+      "accuracy": 100,
+      "sessionId": "legacy-82-2026-10-09T03:43:04.964Z",
+      "outcome": "legacy",
+      "legacy": true
+    },
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-09T03:43:04.964Z",
+      "config": {
+        "grade": 2
+      },
+      "answers": [
+        {
+          "id": "x",
+          "unit": "g2-add",
+          "level": 2,
+          "text": "1+2",
+          "answer": "3",
+          "selected": "3",
+          "correct": true
+        }
+      ],
+      "accuracy": 100,
+      "sessionId": "legacy-83-2026-10-09T03:43:04.964Z",
+      "outcome": "legacy",
+      "legacy": true
+    },
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-09T03:43:04.964Z",
+      "config": {
+        "grade": 2
+      },
+      "answers": [
+        {
+          "id": "x",
+          "unit": "g2-add",
+          "level": 2,
+          "text": "1+2",
+          "answer": "3",
+          "selected": "3",
+          "correct": true
+        }
+      ],
+      "accuracy": 100,
+      "sessionId": "legacy-84-2026-10-09T03:43:04.964Z",
+      "outcome": "legacy",
+      "legacy": true
+    },
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-09T03:43:04.964Z",
+      "config": {
+        "grade": 2
+      },
+      "answers": [
+        {
+          "id": "x",
+          "unit": "g2-add",
+          "level": 2,
+          "text": "1+2",
+          "answer": "3",
+          "selected": "3",
+          "correct": true
+        }
+      ],
+      "accuracy": 100,
+      "sessionId": "legacy-85-2026-10-09T03:43:04.964Z",
+      "outcome": "legacy",
+      "legacy": true
+    },
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-09T03:43:04.964Z",
+      "config": {
+        "grade": 2
+      },
+      "answers": [
+        {
+          "id": "x",
+          "unit": "g2-add",
+          "level": 2,
+          "text": "1+2",
+          "answer": "3",
+          "selected": "3",
+          "correct": true
+        }
+      ],
+      "accuracy": 100,
+      "sessionId": "legacy-86-2026-10-09T03:43:04.964Z",
+      "outcome": "legacy",
+      "legacy": true
+    },
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-09T03:43:04.964Z",
+      "config": {
+        "grade": 2
+      },
+      "answers": [
+        {
+          "id": "x",
+          "unit": "g2-add",
+          "level": 2,
+          "text": "1+2",
+          "answer": "3",
+          "selected": "3",
+          "correct": true
+        }
+      ],
+      "accuracy": 100,
+      "sessionId": "legacy-87-2026-10-09T03:43:04.964Z",
+      "outcome": "legacy",
+      "legacy": true
+    },
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-09T03:43:04.964Z",
+      "config": {
+        "grade": 2
+      },
+      "answers": [
+        {
+          "id": "x",
+          "unit": "g2-add",
+          "level": 2,
+          "text": "1+2",
+          "answer": "3",
+          "selected": "3",
+          "correct": true
+        }
+      ],
+      "accuracy": 100,
+      "sessionId": "legacy-88-2026-10-09T03:43:04.964Z",
+      "outcome": "legacy",
+      "legacy": true
+    },
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-09T03:43:04.964Z",
+      "config": {
+        "grade": 2
+      },
+      "answers": [
+        {
+          "id": "x",
+          "unit": "g2-add",
+          "level": 2,
+          "text": "1+2",
+          "answer": "3",
+          "selected": "3",
+          "correct": true
+        }
+      ],
+      "accuracy": 100,
+      "sessionId": "legacy-89-2026-10-09T03:43:04.964Z",
+      "outcome": "legacy",
+      "legacy": true
+    },
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-09T03:43:04.964Z",
+      "config": {
+        "grade": 2
+      },
+      "answers": [
+        {
+          "id": "x",
+          "unit": "g2-add",
+          "level": 2,
+          "text": "1+2",
+          "answer": "3",
+          "selected": "3",
+          "correct": true
+        }
+      ],
+      "accuracy": 100,
+      "sessionId": "legacy-90-2026-10-09T03:43:04.964Z",
+      "outcome": "legacy",
+      "legacy": true
+    },
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-09T03:43:04.964Z",
+      "config": {
+        "grade": 2
+      },
+      "answers": [
+        {
+          "id": "x",
+          "unit": "g2-add",
+          "level": 2,
+          "text": "1+2",
+          "answer": "3",
+          "selected": "3",
+          "correct": true
+        }
+      ],
+      "accuracy": 100,
+      "sessionId": "legacy-91-2026-10-09T03:43:04.964Z",
+      "outcome": "legacy",
+      "legacy": true
+    },
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-09T03:43:04.964Z",
+      "config": {
+        "grade": 2
+      },
+      "answers": [
+        {
+          "id": "x",
+          "unit": "g2-add",
+          "level": 2,
+          "text": "1+2",
+          "answer": "3",
+          "selected": "3",
+          "correct": true
+        }
+      ],
+      "accuracy": 100,
+      "sessionId": "legacy-92-2026-10-09T03:43:04.964Z",
+      "outcome": "legacy",
+      "legacy": true
+    },
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-09T03:43:04.964Z",
+      "config": {
+        "grade": 2
+      },
+      "answers": [
+        {
+          "id": "x",
+          "unit": "g2-add",
+          "level": 2,
+          "text": "1+2",
+          "answer": "3",
+          "selected": "3",
+          "correct": true
+        }
+      ],
+      "accuracy": 100,
+      "sessionId": "legacy-93-2026-10-09T03:43:04.964Z",
+      "outcome": "legacy",
+      "legacy": true
+    },
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-09T03:43:04.964Z",
+      "config": {
+        "grade": 2
+      },
+      "answers": [
+        {
+          "id": "x",
+          "unit": "g2-add",
+          "level": 2,
+          "text": "1+2",
+          "answer": "3",
+          "selected": "3",
+          "correct": true
+        }
+      ],
+      "accuracy": 100,
+      "sessionId": "legacy-94-2026-10-09T03:43:04.964Z",
+      "outcome": "legacy",
+      "legacy": true
+    },
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-09T03:43:04.964Z",
+      "config": {
+        "grade": 2
+      },
+      "answers": [
+        {
+          "id": "x",
+          "unit": "g2-add",
+          "level": 2,
+          "text": "1+2",
+          "answer": "3",
+          "selected": "3",
+          "correct": true
+        }
+      ],
+      "accuracy": 100,
+      "sessionId": "legacy-95-2026-10-09T03:43:04.964Z",
+      "outcome": "legacy",
+      "legacy": true
+    },
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-09T03:43:04.964Z",
+      "config": {
+        "grade": 2
+      },
+      "answers": [
+        {
+          "id": "x",
+          "unit": "g2-add",
+          "level": 2,
+          "text": "1+2",
+          "answer": "3",
+          "selected": "3",
+          "correct": true
+        }
+      ],
+      "accuracy": 100,
+      "sessionId": "legacy-96-2026-10-09T03:43:04.964Z",
+      "outcome": "legacy",
+      "legacy": true
+    },
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-09T03:43:04.964Z",
+      "config": {
+        "grade": 2
+      },
+      "answers": [
+        {
+          "id": "x",
+          "unit": "g2-add",
+          "level": 2,
+          "text": "1+2",
+          "answer": "3",
+          "selected": "3",
+          "correct": true
+        }
+      ],
+      "accuracy": 100,
+      "sessionId": "legacy-97-2026-10-09T03:43:04.964Z",
+      "outcome": "legacy",
+      "legacy": true
+    },
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-09T03:43:04.964Z",
+      "config": {
+        "grade": 2
+      },
+      "answers": [
+        {
+          "id": "x",
+          "unit": "g2-add",
+          "level": 2,
+          "text": "1+2",
+          "answer": "3",
+          "selected": "3",
+          "correct": true
+        }
+      ],
+      "accuracy": 100,
+      "sessionId": "legacy-98-2026-10-09T03:43:04.964Z",
+      "outcome": "legacy",
+      "legacy": true
+    },
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-09T03:43:04.964Z",
+      "config": {
+        "grade": 2
+      },
+      "answers": [
+        {
+          "id": "x",
+          "unit": "g2-add",
+          "level": 2,
+          "text": "1+2",
+          "answer": "3",
+          "selected": "3",
+          "correct": true
+        }
+      ],
+      "accuracy": 100,
+      "sessionId": "legacy-99-2026-10-09T03:43:04.964Z",
+      "outcome": "legacy",
+      "legacy": true
+    },
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-09T03:43:04.964Z",
+      "config": {
+        "grade": 2
+      },
+      "answers": [
+        {
+          "id": "x",
+          "unit": "g2-add",
+          "level": 2,
+          "text": "1+2",
+          "answer": "3",
+          "selected": "3",
+          "correct": true
+        }
+      ],
+      "accuracy": 100,
+      "sessionId": "legacy-100-2026-10-09T03:43:04.964Z",
+      "outcome": "legacy",
+      "legacy": true
+    },
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-09T03:43:04.964Z",
+      "config": {
+        "grade": 2
+      },
+      "answers": [
+        {
+          "id": "x",
+          "unit": "g2-add",
+          "level": 2,
+          "text": "1+2",
+          "answer": "3",
+          "selected": "3",
+          "correct": true
+        }
+      ],
+      "accuracy": 100,
+      "sessionId": "legacy-101-2026-10-09T03:43:04.964Z",
+      "outcome": "legacy",
+      "legacy": true
+    },
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-09T03:43:04.964Z",
+      "config": {
+        "grade": 2
+      },
+      "answers": [
+        {
+          "id": "x",
+          "unit": "g2-add",
+          "level": 2,
+          "text": "1+2",
+          "answer": "3",
+          "selected": "3",
+          "correct": true
+        }
+      ],
+      "accuracy": 100,
+      "sessionId": "legacy-102-2026-10-09T03:43:04.964Z",
+      "outcome": "legacy",
+      "legacy": true
+    },
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-09T03:43:04.964Z",
+      "config": {
+        "grade": 2
+      },
+      "answers": [
+        {
+          "id": "x",
+          "unit": "g2-add",
+          "level": 2,
+          "text": "1+2",
+          "answer": "3",
+          "selected": "3",
+          "correct": true
+        }
+      ],
+      "accuracy": 100,
+      "sessionId": "legacy-103-2026-10-09T03:43:04.964Z",
+      "outcome": "legacy",
+      "legacy": true
+    },
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-09T03:43:04.964Z",
+      "config": {
+        "grade": 2
+      },
+      "answers": [
+        {
+          "id": "x",
+          "unit": "g2-add",
+          "level": 2,
+          "text": "1+2",
+          "answer": "3",
+          "selected": "3",
+          "correct": true
+        }
+      ],
+      "accuracy": 100,
+      "sessionId": "legacy-104-2026-10-09T03:43:04.964Z",
+      "outcome": "legacy",
+      "legacy": true
+    },
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-09T03:43:04.964Z",
+      "config": {
+        "grade": 2
+      },
+      "answers": [
+        {
+          "id": "x",
+          "unit": "g2-add",
+          "level": 2,
+          "text": "1+2",
+          "answer": "3",
+          "selected": "3",
+          "correct": true
+        }
+      ],
+      "accuracy": 100,
+      "sessionId": "legacy-105-2026-10-09T03:43:04.964Z",
+      "outcome": "legacy",
+      "legacy": true
+    },
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-09T03:43:04.964Z",
+      "config": {
+        "grade": 2
+      },
+      "answers": [
+        {
+          "id": "x",
+          "unit": "g2-add",
+          "level": 2,
+          "text": "1+2",
+          "answer": "3",
+          "selected": "3",
+          "correct": true
+        }
+      ],
+      "accuracy": 100,
+      "sessionId": "legacy-106-2026-10-09T03:43:04.964Z",
+      "outcome": "legacy",
+      "legacy": true
+    },
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-09T03:43:04.964Z",
+      "config": {
+        "grade": 2
+      },
+      "answers": [
+        {
+          "id": "x",
+          "unit": "g2-add",
+          "level": 2,
+          "text": "1+2",
+          "answer": "3",
+          "selected": "3",
+          "correct": true
+        }
+      ],
+      "accuracy": 100,
+      "sessionId": "legacy-107-2026-10-09T03:43:04.964Z",
+      "outcome": "legacy",
+      "legacy": true
+    },
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-09T03:43:04.964Z",
+      "config": {
+        "grade": 2
+      },
+      "answers": [
+        {
+          "id": "x",
+          "unit": "g2-add",
+          "level": 2,
+          "text": "1+2",
+          "answer": "3",
+          "selected": "3",
+          "correct": true
+        }
+      ],
+      "accuracy": 100,
+      "sessionId": "legacy-108-2026-10-09T03:43:04.964Z",
+      "outcome": "legacy",
+      "legacy": true
+    },
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-09T03:43:04.964Z",
+      "config": {
+        "grade": 2
+      },
+      "answers": [
+        {
+          "id": "x",
+          "unit": "g2-add",
+          "level": 2,
+          "text": "1+2",
+          "answer": "3",
+          "selected": "3",
+          "correct": true
+        }
+      ],
+      "accuracy": 100,
+      "sessionId": "legacy-109-2026-10-09T03:43:04.964Z",
+      "outcome": "legacy",
+      "legacy": true
+    },
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-09T03:43:04.964Z",
+      "config": {
+        "grade": 2
+      },
+      "answers": [
+        {
+          "id": "x",
+          "unit": "g2-add",
+          "level": 2,
+          "text": "1+2",
+          "answer": "3",
+          "selected": "3",
+          "correct": true
+        }
+      ],
+      "accuracy": 100,
+      "sessionId": "legacy-110-2026-10-09T03:43:04.964Z",
+      "outcome": "legacy",
+      "legacy": true
+    },
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-09T03:43:04.964Z",
+      "config": {
+        "grade": 2
+      },
+      "answers": [
+        {
+          "id": "x",
+          "unit": "g2-add",
+          "level": 2,
+          "text": "1+2",
+          "answer": "3",
+          "selected": "3",
+          "correct": true
+        }
+      ],
+      "accuracy": 100,
+      "sessionId": "legacy-111-2026-10-09T03:43:04.964Z",
+      "outcome": "legacy",
+      "legacy": true
+    },
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-09T03:43:04.964Z",
+      "config": {
+        "grade": 2
+      },
+      "answers": [
+        {
+          "id": "x",
+          "unit": "g2-add",
+          "level": 2,
+          "text": "1+2",
+          "answer": "3",
+          "selected": "3",
+          "correct": true
+        }
+      ],
+      "accuracy": 100,
+      "sessionId": "legacy-112-2026-10-09T03:43:04.964Z",
+      "outcome": "legacy",
+      "legacy": true
+    },
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-09T03:43:04.964Z",
+      "config": {
+        "grade": 2
+      },
+      "answers": [
+        {
+          "id": "x",
+          "unit": "g2-add",
+          "level": 2,
+          "text": "1+2",
+          "answer": "3",
+          "selected": "3",
+          "correct": true
+        }
+      ],
+      "accuracy": 100,
+      "sessionId": "legacy-113-2026-10-09T03:43:04.964Z",
+      "outcome": "legacy",
+      "legacy": true
+    },
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-09T03:43:04.964Z",
+      "config": {
+        "grade": 2
+      },
+      "answers": [
+        {
+          "id": "x",
+          "unit": "g2-add",
+          "level": 2,
+          "text": "1+2",
+          "answer": "3",
+          "selected": "3",
+          "correct": true
+        }
+      ],
+      "accuracy": 100,
+      "sessionId": "legacy-114-2026-10-09T03:43:04.964Z",
+      "outcome": "legacy",
+      "legacy": true
+    },
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-09T03:43:04.964Z",
+      "config": {
+        "grade": 2
+      },
+      "answers": [
+        {
+          "id": "x",
+          "unit": "g2-add",
+          "level": 2,
+          "text": "1+2",
+          "answer": "3",
+          "selected": "3",
+          "correct": true
+        }
+      ],
+      "accuracy": 100,
+      "sessionId": "legacy-115-2026-10-09T03:43:04.964Z",
+      "outcome": "legacy",
+      "legacy": true
+    },
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-09T03:43:04.964Z",
+      "config": {
+        "grade": 2
+      },
+      "answers": [
+        {
+          "id": "x",
+          "unit": "g2-add",
+          "level": 2,
+          "text": "1+2",
+          "answer": "3",
+          "selected": "3",
+          "correct": true
+        }
+      ],
+      "accuracy": 100,
+      "sessionId": "legacy-116-2026-10-09T03:43:04.964Z",
+      "outcome": "legacy",
+      "legacy": true
+    },
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-09T03:43:04.964Z",
+      "config": {
+        "grade": 2
+      },
+      "answers": [
+        {
+          "id": "x",
+          "unit": "g2-add",
+          "level": 2,
+          "text": "1+2",
+          "answer": "3",
+          "selected": "3",
+          "correct": true
+        }
+      ],
+      "accuracy": 100,
+      "sessionId": "legacy-117-2026-10-09T03:43:04.964Z",
+      "outcome": "legacy",
+      "legacy": true
+    },
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-09T03:43:04.964Z",
+      "config": {
+        "grade": 2
+      },
+      "answers": [
+        {
+          "id": "x",
+          "unit": "g2-add",
+          "level": 2,
+          "text": "1+2",
+          "answer": "3",
+          "selected": "3",
+          "correct": true
+        }
+      ],
+      "accuracy": 100,
+      "sessionId": "legacy-118-2026-10-09T03:43:04.964Z",
+      "outcome": "legacy",
+      "legacy": true
+    },
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-09T03:43:04.964Z",
+      "config": {
+        "grade": 2
+      },
+      "answers": [
+        {
+          "id": "x",
+          "unit": "g2-add",
+          "level": 2,
+          "text": "1+2",
+          "answer": "3",
+          "selected": "3",
+          "correct": true
+        }
+      ],
+      "accuracy": 100,
+      "sessionId": "legacy-119-2026-10-09T03:43:04.964Z",
+      "outcome": "legacy",
+      "legacy": true
+    },
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-09T03:43:04.964Z",
+      "config": {
+        "grade": 2
+      },
+      "answers": [
+        {
+          "id": "x",
+          "unit": "g2-add",
+          "level": 2,
+          "text": "1+2",
+          "answer": "3",
+          "selected": "3",
+          "correct": true
+        }
+      ],
+      "accuracy": 100,
+      "sessionId": "legacy-120-2026-10-09T03:43:04.964Z",
+      "outcome": "legacy",
+      "legacy": true
+    },
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-09T03:43:04.964Z",
+      "config": {
+        "grade": 2
+      },
+      "answers": [
+        {
+          "id": "x",
+          "unit": "g2-add",
+          "level": 2,
+          "text": "1+2",
+          "answer": "3",
+          "selected": "3",
+          "correct": true
+        }
+      ],
+      "accuracy": 100,
+      "sessionId": "legacy-121-2026-10-09T03:43:04.964Z",
+      "outcome": "legacy",
+      "legacy": true
+    },
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-09T03:43:04.964Z",
+      "config": {
+        "grade": 2
+      },
+      "answers": [
+        {
+          "id": "x",
+          "unit": "g2-add",
+          "level": 2,
+          "text": "1+2",
+          "answer": "3",
+          "selected": "3",
+          "correct": true
+        }
+      ],
+      "accuracy": 100,
+      "sessionId": "legacy-122-2026-10-09T03:43:04.964Z",
+      "outcome": "legacy",
+      "legacy": true
+    },
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-09T03:43:04.964Z",
+      "config": {
+        "grade": 2
+      },
+      "answers": [
+        {
+          "id": "x",
+          "unit": "g2-add",
+          "level": 2,
+          "text": "1+2",
+          "answer": "3",
+          "selected": "3",
+          "correct": true
+        }
+      ],
+      "accuracy": 100,
+      "sessionId": "legacy-123-2026-10-09T03:43:04.964Z",
+      "outcome": "legacy",
+      "legacy": true
+    },
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-09T03:43:04.964Z",
+      "config": {
+        "grade": 2
+      },
+      "answers": [
+        {
+          "id": "x",
+          "unit": "g2-add",
+          "level": 2,
+          "text": "1+2",
+          "answer": "3",
+          "selected": "3",
+          "correct": true
+        }
+      ],
+      "accuracy": 100,
+      "sessionId": "legacy-124-2026-10-09T03:43:04.964Z",
+      "outcome": "legacy",
+      "legacy": true
+    },
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-09T03:43:04.964Z",
+      "config": {
+        "grade": 2
+      },
+      "answers": [
+        {
+          "id": "x",
+          "unit": "g2-add",
+          "level": 2,
+          "text": "1+2",
+          "answer": "3",
+          "selected": "3",
+          "correct": true
+        }
+      ],
+      "accuracy": 100,
+      "sessionId": "legacy-125-2026-10-09T03:43:04.964Z",
+      "outcome": "legacy",
+      "legacy": true
+    },
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-09T03:43:04.964Z",
+      "config": {
+        "grade": 2
+      },
+      "answers": [
+        {
+          "id": "x",
+          "unit": "g2-add",
+          "level": 2,
+          "text": "1+2",
+          "answer": "3",
+          "selected": "3",
+          "correct": true
+        }
+      ],
+      "accuracy": 100,
+      "sessionId": "legacy-126-2026-10-09T03:43:04.964Z",
+      "outcome": "legacy",
+      "legacy": true
+    },
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-09T03:43:04.964Z",
+      "config": {
+        "grade": 2
+      },
+      "answers": [
+        {
+          "id": "x",
+          "unit": "g2-add",
+          "level": 2,
+          "text": "1+2",
+          "answer": "3",
+          "selected": "3",
+          "correct": true
+        }
+      ],
+      "accuracy": 100,
+      "sessionId": "legacy-127-2026-10-09T03:43:04.964Z",
+      "outcome": "legacy",
+      "legacy": true
+    },
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-09T03:43:04.964Z",
+      "config": {
+        "grade": 2
+      },
+      "answers": [
+        {
+          "id": "x",
+          "unit": "g2-add",
+          "level": 2,
+          "text": "1+2",
+          "answer": "3",
+          "selected": "3",
+          "correct": true
+        }
+      ],
+      "accuracy": 100,
+      "sessionId": "legacy-128-2026-10-09T03:43:04.964Z",
+      "outcome": "legacy",
+      "legacy": true
+    },
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-09T03:43:04.964Z",
+      "config": {
+        "grade": 2
+      },
+      "answers": [
+        {
+          "id": "x",
+          "unit": "g2-add",
+          "level": 2,
+          "text": "1+2",
+          "answer": "3",
+          "selected": "3",
+          "correct": true
+        }
+      ],
+      "accuracy": 100,
+      "sessionId": "legacy-129-2026-10-09T03:43:04.964Z",
+      "outcome": "legacy",
+      "legacy": true
+    }
+  ],
+  "mastery": {},
+  "checkpoint": null,
+  "quarantine": [
+    {
+      "index": 130,
+      "reason": "v1 기록 손상",
+      "row": null
+    }
+  ]
+}

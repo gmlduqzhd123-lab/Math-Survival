@@ -24,10 +24,12 @@ function stopDash(e) {
 
 function initAudio() {
       if (gameRuntime.audioReady) {
-        if (gameRuntime.audioCtx.state === "suspended") gameRuntime.audioCtx.resume();
+        if (gameRuntime.audioCtx.state === "suspended") gameRuntime.audioCtx.resume().catch(() => {});
         return;
       }
-      gameRuntime.audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+      const AudioContext = window.AudioContext || window.webkitAudioContext;
+      if (!AudioContext) return;
+      try { gameRuntime.audioCtx = new AudioContext(); } catch { return; }
       gameRuntime.masterGain = gameRuntime.audioCtx.createGain();
       gameRuntime.musicGain = gameRuntime.audioCtx.createGain();
       gameRuntime.sfxGain = gameRuntime.audioCtx.createGain();
@@ -152,7 +154,7 @@ function completeMission() {
       gameRuntime.sfx("level");
       gameRuntime.state.mission = null;
       gameRuntime.checkLevelUp();
-      setTimeout(gameRuntime.createMission, 1200);
+      gameRuntime.state.missionDue=gameRuntime.gameNow()+1200;
     }
 
 function updateMissionUI() {
@@ -200,6 +202,8 @@ function updateWeaponInfo() {
 
 function endGame(won, quit = false) {
       if (!gameRuntime.state.running) return;
+      gameRuntime.state.missionDue=null;
+      gameRuntime.v2.clearInput();
       gameRuntime.state.running = false;
       document.body.classList.remove("game-running");
       gameRuntime.stopJoystick();
@@ -226,7 +230,9 @@ function endGame(won, quit = false) {
       gameRuntime.v2.finish(won, quit);
     }
 
+let lastBuff="",lastBuffTick=-Infinity;
 function updateBuffUI(now) {
+      if(now-lastBuffTick<250&&now>=lastBuffTick)return;lastBuffTick=now;
       const buffs = [];
       buffs.push(`🗺️ ${gameRuntime.state.map.name}`);
       if (now < gameRuntime.state.speedUntil) buffs.push(`⚡ 속도 ${Math.ceil((gameRuntime.state.speedUntil - now) / 1000)}초`);
@@ -237,7 +243,7 @@ function updateBuffUI(now) {
       if (now < gameRuntime.state.rainbowUntil) buffs.push(`🌈 무기강화 ${Math.ceil((gameRuntime.state.rainbowUntil - now) / 1000)}초`);
       if (now < gameRuntime.state.feverUntil) buffs.push(`🔥 피버 ${Math.ceil((gameRuntime.state.feverUntil - now) / 1000)}초`);
       if (now < gameRuntime.state.luckyUntil) buffs.push(`🍀 행운 ${Math.ceil((gameRuntime.state.luckyUntil - now) / 1000)}초`);
-      gameRuntime.activeItems.innerHTML = buffs.map(b => `<div class="buff">${b}</div>`).join("");
+      const html=buffs.map(b => `<div class="buff">${b}</div>`).join("");if(html!==lastBuff){gameRuntime.activeItems.innerHTML=html;lastBuff=html;}
       gameRuntime.updateMissionUI();
     }
 return { stopJoystick, updateJoystick, stopDash, initAudio, setMuted, playTone, startPersistentMusic, sfx, showToast, scorePlus, unlockAchievement, createMission, updateMission, completeMission, updateMissionUI, openLevelUpPanel, updateWeaponInfo, endGame, updateBuffUI };

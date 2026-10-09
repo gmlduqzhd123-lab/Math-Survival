@@ -11,13 +11,13 @@ function spawnQuiz() {
       gameRuntime.questionText.textContent = problem.text;
       gameRuntime.questionSub.textContent = gameRuntime.gameNow() < gameRuntime.state.hintUntil
         ? "연산노트 효과: 정답 구슬이 금빛으로 반짝입니다!"
-        : "정답 구슬을 먹으면 강화됩니다. 오답 구슬은 피해 주세요!";
+        : gameRuntime.state.mode==='explore' ? "답안 버튼으로 답하세요. 오답 피해 없이 해설을 확인한 뒤 계속합니다." : "정답 구슬을 먹으면 강화됩니다. 오답 구슬은 피해 주세요!";
       gameRuntime.questionBox.style.display = "block";
 
       gameRuntime.answerOrbs = [];
       const offsets = gameRuntime.v2.orbPositions();
       problem.options.forEach((value, i) => {
-        gameRuntime.answerOrbs.push({ x: offsets[i].x, y: offsets[i].y, r: 38, value,
+        gameRuntime.answerOrbs.push({ x: offsets[i].x, y: offsets[i].y, r: Math.min(38,gameRuntime.canvas.height/5), value,
           correct: gameRuntime.v2.isCorrect(value, problem.answer), explain: problem.explain, pulse: Math.random()*6 });
       });
       gameRuntime.showToast("수학 문제가 등장했습니다! 정답 구슬을 먹으세요.");
@@ -25,7 +25,7 @@ function spawnQuiz() {
     }
 
 function resolveAnswer(orb) {
-      if (!gameRuntime.state.quizActive) return;
+      if (!gameRuntime.state.running || gameRuntime.state.paused || !gameRuntime.state.quizActive) return;
       gameRuntime.v2.record(orb);
       gameRuntime.state.quizActive = false;
       gameRuntime.questionBox.style.display = "none";
@@ -62,8 +62,8 @@ function resolveAnswer(orb) {
       } else {
         gameRuntime.state.wrong++;
         gameRuntime.state.combo = 0;
-        gameRuntime.state.hp -= 7;
-        gameRuntime.state.slowUntil = gameRuntime.gameNow() + 1800;
+        if(gameRuntime.state.mode!=="explore"){gameRuntime.state.hp -= 7;
+        gameRuntime.state.slowUntil = gameRuntime.gameNow() + 1800;}
         gameRuntime.floatingTexts.push({ x: gameRuntime.player.x, y: gameRuntime.player.y - 42, text: `정답: ${gameRuntime.state.currentAnswer}`, life: 70, color: "#fca5a5" });
         gameRuntime.showToast(`오답! 정답은 ${gameRuntime.state.currentAnswer}입니다. ${orb.explain}`);
         gameRuntime.sfx("wrong");

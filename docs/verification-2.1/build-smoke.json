@@ -1,0 +1,398 @@
+{
+  "date": "2026-10-09T03:43:57.485Z",
+  "sourceCommit": "dcbe0bd",
+  "errors": [],
+  "responses": [
+    {
+      "url": "http://127.0.0.1:4174/Math-Survival/?qa=1",
+      "status": 200,
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:4174/Math-Survival/src/original.css",
+      "status": 200,
+      "type": "text/css; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:4174/Math-Survival/src/v2.css",
+      "status": 200,
+      "type": "text/css; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:4174/Math-Survival/src/layout.css",
+      "status": 200,
+      "type": "text/css; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:4174/Math-Survival/src/main.js",
+      "status": 200,
+      "type": "text/javascript; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:4174/Math-Survival/src/combat.js",
+      "status": 200,
+      "type": "text/javascript; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:4174/Math-Survival/src/math.js",
+      "status": 200,
+      "type": "text/javascript; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:4174/Math-Survival/src/MAPS.js",
+      "status": 200,
+      "type": "text/javascript; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:4174/Math-Survival/src/entities.js",
+      "status": 200,
+      "type": "text/javascript; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:4174/Math-Survival/src/player.js",
+      "status": 200,
+      "type": "text/javascript; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:4174/Math-Survival/src/state.js",
+      "status": 200,
+      "type": "text/javascript; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:4174/Math-Survival/src/items.js",
+      "status": 200,
+      "type": "text/javascript; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:4174/Math-Survival/src/core.js",
+      "status": 200,
+      "type": "text/javascript; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:4174/Math-Survival/src/ui.js",
+      "status": 200,
+      "type": "text/javascript; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:4174/Math-Survival/src/input.js",
+      "status": 200,
+      "type": "text/javascript; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:4174/Math-Survival/src/configuration.js",
+      "status": 200,
+      "type": "text/javascript; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:4174/Math-Survival/src/v2.js",
+      "status": 200,
+      "type": "text/javascript; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:4174/Math-Survival/src/version.js",
+      "status": 200,
+      "type": "text/javascript; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:4174/Math-Survival/src/learning.js",
+      "status": 200,
+      "type": "text/javascript; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:4174/Math-Survival/src/combat-v2.js",
+      "status": 200,
+      "type": "text/javascript; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:4174/Math-Survival/src/mastery.js",
+      "status": 200,
+      "type": "text/javascript; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:4174/Math-Survival/src/storage.js",
+      "status": 200,
+      "type": "text/javascript; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:4174/Math-Survival/src/math-engine.js",
+      "status": 200,
+      "type": "text/javascript; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:4174/Math-Survival/data/curriculum.json",
+      "status": 200,
+      "type": "application/json; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:4174/Math-Survival/?qa=1",
+      "status": 200,
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:4174/Math-Survival/src/original.css",
+      "status": 200,
+      "type": "text/css; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:4174/Math-Survival/src/v2.css",
+      "status": 200,
+      "type": "text/css; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:4174/Math-Survival/src/layout.css",
+      "status": 200,
+      "type": "text/css; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:4174/Math-Survival/src/main.js",
+      "status": 200,
+      "type": "text/javascript; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:4174/Math-Survival/src/combat.js",
+      "status": 200,
+      "type": "text/javascript; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:4174/Math-Survival/src/ui.js",
+      "status": 200,
+      "type": "text/javascript; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:4174/Math-Survival/src/core.js",
+      "status": 200,
+      "type": "text/javascript; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:4174/Math-Survival/src/entities.js",
+      "status": 200,
+      "type": "text/javascript; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:4174/Math-Survival/src/math.js",
+      "status": 200,
+      "type": "text/javascript; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:4174/Math-Survival/src/MAPS.js",
+      "status": 200,
+      "type": "text/javascript; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:4174/Math-Survival/src/state.js",
+      "status": 200,
+      "type": "text/javascript; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:4174/Math-Survival/src/player.js",
+      "status": 200,
+      "type": "text/javascript; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:4174/Math-Survival/src/items.js",
+      "status": 200,
+      "type": "text/javascript; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:4174/Math-Survival/src/configuration.js",
+      "status": 200,
+      "type": "text/javascript; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:4174/Math-Survival/src/input.js",
+      "status": 200,
+      "type": "text/javascript; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:4174/Math-Survival/src/v2.js",
+      "status": 200,
+      "type": "text/javascript; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:4174/Math-Survival/src/learning.js",
+      "status": 200,
+      "type": "text/javascript; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:4174/Math-Survival/src/math-engine.js",
+      "status": 200,
+      "type": "text/javascript; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:4174/Math-Survival/src/mastery.js",
+      "status": 200,
+      "type": "text/javascript; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:4174/Math-Survival/src/combat-v2.js",
+      "status": 200,
+      "type": "text/javascript; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:4174/Math-Survival/src/storage.js",
+      "status": 200,
+      "type": "text/javascript; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:4174/Math-Survival/src/version.js",
+      "status": 200,
+      "type": "text/javascript; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:4174/Math-Survival/data/curriculum.json",
+      "status": 200,
+      "type": "application/json; charset=utf-8"
+    }
+  ],
+  "result": {
+    "schemaVersion": 2,
+    "date": "2026-10-09T03:43:57.281Z",
+    "config": {
+      "grade": 3,
+      "domain": "all",
+      "unit": "all",
+      "level": 2,
+      "auto": true,
+      "mode": "explore",
+      "target": 1,
+      "limit": 180,
+      "character": "explorer",
+      "weapon": "storm",
+      "map": "forest",
+      "combat": "normal"
+    },
+    "score": 303,
+    "survivalSeconds": 0,
+    "level": 1,
+    "kills": 0,
+    "correct": 1,
+    "wrong": 0,
+    "accuracy": 100,
+    "newAccuracy": 100,
+    "reviewAccuracy": null,
+    "hintCount": 0,
+    "bestCombo": 1,
+    "domains": {
+      "number": {
+        "correct": 1,
+        "total": 1,
+        "accuracy": 100
+      }
+    },
+    "units": {
+      "g3-div": {
+        "total": 1,
+        "correct": 1,
+        "newTotal": 1,
+        "newCorrect": 1,
+        "reviewTotal": 0,
+        "reviewCorrect": 0,
+        "hints": 0
+      }
+    },
+    "weakProblems": [],
+    "reviewProblems": [],
+    "answers": [
+      {
+        "id": "g3-div:divide:54:6",
+        "conceptId": "g3-div:divide:54:6",
+        "instanceId": "0f4ff4ae-9ea0-4a53-aa86-a00c26b9e532",
+        "seed": 4210939567,
+        "curriculumVersion": "practice-2026.10-v2",
+        "generatorVersion": "3",
+        "difficulty": 2,
+        "explanationSteps": [
+          "6 × 9 = 54이므로 몫은 9입니다."
+        ],
+        "optionMisconceptions": [
+          "near-value",
+          "subtract-instead",
+          "correct",
+          "multiply-instead"
+        ],
+        "policyVersion": 2,
+        "typeId": "g3-div:divide",
+        "grade": 3,
+        "domain": "number",
+        "unit": "g3-div",
+        "unitName": "나눗셈",
+        "level": 2,
+        "type": "divide",
+        "operands": [
+          54,
+          6
+        ],
+        "text": "54 ÷ 6 = ?",
+        "answer": "9",
+        "explain": "6 × 9 = 54이므로 몫은 9입니다.",
+        "options": [
+          "10",
+          "48",
+          "9",
+          "324"
+        ],
+        "review": false,
+        "hintUsed": false,
+        "problem": {
+          "id": "g3-div:divide:54:6",
+          "conceptId": "g3-div:divide:54:6",
+          "instanceId": "0f4ff4ae-9ea0-4a53-aa86-a00c26b9e532",
+          "seed": 4210939567,
+          "curriculumVersion": "practice-2026.10-v2",
+          "generatorVersion": "3",
+          "difficulty": 2,
+          "explanationSteps": [
+            "6 × 9 = 54이므로 몫은 9입니다."
+          ],
+          "optionMisconceptions": [
+            "near-value",
+            "subtract-instead",
+            "correct",
+            "multiply-instead"
+          ],
+          "policyVersion": 2,
+          "typeId": "g3-div:divide",
+          "grade": 3,
+          "domain": "number",
+          "unit": "g3-div",
+          "unitName": "나눗셈",
+          "level": 2,
+          "type": "divide",
+          "operands": [
+            54,
+            6
+          ],
+          "text": "54 ÷ 6 = ?",
+          "answer": "9",
+          "explain": "6 × 9 = 54이므로 몫은 9입니다.",
+          "options": [
+            "10",
+            "48",
+            "9",
+            "324"
+          ],
+          "review": false,
+          "hintUsed": false
+        },
+        "selected": "9",
+        "correct": true,
+        "elapsed": 0,
+        "responseMs": 267,
+        "date": "2026-10-09T03:43:57.163Z"
+      }
+    ],
+    "sessionId": "556ee20f-bc04-4a9b-8b43-c5cd829241df",
+    "appVersion": "2.1.0",
+    "curriculumVersion": "practice-2026.10-v2",
+    "generatorVersion": "3",
+    "outcome": "complete",
+    "resultReason": "목표 문항 완료",
+    "actualLevels": {
+      "g3-div": [
+        2
+      ]
+    }
+  },
+  "title": "목표 문항 완료",
+  "reloadRecordCount": 1
+}

@@ -3,16 +3,12 @@ export function createSystem(gameRuntime) {
 function gameNow(){ return gameRuntime.clock; }
 
 function syncCanvasViewport() {
-      const mobile = window.matchMedia("(max-width: 760px), (pointer: coarse)").matches;
-      const nextWidth = 1000;
-      const nextHeight = mobile ? (window.innerWidth > window.innerHeight ? 480 : 820) : 650;
-      const changed = gameRuntime.canvas.width !== nextWidth || gameRuntime.canvas.height !== nextHeight;
-
-      if (changed) {
-        gameRuntime.canvas.width = nextWidth;
-        gameRuntime.canvas.height = nextHeight;
-      }
-
+      const box=gameRuntime.surface.getBoundingClientRect(),v=gameRuntime.viewport;
+      if(!box.width||!box.height)return false;
+      const width=box.width,height=box.height,dpr=Math.min(3,window.devicePixelRatio||1);
+      const changed=v.width!==width||v.height!==height||v.dpr!==dpr;
+      v.width=width;v.height=height;v.dpr=dpr;
+      if(changed){gameRuntime.surface.width=Math.round(width*dpr);gameRuntime.surface.height=Math.round(height*dpr);}
       return changed;
     }
 
@@ -55,6 +51,7 @@ function randomVisiblePoint() {
     }
 
 function resetGame() {
+      gameRuntime.state.missionDue = null;
       gameRuntime.clock = 0;
       Object.keys(gameRuntime.keys).forEach(k => gameRuntime.keys[k] = false);
       gameRuntime.initAudio();
@@ -166,6 +163,7 @@ function resetGame() {
 
 function update(dt, now) {
       if (!gameRuntime.state.running || gameRuntime.state.paused) return;
+      if(gameRuntime.state.missionDue!=null&&now>=gameRuntime.state.missionDue){gameRuntime.state.missionDue=null;gameRuntime.createMission();}
       gameRuntime.updateBuffUI(now);
 
       gameRuntime.state.time += dt / 1000;
@@ -478,6 +476,8 @@ function quitGame() {
     }
 
 function returnToMainMenu() {
+      if(gameRuntime.state.running)gameRuntime.v2.interrupt();
+      gameRuntime.state.missionDue=null;
       gameRuntime.state.running = false;
       document.body.classList.remove("game-running");
       gameRuntime.stopJoystick();

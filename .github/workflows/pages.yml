@@ -1,5 +1,7 @@
 name: Verify and deploy Math Survival 2
 on:
+  push:
+    branches: [main]
   workflow_dispatch:
 permissions:
   contents: read
@@ -25,7 +27,8 @@ jobs:
           BROWSER_CHANNEL: chromium
         run: |
           node scripts/serve.cjs > /tmp/math-survival-preview.log 2>&1 &
-          node tests/browser.cjs
+          node scripts/wait-ready.mjs
+          npm run test:browser
       - run: npm run build
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3

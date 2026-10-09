@@ -1,12 +1,4235 @@
 {
- "schemaVersion":1,"description":"초등 1~6학년 학습 범위를 바탕으로 구성한 연습 단원. 학교별 교과서 단원 번호와 다를 수 있습니다.",
- "domains":{"number":"수와 연산","geometry":"도형과 측정","patterns":"변화와 관계","data":"자료와 가능성"},
- "grades":[
- {"grade":1,"units":[{"id":"g1-add","name":"한 자리 수 덧셈","domain":"number","type":"add"},{"id":"g1-sub","name":"10 이하 수 뺄셈","domain":"number","type":"subtract"},{"id":"g1-shapes","name":"삼각형과 사각형","domain":"geometry","type":"shapes"},{"id":"g1-pattern","name":"수의 규칙 찾기","domain":"patterns","type":"patterns"}]},
- {"grade":2,"units":[{"id":"g2-add","name":"두 자리 수 덧셈","domain":"number","type":"add"},{"id":"g2-sub","name":"두 자리 수 뺄셈","domain":"number","type":"subtract"},{"id":"g2-mul","name":"곱셈구구","domain":"number","type":"multiply"},{"id":"g2-length","name":"m와 cm","domain":"geometry","type":"length"},{"id":"g2-pattern","name":"수의 규칙","domain":"patterns","type":"patterns"}]},
- {"grade":3,"units":[{"id":"g3-mul","name":"곱셈","domain":"number","type":"multiply"},{"id":"g3-div","name":"나눗셈","domain":"number","type":"divide"},{"id":"g3-dec","name":"소수의 덧셈 기초","domain":"number","type":"decimal"},{"id":"g3-time","name":"분과 초","domain":"geometry","type":"time"},{"id":"g3-shape","name":"다각형의 변","domain":"geometry","type":"shapes"}]},
- {"grade":4,"units":[{"id":"g4-frac","name":"같은 분모 분수의 덧셈","domain":"number","type":"fraction"},{"id":"g4-dec","name":"소수의 덧셈","domain":"number","type":"decimal"},{"id":"g4-angle","name":"삼각형의 각","domain":"geometry","type":"angle"},{"id":"g4-pattern","name":"규칙과 대응","domain":"patterns","type":"patterns"}]},
- {"grade":5,"units":[{"id":"g5-frac","name":"다른 분모 분수의 덧셈","domain":"number","type":"unlikeFraction"},{"id":"g5-fracmul","name":"분수의 곱셈","domain":"number","type":"fractionMultiply"},{"id":"g5-dec","name":"소수의 곱셈","domain":"number","type":"decimalMultiply"},{"id":"g5-area","name":"직사각형 넓이","domain":"geometry","type":"area"},{"id":"g5-avg","name":"평균","domain":"data","type":"average"}]},
- {"grade":6,"units":[{"id":"g6-fracdiv","name":"분수의 나눗셈","domain":"number","type":"fractionDivide"},{"id":"g6-decdiv","name":"소수의 나눗셈","domain":"number","type":"decimalDivide"},{"id":"g6-volume","name":"직육면체 부피","domain":"geometry","type":"volume"},{"id":"g6-percent","name":"백분율","domain":"patterns","type":"percent"},{"id":"g6-ratio","name":"비례식","domain":"patterns","type":"ratio"},{"id":"g6-avg","name":"평균 복습","domain":"data","type":"average"}]}
- ]
+  "schemaVersion": 2,
+  "description": "초등 1~6학년 학습 범위를 바탕으로 구성한 연습 단원. 학교별 교과서 단원 번호와 다를 수 있습니다.",
+  "domains": {
+    "number": "수와 연산",
+    "geometry": "도형과 측정",
+    "patterns": "변화와 관계",
+    "data": "자료와 가능성"
+  },
+  "grades": [
+    {
+      "grade": 1,
+      "units": [
+        {
+          "id": "g1-add",
+          "name": "한 자리 수 덧셈",
+          "domain": "number",
+          "type": "add",
+          "supportedLevels": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "policy": {
+            "version": 2,
+            "output": "nonnegative",
+            "remainder": "none",
+            "fractionOperands": "proper-positive",
+            "fractionResult": "reduced",
+            "levels": {
+              "1": {
+                "rangeA": [
+                  1,
+                  4
+                ],
+                "rangeB": [
+                  1,
+                  4
+                ],
+                "denominatorMax": 8,
+                "carry": "allowed",
+                "borrow": "allowed",
+                "decimalPlaces": 1,
+                "description": "피연산자 범위 1~4 / 1~4",
+                "operation": "add",
+                "constraints": {
+                  "outputUnit": "number",
+                  "divisionExact": true,
+                  "negativeResults": false,
+                  "carrying": "allowed",
+                  "borrowing": "allowed",
+                  "properFractionOperands": true,
+                  "resultMayBeImproper": false
+                },
+                "operandRule": "A 1..4, B 1..4"
+              },
+              "2": {
+                "rangeA": [
+                  1,
+                  5
+                ],
+                "rangeB": [
+                  1,
+                  5
+                ],
+                "denominatorMax": 11,
+                "carry": "allowed",
+                "borrow": "allowed",
+                "decimalPlaces": 1,
+                "description": "피연산자 범위 1~5 / 1~5",
+                "operation": "add",
+                "constraints": {
+                  "outputUnit": "number",
+                  "divisionExact": true,
+                  "negativeResults": false,
+                  "carrying": "allowed",
+                  "borrowing": "allowed",
+                  "properFractionOperands": true,
+                  "resultMayBeImproper": false
+                },
+                "operandRule": "A 1..5, B 1..5"
+              },
+              "3": {
+                "rangeA": [
+                  1,
+                  6
+                ],
+                "rangeB": [
+                  1,
+                  6
+                ],
+                "denominatorMax": 14,
+                "carry": "allowed",
+                "borrow": "allowed",
+                "decimalPlaces": 1,
+                "description": "피연산자 범위 1~6 / 1~6",
+                "operation": "add",
+                "constraints": {
+                  "outputUnit": "number",
+                  "divisionExact": true,
+                  "negativeResults": false,
+                  "carrying": "allowed",
+                  "borrowing": "allowed",
+                  "properFractionOperands": true,
+                  "resultMayBeImproper": false
+                },
+                "operandRule": "A 1..6, B 1..6"
+              },
+              "4": {
+                "rangeA": [
+                  1,
+                  7
+                ],
+                "rangeB": [
+                  1,
+                  7
+                ],
+                "denominatorMax": 17,
+                "carry": "allowed",
+                "borrow": "allowed",
+                "decimalPlaces": 1,
+                "description": "피연산자 범위 1~7 / 1~7",
+                "operation": "add",
+                "constraints": {
+                  "outputUnit": "number",
+                  "divisionExact": true,
+                  "negativeResults": false,
+                  "carrying": "allowed",
+                  "borrowing": "allowed",
+                  "properFractionOperands": true,
+                  "resultMayBeImproper": false
+                },
+                "operandRule": "A 1..7, B 1..7"
+              },
+              "5": {
+                "rangeA": [
+                  1,
+                  8
+                ],
+                "rangeB": [
+                  1,
+                  8
+                ],
+                "denominatorMax": 20,
+                "carry": "allowed",
+                "borrow": "allowed",
+                "decimalPlaces": 1,
+                "description": "피연산자 범위 1~8 / 1~8",
+                "operation": "add",
+                "constraints": {
+                  "outputUnit": "number",
+                  "divisionExact": true,
+                  "negativeResults": false,
+                  "carrying": "allowed",
+                  "borrowing": "allowed",
+                  "properFractionOperands": true,
+                  "resultMayBeImproper": false
+                },
+                "operandRule": "A 1..8, B 1..8"
+              }
+            }
+          }
+        },
+        {
+          "id": "g1-sub",
+          "name": "10 이하 수 뺄셈",
+          "domain": "number",
+          "type": "subtract",
+          "supportedLevels": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "policy": {
+            "version": 2,
+            "output": "nonnegative",
+            "remainder": "none",
+            "fractionOperands": "proper-positive",
+            "fractionResult": "reduced",
+            "levels": {
+              "1": {
+                "rangeA": [
+                  2,
+                  6
+                ],
+                "rangeB": [
+                  1,
+                  6
+                ],
+                "denominatorMax": 8,
+                "carry": "allowed",
+                "borrow": "allowed",
+                "decimalPlaces": 1,
+                "description": "피연산자 범위 2~6 / 1~6",
+                "operation": "subtract",
+                "constraints": {
+                  "outputUnit": "number",
+                  "divisionExact": true,
+                  "negativeResults": false,
+                  "carrying": "allowed",
+                  "borrowing": "allowed",
+                  "properFractionOperands": true,
+                  "resultMayBeImproper": false
+                },
+                "operandRule": "X 2..6, Y 1..X"
+              },
+              "2": {
+                "rangeA": [
+                  2,
+                  7
+                ],
+                "rangeB": [
+                  1,
+                  7
+                ],
+                "denominatorMax": 11,
+                "carry": "allowed",
+                "borrow": "allowed",
+                "decimalPlaces": 1,
+                "description": "피연산자 범위 2~7 / 1~7",
+                "operation": "subtract",
+                "constraints": {
+                  "outputUnit": "number",
+                  "divisionExact": true,
+                  "negativeResults": false,
+                  "carrying": "allowed",
+                  "borrowing": "allowed",
+                  "properFractionOperands": true,
+                  "resultMayBeImproper": false
+                },
+                "operandRule": "X 2..7, Y 1..X"
+              },
+              "3": {
+                "rangeA": [
+                  2,
+                  8
+                ],
+                "rangeB": [
+                  1,
+                  8
+                ],
+                "denominatorMax": 14,
+                "carry": "allowed",
+                "borrow": "allowed",
+                "decimalPlaces": 1,
+                "description": "피연산자 범위 2~8 / 1~8",
+                "operation": "subtract",
+                "constraints": {
+                  "outputUnit": "number",
+                  "divisionExact": true,
+                  "negativeResults": false,
+                  "carrying": "allowed",
+                  "borrowing": "allowed",
+                  "properFractionOperands": true,
+                  "resultMayBeImproper": false
+                },
+                "operandRule": "X 2..8, Y 1..X"
+              },
+              "4": {
+                "rangeA": [
+                  2,
+                  9
+                ],
+                "rangeB": [
+                  1,
+                  9
+                ],
+                "denominatorMax": 17,
+                "carry": "allowed",
+                "borrow": "allowed",
+                "decimalPlaces": 1,
+                "description": "피연산자 범위 2~9 / 1~9",
+                "operation": "subtract",
+                "constraints": {
+                  "outputUnit": "number",
+                  "divisionExact": true,
+                  "negativeResults": false,
+                  "carrying": "allowed",
+                  "borrowing": "allowed",
+                  "properFractionOperands": true,
+                  "resultMayBeImproper": false
+                },
+                "operandRule": "X 2..9, Y 1..X"
+              },
+              "5": {
+                "rangeA": [
+                  2,
+                  10
+                ],
+                "rangeB": [
+                  1,
+                  10
+                ],
+                "denominatorMax": 20,
+                "carry": "allowed",
+                "borrow": "allowed",
+                "decimalPlaces": 1,
+                "description": "피연산자 범위 2~10 / 1~10",
+                "operation": "subtract",
+                "constraints": {
+                  "outputUnit": "number",
+                  "divisionExact": true,
+                  "negativeResults": false,
+                  "carrying": "allowed",
+                  "borrowing": "allowed",
+                  "properFractionOperands": true,
+                  "resultMayBeImproper": false
+                },
+                "operandRule": "X 2..10, Y 1..X"
+              }
+            }
+          }
+        },
+        {
+          "id": "g1-shapes",
+          "name": "삼각형과 사각형",
+          "domain": "geometry",
+          "type": "shapes",
+          "supportedLevels": [
+            1
+          ],
+          "policy": {
+            "version": 2,
+            "output": "nonnegative",
+            "remainder": "none",
+            "fractionOperands": "proper-positive",
+            "fractionResult": "reduced",
+            "levels": {
+              "1": {
+                "rangeA": [
+                  2,
+                  7
+                ],
+                "rangeB": [
+                  2,
+                  5
+                ],
+                "denominatorMax": 8,
+                "carry": "allowed",
+                "borrow": "allowed",
+                "decimalPlaces": 1,
+                "description": "변 개수 식별 한 단계",
+                "operation": "shapes",
+                "constraints": {
+                  "outputUnit": "number",
+                  "divisionExact": true,
+                  "negativeResults": false,
+                  "carrying": "allowed",
+                  "borrowing": "allowed",
+                  "properFractionOperands": true,
+                  "resultMayBeImproper": false
+                },
+                "operandRule": "edge count 3 or 4; orientation context 0..2; only level 1 supported"
+              }
+            }
+          }
+        },
+        {
+          "id": "g1-pattern",
+          "name": "수의 규칙 찾기",
+          "domain": "patterns",
+          "type": "patterns",
+          "supportedLevels": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "policy": {
+            "version": 2,
+            "output": "nonnegative",
+            "remainder": "none",
+            "fractionOperands": "proper-positive",
+            "fractionResult": "reduced",
+            "levels": {
+              "1": {
+                "rangeA": [
+                  2,
+                  7
+                ],
+                "rangeB": [
+                  2,
+                  5
+                ],
+                "denominatorMax": 8,
+                "carry": "allowed",
+                "borrow": "allowed",
+                "decimalPlaces": 1,
+                "description": "피연산자 범위 2~7 / 2~5",
+                "operation": "patterns",
+                "constraints": {
+                  "outputUnit": "number",
+                  "divisionExact": true,
+                  "negativeResults": false,
+                  "carrying": "allowed",
+                  "borrowing": "allowed",
+                  "properFractionOperands": true,
+                  "resultMayBeImproper": false
+                },
+                "operandRule": "A 2..7, B 2..5"
+              },
+              "2": {
+                "rangeA": [
+                  2,
+                  10
+                ],
+                "rangeB": [
+                  2,
+                  7
+                ],
+                "denominatorMax": 11,
+                "carry": "allowed",
+                "borrow": "allowed",
+                "decimalPlaces": 1,
+                "description": "피연산자 범위 2~10 / 2~7",
+                "operation": "patterns",
+                "constraints": {
+                  "outputUnit": "number",
+                  "divisionExact": true,
+                  "negativeResults": false,
+                  "carrying": "allowed",
+                  "borrowing": "allowed",
+                  "properFractionOperands": true,
+                  "resultMayBeImproper": false
+                },
+                "operandRule": "A 2..10, B 2..7"
+              },
+              "3": {
+                "rangeA": [
+                  2,
+                  13
+                ],
+                "rangeB": [
+                  2,
+                  9
+                ],
+                "denominatorMax": 14,
+                "carry": "allowed",
+                "borrow": "allowed",
+                "decimalPlaces": 1,
+                "description": "피연산자 범위 2~13 / 2~9",
+                "operation": "patterns",
+                "constraints": {
+                  "outputUnit": "number",
+                  "divisionExact": true,
+                  "negativeResults": false,
+                  "carrying": "allowed",
+                  "borrowing": "allowed",
+                  "properFractionOperands": true,
+                  "resultMayBeImproper": false
+                },
+                "operandRule": "A 2..13, B 2..9"
+              },
+              "4": {
+                "rangeA": [
+                  2,
+                  16
+                ],
+                "rangeB": [
+                  2,
+                  11
+                ],
+                "denominatorMax": 17,
+                "carry": "allowed",
+                "borrow": "allowed",
+                "decimalPlaces": 1,
+                "description": "피연산자 범위 2~16 / 2~11",
+                "operation": "patterns",
+                "constraints": {
+                  "outputUnit": "number",
+                  "divisionExact": true,
+                  "negativeResults": false,
+                  "carrying": "allowed",
+                  "borrowing": "allowed",
+                  "properFractionOperands": true,
+                  "resultMayBeImproper": false
+                },
+                "operandRule": "A 2..16, B 2..11"
+              },
+              "5": {
+                "rangeA": [
+                  2,
+                  19
+                ],
+                "rangeB": [
+                  2,
+                  13
+                ],
+                "denominatorMax": 20,
+                "carry": "allowed",
+                "borrow": "allowed",
+                "decimalPlaces": 1,
+                "description": "피연산자 범위 2~19 / 2~13",
+                "operation": "patterns",
+                "constraints": {
+                  "outputUnit": "number",
+                  "divisionExact": true,
+                  "negativeResults": false,
+                  "carrying": "allowed",
+                  "borrowing": "allowed",
+                  "properFractionOperands": true,
+                  "resultMayBeImproper": false
+                },
+                "operandRule": "A 2..19, B 2..13"
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "grade": 2,
+      "units": [
+        {
+          "id": "g2-add",
+          "name": "두 자리 수 덧셈",
+          "domain": "number",
+          "type": "add",
+          "supportedLevels": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "policy": {
+            "version": 2,
+            "output": "nonnegative",
+            "remainder": "none",
+            "fractionOperands": "proper-positive",
+            "fractionResult": "reduced",
+            "levels": {
+              "1": {
+                "rangeA": [
+                  1,
+                  19
+                ],
+                "rangeB": [
+                  1,
+                  19
+                ],
+                "denominatorMax": 8,
+                "carry": "allowed",
+                "borrow": "allowed",
+                "decimalPlaces": 1,
+                "description": "피연산자 범위 1~19 / 1~19",
+                "operation": "add",
+                "constraints": {
+                  "outputUnit": "number",
+                  "divisionExact": true,
+                  "negativeResults": false,
+                  "carrying": "allowed",
+                  "borrowing": "allowed",
+                  "properFractionOperands": true,
+                  "resultMayBeImproper": false
+                },
+                "operandRule": "A 1..19, B 1..19"
+              },
+              "2": {
+                "rangeA": [
+                  1,
+                  39
+                ],
+                "rangeB": [
+                  1,
+                  39
+                ],
+                "denominatorMax": 11,
+                "carry": "allowed",
+                "borrow": "allowed",
+                "decimalPlaces": 1,
+                "description": "피연산자 범위 1~39 / 1~39",
+                "operation": "add",
+                "constraints": {
+                  "outputUnit": "number",
+                  "divisionExact": true,
+                  "negativeResults": false,
+                  "carrying": "allowed",
+                  "borrowing": "allowed",
+                  "properFractionOperands": true,
+                  "resultMayBeImproper": false
+                },
+                "operandRule": "A 1..39, B 1..39"
+              },
+              "3": {
+                "rangeA": [
+                  1,
+                  59
+                ],
+                "rangeB": [
+                  1,
+                  59
+                ],
+                "denominatorMax": 14,
+                "carry": "allowed",
+                "borrow": "allowed",
+                "decimalPlaces": 1,
+                "description": "피연산자 범위 1~59 / 1~59",
+                "operation": "add",
+                "constraints": {
+                  "outputUnit": "number",
+                  "divisionExact": true,
+                  "negativeResults": false,
+                  "carrying": "allowed",
+                  "borrowing": "allowed",
+                  "properFractionOperands": true,
+                  "resultMayBeImproper": false
+                },
+                "operandRule": "A 1..59, B 1..59"
+              },
+              "4": {
+                "rangeA": [
+                  1,
+                  79
+                ],
+                "rangeB": [
+                  1,
+                  79
+                ],
+                "denominatorMax": 17,
+                "carry": "allowed",
+                "borrow": "allowed",
+                "decimalPlaces": 1,
+                "description": "피연산자 범위 1~79 / 1~79",
+                "operation": "add",
+                "constraints": {
+                  "outputUnit": "number",
+                  "divisionExact": true,
+                  "negativeResults": false,
+                  "carrying": "allowed",
+                  "borrowing": "allowed",
+                  "properFractionOperands": true,
+                  "resultMayBeImproper": false
+                },
+                "operandRule": "A 1..79, B 1..79"
+              },
+              "5": {
+                "rangeA": [
+                  1,
+                  99
+                ],
+                "rangeB": [
+                  1,
+                  99
+                ],
+                "denominatorMax": 20,
+                "carry": "allowed",
+                "borrow": "allowed",
+                "decimalPlaces": 1,
+                "description": "피연산자 범위 1~99 / 1~99",
+                "operation": "add",
+                "constraints": {
+                  "outputUnit": "number",
+                  "divisionExact": true,
+                  "negativeResults": false,
+                  "carrying": "allowed",
+                  "borrowing": "allowed",
+                  "properFractionOperands": true,
+                  "resultMayBeImproper": false
+                },
+                "operandRule": "A 1..99, B 1..99"
+              }
+            }
+          }
+        },
+        {
+          "id": "g2-sub",
+          "name": "두 자리 수 뺄셈",
+          "domain": "number",
+          "type": "subtract",
+          "supportedLevels": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "policy": {
+            "version": 2,
+            "output": "nonnegative",
+            "remainder": "none",
+            "fractionOperands": "proper-positive",
+            "fractionResult": "reduced",
+            "levels": {
+              "1": {
+                "rangeA": [
+                  2,
+                  19
+                ],
+                "rangeB": [
+                  1,
+                  19
+                ],
+                "denominatorMax": 8,
+                "carry": "allowed",
+                "borrow": "allowed",
+                "decimalPlaces": 1,
+                "description": "피연산자 범위 2~19 / 1~19",
+                "operation": "subtract",
+                "constraints": {
+                  "outputUnit": "number",
+                  "divisionExact": true,
+                  "negativeResults": false,
+                  "carrying": "allowed",
+                  "borrowing": "allowed",
+                  "properFractionOperands": true,
+                  "resultMayBeImproper": false
+                },
+                "operandRule": "X 2..19, Y 1..X"
+              },
+              "2": {
+                "rangeA": [
+                  2,
+                  39
+                ],
+                "rangeB": [
+                  1,
+                  39
+                ],
+                "denominatorMax": 11,
+                "carry": "allowed",
+                "borrow": "allowed",
+                "decimalPlaces": 1,
+                "description": "피연산자 범위 2~39 / 1~39",
+                "operation": "subtract",
+                "constraints": {
+                  "outputUnit": "number",
+                  "divisionExact": true,
+                  "negativeResults": false,
+                  "carrying": "allowed",
+                  "borrowing": "allowed",
+                  "properFractionOperands": true,
+                  "resultMayBeImproper": false
+                },
+                "operandRule": "X 2..39, Y 1..X"
+              },
+              "3": {
+                "rangeA": [
+                  2,
+                  59
+                ],
+                "rangeB": [
+                  1,
+                  59
+                ],
+                "denominatorMax": 14,
+                "carry": "allowed",
+                "borrow": "allowed",
+                "decimalPlaces": 1,
+                "description": "피연산자 범위 2~59 / 1~59",
+                "operation": "subtract",
+                "constraints": {
+                  "outputUnit": "number",
+                  "divisionExact": true,
+                  "negativeResults": false,
+                  "carrying": "allowed",
+                  "borrowing": "allowed",
+                  "properFractionOperands": true,
+                  "resultMayBeImproper": false
+                },
+                "operandRule": "X 2..59, Y 1..X"
+              },
+              "4": {
+                "rangeA": [
+                  2,
+                  79
+                ],
+                "rangeB": [
+                  1,
+                  79
+                ],
+                "denominatorMax": 17,
+                "carry": "allowed",
+                "borrow": "allowed",
+                "decimalPlaces": 1,
+                "description": "피연산자 범위 2~79 / 1~79",
+                "operation": "subtract",
+                "constraints": {
+                  "outputUnit": "number",
+                  "divisionExact": true,
+                  "negativeResults": false,
+                  "carrying": "allowed",
+                  "borrowing": "allowed",
+                  "properFractionOperands": true,
+                  "resultMayBeImproper": false
+                },
+                "operandRule": "X 2..79, Y 1..X"
+              },
+              "5": {
+                "rangeA": [
+                  2,
+                  99
+                ],
+                "rangeB": [
+                  1,
+                  99
+                ],
+                "denominatorMax": 20,
+                "carry": "allowed",
+                "borrow": "allowed",
+                "decimalPlaces": 1,
+                "description": "피연산자 범위 2~99 / 1~99",
+                "operation": "subtract",
+                "constraints": {
+                  "outputUnit": "number",
+                  "divisionExact": true,
+                  "negativeResults": false,
+                  "carrying": "allowed",
+                  "borrowing": "allowed",
+                  "properFractionOperands": true,
+                  "resultMayBeImproper": false
+                },
+                "operandRule": "X 2..99, Y 1..X"
+              }
+            }
+          }
+        },
+        {
+          "id": "g2-mul",
+          "name": "곱셈구구",
+          "domain": "number",
+          "type": "multiply",
+          "supportedLevels": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "policy": {
+            "version": 2,
+            "output": "nonnegative",
+            "remainder": "none",
+            "fractionOperands": "proper-positive",
+            "fractionResult": "reduced",
+            "levels": {
+              "1": {
+                "rangeA": [
+                  2,
+                  3
+                ],
+                "rangeB": [
+                  2,
+                  3
+                ],
+                "denominatorMax": 8,
+                "carry": "allowed",
+                "borrow": "allowed",
+                "decimalPlaces": 1,
+                "description": "피연산자 범위 2~3 / 2~3",
+                "operation": "multiply",
+                "constraints": {
+                  "outputUnit": "number",
+                  "divisionExact": true,
+                  "negativeResults": false,
+                  "carrying": "allowed",
+                  "borrowing": "allowed",
+                  "properFractionOperands": true,
+                  "resultMayBeImproper": false
+                },
+                "operandRule": "A 2..3, B 2..3"
+              },
+              "2": {
+                "rangeA": [
+                  2,
+                  5
+                ],
+                "rangeB": [
+                  2,
+                  5
+                ],
+                "denominatorMax": 11,
+                "carry": "allowed",
+                "borrow": "allowed",
+                "decimalPlaces": 1,
+                "description": "피연산자 범위 2~5 / 2~5",
+                "operation": "multiply",
+                "constraints": {
+                  "outputUnit": "number",
+                  "divisionExact": true,
+                  "negativeResults": false,
+                  "carrying": "allowed",
+                  "borrowing": "allowed",
+                  "properFractionOperands": true,
+                  "resultMayBeImproper": false
+                },
+                "operandRule": "A 2..5, B 2..5"
+              },
+              "3": {
+                "rangeA": [
+                  2,
+                  7
+                ],
+                "rangeB": [
+                  2,
+                  7
+                ],
+                "denominatorMax": 14,
+                "carry": "allowed",
+                "borrow": "allowed",
+                "decimalPlaces": 1,
+                "description": "피연산자 범위 2~7 / 2~7",
+                "operation": "multiply",
+                "constraints": {
+                  "outputUnit": "number",
+                  "divisionExact": true,
+                  "negativeResults": false,
+                  "carrying": "allowed",
+                  "borrowing": "allowed",
+                  "properFractionOperands": true,
+                  "resultMayBeImproper": false
+                },
+                "operandRule": "A 2..7, B 2..7"
+              },
+              "4": {
+                "rangeA": [
+                  2,
+                  8
+                ],
+                "rangeB": [
+                  2,
+                  8
+                ],
+                "denominatorMax": 17,
+                "carry": "allowed",
+                "borrow": "allowed",
+                "decimalPlaces": 1,
+                "description": "피연산자 범위 2~8 / 2~8",
+                "operation": "multiply",
+                "constraints": {
+                  "outputUnit": "number",
+                  "divisionExact": true,
+                  "negativeResults": false,
+                  "carrying": "allowed",
+                  "borrowing": "allowed",
+                  "properFractionOperands": true,
+                  "resultMayBeImproper": false
+                },
+                "operandRule": "A 2..8, B 2..8"
+              },
+              "5": {
+                "rangeA": [
+                  2,
+                  9
+                ],
+                "rangeB": [
+                  2,
+                  9
+                ],
+                "denominatorMax": 20,
+                "carry": "allowed",
+                "borrow": "allowed",
+                "decimalPlaces": 1,
+                "description": "피연산자 범위 2~9 / 2~9",
+                "operation": "multiply",
+                "constraints": {
+                  "outputUnit": "number",
+                  "divisionExact": true,
+                  "negativeResults": false,
+                  "carrying": "allowed",
+                  "borrowing": "allowed",
+                  "properFractionOperands": true,
+                  "resultMayBeImproper": false
+                },
+                "operandRule": "A 2..9, B 2..9"
+              }
+            }
+          }
+        },
+        {
+          "id": "g2-length",
+          "name": "m와 cm",
+          "domain": "geometry",
+          "type": "length",
+          "supportedLevels": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "policy": {
+            "version": 2,
+            "output": "nonnegative",
+            "remainder": "none",
+            "fractionOperands": "proper-positive",
+            "fractionResult": "reduced",
+            "levels": {
+              "1": {
+                "rangeA": [
+                  2,
+                  7
+                ],
+                "rangeB": [
+                  2,
+                  5
+                ],
+                "denominatorMax": 8,
+                "carry": "allowed",
+                "borrow": "allowed",
+                "decimalPlaces": 1,
+                "description": "피연산자 범위 2~7 / 2~5",
+                "operation": "length",
+                "constraints": {
+                  "outputUnit": "cm",
+                  "divisionExact": true,
+                  "negativeResults": false,
+                  "carrying": "allowed",
+                  "borrowing": "allowed",
+                  "properFractionOperands": true,
+                  "resultMayBeImproper": false
+                },
+                "operandRule": "A 2..7, B 2..5"
+              },
+              "2": {
+                "rangeA": [
+                  2,
+                  10
+                ],
+                "rangeB": [
+                  2,
+                  7
+                ],
+                "denominatorMax": 11,
+                "carry": "allowed",
+                "borrow": "allowed",
+                "decimalPlaces": 1,
+                "description": "피연산자 범위 2~10 / 2~7",
+                "operation": "length",
+                "constraints": {
+                  "outputUnit": "cm",
+                  "divisionExact": true,
+                  "negativeResults": false,
+                  "carrying": "allowed",
+                  "borrowing": "allowed",
+                  "properFractionOperands": true,
+                  "resultMayBeImproper": false
+                },
+                "operandRule": "A 2..10, B 2..7"
+              },
+              "3": {
+                "rangeA": [
+                  2,
+                  13
+                ],
+                "rangeB": [
+                  2,
+                  9
+                ],
+                "denominatorMax": 14,
+                "carry": "allowed",
+                "borrow": "allowed",
+                "decimalPlaces": 1,
+                "description": "피연산자 범위 2~13 / 2~9",
+                "operation": "length",
+                "constraints": {
+                  "outputUnit": "cm",
+                  "divisionExact": true,
+                  "negativeResults": false,
+                  "carrying": "allowed",
+                  "borrowing": "allowed",
+                  "properFractionOperands": true,
+                  "resultMayBeImproper": false
+                },
+                "operandRule": "A 2..13, B 2..9"
+              },
+              "4": {
+                "rangeA": [
+                  2,
+                  16
+                ],
+                "rangeB": [
+                  2,
+                  11
+                ],
+                "denominatorMax": 17,
+                "carry": "allowed",
+                "borrow": "allowed",
+                "decimalPlaces": 1,
+                "description": "피연산자 범위 2~16 / 2~11",
+                "operation": "length",
+                "constraints": {
+                  "outputUnit": "cm",
+                  "divisionExact": true,
+                  "negativeResults": false,
+                  "carrying": "allowed",
+                  "borrowing": "allowed",
+                  "properFractionOperands": true,
+                  "resultMayBeImproper": false
+                },
+                "operandRule": "A 2..16, B 2..11"
+              },
+              "5": {
+                "rangeA": [
+                  2,
+                  19
+                ],
+                "rangeB": [
+                  2,
+                  13
+                ],
+                "denominatorMax": 20,
+                "carry": "allowed",
+                "borrow": "allowed",
+                "decimalPlaces": 1,
+                "description": "피연산자 범위 2~19 / 2~13",
+                "operation": "length",
+                "constraints": {
+                  "outputUnit": "cm",
+                  "divisionExact": true,
+                  "negativeResults": false,
+                  "carrying": "allowed",
+                  "borrowing": "allowed",
+                  "properFractionOperands": true,
+                  "resultMayBeImproper": false
+                },
+                "operandRule": "A 2..19, B 2..13"
+              }
+            }
+          }
+        },
+        {
+          "id": "g2-pattern",
+          "name": "수의 규칙",
+          "domain": "patterns",
+          "type": "patterns",
+          "supportedLevels": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "policy": {
+            "version": 2,
+            "output": "nonnegative",
+            "remainder": "none",
+            "fractionOperands": "proper-positive",
+            "fractionResult": "reduced",
+            "levels": {
+              "1": {
+                "rangeA": [
+                  2,
+                  7
+                ],
+                "rangeB": [
+                  2,
+                  5
+                ],
+                "denominatorMax": 8,
+                "carry": "allowed",
+                "borrow": "allowed",
+                "decimalPlaces": 1,
+                "description": "피연산자 범위 2~7 / 2~5",
+                "operation": "patterns",
+                "constraints": {
+                  "outputUnit": "number",
+                  "divisionExact": true,
+                  "negativeResults": false,
+                  "carrying": "allowed",
+                  "borrowing": "allowed",
+                  "properFractionOperands": true,
+                  "resultMayBeImproper": false
+                },
+                "operandRule": "A 2..7, B 2..5"
+              },
+              "2": {
+                "rangeA": [
+                  2,
+                  10
+                ],
+                "rangeB": [
+                  2,
+                  7
+                ],
+                "denominatorMax": 11,
+                "carry": "allowed",
+                "borrow": "allowed",
+                "decimalPlaces": 1,
+                "description": "피연산자 범위 2~10 / 2~7",
+                "operation": "patterns",
+                "constraints": {
+                  "outputUnit": "number",
+                  "divisionExact": true,
+                  "negativeResults": false,
+                  "carrying": "allowed",
+                  "borrowing": "allowed",
+                  "properFractionOperands": true,
+                  "resultMayBeImproper": false
+                },
+                "operandRule": "A 2..10, B 2..7"
+              },
+              "3": {
+                "rangeA": [
+                  2,
+                  13
+                ],
+                "rangeB": [
+                  2,
+                  9
+                ],
+                "denominatorMax": 14,
+                "carry": "allowed",
+                "borrow": "allowed",
+                "decimalPlaces": 1,
+                "description": "피연산자 범위 2~13 / 2~9",
+                "operation": "patterns",
+                "constraints": {
+                  "outputUnit": "number",
+                  "divisionExact": true,
+                  "negativeResults": false,
+                  "carrying": "allowed",
+                  "borrowing": "allowed",
+                  "properFractionOperands": true,
+                  "resultMayBeImproper": false
+                },
+                "operandRule": "A 2..13, B 2..9"
+              },
+              "4": {
+                "rangeA": [
+                  2,
+                  16
+                ],
+                "rangeB": [
+                  2,
+                  11
+                ],
+                "denominatorMax": 17,
+                "carry": "allowed",
+                "borrow": "allowed",
+                "decimalPlaces": 1,
+                "description": "피연산자 범위 2~16 / 2~11",
+                "operation": "patterns",
+                "constraints": {
+                  "outputUnit": "number",
+                  "divisionExact": true,
+                  "negativeResults": false,
+                  "carrying": "allowed",
+                  "borrowing": "allowed",
+                  "properFractionOperands": true,
+                  "resultMayBeImproper": false
+                },
+                "operandRule": "A 2..16, B 2..11"
+              },
+              "5": {
+                "rangeA": [
+                  2,
+                  19
+                ],
+                "rangeB": [
+                  2,
+                  13
+                ],
+                "denominatorMax": 20,
+                "carry": "allowed",
+                "borrow": "allowed",
+                "decimalPlaces": 1,
+                "description": "피연산자 범위 2~19 / 2~13",
+                "operation": "patterns",
+                "constraints": {
+                  "outputUnit": "number",
+                  "divisionExact": true,
+                  "negativeResults": false,
+                  "carrying": "allowed",
+                  "borrowing": "allowed",
+                  "properFractionOperands": true,
+                  "resultMayBeImproper": false
+                },
+                "operandRule": "A 2..19, B 2..13"
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "grade": 3,
+      "units": [
+        {
+          "id": "g3-mul",
+          "name": "곱셈",
+          "domain": "number",
+          "type": "multiply",
+          "supportedLevels": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "policy": {
+            "version": 2,
+            "output": "nonnegative",
+            "remainder": "none",
+            "fractionOperands": "proper-positive",
+            "fractionResult": "reduced",
+            "levels": {
+              "1": {
+                "rangeA": [
+                  2,
+                  7
+                ],
+                "rangeB": [
+                  2,
+                  5
+                ],
+                "denominatorMax": 8,
+                "carry": "allowed",
+                "borrow": "allowed",
+                "decimalPlaces": 1,
+                "description": "피연산자 범위 2~7 / 2~5",
+                "operation": "multiply",
+                "constraints": {
+                  "outputUnit": "number",
+                  "divisionExact": true,
+                  "negativeResults": false,
+                  "carrying": "allowed",
+                  "borrowing": "allowed",
+                  "properFractionOperands": true,
+                  "resultMayBeImproper": false
+                },
+                "operandRule": "A 2..7, B 2..5"
+              },
+              "2": {
+                "rangeA": [
+                  2,
+                  10
+                ],
+                "rangeB": [
+                  2,
+                  7
+                ],
+                "denominatorMax": 11,
+                "carry": "allowed",
+                "borrow": "allowed",
+                "decimalPlaces": 1,
+                "description": "피연산자 범위 2~10 / 2~7",
+                "operation": "multiply",
+                "constraints": {
+                  "outputUnit": "number",
+                  "divisionExact": true,
+                  "negativeResults": false,
+                  "carrying": "allowed",
+                  "borrowing": "allowed",
+                  "properFractionOperands": true,
+                  "resultMayBeImproper": false
+                },
+                "operandRule": "A 2..10, B 2..7"
+              },
+              "3": {
+                "rangeA": [
+                  2,
+                  13
+                ],
+                "rangeB": [
+                  2,
+                  9
+                ],
+                "denominatorMax": 14,
+                "carry": "allowed",
+                "borrow": "allowed",
+                "decimalPlaces": 1,
+                "description": "피연산자 범위 2~13 / 2~9",
+                "operation": "multiply",
+                "constraints": {
+                  "outputUnit": "number",
+                  "divisionExact": true,
+                  "negativeResults": false,
+                  "carrying": "allowed",
+                  "borrowing": "allowed",
+                  "properFractionOperands": true,
+                  "resultMayBeImproper": false
+                },
+                "operandRule": "A 2..13, B 2..9"
+              },
+              "4": {
+                "rangeA": [
+                  2,
+                  16
+                ],
+                "rangeB": [
+                  2,
+                  11
+                ],
+                "denominatorMax": 17,
+                "carry": "allowed",
+                "borrow": "allowed",
+                "decimalPlaces": 1,
+                "description": "피연산자 범위 2~16 / 2~11",
+                "operation": "multiply",
+                "constraints": {
+                  "outputUnit": "number",
+                  "divisionExact": true,
+                  "negativeResults": false,
+                  "carrying": "allowed",
+                  "borrowing": "allowed",
+                  "properFractionOperands": true,
+                  "resultMayBeImproper": false
+                },
+                "operandRule": "A 2..16, B 2..11"
+              },
+              "5": {
+                "rangeA": [
+                  2,
+                  19
+                ],
+                "rangeB": [
+                  2,
+                  13
+                ],
+                "denominatorMax": 20,
+                "carry": "allowed",
+                "borrow": "allowed",
+                "decimalPlaces": 1,
+                "description": "피연산자 범위 2~19 / 2~13",
+                "operation": "multiply",
+                "constraints": {
+                  "outputUnit": "number",
+                  "divisionExact": true,
+                  "negativeResults": false,
+                  "carrying": "allowed",
+                  "borrowing": "allowed",
+                  "properFractionOperands": true,
+                  "resultMayBeImproper": false
+                },
+                "operandRule": "A 2..19, B 2..13"
+              }
+            }
+          }
+        },
+        {
+          "id": "g3-div",
+          "name": "나눗셈",
+          "domain": "number",
+          "type": "divide",
+          "supportedLevels": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "policy": {
+            "version": 2,
+            "output": "nonnegative",
+            "remainder": "none",
+            "fractionOperands": "proper-positive",
+            "fractionResult": "reduced",
+            "levels": {
+              "1": {
+                "rangeA": [
+                  2,
+                  7
+                ],
+                "rangeB": [
+                  2,
+                  5
+                ],
+                "denominatorMax": 8,
+                "carry": "allowed",
+                "borrow": "allowed",
+                "decimalPlaces": 1,
+                "description": "피연산자 범위 2~7 / 2~5",
+                "operation": "divide",
+                "constraints": {
+                  "outputUnit": "number",
+                  "divisionExact": true,
+                  "negativeResults": false,
+                  "carrying": "allowed",
+                  "borrowing": "allowed",
+                  "properFractionOperands": true,
+                  "resultMayBeImproper": false
+                },
+                "operandRule": "[A×B, B], A 2..7, B 2..5"
+              },
+              "2": {
+                "rangeA": [
+                  2,
+                  10
+                ],
+                "rangeB": [
+                  2,
+                  7
+                ],
+                "denominatorMax": 11,
+                "carry": "allowed",
+                "borrow": "allowed",
+                "decimalPlaces": 1,
+                "description": "피연산자 범위 2~10 / 2~7",
+                "operation": "divide",
+                "constraints": {
+                  "outputUnit": "number",
+                  "divisionExact": true,
+                  "negativeResults": false,
+                  "carrying": "allowed",
+                  "borrowing": "allowed",
+                  "properFractionOperands": true,
+                  "resultMayBeImproper": false
+                },
+                "operandRule": "[A×B, B], A 2..10, B 2..7"
+              },
+              "3": {
+                "rangeA": [
+                  2,
+                  13
+                ],
+                "rangeB": [
+                  2,
+                  9
+                ],
+                "denominatorMax": 14,
+                "carry": "allowed",
+                "borrow": "allowed",
+                "decimalPlaces": 1,
+                "description": "피연산자 범위 2~13 / 2~9",
+                "operation": "divide",
+                "constraints": {
+                  "outputUnit": "number",
+                  "divisionExact": true,
+                  "negativeResults": false,
+                  "carrying": "allowed",
+                  "borrowing": "allowed",
+                  "properFractionOperands": true,
+                  "resultMayBeImproper": false
+                },
+                "operandRule": "[A×B, B], A 2..13, B 2..9"
+              },
+              "4": {
+                "rangeA": [
+                  2,
+                  16
+                ],
+                "rangeB": [
+                  2,
+                  11
+                ],
+                "denominatorMax": 17,
+                "carry": "allowed",
+                "borrow": "allowed",
+                "decimalPlaces": 1,
+                "description": "피연산자 범위 2~16 / 2~11",
+                "operation": "divide",
+                "constraints": {
+                  "outputUnit": "number",
+                  "divisionExact": true,
+                  "negativeResults": false,
+                  "carrying": "allowed",
+                  "borrowing": "allowed",
+                  "properFractionOperands": true,
+                  "resultMayBeImproper": false
+                },
+                "operandRule": "[A×B, B], A 2..16, B 2..11"
+              },
+              "5": {
+                "rangeA": [
+                  2,
+                  19
+                ],
+                "rangeB": [
+                  2,
+                  13
+                ],
+                "denominatorMax": 20,
+                "carry": "allowed",
+                "borrow": "allowed",
+                "decimalPlaces": 1,
+                "description": "피연산자 범위 2~19 / 2~13",
+                "operation": "divide",
+                "constraints": {
+                  "outputUnit": "number",
+                  "divisionExact": true,
+                  "negativeResults": false,
+                  "carrying": "allowed",
+                  "borrowing": "allowed",
+                  "properFractionOperands": true,
+                  "resultMayBeImproper": false
+                },
+                "operandRule": "[A×B, B], A 2..19, B 2..13"
+              }
+            }
+          }
+        },
+        {
+          "id": "g3-dec",
+          "name": "소수의 덧셈 기초",
+          "domain": "number",
+          "type": "decimal",
+          "supportedLevels": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "policy": {
+            "version": 2,
+            "output": "nonnegative",
+            "remainder": "none",
+            "fractionOperands": "proper-positive",
+            "fractionResult": "reduced",
+            "levels": {
+              "1": {
+                "rangeA": [
+                  2,
+                  7
+                ],
+                "rangeB": [
+                  2,
+                  5
+                ],
+                "denominatorMax": 8,
+                "carry": "allowed",
+                "borrow": "allowed",
+                "decimalPlaces": 1,
+                "description": "피연산자 범위 2~7 / 2~5",
+                "operation": "decimal",
+                "constraints": {
+                  "outputUnit": "number",
+                  "divisionExact": true,
+                  "negativeResults": false,
+                  "carrying": "allowed",
+                  "borrowing": "allowed",
+                  "properFractionOperands": true,
+                  "resultMayBeImproper": false
+                },
+                "operandRule": "A 2..7, B 2..5; operands /10"
+              },
+              "2": {
+                "rangeA": [
+                  2,
+                  10
+                ],
+                "rangeB": [
+                  2,
+                  7
+                ],
+                "denominatorMax": 11,
+                "carry": "allowed",
+                "borrow": "allowed",
+                "decimalPlaces": 1,
+                "description": "피연산자 범위 2~10 / 2~7",
+                "operation": "decimal",
+                "constraints": {
+                  "outputUnit": "number",
+                  "divisionExact": true,
+                  "negativeResults": false,
+                  "carrying": "allowed",
+                  "borrowing": "allowed",
+                  "properFractionOperands": true,
+                  "resultMayBeImproper": false
+                },
+                "operandRule": "A 2..10, B 2..7; operands /10"
+              },
+              "3": {
+                "rangeA": [
+                  2,
+                  13
+                ],
+                "rangeB": [
+                  2,
+                  9
+                ],
+                "denominatorMax": 14,
+                "carry": "allowed",
+                "borrow": "allowed",
+                "decimalPlaces": 1,
+                "description": "피연산자 범위 2~13 / 2~9",
+                "operation": "decimal",
+                "constraints": {
+                  "outputUnit": "number",
+                  "divisionExact": true,
+                  "negativeResults": false,
+                  "carrying": "allowed",
+                  "borrowing": "allowed",
+                  "properFractionOperands": true,
+                  "resultMayBeImproper": false
+                },
+                "operandRule": "A 2..13, B 2..9; operands /10"
+              },
+              "4": {
+                "rangeA": [
+                  2,
+                  16
+                ],
+                "rangeB": [
+                  2,
+                  11
+                ],
+                "denominatorMax": 17,
+                "carry": "allowed",
+                "borrow": "allowed",
+                "decimalPlaces": 1,
+                "description": "피연산자 범위 2~16 / 2~11",
+                "operation": "decimal",
+                "constraints": {
+                  "outputUnit": "number",
+                  "divisionExact": true,
+                  "negativeResults": false,
+                  "carrying": "allowed",
+                  "borrowing": "allowed",
+                  "properFractionOperands": true,
+                  "resultMayBeImproper": false
+                },
+                "operandRule": "A 2..16, B 2..11; operands /10"
+              },
+              "5": {
+                "rangeA": [
+                  2,
+                  19
+                ],
+                "rangeB": [
+                  2,
+                  13
+                ],
+                "denominatorMax": 20,
+                "carry": "allowed",
+                "borrow": "allowed",
+                "decimalPlaces": 1,
+                "description": "피연산자 범위 2~19 / 2~13",
+                "operation": "decimal",
+                "constraints": {
+                  "outputUnit": "number",
+                  "divisionExact": true,
+                  "negativeResults": false,
+                  "carrying": "allowed",
+                  "borrowing": "allowed",
+                  "properFractionOperands": true,
+                  "resultMayBeImproper": false
+                },
+                "operandRule": "A 2..19, B 2..13; operands /10"
+              }
+            }
+          }
+        },
+        {
+          "id": "g3-time",
+          "name": "분과 초",
+          "domain": "geometry",
+          "type": "time",
+          "supportedLevels": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "policy": {
+            "version": 2,
+            "output": "nonnegative",
+            "remainder": "none",
+            "fractionOperands": "proper-positive",
+            "fractionResult": "reduced",
+            "levels": {
+              "1": {
+                "rangeA": [
+                  2,
+                  7
+                ],
+                "rangeB": [
+                  2,
+                  5
+                ],
+                "denominatorMax": 8,
+                "carry": "allowed",
+                "borrow": "allowed",
+                "decimalPlaces": 1,
+                "description": "피연산자 범위 2~7 / 2~5",
+                "operation": "time",
+                "constraints": {
+                  "outputUnit": "초",
+                  "divisionExact": true,
+                  "negativeResults": false,
+                  "carrying": "allowed",
+                  "borrowing": "allowed",
+                  "properFractionOperands": true,
+                  "resultMayBeImproper": false
+                },
+                "operandRule": "A 2..7, B 2..5"
+              },
+              "2": {
+                "rangeA": [
+                  2,
+                  10
+                ],
+                "rangeB": [
+                  2,
+                  7
+                ],
+                "denominatorMax": 11,
+                "carry": "allowed",
+                "borrow": "allowed",
+                "decimalPlaces": 1,
+                "description": "피연산자 범위 2~10 / 2~7",
+                "operation": "time",
+                "constraints": {
+                  "outputUnit": "초",
+                  "divisionExact": true,
+                  "negativeResults": false,
+                  "carrying": "allowed",
+                  "borrowing": "allowed",
+                  "properFractionOperands": true,
+                  "resultMayBeImproper": false
+                },
+                "operandRule": "A 2..10, B 2..7"
+              },
+              "3": {
+                "rangeA": [
+                  2,
+                  13
+                ],
+                "rangeB": [
+                  2,
+                  9
+                ],
+                "denominatorMax": 14,
+                "carry": "allowed",
+                "borrow": "allowed",
+                "decimalPlaces": 1,
+                "description": "피연산자 범위 2~13 / 2~9",
+                "operation": "time",
+                "constraints": {
+                  "outputUnit": "초",
+                  "divisionExact": true,
+                  "negativeResults": false,
+                  "carrying": "allowed",
+                  "borrowing": "allowed",
+                  "properFractionOperands": true,
+                  "resultMayBeImproper": false
+                },
+                "operandRule": "A 2..13, B 2..9"
+              },
+              "4": {
+                "rangeA": [
+                  2,
+                  16
+                ],
+                "rangeB": [
+                  2,
+                  11
+                ],
+                "denominatorMax": 17,
+                "carry": "allowed",
+                "borrow": "allowed",
+                "decimalPlaces": 1,
+                "description": "피연산자 범위 2~16 / 2~11",
+                "operation": "time",
+                "constraints": {
+                  "outputUnit": "초",
+                  "divisionExact": true,
+                  "negativeResults": false,
+                  "carrying": "allowed",
+                  "borrowing": "allowed",
+                  "properFractionOperands": true,
+                  "resultMayBeImproper": false
+                },
+                "operandRule": "A 2..16, B 2..11"
+              },
+              "5": {
+                "rangeA": [
+                  2,
+                  19
+                ],
+                "rangeB": [
+                  2,
+                  13
+                ],
+                "denominatorMax": 20,
+                "carry": "allowed",
+                "borrow": "allowed",
+                "decimalPlaces": 1,
+                "description": "피연산자 범위 2~19 / 2~13",
+                "operation": "time",
+                "constraints": {
+                  "outputUnit": "초",
+                  "divisionExact": true,
+                  "negativeResults": false,
+                  "carrying": "allowed",
+                  "borrowing": "allowed",
+                  "properFractionOperands": true,
+                  "resultMayBeImproper": false
+                },
+                "operandRule": "A 2..19, B 2..13"
+              }
+            }
+          }
+        },
+        {
+          "id": "g3-shape",
+          "name": "다각형의 변",
+          "domain": "geometry",
+          "type": "shapes",
+          "supportedLevels": [
+            1
+          ],
+          "policy": {
+            "version": 2,
+            "output": "nonnegative",
+            "remainder": "none",
+            "fractionOperands": "proper-positive",
+            "fractionResult": "reduced",
+            "levels": {
+              "1": {
+                "rangeA": [
+                  2,
+                  7
+                ],
+                "rangeB": [
+                  2,
+                  5
+                ],
+                "denominatorMax": 8,
+                "carry": "allowed",
+                "borrow": "allowed",
+                "decimalPlaces": 1,
+                "description": "변 개수 식별 한 단계",
+                "operation": "shapes",
+                "constraints": {
+                  "outputUnit": "number",
+                  "divisionExact": true,
+                  "negativeResults": false,
+                  "carrying": "allowed",
+                  "borrowing": "allowed",
+                  "properFractionOperands": true,
+                  "resultMayBeImproper": false
+                },
+                "operandRule": "edge count 3..6; orientation context 0..2; only level 1 supported"
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "grade": 4,
+      "units": [
+        {
+          "id": "g4-frac",
+          "name": "같은 분모 분수의 덧셈",
+          "domain": "number",
+          "type": "fraction",
+          "supportedLevels": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "policy": {
+            "version": 2,
+            "output": "nonnegative",
+            "remainder": "none",
+            "fractionOperands": "proper-positive",
+            "fractionResult": "proper-or-improper-reduced",
+            "levels": {
+              "1": {
+                "rangeA": [
+                  2,
+                  7
+                ],
+                "rangeB": [
+                  2,
+                  5
+                ],
+                "denominatorMax": 8,
+                "carry": "allowed",
+                "borrow": "allowed",
+                "decimalPlaces": 1,
+                "description": "피연산자 범위 2~7 / 2~5",
+                "operation": "fraction",
+                "constraints": {
+                  "outputUnit": "number",
+                  "divisionExact": true,
+                  "negativeResults": false,
+                  "carrying": "allowed",
+                  "borrowing": "allowed",
+                  "properFractionOperands": true,
+                  "resultMayBeImproper": true
+                },
+                "operandRule": "D 3..8, X,Y 1..D−1; result (X+Y)/D"
+              },
+              "2": {
+                "rangeA": [
+                  2,
+                  10
+                ],
+                "rangeB": [
+                  2,
+                  7
+                ],
+                "denominatorMax": 11,
+                "carry": "allowed",
+                "borrow": "allowed",
+                "decimalPlaces": 1,
+                "description": "피연산자 범위 2~10 / 2~7",
+                "operation": "fraction",
+                "constraints": {
+                  "outputUnit": "number",
+                  "divisionExact": true,
+                  "negativeResults": false,
+                  "carrying": "allowed",
+                  "borrowing": "allowed",
+                  "properFractionOperands": true,
+                  "resultMayBeImproper": true
+                },
+                "operandRule": "D 3..11, X,Y 1..D−1; result (X+Y)/D"
+              },
+              "3": {
+                "rangeA": [
+                  2,
+                  13
+                ],
+                "rangeB": [
+                  2,
+                  9
+                ],
+                "denominatorMax": 14,
+                "carry": "allowed",
+                "borrow": "allowed",
+                "decimalPlaces": 1,
+                "description": "피연산자 범위 2~13 / 2~9",
+                "operation": "fraction",
+                "constraints": {
+                  "outputUnit": "number",
+                  "divisionExact": true,
+                  "negativeResults": false,
+                  "carrying": "allowed",
+                  "borrowing": "allowed",
+                  "properFractionOperands": true,
+                  "resultMayBeImproper": true
+                },
+                "operandRule": "D 3..14, X,Y 1..D−1; result (X+Y)/D"
+              },
+              "4": {
+                "rangeA": [
+                  2,
+                  16
+                ],
+                "rangeB": [
+                  2,
+                  11
+                ],
+                "denominatorMax": 17,
+                "carry": "allowed",
+                "borrow": "allowed",
+                "decimalPlaces": 1,
+                "description": "피연산자 범위 2~16 / 2~11",
+                "operation": "fraction",
+                "constraints": {
+                  "outputUnit": "number",
+                  "divisionExact": true,
+                  "negativeResults": false,
+                  "carrying": "allowed",
+                  "borrowing": "allowed",
+                  "properFractionOperands": true,
+                  "resultMayBeImproper": true
+                },
+                "operandRule": "D 3..17, X,Y 1..D−1; result (X+Y)/D"
+              },
+              "5": {
+                "rangeA": [
+                  2,
+                  19
+                ],
+                "rangeB": [
+                  2,
+                  13
+                ],
+                "denominatorMax": 20,
+                "carry": "allowed",
+                "borrow": "allowed",
+                "decimalPlaces": 1,
+                "description": "피연산자 범위 2~19 / 2~13",
+                "operation": "fraction",
+                "constraints": {
+                  "outputUnit": "number",
+                  "divisionExact": true,
+                  "negativeResults": false,
+                  "carrying": "allowed",
+                  "borrowing": "allowed",
+                  "properFractionOperands": true,
+                  "resultMayBeImproper": true
+                },
+                "operandRule": "D 3..20, X,Y 1..D−1; result (X+Y)/D"
+              }
+            }
+          }
+        },
+        {
+          "id": "g4-dec",
+          "name": "소수의 덧셈",
+          "domain": "number",
+          "type": "decimal",
+          "supportedLevels": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "policy": {
+            "version": 2,
+            "output": "nonnegative",
+            "remainder": "none",
+            "fractionOperands": "proper-positive",
+            "fractionResult": "reduced",
+            "levels": {
+              "1": {
+                "rangeA": [
+                  2,
+                  7
+                ],
+                "rangeB": [
+                  2,
+                  5
+                ],
+                "denominatorMax": 8,
+                "carry": "allowed",
+                "borrow": "allowed",
+                "decimalPlaces": 1,
+                "description": "피연산자 범위 2~7 / 2~5",
+                "operation": "decimal",
+                "constraints": {
+                  "outputUnit": "number",
+                  "divisionExact": true,
+                  "negativeResults": false,
+                  "carrying": "allowed",
+                  "borrowing": "allowed",
+                  "properFractionOperands": true,
+                  "resultMayBeImproper": false
+                },
+                "operandRule": "A 2..7, B 2..5; operands /10"
+              },
+              "2": {
+                "rangeA": [
+                  2,
+                  10
+                ],
+                "rangeB": [
+                  2,
+                  7
+                ],
+                "denominatorMax": 11,
+                "carry": "allowed",
+                "borrow": "allowed",
+                "decimalPlaces": 1,
+                "description": "피연산자 범위 2~10 / 2~7",
+                "operation": "decimal",
+                "constraints": {
+                  "outputUnit": "number",
+                  "divisionExact": true,
+                  "negativeResults": false,
+                  "carrying": "allowed",
+                  "borrowing": "allowed",
+                  "properFractionOperands": true,
+                  "resultMayBeImproper": false
+                },
+                "operandRule": "A 2..10, B 2..7; operands /10"
+              },
+              "3": {
+                "rangeA": [
+                  2,
+                  13
+                ],
+                "rangeB": [
+                  2,
+                  9
+                ],
+                "denominatorMax": 14,
+                "carry": "allowed",
+                "borrow": "allowed",
+                "decimalPlaces": 1,
+                "description": "피연산자 범위 2~13 / 2~9",
+                "operation": "decimal",
+                "constraints": {
+                  "outputUnit": "number",
+                  "divisionExact": true,
+                  "negativeResults": false,
+                  "carrying": "allowed",
+                  "borrowing": "allowed",
+                  "properFractionOperands": true,
+                  "resultMayBeImproper": false
+                },
+                "operandRule": "A 2..13, B 2..9; operands /10"
+              },
+              "4": {
+                "rangeA": [
+                  2,
+                  16
+                ],
+                "rangeB": [
+                  2,
+                  11
+                ],
+                "denominatorMax": 17,
+                "carry": "allowed",
+                "borrow": "allowed",
+                "decimalPlaces": 1,
+                "description": "피연산자 범위 2~16 / 2~11",
+                "operation": "decimal",
+                "constraints": {
+                  "outputUnit": "number",
+                  "divisionExact": true,
+                  "negativeResults": false,
+                  "carrying": "allowed",
+                  "borrowing": "allowed",
+                  "properFractionOperands": true,
+                  "resultMayBeImproper": false
+                },
+                "operandRule": "A 2..16, B 2..11; operands /10"
+              },
+              "5": {
+                "rangeA": [
+                  2,
+                  19
+                ],
+                "rangeB": [
+                  2,
+                  13
+                ],
+                "denominatorMax": 20,
+                "carry": "allowed",
+                "borrow": "allowed",
+                "decimalPlaces": 1,
+                "description": "피연산자 범위 2~19 / 2~13",
+                "operation": "decimal",
+                "constraints": {
+                  "outputUnit": "number",
+                  "divisionExact": true,
+                  "negativeResults": false,
+                  "carrying": "allowed",
+                  "borrowing": "allowed",
+                  "properFractionOperands": true,
+                  "resultMayBeImproper": false
+                },
+                "operandRule": "A 2..19, B 2..13; operands /10"
+              }
+            }
+          }
+        },
+        {
+          "id": "g4-angle",
+          "name": "삼각형의 각",
+          "domain": "geometry",
+          "type": "angle",
+          "supportedLevels": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "policy": {
+            "version": 2,
+            "output": "nonnegative",
+            "remainder": "none",
+            "fractionOperands": "proper-positive",
+            "fractionResult": "reduced",
+            "levels": {
+              "1": {
+                "rangeA": [
+                  2,
+                  7
+                ],
+                "rangeB": [
+                  2,
+                  5
+                ],
+                "denominatorMax": 8,
+                "carry": "allowed",
+                "borrow": "allowed",
+                "decimalPlaces": 1,
+                "description": "피연산자 범위 2~7 / 2~5",
+                "operation": "angle",
+                "constraints": {
+                  "outputUnit": "도",
+                  "divisionExact": true,
+                  "negativeResults": false,
+                  "carrying": "allowed",
+                  "borrowing": "allowed",
+                  "properFractionOperands": true,
+                  "resultMayBeImproper": false
+                },
+                "operandRule": "X,Y each 20..40 degrees in steps of 10; third angle 180−X−Y >0"
+              },
+              "2": {
+                "rangeA": [
+                  2,
+                  10
+                ],
+                "rangeB": [
+                  2,
+                  7
+                ],
+                "denominatorMax": 11,
+                "carry": "allowed",
+                "borrow": "allowed",
+                "decimalPlaces": 1,
+                "description": "피연산자 범위 2~10 / 2~7",
+                "operation": "angle",
+                "constraints": {
+                  "outputUnit": "도",
+                  "divisionExact": true,
+                  "negativeResults": false,
+                  "carrying": "allowed",
+                  "borrowing": "allowed",
+                  "properFractionOperands": true,
+                  "resultMayBeImproper": false
+                },
+                "operandRule": "X,Y each 20..50 degrees in steps of 10; third angle 180−X−Y >0"
+              },
+              "3": {
+                "rangeA": [
+                  2,
+                  13
+                ],
+                "rangeB": [
+                  2,
+                  9
+                ],
+                "denominatorMax": 14,
+                "carry": "allowed",
+                "borrow": "allowed",
+                "decimalPlaces": 1,
+                "description": "피연산자 범위 2~13 / 2~9",
+                "operation": "angle",
+                "constraints": {
+                  "outputUnit": "도",
+                  "divisionExact": true,
+                  "negativeResults": false,
+                  "carrying": "allowed",
+                  "borrowing": "allowed",
+                  "properFractionOperands": true,
+                  "resultMayBeImproper": false
+                },
+                "operandRule": "X,Y each 20..60 degrees in steps of 10; third angle 180−X−Y >0"
+              },
+              "4": {
+                "rangeA": [
+                  2,
+                  16
+                ],
+                "rangeB": [
+                  2,
+                  11
+                ],
+                "denominatorMax": 17,
+                "carry": "allowed",
+                "borrow": "allowed",
+                "decimalPlaces": 1,
+                "description": "피연산자 범위 2~16 / 2~11",
+                "operation": "angle",
+                "constraints": {
+                  "outputUnit": "도",
+                  "divisionExact": true,
+                  "negativeResults": false,
+                  "carrying": "allowed",
+                  "borrowing": "allowed",
+                  "properFractionOperands": true,
+                  "resultMayBeImproper": false
+                },
+                "operandRule": "X,Y each 20..70 degrees in steps of 10; third angle 180−X−Y >0"
+              },
+              "5": {
+                "rangeA": [
+                  2,
+                  19
+                ],
+                "rangeB": [
+                  2,
+                  13
+                ],
+                "denominatorMax": 20,
+                "carry": "allowed",
+                "borrow": "allowed",
+                "decimalPlaces": 1,
+                "description": "피연산자 범위 2~19 / 2~13",
+                "operation": "angle",
+                "constraints": {
+                  "outputUnit": "도",
+                  "divisionExact": true,
+                  "negativeResults": false,
+                  "carrying": "allowed",
+                  "borrowing": "allowed",
+                  "properFractionOperands": true,
+                  "resultMayBeImproper": false
+                },
+                "operandRule": "X,Y each 20..80 degrees in steps of 10; third angle 180−X−Y >0"
+              }
+            }
+          }
+        },
+        {
+          "id": "g4-pattern",
+          "name": "규칙과 대응",
+          "domain": "patterns",
+          "type": "patterns",
+          "supportedLevels": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "policy": {
+            "version": 2,
+            "output": "nonnegative",
+            "remainder": "none",
+            "fractionOperands": "proper-positive",
+            "fractionResult": "reduced",
+            "levels": {
+              "1": {
+                "rangeA": [
+                  2,
+                  7
+                ],
+                "rangeB": [
+                  2,
+                  5
+                ],
+                "denominatorMax": 8,
+                "carry": "allowed",
+                "borrow": "allowed",
+                "decimalPlaces": 1,
+                "description": "피연산자 범위 2~7 / 2~5",
+                "operation": "patterns",
+                "constraints": {
+                  "outputUnit": "number",
+                  "divisionExact": true,
+                  "negativeResults": false,
+                  "carrying": "allowed",
+                  "borrowing": "allowed",
+                  "properFractionOperands": true,
+                  "resultMayBeImproper": false
+                },
+                "operandRule": "A 2..7, B 2..5"
+              },
+              "2": {
+                "rangeA": [
+                  2,
+                  10
+                ],
+                "rangeB": [
+                  2,
+                  7
+                ],
+                "denominatorMax": 11,
+                "carry": "allowed",
+                "borrow": "allowed",
+                "decimalPlaces": 1,
+                "description": "피연산자 범위 2~10 / 2~7",
+                "operation": "patterns",
+                "constraints": {
+                  "outputUnit": "number",
+                  "divisionExact": true,
+                  "negativeResults": false,
+                  "carrying": "allowed",
+                  "borrowing": "allowed",
+                  "properFractionOperands": true,
+                  "resultMayBeImproper": false
+                },
+                "operandRule": "A 2..10, B 2..7"
+              },
+              "3": {
+                "rangeA": [
+                  2,
+                  13
+                ],
+                "rangeB": [
+                  2,
+                  9
+                ],
+                "denominatorMax": 14,
+                "carry": "allowed",
+                "borrow": "allowed",
+                "decimalPlaces": 1,
+                "description": "피연산자 범위 2~13 / 2~9",
+                "operation": "patterns",
+                "constraints": {
+                  "outputUnit": "number",
+                  "divisionExact": true,
+                  "negativeResults": false,
+                  "carrying": "allowed",
+                  "borrowing": "allowed",
+                  "properFractionOperands": true,
+                  "resultMayBeImproper": false
+                },
+                "operandRule": "A 2..13, B 2..9"
+              },
+              "4": {
+                "rangeA": [
+                  2,
+                  16
+                ],
+                "rangeB": [
+                  2,
+                  11
+                ],
+                "denominatorMax": 17,
+                "carry": "allowed",
+                "borrow": "allowed",
+                "decimalPlaces": 1,
+                "description": "피연산자 범위 2~16 / 2~11",
+                "operation": "patterns",
+                "constraints": {
+                  "outputUnit": "number",
+                  "divisionExact": true,
+                  "negativeResults": false,
+                  "carrying": "allowed",
+                  "borrowing": "allowed",
+                  "properFractionOperands": true,
+                  "resultMayBeImproper": false
+                },
+                "operandRule": "A 2..16, B 2..11"
+              },
+              "5": {
+                "rangeA": [
+                  2,
+                  19
+                ],
+                "rangeB": [
+                  2,
+                  13
+                ],
+                "denominatorMax": 20,
+                "carry": "allowed",
+                "borrow": "allowed",
+                "decimalPlaces": 1,
+                "description": "피연산자 범위 2~19 / 2~13",
+                "operation": "patterns",
+                "constraints": {
+                  "outputUnit": "number",
+                  "divisionExact": true,
+                  "negativeResults": false,
+                  "carrying": "allowed",
+                  "borrowing": "allowed",
+                  "properFractionOperands": true,
+                  "resultMayBeImproper": false
+                },
+                "operandRule": "A 2..19, B 2..13"
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "grade": 5,
+      "units": [
+        {
+          "id": "g5-frac",
+          "name": "다른 분모 분수의 덧셈",
+          "domain": "number",
+          "type": "unlikeFraction",
+          "supportedLevels": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "policy": {
+            "version": 2,
+            "output": "nonnegative",
+            "remainder": "none",
+            "fractionOperands": "proper-positive",
+            "fractionResult": "proper-or-improper-reduced",
+            "levels": {
+              "1": {
+                "rangeA": [
+                  2,
+                  7
+                ],
+                "rangeB": [
+                  2,
+                  5
+                ],
+                "denominatorMax": 8,
+                "carry": "allowed",
+                "borrow": "allowed",
+                "decimalPlaces": 1,
+                "description": "피연산자 범위 2~7 / 2~5",
+                "operation": "unlikeFraction",
+                "constraints": {
+                  "outputUnit": "number",
+                  "divisionExact": true,
+                  "negativeResults": false,
+                  "carrying": "allowed",
+                  "borrowing": "allowed",
+                  "properFractionOperands": true,
+                  "resultMayBeImproper": true
+                },
+                "operandRule": "D 2..4, E=D+1, X 1..D−1, Y 1..E−1"
+              },
+              "2": {
+                "rangeA": [
+                  2,
+                  10
+                ],
+                "rangeB": [
+                  2,
+                  7
+                ],
+                "denominatorMax": 11,
+                "carry": "allowed",
+                "borrow": "allowed",
+                "decimalPlaces": 1,
+                "description": "피연산자 범위 2~10 / 2~7",
+                "operation": "unlikeFraction",
+                "constraints": {
+                  "outputUnit": "number",
+                  "divisionExact": true,
+                  "negativeResults": false,
+                  "carrying": "allowed",
+                  "borrowing": "allowed",
+                  "properFractionOperands": true,
+                  "resultMayBeImproper": true
+                },
+                "operandRule": "D 2..5, E=D+1, X 1..D−1, Y 1..E−1"
+              },
+              "3": {
+                "rangeA": [
+                  2,
+                  13
+                ],
+                "rangeB": [
+                  2,
+                  9
+                ],
+                "denominatorMax": 14,
+                "carry": "allowed",
+                "borrow": "allowed",
+                "decimalPlaces": 1,
+                "description": "피연산자 범위 2~13 / 2~9",
+                "operation": "unlikeFraction",
+                "constraints": {
+                  "outputUnit": "number",
+                  "divisionExact": true,
+                  "negativeResults": false,
+                  "carrying": "allowed",
+                  "borrowing": "allowed",
+                  "properFractionOperands": true,
+                  "resultMayBeImproper": true
+                },
+                "operandRule": "D 2..6, E=D+1, X 1..D−1, Y 1..E−1"
+              },
+              "4": {
+                "rangeA": [
+                  2,
+                  16
+                ],
+                "rangeB": [
+                  2,
+                  11
+                ],
+                "denominatorMax": 17,
+                "carry": "allowed",
+                "borrow": "allowed",
+                "decimalPlaces": 1,
+                "description": "피연산자 범위 2~16 / 2~11",
+                "operation": "unlikeFraction",
+                "constraints": {
+                  "outputUnit": "number",
+                  "divisionExact": true,
+                  "negativeResults": false,
+                  "carrying": "allowed",
+                  "borrowing": "allowed",
+                  "properFractionOperands": true,
+                  "resultMayBeImproper": true
+                },
+                "operandRule": "D 2..7, E=D+1, X 1..D−1, Y 1..E−1"
+              },
+              "5": {
+                "rangeA": [
+                  2,
+                  19
+                ],
+                "rangeB": [
+                  2,
+                  13
+                ],
+                "denominatorMax": 20,
+                "carry": "allowed",
+                "borrow": "allowed",
+                "decimalPlaces": 1,
+                "description": "피연산자 범위 2~19 / 2~13",
+                "operation": "unlikeFraction",
+                "constraints": {
+                  "outputUnit": "number",
+                  "divisionExact": true,
+                  "negativeResults": false,
+                  "carrying": "allowed",
+                  "borrowing": "allowed",
+                  "properFractionOperands": true,
+                  "resultMayBeImproper": true
+                },
+                "operandRule": "D 2..8, E=D+1, X 1..D−1, Y 1..E−1"
+              }
+            }
+          }
+        },
+        {
+          "id": "g5-fracmul",
+          "name": "분수의 곱셈",
+          "domain": "number",
+          "type": "fractionMultiply",
+          "supportedLevels": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "policy": {
+            "version": 2,
+            "output": "nonnegative",
+            "remainder": "none",
+            "fractionOperands": "proper-positive",
+            "fractionResult": "reduced",
+            "levels": {
+              "1": {
+                "rangeA": [
+                  2,
+                  7
+                ],
+                "rangeB": [
+                  2,
+                  5
+                ],
+                "denominatorMax": 8,
+                "carry": "allowed",
+                "borrow": "allowed",
+                "decimalPlaces": 1,
+                "description": "피연산자 범위 2~7 / 2~5",
+                "operation": "fractionMultiply",
+                "constraints": {
+                  "outputUnit": "number",
+                  "divisionExact": true,
+                  "negativeResults": false,
+                  "carrying": "allowed",
+                  "borrowing": "allowed",
+                  "properFractionOperands": true,
+                  "resultMayBeImproper": false
+                },
+                "operandRule": "A/(A+1) × B/(B+1); A 2..7, B 2..5"
+              },
+              "2": {
+                "rangeA": [
+                  2,
+                  10
+                ],
+                "rangeB": [
+                  2,
+                  7
+                ],
+                "denominatorMax": 11,
+                "carry": "allowed",
+                "borrow": "allowed",
+                "decimalPlaces": 1,
+                "description": "피연산자 범위 2~10 / 2~7",
+                "operation": "fractionMultiply",
+                "constraints": {
+                  "outputUnit": "number",
+                  "divisionExact": true,
+                  "negativeResults": false,
+                  "carrying": "allowed",
+                  "borrowing": "allowed",
+                  "properFractionOperands": true,
+                  "resultMayBeImproper": false
+                },
+                "operandRule": "A/(A+1) × B/(B+1); A 2..10, B 2..7"
+              },
+              "3": {
+                "rangeA": [
+                  2,
+                  13
+                ],
+                "rangeB": [
+                  2,
+                  9
+                ],
+                "denominatorMax": 14,
+                "carry": "allowed",
+                "borrow": "allowed",
+                "decimalPlaces": 1,
+                "description": "피연산자 범위 2~13 / 2~9",
+                "operation": "fractionMultiply",
+                "constraints": {
+                  "outputUnit": "number",
+                  "divisionExact": true,
+                  "negativeResults": false,
+                  "carrying": "allowed",
+                  "borrowing": "allowed",
+                  "properFractionOperands": true,
+                  "resultMayBeImproper": false
+                },
+                "operandRule": "A/(A+1) × B/(B+1); A 2..13, B 2..9"
+              },
+              "4": {
+                "rangeA": [
+                  2,
+                  16
+                ],
+                "rangeB": [
+                  2,
+                  11
+                ],
+                "denominatorMax": 17,
+                "carry": "allowed",
+                "borrow": "allowed",
+                "decimalPlaces": 1,
+                "description": "피연산자 범위 2~16 / 2~11",
+                "operation": "fractionMultiply",
+                "constraints": {
+                  "outputUnit": "number",
+                  "divisionExact": true,
+                  "negativeResults": false,
+                  "carrying": "allowed",
+                  "borrowing": "allowed",
+                  "properFractionOperands": true,
+                  "resultMayBeImproper": false
+                },
+                "operandRule": "A/(A+1) × B/(B+1); A 2..16, B 2..11"
+              },
+              "5": {
+                "rangeA": [
+                  2,
+                  19
+                ],
+                "rangeB": [
+                  2,
+                  13
+                ],
+                "denominatorMax": 20,
+                "carry": "allowed",
+                "borrow": "allowed",
+                "decimalPlaces": 1,
+                "description": "피연산자 범위 2~19 / 2~13",
+                "operation": "fractionMultiply",
+                "constraints": {
+                  "outputUnit": "number",
+                  "divisionExact": true,
+                  "negativeResults": false,
+                  "carrying": "allowed",
+                  "borrowing": "allowed",
+                  "properFractionOperands": true,
+                  "resultMayBeImproper": false
+                },
+                "operandRule": "A/(A+1) × B/(B+1); A 2..19, B 2..13"
+              }
+            }
+          }
+        },
+        {
+          "id": "g5-dec",
+          "name": "소수의 곱셈",
+          "domain": "number",
+          "type": "decimalMultiply",
+          "supportedLevels": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "policy": {
+            "version": 2,
+            "output": "nonnegative",
+            "remainder": "none",
+            "fractionOperands": "proper-positive",
+            "fractionResult": "reduced",
+            "levels": {
+              "1": {
+                "rangeA": [
+                  2,
+                  7
+                ],
+                "rangeB": [
+                  2,
+                  5
+                ],
+                "denominatorMax": 8,
+                "carry": "allowed",
+                "borrow": "allowed",
+                "decimalPlaces": 1,
+                "description": "피연산자 범위 2~7 / 2~5",
+                "operation": "decimalMultiply",
+                "constraints": {
+                  "outputUnit": "number",
+                  "divisionExact": true,
+                  "negativeResults": false,
+                  "carrying": "allowed",
+                  "borrowing": "allowed",
+                  "properFractionOperands": true,
+                  "resultMayBeImproper": false
+                },
+                "operandRule": "A 2..7, B 2..5; operands /10"
+              },
+              "2": {
+                "rangeA": [
+                  2,
+                  10
+                ],
+                "rangeB": [
+                  2,
+                  7
+                ],
+                "denominatorMax": 11,
+                "carry": "allowed",
+                "borrow": "allowed",
+                "decimalPlaces": 1,
+                "description": "피연산자 범위 2~10 / 2~7",
+                "operation": "decimalMultiply",
+                "constraints": {
+                  "outputUnit": "number",
+                  "divisionExact": true,
+                  "negativeResults": false,
+                  "carrying": "allowed",
+                  "borrowing": "allowed",
+                  "properFractionOperands": true,
+                  "resultMayBeImproper": false
+                },
+                "operandRule": "A 2..10, B 2..7; operands /10"
+              },
+              "3": {
+                "rangeA": [
+                  2,
+                  13
+                ],
+                "rangeB": [
+                  2,
+                  9
+                ],
+                "denominatorMax": 14,
+                "carry": "allowed",
+                "borrow": "allowed",
+                "decimalPlaces": 1,
+                "description": "피연산자 범위 2~13 / 2~9",
+                "operation": "decimalMultiply",
+                "constraints": {
+                  "outputUnit": "number",
+                  "divisionExact": true,
+                  "negativeResults": false,
+                  "carrying": "allowed",
+                  "borrowing": "allowed",
+                  "properFractionOperands": true,
+                  "resultMayBeImproper": false
+                },
+                "operandRule": "A 2..13, B 2..9; operands /10"
+              },
+              "4": {
+                "rangeA": [
+                  2,
+                  16
+                ],
+                "rangeB": [
+                  2,
+                  11
+                ],
+                "denominatorMax": 17,
+                "carry": "allowed",
+                "borrow": "allowed",
+                "decimalPlaces": 1,
+                "description": "피연산자 범위 2~16 / 2~11",
+                "operation": "decimalMultiply",
+                "constraints": {
+                  "outputUnit": "number",
+                  "divisionExact": true,
+                  "negativeResults": false,
+                  "carrying": "allowed",
+                  "borrowing": "allowed",
+                  "properFractionOperands": true,
+                  "resultMayBeImproper": false
+                },
+                "operandRule": "A 2..16, B 2..11; operands /10"
+              },
+              "5": {
+                "rangeA": [
+                  2,
+                  19
+                ],
+                "rangeB": [
+                  2,
+                  13
+                ],
+                "denominatorMax": 20,
+                "carry": "allowed",
+                "borrow": "allowed",
+                "decimalPlaces": 1,
+                "description": "피연산자 범위 2~19 / 2~13",
+                "operation": "decimalMultiply",
+                "constraints": {
+                  "outputUnit": "number",
+                  "divisionExact": true,
+                  "negativeResults": false,
+                  "carrying": "allowed",
+                  "borrowing": "allowed",
+                  "properFractionOperands": true,
+                  "resultMayBeImproper": false
+                },
+                "operandRule": "A 2..19, B 2..13; operands /10"
+              }
+            }
+          }
+        },
+        {
+          "id": "g5-area",
+          "name": "직사각형 넓이",
+          "domain": "geometry",
+          "type": "area",
+          "supportedLevels": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "policy": {
+            "version": 2,
+            "output": "nonnegative",
+            "remainder": "none",
+            "fractionOperands": "proper-positive",
+            "fractionResult": "reduced",
+            "levels": {
+              "1": {
+                "rangeA": [
+                  2,
+                  7
+                ],
+                "rangeB": [
+                  2,
+                  5
+                ],
+                "denominatorMax": 8,
+                "carry": "allowed",
+                "borrow": "allowed",
+                "decimalPlaces": 1,
+                "description": "피연산자 범위 2~7 / 2~5",
+                "operation": "area",
+                "constraints": {
+                  "outputUnit": "cm²",
+                  "divisionExact": true,
+                  "negativeResults": false,
+                  "carrying": "allowed",
+                  "borrowing": "allowed",
+                  "properFractionOperands": true,
+                  "resultMayBeImproper": false
+                },
+                "operandRule": "A 2..7, B 2..5"
+              },
+              "2": {
+                "rangeA": [
+                  2,
+                  10
+                ],
+                "rangeB": [
+                  2,
+                  7
+                ],
+                "denominatorMax": 11,
+                "carry": "allowed",
+                "borrow": "allowed",
+                "decimalPlaces": 1,
+                "description": "피연산자 범위 2~10 / 2~7",
+                "operation": "area",
+                "constraints": {
+                  "outputUnit": "cm²",
+                  "divisionExact": true,
+                  "negativeResults": false,
+                  "carrying": "allowed",
+                  "borrowing": "allowed",
+                  "properFractionOperands": true,
+                  "resultMayBeImproper": false
+                },
+                "operandRule": "A 2..10, B 2..7"
+              },
+              "3": {
+                "rangeA": [
+                  2,
+                  13
+                ],
+                "rangeB": [
+                  2,
+                  9
+                ],
+                "denominatorMax": 14,
+                "carry": "allowed",
+                "borrow": "allowed",
+                "decimalPlaces": 1,
+                "description": "피연산자 범위 2~13 / 2~9",
+                "operation": "area",
+                "constraints": {
+                  "outputUnit": "cm²",
+                  "divisionExact": true,
+                  "negativeResults": false,
+                  "carrying": "allowed",
+                  "borrowing": "allowed",
+                  "properFractionOperands": true,
+                  "resultMayBeImproper": false
+                },
+                "operandRule": "A 2..13, B 2..9"
+              },
+              "4": {
+                "rangeA": [
+                  2,
+                  16
+                ],
+                "rangeB": [
+                  2,
+                  11
+                ],
+                "denominatorMax": 17,
+                "carry": "allowed",
+                "borrow": "allowed",
+                "decimalPlaces": 1,
+                "description": "피연산자 범위 2~16 / 2~11",
+                "operation": "area",
+                "constraints": {
+                  "outputUnit": "cm²",
+                  "divisionExact": true,
+                  "negativeResults": false,
+                  "carrying": "allowed",
+                  "borrowing": "allowed",
+                  "properFractionOperands": true,
+                  "resultMayBeImproper": false
+                },
+                "operandRule": "A 2..16, B 2..11"
+              },
+              "5": {
+                "rangeA": [
+                  2,
+                  19
+                ],
+                "rangeB": [
+                  2,
+                  13
+                ],
+                "denominatorMax": 20,
+                "carry": "allowed",
+                "borrow": "allowed",
+                "decimalPlaces": 1,
+                "description": "피연산자 범위 2~19 / 2~13",
+                "operation": "area",
+                "constraints": {
+                  "outputUnit": "cm²",
+                  "divisionExact": true,
+                  "negativeResults": false,
+                  "carrying": "allowed",
+                  "borrowing": "allowed",
+                  "properFractionOperands": true,
+                  "resultMayBeImproper": false
+                },
+                "operandRule": "A 2..19, B 2..13"
+              }
+            }
+          }
+        },
+        {
+          "id": "g5-avg",
+          "name": "평균",
+          "domain": "data",
+          "type": "average",
+          "supportedLevels": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "policy": {
+            "version": 2,
+            "output": "nonnegative",
+            "remainder": "none",
+            "fractionOperands": "proper-positive",
+            "fractionResult": "reduced",
+            "levels": {
+              "1": {
+                "rangeA": [
+                  2,
+                  7
+                ],
+                "rangeB": [
+                  2,
+                  5
+                ],
+                "denominatorMax": 8,
+                "carry": "allowed",
+                "borrow": "allowed",
+                "decimalPlaces": 1,
+                "description": "피연산자 범위 2~7 / 2~5",
+                "operation": "average",
+                "constraints": {
+                  "outputUnit": "number",
+                  "divisionExact": true,
+                  "negativeResults": false,
+                  "carrying": "allowed",
+                  "borrowing": "allowed",
+                  "properFractionOperands": true,
+                  "resultMayBeImproper": false
+                },
+                "operandRule": "[A,A+B,A+2B], integer mean A+B"
+              },
+              "2": {
+                "rangeA": [
+                  2,
+                  10
+                ],
+                "rangeB": [
+                  2,
+                  7
+                ],
+                "denominatorMax": 11,
+                "carry": "allowed",
+                "borrow": "allowed",
+                "decimalPlaces": 1,
+                "description": "피연산자 범위 2~10 / 2~7",
+                "operation": "average",
+                "constraints": {
+                  "outputUnit": "number",
+                  "divisionExact": true,
+                  "negativeResults": false,
+                  "carrying": "allowed",
+                  "borrowing": "allowed",
+                  "properFractionOperands": true,
+                  "resultMayBeImproper": false
+                },
+                "operandRule": "[A,A+B,A+2B], integer mean A+B"
+              },
+              "3": {
+                "rangeA": [
+                  2,
+                  13
+                ],
+                "rangeB": [
+                  2,
+                  9
+                ],
+                "denominatorMax": 14,
+                "carry": "allowed",
+                "borrow": "allowed",
+                "decimalPlaces": 1,
+                "description": "피연산자 범위 2~13 / 2~9",
+                "operation": "average",
+                "constraints": {
+                  "outputUnit": "number",
+                  "divisionExact": true,
+                  "negativeResults": false,
+                  "carrying": "allowed",
+                  "borrowing": "allowed",
+                  "properFractionOperands": true,
+                  "resultMayBeImproper": false
+                },
+                "operandRule": "[A,A+B,A+2B], integer mean A+B"
+              },
+              "4": {
+                "rangeA": [
+                  2,
+                  16
+                ],
+                "rangeB": [
+                  2,
+                  11
+                ],
+                "denominatorMax": 17,
+                "carry": "allowed",
+                "borrow": "allowed",
+                "decimalPlaces": 1,
+                "description": "피연산자 범위 2~16 / 2~11",
+                "operation": "average",
+                "constraints": {
+                  "outputUnit": "number",
+                  "divisionExact": true,
+                  "negativeResults": false,
+                  "carrying": "allowed",
+                  "borrowing": "allowed",
+                  "properFractionOperands": true,
+                  "resultMayBeImproper": false
+                },
+                "operandRule": "[A,A+B,A+2B], integer mean A+B"
+              },
+              "5": {
+                "rangeA": [
+                  2,
+                  19
+                ],
+                "rangeB": [
+                  2,
+                  13
+                ],
+                "denominatorMax": 20,
+                "carry": "allowed",
+                "borrow": "allowed",
+                "decimalPlaces": 1,
+                "description": "피연산자 범위 2~19 / 2~13",
+                "operation": "average",
+                "constraints": {
+                  "outputUnit": "number",
+                  "divisionExact": true,
+                  "negativeResults": false,
+                  "carrying": "allowed",
+                  "borrowing": "allowed",
+                  "properFractionOperands": true,
+                  "resultMayBeImproper": false
+                },
+                "operandRule": "[A,A+B,A+2B], integer mean A+B"
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "grade": 6,
+      "units": [
+        {
+          "id": "g6-fracdiv",
+          "name": "분수의 나눗셈",
+          "domain": "number",
+          "type": "fractionDivide",
+          "supportedLevels": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "policy": {
+            "version": 2,
+            "output": "nonnegative",
+            "remainder": "none",
+            "fractionOperands": "proper-positive",
+            "fractionResult": "proper-or-improper-reduced",
+            "levels": {
+              "1": {
+                "rangeA": [
+                  2,
+                  7
+                ],
+                "rangeB": [
+                  2,
+                  5
+                ],
+                "denominatorMax": 8,
+                "carry": "allowed",
+                "borrow": "allowed",
+                "decimalPlaces": 1,
+                "description": "피연산자 범위 2~7 / 2~5",
+                "operation": "fractionDivide",
+                "constraints": {
+                  "outputUnit": "number",
+                  "divisionExact": true,
+                  "negativeResults": false,
+                  "carrying": "allowed",
+                  "borrowing": "allowed",
+                  "properFractionOperands": true,
+                  "resultMayBeImproper": true
+                },
+                "operandRule": "A/(A+1) ÷ B/(B+1); A 2..7, B 2..5"
+              },
+              "2": {
+                "rangeA": [
+                  2,
+                  10
+                ],
+                "rangeB": [
+                  2,
+                  7
+                ],
+                "denominatorMax": 11,
+                "carry": "allowed",
+                "borrow": "allowed",
+                "decimalPlaces": 1,
+                "description": "피연산자 범위 2~10 / 2~7",
+                "operation": "fractionDivide",
+                "constraints": {
+                  "outputUnit": "number",
+                  "divisionExact": true,
+                  "negativeResults": false,
+                  "carrying": "allowed",
+                  "borrowing": "allowed",
+                  "properFractionOperands": true,
+                  "resultMayBeImproper": true
+                },
+                "operandRule": "A/(A+1) ÷ B/(B+1); A 2..10, B 2..7"
+              },
+              "3": {
+                "rangeA": [
+                  2,
+                  13
+                ],
+                "rangeB": [
+                  2,
+                  9
+                ],
+                "denominatorMax": 14,
+                "carry": "allowed",
+                "borrow": "allowed",
+                "decimalPlaces": 1,
+                "description": "피연산자 범위 2~13 / 2~9",
+                "operation": "fractionDivide",
+                "constraints": {
+                  "outputUnit": "number",
+                  "divisionExact": true,
+                  "negativeResults": false,
+                  "carrying": "allowed",
+                  "borrowing": "allowed",
+                  "properFractionOperands": true,
+                  "resultMayBeImproper": true
+                },
+                "operandRule": "A/(A+1) ÷ B/(B+1); A 2..13, B 2..9"
+              },
+              "4": {
+                "rangeA": [
+                  2,
+                  16
+                ],
+                "rangeB": [
+                  2,
+                  11
+                ],
+                "denominatorMax": 17,
+                "carry": "allowed",
+                "borrow": "allowed",
+                "decimalPlaces": 1,
+                "description": "피연산자 범위 2~16 / 2~11",
+                "operation": "fractionDivide",
+                "constraints": {
+                  "outputUnit": "number",
+                  "divisionExact": true,
+                  "negativeResults": false,
+                  "carrying": "allowed",
+                  "borrowing": "allowed",
+                  "properFractionOperands": true,
+                  "resultMayBeImproper": true
+                },
+                "operandRule": "A/(A+1) ÷ B/(B+1); A 2..16, B 2..11"
+              },
+              "5": {
+                "rangeA": [
+                  2,
+                  19
+                ],
+                "rangeB": [
+                  2,
+                  13
+                ],
+                "denominatorMax": 20,
+                "carry": "allowed",
+                "borrow": "allowed",
+                "decimalPlaces": 1,
+                "description": "피연산자 범위 2~19 / 2~13",
+                "operation": "fractionDivide",
+                "constraints": {
+                  "outputUnit": "number",
+                  "divisionExact": true,
+                  "negativeResults": false,
+                  "carrying": "allowed",
+                  "borrowing": "allowed",
+                  "properFractionOperands": true,
+                  "resultMayBeImproper": true
+                },
+                "operandRule": "A/(A+1) ÷ B/(B+1); A 2..19, B 2..13"
+              }
+            }
+          }
+        },
+        {
+          "id": "g6-decdiv",
+          "name": "소수의 나눗셈",
+          "domain": "number",
+          "type": "decimalDivide",
+          "supportedLevels": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "policy": {
+            "version": 2,
+            "output": "nonnegative",
+            "remainder": "none",
+            "fractionOperands": "proper-positive",
+            "fractionResult": "reduced",
+            "levels": {
+              "1": {
+                "rangeA": [
+                  2,
+                  7
+                ],
+                "rangeB": [
+                  2,
+                  5
+                ],
+                "denominatorMax": 8,
+                "carry": "allowed",
+                "borrow": "allowed",
+                "decimalPlaces": 1,
+                "description": "피연산자 범위 2~7 / 2~5",
+                "operation": "decimalDivide",
+                "constraints": {
+                  "outputUnit": "number",
+                  "divisionExact": true,
+                  "negativeResults": false,
+                  "carrying": "allowed",
+                  "borrowing": "allowed",
+                  "properFractionOperands": true,
+                  "resultMayBeImproper": false
+                },
+                "operandRule": "[A×B, B], A 2..7, B 2..5; text operands /10"
+              },
+              "2": {
+                "rangeA": [
+                  2,
+                  10
+                ],
+                "rangeB": [
+                  2,
+                  7
+                ],
+                "denominatorMax": 11,
+                "carry": "allowed",
+                "borrow": "allowed",
+                "decimalPlaces": 1,
+                "description": "피연산자 범위 2~10 / 2~7",
+                "operation": "decimalDivide",
+                "constraints": {
+                  "outputUnit": "number",
+                  "divisionExact": true,
+                  "negativeResults": false,
+                  "carrying": "allowed",
+                  "borrowing": "allowed",
+                  "properFractionOperands": true,
+                  "resultMayBeImproper": false
+                },
+                "operandRule": "[A×B, B], A 2..10, B 2..7; text operands /10"
+              },
+              "3": {
+                "rangeA": [
+                  2,
+                  13
+                ],
+                "rangeB": [
+                  2,
+                  9
+                ],
+                "denominatorMax": 14,
+                "carry": "allowed",
+                "borrow": "allowed",
+                "decimalPlaces": 1,
+                "description": "피연산자 범위 2~13 / 2~9",
+                "operation": "decimalDivide",
+                "constraints": {
+                  "outputUnit": "number",
+                  "divisionExact": true,
+                  "negativeResults": false,
+                  "carrying": "allowed",
+                  "borrowing": "allowed",
+                  "properFractionOperands": true,
+                  "resultMayBeImproper": false
+                },
+                "operandRule": "[A×B, B], A 2..13, B 2..9; text operands /10"
+              },
+              "4": {
+                "rangeA": [
+                  2,
+                  16
+                ],
+                "rangeB": [
+                  2,
+                  11
+                ],
+                "denominatorMax": 17,
+                "carry": "allowed",
+                "borrow": "allowed",
+                "decimalPlaces": 1,
+                "description": "피연산자 범위 2~16 / 2~11",
+                "operation": "decimalDivide",
+                "constraints": {
+                  "outputUnit": "number",
+                  "divisionExact": true,
+                  "negativeResults": false,
+                  "carrying": "allowed",
+                  "borrowing": "allowed",
+                  "properFractionOperands": true,
+                  "resultMayBeImproper": false
+                },
+                "operandRule": "[A×B, B], A 2..16, B 2..11; text operands /10"
+              },
+              "5": {
+                "rangeA": [
+                  2,
+                  19
+                ],
+                "rangeB": [
+                  2,
+                  13
+                ],
+                "denominatorMax": 20,
+                "carry": "allowed",
+                "borrow": "allowed",
+                "decimalPlaces": 1,
+                "description": "피연산자 범위 2~19 / 2~13",
+                "operation": "decimalDivide",
+                "constraints": {
+                  "outputUnit": "number",
+                  "divisionExact": true,
+                  "negativeResults": false,
+                  "carrying": "allowed",
+                  "borrowing": "allowed",
+                  "properFractionOperands": true,
+                  "resultMayBeImproper": false
+                },
+                "operandRule": "[A×B, B], A 2..19, B 2..13; text operands /10"
+              }
+            }
+          }
+        },
+        {
+          "id": "g6-volume",
+          "name": "직육면체 부피",
+          "domain": "geometry",
+          "type": "volume",
+          "supportedLevels": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "policy": {
+            "version": 2,
+            "output": "nonnegative",
+            "remainder": "none",
+            "fractionOperands": "proper-positive",
+            "fractionResult": "reduced",
+            "levels": {
+              "1": {
+                "rangeA": [
+                  2,
+                  7
+                ],
+                "rangeB": [
+                  2,
+                  5
+                ],
+                "denominatorMax": 8,
+                "carry": "allowed",
+                "borrow": "allowed",
+                "decimalPlaces": 1,
+                "description": "피연산자 범위 2~7 / 2~5",
+                "operation": "volume",
+                "constraints": {
+                  "outputUnit": "cm³",
+                  "divisionExact": true,
+                  "negativeResults": false,
+                  "carrying": "allowed",
+                  "borrowing": "allowed",
+                  "properFractionOperands": true,
+                  "resultMayBeImproper": false
+                },
+                "operandRule": "[A,B,2]; height 2"
+              },
+              "2": {
+                "rangeA": [
+                  2,
+                  10
+                ],
+                "rangeB": [
+                  2,
+                  7
+                ],
+                "denominatorMax": 11,
+                "carry": "allowed",
+                "borrow": "allowed",
+                "decimalPlaces": 1,
+                "description": "피연산자 범위 2~10 / 2~7",
+                "operation": "volume",
+                "constraints": {
+                  "outputUnit": "cm³",
+                  "divisionExact": true,
+                  "negativeResults": false,
+                  "carrying": "allowed",
+                  "borrowing": "allowed",
+                  "properFractionOperands": true,
+                  "resultMayBeImproper": false
+                },
+                "operandRule": "[A,B,3]; height 3"
+              },
+              "3": {
+                "rangeA": [
+                  2,
+                  13
+                ],
+                "rangeB": [
+                  2,
+                  9
+                ],
+                "denominatorMax": 14,
+                "carry": "allowed",
+                "borrow": "allowed",
+                "decimalPlaces": 1,
+                "description": "피연산자 범위 2~13 / 2~9",
+                "operation": "volume",
+                "constraints": {
+                  "outputUnit": "cm³",
+                  "divisionExact": true,
+                  "negativeResults": false,
+                  "carrying": "allowed",
+                  "borrowing": "allowed",
+                  "properFractionOperands": true,
+                  "resultMayBeImproper": false
+                },
+                "operandRule": "[A,B,4]; height 4"
+              },
+              "4": {
+                "rangeA": [
+                  2,
+                  16
+                ],
+                "rangeB": [
+                  2,
+                  11
+                ],
+                "denominatorMax": 17,
+                "carry": "allowed",
+                "borrow": "allowed",
+                "decimalPlaces": 1,
+                "description": "피연산자 범위 2~16 / 2~11",
+                "operation": "volume",
+                "constraints": {
+                  "outputUnit": "cm³",
+                  "divisionExact": true,
+                  "negativeResults": false,
+                  "carrying": "allowed",
+                  "borrowing": "allowed",
+                  "properFractionOperands": true,
+                  "resultMayBeImproper": false
+                },
+                "operandRule": "[A,B,5]; height 5"
+              },
+              "5": {
+                "rangeA": [
+                  2,
+                  19
+                ],
+                "rangeB": [
+                  2,
+                  13
+                ],
+                "denominatorMax": 20,
+                "carry": "allowed",
+                "borrow": "allowed",
+                "decimalPlaces": 1,
+                "description": "피연산자 범위 2~19 / 2~13",
+                "operation": "volume",
+                "constraints": {
+                  "outputUnit": "cm³",
+                  "divisionExact": true,
+                  "negativeResults": false,
+                  "carrying": "allowed",
+                  "borrowing": "allowed",
+                  "properFractionOperands": true,
+                  "resultMayBeImproper": false
+                },
+                "operandRule": "[A,B,6]; height 6"
+              }
+            }
+          }
+        },
+        {
+          "id": "g6-percent",
+          "name": "백분율",
+          "domain": "patterns",
+          "type": "percent",
+          "supportedLevels": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "policy": {
+            "version": 2,
+            "output": "nonnegative",
+            "remainder": "none",
+            "fractionOperands": "proper-positive",
+            "fractionResult": "reduced",
+            "levels": {
+              "1": {
+                "rangeA": [
+                  2,
+                  7
+                ],
+                "rangeB": [
+                  2,
+                  5
+                ],
+                "denominatorMax": 8,
+                "carry": "allowed",
+                "borrow": "allowed",
+                "decimalPlaces": 1,
+                "description": "피연산자 범위 2~7 / 2~5",
+                "operation": "percent",
+                "constraints": {
+                  "outputUnit": "number",
+                  "divisionExact": true,
+                  "negativeResults": false,
+                  "carrying": "allowed",
+                  "borrowing": "allowed",
+                  "properFractionOperands": true,
+                  "resultMayBeImproper": false
+                },
+                "operandRule": "P 10..90 in steps of 10; total 100..300 in steps of 100"
+              },
+              "2": {
+                "rangeA": [
+                  2,
+                  10
+                ],
+                "rangeB": [
+                  2,
+                  7
+                ],
+                "denominatorMax": 11,
+                "carry": "allowed",
+                "borrow": "allowed",
+                "decimalPlaces": 1,
+                "description": "피연산자 범위 2~10 / 2~7",
+                "operation": "percent",
+                "constraints": {
+                  "outputUnit": "number",
+                  "divisionExact": true,
+                  "negativeResults": false,
+                  "carrying": "allowed",
+                  "borrowing": "allowed",
+                  "properFractionOperands": true,
+                  "resultMayBeImproper": false
+                },
+                "operandRule": "P 10..90 in steps of 10; total 100..400 in steps of 100"
+              },
+              "3": {
+                "rangeA": [
+                  2,
+                  13
+                ],
+                "rangeB": [
+                  2,
+                  9
+                ],
+                "denominatorMax": 14,
+                "carry": "allowed",
+                "borrow": "allowed",
+                "decimalPlaces": 1,
+                "description": "피연산자 범위 2~13 / 2~9",
+                "operation": "percent",
+                "constraints": {
+                  "outputUnit": "number",
+                  "divisionExact": true,
+                  "negativeResults": false,
+                  "carrying": "allowed",
+                  "borrowing": "allowed",
+                  "properFractionOperands": true,
+                  "resultMayBeImproper": false
+                },
+                "operandRule": "P 10..90 in steps of 10; total 100..500 in steps of 100"
+              },
+              "4": {
+                "rangeA": [
+                  2,
+                  16
+                ],
+                "rangeB": [
+                  2,
+                  11
+                ],
+                "denominatorMax": 17,
+                "carry": "allowed",
+                "borrow": "allowed",
+                "decimalPlaces": 1,
+                "description": "피연산자 범위 2~16 / 2~11",
+                "operation": "percent",
+                "constraints": {
+                  "outputUnit": "number",
+                  "divisionExact": true,
+                  "negativeResults": false,
+                  "carrying": "allowed",
+                  "borrowing": "allowed",
+                  "properFractionOperands": true,
+                  "resultMayBeImproper": false
+                },
+                "operandRule": "P 10..90 in steps of 10; total 100..600 in steps of 100"
+              },
+              "5": {
+                "rangeA": [
+                  2,
+                  19
+                ],
+                "rangeB": [
+                  2,
+                  13
+                ],
+                "denominatorMax": 20,
+                "carry": "allowed",
+                "borrow": "allowed",
+                "decimalPlaces": 1,
+                "description": "피연산자 범위 2~19 / 2~13",
+                "operation": "percent",
+                "constraints": {
+                  "outputUnit": "number",
+                  "divisionExact": true,
+                  "negativeResults": false,
+                  "carrying": "allowed",
+                  "borrowing": "allowed",
+                  "properFractionOperands": true,
+                  "resultMayBeImproper": false
+                },
+                "operandRule": "P 10..90 in steps of 10; total 100..700 in steps of 100"
+              }
+            }
+          }
+        },
+        {
+          "id": "g6-ratio",
+          "name": "비례식",
+          "domain": "patterns",
+          "type": "ratio",
+          "supportedLevels": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "policy": {
+            "version": 2,
+            "output": "nonnegative",
+            "remainder": "none",
+            "fractionOperands": "proper-positive",
+            "fractionResult": "reduced",
+            "levels": {
+              "1": {
+                "rangeA": [
+                  2,
+                  7
+                ],
+                "rangeB": [
+                  2,
+                  5
+                ],
+                "denominatorMax": 8,
+                "carry": "allowed",
+                "borrow": "allowed",
+                "decimalPlaces": 1,
+                "description": "피연산자 범위 2~7 / 2~5",
+                "operation": "ratio",
+                "constraints": {
+                  "outputUnit": "number",
+                  "divisionExact": true,
+                  "negativeResults": false,
+                  "carrying": "allowed",
+                  "borrowing": "allowed",
+                  "properFractionOperands": true,
+                  "resultMayBeImproper": false
+                },
+                "operandRule": "[A,B,2]; scale factor 2"
+              },
+              "2": {
+                "rangeA": [
+                  2,
+                  10
+                ],
+                "rangeB": [
+                  2,
+                  7
+                ],
+                "denominatorMax": 11,
+                "carry": "allowed",
+                "borrow": "allowed",
+                "decimalPlaces": 1,
+                "description": "피연산자 범위 2~10 / 2~7",
+                "operation": "ratio",
+                "constraints": {
+                  "outputUnit": "number",
+                  "divisionExact": true,
+                  "negativeResults": false,
+                  "carrying": "allowed",
+                  "borrowing": "allowed",
+                  "properFractionOperands": true,
+                  "resultMayBeImproper": false
+                },
+                "operandRule": "[A,B,3]; scale factor 3"
+              },
+              "3": {
+                "rangeA": [
+                  2,
+                  13
+                ],
+                "rangeB": [
+                  2,
+                  9
+                ],
+                "denominatorMax": 14,
+                "carry": "allowed",
+                "borrow": "allowed",
+                "decimalPlaces": 1,
+                "description": "피연산자 범위 2~13 / 2~9",
+                "operation": "ratio",
+                "constraints": {
+                  "outputUnit": "number",
+                  "divisionExact": true,
+                  "negativeResults": false,
+                  "carrying": "allowed",
+                  "borrowing": "allowed",
+                  "properFractionOperands": true,
+                  "resultMayBeImproper": false
+                },
+                "operandRule": "[A,B,4]; scale factor 4"
+              },
+              "4": {
+                "rangeA": [
+                  2,
+                  16
+                ],
+                "rangeB": [
+                  2,
+                  11
+                ],
+                "denominatorMax": 17,
+                "carry": "allowed",
+                "borrow": "allowed",
+                "decimalPlaces": 1,
+                "description": "피연산자 범위 2~16 / 2~11",
+                "operation": "ratio",
+                "constraints": {
+                  "outputUnit": "number",
+                  "divisionExact": true,
+                  "negativeResults": false,
+                  "carrying": "allowed",
+                  "borrowing": "allowed",
+                  "properFractionOperands": true,
+                  "resultMayBeImproper": false
+                },
+                "operandRule": "[A,B,5]; scale factor 5"
+              },
+              "5": {
+                "rangeA": [
+                  2,
+                  19
+                ],
+                "rangeB": [
+                  2,
+                  13
+                ],
+                "denominatorMax": 20,
+                "carry": "allowed",
+                "borrow": "allowed",
+                "decimalPlaces": 1,
+                "description": "피연산자 범위 2~19 / 2~13",
+                "operation": "ratio",
+                "constraints": {
+                  "outputUnit": "number",
+                  "divisionExact": true,
+                  "negativeResults": false,
+                  "carrying": "allowed",
+                  "borrowing": "allowed",
+                  "properFractionOperands": true,
+                  "resultMayBeImproper": false
+                },
+                "operandRule": "[A,B,6]; scale factor 6"
+              }
+            }
+          }
+        },
+        {
+          "id": "g6-avg",
+          "name": "평균 복습",
+          "domain": "data",
+          "type": "average",
+          "supportedLevels": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "policy": {
+            "version": 2,
+            "output": "nonnegative",
+            "remainder": "none",
+            "fractionOperands": "proper-positive",
+            "fractionResult": "reduced",
+            "levels": {
+              "1": {
+                "rangeA": [
+                  2,
+                  7
+                ],
+                "rangeB": [
+                  2,
+                  5
+                ],
+                "denominatorMax": 8,
+                "carry": "allowed",
+                "borrow": "allowed",
+                "decimalPlaces": 1,
+                "description": "피연산자 범위 2~7 / 2~5",
+                "operation": "average",
+                "constraints": {
+                  "outputUnit": "number",
+                  "divisionExact": true,
+                  "negativeResults": false,
+                  "carrying": "allowed",
+                  "borrowing": "allowed",
+                  "properFractionOperands": true,
+                  "resultMayBeImproper": false
+                },
+                "operandRule": "[A,A+B,A+2B], integer mean A+B"
+              },
+              "2": {
+                "rangeA": [
+                  2,
+                  10
+                ],
+                "rangeB": [
+                  2,
+                  7
+                ],
+                "denominatorMax": 11,
+                "carry": "allowed",
+                "borrow": "allowed",
+                "decimalPlaces": 1,
+                "description": "피연산자 범위 2~10 / 2~7",
+                "operation": "average",
+                "constraints": {
+                  "outputUnit": "number",
+                  "divisionExact": true,
+                  "negativeResults": false,
+                  "carrying": "allowed",
+                  "borrowing": "allowed",
+                  "properFractionOperands": true,
+                  "resultMayBeImproper": false
+                },
+                "operandRule": "[A,A+B,A+2B], integer mean A+B"
+              },
+              "3": {
+                "rangeA": [
+                  2,
+                  13
+                ],
+                "rangeB": [
+                  2,
+                  9
+                ],
+                "denominatorMax": 14,
+                "carry": "allowed",
+                "borrow": "allowed",
+                "decimalPlaces": 1,
+                "description": "피연산자 범위 2~13 / 2~9",
+                "operation": "average",
+                "constraints": {
+                  "outputUnit": "number",
+                  "divisionExact": true,
+                  "negativeResults": false,
+                  "carrying": "allowed",
+                  "borrowing": "allowed",
+                  "properFractionOperands": true,
+                  "resultMayBeImproper": false
+                },
+                "operandRule": "[A,A+B,A+2B], integer mean A+B"
+              },
+              "4": {
+                "rangeA": [
+                  2,
+                  16
+                ],
+                "rangeB": [
+                  2,
+                  11
+                ],
+                "denominatorMax": 17,
+                "carry": "allowed",
+                "borrow": "allowed",
+                "decimalPlaces": 1,
+                "description": "피연산자 범위 2~16 / 2~11",
+                "operation": "average",
+                "constraints": {
+                  "outputUnit": "number",
+                  "divisionExact": true,
+                  "negativeResults": false,
+                  "carrying": "allowed",
+                  "borrowing": "allowed",
+                  "properFractionOperands": true,
+                  "resultMayBeImproper": false
+                },
+                "operandRule": "[A,A+B,A+2B], integer mean A+B"
+              },
+              "5": {
+                "rangeA": [
+                  2,
+                  19
+                ],
+                "rangeB": [
+                  2,
+                  13
+                ],
+                "denominatorMax": 20,
+                "carry": "allowed",
+                "borrow": "allowed",
+                "decimalPlaces": 1,
+                "description": "피연산자 범위 2~19 / 2~13",
+                "operation": "average",
+                "constraints": {
+                  "outputUnit": "number",
+                  "divisionExact": true,
+                  "negativeResults": false,
+                  "carrying": "allowed",
+                  "borrowing": "allowed",
+                  "properFractionOperands": true,
+                  "resultMayBeImproper": false
+                },
+                "operandRule": "[A,A+B,A+2B], integer mean A+B"
+              }
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "curriculumVersion": "practice-2026.10-v2"
 }

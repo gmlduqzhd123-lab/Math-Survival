@@ -1,0 +1,437 @@
+{
+  "schemaVersion": 2,
+  "date": "2026-10-09T05:03:56.690Z",
+  "config": {
+    "grade": 5,
+    "domain": "number",
+    "unit": "g5-frac",
+    "level": 2,
+    "auto": true,
+    "mode": "explore",
+    "target": 3,
+    "limit": 180,
+    "character": "explorer",
+    "weapon": "storm",
+    "map": "forest",
+    "combat": "normal"
+  },
+  "score": 474,
+  "survivalSeconds": 0,
+  "level": 1,
+  "kills": 0,
+  "correct": 2,
+  "wrong": 1,
+  "accuracy": 67,
+  "newAccuracy": 50,
+  "reviewAccuracy": 100,
+  "hintCount": 0,
+  "bestCombo": 2,
+  "domains": {
+    "number": {
+      "correct": 2,
+      "total": 3,
+      "accuracy": 67
+    }
+  },
+  "units": {
+    "g5-frac": {
+      "total": 3,
+      "correct": 2,
+      "newTotal": 2,
+      "newCorrect": 1,
+      "reviewTotal": 1,
+      "reviewCorrect": 1,
+      "hints": 0
+    }
+  },
+  "weakProblems": [
+    {
+      "text": "2/3 + 2/4 = ?",
+      "selected": "4/3",
+      "answer": "7/6",
+      "explain": "분모를 12로 통분하면 8/12 + 6/12 = 7/6입니다.",
+      "unit": "g5-frac"
+    }
+  ],
+  "reviewProblems": [
+    {
+      "id": "g5-frac:unlikeFraction:2:3:2:4",
+      "conceptId": "g5-frac:unlikeFraction:2:3:2:4",
+      "instanceId": "1060a037-542d-4ed5-ac69-5f1041a9ba1a",
+      "seed": 4118031526,
+      "curriculumVersion": "practice-2026.10-v2",
+      "generatorVersion": "3",
+      "difficulty": 2,
+      "explanationSteps": [
+        "분모를 12로 통분하면 8/12 + 6/12 = 7/6입니다."
+      ],
+      "optionMisconceptions": [
+        "near-value",
+        "add-denominators",
+        "miss-common-numerators",
+        "correct"
+      ],
+      "policyVersion": 2,
+      "typeId": "g5-frac:unlikeFraction",
+      "grade": 5,
+      "domain": "number",
+      "unit": "g5-frac",
+      "unitName": "다른 분모 분수의 덧셈",
+      "level": 2,
+      "type": "unlikeFraction",
+      "operands": [
+        2,
+        3,
+        2,
+        4
+      ],
+      "text": "2/3 + 2/4 = ?",
+      "answer": "7/6",
+      "explain": "분모를 12로 통분하면 8/12 + 6/12 = 7/6입니다.",
+      "options": [
+        "4/3",
+        "4/7",
+        "1/3",
+        "7/6"
+      ],
+      "review": false,
+      "hintUsed": false,
+      "problem": {
+        "id": "g5-frac:unlikeFraction:2:3:2:4",
+        "conceptId": "g5-frac:unlikeFraction:2:3:2:4",
+        "instanceId": "1060a037-542d-4ed5-ac69-5f1041a9ba1a",
+        "seed": 4118031526,
+        "curriculumVersion": "practice-2026.10-v2",
+        "generatorVersion": "3",
+        "difficulty": 2,
+        "explanationSteps": [
+          "분모를 12로 통분하면 8/12 + 6/12 = 7/6입니다."
+        ],
+        "optionMisconceptions": [
+          "near-value",
+          "add-denominators",
+          "miss-common-numerators",
+          "correct"
+        ],
+        "policyVersion": 2,
+        "typeId": "g5-frac:unlikeFraction",
+        "grade": 5,
+        "domain": "number",
+        "unit": "g5-frac",
+        "unitName": "다른 분모 분수의 덧셈",
+        "level": 2,
+        "type": "unlikeFraction",
+        "operands": [
+          2,
+          3,
+          2,
+          4
+        ],
+        "text": "2/3 + 2/4 = ?",
+        "answer": "7/6",
+        "explain": "분모를 12로 통분하면 8/12 + 6/12 = 7/6입니다.",
+        "options": [
+          "4/3",
+          "4/7",
+          "1/3",
+          "7/6"
+        ],
+        "review": false,
+        "hintUsed": false
+      },
+      "selected": "4/3",
+      "correct": false,
+      "elapsed": 1,
+      "responseMs": 633,
+      "date": "2026-10-09T05:03:55.953Z"
+    }
+  ],
+  "answers": [
+    {
+      "id": "g5-frac:unlikeFraction:2:3:2:4",
+      "conceptId": "g5-frac:unlikeFraction:2:3:2:4",
+      "instanceId": "1060a037-542d-4ed5-ac69-5f1041a9ba1a",
+      "seed": 4118031526,
+      "curriculumVersion": "practice-2026.10-v2",
+      "generatorVersion": "3",
+      "difficulty": 2,
+      "explanationSteps": [
+        "분모를 12로 통분하면 8/12 + 6/12 = 7/6입니다."
+      ],
+      "optionMisconceptions": [
+        "near-value",
+        "add-denominators",
+        "miss-common-numerators",
+        "correct"
+      ],
+      "policyVersion": 2,
+      "typeId": "g5-frac:unlikeFraction",
+      "grade": 5,
+      "domain": "number",
+      "unit": "g5-frac",
+      "unitName": "다른 분모 분수의 덧셈",
+      "level": 2,
+      "type": "unlikeFraction",
+      "operands": [
+        2,
+        3,
+        2,
+        4
+      ],
+      "text": "2/3 + 2/4 = ?",
+      "answer": "7/6",
+      "explain": "분모를 12로 통분하면 8/12 + 6/12 = 7/6입니다.",
+      "options": [
+        "4/3",
+        "4/7",
+        "1/3",
+        "7/6"
+      ],
+      "review": false,
+      "hintUsed": false,
+      "problem": {
+        "id": "g5-frac:unlikeFraction:2:3:2:4",
+        "conceptId": "g5-frac:unlikeFraction:2:3:2:4",
+        "instanceId": "1060a037-542d-4ed5-ac69-5f1041a9ba1a",
+        "seed": 4118031526,
+        "curriculumVersion": "practice-2026.10-v2",
+        "generatorVersion": "3",
+        "difficulty": 2,
+        "explanationSteps": [
+          "분모를 12로 통분하면 8/12 + 6/12 = 7/6입니다."
+        ],
+        "optionMisconceptions": [
+          "near-value",
+          "add-denominators",
+          "miss-common-numerators",
+          "correct"
+        ],
+        "policyVersion": 2,
+        "typeId": "g5-frac:unlikeFraction",
+        "grade": 5,
+        "domain": "number",
+        "unit": "g5-frac",
+        "unitName": "다른 분모 분수의 덧셈",
+        "level": 2,
+        "type": "unlikeFraction",
+        "operands": [
+          2,
+          3,
+          2,
+          4
+        ],
+        "text": "2/3 + 2/4 = ?",
+        "answer": "7/6",
+        "explain": "분모를 12로 통분하면 8/12 + 6/12 = 7/6입니다.",
+        "options": [
+          "4/3",
+          "4/7",
+          "1/3",
+          "7/6"
+        ],
+        "review": false,
+        "hintUsed": false
+      },
+      "selected": "4/3",
+      "correct": false,
+      "elapsed": 1,
+      "responseMs": 633,
+      "date": "2026-10-09T05:03:55.953Z"
+    },
+    {
+      "id": "g5-frac:unlikeFraction:3:4:3:5",
+      "conceptId": "g5-frac:unlikeFraction:3:4:3:5",
+      "instanceId": "01fd8322-02a2-4b63-bcba-222909111f73",
+      "seed": 4291433640,
+      "curriculumVersion": "practice-2026.10-v2",
+      "generatorVersion": "3",
+      "difficulty": 2,
+      "explanationSteps": [
+        "분모를 20로 통분하면 15/20 + 12/20 = 27/20입니다."
+      ],
+      "optionMisconceptions": [
+        "add-denominators",
+        "near-value",
+        "correct",
+        "miss-common-numerators"
+      ],
+      "policyVersion": 2,
+      "typeId": "g5-frac:unlikeFraction",
+      "grade": 5,
+      "domain": "number",
+      "unit": "g5-frac",
+      "unitName": "다른 분모 분수의 덧셈",
+      "level": 2,
+      "type": "unlikeFraction",
+      "operands": [
+        3,
+        4,
+        3,
+        5
+      ],
+      "text": "3/4 + 3/5 = ?",
+      "answer": "27/20",
+      "explain": "분모를 20로 통분하면 15/20 + 12/20 = 27/20입니다.",
+      "options": [
+        "2/3",
+        "7/5",
+        "27/20",
+        "3/10"
+      ],
+      "review": false,
+      "hintUsed": false,
+      "problem": {
+        "id": "g5-frac:unlikeFraction:3:4:3:5",
+        "conceptId": "g5-frac:unlikeFraction:3:4:3:5",
+        "instanceId": "01fd8322-02a2-4b63-bcba-222909111f73",
+        "seed": 4291433640,
+        "curriculumVersion": "practice-2026.10-v2",
+        "generatorVersion": "3",
+        "difficulty": 2,
+        "explanationSteps": [
+          "분모를 20로 통분하면 15/20 + 12/20 = 27/20입니다."
+        ],
+        "optionMisconceptions": [
+          "add-denominators",
+          "near-value",
+          "correct",
+          "miss-common-numerators"
+        ],
+        "policyVersion": 2,
+        "typeId": "g5-frac:unlikeFraction",
+        "grade": 5,
+        "domain": "number",
+        "unit": "g5-frac",
+        "unitName": "다른 분모 분수의 덧셈",
+        "level": 2,
+        "type": "unlikeFraction",
+        "operands": [
+          3,
+          4,
+          3,
+          5
+        ],
+        "text": "3/4 + 3/5 = ?",
+        "answer": "27/20",
+        "explain": "분모를 20로 통분하면 15/20 + 12/20 = 27/20입니다.",
+        "options": [
+          "2/3",
+          "7/5",
+          "27/20",
+          "3/10"
+        ],
+        "review": false,
+        "hintUsed": false
+      },
+      "selected": "27/20",
+      "correct": true,
+      "elapsed": 1,
+      "responseMs": 83,
+      "date": "2026-10-09T05:03:56.236Z"
+    },
+    {
+      "id": "g5-frac:unlikeFraction:3:5:3:6",
+      "conceptId": "g5-frac:unlikeFraction:3:5:3:6",
+      "instanceId": "1224c364-6148-4b7a-bdd7-8b24b3545163",
+      "seed": 3075593983,
+      "curriculumVersion": "practice-2026.10-v2",
+      "generatorVersion": "3",
+      "difficulty": 2,
+      "explanationSteps": [
+        "분모를 30로 통분하면 18/30 + 15/30 = 11/10입니다."
+      ],
+      "optionMisconceptions": [
+        "correct",
+        "miss-common-numerators",
+        "near-value",
+        "add-denominators"
+      ],
+      "policyVersion": 2,
+      "typeId": "g5-frac:unlikeFraction",
+      "grade": 5,
+      "domain": "number",
+      "unit": "g5-frac",
+      "unitName": "다른 분모 분수의 덧셈",
+      "level": 2,
+      "type": "unlikeFraction",
+      "operands": [
+        3,
+        5,
+        3,
+        6
+      ],
+      "text": "3/5 + 3/6 = ?",
+      "answer": "11/10",
+      "explain": "분모를 30로 통분하면 18/30 + 15/30 = 11/10입니다.",
+      "options": [
+        "11/10",
+        "1/5",
+        "6/5",
+        "6/11"
+      ],
+      "review": true,
+      "reviewKey": "g5-frac:unlikeFraction:2:3:2:4",
+      "hintUsed": false,
+      "problem": {
+        "id": "g5-frac:unlikeFraction:3:5:3:6",
+        "conceptId": "g5-frac:unlikeFraction:3:5:3:6",
+        "instanceId": "1224c364-6148-4b7a-bdd7-8b24b3545163",
+        "seed": 3075593983,
+        "curriculumVersion": "practice-2026.10-v2",
+        "generatorVersion": "3",
+        "difficulty": 2,
+        "explanationSteps": [
+          "분모를 30로 통분하면 18/30 + 15/30 = 11/10입니다."
+        ],
+        "optionMisconceptions": [
+          "correct",
+          "miss-common-numerators",
+          "near-value",
+          "add-denominators"
+        ],
+        "policyVersion": 2,
+        "typeId": "g5-frac:unlikeFraction",
+        "grade": 5,
+        "domain": "number",
+        "unit": "g5-frac",
+        "unitName": "다른 분모 분수의 덧셈",
+        "level": 2,
+        "type": "unlikeFraction",
+        "operands": [
+          3,
+          5,
+          3,
+          6
+        ],
+        "text": "3/5 + 3/6 = ?",
+        "answer": "11/10",
+        "explain": "분모를 30로 통분하면 18/30 + 15/30 = 11/10입니다.",
+        "options": [
+          "11/10",
+          "1/5",
+          "6/5",
+          "6/11"
+        ],
+        "review": true,
+        "reviewKey": "g5-frac:unlikeFraction:2:3:2:4",
+        "hintUsed": false
+      },
+      "selected": "11/10",
+      "correct": true,
+      "elapsed": 1,
+      "responseMs": 83,
+      "date": "2026-10-09T05:03:56.524Z"
+    }
+  ],
+  "sessionId": "ff603bf7-be0a-450c-8b66-13a403532086",
+  "appVersion": "2.1.0",
+  "curriculumVersion": "practice-2026.10-v2",
+  "generatorVersion": "3",
+  "outcome": "complete",
+  "resultReason": "목표 문항 완료",
+  "actualLevels": {
+    "g5-frac": [
+      2
+    ]
+  }
+}

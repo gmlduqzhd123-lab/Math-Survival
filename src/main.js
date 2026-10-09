@@ -8,15 +8,24 @@ import {createstate} from './state.js';
 import {createplayer} from './player.js';
 import {createItemTypes} from './items.js';
 import {createV2} from './v2.js';
-const response=await fetch(new URL('../data/curriculum.json', import.meta.url));
-if(!response.ok)throw new Error('문제 데이터 불러오기 실패');
-const curriculum=await response.json();
+import {validateCurriculum} from './configuration.js';
+import {installInput} from './input.js';
+const loading=document.createElement('section');loading.id='loadingPanel';loading.innerHTML='<p id="loadMessage" role="status">학습 데이터를 불러오는 중입니다.</p><button id="retryLoad" hidden>다시 불러오기</button>';document.body.append(loading);
+let initialized=false,loadingNow=false;
+async function boot(){if(initialized||loadingNow)return;loadingNow=true;document.getElementById('startBtn').disabled=true;document.getElementById('retryLoad').hidden=true;
+ try{const response=await fetch(new URL('../data/curriculum.json',import.meta.url));if(!response.ok)throw new Error('HTTP '+response.status);const data=validateCurriculum(await response.json());initialize(data);initialized=true;loading.remove();}
+ catch(e){document.getElementById('loadMessage').textContent='학습 데이터를 불러오지 못했습니다. '+e.message;document.getElementById('retryLoad').hidden=false;}
+ finally{loadingNow=false;}}
+document.getElementById('retryLoad').addEventListener('click',boot);boot();
+function initialize(curriculum){
 const systems = {};
 let clock = 0, accumulator = 0;
 const gameNow = (...args) => systems.gameNow(...args);
 
-    const canvas = document.getElementById("game");
-    const ctx = canvas.getContext("2d");
+    const surface = document.getElementById("game");
+    const viewport={width:1000,height:650,dpr:1,scale:1};
+    const canvas={get width(){return viewport.width;},get height(){return viewport.height;}};
+    const ctx = surface.getContext("2d");
 
     const syncCanvasViewport = (...args) => systems.syncCanvasViewport(...args);
 
@@ -56,37 +65,12 @@ const gameNow = (...args) => systems.gameNow(...args);
     let joystickCenter = { x: 0, y: 0 };
     let joystickDelta = { x: 0, y: 0 };
 
-    joystickZone.addEventListener("touchstart", (e) => {
-      e.preventDefault();
-      const touch = e.changedTouches[0];
-      isJoystickActive = true;
-      const rect = joystickZone.getBoundingClientRect();
-      joystickCenter = { x: rect.left + rect.width / 2, y: rect.top + rect.height / 2 };
-      updateJoystick(touch.clientX, touch.clientY);
-    }, { passive: false });
-
-    joystickZone.addEventListener("touchmove", (e) => {
-      e.preventDefault();
-      if (!isJoystickActive) return;
-      const touch = e.changedTouches[0];
-      updateJoystick(touch.clientX, touch.clientY);
-    }, { passive: false });
-
     const stopJoystick = (...args) => systems.stopJoystick(...args);
 
-    joystickZone.addEventListener("touchend", stopJoystick, { passive: false });
-    joystickZone.addEventListener("touchcancel", stopJoystick, { passive: false });
 
     const updateJoystick = (...args) => systems.updateJoystick(...args);
 
-    dashBtn.addEventListener("touchstart", (e) => {
-      e.preventDefault();
-      keys[" "] = true;
-      if(state.running && !state.paused) state.dashRequested = true;
-    }, { passive: false });
     const stopDash = (...args) => systems.stopDash(...args);
-    dashBtn.addEventListener("touchend", stopDash, { passive: false });
-    dashBtn.addEventListener("touchcancel", stopDash, { passive: false });
 
     const keys = {};
     let muted = false;
@@ -237,7 +221,7 @@ const gameNow = (...args) => systems.gameNow(...args);
 
 const runtime = { get clock(){return clock;}, set clock(value){clock=value;},
 get accumulator(){return accumulator;}, set accumulator(value){accumulator=value;},
-get canvas(){return canvas;},
+get canvas(){return canvas;}, get surface(){return surface;}, get viewport(){return viewport;},
 get ctx(){return ctx;},
 get hud(){return hud;},
 get hpEl(){return hpEl;},
@@ -371,9 +355,11 @@ Object.assign(systems, createcombat(runtime));
 Object.assign(systems, createmath(runtime));
 Object.assign(systems, createui(runtime));
 v2.mount();
+const input=installInput(runtime);
+v2.setInput(input);
 if(new URLSearchParams(location.search).has('qa')) window.__game = runtime;
 
-    document.getElementById("startBtn").addEventListener("click", resetGame);
+    document.getElementById("startBtn").addEventListener("click", () => {if(v2.validate()) resetGame();});
     document.getElementById("restartBtn").addEventListener("click", resetGame);
     mainMenuBtn.addEventListener("click", returnToMainMenu);
     quitGameBtn.addEventListener("click", quitGame);
@@ -388,41 +374,9 @@ if(new URLSearchParams(location.search).has('qa')) window.__game = runtime;
     muteBtn.addEventListener("click", () => { initAudio(); setMuted(!muted); });
     musicBtn.addEventListener("click", () => { initAudio(); setMuted(!muted); });
 
-    window.addEventListener("keydown", (e) => {
-      initAudio();
-      keys[e.key] = true;
-      if(e.key === " " && state.running && !state.paused) state.dashRequested = true;
-      keys[e.key.toLowerCase()] = true;
-
-      if (e.key === "Escape" && state.running) {
-        returnToMainMenu();
-      }
-
-      if (e.key.toLowerCase() === "q" && state.running) {
-        quitGame();
-      }
-
-      if (e.key.toLowerCase() === "p" && state.running && !state.levelUpPending) {
-        v2.pause();
-        showToast(state.paused ? "일시정지" : "다시 시작!");
-      }
-
-      if (["ArrowUp","ArrowDown","ArrowLeft","ArrowRight"," "].includes(e.key)) e.preventDefault();
-    });
-
-    window.addEventListener("keyup", (e) => {
-      keys[e.key] = false;
-      keys[e.key.toLowerCase()] = false;
-    });
-
-    window.addEventListener("blur", () => {
-      Object.keys(keys).forEach((key) => { keys[key] = false; });
-      stopJoystick();
-    });
-
     window.addEventListener("resize", () => {
       if (syncCanvasViewport()) {
-        updateCamera();
+        updateCamera();v2.reposition();input.clear();
       }
     });
 
@@ -430,3 +384,5 @@ if(new URLSearchParams(location.search).has('qa')) window.__game = runtime;
     makeDecorations();
     updateCamera();
     requestAnimationFrame(loop);
+    new ResizeObserver(()=>{if(syncCanvasViewport()){updateCamera();v2.reposition();input.clear();}}).observe(surface.parentElement);
+}

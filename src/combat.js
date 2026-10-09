@@ -23,6 +23,7 @@ function checkLevelUp() {
         gameRuntime.state.levelUpQueue++;
         need = gameRuntime.expNeed();
       }
+      if(gameRuntime.state.mode==="explore"){gameRuntime.state.levelUpQueue=0;return;}
       if (gameRuntime.state.levelUpQueue > 0 && !gameRuntime.state.levelUpPending) gameRuntime.openLevelUpPanel();
     }
 

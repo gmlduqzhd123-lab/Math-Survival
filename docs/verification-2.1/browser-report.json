@@ -1,0 +1,2065 @@
+{
+  "date": "2026-10-09T03:43:09.682Z",
+  "environment": "Windows Edge headless / Playwright emulated touch",
+  "results": [
+    {
+      "name": "실제 /Math-Survival/ 초기 로딩·정적 자산 MIME·버전",
+      "pass": true,
+      "detail": [
+        {
+          "url": "http://127.0.0.1:4173/Math-Survival/?qa=1",
+          "status": 200,
+          "type": "text/html; charset=utf-8"
+        },
+        {
+          "url": "http://127.0.0.1:4173/Math-Survival/src/original.css",
+          "status": 200,
+          "type": "text/css; charset=utf-8"
+        },
+        {
+          "url": "http://127.0.0.1:4173/Math-Survival/src/v2.css",
+          "status": 200,
+          "type": "text/css; charset=utf-8"
+        },
+        {
+          "url": "http://127.0.0.1:4173/Math-Survival/src/layout.css",
+          "status": 200,
+          "type": "text/css; charset=utf-8"
+        },
+        {
+          "url": "http://127.0.0.1:4173/Math-Survival/src/main.js",
+          "status": 200,
+          "type": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "http://127.0.0.1:4173/Math-Survival/src/combat.js",
+          "status": 200,
+          "type": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "http://127.0.0.1:4173/Math-Survival/src/core.js",
+          "status": 200,
+          "type": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "http://127.0.0.1:4173/Math-Survival/src/math.js",
+          "status": 200,
+          "type": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "http://127.0.0.1:4173/Math-Survival/src/entities.js",
+          "status": 200,
+          "type": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "http://127.0.0.1:4173/Math-Survival/src/MAPS.js",
+          "status": 200,
+          "type": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "http://127.0.0.1:4173/Math-Survival/src/state.js",
+          "status": 200,
+          "type": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "http://127.0.0.1:4173/Math-Survival/src/ui.js",
+          "status": 200,
+          "type": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "http://127.0.0.1:4173/Math-Survival/src/player.js",
+          "status": 200,
+          "type": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "http://127.0.0.1:4173/Math-Survival/src/v2.js",
+          "status": 200,
+          "type": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "http://127.0.0.1:4173/Math-Survival/src/items.js",
+          "status": 200,
+          "type": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "http://127.0.0.1:4173/Math-Survival/src/configuration.js",
+          "status": 200,
+          "type": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "http://127.0.0.1:4173/Math-Survival/src/input.js",
+          "status": 200,
+          "type": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "http://127.0.0.1:4173/Math-Survival/src/learning.js",
+          "status": 200,
+          "type": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "http://127.0.0.1:4173/Math-Survival/src/combat-v2.js",
+          "status": 200,
+          "type": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "http://127.0.0.1:4173/Math-Survival/src/storage.js",
+          "status": 200,
+          "type": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "http://127.0.0.1:4173/Math-Survival/src/math-engine.js",
+          "status": 200,
+          "type": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "http://127.0.0.1:4173/Math-Survival/src/mastery.js",
+          "status": 200,
+          "type": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "http://127.0.0.1:4173/Math-Survival/src/version.js",
+          "status": 200,
+          "type": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "http://127.0.0.1:4173/Math-Survival/data/curriculum.json",
+          "status": 200,
+          "type": "application/json; charset=utf-8"
+        },
+        {
+          "url": "http://127.0.0.1:4173/Math-Survival/?qa=1",
+          "status": 200,
+          "type": "text/html; charset=utf-8"
+        },
+        {
+          "url": "http://127.0.0.1:4173/Math-Survival/src/original.css",
+          "status": 200,
+          "type": "text/css; charset=utf-8"
+        },
+        {
+          "url": "http://127.0.0.1:4173/Math-Survival/src/v2.css",
+          "status": 200,
+          "type": "text/css; charset=utf-8"
+        },
+        {
+          "url": "http://127.0.0.1:4173/Math-Survival/src/layout.css",
+          "status": 200,
+          "type": "text/css; charset=utf-8"
+        },
+        {
+          "url": "http://127.0.0.1:4173/Math-Survival/src/main.js",
+          "status": 200,
+          "type": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "http://127.0.0.1:4173/Math-Survival/src/math.js",
+          "status": 200,
+          "type": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "http://127.0.0.1:4173/Math-Survival/src/core.js",
+          "status": 200,
+          "type": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "http://127.0.0.1:4173/Math-Survival/src/MAPS.js",
+          "status": 200,
+          "type": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "http://127.0.0.1:4173/Math-Survival/src/combat.js",
+          "status": 200,
+          "type": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "http://127.0.0.1:4173/Math-Survival/src/entities.js",
+          "status": 200,
+          "type": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "http://127.0.0.1:4173/Math-Survival/src/ui.js",
+          "status": 200,
+          "type": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "http://127.0.0.1:4173/Math-Survival/src/player.js",
+          "status": 200,
+          "type": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "http://127.0.0.1:4173/Math-Survival/src/state.js",
+          "status": 200,
+          "type": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "http://127.0.0.1:4173/Math-Survival/src/items.js",
+          "status": 200,
+          "type": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "http://127.0.0.1:4173/Math-Survival/src/configuration.js",
+          "status": 200,
+          "type": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "http://127.0.0.1:4173/Math-Survival/src/input.js",
+          "status": 200,
+          "type": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "http://127.0.0.1:4173/Math-Survival/src/v2.js",
+          "status": 200,
+          "type": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "http://127.0.0.1:4173/Math-Survival/src/learning.js",
+          "status": 200,
+          "type": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "http://127.0.0.1:4173/Math-Survival/src/math-engine.js",
+          "status": 200,
+          "type": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "http://127.0.0.1:4173/Math-Survival/src/combat-v2.js",
+          "status": 200,
+          "type": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "http://127.0.0.1:4173/Math-Survival/src/storage.js",
+          "status": 200,
+          "type": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "http://127.0.0.1:4173/Math-Survival/src/version.js",
+          "status": 200,
+          "type": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "http://127.0.0.1:4173/Math-Survival/src/mastery.js",
+          "status": 200,
+          "type": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "http://127.0.0.1:4173/Math-Survival/data/curriculum.json",
+          "status": 200,
+          "type": "application/json; charset=utf-8"
+        },
+        {
+          "url": "http://127.0.0.1:4173/Math-Survival/?qa=1",
+          "status": 200,
+          "type": "text/html; charset=utf-8"
+        },
+        {
+          "url": "http://127.0.0.1:4173/Math-Survival/src/original.css",
+          "status": 200,
+          "type": "text/css; charset=utf-8"
+        },
+        {
+          "url": "http://127.0.0.1:4173/Math-Survival/src/v2.css",
+          "status": 200,
+          "type": "text/css; charset=utf-8"
+        },
+        {
+          "url": "http://127.0.0.1:4173/Math-Survival/src/layout.css",
+          "status": 200,
+          "type": "text/css; charset=utf-8"
+        },
+        {
+          "url": "http://127.0.0.1:4173/Math-Survival/src/main.js",
+          "status": 200,
+          "type": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "http://127.0.0.1:4173/Math-Survival/src/core.js",
+          "status": 200,
+          "type": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "http://127.0.0.1:4173/Math-Survival/src/math.js",
+          "status": 200,
+          "type": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "http://127.0.0.1:4173/Math-Survival/src/MAPS.js",
+          "status": 200,
+          "type": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "http://127.0.0.1:4173/Math-Survival/src/player.js",
+          "status": 200,
+          "type": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "http://127.0.0.1:4173/Math-Survival/src/combat.js",
+          "status": 200,
+          "type": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "http://127.0.0.1:4173/Math-Survival/src/ui.js",
+          "status": 200,
+          "type": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "http://127.0.0.1:4173/Math-Survival/src/state.js",
+          "status": 200,
+          "type": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "http://127.0.0.1:4173/Math-Survival/src/items.js",
+          "status": 200,
+          "type": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "http://127.0.0.1:4173/Math-Survival/src/entities.js",
+          "status": 200,
+          "type": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "http://127.0.0.1:4173/Math-Survival/src/configuration.js",
+          "status": 200,
+          "type": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "http://127.0.0.1:4173/Math-Survival/src/input.js",
+          "status": 200,
+          "type": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "http://127.0.0.1:4173/Math-Survival/src/v2.js",
+          "status": 200,
+          "type": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "http://127.0.0.1:4173/Math-Survival/src/learning.js",
+          "status": 200,
+          "type": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "http://127.0.0.1:4173/Math-Survival/src/combat-v2.js",
+          "status": 200,
+          "type": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "http://127.0.0.1:4173/Math-Survival/src/math-engine.js",
+          "status": 200,
+          "type": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "http://127.0.0.1:4173/Math-Survival/src/mastery.js",
+          "status": 200,
+          "type": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "http://127.0.0.1:4173/Math-Survival/src/storage.js",
+          "status": 200,
+          "type": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "http://127.0.0.1:4173/Math-Survival/src/version.js",
+          "status": 200,
+          "type": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "http://127.0.0.1:4173/Math-Survival/data/curriculum.json",
+          "status": 200,
+          "type": "application/json; charset=utf-8"
+        },
+        {
+          "url": "http://127.0.0.1:4173/Math-Survival/?qa=1",
+          "status": 200,
+          "type": "text/html; charset=utf-8"
+        },
+        {
+          "url": "http://127.0.0.1:4173/Math-Survival/src/original.css",
+          "status": 200,
+          "type": "text/css; charset=utf-8"
+        },
+        {
+          "url": "http://127.0.0.1:4173/Math-Survival/src/v2.css",
+          "status": 200,
+          "type": "text/css; charset=utf-8"
+        },
+        {
+          "url": "http://127.0.0.1:4173/Math-Survival/src/layout.css",
+          "status": 200,
+          "type": "text/css; charset=utf-8"
+        },
+        {
+          "url": "http://127.0.0.1:4173/Math-Survival/src/main.js",
+          "status": 200,
+          "type": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "http://127.0.0.1:4173/Math-Survival/src/MAPS.js",
+          "status": 200,
+          "type": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "http://127.0.0.1:4173/Math-Survival/src/core.js",
+          "status": 200,
+          "type": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "http://127.0.0.1:4173/Math-Survival/src/math.js",
+          "status": 200,
+          "type": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "http://127.0.0.1:4173/Math-Survival/src/combat.js",
+          "status": 200,
+          "type": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "http://127.0.0.1:4173/Math-Survival/src/entities.js",
+          "status": 200,
+          "type": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "http://127.0.0.1:4173/Math-Survival/src/state.js",
+          "status": 200,
+          "type": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "http://127.0.0.1:4173/Math-Survival/src/ui.js",
+          "status": 200,
+          "type": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "http://127.0.0.1:4173/Math-Survival/src/player.js",
+          "status": 200,
+          "type": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "http://127.0.0.1:4173/Math-Survival/src/items.js",
+          "status": 200,
+          "type": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "http://127.0.0.1:4173/Math-Survival/src/configuration.js",
+          "status": 200,
+          "type": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "http://127.0.0.1:4173/Math-Survival/src/input.js",
+          "status": 200,
+          "type": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "http://127.0.0.1:4173/Math-Survival/src/v2.js",
+          "status": 200,
+          "type": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "http://127.0.0.1:4173/Math-Survival/src/storage.js",
+          "status": 200,
+          "type": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "http://127.0.0.1:4173/Math-Survival/src/mastery.js",
+          "status": 200,
+          "type": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "http://127.0.0.1:4173/Math-Survival/src/learning.js",
+          "status": 200,
+          "type": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "http://127.0.0.1:4173/Math-Survival/src/combat-v2.js",
+          "status": 200,
+          "type": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "http://127.0.0.1:4173/Math-Survival/src/math-engine.js",
+          "status": 200,
+          "type": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "http://127.0.0.1:4173/Math-Survival/src/version.js",
+          "status": 200,
+          "type": "text/javascript; charset=utf-8"
+        },
+        {
+          "url": "http://127.0.0.1:4173/Math-Survival/data/curriculum.json",
+          "status": 200,
+          "type": "application/json; charset=utf-8"
+        }
+      ]
+    },
+    {
+      "name": "목표 0·1.5·101 / 시간 소수·범위 오류 시작 차단",
+      "pass": true
+    },
+    {
+      "name": "지원하지 않는 영역 자동 변경 금지·단원 단계 숨김",
+      "pass": true
+    },
+    {
+      "name": "탐험 오답 20회·HP/둔화 없음·해설 시간 정지·목표와 정확도 분리",
+      "pass": true
+    },
+    {
+      "name": "실제 JSON·CSV 다운로드 내용과 화면 집계 일치",
+      "pass": true
+    },
+    {
+      "name": "메뉴·Escape 중단 저장·세션 중복 방지",
+      "pass": true
+    },
+    {
+      "name": "답변 체크포인트 reload 복구·재로드 중복 없음",
+      "pass": true
+    },
+    {
+      "name": "보스 제한 시간 제목 / 무응답 정답률 없음",
+      "pass": true
+    },
+    {
+      "name": "마지막 응답과 사망 경합·중복 종료 차단",
+      "pass": true
+    },
+    {
+      "name": "미션 예약 pause·메뉴·재시작 취소 / 단일 HUD 노드 유지",
+      "pass": true
+    },
+    {
+      "name": "키보드 WASD·방향키·대시·P repeat / 입력 필드 단축키 비간섭",
+      "pass": true
+    },
+    {
+      "name": "10회 재시작·응답 이벤트 1개·게임 속도 / 캐릭터·스킬·4무기 유지",
+      "pass": true
+    },
+    {
+      "name": "원본 전투·펫·포털·아이템·XP 성장 카드·업적 유지",
+      "pass": true
+    },
+    {
+      "name": "보스 세 패턴·3연전 완료 / 서바이벌 시간 완료",
+      "pass": true
+    },
+    {
+      "name": "화면 320×568 · 긴 문제·분수·보스·큰 글자·해설 겹침 검사",
+      "pass": true,
+      "detail": {
+        "boxes": [
+          {
+            "id": "gameHeader",
+            "x": 4,
+            "y": 4,
+            "width": 312,
+            "height": 109.25,
+            "top": 4,
+            "right": 316,
+            "bottom": 113.25,
+            "left": 4
+          },
+          {
+            "id": "learningArea",
+            "x": 4,
+            "y": 117.25,
+            "width": 312,
+            "height": 90.875,
+            "top": 117.25,
+            "right": 316,
+            "bottom": 208.125,
+            "left": 4
+          },
+          {
+            "id": "playfield",
+            "x": 4,
+            "y": 212.125,
+            "width": 312,
+            "height": 119.875,
+            "top": 212.125,
+            "right": 316,
+            "bottom": 332,
+            "left": 4
+          },
+          {
+            "id": "answerBar",
+            "x": 4,
+            "y": 336,
+            "width": 312,
+            "height": 92,
+            "top": 336,
+            "right": 316,
+            "bottom": 428,
+            "left": 4
+          },
+          {
+            "id": "touchControls",
+            "x": 4,
+            "y": 432,
+            "width": 312,
+            "height": 84,
+            "top": 432,
+            "right": 316,
+            "bottom": 516,
+            "left": 4
+          },
+          {
+            "id": "gameDetails",
+            "x": 4,
+            "y": 520,
+            "width": 312,
+            "height": 44,
+            "top": 520,
+            "right": 316,
+            "bottom": 564,
+            "left": 4
+          }
+        ],
+        "buttons": [
+          {
+            "id": "dashBtn",
+            "box": {
+              "x": 232,
+              "y": 434,
+              "width": 80,
+              "height": 80,
+              "top": 434,
+              "right": 312,
+              "bottom": 514,
+              "left": 232
+            },
+            "font": 16
+          },
+          {
+            "id": "skillBtn",
+            "box": {
+              "x": 96,
+              "y": 452,
+              "width": 128,
+              "height": 44,
+              "top": 452,
+              "right": 224,
+              "bottom": 496,
+              "left": 96
+            },
+            "font": 16
+          },
+          {
+            "id": "",
+            "box": {
+              "x": 4,
+              "y": 336,
+              "width": 154,
+              "height": 44,
+              "top": 336,
+              "right": 158,
+              "bottom": 380,
+              "left": 4
+            },
+            "font": 20.8
+          },
+          {
+            "id": "",
+            "box": {
+              "x": 162,
+              "y": 336,
+              "width": 154,
+              "height": 44,
+              "top": 336,
+              "right": 316,
+              "bottom": 380,
+              "left": 162
+            },
+            "font": 20.8
+          },
+          {
+            "id": "",
+            "box": {
+              "x": 4,
+              "y": 384,
+              "width": 154,
+              "height": 44,
+              "top": 384,
+              "right": 158,
+              "bottom": 428,
+              "left": 4
+            },
+            "font": 20.8
+          },
+          {
+            "id": "",
+            "box": {
+              "x": 162,
+              "y": 384,
+              "width": 154,
+              "height": 44,
+              "top": 384,
+              "right": 316,
+              "bottom": 428,
+              "left": 162
+            },
+            "font": 20.8
+          },
+          {
+            "id": "pauseBtn",
+            "box": {
+              "x": 4,
+              "y": 69.25,
+              "width": 75,
+              "height": 44,
+              "top": 69.25,
+              "right": 79,
+              "bottom": 113.25,
+              "left": 4
+            },
+            "font": 12
+          },
+          {
+            "id": "playSound",
+            "box": {
+              "x": 83,
+              "y": 69.25,
+              "width": 75,
+              "height": 44,
+              "top": 69.25,
+              "right": 158,
+              "bottom": 113.25,
+              "left": 83
+            },
+            "font": 12
+          },
+          {
+            "id": "mainMenuBtn",
+            "box": {
+              "x": 162,
+              "y": 69.25,
+              "width": 75,
+              "height": 44,
+              "top": 69.25,
+              "right": 237,
+              "bottom": 113.25,
+              "left": 162
+            },
+            "font": 12
+          },
+          {
+            "id": "quitGameBtn",
+            "box": {
+              "x": 241,
+              "y": 69.25,
+              "width": 75,
+              "height": 44,
+              "top": 69.25,
+              "right": 316,
+              "bottom": 113.25,
+              "left": 241
+            },
+            "font": 12
+          }
+        ],
+        "scrollWidth": 320,
+        "width": 320,
+        "height": 568,
+        "scrollHeight": 568,
+        "dpr": 2,
+        "backing": 616,
+        "logical": 308
+      }
+    },
+    {
+      "name": "화면 360×640 · 긴 문제·분수·보스·큰 글자·해설 겹침 검사",
+      "pass": true,
+      "detail": {
+        "boxes": [
+          {
+            "id": "gameHeader",
+            "x": 4,
+            "y": 4,
+            "width": 352,
+            "height": 95.5,
+            "top": 4,
+            "right": 356,
+            "bottom": 99.5,
+            "left": 4
+          },
+          {
+            "id": "learningArea",
+            "x": 4,
+            "y": 103.5,
+            "width": 352,
+            "height": 102.390625,
+            "top": 103.5,
+            "right": 356,
+            "bottom": 205.890625,
+            "left": 4
+          },
+          {
+            "id": "playfield",
+            "x": 4,
+            "y": 209.890625,
+            "width": 352,
+            "height": 194.109375,
+            "top": 209.890625,
+            "right": 356,
+            "bottom": 404,
+            "left": 4
+          },
+          {
+            "id": "answerBar",
+            "x": 4,
+            "y": 408,
+            "width": 352,
+            "height": 92,
+            "top": 408,
+            "right": 356,
+            "bottom": 500,
+            "left": 4
+          },
+          {
+            "id": "touchControls",
+            "x": 4,
+            "y": 504,
+            "width": 352,
+            "height": 84,
+            "top": 504,
+            "right": 356,
+            "bottom": 588,
+            "left": 4
+          },
+          {
+            "id": "gameDetails",
+            "x": 4,
+            "y": 592,
+            "width": 352,
+            "height": 44,
+            "top": 592,
+            "right": 356,
+            "bottom": 636,
+            "left": 4
+          }
+        ],
+        "buttons": [
+          {
+            "id": "dashBtn",
+            "box": {
+              "x": 272,
+              "y": 506,
+              "width": 80,
+              "height": 80,
+              "top": 506,
+              "right": 352,
+              "bottom": 586,
+              "left": 272
+            },
+            "font": 16
+          },
+          {
+            "id": "skillBtn",
+            "box": {
+              "x": 96,
+              "y": 524,
+              "width": 168,
+              "height": 44,
+              "top": 524,
+              "right": 264,
+              "bottom": 568,
+              "left": 96
+            },
+            "font": 16
+          },
+          {
+            "id": "",
+            "box": {
+              "x": 4,
+              "y": 408,
+              "width": 174,
+              "height": 44,
+              "top": 408,
+              "right": 178,
+              "bottom": 452,
+              "left": 4
+            },
+            "font": 20.8
+          },
+          {
+            "id": "",
+            "box": {
+              "x": 182,
+              "y": 408,
+              "width": 174,
+              "height": 44,
+              "top": 408,
+              "right": 356,
+              "bottom": 452,
+              "left": 182
+            },
+            "font": 20.8
+          },
+          {
+            "id": "",
+            "box": {
+              "x": 4,
+              "y": 456,
+              "width": 174,
+              "height": 44,
+              "top": 456,
+              "right": 178,
+              "bottom": 500,
+              "left": 4
+            },
+            "font": 20.8
+          },
+          {
+            "id": "",
+            "box": {
+              "x": 182,
+              "y": 456,
+              "width": 174,
+              "height": 44,
+              "top": 456,
+              "right": 356,
+              "bottom": 500,
+              "left": 182
+            },
+            "font": 20.8
+          },
+          {
+            "id": "pauseBtn",
+            "box": {
+              "x": 4,
+              "y": 55.5,
+              "width": 85,
+              "height": 44,
+              "top": 55.5,
+              "right": 89,
+              "bottom": 99.5,
+              "left": 4
+            },
+            "font": 12
+          },
+          {
+            "id": "playSound",
+            "box": {
+              "x": 93,
+              "y": 55.5,
+              "width": 85,
+              "height": 44,
+              "top": 55.5,
+              "right": 178,
+              "bottom": 99.5,
+              "left": 93
+            },
+            "font": 12
+          },
+          {
+            "id": "mainMenuBtn",
+            "box": {
+              "x": 182,
+              "y": 55.5,
+              "width": 85,
+              "height": 44,
+              "top": 55.5,
+              "right": 267,
+              "bottom": 99.5,
+              "left": 182
+            },
+            "font": 12
+          },
+          {
+            "id": "quitGameBtn",
+            "box": {
+              "x": 271,
+              "y": 55.5,
+              "width": 85,
+              "height": 44,
+              "top": 55.5,
+              "right": 356,
+              "bottom": 99.5,
+              "left": 271
+            },
+            "font": 12
+          }
+        ],
+        "scrollWidth": 360,
+        "width": 360,
+        "height": 640,
+        "scrollHeight": 640,
+        "dpr": 2,
+        "backing": 696,
+        "logical": 348
+      }
+    },
+    {
+      "name": "화면 390×844 · 긴 문제·분수·보스·큰 글자·해설 겹침 검사",
+      "pass": true,
+      "detail": {
+        "boxes": [
+          {
+            "id": "gameHeader",
+            "x": 4,
+            "y": 4,
+            "width": 382,
+            "height": 95.5,
+            "top": 4,
+            "right": 386,
+            "bottom": 99.5,
+            "left": 4
+          },
+          {
+            "id": "learningArea",
+            "x": 4,
+            "y": 103.5,
+            "width": 382,
+            "height": 135.03125,
+            "top": 103.5,
+            "right": 386,
+            "bottom": 238.53125,
+            "left": 4
+          },
+          {
+            "id": "playfield",
+            "x": 4,
+            "y": 242.53125,
+            "width": 382,
+            "height": 365.46875,
+            "top": 242.53125,
+            "right": 386,
+            "bottom": 608,
+            "left": 4
+          },
+          {
+            "id": "answerBar",
+            "x": 4,
+            "y": 612,
+            "width": 382,
+            "height": 92,
+            "top": 612,
+            "right": 386,
+            "bottom": 704,
+            "left": 4
+          },
+          {
+            "id": "touchControls",
+            "x": 4,
+            "y": 708,
+            "width": 382,
+            "height": 84,
+            "top": 708,
+            "right": 386,
+            "bottom": 792,
+            "left": 4
+          },
+          {
+            "id": "gameDetails",
+            "x": 4,
+            "y": 796,
+            "width": 382,
+            "height": 44,
+            "top": 796,
+            "right": 386,
+            "bottom": 840,
+            "left": 4
+          }
+        ],
+        "buttons": [
+          {
+            "id": "dashBtn",
+            "box": {
+              "x": 302,
+              "y": 710,
+              "width": 80,
+              "height": 80,
+              "top": 710,
+              "right": 382,
+              "bottom": 790,
+              "left": 302
+            },
+            "font": 16
+          },
+          {
+            "id": "skillBtn",
+            "box": {
+              "x": 96,
+              "y": 728,
+              "width": 198,
+              "height": 44,
+              "top": 728,
+              "right": 294,
+              "bottom": 772,
+              "left": 96
+            },
+            "font": 16
+          },
+          {
+            "id": "",
+            "box": {
+              "x": 4,
+              "y": 612,
+              "width": 189,
+              "height": 44,
+              "top": 612,
+              "right": 193,
+              "bottom": 656,
+              "left": 4
+            },
+            "font": 20.8
+          },
+          {
+            "id": "",
+            "box": {
+              "x": 197,
+              "y": 612,
+              "width": 189,
+              "height": 44,
+              "top": 612,
+              "right": 386,
+              "bottom": 656,
+              "left": 197
+            },
+            "font": 20.8
+          },
+          {
+            "id": "",
+            "box": {
+              "x": 4,
+              "y": 660,
+              "width": 189,
+              "height": 44,
+              "top": 660,
+              "right": 193,
+              "bottom": 704,
+              "left": 4
+            },
+            "font": 20.8
+          },
+          {
+            "id": "",
+            "box": {
+              "x": 197,
+              "y": 660,
+              "width": 189,
+              "height": 44,
+              "top": 660,
+              "right": 386,
+              "bottom": 704,
+              "left": 197
+            },
+            "font": 20.8
+          },
+          {
+            "id": "pauseBtn",
+            "box": {
+              "x": 4,
+              "y": 55.5,
+              "width": 92.5,
+              "height": 44,
+              "top": 55.5,
+              "right": 96.5,
+              "bottom": 99.5,
+              "left": 4
+            },
+            "font": 12
+          },
+          {
+            "id": "playSound",
+            "box": {
+              "x": 100.5,
+              "y": 55.5,
+              "width": 92.5,
+              "height": 44,
+              "top": 55.5,
+              "right": 193,
+              "bottom": 99.5,
+              "left": 100.5
+            },
+            "font": 12
+          },
+          {
+            "id": "mainMenuBtn",
+            "box": {
+              "x": 197,
+              "y": 55.5,
+              "width": 92.5,
+              "height": 44,
+              "top": 55.5,
+              "right": 289.5,
+              "bottom": 99.5,
+              "left": 197
+            },
+            "font": 12
+          },
+          {
+            "id": "quitGameBtn",
+            "box": {
+              "x": 293.5,
+              "y": 55.5,
+              "width": 92.5,
+              "height": 44,
+              "top": 55.5,
+              "right": 386,
+              "bottom": 99.5,
+              "left": 293.5
+            },
+            "font": 12
+          }
+        ],
+        "scrollWidth": 390,
+        "width": 390,
+        "height": 844,
+        "scrollHeight": 844,
+        "dpr": 2,
+        "backing": 756,
+        "logical": 378
+      }
+    },
+    {
+      "name": "화면 768×1024 · 긴 문제·분수·보스·큰 글자·해설 겹침 검사",
+      "pass": true,
+      "detail": {
+        "boxes": [
+          {
+            "id": "gameHeader",
+            "x": 6,
+            "y": 6,
+            "width": 756,
+            "height": 71,
+            "top": 6,
+            "right": 762,
+            "bottom": 77,
+            "left": 6
+          },
+          {
+            "id": "learningArea",
+            "x": 6,
+            "y": 83,
+            "width": 756,
+            "height": 107.78125,
+            "top": 83,
+            "right": 762,
+            "bottom": 190.78125,
+            "left": 6
+          },
+          {
+            "id": "playfield",
+            "x": 6,
+            "y": 196.78125,
+            "width": 756,
+            "height": 631.21875,
+            "top": 196.78125,
+            "right": 762,
+            "bottom": 828,
+            "left": 6
+          },
+          {
+            "id": "answerBar",
+            "x": 6,
+            "y": 834,
+            "width": 756,
+            "height": 44,
+            "top": 834,
+            "right": 762,
+            "bottom": 878,
+            "left": 6
+          },
+          {
+            "id": "touchControls",
+            "x": 6,
+            "y": 884,
+            "width": 756,
+            "height": 84,
+            "top": 884,
+            "right": 762,
+            "bottom": 968,
+            "left": 6
+          },
+          {
+            "id": "gameDetails",
+            "x": 6,
+            "y": 974,
+            "width": 756,
+            "height": 44,
+            "top": 974,
+            "right": 762,
+            "bottom": 1018,
+            "left": 6
+          }
+        ],
+        "buttons": [
+          {
+            "id": "dashBtn",
+            "box": {
+              "x": 678,
+              "y": 886,
+              "width": 80,
+              "height": 80,
+              "top": 886,
+              "right": 758,
+              "bottom": 966,
+              "left": 678
+            },
+            "font": 16
+          },
+          {
+            "id": "skillBtn",
+            "box": {
+              "x": 284,
+              "y": 904,
+              "width": 200,
+              "height": 44,
+              "top": 904,
+              "right": 484,
+              "bottom": 948,
+              "left": 284
+            },
+            "font": 16
+          },
+          {
+            "id": "",
+            "box": {
+              "x": 6,
+              "y": 834,
+              "width": 186,
+              "height": 44,
+              "top": 834,
+              "right": 192,
+              "bottom": 878,
+              "left": 6
+            },
+            "font": 20.8
+          },
+          {
+            "id": "",
+            "box": {
+              "x": 196,
+              "y": 834,
+              "width": 186,
+              "height": 44,
+              "top": 834,
+              "right": 382,
+              "bottom": 878,
+              "left": 196
+            },
+            "font": 20.8
+          },
+          {
+            "id": "",
+            "box": {
+              "x": 386,
+              "y": 834,
+              "width": 186,
+              "height": 44,
+              "top": 834,
+              "right": 572,
+              "bottom": 878,
+              "left": 386
+            },
+            "font": 20.8
+          },
+          {
+            "id": "",
+            "box": {
+              "x": 576,
+              "y": 834,
+              "width": 186,
+              "height": 44,
+              "top": 834,
+              "right": 762,
+              "bottom": 878,
+              "left": 576
+            },
+            "font": 20.8
+          },
+          {
+            "id": "pauseBtn",
+            "box": {
+              "x": 6,
+              "y": 33,
+              "width": 186,
+              "height": 44,
+              "top": 33,
+              "right": 192,
+              "bottom": 77,
+              "left": 6
+            },
+            "font": 14
+          },
+          {
+            "id": "playSound",
+            "box": {
+              "x": 196,
+              "y": 33,
+              "width": 186,
+              "height": 44,
+              "top": 33,
+              "right": 382,
+              "bottom": 77,
+              "left": 196
+            },
+            "font": 14
+          },
+          {
+            "id": "mainMenuBtn",
+            "box": {
+              "x": 386,
+              "y": 33,
+              "width": 186,
+              "height": 44,
+              "top": 33,
+              "right": 572,
+              "bottom": 77,
+              "left": 386
+            },
+            "font": 14
+          },
+          {
+            "id": "quitGameBtn",
+            "box": {
+              "x": 576,
+              "y": 33,
+              "width": 186,
+              "height": 44,
+              "top": 33,
+              "right": 762,
+              "bottom": 77,
+              "left": 576
+            },
+            "font": 14
+          }
+        ],
+        "scrollWidth": 768,
+        "width": 768,
+        "height": 1024,
+        "scrollHeight": 1024,
+        "dpr": 2,
+        "backing": 1504,
+        "logical": 752
+      }
+    },
+    {
+      "name": "화면 844×390 · 긴 문제·분수·보스·큰 글자·해설 겹침 검사",
+      "pass": true,
+      "detail": {
+        "boxes": [
+          {
+            "id": "gameHeader",
+            "x": 6,
+            "y": 6,
+            "width": 831.984375,
+            "height": 44,
+            "top": 6,
+            "right": 837.984375,
+            "bottom": 50,
+            "left": 6
+          },
+          {
+            "id": "learningArea",
+            "x": 477.984375,
+            "y": 54,
+            "width": 360,
+            "height": 146,
+            "top": 54,
+            "right": 837.984375,
+            "bottom": 200,
+            "left": 477.984375
+          },
+          {
+            "id": "playfield",
+            "x": 6,
+            "y": 54,
+            "width": 467.984375,
+            "height": 242,
+            "top": 54,
+            "right": 473.984375,
+            "bottom": 296,
+            "left": 6
+          },
+          {
+            "id": "answerBar",
+            "x": 477.984375,
+            "y": 204,
+            "width": 360,
+            "height": 92,
+            "top": 204,
+            "right": 837.984375,
+            "bottom": 296,
+            "left": 477.984375
+          },
+          {
+            "id": "touchControls",
+            "x": 6,
+            "y": 300,
+            "width": 467.984375,
+            "height": 84,
+            "top": 300,
+            "right": 473.984375,
+            "bottom": 384,
+            "left": 6
+          },
+          {
+            "id": "gameDetails",
+            "x": 477.984375,
+            "y": 300,
+            "width": 360,
+            "height": 84,
+            "top": 300,
+            "right": 837.984375,
+            "bottom": 384,
+            "left": 477.984375
+          }
+        ],
+        "buttons": [
+          {
+            "id": "dashBtn",
+            "box": {
+              "x": 389.984375,
+              "y": 302,
+              "width": 80,
+              "height": 80,
+              "top": 302,
+              "right": 469.984375,
+              "bottom": 382,
+              "left": 389.984375
+            },
+            "font": 16
+          },
+          {
+            "id": "skillBtn",
+            "box": {
+              "x": 139.984375,
+              "y": 320,
+              "width": 200,
+              "height": 44,
+              "top": 320,
+              "right": 339.984375,
+              "bottom": 364,
+              "left": 139.984375
+            },
+            "font": 16
+          },
+          {
+            "id": "",
+            "box": {
+              "x": 477.984375,
+              "y": 204,
+              "width": 178,
+              "height": 44,
+              "top": 204,
+              "right": 655.984375,
+              "bottom": 248,
+              "left": 477.984375
+            },
+            "font": 20.8
+          },
+          {
+            "id": "",
+            "box": {
+              "x": 659.984375,
+              "y": 204,
+              "width": 178,
+              "height": 44,
+              "top": 204,
+              "right": 837.984375,
+              "bottom": 248,
+              "left": 659.984375
+            },
+            "font": 20.8
+          },
+          {
+            "id": "",
+            "box": {
+              "x": 477.984375,
+              "y": 252,
+              "width": 178,
+              "height": 44,
+              "top": 252,
+              "right": 655.984375,
+              "bottom": 296,
+              "left": 477.984375
+            },
+            "font": 20.8
+          },
+          {
+            "id": "",
+            "box": {
+              "x": 659.984375,
+              "y": 252,
+              "width": 178,
+              "height": 44,
+              "top": 252,
+              "right": 837.984375,
+              "bottom": 296,
+              "left": 659.984375
+            },
+            "font": 20.8
+          },
+          {
+            "id": "pauseBtn",
+            "box": {
+              "x": 563.3125,
+              "y": 6,
+              "width": 65.671875,
+              "height": 44,
+              "top": 6,
+              "right": 628.984375,
+              "bottom": 50,
+              "left": 563.3125
+            },
+            "font": 12
+          },
+          {
+            "id": "playSound",
+            "box": {
+              "x": 632.984375,
+              "y": 6,
+              "width": 65.65625,
+              "height": 44,
+              "top": 6,
+              "right": 698.640625,
+              "bottom": 50,
+              "left": 632.984375
+            },
+            "font": 12
+          },
+          {
+            "id": "mainMenuBtn",
+            "box": {
+              "x": 702.640625,
+              "y": 6,
+              "width": 65.671875,
+              "height": 44,
+              "top": 6,
+              "right": 768.3125,
+              "bottom": 50,
+              "left": 702.640625
+            },
+            "font": 12
+          },
+          {
+            "id": "quitGameBtn",
+            "box": {
+              "x": 772.3125,
+              "y": 6,
+              "width": 65.671875,
+              "height": 44,
+              "top": 6,
+              "right": 837.984375,
+              "bottom": 50,
+              "left": 772.3125
+            },
+            "font": 12
+          }
+        ],
+        "scrollWidth": 844,
+        "width": 844,
+        "height": 390,
+        "scrollHeight": 390,
+        "dpr": 2,
+        "backing": 928,
+        "logical": 463.984375
+      }
+    },
+    {
+      "name": "화면 1440×900 · 긴 문제·분수·보스·큰 글자·해설 겹침 검사",
+      "pass": true,
+      "detail": {
+        "boxes": [
+          {
+            "id": "gameHeader",
+            "x": 6,
+            "y": 6,
+            "width": 1428,
+            "height": 71,
+            "top": 6,
+            "right": 1434,
+            "bottom": 77,
+            "left": 6
+          },
+          {
+            "id": "learningArea",
+            "x": 6,
+            "y": 83,
+            "width": 1428,
+            "height": 72.6875,
+            "top": 83,
+            "right": 1434,
+            "bottom": 155.6875,
+            "left": 6
+          },
+          {
+            "id": "playfield",
+            "x": 6,
+            "y": 161.6875,
+            "width": 1428,
+            "height": 542.3125,
+            "top": 161.6875,
+            "right": 1434,
+            "bottom": 704,
+            "left": 6
+          },
+          {
+            "id": "answerBar",
+            "x": 6,
+            "y": 710,
+            "width": 1428,
+            "height": 44,
+            "top": 710,
+            "right": 1434,
+            "bottom": 754,
+            "left": 6
+          },
+          {
+            "id": "touchControls",
+            "x": 6,
+            "y": 760,
+            "width": 1428,
+            "height": 84,
+            "top": 760,
+            "right": 1434,
+            "bottom": 844,
+            "left": 6
+          },
+          {
+            "id": "gameDetails",
+            "x": 6,
+            "y": 850,
+            "width": 1428,
+            "height": 44,
+            "top": 850,
+            "right": 1434,
+            "bottom": 894,
+            "left": 6
+          }
+        ],
+        "buttons": [
+          {
+            "id": "dashBtn",
+            "box": {
+              "x": 1350,
+              "y": 762,
+              "width": 80,
+              "height": 80,
+              "top": 762,
+              "right": 1430,
+              "bottom": 842,
+              "left": 1350
+            },
+            "font": 16
+          },
+          {
+            "id": "skillBtn",
+            "box": {
+              "x": 620,
+              "y": 780,
+              "width": 200,
+              "height": 44,
+              "top": 780,
+              "right": 820,
+              "bottom": 824,
+              "left": 620
+            },
+            "font": 16
+          },
+          {
+            "id": "",
+            "box": {
+              "x": 6,
+              "y": 710,
+              "width": 354,
+              "height": 44,
+              "top": 710,
+              "right": 360,
+              "bottom": 754,
+              "left": 6
+            },
+            "font": 20.8
+          },
+          {
+            "id": "",
+            "box": {
+              "x": 364,
+              "y": 710,
+              "width": 354,
+              "height": 44,
+              "top": 710,
+              "right": 718,
+              "bottom": 754,
+              "left": 364
+            },
+            "font": 20.8
+          },
+          {
+            "id": "",
+            "box": {
+              "x": 722,
+              "y": 710,
+              "width": 354,
+              "height": 44,
+              "top": 710,
+              "right": 1076,
+              "bottom": 754,
+              "left": 722
+            },
+            "font": 20.8
+          },
+          {
+            "id": "",
+            "box": {
+              "x": 1080,
+              "y": 710,
+              "width": 354,
+              "height": 44,
+              "top": 710,
+              "right": 1434,
+              "bottom": 754,
+              "left": 1080
+            },
+            "font": 20.8
+          },
+          {
+            "id": "pauseBtn",
+            "box": {
+              "x": 6,
+              "y": 33,
+              "width": 354,
+              "height": 44,
+              "top": 33,
+              "right": 360,
+              "bottom": 77,
+              "left": 6
+            },
+            "font": 14
+          },
+          {
+            "id": "playSound",
+            "box": {
+              "x": 364,
+              "y": 33,
+              "width": 354,
+              "height": 44,
+              "top": 33,
+              "right": 718,
+              "bottom": 77,
+              "left": 364
+            },
+            "font": 14
+          },
+          {
+            "id": "mainMenuBtn",
+            "box": {
+              "x": 722,
+              "y": 33,
+              "width": 354,
+              "height": 44,
+              "top": 33,
+              "right": 1076,
+              "bottom": 77,
+              "left": 722
+            },
+            "font": 14
+          },
+          {
+            "id": "quitGameBtn",
+            "box": {
+              "x": 1080,
+              "y": 33,
+              "width": 354,
+              "height": 44,
+              "top": 33,
+              "right": 1434,
+              "bottom": 77,
+              "left": 1080
+            },
+            "font": 14
+          }
+        ],
+        "scrollWidth": 1440,
+        "width": 1440,
+        "height": 900,
+        "scrollHeight": 900,
+        "dpr": 2,
+        "backing": 2848,
+        "logical": 1424
+      }
+    },
+    {
+      "name": "두 손 터치·포인터 소유권·대시·취소·blur 해제",
+      "pass": true
+    },
+    {
+      "name": "전체 백업 실제 다운로드·복원 미리보기/적용·중복·선택삭제",
+      "pass": true
+    },
+    {
+      "name": "잘못 저장된 설정 오류 표시",
+      "pass": true
+    },
+    {
+      "name": "첫 JSON fetch 실패·재시도·초기화 한번",
+      "pass": true
+    },
+    {
+      "name": "브라우저 저장 차단 / 결과 내보내기 유지",
+      "pass": true
+    },
+    {
+      "name": "실제 동형 복습·다른 피연산자·선택지 재배열·두 성공 reload 해소",
+      "pass": true
+    },
+    {
+      "name": "v1 정상/손상 행 실제 브라우저 이관·130회 보존 UI·백업 누락 없음",
+      "pass": true
+    },
+    {
+      "name": "localStorage 접근 자체 차단·게임과 결과 다운로드 사용 가능",
+      "pass": true
+    },
+    {
+      "name": "Canvas 긴 분수 글자 16px 이상·가로 경계 잘림 없음",
+      "pass": true,
+      "detail": [
+        {
+          "width": 320,
+          "height": 568,
+          "drawn": [
+            {
+              "value": "133/130",
+              "x": 46,
+              "y": 22.912500000000023,
+              "font": 16,
+              "width": 59.2109375
+            },
+            {
+              "value": "137/260",
+              "x": 262,
+              "y": 22.912500000000023,
+              "font": 16,
+              "width": 59.2109375
+            },
+            {
+              "value": "123/256",
+              "x": 46,
+              "y": 71.64999999999998,
+              "font": 16,
+              "width": 59.2109375
+            },
+            {
+              "value": "17/260",
+              "x": 262,
+              "y": 71.64999999999998,
+              "font": 16,
+              "width": 50.3984375
+            }
+          ],
+          "canvasWidth": 308
+        },
+        {
+          "width": 390,
+          "height": 844,
+          "drawn": [
+            {
+              "value": "133/130",
+              "x": 46,
+              "y": 42,
+              "font": 18,
+              "width": 66.6123046875
+            },
+            {
+              "value": "137/260",
+              "x": 332,
+              "y": 42,
+              "font": 18,
+              "width": 66.6123046875
+            },
+            {
+              "value": "123/256",
+              "x": 46,
+              "y": 357.90625,
+              "font": 18,
+              "width": 66.6123046875
+            },
+            {
+              "value": "17/260",
+              "x": 332,
+              "y": 357.90625,
+              "font": 21,
+              "width": 66.14794921875
+            }
+          ],
+          "canvasWidth": 378
+        },
+        {
+          "width": 844,
+          "height": 390,
+          "drawn": [
+            {
+              "value": "133/130",
+              "x": 46,
+              "y": 42,
+              "font": 18,
+              "width": 66.6123046875
+            },
+            {
+              "value": "137/260",
+              "x": 417.984375,
+              "y": 42,
+              "font": 18,
+              "width": 66.6123046875
+            },
+            {
+              "value": "123/256",
+              "x": 46,
+              "y": 196,
+              "font": 18,
+              "width": 66.6123046875
+            },
+            {
+              "value": "17/260",
+              "x": 417.984375,
+              "y": 196,
+              "font": 21,
+              "width": 66.14794921875
+            }
+          ],
+          "canvasWidth": 463.984375
+        },
+        {
+          "width": 1440,
+          "height": 900,
+          "drawn": [
+            {
+              "value": "133/130",
+              "x": 46,
+              "y": 42,
+              "font": 18,
+              "width": 66.6123046875
+            },
+            {
+              "value": "137/260",
+              "x": 1378,
+              "y": 42,
+              "font": 18,
+              "width": 66.6123046875
+            },
+            {
+              "value": "123/256",
+              "x": 46,
+              "y": 472.40625,
+              "font": 18,
+              "width": 66.6123046875
+            },
+            {
+              "value": "17/260",
+              "x": 1378,
+              "y": 472.40625,
+              "font": 21,
+              "width": 66.14794921875
+            }
+          ],
+          "canvasWidth": 1424
+        }
+      ]
+    },
+    {
+      "name": "콘솔 런타임 오류 없음",
+      "pass": true
+    }
+  ],
+  "errors": []
+}

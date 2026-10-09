@@ -177,7 +177,7 @@ function drawBackground(now) {
         gameRuntime.ctx.textAlign = "center";
         gameRuntime.ctx.textBaseline = "middle";
         gameRuntime.ctx.fillText(d.icon, 0, 0);
-        gameRuntime.ctx.setTransform(1, 0, 0, 1, 0, 0);
+        gameRuntime.ctx.setTransform(gameRuntime.viewport.dpr, 0, 0, gameRuntime.viewport.dpr, 0, 0);
       }
       gameRuntime.ctx.restore();
       gameRuntime.ctx.globalAlpha = 1;
@@ -409,7 +409,8 @@ function drawPet(now) {
     }
 
 function drawMiniMap() {
-      const w = 156, h = 104, x = gameRuntime.canvas.width - w - 16, y = gameRuntime.canvas.height - h - 16;
+      if(gameRuntime.canvas.height<220)return;
+      const w = Math.min(156,gameRuntime.canvas.width*.2), h = Math.min(104,gameRuntime.canvas.height*.2), x = gameRuntime.canvas.width - w - 16, y = gameRuntime.canvas.height - h - 16;
       gameRuntime.ctx.save();
       gameRuntime.ctx.globalAlpha = 0.86;
       gameRuntime.ctx.fillStyle = "rgba(15,23,42,.78)";
@@ -437,6 +438,7 @@ function drawMiniMap() {
 
 function draw() {
       const now = gameRuntime.gameNow();
+      gameRuntime.ctx.setTransform(gameRuntime.viewport.dpr,0,0,gameRuntime.viewport.dpr,0,0);
       gameRuntime.ctx.clearRect(0, 0, gameRuntime.canvas.width, gameRuntime.canvas.height);
       gameRuntime.drawBackground(now);
       gameRuntime.v2.draw(now);
@@ -538,10 +540,17 @@ function draw() {
         gameRuntime.ctx.stroke();
 
         gameRuntime.ctx.fillStyle = "#082f49";
-        gameRuntime.ctx.font = `${24 * gameRuntime.v2.settings.font}px Malgun Gothic, sans-serif`;
+        const labelKey=`${orb.value}:${orb.r}:${gameRuntime.v2.settings.font}`;
+        if(orb.labelKey!==labelKey){
+          let size=Math.max(16,Math.min(24*gameRuntime.v2.settings.font,orb.r*.85));
+          gameRuntime.ctx.font=`${size}px Malgun Gothic, sans-serif`;
+          while(size>16&&gameRuntime.ctx.measureText(orb.value).width>orb.r*1.8){size=Math.max(16,size-1);gameRuntime.ctx.font=`${size}px Malgun Gothic, sans-serif`;}
+          orb.labelSize=size;orb.labelKey=labelKey;
+        }
+        gameRuntime.ctx.font = `${orb.labelSize}px Malgun Gothic, sans-serif`;
         gameRuntime.ctx.textAlign = "center";
         gameRuntime.ctx.textBaseline = "middle";
-        gameRuntime.ctx.fillText(orb.value, sx, sy, orb.r * 1.9);
+        gameRuntime.ctx.fillText(orb.value, sx, sy);
 
         if (hint) {
           gameRuntime.ctx.font = "900 13px Malgun Gothic, sans-serif";

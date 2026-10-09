@@ -1,0 +1,437 @@
+{
+  "schemaVersion": 2,
+  "date": "2026-10-09T05:05:46.252Z",
+  "config": {
+    "grade": 5,
+    "domain": "number",
+    "unit": "g5-frac",
+    "level": 2,
+    "auto": true,
+    "mode": "explore",
+    "target": 3,
+    "limit": 180,
+    "character": "explorer",
+    "weapon": "storm",
+    "map": "forest",
+    "combat": "normal"
+  },
+  "score": 474,
+  "survivalSeconds": 2,
+  "level": 1,
+  "kills": 0,
+  "correct": 2,
+  "wrong": 1,
+  "accuracy": 67,
+  "newAccuracy": 50,
+  "reviewAccuracy": 100,
+  "hintCount": 0,
+  "bestCombo": 2,
+  "domains": {
+    "number": {
+      "correct": 2,
+      "total": 3,
+      "accuracy": 67
+    }
+  },
+  "units": {
+    "g5-frac": {
+      "total": 3,
+      "correct": 2,
+      "newTotal": 2,
+      "newCorrect": 1,
+      "reviewTotal": 1,
+      "reviewCorrect": 1,
+      "hints": 0
+    }
+  },
+  "weakProblems": [
+    {
+      "text": "1/5 + 2/6 = ?",
+      "selected": "3/5",
+      "answer": "8/15",
+      "explain": "분모를 30로 통분하면 6/30 + 10/30 = 8/15입니다.",
+      "unit": "g5-frac"
+    }
+  ],
+  "reviewProblems": [
+    {
+      "id": "g5-frac:unlikeFraction:1:5:2:6",
+      "conceptId": "g5-frac:unlikeFraction:1:5:2:6",
+      "instanceId": "137eaded-559f-4107-a2cd-be65b91697d5",
+      "seed": 4046769599,
+      "curriculumVersion": "practice-2026.10-v2",
+      "generatorVersion": "3",
+      "difficulty": 2,
+      "explanationSteps": [
+        "분모를 30로 통분하면 6/30 + 10/30 = 8/15입니다."
+      ],
+      "optionMisconceptions": [
+        "correct",
+        "near-value",
+        "add-denominators",
+        "miss-common-numerators"
+      ],
+      "policyVersion": 2,
+      "typeId": "g5-frac:unlikeFraction",
+      "grade": 5,
+      "domain": "number",
+      "unit": "g5-frac",
+      "unitName": "다른 분모 분수의 덧셈",
+      "level": 2,
+      "type": "unlikeFraction",
+      "operands": [
+        1,
+        5,
+        2,
+        6
+      ],
+      "text": "1/5 + 2/6 = ?",
+      "answer": "8/15",
+      "explain": "분모를 30로 통분하면 6/30 + 10/30 = 8/15입니다.",
+      "options": [
+        "8/15",
+        "3/5",
+        "3/11",
+        "1/10"
+      ],
+      "review": false,
+      "hintUsed": false,
+      "problem": {
+        "id": "g5-frac:unlikeFraction:1:5:2:6",
+        "conceptId": "g5-frac:unlikeFraction:1:5:2:6",
+        "instanceId": "137eaded-559f-4107-a2cd-be65b91697d5",
+        "seed": 4046769599,
+        "curriculumVersion": "practice-2026.10-v2",
+        "generatorVersion": "3",
+        "difficulty": 2,
+        "explanationSteps": [
+          "분모를 30로 통분하면 6/30 + 10/30 = 8/15입니다."
+        ],
+        "optionMisconceptions": [
+          "correct",
+          "near-value",
+          "add-denominators",
+          "miss-common-numerators"
+        ],
+        "policyVersion": 2,
+        "typeId": "g5-frac:unlikeFraction",
+        "grade": 5,
+        "domain": "number",
+        "unit": "g5-frac",
+        "unitName": "다른 분모 분수의 덧셈",
+        "level": 2,
+        "type": "unlikeFraction",
+        "operands": [
+          1,
+          5,
+          2,
+          6
+        ],
+        "text": "1/5 + 2/6 = ?",
+        "answer": "8/15",
+        "explain": "분모를 30로 통분하면 6/30 + 10/30 = 8/15입니다.",
+        "options": [
+          "8/15",
+          "3/5",
+          "3/11",
+          "1/10"
+        ],
+        "review": false,
+        "hintUsed": false
+      },
+      "selected": "3/5",
+      "correct": false,
+      "elapsed": 1,
+      "responseMs": 1000,
+      "date": "2026-10-09T05:05:43.317Z"
+    }
+  ],
+  "answers": [
+    {
+      "id": "g5-frac:unlikeFraction:1:5:2:6",
+      "conceptId": "g5-frac:unlikeFraction:1:5:2:6",
+      "instanceId": "137eaded-559f-4107-a2cd-be65b91697d5",
+      "seed": 4046769599,
+      "curriculumVersion": "practice-2026.10-v2",
+      "generatorVersion": "3",
+      "difficulty": 2,
+      "explanationSteps": [
+        "분모를 30로 통분하면 6/30 + 10/30 = 8/15입니다."
+      ],
+      "optionMisconceptions": [
+        "correct",
+        "near-value",
+        "add-denominators",
+        "miss-common-numerators"
+      ],
+      "policyVersion": 2,
+      "typeId": "g5-frac:unlikeFraction",
+      "grade": 5,
+      "domain": "number",
+      "unit": "g5-frac",
+      "unitName": "다른 분모 분수의 덧셈",
+      "level": 2,
+      "type": "unlikeFraction",
+      "operands": [
+        1,
+        5,
+        2,
+        6
+      ],
+      "text": "1/5 + 2/6 = ?",
+      "answer": "8/15",
+      "explain": "분모를 30로 통분하면 6/30 + 10/30 = 8/15입니다.",
+      "options": [
+        "8/15",
+        "3/5",
+        "3/11",
+        "1/10"
+      ],
+      "review": false,
+      "hintUsed": false,
+      "problem": {
+        "id": "g5-frac:unlikeFraction:1:5:2:6",
+        "conceptId": "g5-frac:unlikeFraction:1:5:2:6",
+        "instanceId": "137eaded-559f-4107-a2cd-be65b91697d5",
+        "seed": 4046769599,
+        "curriculumVersion": "practice-2026.10-v2",
+        "generatorVersion": "3",
+        "difficulty": 2,
+        "explanationSteps": [
+          "분모를 30로 통분하면 6/30 + 10/30 = 8/15입니다."
+        ],
+        "optionMisconceptions": [
+          "correct",
+          "near-value",
+          "add-denominators",
+          "miss-common-numerators"
+        ],
+        "policyVersion": 2,
+        "typeId": "g5-frac:unlikeFraction",
+        "grade": 5,
+        "domain": "number",
+        "unit": "g5-frac",
+        "unitName": "다른 분모 분수의 덧셈",
+        "level": 2,
+        "type": "unlikeFraction",
+        "operands": [
+          1,
+          5,
+          2,
+          6
+        ],
+        "text": "1/5 + 2/6 = ?",
+        "answer": "8/15",
+        "explain": "분모를 30로 통분하면 6/30 + 10/30 = 8/15입니다.",
+        "options": [
+          "8/15",
+          "3/5",
+          "3/11",
+          "1/10"
+        ],
+        "review": false,
+        "hintUsed": false
+      },
+      "selected": "3/5",
+      "correct": false,
+      "elapsed": 1,
+      "responseMs": 1000,
+      "date": "2026-10-09T05:05:43.317Z"
+    },
+    {
+      "id": "g5-frac:unlikeFraction:1:2:2:3",
+      "conceptId": "g5-frac:unlikeFraction:1:2:2:3",
+      "instanceId": "804acc61-f7e8-4651-808c-ded9d73d4d13",
+      "seed": 2610031780,
+      "curriculumVersion": "practice-2026.10-v2",
+      "generatorVersion": "3",
+      "difficulty": 2,
+      "explanationSteps": [
+        "분모를 6로 통분하면 3/6 + 4/6 = 7/6입니다."
+      ],
+      "optionMisconceptions": [
+        "miss-common-numerators",
+        "add-denominators",
+        "correct",
+        "near-value"
+      ],
+      "policyVersion": 2,
+      "typeId": "g5-frac:unlikeFraction",
+      "grade": 5,
+      "domain": "number",
+      "unit": "g5-frac",
+      "unitName": "다른 분모 분수의 덧셈",
+      "level": 2,
+      "type": "unlikeFraction",
+      "operands": [
+        1,
+        2,
+        2,
+        3
+      ],
+      "text": "1/2 + 2/3 = ?",
+      "answer": "7/6",
+      "explain": "분모를 6로 통분하면 3/6 + 4/6 = 7/6입니다.",
+      "options": [
+        "1/2",
+        "3/5",
+        "7/6",
+        "4/3"
+      ],
+      "review": false,
+      "hintUsed": false,
+      "problem": {
+        "id": "g5-frac:unlikeFraction:1:2:2:3",
+        "conceptId": "g5-frac:unlikeFraction:1:2:2:3",
+        "instanceId": "804acc61-f7e8-4651-808c-ded9d73d4d13",
+        "seed": 2610031780,
+        "curriculumVersion": "practice-2026.10-v2",
+        "generatorVersion": "3",
+        "difficulty": 2,
+        "explanationSteps": [
+          "분모를 6로 통분하면 3/6 + 4/6 = 7/6입니다."
+        ],
+        "optionMisconceptions": [
+          "miss-common-numerators",
+          "add-denominators",
+          "correct",
+          "near-value"
+        ],
+        "policyVersion": 2,
+        "typeId": "g5-frac:unlikeFraction",
+        "grade": 5,
+        "domain": "number",
+        "unit": "g5-frac",
+        "unitName": "다른 분모 분수의 덧셈",
+        "level": 2,
+        "type": "unlikeFraction",
+        "operands": [
+          1,
+          2,
+          2,
+          3
+        ],
+        "text": "1/2 + 2/3 = ?",
+        "answer": "7/6",
+        "explain": "분모를 6로 통분하면 3/6 + 4/6 = 7/6입니다.",
+        "options": [
+          "1/2",
+          "3/5",
+          "7/6",
+          "4/3"
+        ],
+        "review": false,
+        "hintUsed": false
+      },
+      "selected": "7/6",
+      "correct": true,
+      "elapsed": 2,
+      "responseMs": 567,
+      "date": "2026-10-09T05:05:44.575Z"
+    },
+    {
+      "id": "g5-frac:unlikeFraction:4:5:2:6",
+      "conceptId": "g5-frac:unlikeFraction:4:5:2:6",
+      "instanceId": "3881ebb6-0db9-40b7-acdd-7fb1b41ddf5a",
+      "seed": 4151268076,
+      "curriculumVersion": "practice-2026.10-v2",
+      "generatorVersion": "3",
+      "difficulty": 2,
+      "explanationSteps": [
+        "분모를 30로 통분하면 24/30 + 10/30 = 17/15입니다."
+      ],
+      "optionMisconceptions": [
+        "near-value",
+        "miss-common-numerators",
+        "add-denominators",
+        "correct"
+      ],
+      "policyVersion": 2,
+      "typeId": "g5-frac:unlikeFraction",
+      "grade": 5,
+      "domain": "number",
+      "unit": "g5-frac",
+      "unitName": "다른 분모 분수의 덧셈",
+      "level": 2,
+      "type": "unlikeFraction",
+      "operands": [
+        4,
+        5,
+        2,
+        6
+      ],
+      "text": "4/5 + 2/6 = ?",
+      "answer": "17/15",
+      "explain": "분모를 30로 통분하면 24/30 + 10/30 = 17/15입니다.",
+      "options": [
+        "6/5",
+        "1/5",
+        "6/11",
+        "17/15"
+      ],
+      "review": true,
+      "reviewKey": "g5-frac:unlikeFraction:1:5:2:6",
+      "hintUsed": false,
+      "problem": {
+        "id": "g5-frac:unlikeFraction:4:5:2:6",
+        "conceptId": "g5-frac:unlikeFraction:4:5:2:6",
+        "instanceId": "3881ebb6-0db9-40b7-acdd-7fb1b41ddf5a",
+        "seed": 4151268076,
+        "curriculumVersion": "practice-2026.10-v2",
+        "generatorVersion": "3",
+        "difficulty": 2,
+        "explanationSteps": [
+          "분모를 30로 통분하면 24/30 + 10/30 = 17/15입니다."
+        ],
+        "optionMisconceptions": [
+          "near-value",
+          "miss-common-numerators",
+          "add-denominators",
+          "correct"
+        ],
+        "policyVersion": 2,
+        "typeId": "g5-frac:unlikeFraction",
+        "grade": 5,
+        "domain": "number",
+        "unit": "g5-frac",
+        "unitName": "다른 분모 분수의 덧셈",
+        "level": 2,
+        "type": "unlikeFraction",
+        "operands": [
+          4,
+          5,
+          2,
+          6
+        ],
+        "text": "4/5 + 2/6 = ?",
+        "answer": "17/15",
+        "explain": "분모를 30로 통분하면 24/30 + 10/30 = 17/15입니다.",
+        "options": [
+          "6/5",
+          "1/5",
+          "6/11",
+          "17/15"
+        ],
+        "review": true,
+        "reviewKey": "g5-frac:unlikeFraction:1:5:2:6",
+        "hintUsed": false
+      },
+      "selected": "17/15",
+      "correct": true,
+      "elapsed": 2,
+      "responseMs": 533,
+      "date": "2026-10-09T05:05:45.732Z"
+    }
+  ],
+  "sessionId": "3f0ceb98-3cf7-4fd1-b57a-e97bcaeb013b",
+  "appVersion": "2.1.0",
+  "curriculumVersion": "practice-2026.10-v2",
+  "generatorVersion": "3",
+  "outcome": "complete",
+  "resultReason": "목표 문항 완료",
+  "actualLevels": {
+    "g5-frac": [
+      2
+    ]
+  }
+}

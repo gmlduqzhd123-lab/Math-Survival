@@ -1,0 +1,4380 @@
+{
+  "schemaVersion": 2,
+  "records": [
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-09T03:42:43.884Z",
+      "config": {
+        "grade": 3,
+        "domain": "number",
+        "unit": "g3-div",
+        "level": 2,
+        "auto": true,
+        "mode": "explore",
+        "target": 20,
+        "limit": 180,
+        "character": "explorer",
+        "weapon": "storm",
+        "map": "forest",
+        "combat": "normal"
+      },
+      "score": 0,
+      "survivalSeconds": 1,
+      "level": 1,
+      "kills": 0,
+      "correct": 0,
+      "wrong": 20,
+      "accuracy": 0,
+      "newAccuracy": 0,
+      "reviewAccuracy": 0,
+      "hintCount": 0,
+      "bestCombo": 0,
+      "domains": {
+        "number": {
+          "correct": 0,
+          "total": 20,
+          "accuracy": 0
+        }
+      },
+      "units": {
+        "g3-div": {
+          "total": 20,
+          "correct": 0,
+          "newTotal": 14,
+          "newCorrect": 0,
+          "reviewTotal": 6,
+          "reviewCorrect": 0,
+          "hints": 0
+        }
+      },
+      "weakProblems": [
+        {
+          "text": "24 ÷ 6 = ?",
+          "selected": "144",
+          "answer": "4",
+          "explain": "6 × 4 = 24이므로 몫은 4입니다.",
+          "unit": "g3-div"
+        },
+        {
+          "text": "21 ÷ 7 = ?",
+          "selected": "147",
+          "answer": "3",
+          "explain": "7 × 3 = 21이므로 몫은 3입니다.",
+          "unit": "g3-div"
+        },
+        {
+          "text": "30 ÷ 6 = ?",
+          "selected": "6",
+          "answer": "5",
+          "explain": "6 × 5 = 30이므로 몫은 5입니다.",
+          "unit": "g3-div"
+        },
+        {
+          "text": "24 ÷ 4 = ?",
+          "selected": "20",
+          "answer": "6",
+          "explain": "4 × 6 = 24이므로 몫은 6입니다.",
+          "unit": "g3-div"
+        },
+        {
+          "text": "42 ÷ 7 = ?",
+          "selected": "7",
+          "answer": "6",
+          "explain": "7 × 6 = 42이므로 몫은 6입니다.",
+          "unit": "g3-div"
+        },
+        {
+          "text": "25 ÷ 5 = ?",
+          "selected": "20",
+          "answer": "5",
+          "explain": "5 × 5 = 25이므로 몫은 5입니다.",
+          "unit": "g3-div"
+        },
+        {
+          "text": "45 ÷ 5 = ?",
+          "selected": "225",
+          "answer": "9",
+          "explain": "5 × 9 = 45이므로 몫은 9입니다.",
+          "unit": "g3-div"
+        },
+        {
+          "text": "35 ÷ 5 = ?",
+          "selected": "30",
+          "answer": "7",
+          "explain": "5 × 7 = 35이므로 몫은 7입니다.",
+          "unit": "g3-div"
+        },
+        {
+          "text": "16 ÷ 4 = ?",
+          "selected": "5",
+          "answer": "4",
+          "explain": "4 × 4 = 16이므로 몫은 4입니다.",
+          "unit": "g3-div"
+        },
+        {
+          "text": "35 ÷ 5 = ?",
+          "selected": "175",
+          "answer": "7",
+          "explain": "5 × 7 = 35이므로 몫은 7입니다.",
+          "unit": "g3-div"
+        },
+        {
+          "text": "8 ÷ 4 = ?",
+          "selected": "32",
+          "answer": "2",
+          "explain": "4 × 2 = 8이므로 몫은 2입니다.",
+          "unit": "g3-div"
+        },
+        {
+          "text": "8 ÷ 4 = ?",
+          "selected": "3",
+          "answer": "2",
+          "explain": "4 × 2 = 8이므로 몫은 2입니다.",
+          "unit": "g3-div"
+        },
+        {
+          "text": "21 ÷ 3 = ?",
+          "selected": "18",
+          "answer": "7",
+          "explain": "3 × 7 = 21이므로 몫은 7입니다.",
+          "unit": "g3-div"
+        },
+        {
+          "text": "6 ÷ 2 = ?",
+          "selected": "4",
+          "answer": "3",
+          "explain": "2 × 3 = 6이므로 몫은 3입니다.",
+          "unit": "g3-div"
+        },
+        {
+          "text": "28 ÷ 7 = ?",
+          "selected": "5",
+          "answer": "4",
+          "explain": "7 × 4 = 28이므로 몫은 4입니다.",
+          "unit": "g3-div"
+        },
+        {
+          "text": "6 ÷ 3 = ?",
+          "selected": "3",
+          "answer": "2",
+          "explain": "3 × 2 = 6이므로 몫은 2입니다.",
+          "unit": "g3-div"
+        },
+        {
+          "text": "14 ÷ 2 = ?",
+          "selected": "12",
+          "answer": "7",
+          "explain": "2 × 7 = 14이므로 몫은 7입니다.",
+          "unit": "g3-div"
+        },
+        {
+          "text": "4 ÷ 2 = ?",
+          "selected": "3",
+          "answer": "2",
+          "explain": "2 × 2 = 4이므로 몫은 2입니다.",
+          "unit": "g3-div"
+        },
+        {
+          "text": "14 ÷ 2 = ?",
+          "selected": "12",
+          "answer": "7",
+          "explain": "2 × 7 = 14이므로 몫은 7입니다.",
+          "unit": "g3-div"
+        },
+        {
+          "text": "6 ÷ 3 = ?",
+          "selected": "18",
+          "answer": "2",
+          "explain": "3 × 2 = 6이므로 몫은 2입니다.",
+          "unit": "g3-div"
+        }
+      ],
+      "reviewProblems": [
+        {
+          "id": "g3-div:divide:24:6",
+          "conceptId": "g3-div:divide:24:6",
+          "instanceId": "e30d14a2-01fc-4a6b-9dbb-9bd9bb45ae90",
+          "seed": 2248214136,
+          "curriculumVersion": "practice-2026.10-v2",
+          "generatorVersion": "3",
+          "difficulty": 2,
+          "explanationSteps": [
+            "6 × 4 = 24이므로 몫은 4입니다."
+          ],
+          "optionMisconceptions": [
+            "multiply-instead",
+            "subtract-instead",
+            "correct",
+            "near-value"
+          ],
+          "policyVersion": 2,
+          "typeId": "g3-div:divide",
+          "grade": 3,
+          "domain": "number",
+          "unit": "g3-div",
+          "unitName": "나눗셈",
+          "level": 2,
+          "type": "divide",
+          "operands": [
+            24,
+            6
+          ],
+          "text": "24 ÷ 6 = ?",
+          "answer": "4",
+          "explain": "6 × 4 = 24이므로 몫은 4입니다.",
+          "options": [
+            "144",
+            "18",
+            "4",
+            "5"
+          ],
+          "review": false,
+          "hintUsed": false,
+          "problem": {
+            "id": "g3-div:divide:24:6",
+            "conceptId": "g3-div:divide:24:6",
+            "instanceId": "e30d14a2-01fc-4a6b-9dbb-9bd9bb45ae90",
+            "seed": 2248214136,
+            "curriculumVersion": "practice-2026.10-v2",
+            "generatorVersion": "3",
+            "difficulty": 2,
+            "explanationSteps": [
+              "6 × 4 = 24이므로 몫은 4입니다."
+            ],
+            "optionMisconceptions": [
+              "multiply-instead",
+              "subtract-instead",
+              "correct",
+              "near-value"
+            ],
+            "policyVersion": 2,
+            "typeId": "g3-div:divide",
+            "grade": 3,
+            "domain": "number",
+            "unit": "g3-div",
+            "unitName": "나눗셈",
+            "level": 2,
+            "type": "divide",
+            "operands": [
+              24,
+              6
+            ],
+            "text": "24 ÷ 6 = ?",
+            "answer": "4",
+            "explain": "6 × 4 = 24이므로 몫은 4입니다.",
+            "options": [
+              "144",
+              "18",
+              "4",
+              "5"
+            ],
+            "review": false,
+            "hintUsed": false
+          },
+          "selected": "144",
+          "correct": false,
+          "elapsed": 0,
+          "responseMs": 283,
+          "date": "2026-10-09T03:42:42.053Z"
+        },
+        {
+          "id": "g3-div:divide:21:7",
+          "conceptId": "g3-div:divide:21:7",
+          "instanceId": "441d25bc-7bac-4c45-b6fa-9ef3d92d7b8b",
+          "seed": 1339150196,
+          "curriculumVersion": "practice-2026.10-v2",
+          "generatorVersion": "3",
+          "difficulty": 2,
+          "explanationSteps": [
+            "7 × 3 = 21이므로 몫은 3입니다."
+          ],
+          "optionMisconceptions": [
+            "multiply-instead",
+            "near-value",
+            "correct",
+            "subtract-instead"
+          ],
+          "policyVersion": 2,
+          "typeId": "g3-div:divide",
+          "grade": 3,
+          "domain": "number",
+          "unit": "g3-div",
+          "unitName": "나눗셈",
+          "level": 2,
+          "type": "divide",
+          "operands": [
+            21,
+            7
+          ],
+          "text": "21 ÷ 7 = ?",
+          "answer": "3",
+          "explain": "7 × 3 = 21이므로 몫은 3입니다.",
+          "options": [
+            "147",
+            "4",
+            "3",
+            "14"
+          ],
+          "review": false,
+          "hintUsed": false,
+          "problem": {
+            "id": "g3-div:divide:21:7",
+            "conceptId": "g3-div:divide:21:7",
+            "instanceId": "441d25bc-7bac-4c45-b6fa-9ef3d92d7b8b",
+            "seed": 1339150196,
+            "curriculumVersion": "practice-2026.10-v2",
+            "generatorVersion": "3",
+            "difficulty": 2,
+            "explanationSteps": [
+              "7 × 3 = 21이므로 몫은 3입니다."
+            ],
+            "optionMisconceptions": [
+              "multiply-instead",
+              "near-value",
+              "correct",
+              "subtract-instead"
+            ],
+            "policyVersion": 2,
+            "typeId": "g3-div:divide",
+            "grade": 3,
+            "domain": "number",
+            "unit": "g3-div",
+            "unitName": "나눗셈",
+            "level": 2,
+            "type": "divide",
+            "operands": [
+              21,
+              7
+            ],
+            "text": "21 ÷ 7 = ?",
+            "answer": "3",
+            "explain": "7 × 3 = 21이므로 몫은 3입니다.",
+            "options": [
+              "147",
+              "4",
+              "3",
+              "14"
+            ],
+            "review": false,
+            "hintUsed": false
+          },
+          "selected": "147",
+          "correct": false,
+          "elapsed": 0,
+          "responseMs": 50,
+          "date": "2026-10-09T03:42:42.437Z"
+        },
+        {
+          "id": "g3-div:divide:30:6",
+          "conceptId": "g3-div:divide:30:6",
+          "instanceId": "7c7aef94-6b14-4b88-8bdd-81787a11235f",
+          "seed": 1657810168,
+          "curriculumVersion": "practice-2026.10-v2",
+          "generatorVersion": "3",
+          "difficulty": 2,
+          "explanationSteps": [
+            "6 × 5 = 30이므로 몫은 5입니다."
+          ],
+          "optionMisconceptions": [
+            "near-value",
+            "correct",
+            "subtract-instead",
+            "multiply-instead"
+          ],
+          "policyVersion": 2,
+          "typeId": "g3-div:divide",
+          "grade": 3,
+          "domain": "number",
+          "unit": "g3-div",
+          "unitName": "나눗셈",
+          "level": 2,
+          "type": "divide",
+          "operands": [
+            30,
+            6
+          ],
+          "text": "30 ÷ 6 = ?",
+          "answer": "5",
+          "explain": "6 × 5 = 30이므로 몫은 5입니다.",
+          "options": [
+            "6",
+            "5",
+            "24",
+            "180"
+          ],
+          "review": true,
+          "reviewKey": "g3-div:divide:24:6",
+          "hintUsed": false,
+          "problem": {
+            "id": "g3-div:divide:30:6",
+            "conceptId": "g3-div:divide:30:6",
+            "instanceId": "7c7aef94-6b14-4b88-8bdd-81787a11235f",
+            "seed": 1657810168,
+            "curriculumVersion": "practice-2026.10-v2",
+            "generatorVersion": "3",
+            "difficulty": 2,
+            "explanationSteps": [
+              "6 × 5 = 30이므로 몫은 5입니다."
+            ],
+            "optionMisconceptions": [
+              "near-value",
+              "correct",
+              "subtract-instead",
+              "multiply-instead"
+            ],
+            "policyVersion": 2,
+            "typeId": "g3-div:divide",
+            "grade": 3,
+            "domain": "number",
+            "unit": "g3-div",
+            "unitName": "나눗셈",
+            "level": 2,
+            "type": "divide",
+            "operands": [
+              30,
+              6
+            ],
+            "text": "30 ÷ 6 = ?",
+            "answer": "5",
+            "explain": "6 × 5 = 30이므로 몫은 5입니다.",
+            "options": [
+              "6",
+              "5",
+              "24",
+              "180"
+            ],
+            "review": true,
+            "reviewKey": "g3-div:divide:24:6",
+            "hintUsed": false
+          },
+          "selected": "6",
+          "correct": false,
+          "elapsed": 0,
+          "responseMs": 50,
+          "date": "2026-10-09T03:42:42.549Z"
+        },
+        {
+          "id": "g3-div:divide:24:4",
+          "conceptId": "g3-div:divide:24:4",
+          "instanceId": "a14b19e1-39ff-4281-832b-d9ff49541a85",
+          "seed": 2178523812,
+          "curriculumVersion": "practice-2026.10-v2",
+          "generatorVersion": "3",
+          "difficulty": 2,
+          "explanationSteps": [
+            "4 × 6 = 24이므로 몫은 6입니다."
+          ],
+          "optionMisconceptions": [
+            "subtract-instead",
+            "near-value",
+            "multiply-instead",
+            "correct"
+          ],
+          "policyVersion": 2,
+          "typeId": "g3-div:divide",
+          "grade": 3,
+          "domain": "number",
+          "unit": "g3-div",
+          "unitName": "나눗셈",
+          "level": 2,
+          "type": "divide",
+          "operands": [
+            24,
+            4
+          ],
+          "text": "24 ÷ 4 = ?",
+          "answer": "6",
+          "explain": "4 × 6 = 24이므로 몫은 6입니다.",
+          "options": [
+            "20",
+            "7",
+            "96",
+            "6"
+          ],
+          "review": false,
+          "hintUsed": false,
+          "problem": {
+            "id": "g3-div:divide:24:4",
+            "conceptId": "g3-div:divide:24:4",
+            "instanceId": "a14b19e1-39ff-4281-832b-d9ff49541a85",
+            "seed": 2178523812,
+            "curriculumVersion": "practice-2026.10-v2",
+            "generatorVersion": "3",
+            "difficulty": 2,
+            "explanationSteps": [
+              "4 × 6 = 24이므로 몫은 6입니다."
+            ],
+            "optionMisconceptions": [
+              "subtract-instead",
+              "near-value",
+              "multiply-instead",
+              "correct"
+            ],
+            "policyVersion": 2,
+            "typeId": "g3-div:divide",
+            "grade": 3,
+            "domain": "number",
+            "unit": "g3-div",
+            "unitName": "나눗셈",
+            "level": 2,
+            "type": "divide",
+            "operands": [
+              24,
+              4
+            ],
+            "text": "24 ÷ 4 = ?",
+            "answer": "6",
+            "explain": "4 × 6 = 24이므로 몫은 6입니다.",
+            "options": [
+              "20",
+              "7",
+              "96",
+              "6"
+            ],
+            "review": false,
+            "hintUsed": false
+          },
+          "selected": "20",
+          "correct": false,
+          "elapsed": 0,
+          "responseMs": 33,
+          "date": "2026-10-09T03:42:42.666Z"
+        },
+        {
+          "id": "g3-div:divide:42:7",
+          "conceptId": "g3-div:divide:42:7",
+          "instanceId": "50b990ac-d8c2-4c8a-98f4-bd5b174601e0",
+          "seed": 2794385677,
+          "curriculumVersion": "practice-2026.10-v2",
+          "generatorVersion": "3",
+          "difficulty": 2,
+          "explanationSteps": [
+            "7 × 6 = 42이므로 몫은 6입니다."
+          ],
+          "optionMisconceptions": [
+            "near-value",
+            "multiply-instead",
+            "correct",
+            "subtract-instead"
+          ],
+          "policyVersion": 2,
+          "typeId": "g3-div:divide",
+          "grade": 3,
+          "domain": "number",
+          "unit": "g3-div",
+          "unitName": "나눗셈",
+          "level": 2,
+          "type": "divide",
+          "operands": [
+            42,
+            7
+          ],
+          "text": "42 ÷ 7 = ?",
+          "answer": "6",
+          "explain": "7 × 6 = 42이므로 몫은 6입니다.",
+          "options": [
+            "7",
+            "294",
+            "6",
+            "35"
+          ],
+          "review": false,
+          "hintUsed": false,
+          "problem": {
+            "id": "g3-div:divide:42:7",
+            "conceptId": "g3-div:divide:42:7",
+            "instanceId": "50b990ac-d8c2-4c8a-98f4-bd5b174601e0",
+            "seed": 2794385677,
+            "curriculumVersion": "practice-2026.10-v2",
+            "generatorVersion": "3",
+            "difficulty": 2,
+            "explanationSteps": [
+              "7 × 6 = 42이므로 몫은 6입니다."
+            ],
+            "optionMisconceptions": [
+              "near-value",
+              "multiply-instead",
+              "correct",
+              "subtract-instead"
+            ],
+            "policyVersion": 2,
+            "typeId": "g3-div:divide",
+            "grade": 3,
+            "domain": "number",
+            "unit": "g3-div",
+            "unitName": "나눗셈",
+            "level": 2,
+            "type": "divide",
+            "operands": [
+              42,
+              7
+            ],
+            "text": "42 ÷ 7 = ?",
+            "answer": "6",
+            "explain": "7 × 6 = 42이므로 몫은 6입니다.",
+            "options": [
+              "7",
+              "294",
+              "6",
+              "35"
+            ],
+            "review": false,
+            "hintUsed": false
+          },
+          "selected": "7",
+          "correct": false,
+          "elapsed": 0,
+          "responseMs": 50,
+          "date": "2026-10-09T03:42:42.767Z"
+        },
+        {
+          "id": "g3-div:divide:25:5",
+          "conceptId": "g3-div:divide:25:5",
+          "instanceId": "690adf57-a23b-4280-b76e-d9bc42a92897",
+          "seed": 4186803761,
+          "curriculumVersion": "practice-2026.10-v2",
+          "generatorVersion": "3",
+          "difficulty": 2,
+          "explanationSteps": [
+            "5 × 5 = 25이므로 몫은 5입니다."
+          ],
+          "optionMisconceptions": [
+            "subtract-instead",
+            "correct",
+            "near-value",
+            "multiply-instead"
+          ],
+          "policyVersion": 2,
+          "typeId": "g3-div:divide",
+          "grade": 3,
+          "domain": "number",
+          "unit": "g3-div",
+          "unitName": "나눗셈",
+          "level": 2,
+          "type": "divide",
+          "operands": [
+            25,
+            5
+          ],
+          "text": "25 ÷ 5 = ?",
+          "answer": "5",
+          "explain": "5 × 5 = 25이므로 몫은 5입니다.",
+          "options": [
+            "20",
+            "5",
+            "6",
+            "125"
+          ],
+          "review": true,
+          "reviewKey": "g3-div:divide:21:7",
+          "hintUsed": false,
+          "problem": {
+            "id": "g3-div:divide:25:5",
+            "conceptId": "g3-div:divide:25:5",
+            "instanceId": "690adf57-a23b-4280-b76e-d9bc42a92897",
+            "seed": 4186803761,
+            "curriculumVersion": "practice-2026.10-v2",
+            "generatorVersion": "3",
+            "difficulty": 2,
+            "explanationSteps": [
+              "5 × 5 = 25이므로 몫은 5입니다."
+            ],
+            "optionMisconceptions": [
+              "subtract-instead",
+              "correct",
+              "near-value",
+              "multiply-instead"
+            ],
+            "policyVersion": 2,
+            "typeId": "g3-div:divide",
+            "grade": 3,
+            "domain": "number",
+            "unit": "g3-div",
+            "unitName": "나눗셈",
+            "level": 2,
+            "type": "divide",
+            "operands": [
+              25,
+              5
+            ],
+            "text": "25 ÷ 5 = ?",
+            "answer": "5",
+            "explain": "5 × 5 = 25이므로 몫은 5입니다.",
+            "options": [
+              "20",
+              "5",
+              "6",
+              "125"
+            ],
+            "review": true,
+            "reviewKey": "g3-div:divide:21:7",
+            "hintUsed": false
+          },
+          "selected": "20",
+          "correct": false,
+          "elapsed": 1,
+          "responseMs": 50,
+          "date": "2026-10-09T03:42:42.850Z"
+        },
+        {
+          "id": "g3-div:divide:45:5",
+          "conceptId": "g3-div:divide:45:5",
+          "instanceId": "a338ab52-a326-4701-877a-eec81d09fbe3",
+          "seed": 2549149092,
+          "curriculumVersion": "practice-2026.10-v2",
+          "generatorVersion": "3",
+          "difficulty": 2,
+          "explanationSteps": [
+            "5 × 9 = 45이므로 몫은 9입니다."
+          ],
+          "optionMisconceptions": [
+            "multiply-instead",
+            "subtract-instead",
+            "near-value",
+            "correct"
+          ],
+          "policyVersion": 2,
+          "typeId": "g3-div:divide",
+          "grade": 3,
+          "domain": "number",
+          "unit": "g3-div",
+          "unitName": "나눗셈",
+          "level": 2,
+          "type": "divide",
+          "operands": [
+            45,
+            5
+          ],
+          "text": "45 ÷ 5 = ?",
+          "answer": "9",
+          "explain": "5 × 9 = 45이므로 몫은 9입니다.",
+          "options": [
+            "225",
+            "40",
+            "10",
+            "9"
+          ],
+          "review": false,
+          "hintUsed": false,
+          "problem": {
+            "id": "g3-div:divide:45:5",
+            "conceptId": "g3-div:divide:45:5",
+            "instanceId": "a338ab52-a326-4701-877a-eec81d09fbe3",
+            "seed": 2549149092,
+            "curriculumVersion": "practice-2026.10-v2",
+            "generatorVersion": "3",
+            "difficulty": 2,
+            "explanationSteps": [
+              "5 × 9 = 45이므로 몫은 9입니다."
+            ],
+            "optionMisconceptions": [
+              "multiply-instead",
+              "subtract-instead",
+              "near-value",
+              "correct"
+            ],
+            "policyVersion": 2,
+            "typeId": "g3-div:divide",
+            "grade": 3,
+            "domain": "number",
+            "unit": "g3-div",
+            "unitName": "나눗셈",
+            "level": 2,
+            "type": "divide",
+            "operands": [
+              45,
+              5
+            ],
+            "text": "45 ÷ 5 = ?",
+            "answer": "9",
+            "explain": "5 × 9 = 45이므로 몫은 9입니다.",
+            "options": [
+              "225",
+              "40",
+              "10",
+              "9"
+            ],
+            "review": false,
+            "hintUsed": false
+          },
+          "selected": "225",
+          "correct": false,
+          "elapsed": 1,
+          "responseMs": 33,
+          "date": "2026-10-09T03:42:42.917Z"
+        },
+        {
+          "id": "g3-div:divide:35:5",
+          "conceptId": "g3-div:divide:35:5",
+          "instanceId": "05b4af96-21e9-45c1-bb12-b249e6d5fb07",
+          "seed": 2243159325,
+          "curriculumVersion": "practice-2026.10-v2",
+          "generatorVersion": "3",
+          "difficulty": 1,
+          "explanationSteps": [
+            "5 × 7 = 35이므로 몫은 7입니다."
+          ],
+          "optionMisconceptions": [
+            "multiply-instead",
+            "subtract-instead",
+            "near-value",
+            "correct"
+          ],
+          "policyVersion": 2,
+          "typeId": "g3-div:divide",
+          "grade": 3,
+          "domain": "number",
+          "unit": "g3-div",
+          "unitName": "나눗셈",
+          "level": 1,
+          "type": "divide",
+          "operands": [
+            35,
+            5
+          ],
+          "text": "35 ÷ 5 = ?",
+          "answer": "7",
+          "explain": "5 × 7 = 35이므로 몫은 7입니다.",
+          "options": [
+            "175",
+            "30",
+            "8",
+            "7"
+          ],
+          "review": false,
+          "hintUsed": false,
+          "problem": {
+            "id": "g3-div:divide:35:5",
+            "conceptId": "g3-div:divide:35:5",
+            "instanceId": "05b4af96-21e9-45c1-bb12-b249e6d5fb07",
+            "seed": 2243159325,
+            "curriculumVersion": "practice-2026.10-v2",
+            "generatorVersion": "3",
+            "difficulty": 1,
+            "explanationSteps": [
+              "5 × 7 = 35이므로 몫은 7입니다."
+            ],
+            "optionMisconceptions": [
+              "multiply-instead",
+              "subtract-instead",
+              "near-value",
+              "correct"
+            ],
+            "policyVersion": 2,
+            "typeId": "g3-div:divide",
+            "grade": 3,
+            "domain": "number",
+            "unit": "g3-div",
+            "unitName": "나눗셈",
+            "level": 1,
+            "type": "divide",
+            "operands": [
+              35,
+              5
+            ],
+            "text": "35 ÷ 5 = ?",
+            "answer": "7",
+            "explain": "5 × 7 = 35이므로 몫은 7입니다.",
+            "options": [
+              "175",
+              "30",
+              "8",
+              "7"
+            ],
+            "review": false,
+            "hintUsed": false
+          },
+          "selected": "175",
+          "correct": false,
+          "elapsed": 1,
+          "responseMs": 33,
+          "date": "2026-10-09T03:42:43.117Z"
+        },
+        {
+          "id": "g3-div:divide:16:4",
+          "conceptId": "g3-div:divide:16:4",
+          "instanceId": "508585a2-7acd-4f15-82c5-465a07cd2b95",
+          "seed": 109460472,
+          "curriculumVersion": "practice-2026.10-v2",
+          "generatorVersion": "3",
+          "difficulty": 2,
+          "explanationSteps": [
+            "4 × 4 = 16이므로 몫은 4입니다."
+          ],
+          "optionMisconceptions": [
+            "near-value",
+            "correct",
+            "subtract-instead",
+            "multiply-instead"
+          ],
+          "policyVersion": 2,
+          "typeId": "g3-div:divide",
+          "grade": 3,
+          "domain": "number",
+          "unit": "g3-div",
+          "unitName": "나눗셈",
+          "level": 2,
+          "type": "divide",
+          "operands": [
+            16,
+            4
+          ],
+          "text": "16 ÷ 4 = ?",
+          "answer": "4",
+          "explain": "4 × 4 = 16이므로 몫은 4입니다.",
+          "options": [
+            "5",
+            "4",
+            "12",
+            "64"
+          ],
+          "review": true,
+          "reviewKey": "g3-div:divide:24:4",
+          "hintUsed": false,
+          "problem": {
+            "id": "g3-div:divide:16:4",
+            "conceptId": "g3-div:divide:16:4",
+            "instanceId": "508585a2-7acd-4f15-82c5-465a07cd2b95",
+            "seed": 109460472,
+            "curriculumVersion": "practice-2026.10-v2",
+            "generatorVersion": "3",
+            "difficulty": 2,
+            "explanationSteps": [
+              "4 × 4 = 16이므로 몫은 4입니다."
+            ],
+            "optionMisconceptions": [
+              "near-value",
+              "correct",
+              "subtract-instead",
+              "multiply-instead"
+            ],
+            "policyVersion": 2,
+            "typeId": "g3-div:divide",
+            "grade": 3,
+            "domain": "number",
+            "unit": "g3-div",
+            "unitName": "나눗셈",
+            "level": 2,
+            "type": "divide",
+            "operands": [
+              16,
+              4
+            ],
+            "text": "16 ÷ 4 = ?",
+            "answer": "4",
+            "explain": "4 × 4 = 16이므로 몫은 4입니다.",
+            "options": [
+              "5",
+              "4",
+              "12",
+              "64"
+            ],
+            "review": true,
+            "reviewKey": "g3-div:divide:24:4",
+            "hintUsed": false
+          },
+          "selected": "5",
+          "correct": false,
+          "elapsed": 1,
+          "responseMs": 33,
+          "date": "2026-10-09T03:42:43.050Z"
+        },
+        {
+          "id": "g3-div:divide:8:4",
+          "conceptId": "g3-div:divide:8:4",
+          "instanceId": "a7813d8c-1a54-4919-9801-8ee55f91df5b",
+          "seed": 2695210958,
+          "curriculumVersion": "practice-2026.10-v2",
+          "generatorVersion": "3",
+          "difficulty": 2,
+          "explanationSteps": [
+            "4 × 2 = 8이므로 몫은 2입니다."
+          ],
+          "optionMisconceptions": [
+            "near-value",
+            "correct",
+            "subtract-instead",
+            "multiply-instead"
+          ],
+          "policyVersion": 2,
+          "typeId": "g3-div:divide",
+          "grade": 3,
+          "domain": "number",
+          "unit": "g3-div",
+          "unitName": "나눗셈",
+          "level": 2,
+          "type": "divide",
+          "operands": [
+            8,
+            4
+          ],
+          "text": "8 ÷ 4 = ?",
+          "answer": "2",
+          "explain": "4 × 2 = 8이므로 몫은 2입니다.",
+          "options": [
+            "3",
+            "2",
+            "4",
+            "32"
+          ],
+          "review": true,
+          "reviewKey": "g3-div:divide:42:7",
+          "hintUsed": false,
+          "problem": {
+            "id": "g3-div:divide:8:4",
+            "conceptId": "g3-div:divide:8:4",
+            "instanceId": "a7813d8c-1a54-4919-9801-8ee55f91df5b",
+            "seed": 2695210958,
+            "curriculumVersion": "practice-2026.10-v2",
+            "generatorVersion": "3",
+            "difficulty": 2,
+            "explanationSteps": [
+              "4 × 2 = 8이므로 몫은 2입니다."
+            ],
+            "optionMisconceptions": [
+              "near-value",
+              "correct",
+              "subtract-instead",
+              "multiply-instead"
+            ],
+            "policyVersion": 2,
+            "typeId": "g3-div:divide",
+            "grade": 3,
+            "domain": "number",
+            "unit": "g3-div",
+            "unitName": "나눗셈",
+            "level": 2,
+            "type": "divide",
+            "operands": [
+              8,
+              4
+            ],
+            "text": "8 ÷ 4 = ?",
+            "answer": "2",
+            "explain": "4 × 2 = 8이므로 몫은 2입니다.",
+            "options": [
+              "3",
+              "2",
+              "4",
+              "32"
+            ],
+            "review": true,
+            "reviewKey": "g3-div:divide:42:7",
+            "hintUsed": false
+          },
+          "selected": "3",
+          "correct": false,
+          "elapsed": 1,
+          "responseMs": 33,
+          "date": "2026-10-09T03:42:43.250Z"
+        },
+        {
+          "id": "g3-div:divide:21:3",
+          "conceptId": "g3-div:divide:21:3",
+          "instanceId": "04ed8ae8-5b1f-41b2-89f5-99a0f1c88459",
+          "seed": 813123606,
+          "curriculumVersion": "practice-2026.10-v2",
+          "generatorVersion": "3",
+          "difficulty": 1,
+          "explanationSteps": [
+            "3 × 7 = 21이므로 몫은 7입니다."
+          ],
+          "optionMisconceptions": [
+            "subtract-instead",
+            "near-value",
+            "correct",
+            "multiply-instead"
+          ],
+          "policyVersion": 2,
+          "typeId": "g3-div:divide",
+          "grade": 3,
+          "domain": "number",
+          "unit": "g3-div",
+          "unitName": "나눗셈",
+          "level": 1,
+          "type": "divide",
+          "operands": [
+            21,
+            3
+          ],
+          "text": "21 ÷ 3 = ?",
+          "answer": "7",
+          "explain": "3 × 7 = 21이므로 몫은 7입니다.",
+          "options": [
+            "18",
+            "8",
+            "7",
+            "63"
+          ],
+          "review": false,
+          "hintUsed": false,
+          "problem": {
+            "id": "g3-div:divide:21:3",
+            "conceptId": "g3-div:divide:21:3",
+            "instanceId": "04ed8ae8-5b1f-41b2-89f5-99a0f1c88459",
+            "seed": 813123606,
+            "curriculumVersion": "practice-2026.10-v2",
+            "generatorVersion": "3",
+            "difficulty": 1,
+            "explanationSteps": [
+              "3 × 7 = 21이므로 몫은 7입니다."
+            ],
+            "optionMisconceptions": [
+              "subtract-instead",
+              "near-value",
+              "correct",
+              "multiply-instead"
+            ],
+            "policyVersion": 2,
+            "typeId": "g3-div:divide",
+            "grade": 3,
+            "domain": "number",
+            "unit": "g3-div",
+            "unitName": "나눗셈",
+            "level": 1,
+            "type": "divide",
+            "operands": [
+              21,
+              3
+            ],
+            "text": "21 ÷ 3 = ?",
+            "answer": "7",
+            "explain": "3 × 7 = 21이므로 몫은 7입니다.",
+            "options": [
+              "18",
+              "8",
+              "7",
+              "63"
+            ],
+            "review": false,
+            "hintUsed": false
+          },
+          "selected": "18",
+          "correct": false,
+          "elapsed": 1,
+          "responseMs": 33,
+          "date": "2026-10-09T03:42:43.317Z"
+        },
+        {
+          "id": "g3-div:divide:6:2",
+          "conceptId": "g3-div:divide:6:2",
+          "instanceId": "a010ab59-810e-42fd-8562-764be4759d21",
+          "seed": 2166594502,
+          "curriculumVersion": "practice-2026.10-v2",
+          "generatorVersion": "3",
+          "difficulty": 1,
+          "explanationSteps": [
+            "2 × 3 = 6이므로 몫은 3입니다."
+          ],
+          "optionMisconceptions": [
+            "subtract-instead",
+            "near-value",
+            "correct",
+            "multiply-instead"
+          ],
+          "policyVersion": 2,
+          "typeId": "g3-div:divide",
+          "grade": 3,
+          "domain": "number",
+          "unit": "g3-div",
+          "unitName": "나눗셈",
+          "level": 1,
+          "type": "divide",
+          "operands": [
+            6,
+            2
+          ],
+          "text": "6 ÷ 2 = ?",
+          "answer": "3",
+          "explain": "2 × 3 = 6이므로 몫은 3입니다.",
+          "options": [
+            "4",
+            "2",
+            "3",
+            "12"
+          ],
+          "review": false,
+          "hintUsed": false,
+          "problem": {
+            "id": "g3-div:divide:6:2",
+            "conceptId": "g3-div:divide:6:2",
+            "instanceId": "a010ab59-810e-42fd-8562-764be4759d21",
+            "seed": 2166594502,
+            "curriculumVersion": "practice-2026.10-v2",
+            "generatorVersion": "3",
+            "difficulty": 1,
+            "explanationSteps": [
+              "2 × 3 = 6이므로 몫은 3입니다."
+            ],
+            "optionMisconceptions": [
+              "subtract-instead",
+              "near-value",
+              "correct",
+              "multiply-instead"
+            ],
+            "policyVersion": 2,
+            "typeId": "g3-div:divide",
+            "grade": 3,
+            "domain": "number",
+            "unit": "g3-div",
+            "unitName": "나눗셈",
+            "level": 1,
+            "type": "divide",
+            "operands": [
+              6,
+              2
+            ],
+            "text": "6 ÷ 2 = ?",
+            "answer": "3",
+            "explain": "2 × 3 = 6이므로 몫은 3입니다.",
+            "options": [
+              "4",
+              "2",
+              "3",
+              "12"
+            ],
+            "review": false,
+            "hintUsed": false
+          },
+          "selected": "4",
+          "correct": false,
+          "elapsed": 1,
+          "responseMs": 33,
+          "date": "2026-10-09T03:42:43.383Z"
+        },
+        {
+          "id": "g3-div:divide:28:7",
+          "conceptId": "g3-div:divide:28:7",
+          "instanceId": "23c8e5dd-6c96-4156-a03e-ddaee363d6eb",
+          "seed": 2847613972,
+          "curriculumVersion": "practice-2026.10-v2",
+          "generatorVersion": "3",
+          "difficulty": 2,
+          "explanationSteps": [
+            "7 × 4 = 28이므로 몫은 4입니다."
+          ],
+          "optionMisconceptions": [
+            "correct",
+            "near-value",
+            "multiply-instead",
+            "subtract-instead"
+          ],
+          "policyVersion": 2,
+          "typeId": "g3-div:divide",
+          "grade": 3,
+          "domain": "number",
+          "unit": "g3-div",
+          "unitName": "나눗셈",
+          "level": 2,
+          "type": "divide",
+          "operands": [
+            28,
+            7
+          ],
+          "text": "28 ÷ 7 = ?",
+          "answer": "4",
+          "explain": "7 × 4 = 28이므로 몫은 4입니다.",
+          "options": [
+            "4",
+            "5",
+            "196",
+            "21"
+          ],
+          "review": true,
+          "reviewKey": "g3-div:divide:45:5",
+          "hintUsed": false,
+          "problem": {
+            "id": "g3-div:divide:28:7",
+            "conceptId": "g3-div:divide:28:7",
+            "instanceId": "23c8e5dd-6c96-4156-a03e-ddaee363d6eb",
+            "seed": 2847613972,
+            "curriculumVersion": "practice-2026.10-v2",
+            "generatorVersion": "3",
+            "difficulty": 2,
+            "explanationSteps": [
+              "7 × 4 = 28이므로 몫은 4입니다."
+            ],
+            "optionMisconceptions": [
+              "correct",
+              "near-value",
+              "multiply-instead",
+              "subtract-instead"
+            ],
+            "policyVersion": 2,
+            "typeId": "g3-div:divide",
+            "grade": 3,
+            "domain": "number",
+            "unit": "g3-div",
+            "unitName": "나눗셈",
+            "level": 2,
+            "type": "divide",
+            "operands": [
+              28,
+              7
+            ],
+            "text": "28 ÷ 7 = ?",
+            "answer": "4",
+            "explain": "7 × 4 = 28이므로 몫은 4입니다.",
+            "options": [
+              "4",
+              "5",
+              "196",
+              "21"
+            ],
+            "review": true,
+            "reviewKey": "g3-div:divide:45:5",
+            "hintUsed": false
+          },
+          "selected": "5",
+          "correct": false,
+          "elapsed": 1,
+          "responseMs": 33,
+          "date": "2026-10-09T03:42:43.451Z"
+        },
+        {
+          "id": "g3-div:divide:6:3",
+          "conceptId": "g3-div:divide:6:3",
+          "instanceId": "20c0e6bf-c265-487b-8a3a-19029481a07d",
+          "seed": 2623394821,
+          "curriculumVersion": "practice-2026.10-v2",
+          "generatorVersion": "3",
+          "difficulty": 1,
+          "explanationSteps": [
+            "3 × 2 = 6이므로 몫은 2입니다."
+          ],
+          "optionMisconceptions": [
+            "correct",
+            "multiply-instead",
+            "near-value",
+            "subtract-instead"
+          ],
+          "policyVersion": 2,
+          "typeId": "g3-div:divide",
+          "grade": 3,
+          "domain": "number",
+          "unit": "g3-div",
+          "unitName": "나눗셈",
+          "level": 1,
+          "type": "divide",
+          "operands": [
+            6,
+            3
+          ],
+          "text": "6 ÷ 3 = ?",
+          "answer": "2",
+          "explain": "3 × 2 = 6이므로 몫은 2입니다.",
+          "options": [
+            "2",
+            "18",
+            "1",
+            "3"
+          ],
+          "review": false,
+          "hintUsed": false,
+          "problem": {
+            "id": "g3-div:divide:6:3",
+            "conceptId": "g3-div:divide:6:3",
+            "instanceId": "20c0e6bf-c265-487b-8a3a-19029481a07d",
+            "seed": 2623394821,
+            "curriculumVersion": "practice-2026.10-v2",
+            "generatorVersion": "3",
+            "difficulty": 1,
+            "explanationSteps": [
+              "3 × 2 = 6이므로 몫은 2입니다."
+            ],
+            "optionMisconceptions": [
+              "correct",
+              "multiply-instead",
+              "near-value",
+              "subtract-instead"
+            ],
+            "policyVersion": 2,
+            "typeId": "g3-div:divide",
+            "grade": 3,
+            "domain": "number",
+            "unit": "g3-div",
+            "unitName": "나눗셈",
+            "level": 1,
+            "type": "divide",
+            "operands": [
+              6,
+              3
+            ],
+            "text": "6 ÷ 3 = ?",
+            "answer": "2",
+            "explain": "3 × 2 = 6이므로 몫은 2입니다.",
+            "options": [
+              "2",
+              "18",
+              "1",
+              "3"
+            ],
+            "review": false,
+            "hintUsed": false
+          },
+          "selected": "18",
+          "correct": false,
+          "elapsed": 1,
+          "responseMs": 33,
+          "date": "2026-10-09T03:42:43.850Z"
+        },
+        {
+          "id": "g3-div:divide:14:2",
+          "conceptId": "g3-div:divide:14:2",
+          "instanceId": "a07cf569-ab42-489e-99f6-4fa87e6ec33e",
+          "seed": 1351584737,
+          "curriculumVersion": "practice-2026.10-v2",
+          "generatorVersion": "3",
+          "difficulty": 1,
+          "explanationSteps": [
+            "2 × 7 = 14이므로 몫은 7입니다."
+          ],
+          "optionMisconceptions": [
+            "subtract-instead",
+            "multiply-instead",
+            "correct",
+            "near-value"
+          ],
+          "policyVersion": 2,
+          "typeId": "g3-div:divide",
+          "grade": 3,
+          "domain": "number",
+          "unit": "g3-div",
+          "unitName": "나눗셈",
+          "level": 1,
+          "type": "divide",
+          "operands": [
+            14,
+            2
+          ],
+          "text": "14 ÷ 2 = ?",
+          "answer": "7",
+          "explain": "2 × 7 = 14이므로 몫은 7입니다.",
+          "options": [
+            "12",
+            "28",
+            "7",
+            "8"
+          ],
+          "review": false,
+          "hintUsed": false,
+          "problem": {
+            "id": "g3-div:divide:14:2",
+            "conceptId": "g3-div:divide:14:2",
+            "instanceId": "a07cf569-ab42-489e-99f6-4fa87e6ec33e",
+            "seed": 1351584737,
+            "curriculumVersion": "practice-2026.10-v2",
+            "generatorVersion": "3",
+            "difficulty": 1,
+            "explanationSteps": [
+              "2 × 7 = 14이므로 몫은 7입니다."
+            ],
+            "optionMisconceptions": [
+              "subtract-instead",
+              "multiply-instead",
+              "correct",
+              "near-value"
+            ],
+            "policyVersion": 2,
+            "typeId": "g3-div:divide",
+            "grade": 3,
+            "domain": "number",
+            "unit": "g3-div",
+            "unitName": "나눗셈",
+            "level": 1,
+            "type": "divide",
+            "operands": [
+              14,
+              2
+            ],
+            "text": "14 ÷ 2 = ?",
+            "answer": "7",
+            "explain": "2 × 7 = 14이므로 몫은 7입니다.",
+            "options": [
+              "12",
+              "28",
+              "7",
+              "8"
+            ],
+            "review": false,
+            "hintUsed": false
+          },
+          "selected": "12",
+          "correct": false,
+          "elapsed": 1,
+          "responseMs": 33,
+          "date": "2026-10-09T03:42:43.783Z"
+        },
+        {
+          "id": "g3-div:divide:4:2",
+          "conceptId": "g3-div:divide:4:2",
+          "instanceId": "624ec74f-7cfa-4a1c-92ac-3521c68769ad",
+          "seed": 308904088,
+          "curriculumVersion": "practice-2026.10-v2",
+          "generatorVersion": "3",
+          "difficulty": 1,
+          "explanationSteps": [
+            "2 × 2 = 4이므로 몫은 2입니다."
+          ],
+          "optionMisconceptions": [
+            "correct",
+            "near-value",
+            "multiply-instead",
+            "near-value"
+          ],
+          "policyVersion": 2,
+          "typeId": "g3-div:divide",
+          "grade": 3,
+          "domain": "number",
+          "unit": "g3-div",
+          "unitName": "나눗셈",
+          "level": 1,
+          "type": "divide",
+          "operands": [
+            4,
+            2
+          ],
+          "text": "4 ÷ 2 = ?",
+          "answer": "2",
+          "explain": "2 × 2 = 4이므로 몫은 2입니다.",
+          "options": [
+            "2",
+            "3",
+            "8",
+            "1"
+          ],
+          "review": true,
+          "reviewKey": "g3-div:divide:35:5",
+          "hintUsed": false,
+          "problem": {
+            "id": "g3-div:divide:4:2",
+            "conceptId": "g3-div:divide:4:2",
+            "instanceId": "624ec74f-7cfa-4a1c-92ac-3521c68769ad",
+            "seed": 308904088,
+            "curriculumVersion": "practice-2026.10-v2",
+            "generatorVersion": "3",
+            "difficulty": 1,
+            "explanationSteps": [
+              "2 × 2 = 4이므로 몫은 2입니다."
+            ],
+            "optionMisconceptions": [
+              "correct",
+              "near-value",
+              "multiply-instead",
+              "near-value"
+            ],
+            "policyVersion": 2,
+            "typeId": "g3-div:divide",
+            "grade": 3,
+            "domain": "number",
+            "unit": "g3-div",
+            "unitName": "나눗셈",
+            "level": 1,
+            "type": "divide",
+            "operands": [
+              4,
+              2
+            ],
+            "text": "4 ÷ 2 = ?",
+            "answer": "2",
+            "explain": "2 × 2 = 4이므로 몫은 2입니다.",
+            "options": [
+              "2",
+              "3",
+              "8",
+              "1"
+            ],
+            "review": true,
+            "reviewKey": "g3-div:divide:35:5",
+            "hintUsed": false
+          },
+          "selected": "3",
+          "correct": false,
+          "elapsed": 1,
+          "responseMs": 33,
+          "date": "2026-10-09T03:42:43.717Z"
+        }
+      ],
+      "answers": [
+        {
+          "id": "g3-div:divide:24:6",
+          "conceptId": "g3-div:divide:24:6",
+          "instanceId": "e30d14a2-01fc-4a6b-9dbb-9bd9bb45ae90",
+          "seed": 2248214136,
+          "curriculumVersion": "practice-2026.10-v2",
+          "generatorVersion": "3",
+          "difficulty": 2,
+          "explanationSteps": [
+            "6 × 4 = 24이므로 몫은 4입니다."
+          ],
+          "optionMisconceptions": [
+            "multiply-instead",
+            "subtract-instead",
+            "correct",
+            "near-value"
+          ],
+          "policyVersion": 2,
+          "typeId": "g3-div:divide",
+          "grade": 3,
+          "domain": "number",
+          "unit": "g3-div",
+          "unitName": "나눗셈",
+          "level": 2,
+          "type": "divide",
+          "operands": [
+            24,
+            6
+          ],
+          "text": "24 ÷ 6 = ?",
+          "answer": "4",
+          "explain": "6 × 4 = 24이므로 몫은 4입니다.",
+          "options": [
+            "144",
+            "18",
+            "4",
+            "5"
+          ],
+          "review": false,
+          "hintUsed": false,
+          "problem": {
+            "id": "g3-div:divide:24:6",
+            "conceptId": "g3-div:divide:24:6",
+            "instanceId": "e30d14a2-01fc-4a6b-9dbb-9bd9bb45ae90",
+            "seed": 2248214136,
+            "curriculumVersion": "practice-2026.10-v2",
+            "generatorVersion": "3",
+            "difficulty": 2,
+            "explanationSteps": [
+              "6 × 4 = 24이므로 몫은 4입니다."
+            ],
+            "optionMisconceptions": [
+              "multiply-instead",
+              "subtract-instead",
+              "correct",
+              "near-value"
+            ],
+            "policyVersion": 2,
+            "typeId": "g3-div:divide",
+            "grade": 3,
+            "domain": "number",
+            "unit": "g3-div",
+            "unitName": "나눗셈",
+            "level": 2,
+            "type": "divide",
+            "operands": [
+              24,
+              6
+            ],
+            "text": "24 ÷ 6 = ?",
+            "answer": "4",
+            "explain": "6 × 4 = 24이므로 몫은 4입니다.",
+            "options": [
+              "144",
+              "18",
+              "4",
+              "5"
+            ],
+            "review": false,
+            "hintUsed": false
+          },
+          "selected": "144",
+          "correct": false,
+          "elapsed": 0,
+          "responseMs": 283,
+          "date": "2026-10-09T03:42:42.053Z"
+        },
+        {
+          "id": "g3-div:divide:21:7",
+          "conceptId": "g3-div:divide:21:7",
+          "instanceId": "441d25bc-7bac-4c45-b6fa-9ef3d92d7b8b",
+          "seed": 1339150196,
+          "curriculumVersion": "practice-2026.10-v2",
+          "generatorVersion": "3",
+          "difficulty": 2,
+          "explanationSteps": [
+            "7 × 3 = 21이므로 몫은 3입니다."
+          ],
+          "optionMisconceptions": [
+            "multiply-instead",
+            "near-value",
+            "correct",
+            "subtract-instead"
+          ],
+          "policyVersion": 2,
+          "typeId": "g3-div:divide",
+          "grade": 3,
+          "domain": "number",
+          "unit": "g3-div",
+          "unitName": "나눗셈",
+          "level": 2,
+          "type": "divide",
+          "operands": [
+            21,
+            7
+          ],
+          "text": "21 ÷ 7 = ?",
+          "answer": "3",
+          "explain": "7 × 3 = 21이므로 몫은 3입니다.",
+          "options": [
+            "147",
+            "4",
+            "3",
+            "14"
+          ],
+          "review": false,
+          "hintUsed": false,
+          "problem": {
+            "id": "g3-div:divide:21:7",
+            "conceptId": "g3-div:divide:21:7",
+            "instanceId": "441d25bc-7bac-4c45-b6fa-9ef3d92d7b8b",
+            "seed": 1339150196,
+            "curriculumVersion": "practice-2026.10-v2",
+            "generatorVersion": "3",
+            "difficulty": 2,
+            "explanationSteps": [
+              "7 × 3 = 21이므로 몫은 3입니다."
+            ],
+            "optionMisconceptions": [
+              "multiply-instead",
+              "near-value",
+              "correct",
+              "subtract-instead"
+            ],
+            "policyVersion": 2,
+            "typeId": "g3-div:divide",
+            "grade": 3,
+            "domain": "number",
+            "unit": "g3-div",
+            "unitName": "나눗셈",
+            "level": 2,
+            "type": "divide",
+            "operands": [
+              21,
+              7
+            ],
+            "text": "21 ÷ 7 = ?",
+            "answer": "3",
+            "explain": "7 × 3 = 21이므로 몫은 3입니다.",
+            "options": [
+              "147",
+              "4",
+              "3",
+              "14"
+            ],
+            "review": false,
+            "hintUsed": false
+          },
+          "selected": "147",
+          "correct": false,
+          "elapsed": 0,
+          "responseMs": 50,
+          "date": "2026-10-09T03:42:42.437Z"
+        },
+        {
+          "id": "g3-div:divide:30:6",
+          "conceptId": "g3-div:divide:30:6",
+          "instanceId": "7c7aef94-6b14-4b88-8bdd-81787a11235f",
+          "seed": 1657810168,
+          "curriculumVersion": "practice-2026.10-v2",
+          "generatorVersion": "3",
+          "difficulty": 2,
+          "explanationSteps": [
+            "6 × 5 = 30이므로 몫은 5입니다."
+          ],
+          "optionMisconceptions": [
+            "near-value",
+            "correct",
+            "subtract-instead",
+            "multiply-instead"
+          ],
+          "policyVersion": 2,
+          "typeId": "g3-div:divide",
+          "grade": 3,
+          "domain": "number",
+          "unit": "g3-div",
+          "unitName": "나눗셈",
+          "level": 2,
+          "type": "divide",
+          "operands": [
+            30,
+            6
+          ],
+          "text": "30 ÷ 6 = ?",
+          "answer": "5",
+          "explain": "6 × 5 = 30이므로 몫은 5입니다.",
+          "options": [
+            "6",
+            "5",
+            "24",
+            "180"
+          ],
+          "review": true,
+          "reviewKey": "g3-div:divide:24:6",
+          "hintUsed": false,
+          "problem": {
+            "id": "g3-div:divide:30:6",
+            "conceptId": "g3-div:divide:30:6",
+            "instanceId": "7c7aef94-6b14-4b88-8bdd-81787a11235f",
+            "seed": 1657810168,
+            "curriculumVersion": "practice-2026.10-v2",
+            "generatorVersion": "3",
+            "difficulty": 2,
+            "explanationSteps": [
+              "6 × 5 = 30이므로 몫은 5입니다."
+            ],
+            "optionMisconceptions": [
+              "near-value",
+              "correct",
+              "subtract-instead",
+              "multiply-instead"
+            ],
+            "policyVersion": 2,
+            "typeId": "g3-div:divide",
+            "grade": 3,
+            "domain": "number",
+            "unit": "g3-div",
+            "unitName": "나눗셈",
+            "level": 2,
+            "type": "divide",
+            "operands": [
+              30,
+              6
+            ],
+            "text": "30 ÷ 6 = ?",
+            "answer": "5",
+            "explain": "6 × 5 = 30이므로 몫은 5입니다.",
+            "options": [
+              "6",
+              "5",
+              "24",
+              "180"
+            ],
+            "review": true,
+            "reviewKey": "g3-div:divide:24:6",
+            "hintUsed": false
+          },
+          "selected": "6",
+          "correct": false,
+          "elapsed": 0,
+          "responseMs": 50,
+          "date": "2026-10-09T03:42:42.549Z"
+        },
+        {
+          "id": "g3-div:divide:24:4",
+          "conceptId": "g3-div:divide:24:4",
+          "instanceId": "a14b19e1-39ff-4281-832b-d9ff49541a85",
+          "seed": 2178523812,
+          "curriculumVersion": "practice-2026.10-v2",
+          "generatorVersion": "3",
+          "difficulty": 2,
+          "explanationSteps": [
+            "4 × 6 = 24이므로 몫은 6입니다."
+          ],
+          "optionMisconceptions": [
+            "subtract-instead",
+            "near-value",
+            "multiply-instead",
+            "correct"
+          ],
+          "policyVersion": 2,
+          "typeId": "g3-div:divide",
+          "grade": 3,
+          "domain": "number",
+          "unit": "g3-div",
+          "unitName": "나눗셈",
+          "level": 2,
+          "type": "divide",
+          "operands": [
+            24,
+            4
+          ],
+          "text": "24 ÷ 4 = ?",
+          "answer": "6",
+          "explain": "4 × 6 = 24이므로 몫은 6입니다.",
+          "options": [
+            "20",
+            "7",
+            "96",
+            "6"
+          ],
+          "review": false,
+          "hintUsed": false,
+          "problem": {
+            "id": "g3-div:divide:24:4",
+            "conceptId": "g3-div:divide:24:4",
+            "instanceId": "a14b19e1-39ff-4281-832b-d9ff49541a85",
+            "seed": 2178523812,
+            "curriculumVersion": "practice-2026.10-v2",
+            "generatorVersion": "3",
+            "difficulty": 2,
+            "explanationSteps": [
+              "4 × 6 = 24이므로 몫은 6입니다."
+            ],
+            "optionMisconceptions": [
+              "subtract-instead",
+              "near-value",
+              "multiply-instead",
+              "correct"
+            ],
+            "policyVersion": 2,
+            "typeId": "g3-div:divide",
+            "grade": 3,
+            "domain": "number",
+            "unit": "g3-div",
+            "unitName": "나눗셈",
+            "level": 2,
+            "type": "divide",
+            "operands": [
+              24,
+              4
+            ],
+            "text": "24 ÷ 4 = ?",
+            "answer": "6",
+            "explain": "4 × 6 = 24이므로 몫은 6입니다.",
+            "options": [
+              "20",
+              "7",
+              "96",
+              "6"
+            ],
+            "review": false,
+            "hintUsed": false
+          },
+          "selected": "20",
+          "correct": false,
+          "elapsed": 0,
+          "responseMs": 33,
+          "date": "2026-10-09T03:42:42.666Z"
+        },
+        {
+          "id": "g3-div:divide:42:7",
+          "conceptId": "g3-div:divide:42:7",
+          "instanceId": "50b990ac-d8c2-4c8a-98f4-bd5b174601e0",
+          "seed": 2794385677,
+          "curriculumVersion": "practice-2026.10-v2",
+          "generatorVersion": "3",
+          "difficulty": 2,
+          "explanationSteps": [
+            "7 × 6 = 42이므로 몫은 6입니다."
+          ],
+          "optionMisconceptions": [
+            "near-value",
+            "multiply-instead",
+            "correct",
+            "subtract-instead"
+          ],
+          "policyVersion": 2,
+          "typeId": "g3-div:divide",
+          "grade": 3,
+          "domain": "number",
+          "unit": "g3-div",
+          "unitName": "나눗셈",
+          "level": 2,
+          "type": "divide",
+          "operands": [
+            42,
+            7
+          ],
+          "text": "42 ÷ 7 = ?",
+          "answer": "6",
+          "explain": "7 × 6 = 42이므로 몫은 6입니다.",
+          "options": [
+            "7",
+            "294",
+            "6",
+            "35"
+          ],
+          "review": false,
+          "hintUsed": false,
+          "problem": {
+            "id": "g3-div:divide:42:7",
+            "conceptId": "g3-div:divide:42:7",
+            "instanceId": "50b990ac-d8c2-4c8a-98f4-bd5b174601e0",
+            "seed": 2794385677,
+            "curriculumVersion": "practice-2026.10-v2",
+            "generatorVersion": "3",
+            "difficulty": 2,
+            "explanationSteps": [
+              "7 × 6 = 42이므로 몫은 6입니다."
+            ],
+            "optionMisconceptions": [
+              "near-value",
+              "multiply-instead",
+              "correct",
+              "subtract-instead"
+            ],
+            "policyVersion": 2,
+            "typeId": "g3-div:divide",
+            "grade": 3,
+            "domain": "number",
+            "unit": "g3-div",
+            "unitName": "나눗셈",
+            "level": 2,
+            "type": "divide",
+            "operands": [
+              42,
+              7
+            ],
+            "text": "42 ÷ 7 = ?",
+            "answer": "6",
+            "explain": "7 × 6 = 42이므로 몫은 6입니다.",
+            "options": [
+              "7",
+              "294",
+              "6",
+              "35"
+            ],
+            "review": false,
+            "hintUsed": false
+          },
+          "selected": "7",
+          "correct": false,
+          "elapsed": 0,
+          "responseMs": 50,
+          "date": "2026-10-09T03:42:42.767Z"
+        },
+        {
+          "id": "g3-div:divide:25:5",
+          "conceptId": "g3-div:divide:25:5",
+          "instanceId": "690adf57-a23b-4280-b76e-d9bc42a92897",
+          "seed": 4186803761,
+          "curriculumVersion": "practice-2026.10-v2",
+          "generatorVersion": "3",
+          "difficulty": 2,
+          "explanationSteps": [
+            "5 × 5 = 25이므로 몫은 5입니다."
+          ],
+          "optionMisconceptions": [
+            "subtract-instead",
+            "correct",
+            "near-value",
+            "multiply-instead"
+          ],
+          "policyVersion": 2,
+          "typeId": "g3-div:divide",
+          "grade": 3,
+          "domain": "number",
+          "unit": "g3-div",
+          "unitName": "나눗셈",
+          "level": 2,
+          "type": "divide",
+          "operands": [
+            25,
+            5
+          ],
+          "text": "25 ÷ 5 = ?",
+          "answer": "5",
+          "explain": "5 × 5 = 25이므로 몫은 5입니다.",
+          "options": [
+            "20",
+            "5",
+            "6",
+            "125"
+          ],
+          "review": true,
+          "reviewKey": "g3-div:divide:21:7",
+          "hintUsed": false,
+          "problem": {
+            "id": "g3-div:divide:25:5",
+            "conceptId": "g3-div:divide:25:5",
+            "instanceId": "690adf57-a23b-4280-b76e-d9bc42a92897",
+            "seed": 4186803761,
+            "curriculumVersion": "practice-2026.10-v2",
+            "generatorVersion": "3",
+            "difficulty": 2,
+            "explanationSteps": [
+              "5 × 5 = 25이므로 몫은 5입니다."
+            ],
+            "optionMisconceptions": [
+              "subtract-instead",
+              "correct",
+              "near-value",
+              "multiply-instead"
+            ],
+            "policyVersion": 2,
+            "typeId": "g3-div:divide",
+            "grade": 3,
+            "domain": "number",
+            "unit": "g3-div",
+            "unitName": "나눗셈",
+            "level": 2,
+            "type": "divide",
+            "operands": [
+              25,
+              5
+            ],
+            "text": "25 ÷ 5 = ?",
+            "answer": "5",
+            "explain": "5 × 5 = 25이므로 몫은 5입니다.",
+            "options": [
+              "20",
+              "5",
+              "6",
+              "125"
+            ],
+            "review": true,
+            "reviewKey": "g3-div:divide:21:7",
+            "hintUsed": false
+          },
+          "selected": "20",
+          "correct": false,
+          "elapsed": 1,
+          "responseMs": 50,
+          "date": "2026-10-09T03:42:42.850Z"
+        },
+        {
+          "id": "g3-div:divide:45:5",
+          "conceptId": "g3-div:divide:45:5",
+          "instanceId": "a338ab52-a326-4701-877a-eec81d09fbe3",
+          "seed": 2549149092,
+          "curriculumVersion": "practice-2026.10-v2",
+          "generatorVersion": "3",
+          "difficulty": 2,
+          "explanationSteps": [
+            "5 × 9 = 45이므로 몫은 9입니다."
+          ],
+          "optionMisconceptions": [
+            "multiply-instead",
+            "subtract-instead",
+            "near-value",
+            "correct"
+          ],
+          "policyVersion": 2,
+          "typeId": "g3-div:divide",
+          "grade": 3,
+          "domain": "number",
+          "unit": "g3-div",
+          "unitName": "나눗셈",
+          "level": 2,
+          "type": "divide",
+          "operands": [
+            45,
+            5
+          ],
+          "text": "45 ÷ 5 = ?",
+          "answer": "9",
+          "explain": "5 × 9 = 45이므로 몫은 9입니다.",
+          "options": [
+            "225",
+            "40",
+            "10",
+            "9"
+          ],
+          "review": false,
+          "hintUsed": false,
+          "problem": {
+            "id": "g3-div:divide:45:5",
+            "conceptId": "g3-div:divide:45:5",
+            "instanceId": "a338ab52-a326-4701-877a-eec81d09fbe3",
+            "seed": 2549149092,
+            "curriculumVersion": "practice-2026.10-v2",
+            "generatorVersion": "3",
+            "difficulty": 2,
+            "explanationSteps": [
+              "5 × 9 = 45이므로 몫은 9입니다."
+            ],
+            "optionMisconceptions": [
+              "multiply-instead",
+              "subtract-instead",
+              "near-value",
+              "correct"
+            ],
+            "policyVersion": 2,
+            "typeId": "g3-div:divide",
+            "grade": 3,
+            "domain": "number",
+            "unit": "g3-div",
+            "unitName": "나눗셈",
+            "level": 2,
+            "type": "divide",
+            "operands": [
+              45,
+              5
+            ],
+            "text": "45 ÷ 5 = ?",
+            "answer": "9",
+            "explain": "5 × 9 = 45이므로 몫은 9입니다.",
+            "options": [
+              "225",
+              "40",
+              "10",
+              "9"
+            ],
+            "review": false,
+            "hintUsed": false
+          },
+          "selected": "225",
+          "correct": false,
+          "elapsed": 1,
+          "responseMs": 33,
+          "date": "2026-10-09T03:42:42.917Z"
+        },
+        {
+          "id": "g3-div:divide:35:5",
+          "conceptId": "g3-div:divide:35:5",
+          "instanceId": "9bd00443-41ae-477c-b04a-dd2c9b12ad0c",
+          "seed": 1386989123,
+          "curriculumVersion": "practice-2026.10-v2",
+          "generatorVersion": "3",
+          "difficulty": 1,
+          "explanationSteps": [
+            "5 × 7 = 35이므로 몫은 7입니다."
+          ],
+          "optionMisconceptions": [
+            "subtract-instead",
+            "correct",
+            "near-value",
+            "multiply-instead"
+          ],
+          "policyVersion": 2,
+          "typeId": "g3-div:divide",
+          "grade": 3,
+          "domain": "number",
+          "unit": "g3-div",
+          "unitName": "나눗셈",
+          "level": 1,
+          "type": "divide",
+          "operands": [
+            35,
+            5
+          ],
+          "text": "35 ÷ 5 = ?",
+          "answer": "7",
+          "explain": "5 × 7 = 35이므로 몫은 7입니다.",
+          "options": [
+            "30",
+            "7",
+            "8",
+            "175"
+          ],
+          "review": false,
+          "hintUsed": false,
+          "problem": {
+            "id": "g3-div:divide:35:5",
+            "conceptId": "g3-div:divide:35:5",
+            "instanceId": "9bd00443-41ae-477c-b04a-dd2c9b12ad0c",
+            "seed": 1386989123,
+            "curriculumVersion": "practice-2026.10-v2",
+            "generatorVersion": "3",
+            "difficulty": 1,
+            "explanationSteps": [
+              "5 × 7 = 35이므로 몫은 7입니다."
+            ],
+            "optionMisconceptions": [
+              "subtract-instead",
+              "correct",
+              "near-value",
+              "multiply-instead"
+            ],
+            "policyVersion": 2,
+            "typeId": "g3-div:divide",
+            "grade": 3,
+            "domain": "number",
+            "unit": "g3-div",
+            "unitName": "나눗셈",
+            "level": 1,
+            "type": "divide",
+            "operands": [
+              35,
+              5
+            ],
+            "text": "35 ÷ 5 = ?",
+            "answer": "7",
+            "explain": "5 × 7 = 35이므로 몫은 7입니다.",
+            "options": [
+              "30",
+              "7",
+              "8",
+              "175"
+            ],
+            "review": false,
+            "hintUsed": false
+          },
+          "selected": "30",
+          "correct": false,
+          "elapsed": 1,
+          "responseMs": 33,
+          "date": "2026-10-09T03:42:42.984Z"
+        },
+        {
+          "id": "g3-div:divide:16:4",
+          "conceptId": "g3-div:divide:16:4",
+          "instanceId": "508585a2-7acd-4f15-82c5-465a07cd2b95",
+          "seed": 109460472,
+          "curriculumVersion": "practice-2026.10-v2",
+          "generatorVersion": "3",
+          "difficulty": 2,
+          "explanationSteps": [
+            "4 × 4 = 16이므로 몫은 4입니다."
+          ],
+          "optionMisconceptions": [
+            "near-value",
+            "correct",
+            "subtract-instead",
+            "multiply-instead"
+          ],
+          "policyVersion": 2,
+          "typeId": "g3-div:divide",
+          "grade": 3,
+          "domain": "number",
+          "unit": "g3-div",
+          "unitName": "나눗셈",
+          "level": 2,
+          "type": "divide",
+          "operands": [
+            16,
+            4
+          ],
+          "text": "16 ÷ 4 = ?",
+          "answer": "4",
+          "explain": "4 × 4 = 16이므로 몫은 4입니다.",
+          "options": [
+            "5",
+            "4",
+            "12",
+            "64"
+          ],
+          "review": true,
+          "reviewKey": "g3-div:divide:24:4",
+          "hintUsed": false,
+          "problem": {
+            "id": "g3-div:divide:16:4",
+            "conceptId": "g3-div:divide:16:4",
+            "instanceId": "508585a2-7acd-4f15-82c5-465a07cd2b95",
+            "seed": 109460472,
+            "curriculumVersion": "practice-2026.10-v2",
+            "generatorVersion": "3",
+            "difficulty": 2,
+            "explanationSteps": [
+              "4 × 4 = 16이므로 몫은 4입니다."
+            ],
+            "optionMisconceptions": [
+              "near-value",
+              "correct",
+              "subtract-instead",
+              "multiply-instead"
+            ],
+            "policyVersion": 2,
+            "typeId": "g3-div:divide",
+            "grade": 3,
+            "domain": "number",
+            "unit": "g3-div",
+            "unitName": "나눗셈",
+            "level": 2,
+            "type": "divide",
+            "operands": [
+              16,
+              4
+            ],
+            "text": "16 ÷ 4 = ?",
+            "answer": "4",
+            "explain": "4 × 4 = 16이므로 몫은 4입니다.",
+            "options": [
+              "5",
+              "4",
+              "12",
+              "64"
+            ],
+            "review": true,
+            "reviewKey": "g3-div:divide:24:4",
+            "hintUsed": false
+          },
+          "selected": "5",
+          "correct": false,
+          "elapsed": 1,
+          "responseMs": 33,
+          "date": "2026-10-09T03:42:43.050Z"
+        },
+        {
+          "id": "g3-div:divide:35:5",
+          "conceptId": "g3-div:divide:35:5",
+          "instanceId": "05b4af96-21e9-45c1-bb12-b249e6d5fb07",
+          "seed": 2243159325,
+          "curriculumVersion": "practice-2026.10-v2",
+          "generatorVersion": "3",
+          "difficulty": 1,
+          "explanationSteps": [
+            "5 × 7 = 35이므로 몫은 7입니다."
+          ],
+          "optionMisconceptions": [
+            "multiply-instead",
+            "subtract-instead",
+            "near-value",
+            "correct"
+          ],
+          "policyVersion": 2,
+          "typeId": "g3-div:divide",
+          "grade": 3,
+          "domain": "number",
+          "unit": "g3-div",
+          "unitName": "나눗셈",
+          "level": 1,
+          "type": "divide",
+          "operands": [
+            35,
+            5
+          ],
+          "text": "35 ÷ 5 = ?",
+          "answer": "7",
+          "explain": "5 × 7 = 35이므로 몫은 7입니다.",
+          "options": [
+            "175",
+            "30",
+            "8",
+            "7"
+          ],
+          "review": false,
+          "hintUsed": false,
+          "problem": {
+            "id": "g3-div:divide:35:5",
+            "conceptId": "g3-div:divide:35:5",
+            "instanceId": "05b4af96-21e9-45c1-bb12-b249e6d5fb07",
+            "seed": 2243159325,
+            "curriculumVersion": "practice-2026.10-v2",
+            "generatorVersion": "3",
+            "difficulty": 1,
+            "explanationSteps": [
+              "5 × 7 = 35이므로 몫은 7입니다."
+            ],
+            "optionMisconceptions": [
+              "multiply-instead",
+              "subtract-instead",
+              "near-value",
+              "correct"
+            ],
+            "policyVersion": 2,
+            "typeId": "g3-div:divide",
+            "grade": 3,
+            "domain": "number",
+            "unit": "g3-div",
+            "unitName": "나눗셈",
+            "level": 1,
+            "type": "divide",
+            "operands": [
+              35,
+              5
+            ],
+            "text": "35 ÷ 5 = ?",
+            "answer": "7",
+            "explain": "5 × 7 = 35이므로 몫은 7입니다.",
+            "options": [
+              "175",
+              "30",
+              "8",
+              "7"
+            ],
+            "review": false,
+            "hintUsed": false
+          },
+          "selected": "175",
+          "correct": false,
+          "elapsed": 1,
+          "responseMs": 33,
+          "date": "2026-10-09T03:42:43.117Z"
+        },
+        {
+          "id": "g3-div:divide:8:4",
+          "conceptId": "g3-div:divide:8:4",
+          "instanceId": "08b3d9b0-3040-4e61-befe-fbcfe715013c",
+          "seed": 199837556,
+          "curriculumVersion": "practice-2026.10-v2",
+          "generatorVersion": "3",
+          "difficulty": 1,
+          "explanationSteps": [
+            "4 × 2 = 8이므로 몫은 2입니다."
+          ],
+          "optionMisconceptions": [
+            "correct",
+            "multiply-instead",
+            "subtract-instead",
+            "near-value"
+          ],
+          "policyVersion": 2,
+          "typeId": "g3-div:divide",
+          "grade": 3,
+          "domain": "number",
+          "unit": "g3-div",
+          "unitName": "나눗셈",
+          "level": 1,
+          "type": "divide",
+          "operands": [
+            8,
+            4
+          ],
+          "text": "8 ÷ 4 = ?",
+          "answer": "2",
+          "explain": "4 × 2 = 8이므로 몫은 2입니다.",
+          "options": [
+            "2",
+            "32",
+            "4",
+            "3"
+          ],
+          "review": false,
+          "hintUsed": false,
+          "problem": {
+            "id": "g3-div:divide:8:4",
+            "conceptId": "g3-div:divide:8:4",
+            "instanceId": "08b3d9b0-3040-4e61-befe-fbcfe715013c",
+            "seed": 199837556,
+            "curriculumVersion": "practice-2026.10-v2",
+            "generatorVersion": "3",
+            "difficulty": 1,
+            "explanationSteps": [
+              "4 × 2 = 8이므로 몫은 2입니다."
+            ],
+            "optionMisconceptions": [
+              "correct",
+              "multiply-instead",
+              "subtract-instead",
+              "near-value"
+            ],
+            "policyVersion": 2,
+            "typeId": "g3-div:divide",
+            "grade": 3,
+            "domain": "number",
+            "unit": "g3-div",
+            "unitName": "나눗셈",
+            "level": 1,
+            "type": "divide",
+            "operands": [
+              8,
+              4
+            ],
+            "text": "8 ÷ 4 = ?",
+            "answer": "2",
+            "explain": "4 × 2 = 8이므로 몫은 2입니다.",
+            "options": [
+              "2",
+              "32",
+              "4",
+              "3"
+            ],
+            "review": false,
+            "hintUsed": false
+          },
+          "selected": "32",
+          "correct": false,
+          "elapsed": 1,
+          "responseMs": 33,
+          "date": "2026-10-09T03:42:43.184Z"
+        },
+        {
+          "id": "g3-div:divide:8:4",
+          "conceptId": "g3-div:divide:8:4",
+          "instanceId": "a7813d8c-1a54-4919-9801-8ee55f91df5b",
+          "seed": 2695210958,
+          "curriculumVersion": "practice-2026.10-v2",
+          "generatorVersion": "3",
+          "difficulty": 2,
+          "explanationSteps": [
+            "4 × 2 = 8이므로 몫은 2입니다."
+          ],
+          "optionMisconceptions": [
+            "near-value",
+            "correct",
+            "subtract-instead",
+            "multiply-instead"
+          ],
+          "policyVersion": 2,
+          "typeId": "g3-div:divide",
+          "grade": 3,
+          "domain": "number",
+          "unit": "g3-div",
+          "unitName": "나눗셈",
+          "level": 2,
+          "type": "divide",
+          "operands": [
+            8,
+            4
+          ],
+          "text": "8 ÷ 4 = ?",
+          "answer": "2",
+          "explain": "4 × 2 = 8이므로 몫은 2입니다.",
+          "options": [
+            "3",
+            "2",
+            "4",
+            "32"
+          ],
+          "review": true,
+          "reviewKey": "g3-div:divide:42:7",
+          "hintUsed": false,
+          "problem": {
+            "id": "g3-div:divide:8:4",
+            "conceptId": "g3-div:divide:8:4",
+            "instanceId": "a7813d8c-1a54-4919-9801-8ee55f91df5b",
+            "seed": 2695210958,
+            "curriculumVersion": "practice-2026.10-v2",
+            "generatorVersion": "3",
+            "difficulty": 2,
+            "explanationSteps": [
+              "4 × 2 = 8이므로 몫은 2입니다."
+            ],
+            "optionMisconceptions": [
+              "near-value",
+              "correct",
+              "subtract-instead",
+              "multiply-instead"
+            ],
+            "policyVersion": 2,
+            "typeId": "g3-div:divide",
+            "grade": 3,
+            "domain": "number",
+            "unit": "g3-div",
+            "unitName": "나눗셈",
+            "level": 2,
+            "type": "divide",
+            "operands": [
+              8,
+              4
+            ],
+            "text": "8 ÷ 4 = ?",
+            "answer": "2",
+            "explain": "4 × 2 = 8이므로 몫은 2입니다.",
+            "options": [
+              "3",
+              "2",
+              "4",
+              "32"
+            ],
+            "review": true,
+            "reviewKey": "g3-div:divide:42:7",
+            "hintUsed": false
+          },
+          "selected": "3",
+          "correct": false,
+          "elapsed": 1,
+          "responseMs": 33,
+          "date": "2026-10-09T03:42:43.250Z"
+        },
+        {
+          "id": "g3-div:divide:21:3",
+          "conceptId": "g3-div:divide:21:3",
+          "instanceId": "04ed8ae8-5b1f-41b2-89f5-99a0f1c88459",
+          "seed": 813123606,
+          "curriculumVersion": "practice-2026.10-v2",
+          "generatorVersion": "3",
+          "difficulty": 1,
+          "explanationSteps": [
+            "3 × 7 = 21이므로 몫은 7입니다."
+          ],
+          "optionMisconceptions": [
+            "subtract-instead",
+            "near-value",
+            "correct",
+            "multiply-instead"
+          ],
+          "policyVersion": 2,
+          "typeId": "g3-div:divide",
+          "grade": 3,
+          "domain": "number",
+          "unit": "g3-div",
+          "unitName": "나눗셈",
+          "level": 1,
+          "type": "divide",
+          "operands": [
+            21,
+            3
+          ],
+          "text": "21 ÷ 3 = ?",
+          "answer": "7",
+          "explain": "3 × 7 = 21이므로 몫은 7입니다.",
+          "options": [
+            "18",
+            "8",
+            "7",
+            "63"
+          ],
+          "review": false,
+          "hintUsed": false,
+          "problem": {
+            "id": "g3-div:divide:21:3",
+            "conceptId": "g3-div:divide:21:3",
+            "instanceId": "04ed8ae8-5b1f-41b2-89f5-99a0f1c88459",
+            "seed": 813123606,
+            "curriculumVersion": "practice-2026.10-v2",
+            "generatorVersion": "3",
+            "difficulty": 1,
+            "explanationSteps": [
+              "3 × 7 = 21이므로 몫은 7입니다."
+            ],
+            "optionMisconceptions": [
+              "subtract-instead",
+              "near-value",
+              "correct",
+              "multiply-instead"
+            ],
+            "policyVersion": 2,
+            "typeId": "g3-div:divide",
+            "grade": 3,
+            "domain": "number",
+            "unit": "g3-div",
+            "unitName": "나눗셈",
+            "level": 1,
+            "type": "divide",
+            "operands": [
+              21,
+              3
+            ],
+            "text": "21 ÷ 3 = ?",
+            "answer": "7",
+            "explain": "3 × 7 = 21이므로 몫은 7입니다.",
+            "options": [
+              "18",
+              "8",
+              "7",
+              "63"
+            ],
+            "review": false,
+            "hintUsed": false
+          },
+          "selected": "18",
+          "correct": false,
+          "elapsed": 1,
+          "responseMs": 33,
+          "date": "2026-10-09T03:42:43.317Z"
+        },
+        {
+          "id": "g3-div:divide:6:2",
+          "conceptId": "g3-div:divide:6:2",
+          "instanceId": "a010ab59-810e-42fd-8562-764be4759d21",
+          "seed": 2166594502,
+          "curriculumVersion": "practice-2026.10-v2",
+          "generatorVersion": "3",
+          "difficulty": 1,
+          "explanationSteps": [
+            "2 × 3 = 6이므로 몫은 3입니다."
+          ],
+          "optionMisconceptions": [
+            "subtract-instead",
+            "near-value",
+            "correct",
+            "multiply-instead"
+          ],
+          "policyVersion": 2,
+          "typeId": "g3-div:divide",
+          "grade": 3,
+          "domain": "number",
+          "unit": "g3-div",
+          "unitName": "나눗셈",
+          "level": 1,
+          "type": "divide",
+          "operands": [
+            6,
+            2
+          ],
+          "text": "6 ÷ 2 = ?",
+          "answer": "3",
+          "explain": "2 × 3 = 6이므로 몫은 3입니다.",
+          "options": [
+            "4",
+            "2",
+            "3",
+            "12"
+          ],
+          "review": false,
+          "hintUsed": false,
+          "problem": {
+            "id": "g3-div:divide:6:2",
+            "conceptId": "g3-div:divide:6:2",
+            "instanceId": "a010ab59-810e-42fd-8562-764be4759d21",
+            "seed": 2166594502,
+            "curriculumVersion": "practice-2026.10-v2",
+            "generatorVersion": "3",
+            "difficulty": 1,
+            "explanationSteps": [
+              "2 × 3 = 6이므로 몫은 3입니다."
+            ],
+            "optionMisconceptions": [
+              "subtract-instead",
+              "near-value",
+              "correct",
+              "multiply-instead"
+            ],
+            "policyVersion": 2,
+            "typeId": "g3-div:divide",
+            "grade": 3,
+            "domain": "number",
+            "unit": "g3-div",
+            "unitName": "나눗셈",
+            "level": 1,
+            "type": "divide",
+            "operands": [
+              6,
+              2
+            ],
+            "text": "6 ÷ 2 = ?",
+            "answer": "3",
+            "explain": "2 × 3 = 6이므로 몫은 3입니다.",
+            "options": [
+              "4",
+              "2",
+              "3",
+              "12"
+            ],
+            "review": false,
+            "hintUsed": false
+          },
+          "selected": "4",
+          "correct": false,
+          "elapsed": 1,
+          "responseMs": 33,
+          "date": "2026-10-09T03:42:43.383Z"
+        },
+        {
+          "id": "g3-div:divide:28:7",
+          "conceptId": "g3-div:divide:28:7",
+          "instanceId": "23c8e5dd-6c96-4156-a03e-ddaee363d6eb",
+          "seed": 2847613972,
+          "curriculumVersion": "practice-2026.10-v2",
+          "generatorVersion": "3",
+          "difficulty": 2,
+          "explanationSteps": [
+            "7 × 4 = 28이므로 몫은 4입니다."
+          ],
+          "optionMisconceptions": [
+            "correct",
+            "near-value",
+            "multiply-instead",
+            "subtract-instead"
+          ],
+          "policyVersion": 2,
+          "typeId": "g3-div:divide",
+          "grade": 3,
+          "domain": "number",
+          "unit": "g3-div",
+          "unitName": "나눗셈",
+          "level": 2,
+          "type": "divide",
+          "operands": [
+            28,
+            7
+          ],
+          "text": "28 ÷ 7 = ?",
+          "answer": "4",
+          "explain": "7 × 4 = 28이므로 몫은 4입니다.",
+          "options": [
+            "4",
+            "5",
+            "196",
+            "21"
+          ],
+          "review": true,
+          "reviewKey": "g3-div:divide:45:5",
+          "hintUsed": false,
+          "problem": {
+            "id": "g3-div:divide:28:7",
+            "conceptId": "g3-div:divide:28:7",
+            "instanceId": "23c8e5dd-6c96-4156-a03e-ddaee363d6eb",
+            "seed": 2847613972,
+            "curriculumVersion": "practice-2026.10-v2",
+            "generatorVersion": "3",
+            "difficulty": 2,
+            "explanationSteps": [
+              "7 × 4 = 28이므로 몫은 4입니다."
+            ],
+            "optionMisconceptions": [
+              "correct",
+              "near-value",
+              "multiply-instead",
+              "subtract-instead"
+            ],
+            "policyVersion": 2,
+            "typeId": "g3-div:divide",
+            "grade": 3,
+            "domain": "number",
+            "unit": "g3-div",
+            "unitName": "나눗셈",
+            "level": 2,
+            "type": "divide",
+            "operands": [
+              28,
+              7
+            ],
+            "text": "28 ÷ 7 = ?",
+            "answer": "4",
+            "explain": "7 × 4 = 28이므로 몫은 4입니다.",
+            "options": [
+              "4",
+              "5",
+              "196",
+              "21"
+            ],
+            "review": true,
+            "reviewKey": "g3-div:divide:45:5",
+            "hintUsed": false
+          },
+          "selected": "5",
+          "correct": false,
+          "elapsed": 1,
+          "responseMs": 33,
+          "date": "2026-10-09T03:42:43.451Z"
+        },
+        {
+          "id": "g3-div:divide:6:3",
+          "conceptId": "g3-div:divide:6:3",
+          "instanceId": "e5b83dfb-86d6-4a45-88cf-74e2c3a1fb00",
+          "seed": 1486256195,
+          "curriculumVersion": "practice-2026.10-v2",
+          "generatorVersion": "3",
+          "difficulty": 1,
+          "explanationSteps": [
+            "3 × 2 = 6이므로 몫은 2입니다."
+          ],
+          "optionMisconceptions": [
+            "correct",
+            "subtract-instead",
+            "multiply-instead",
+            "near-value"
+          ],
+          "policyVersion": 2,
+          "typeId": "g3-div:divide",
+          "grade": 3,
+          "domain": "number",
+          "unit": "g3-div",
+          "unitName": "나눗셈",
+          "level": 1,
+          "type": "divide",
+          "operands": [
+            6,
+            3
+          ],
+          "text": "6 ÷ 3 = ?",
+          "answer": "2",
+          "explain": "3 × 2 = 6이므로 몫은 2입니다.",
+          "options": [
+            "2",
+            "3",
+            "18",
+            "1"
+          ],
+          "review": false,
+          "hintUsed": false,
+          "problem": {
+            "id": "g3-div:divide:6:3",
+            "conceptId": "g3-div:divide:6:3",
+            "instanceId": "e5b83dfb-86d6-4a45-88cf-74e2c3a1fb00",
+            "seed": 1486256195,
+            "curriculumVersion": "practice-2026.10-v2",
+            "generatorVersion": "3",
+            "difficulty": 1,
+            "explanationSteps": [
+              "3 × 2 = 6이므로 몫은 2입니다."
+            ],
+            "optionMisconceptions": [
+              "correct",
+              "subtract-instead",
+              "multiply-instead",
+              "near-value"
+            ],
+            "policyVersion": 2,
+            "typeId": "g3-div:divide",
+            "grade": 3,
+            "domain": "number",
+            "unit": "g3-div",
+            "unitName": "나눗셈",
+            "level": 1,
+            "type": "divide",
+            "operands": [
+              6,
+              3
+            ],
+            "text": "6 ÷ 3 = ?",
+            "answer": "2",
+            "explain": "3 × 2 = 6이므로 몫은 2입니다.",
+            "options": [
+              "2",
+              "3",
+              "18",
+              "1"
+            ],
+            "review": false,
+            "hintUsed": false
+          },
+          "selected": "3",
+          "correct": false,
+          "elapsed": 1,
+          "responseMs": 33,
+          "date": "2026-10-09T03:42:43.534Z"
+        },
+        {
+          "id": "g3-div:divide:14:2",
+          "conceptId": "g3-div:divide:14:2",
+          "instanceId": "e03a46a3-3b57-4e25-bb8b-dcb69967e8c5",
+          "seed": 742089421,
+          "curriculumVersion": "practice-2026.10-v2",
+          "generatorVersion": "3",
+          "difficulty": 1,
+          "explanationSteps": [
+            "2 × 7 = 14이므로 몫은 7입니다."
+          ],
+          "optionMisconceptions": [
+            "subtract-instead",
+            "near-value",
+            "multiply-instead",
+            "correct"
+          ],
+          "policyVersion": 2,
+          "typeId": "g3-div:divide",
+          "grade": 3,
+          "domain": "number",
+          "unit": "g3-div",
+          "unitName": "나눗셈",
+          "level": 1,
+          "type": "divide",
+          "operands": [
+            14,
+            2
+          ],
+          "text": "14 ÷ 2 = ?",
+          "answer": "7",
+          "explain": "2 × 7 = 14이므로 몫은 7입니다.",
+          "options": [
+            "12",
+            "8",
+            "28",
+            "7"
+          ],
+          "review": false,
+          "hintUsed": false,
+          "problem": {
+            "id": "g3-div:divide:14:2",
+            "conceptId": "g3-div:divide:14:2",
+            "instanceId": "e03a46a3-3b57-4e25-bb8b-dcb69967e8c5",
+            "seed": 742089421,
+            "curriculumVersion": "practice-2026.10-v2",
+            "generatorVersion": "3",
+            "difficulty": 1,
+            "explanationSteps": [
+              "2 × 7 = 14이므로 몫은 7입니다."
+            ],
+            "optionMisconceptions": [
+              "subtract-instead",
+              "near-value",
+              "multiply-instead",
+              "correct"
+            ],
+            "policyVersion": 2,
+            "typeId": "g3-div:divide",
+            "grade": 3,
+            "domain": "number",
+            "unit": "g3-div",
+            "unitName": "나눗셈",
+            "level": 1,
+            "type": "divide",
+            "operands": [
+              14,
+              2
+            ],
+            "text": "14 ÷ 2 = ?",
+            "answer": "7",
+            "explain": "2 × 7 = 14이므로 몫은 7입니다.",
+            "options": [
+              "12",
+              "8",
+              "28",
+              "7"
+            ],
+            "review": false,
+            "hintUsed": false
+          },
+          "selected": "12",
+          "correct": false,
+          "elapsed": 1,
+          "responseMs": 50,
+          "date": "2026-10-09T03:42:43.648Z"
+        },
+        {
+          "id": "g3-div:divide:4:2",
+          "conceptId": "g3-div:divide:4:2",
+          "instanceId": "624ec74f-7cfa-4a1c-92ac-3521c68769ad",
+          "seed": 308904088,
+          "curriculumVersion": "practice-2026.10-v2",
+          "generatorVersion": "3",
+          "difficulty": 1,
+          "explanationSteps": [
+            "2 × 2 = 4이므로 몫은 2입니다."
+          ],
+          "optionMisconceptions": [
+            "correct",
+            "near-value",
+            "multiply-instead",
+            "near-value"
+          ],
+          "policyVersion": 2,
+          "typeId": "g3-div:divide",
+          "grade": 3,
+          "domain": "number",
+          "unit": "g3-div",
+          "unitName": "나눗셈",
+          "level": 1,
+          "type": "divide",
+          "operands": [
+            4,
+            2
+          ],
+          "text": "4 ÷ 2 = ?",
+          "answer": "2",
+          "explain": "2 × 2 = 4이므로 몫은 2입니다.",
+          "options": [
+            "2",
+            "3",
+            "8",
+            "1"
+          ],
+          "review": true,
+          "reviewKey": "g3-div:divide:35:5",
+          "hintUsed": false,
+          "problem": {
+            "id": "g3-div:divide:4:2",
+            "conceptId": "g3-div:divide:4:2",
+            "instanceId": "624ec74f-7cfa-4a1c-92ac-3521c68769ad",
+            "seed": 308904088,
+            "curriculumVersion": "practice-2026.10-v2",
+            "generatorVersion": "3",
+            "difficulty": 1,
+            "explanationSteps": [
+              "2 × 2 = 4이므로 몫은 2입니다."
+            ],
+            "optionMisconceptions": [
+              "correct",
+              "near-value",
+              "multiply-instead",
+              "near-value"
+            ],
+            "policyVersion": 2,
+            "typeId": "g3-div:divide",
+            "grade": 3,
+            "domain": "number",
+            "unit": "g3-div",
+            "unitName": "나눗셈",
+            "level": 1,
+            "type": "divide",
+            "operands": [
+              4,
+              2
+            ],
+            "text": "4 ÷ 2 = ?",
+            "answer": "2",
+            "explain": "2 × 2 = 4이므로 몫은 2입니다.",
+            "options": [
+              "2",
+              "3",
+              "8",
+              "1"
+            ],
+            "review": true,
+            "reviewKey": "g3-div:divide:35:5",
+            "hintUsed": false
+          },
+          "selected": "3",
+          "correct": false,
+          "elapsed": 1,
+          "responseMs": 33,
+          "date": "2026-10-09T03:42:43.717Z"
+        },
+        {
+          "id": "g3-div:divide:14:2",
+          "conceptId": "g3-div:divide:14:2",
+          "instanceId": "a07cf569-ab42-489e-99f6-4fa87e6ec33e",
+          "seed": 1351584737,
+          "curriculumVersion": "practice-2026.10-v2",
+          "generatorVersion": "3",
+          "difficulty": 1,
+          "explanationSteps": [
+            "2 × 7 = 14이므로 몫은 7입니다."
+          ],
+          "optionMisconceptions": [
+            "subtract-instead",
+            "multiply-instead",
+            "correct",
+            "near-value"
+          ],
+          "policyVersion": 2,
+          "typeId": "g3-div:divide",
+          "grade": 3,
+          "domain": "number",
+          "unit": "g3-div",
+          "unitName": "나눗셈",
+          "level": 1,
+          "type": "divide",
+          "operands": [
+            14,
+            2
+          ],
+          "text": "14 ÷ 2 = ?",
+          "answer": "7",
+          "explain": "2 × 7 = 14이므로 몫은 7입니다.",
+          "options": [
+            "12",
+            "28",
+            "7",
+            "8"
+          ],
+          "review": false,
+          "hintUsed": false,
+          "problem": {
+            "id": "g3-div:divide:14:2",
+            "conceptId": "g3-div:divide:14:2",
+            "instanceId": "a07cf569-ab42-489e-99f6-4fa87e6ec33e",
+            "seed": 1351584737,
+            "curriculumVersion": "practice-2026.10-v2",
+            "generatorVersion": "3",
+            "difficulty": 1,
+            "explanationSteps": [
+              "2 × 7 = 14이므로 몫은 7입니다."
+            ],
+            "optionMisconceptions": [
+              "subtract-instead",
+              "multiply-instead",
+              "correct",
+              "near-value"
+            ],
+            "policyVersion": 2,
+            "typeId": "g3-div:divide",
+            "grade": 3,
+            "domain": "number",
+            "unit": "g3-div",
+            "unitName": "나눗셈",
+            "level": 1,
+            "type": "divide",
+            "operands": [
+              14,
+              2
+            ],
+            "text": "14 ÷ 2 = ?",
+            "answer": "7",
+            "explain": "2 × 7 = 14이므로 몫은 7입니다.",
+            "options": [
+              "12",
+              "28",
+              "7",
+              "8"
+            ],
+            "review": false,
+            "hintUsed": false
+          },
+          "selected": "12",
+          "correct": false,
+          "elapsed": 1,
+          "responseMs": 33,
+          "date": "2026-10-09T03:42:43.783Z"
+        },
+        {
+          "id": "g3-div:divide:6:3",
+          "conceptId": "g3-div:divide:6:3",
+          "instanceId": "20c0e6bf-c265-487b-8a3a-19029481a07d",
+          "seed": 2623394821,
+          "curriculumVersion": "practice-2026.10-v2",
+          "generatorVersion": "3",
+          "difficulty": 1,
+          "explanationSteps": [
+            "3 × 2 = 6이므로 몫은 2입니다."
+          ],
+          "optionMisconceptions": [
+            "correct",
+            "multiply-instead",
+            "near-value",
+            "subtract-instead"
+          ],
+          "policyVersion": 2,
+          "typeId": "g3-div:divide",
+          "grade": 3,
+          "domain": "number",
+          "unit": "g3-div",
+          "unitName": "나눗셈",
+          "level": 1,
+          "type": "divide",
+          "operands": [
+            6,
+            3
+          ],
+          "text": "6 ÷ 3 = ?",
+          "answer": "2",
+          "explain": "3 × 2 = 6이므로 몫은 2입니다.",
+          "options": [
+            "2",
+            "18",
+            "1",
+            "3"
+          ],
+          "review": false,
+          "hintUsed": false,
+          "problem": {
+            "id": "g3-div:divide:6:3",
+            "conceptId": "g3-div:divide:6:3",
+            "instanceId": "20c0e6bf-c265-487b-8a3a-19029481a07d",
+            "seed": 2623394821,
+            "curriculumVersion": "practice-2026.10-v2",
+            "generatorVersion": "3",
+            "difficulty": 1,
+            "explanationSteps": [
+              "3 × 2 = 6이므로 몫은 2입니다."
+            ],
+            "optionMisconceptions": [
+              "correct",
+              "multiply-instead",
+              "near-value",
+              "subtract-instead"
+            ],
+            "policyVersion": 2,
+            "typeId": "g3-div:divide",
+            "grade": 3,
+            "domain": "number",
+            "unit": "g3-div",
+            "unitName": "나눗셈",
+            "level": 1,
+            "type": "divide",
+            "operands": [
+              6,
+              3
+            ],
+            "text": "6 ÷ 3 = ?",
+            "answer": "2",
+            "explain": "3 × 2 = 6이므로 몫은 2입니다.",
+            "options": [
+              "2",
+              "18",
+              "1",
+              "3"
+            ],
+            "review": false,
+            "hintUsed": false
+          },
+          "selected": "18",
+          "correct": false,
+          "elapsed": 1,
+          "responseMs": 33,
+          "date": "2026-10-09T03:42:43.850Z"
+        }
+      ],
+      "sessionId": "11ee3b62-ef4f-4de6-ab2a-1f20b352aea3",
+      "appVersion": "2.1.0",
+      "curriculumVersion": "practice-2026.10-v2",
+      "generatorVersion": "3",
+      "outcome": "complete",
+      "resultReason": "목표 문항 완료",
+      "actualLevels": {
+        "g3-div": [
+          2,
+          1
+        ]
+      }
+    },
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-09T03:42:44.768Z",
+      "config": {
+        "grade": 3,
+        "domain": "number",
+        "unit": "g3-div",
+        "level": 2,
+        "auto": true,
+        "mode": "explore",
+        "target": 10,
+        "limit": 180,
+        "character": "explorer",
+        "weapon": "storm",
+        "map": "forest",
+        "combat": "normal"
+      },
+      "score": 303,
+      "survivalSeconds": 0,
+      "level": 1,
+      "kills": 0,
+      "correct": 1,
+      "wrong": 0,
+      "accuracy": 100,
+      "newAccuracy": 100,
+      "reviewAccuracy": null,
+      "hintCount": 0,
+      "bestCombo": 1,
+      "domains": {
+        "number": {
+          "correct": 1,
+          "total": 1,
+          "accuracy": 100
+        }
+      },
+      "units": {
+        "g3-div": {
+          "total": 1,
+          "correct": 1,
+          "newTotal": 1,
+          "newCorrect": 1,
+          "reviewTotal": 0,
+          "reviewCorrect": 0,
+          "hints": 0
+        }
+      },
+      "weakProblems": [],
+      "reviewProblems": [],
+      "answers": [
+        {
+          "id": "g3-div:divide:12:2",
+          "conceptId": "g3-div:divide:12:2",
+          "instanceId": "3fdc7b27-700a-4925-9f2b-b0f11cb5ea00",
+          "seed": 1237658595,
+          "curriculumVersion": "practice-2026.10-v2",
+          "generatorVersion": "3",
+          "difficulty": 1,
+          "explanationSteps": [
+            "2 × 6 = 12이므로 몫은 6입니다."
+          ],
+          "optionMisconceptions": [
+            "near-value",
+            "multiply-instead",
+            "subtract-instead",
+            "correct"
+          ],
+          "policyVersion": 2,
+          "typeId": "g3-div:divide",
+          "grade": 3,
+          "domain": "number",
+          "unit": "g3-div",
+          "unitName": "나눗셈",
+          "level": 1,
+          "type": "divide",
+          "operands": [
+            12,
+            2
+          ],
+          "text": "12 ÷ 2 = ?",
+          "answer": "6",
+          "explain": "2 × 6 = 12이므로 몫은 6입니다.",
+          "options": [
+            "7",
+            "24",
+            "10",
+            "6"
+          ],
+          "review": false,
+          "hintUsed": false,
+          "problem": {
+            "id": "g3-div:divide:12:2",
+            "conceptId": "g3-div:divide:12:2",
+            "instanceId": "3fdc7b27-700a-4925-9f2b-b0f11cb5ea00",
+            "seed": 1237658595,
+            "curriculumVersion": "practice-2026.10-v2",
+            "generatorVersion": "3",
+            "difficulty": 1,
+            "explanationSteps": [
+              "2 × 6 = 12이므로 몫은 6입니다."
+            ],
+            "optionMisconceptions": [
+              "near-value",
+              "multiply-instead",
+              "subtract-instead",
+              "correct"
+            ],
+            "policyVersion": 2,
+            "typeId": "g3-div:divide",
+            "grade": 3,
+            "domain": "number",
+            "unit": "g3-div",
+            "unitName": "나눗셈",
+            "level": 1,
+            "type": "divide",
+            "operands": [
+              12,
+              2
+            ],
+            "text": "12 ÷ 2 = ?",
+            "answer": "6",
+            "explain": "2 × 6 = 12이므로 몫은 6입니다.",
+            "options": [
+              "7",
+              "24",
+              "10",
+              "6"
+            ],
+            "review": false,
+            "hintUsed": false
+          },
+          "selected": "6",
+          "correct": true,
+          "elapsed": 0,
+          "responseMs": 83,
+          "date": "2026-10-09T03:42:44.673Z"
+        }
+      ],
+      "sessionId": "ce88eaa3-4400-402d-9eaa-dff704f6f7a6",
+      "appVersion": "2.1.0",
+      "curriculumVersion": "practice-2026.10-v2",
+      "generatorVersion": "3",
+      "outcome": "interrupted",
+      "resultReason": "메뉴로 이동 · 기록 저장",
+      "actualLevels": {
+        "g3-div": [
+          1
+        ]
+      }
+    },
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-09T03:42:45.125Z",
+      "config": {
+        "grade": 3,
+        "domain": "number",
+        "unit": "g3-div",
+        "level": 2,
+        "auto": true,
+        "mode": "explore",
+        "target": 20,
+        "limit": 180,
+        "character": "explorer",
+        "weapon": "storm",
+        "map": "forest",
+        "combat": "normal"
+      },
+      "score": 0,
+      "survivalSeconds": 0,
+      "level": 1,
+      "kills": 0,
+      "correct": 0,
+      "wrong": 1,
+      "accuracy": 0,
+      "newAccuracy": 0,
+      "reviewAccuracy": null,
+      "hintCount": 0,
+      "bestCombo": 0,
+      "domains": {
+        "number": {
+          "correct": 0,
+          "total": 1,
+          "accuracy": 0
+        }
+      },
+      "units": {
+        "g3-div": {
+          "total": 1,
+          "correct": 0,
+          "newTotal": 1,
+          "newCorrect": 0,
+          "reviewTotal": 0,
+          "reviewCorrect": 0,
+          "hints": 0
+        }
+      },
+      "weakProblems": [
+        {
+          "text": "4 ÷ 2 = ?",
+          "selected": "1",
+          "answer": "2",
+          "explain": "2 × 2 = 4이므로 몫은 2입니다.",
+          "unit": "g3-div"
+        }
+      ],
+      "reviewProblems": [
+        {
+          "id": "g3-div:divide:4:2",
+          "conceptId": "g3-div:divide:4:2",
+          "instanceId": "c307e520-0027-4457-a888-87091e710edf",
+          "seed": 61092534,
+          "curriculumVersion": "practice-2026.10-v2",
+          "generatorVersion": "3",
+          "difficulty": 1,
+          "explanationSteps": [
+            "2 × 2 = 4이므로 몫은 2입니다."
+          ],
+          "optionMisconceptions": [
+            "near-value",
+            "correct",
+            "near-value",
+            "multiply-instead"
+          ],
+          "policyVersion": 2,
+          "typeId": "g3-div:divide",
+          "grade": 3,
+          "domain": "number",
+          "unit": "g3-div",
+          "unitName": "나눗셈",
+          "level": 1,
+          "type": "divide",
+          "operands": [
+            4,
+            2
+          ],
+          "text": "4 ÷ 2 = ?",
+          "answer": "2",
+          "explain": "2 × 2 = 4이므로 몫은 2입니다.",
+          "options": [
+            "1",
+            "2",
+            "3",
+            "8"
+          ],
+          "review": false,
+          "hintUsed": false,
+          "problem": {
+            "id": "g3-div:divide:4:2",
+            "conceptId": "g3-div:divide:4:2",
+            "instanceId": "c307e520-0027-4457-a888-87091e710edf",
+            "seed": 61092534,
+            "curriculumVersion": "practice-2026.10-v2",
+            "generatorVersion": "3",
+            "difficulty": 1,
+            "explanationSteps": [
+              "2 × 2 = 4이므로 몫은 2입니다."
+            ],
+            "optionMisconceptions": [
+              "near-value",
+              "correct",
+              "near-value",
+              "multiply-instead"
+            ],
+            "policyVersion": 2,
+            "typeId": "g3-div:divide",
+            "grade": 3,
+            "domain": "number",
+            "unit": "g3-div",
+            "unitName": "나눗셈",
+            "level": 1,
+            "type": "divide",
+            "operands": [
+              4,
+              2
+            ],
+            "text": "4 ÷ 2 = ?",
+            "answer": "2",
+            "explain": "2 × 2 = 4이므로 몫은 2입니다.",
+            "options": [
+              "1",
+              "2",
+              "3",
+              "8"
+            ],
+            "review": false,
+            "hintUsed": false
+          },
+          "selected": "1",
+          "correct": false,
+          "elapsed": 0,
+          "responseMs": 67,
+          "date": "2026-10-09T03:42:45.124Z"
+        }
+      ],
+      "answers": [
+        {
+          "id": "g3-div:divide:4:2",
+          "conceptId": "g3-div:divide:4:2",
+          "instanceId": "c307e520-0027-4457-a888-87091e710edf",
+          "seed": 61092534,
+          "curriculumVersion": "practice-2026.10-v2",
+          "generatorVersion": "3",
+          "difficulty": 1,
+          "explanationSteps": [
+            "2 × 2 = 4이므로 몫은 2입니다."
+          ],
+          "optionMisconceptions": [
+            "near-value",
+            "correct",
+            "near-value",
+            "multiply-instead"
+          ],
+          "policyVersion": 2,
+          "typeId": "g3-div:divide",
+          "grade": 3,
+          "domain": "number",
+          "unit": "g3-div",
+          "unitName": "나눗셈",
+          "level": 1,
+          "type": "divide",
+          "operands": [
+            4,
+            2
+          ],
+          "text": "4 ÷ 2 = ?",
+          "answer": "2",
+          "explain": "2 × 2 = 4이므로 몫은 2입니다.",
+          "options": [
+            "1",
+            "2",
+            "3",
+            "8"
+          ],
+          "review": false,
+          "hintUsed": false,
+          "problem": {
+            "id": "g3-div:divide:4:2",
+            "conceptId": "g3-div:divide:4:2",
+            "instanceId": "c307e520-0027-4457-a888-87091e710edf",
+            "seed": 61092534,
+            "curriculumVersion": "practice-2026.10-v2",
+            "generatorVersion": "3",
+            "difficulty": 1,
+            "explanationSteps": [
+              "2 × 2 = 4이므로 몫은 2입니다."
+            ],
+            "optionMisconceptions": [
+              "near-value",
+              "correct",
+              "near-value",
+              "multiply-instead"
+            ],
+            "policyVersion": 2,
+            "typeId": "g3-div:divide",
+            "grade": 3,
+            "domain": "number",
+            "unit": "g3-div",
+            "unitName": "나눗셈",
+            "level": 1,
+            "type": "divide",
+            "operands": [
+              4,
+              2
+            ],
+            "text": "4 ÷ 2 = ?",
+            "answer": "2",
+            "explain": "2 × 2 = 4이므로 몫은 2입니다.",
+            "options": [
+              "1",
+              "2",
+              "3",
+              "8"
+            ],
+            "review": false,
+            "hintUsed": false
+          },
+          "selected": "1",
+          "correct": false,
+          "elapsed": 0,
+          "responseMs": 67,
+          "date": "2026-10-09T03:42:45.124Z"
+        }
+      ],
+      "sessionId": "b60d50f5-5fc4-41d2-b562-55cff02135e4",
+      "appVersion": "2.1.0",
+      "curriculumVersion": "practice-2026.10-v2",
+      "generatorVersion": "3",
+      "outcome": "interrupted",
+      "resultReason": "페이지 종료 후 체크포인트 복구",
+      "actualLevels": {
+        "g3-div": [
+          1
+        ]
+      }
+    },
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-09T03:42:45.595Z",
+      "config": {
+        "grade": 3,
+        "domain": "number",
+        "unit": "g3-div",
+        "level": 2,
+        "auto": true,
+        "mode": "boss",
+        "target": 20,
+        "limit": 180,
+        "character": "explorer",
+        "weapon": "storm",
+        "map": "forest",
+        "combat": "normal"
+      },
+      "score": 0,
+      "survivalSeconds": 300,
+      "level": 1,
+      "kills": 0,
+      "correct": 0,
+      "wrong": 0,
+      "accuracy": null,
+      "newAccuracy": null,
+      "reviewAccuracy": null,
+      "hintCount": 0,
+      "bestCombo": 0,
+      "domains": {},
+      "units": {},
+      "weakProblems": [],
+      "reviewProblems": [],
+      "answers": [],
+      "sessionId": "fac64b35-46da-4720-80e6-07f68ea6ad41",
+      "appVersion": "2.1.0",
+      "curriculumVersion": "practice-2026.10-v2",
+      "generatorVersion": "3",
+      "outcome": "time-limit",
+      "resultReason": "제한 시간 종료",
+      "actualLevels": {}
+    },
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-09T03:42:45.792Z",
+      "config": {
+        "grade": 3,
+        "domain": "number",
+        "unit": "g3-div",
+        "level": 2,
+        "auto": true,
+        "mode": "survival",
+        "target": 20,
+        "limit": 180,
+        "character": "explorer",
+        "weapon": "storm",
+        "map": "forest",
+        "combat": "normal"
+      },
+      "score": 0,
+      "survivalSeconds": 0,
+      "level": 1,
+      "kills": 0,
+      "correct": 0,
+      "wrong": 1,
+      "accuracy": 0,
+      "newAccuracy": 0,
+      "reviewAccuracy": null,
+      "hintCount": 0,
+      "bestCombo": 0,
+      "domains": {
+        "number": {
+          "correct": 0,
+          "total": 1,
+          "accuracy": 0
+        }
+      },
+      "units": {
+        "g3-div": {
+          "total": 1,
+          "correct": 0,
+          "newTotal": 1,
+          "newCorrect": 0,
+          "reviewTotal": 0,
+          "reviewCorrect": 0,
+          "hints": 0
+        }
+      },
+      "weakProblems": [
+        {
+          "text": "15 ÷ 3 = ?",
+          "selected": "6",
+          "answer": "5",
+          "explain": "3 × 5 = 15이므로 몫은 5입니다.",
+          "unit": "g3-div"
+        }
+      ],
+      "reviewProblems": [
+        {
+          "id": "g3-div:divide:15:3",
+          "conceptId": "g3-div:divide:15:3",
+          "instanceId": "b3bed60a-4925-4917-8a2b-d0f8db177882",
+          "seed": 133970462,
+          "curriculumVersion": "practice-2026.10-v2",
+          "generatorVersion": "3",
+          "difficulty": 1,
+          "explanationSteps": [
+            "3 × 5 = 15이므로 몫은 5입니다."
+          ],
+          "optionMisconceptions": [
+            "correct",
+            "near-value",
+            "multiply-instead",
+            "subtract-instead"
+          ],
+          "policyVersion": 2,
+          "typeId": "g3-div:divide",
+          "grade": 3,
+          "domain": "number",
+          "unit": "g3-div",
+          "unitName": "나눗셈",
+          "level": 1,
+          "type": "divide",
+          "operands": [
+            15,
+            3
+          ],
+          "text": "15 ÷ 3 = ?",
+          "answer": "5",
+          "explain": "3 × 5 = 15이므로 몫은 5입니다.",
+          "options": [
+            "5",
+            "6",
+            "45",
+            "12"
+          ],
+          "review": false,
+          "hintUsed": false,
+          "problem": {
+            "id": "g3-div:divide:15:3",
+            "conceptId": "g3-div:divide:15:3",
+            "instanceId": "b3bed60a-4925-4917-8a2b-d0f8db177882",
+            "seed": 133970462,
+            "curriculumVersion": "practice-2026.10-v2",
+            "generatorVersion": "3",
+            "difficulty": 1,
+            "explanationSteps": [
+              "3 × 5 = 15이므로 몫은 5입니다."
+            ],
+            "optionMisconceptions": [
+              "correct",
+              "near-value",
+              "multiply-instead",
+              "subtract-instead"
+            ],
+            "policyVersion": 2,
+            "typeId": "g3-div:divide",
+            "grade": 3,
+            "domain": "number",
+            "unit": "g3-div",
+            "unitName": "나눗셈",
+            "level": 1,
+            "type": "divide",
+            "operands": [
+              15,
+              3
+            ],
+            "text": "15 ÷ 3 = ?",
+            "answer": "5",
+            "explain": "3 × 5 = 15이므로 몫은 5입니다.",
+            "options": [
+              "5",
+              "6",
+              "45",
+              "12"
+            ],
+            "review": false,
+            "hintUsed": false
+          },
+          "selected": "6",
+          "correct": false,
+          "elapsed": 0,
+          "responseMs": 0,
+          "date": "2026-10-09T03:42:45.791Z"
+        }
+      ],
+      "answers": [
+        {
+          "id": "g3-div:divide:15:3",
+          "conceptId": "g3-div:divide:15:3",
+          "instanceId": "b3bed60a-4925-4917-8a2b-d0f8db177882",
+          "seed": 133970462,
+          "curriculumVersion": "practice-2026.10-v2",
+          "generatorVersion": "3",
+          "difficulty": 1,
+          "explanationSteps": [
+            "3 × 5 = 15이므로 몫은 5입니다."
+          ],
+          "optionMisconceptions": [
+            "correct",
+            "near-value",
+            "multiply-instead",
+            "subtract-instead"
+          ],
+          "policyVersion": 2,
+          "typeId": "g3-div:divide",
+          "grade": 3,
+          "domain": "number",
+          "unit": "g3-div",
+          "unitName": "나눗셈",
+          "level": 1,
+          "type": "divide",
+          "operands": [
+            15,
+            3
+          ],
+          "text": "15 ÷ 3 = ?",
+          "answer": "5",
+          "explain": "3 × 5 = 15이므로 몫은 5입니다.",
+          "options": [
+            "5",
+            "6",
+            "45",
+            "12"
+          ],
+          "review": false,
+          "hintUsed": false,
+          "problem": {
+            "id": "g3-div:divide:15:3",
+            "conceptId": "g3-div:divide:15:3",
+            "instanceId": "b3bed60a-4925-4917-8a2b-d0f8db177882",
+            "seed": 133970462,
+            "curriculumVersion": "practice-2026.10-v2",
+            "generatorVersion": "3",
+            "difficulty": 1,
+            "explanationSteps": [
+              "3 × 5 = 15이므로 몫은 5입니다."
+            ],
+            "optionMisconceptions": [
+              "correct",
+              "near-value",
+              "multiply-instead",
+              "subtract-instead"
+            ],
+            "policyVersion": 2,
+            "typeId": "g3-div:divide",
+            "grade": 3,
+            "domain": "number",
+            "unit": "g3-div",
+            "unitName": "나눗셈",
+            "level": 1,
+            "type": "divide",
+            "operands": [
+              15,
+              3
+            ],
+            "text": "15 ÷ 3 = ?",
+            "answer": "5",
+            "explain": "3 × 5 = 15이므로 몫은 5입니다.",
+            "options": [
+              "5",
+              "6",
+              "45",
+              "12"
+            ],
+            "review": false,
+            "hintUsed": false
+          },
+          "selected": "6",
+          "correct": false,
+          "elapsed": 0,
+          "responseMs": 0,
+          "date": "2026-10-09T03:42:45.791Z"
+        }
+      ],
+      "sessionId": "e34ef31d-d3e1-47ab-9f45-66bcd53909e2",
+      "appVersion": "2.1.0",
+      "curriculumVersion": "practice-2026.10-v2",
+      "generatorVersion": "3",
+      "outcome": "defeat",
+      "resultReason": "전투 종료",
+      "actualLevels": {
+        "g3-div": [
+          1
+        ]
+      }
+    },
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-09T03:42:50.648Z",
+      "config": {
+        "grade": 3,
+        "domain": "number",
+        "unit": "g3-div",
+        "level": 2,
+        "auto": true,
+        "mode": "boss",
+        "target": 20,
+        "limit": 180,
+        "character": "explorer",
+        "weapon": "compass",
+        "map": "forest",
+        "combat": "normal"
+      },
+      "score": 2100,
+      "survivalSeconds": 0,
+      "level": 1,
+      "kills": 3,
+      "correct": 0,
+      "wrong": 0,
+      "accuracy": null,
+      "newAccuracy": null,
+      "reviewAccuracy": null,
+      "hintCount": 0,
+      "bestCombo": 0,
+      "domains": {},
+      "units": {},
+      "weakProblems": [],
+      "reviewProblems": [],
+      "answers": [],
+      "sessionId": "e258450c-d290-4ba4-a61a-1b6b9746ff41",
+      "appVersion": "2.1.0",
+      "curriculumVersion": "practice-2026.10-v2",
+      "generatorVersion": "3",
+      "outcome": "complete",
+      "resultReason": "보스 3연전 완료",
+      "actualLevels": {}
+    },
+    {
+      "schemaVersion": 2,
+      "date": "2026-10-09T03:42:50.829Z",
+      "config": {
+        "grade": 3,
+        "domain": "number",
+        "unit": "g3-div",
+        "level": 2,
+        "auto": true,
+        "mode": "survival",
+        "target": 20,
+        "limit": 180,
+        "character": "explorer",
+        "weapon": "compass",
+        "map": "forest",
+        "combat": "normal"
+      },
+      "score": 320,
+      "survivalSeconds": 180,
+      "level": 1,
+      "kills": 0,
+      "correct": 0,
+      "wrong": 0,
+      "accuracy": null,
+      "newAccuracy": null,
+      "reviewAccuracy": null,
+      "hintCount": 0,
+      "bestCombo": 0,
+      "domains": {},
+      "units": {},
+      "weakProblems": [],
+      "reviewProblems": [],
+      "answers": [],
+      "sessionId": "6d61f678-e2fa-4e5d-b456-18a46a945dce",
+      "appVersion": "2.1.0",
+      "curriculumVersion": "practice-2026.10-v2",
+      "generatorVersion": "3",
+      "outcome": "complete",
+      "resultReason": "3분 생존 완료",
+      "actualLevels": {}
+    }
+  ],
+  "mastery": {
+    "g3-div": {
+      "level": 1,
+      "window": [
+        false,
+        true,
+        false,
+        false
+      ],
+      "seen": [
+        "g3-div:divide:24:6",
+        "g3-div:divide:21:7",
+        "g3-div:divide:24:4",
+        "g3-div:divide:42:7",
+        "g3-div:divide:45:5",
+        "g3-div:divide:35:5",
+        "g3-div:divide:8:4",
+        "g3-div:divide:21:3",
+        "g3-div:divide:6:2",
+        "g3-div:divide:6:3",
+        "g3-div:divide:14:2",
+        "g3-div:divide:12:2",
+        "g3-div:divide:4:2",
+        "g3-div:divide:15:3"
+      ],
+      "reviews": {
+        "g3-div:divide:24:6": {
+          "key": "g3-div:divide:24:6",
+          "unit": "g3-div",
+          "type": "divide",
+          "level": 2,
+          "operands": [
+            24,
+            6
+          ],
+          "lastConcept": "g3-div:divide:30:6",
+          "lastAnswerIndex": 1,
+          "successConcepts": [],
+          "successCount": 0,
+          "resolved": false,
+          "nextDue": 1791517422549,
+          "lastAttempt": "2026-10-09T03:42:42.549Z"
+        },
+        "g3-div:divide:21:7": {
+          "key": "g3-div:divide:21:7",
+          "unit": "g3-div",
+          "type": "divide",
+          "level": 2,
+          "operands": [
+            21,
+            7
+          ],
+          "lastConcept": "g3-div:divide:25:5",
+          "lastAnswerIndex": 1,
+          "successConcepts": [],
+          "successCount": 0,
+          "resolved": false,
+          "nextDue": 1791517422850,
+          "lastAttempt": "2026-10-09T03:42:42.850Z"
+        },
+        "g3-div:divide:24:4": {
+          "key": "g3-div:divide:24:4",
+          "unit": "g3-div",
+          "type": "divide",
+          "level": 2,
+          "operands": [
+            24,
+            4
+          ],
+          "lastConcept": "g3-div:divide:16:4",
+          "lastAnswerIndex": 1,
+          "successConcepts": [],
+          "successCount": 0,
+          "resolved": false,
+          "nextDue": 1791517423050,
+          "lastAttempt": "2026-10-09T03:42:43.050Z"
+        },
+        "g3-div:divide:42:7": {
+          "key": "g3-div:divide:42:7",
+          "unit": "g3-div",
+          "type": "divide",
+          "level": 2,
+          "operands": [
+            42,
+            7
+          ],
+          "lastConcept": "g3-div:divide:8:4",
+          "lastAnswerIndex": 1,
+          "successConcepts": [],
+          "successCount": 0,
+          "resolved": false,
+          "nextDue": 1791517423250,
+          "lastAttempt": "2026-10-09T03:42:43.250Z"
+        },
+        "g3-div:divide:45:5": {
+          "key": "g3-div:divide:45:5",
+          "unit": "g3-div",
+          "type": "divide",
+          "level": 2,
+          "operands": [
+            45,
+            5
+          ],
+          "lastConcept": "g3-div:divide:28:7",
+          "lastAnswerIndex": 0,
+          "successConcepts": [],
+          "successCount": 0,
+          "resolved": false,
+          "nextDue": 1791517423451,
+          "lastAttempt": "2026-10-09T03:42:43.451Z"
+        },
+        "g3-div:divide:35:5": {
+          "key": "g3-div:divide:35:5",
+          "unit": "g3-div",
+          "type": "divide",
+          "level": 1,
+          "operands": [
+            35,
+            5
+          ],
+          "lastConcept": "g3-div:divide:4:2",
+          "lastAnswerIndex": 0,
+          "successConcepts": [],
+          "successCount": 0,
+          "resolved": false,
+          "nextDue": 1791517423717,
+          "lastAttempt": "2026-10-09T03:42:43.717Z"
+        },
+        "g3-div:divide:8:4": {
+          "key": "g3-div:divide:8:4",
+          "unit": "g3-div",
+          "type": "divide",
+          "level": 1,
+          "operands": [
+            8,
+            4
+          ],
+          "lastConcept": "g3-div:divide:8:4",
+          "lastAnswerIndex": 0,
+          "successConcepts": [],
+          "successCount": 0,
+          "resolved": false,
+          "nextDue": 1791517363184,
+          "lastAttempt": "2026-10-09T03:42:43.184Z"
+        },
+        "g3-div:divide:21:3": {
+          "key": "g3-div:divide:21:3",
+          "unit": "g3-div",
+          "type": "divide",
+          "level": 1,
+          "operands": [
+            21,
+            3
+          ],
+          "lastConcept": "g3-div:divide:21:3",
+          "lastAnswerIndex": 2,
+          "successConcepts": [],
+          "successCount": 0,
+          "resolved": false,
+          "nextDue": 1791517363317,
+          "lastAttempt": "2026-10-09T03:42:43.317Z"
+        },
+        "g3-div:divide:6:2": {
+          "key": "g3-div:divide:6:2",
+          "unit": "g3-div",
+          "type": "divide",
+          "level": 1,
+          "operands": [
+            6,
+            2
+          ],
+          "lastConcept": "g3-div:divide:6:2",
+          "lastAnswerIndex": 2,
+          "successConcepts": [],
+          "successCount": 0,
+          "resolved": false,
+          "nextDue": 1791517363383,
+          "lastAttempt": "2026-10-09T03:42:43.383Z"
+        },
+        "g3-div:divide:6:3": {
+          "key": "g3-div:divide:6:3",
+          "unit": "g3-div",
+          "type": "divide",
+          "level": 1,
+          "operands": [
+            6,
+            3
+          ],
+          "lastConcept": "g3-div:divide:6:3",
+          "lastAnswerIndex": 0,
+          "successConcepts": [],
+          "successCount": 0,
+          "resolved": false,
+          "nextDue": 1791517363534,
+          "lastAttempt": "2026-10-09T03:42:43.534Z"
+        },
+        "g3-div:divide:14:2": {
+          "key": "g3-div:divide:14:2",
+          "unit": "g3-div",
+          "type": "divide",
+          "level": 1,
+          "operands": [
+            14,
+            2
+          ],
+          "lastConcept": "g3-div:divide:14:2",
+          "lastAnswerIndex": 3,
+          "successConcepts": [],
+          "successCount": 0,
+          "resolved": false,
+          "nextDue": 1791517363648,
+          "lastAttempt": "2026-10-09T03:42:43.648Z"
+        },
+        "g3-div:divide:4:2": {
+          "key": "g3-div:divide:4:2",
+          "unit": "g3-div",
+          "type": "divide",
+          "level": 1,
+          "operands": [
+            4,
+            2
+          ],
+          "lastConcept": "g3-div:divide:4:2",
+          "lastAnswerIndex": 1,
+          "successConcepts": [],
+          "successCount": 0,
+          "resolved": false,
+          "nextDue": 1791517365124,
+          "lastAttempt": "2026-10-09T03:42:45.124Z"
+        },
+        "g3-div:divide:15:3": {
+          "key": "g3-div:divide:15:3",
+          "unit": "g3-div",
+          "type": "divide",
+          "level": 1,
+          "operands": [
+            15,
+            3
+          ],
+          "lastConcept": "g3-div:divide:15:3",
+          "lastAnswerIndex": 0,
+          "successConcepts": [],
+          "successCount": 0,
+          "resolved": false,
+          "nextDue": 1791517365791,
+          "lastAttempt": "2026-10-09T03:42:45.791Z"
+        }
+      }
+    }
+  },
+  "checkpoint": null,
+  "quarantine": []
+}
