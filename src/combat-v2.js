@@ -1,3 +1,4 @@
+import {drawSprite,WEAPON_SPRITES} from './sprites.js';
 export const CHARACTERS={
  explorer:{name:'용감한 탐험가',icon:'🐹',color:'#f6b875',hp:140,speed:4.8,attack:24,rate:490,description:'체력 140 · 빠른 이동 · 탐험 폭발'},
  mage:{name:'번개 마법사',icon:'🧙',color:'#a59dfb',hp:100,speed:4.35,attack:26,rate:350,description:'체력 100 · 빠른 공격 · 시간 번개'},
@@ -54,9 +55,11 @@ export function createCombatV2(r,settings){
    else{ctx.rotate(h.angle);ctx.rect(0,-h.width,h.length,h.width*2);}if(h.shape!=='ring')ctx.fill();ctx.stroke();ctx.restore();
   }
   for(const l of lines){ctx.strokeStyle='#fde047';ctx.lineWidth=4;ctx.beginPath();ctx.moveTo(r.worldToScreenX(l.x),r.worldToScreenY(l.y));ctx.lineTo(r.worldToScreenX(l.tx),r.worldToScreenY(l.ty));ctx.stroke();}
-  if(s.newWeapons.fraction){ctx.strokeStyle=s.evolved.fraction?'#facc15':'#7dd3fc';ctx.lineWidth=4;ctx.beginPath();ctx.arc(r.worldToScreenX(p.x),r.worldToScreenY(p.y),75,0,Math.PI*2);ctx.stroke();}
+  if(s.newWeapons.fraction){ctx.strokeStyle=s.evolved.fraction?'#facc15':'#7dd3fc';ctx.lineWidth=4;ctx.beginPath();ctx.arc(r.worldToScreenX(p.x),r.worldToScreenY(p.y),75,0,Math.PI*2);ctx.stroke();
+   const angle=settings.reduced?0:now/1100;drawSprite(ctx,'invincibility-shield',r.worldToScreenX(p.x)+Math.cos(angle)*75,r.worldToScreenY(p.y)+Math.sin(angle)*75,40);
+  }
   ctx.strokeStyle=CHARACTERS[s.character||'explorer'].color;ctx.lineWidth=3;ctx.beginPath();ctx.arc(r.worldToScreenX(p.x),r.worldToScreenY(p.y),p.r+7,0,Math.PI*2);ctx.stroke();
  }
- function upgrades(){return Object.entries(WEAPONS).filter(([key])=>s.newWeapons[key]<3).map(([key,w])=>({emoji:w.icon,title:w.name+' Lv.'+(s.newWeapons[key]+1),desc:'Lv.3 + 최고 5콤보 → '+w.evolution,apply(){s.newWeapons[key]++;s.weaponLevel++;}}));}
+ function upgrades(){return Object.entries(WEAPONS).filter(([key])=>s.newWeapons[key]<3).map(([key,w])=>({emoji:w.icon,sprite:WEAPON_SPRITES[key],title:w.name+' Lv.'+(s.newWeapons[key]+1),desc:'Lv.3 + 최고 5콤보 → '+w.evolution,apply(){s.newWeapons[key]++;s.weaponLevel++;}}));}
  return {reset,tick,draw,skill,upgrades,hazards:()=>hazards,evolved};
 }

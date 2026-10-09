@@ -10,6 +10,7 @@ import {createItemTypes} from './items.js';
 import {createV2} from './v2.js';
 import {validateCurriculum} from './configuration.js';
 import {installInput} from './input.js';
+import {loadSprites,spriteStatus} from './sprites.js';
 const loading=document.createElement('section');loading.id='loadingPanel';loading.innerHTML='<p id="loadMessage" role="status">학습 데이터를 불러오는 중입니다.</p><button id="retryLoad" hidden>다시 불러오기</button>';document.body.append(loading);
 let initialized=false,loadingNow=false;
 async function boot(){if(initialized||loadingNow)return;loadingNow=true;document.getElementById('startBtn').disabled=true;document.getElementById('retryLoad').hidden=true;
@@ -26,6 +27,7 @@ const gameNow = (...args) => systems.gameNow(...args);
     const viewport={width:1000,height:650,dpr:1,scale:1};
     const canvas={get width(){return viewport.width;},get height(){return viewport.height;}};
     const ctx = surface.getContext("2d", {alpha:false});
+    const sprites={ready:loadSprites(),status:spriteStatus};
 
     const syncCanvasViewport = (...args) => systems.syncCanvasViewport(...args);
 
@@ -346,6 +348,7 @@ get openLevelUpPanel(){return openLevelUpPanel;},
 get updateWeaponInfo(){return updateWeaponInfo;},
 get endGame(){return endGame;},
 get updateBuffUI(){return updateBuffUI;},
+get sprites(){return sprites;},
 get v2(){return v2;} };
 itemTypes = createItemTypes(runtime);
 const v2 = createV2(runtime, curriculum);

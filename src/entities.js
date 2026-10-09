@@ -1,4 +1,5 @@
 // Extracted from upstream. Cross-system state is supplied by the shared runtime.
+import {drawSprite,CHARACTER_GEAR} from './sprites.js';
 export function createSystem(gameRuntime) {
 function makePortals() {
       gameRuntime.portals = [];
@@ -284,6 +285,7 @@ function drawCutePlayer(now) {
       gameRuntime.ctx.arc(3, 4, 4, 0.15, Math.PI - 0.15);
       gameRuntime.ctx.stroke();
 
+      if (!drawSprite(gameRuntime.ctx,CHARACTER_GEAR[gameRuntime.state.character||'explorer'],28,-9,58)) {
       gameRuntime.ctx.strokeStyle = "#92400e";
       gameRuntime.ctx.lineWidth = 4;
       gameRuntime.ctx.beginPath();
@@ -295,6 +297,7 @@ function drawCutePlayer(now) {
       gameRuntime.ctx.beginPath();
       gameRuntime.ctx.arc(30, -13, 5, 0, Math.PI * 2);
       gameRuntime.ctx.fill();
+      }
 
       gameRuntime.ctx.globalAlpha = 1;
       gameRuntime.ctx.restore();
@@ -506,7 +509,7 @@ function draw() {
         gameRuntime.ctx.textAlign = "center";
         gameRuntime.ctx.textBaseline = "middle";
         gameRuntime.ctx.fillStyle = "#111827";
-        gameRuntime.ctx.fillText(spec.icon, sx, sy + 1);
+        if(!drawSprite(gameRuntime.ctx,spec.sprite,sx,sy+1,52))gameRuntime.ctx.fillText(spec.icon, sx, sy + 1);
 
         gameRuntime.ctx.font = "900 12px Jua, Malgun Gothic, sans-serif";
         gameRuntime.ctx.fillStyle = "#ffffff";
@@ -586,6 +589,7 @@ function draw() {
 
         if (!gameRuntime.isNearScreen(p.x, p.y, 120)) continue;
         if (p.kind === "boomerang") {
+          if(drawSprite(gameRuntime.ctx,'math-boomerang',sx,sy,p.r*3.2,gameRuntime.v2.settings.reduced?0:now/95))continue;
           gameRuntime.ctx.save();
           gameRuntime.ctx.translate(sx, sy);
           gameRuntime.ctx.rotate(gameRuntime.v2.settings.reduced ? 0 : now / 95);
@@ -598,6 +602,7 @@ function draw() {
           gameRuntime.ctx.fillText("÷", 0, 0);
           gameRuntime.ctx.restore();
         } else if (p.kind === "chalk") {
+          if(drawSprite(gameRuntime.ctx,'pencil-sword',sx,sy,36))continue;
           gameRuntime.ctx.strokeStyle = "#f8fafc";
           gameRuntime.ctx.lineWidth = 5;
           gameRuntime.ctx.beginPath();

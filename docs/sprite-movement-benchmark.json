@@ -1,0 +1,51 @@
+{
+  "environment": "Windows Edge headless, DPR 3, synthetic survival, HP protected and growth dialog suppressed",
+  "results": [
+    {
+      "name": "desktop",
+      "width": 1920,
+      "height": 1080,
+      "deviceDpr": 3,
+      "frames": {
+        "count": 714,
+        "median": 16.699999999999818,
+        "p95": 16.899999999999636,
+        "over50": 1
+      },
+      "hudMutations": 23,
+      "viewport": {
+        "width": 1904,
+        "height": 764.609375,
+        "dpr": 1.4355137145618224,
+        "scale": 1
+      },
+      "backingPixels": 3000834,
+      "moved": 1753.524815906515,
+      "simulationMs": 12016.666666666477,
+      "running": true
+    },
+    {
+      "name": "phone",
+      "width": 390,
+      "height": 844,
+      "deviceDpr": 3,
+      "frames": {
+        "count": 721,
+        "median": 16.699999999999818,
+        "p95": 16.899999999999636,
+        "over50": 0
+      },
+      "hudMutations": 27,
+      "viewport": {
+        "width": 378,
+        "height": 386.15625,
+        "dpr": 3,
+        "scale": 1
+      },
+      "backingPixels": 1313172,
+      "moved": 1673.478222146915,
+      "simulationMs": 12033.333333333145,
+      "running": true
+    }
+  ]
+}

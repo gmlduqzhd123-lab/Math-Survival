@@ -1,0 +1,104 @@
+{
+  "archive": "math-survival-sprites.zip",
+  "archiveSha256": "3e289a10ec9e02e70dc60d6af71552efe59ae05c83192cf4f3e8125ecf36ab0b",
+  "sourceFolder": "math-survival-sprites/256",
+  "originalPixelsPreserved": true,
+  "files": [
+    {
+      "name": "freeze-clock.png",
+      "width": 256,
+      "height": 256,
+      "colorType": "RGBA",
+      "bytes": 98033,
+      "sha256": "f3ee55c65eb7e92ac5f8ed405ef3ac186bde76b4b22d0cf5886ea97690536914"
+    },
+    {
+      "name": "healing-heart.png",
+      "width": 256,
+      "height": 256,
+      "colorType": "RGBA",
+      "bytes": 76285,
+      "sha256": "755ebe30c51761abf7f4f4b598eaede89902f2f2a84a7d2b58adc249a2b9faec"
+    },
+    {
+      "name": "invincibility-shield.png",
+      "width": 256,
+      "height": 256,
+      "colorType": "RGBA",
+      "bytes": 86183,
+      "sha256": "e75ce882a3f4b90d78dd7fc3ae60abf391ee5b1f602b36254d8b01d95d36a501"
+    },
+    {
+      "name": "knowledge-book.png",
+      "width": 256,
+      "height": 256,
+      "colorType": "RGBA",
+      "bytes": 107558,
+      "sha256": "8799038cbcf6ba46097505fe901799f49870e8810bf25f9cbcf3ed3c246c6fe8"
+    },
+    {
+      "name": "knowledge-staff.png",
+      "width": 256,
+      "height": 256,
+      "colorType": "RGBA",
+      "bytes": 77576,
+      "sha256": "c549455c8bca41a6a54f0ebe60185e6a58ca1eaf615447d39d7eca6f1b91fcf5"
+    },
+    {
+      "name": "magic-quill.png",
+      "width": 256,
+      "height": 256,
+      "colorType": "RGBA",
+      "bytes": 101403,
+      "sha256": "4974c50687618bf8283f2e369144c60bcc501d413d6f64e7fe68f05d61f2dc76"
+    },
+    {
+      "name": "math-bomb.png",
+      "width": 256,
+      "height": 256,
+      "colorType": "RGBA",
+      "bytes": 87086,
+      "sha256": "8987c3d5499aced76d6fc88e8d426ebbe5fb9a90124458b780d8e4306911fa2d"
+    },
+    {
+      "name": "math-boomerang.png",
+      "width": 256,
+      "height": 256,
+      "colorType": "RGBA",
+      "bytes": 75948,
+      "sha256": "c71e220b8491b6437b6ca41336ab919172e7b03cda083da0d229fbafac599121"
+    },
+    {
+      "name": "math-magnet.png",
+      "width": 256,
+      "height": 256,
+      "colorType": "RGBA",
+      "bytes": 81518,
+      "sha256": "32f8ceba53762d6a315f496261a22c913522ce123380ac7db95b44de21b55c64"
+    },
+    {
+      "name": "pencil-sword.png",
+      "width": 256,
+      "height": 256,
+      "colorType": "RGBA",
+      "bytes": 93782,
+      "sha256": "bf5289ed89a8a56dc9081b6500389750778adc1c82fc68538c1a73a4786ed311"
+    },
+    {
+      "name": "speed-boots.png",
+      "width": 256,
+      "height": 256,
+      "colorType": "RGBA",
+      "bytes": 109792,
+      "sha256": "aade3eec03516d7aba6fd4e911ab164f9d88314a27152166370526ec269f5d17"
+    },
+    {
+      "name": "treasure-chest.png",
+      "width": 256,
+      "height": 256,
+      "colorType": "RGBA",
+      "bytes": 105722,
+      "sha256": "b2992f35bef520d0aaaa9bc38a9f1c10f5f33b9022f808a152eac04f23698619"
+    }
+  ]
+}

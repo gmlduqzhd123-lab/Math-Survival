@@ -16,7 +16,8 @@
     "test:baseline": "node tests/baseline.cjs",
     "build": "node scripts/build.mjs",
     "bank:generate": "node scripts/question-bank.mjs",
-    "test:movement": "node tests/movement.cjs"
+    "test:movement": "node tests/movement.cjs",
+    "test:sprites": "node tests/sprites.cjs"
   },
   "keywords": [],
   "author": "",

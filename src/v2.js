@@ -5,6 +5,7 @@ import {createStore} from './storage.js';
 import {createMastery} from './mastery.js';
 import {availableUnits,validateConfig} from './configuration.js';
 import {APP_VERSION,GENERATOR_VERSION} from './version.js';
+import {spriteMarkup,CHARACTER_GEAR,WEAPON_SPRITES} from './sprites.js';
 const $=id=>document.getElementById(id);
 const esc=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 function refreshSelectLabels(){for(const select of document.querySelectorAll('#startPanel select')){const label=select.parentElement.querySelector('.selectValue');if(label)label.textContent=select.selectedOptions[0]?.textContent||'선택하세요';}}
@@ -46,6 +47,11 @@ export function createV2(r,curriculum){
   </div><p class="playPolicy">⏱️ 게임 시간 무제한 · 전투 수학 문제는 답한 뒤 30초 간격</p><fieldset id="teacherSettings"><legend>수학 탐험 · 교사 설정</legend><label>목표 문항 수<input id="target" type="number" value="10" min="1" max="100"></label><input id="limit" type="hidden" value="0"><small>시간 제한 없이 탐험합니다. 정답·오답 모두 목표 문항 수에 포함합니다. 오답 피해 없이 해설을 읽고 다음 문제로 넘어갑니다.</small></fieldset>
   <details class="preferences"><summary>⚙️ 화면·접근성 설정</summary><div class="setupGrid"><label class="check"><input id="reducedMotion" type="checkbox">애니메이션 감소</label><label class="check"><input id="lowPower" type="checkbox">저사양 모드</label><label>문제 글자 크기<select id="fontSize"><option value="1">기본</option><option value="1.15">크게</option><option value="1.3">아주 크게</option></select></label></div></details><div id="historySummary" class="history"></div>`;
   layout();syncUnits();restoreSettings();decorateSelects();applySettings();r.setMuted(r.muted);
+  const previews=document.createElement('div');previews.className='equipmentPreviews';previews.id='equipmentPreviews';$('v2Setup').querySelector('.setupGrid').after(previews);
+  const preview=()=>{const c=CHARACTERS[$('character').value],w=WEAPONS[$('startingWeapon').value];previews.innerHTML=`<div class="equipmentPreview">${spriteMarkup(CHARACTER_GEAR[$('character').value])}<div><small>캐릭터 장비</small><strong>${c.name}</strong><span>${c.description}</span></div></div><div class="equipmentPreview">${spriteMarkup(WEAPON_SPRITES[$('startingWeapon').value])}<div><small>시작 무기</small><strong>${w.name}</strong><span>${w.evolution}으로 성장해요</span></div></div>`;};
+  for(const id of ['character','startingWeapon'])$(id).addEventListener('change',preview);preview();
+  const guide=document.createElement('div');guide.className='spriteGuide';guide.innerHTML=Object.values(r.itemTypes).filter(item=>item.sprite).map(item=>`<div>${spriteMarkup(item.sprite)}<strong>${item.name}</strong><small>${item.desc}</small></div>`).join('');$('tabContent2').append(guide);
+  $('startPanel').addEventListener('error',e=>{if(e.target.matches?.('.spriteIcon'))e.target.hidden=true;},true);
   for(const id of ['grade','domain'])$(id).addEventListener('change',syncUnits);
   const modeUI=()=>{$('teacherSettings').hidden=$('mode').value!=='explore';};$('mode').addEventListener('change',modeUI);modeUI();
   $('reducedMotion').addEventListener('change',e=>{settings.reduced=e.target.checked;applySettings();saveSettings();});$('lowPower').addEventListener('change',e=>{settings.low=e.target.checked;applySettings();saveSettings();});$('fontSize').addEventListener('change',e=>{settings.font=Number(e.target.value);applySettings();saveSettings();});

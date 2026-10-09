@@ -1,4 +1,5 @@
 // Extracted from upstream. Cross-system state is supplied by the shared runtime.
+import {spriteMarkup} from './sprites.js';
 export function createSystem(gameRuntime) {
 function stopJoystick(e) {
       if (e) e.preventDefault();
@@ -179,7 +180,7 @@ function openLevelUpPanel() {
       options.forEach(option => {
         const btn = document.createElement("button");
         btn.className = "upgradeBtn";
-        btn.innerHTML = `<span class="emoji">${option.emoji}</span><span class="title">${option.title}</span><span class="desc">${option.desc}</span>`;
+        btn.innerHTML = `<span class="emoji">${option.sprite?spriteMarkup(option.sprite):option.emoji}</span><span class="title">${option.title}</span><span class="desc">${option.desc}</span>`;
         btn.addEventListener("click", () => gameRuntime.chooseUpgrade(option));
         gameRuntime.upgradeChoices.appendChild(btn);
       });

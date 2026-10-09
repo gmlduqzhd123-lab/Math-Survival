@@ -1,5 +1,6 @@
 // Original item registry, extracted without changing its rewards.
-export function createItemTypes(gameRuntime){ return {
+import {ITEM_SPRITES} from './sprites.js';
+export function createItemTypes(gameRuntime){ const types = {
       heart: {
         icon: "❤️", name: "회복하트", color: "#fb7185",
         desc: "체력 +32",
@@ -165,4 +166,4 @@ export function createItemTypes(gameRuntime){ return {
           gameRuntime.sfx("dash");
         }
       }
-    }; }
+    };for(const [key,sprite] of Object.entries(ITEM_SPRITES))types[key].sprite=sprite;return types; }
