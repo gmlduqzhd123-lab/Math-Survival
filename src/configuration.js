@@ -14,7 +14,7 @@ export function validateConfig(config, curriculum) {
   if (!['explorer','mage','guardian'].includes(config.character) || !['storm','compass','fraction','lightning'].includes(config.weapon)) errors.push('캐릭터와 무기를 다시 선택하세요.');
   if (config.mode === 'explore') {
     if (!Number.isInteger(config.target) || config.target < 1 || config.target > 100) errors.push('목표는 1~100의 정수로 입력하세요.');
-    if (!Number.isInteger(config.limit) || config.limit < 30 || config.limit > 1800) errors.push('제한 시간은 30~1800초의 정수로 입력하세요.');
+    if (config.limit !== 0 && (!Number.isInteger(config.limit) || config.limit < 30 || config.limit > 1800)) errors.push('제한 시간은 무제한(0) 또는 30~1800초의 정수로 입력하세요.');
   }
   return errors;
 }

@@ -443,7 +443,7 @@ function update(dt, now) {
       gameRuntime.floatingTexts = gameRuntime.floatingTexts.filter(ft => ft.life > 0);
 
       if (gameRuntime.state.hp <= 0) gameRuntime.endGame(false);
-      else if (gameRuntime.state.time >= gameRuntime.state.winTime) gameRuntime.endGame(true);
+      else if (Number.isFinite(gameRuntime.state.winTime) && gameRuntime.state.time >= gameRuntime.state.winTime) gameRuntime.endGame(true);
 
       gameRuntime.hpEl.textContent = Math.max(0, Math.ceil(gameRuntime.state.hp));
       gameRuntime.scoreEl.textContent = gameRuntime.state.score;
