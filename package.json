@@ -1,6 +1,6 @@
 {
   "name": "math-survival-2",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "description": "Static educational canvas game based on ysschool Math Survival",
   "directories": {
     "doc": "docs",
@@ -12,6 +12,7 @@
     "test:browser": "node tests/browser-2.1.cjs",
     "test:devices": "node tests/mobile-tablet.cjs",
     "test:preferences": "node tests/preferences.cjs",
+    "test:typography": "node tests/typography.cjs",
     "test:baseline": "node tests/baseline.cjs",
     "build": "node scripts/build.mjs",
     "bank:generate": "node scripts/question-bank.mjs"

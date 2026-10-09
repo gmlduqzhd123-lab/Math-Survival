@@ -7,13 +7,15 @@ import {availableUnits,validateConfig} from './configuration.js';
 import {APP_VERSION,GENERATOR_VERSION} from './version.js';
 const $=id=>document.getElementById(id);
 const esc=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+function refreshSelectLabels(){for(const select of document.querySelectorAll('#startPanel select')){const label=select.parentElement.querySelector('.selectValue');if(label)label.textContent=select.selectedOptions[0]?.textContent||'선택하세요';}}
+function decorateSelects(){const root=$('startPanel');for(const select of root.querySelectorAll('select')){if(select.parentElement.classList.contains('selectField'))continue;const field=document.createElement('div'),value=document.createElement('span');field.className='selectField';value.className='selectValue';value.setAttribute('aria-hidden','true');select.before(field);field.append(select,value);}refreshSelectLabels();root.addEventListener('change',refreshSelectLabels);}
 export function createV2(r,curriculum){
  const settings={reduced:matchMedia('(prefers-reduced-motion: reduce)').matches,low:false,font:1};
  const store=createStore();let mastery=createMastery(store.data.mastery);
  let config={},answers=[],result=null,reviewTick=0,started=0,shown=0,sessionId='',finished=true,input=null,lastHud=-Infinity,notice='';
  const combat=createCombatV2(r,settings),s=r.state;combat.reset();
  function syncUnits(){const options=availableUnits({grade:Number($('grade').value),domain:$('domain').value,unit:'all'},curriculum);$('unit').innerHTML='<option value="all">選択 영역 전체</option>'.replace('選択','선택')+options.map(u=>'<option value="'+u.id+'">'+esc(u.name)+'</option>').join('');if(!options.length)notice='이 학년에는 선택한 영역의 단원이 없습니다. 다른 영역을 선택하세요.';else notice='';syncLevels();validate();}
- function syncLevels(){const units=availableUnits(configFromUI(),curriculum),supported=[1,2,3,4,5].filter(l=>$('unit').value==='all'||units.every(u=>u.supportedLevels.includes(l)));for(const o of $('mathLevel').options){o.disabled=!supported.includes(Number(o.value));o.hidden=o.disabled;}if(supported.length&&!supported.includes(Number($('mathLevel').value)))$('mathLevel').value=String(supported[0]);}
+ function syncLevels(){const units=availableUnits(configFromUI(),curriculum),supported=[1,2,3,4,5].filter(l=>$('unit').value==='all'||units.every(u=>u.supportedLevels.includes(l)));for(const o of $('mathLevel').options){o.disabled=!supported.includes(Number(o.value));o.hidden=o.disabled;}if(supported.length&&!supported.includes(Number($('mathLevel').value)))$('mathLevel').value=String(supported[0]);refreshSelectLabels();}
  function configFromUI(){return {grade:Number($('grade').value),domain:$('domain').value,unit:$('unit').value,level:Number($('mathLevel').value),auto:$('autoLevel').checked,mode:$('mode').value,target:Number($('target').value),limit:0,character:$('character').value,weapon:$('startingWeapon').value,map:r.mapSelect.value,combat:r.difficultyEl.value};}
  function validate(){const errors=validateConfig(configFromUI(),curriculum);$('configErrors').textContent=[notice,...errors].filter(Boolean).join(' ');$('startBtn').disabled=errors.length>0;return !errors.length;}
  function saveSettings(){try{localStorage.setItem('math-survival-2.settings',JSON.stringify({...configFromUI(),...settings,muted:r.muted}));}catch(e){$('configErrors').textContent='설정을 저장하지 못했습니다. '+e.message;}}
@@ -43,7 +45,7 @@ export function createV2(r,curriculum){
   <label class="check"><input type="checkbox" id="autoLevel" checked>단원별 새 문항 5개로 자동 난이도</label><small>도형 식별 단원은 1단계만 지원합니다.</small>
   </div><p class="playPolicy">⏱️ 게임 시간 무제한 · 전투 수학 문제는 답한 뒤 30초 간격</p><fieldset id="teacherSettings"><legend>수학 탐험 · 교사 설정</legend><label>목표 문항 수<input id="target" type="number" value="10" min="1" max="100"></label><input id="limit" type="hidden" value="0"><small>시간 제한 없이 탐험합니다. 정답·오답 모두 목표 문항 수에 포함합니다. 오답 피해 없이 해설을 읽고 다음 문제로 넘어갑니다.</small></fieldset>
   <details class="preferences"><summary>⚙️ 화면·접근성 설정</summary><div class="setupGrid"><label class="check"><input id="reducedMotion" type="checkbox">애니메이션 감소</label><label class="check"><input id="lowPower" type="checkbox">저사양 모드</label><label>문제 글자 크기<select id="fontSize"><option value="1">기본</option><option value="1.15">크게</option><option value="1.3">아주 크게</option></select></label></div></details><div id="historySummary" class="history"></div>`;
-  layout();syncUnits();restoreSettings();applySettings();r.setMuted(r.muted);
+  layout();syncUnits();restoreSettings();decorateSelects();applySettings();r.setMuted(r.muted);
   for(const id of ['grade','domain'])$(id).addEventListener('change',syncUnits);
   const modeUI=()=>{$('teacherSettings').hidden=$('mode').value!=='explore';};$('mode').addEventListener('change',modeUI);modeUI();
   $('reducedMotion').addEventListener('change',e=>{settings.reduced=e.target.checked;applySettings();saveSettings();});$('lowPower').addEventListener('change',e=>{settings.low=e.target.checked;applySettings();saveSettings();});$('fontSize').addEventListener('change',e=>{settings.font=Number(e.target.value);applySettings();saveSettings();});

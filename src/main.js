@@ -380,6 +380,7 @@ if(new URLSearchParams(location.search).has('qa')) window.__game = runtime;
       }
     });
 
+    document.fonts?.ready.then(()=>{for(const orb of answerOrbs)orb.labelKey=null;});
     syncCanvasViewport();
     makeDecorations();
     updateCamera();
