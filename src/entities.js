@@ -153,31 +153,34 @@ function drawBackground(now) {
       const endX = gameRuntime.state.cameraX + gameRuntime.canvas.width + grid;
       const startY = Math.floor(gameRuntime.state.cameraY / grid) * grid;
       const endY = gameRuntime.state.cameraY + gameRuntime.canvas.height + grid;
+      gameRuntime.ctx.beginPath();
       for (let x = startX; x < endX; x += grid) {
-        gameRuntime.ctx.beginPath();
         gameRuntime.ctx.moveTo(x - gameRuntime.state.cameraX, 0);
         gameRuntime.ctx.lineTo(x - gameRuntime.state.cameraX, gameRuntime.canvas.height);
-        gameRuntime.ctx.stroke();
       }
       for (let y = startY; y < endY; y += grid) {
-        gameRuntime.ctx.beginPath();
         gameRuntime.ctx.moveTo(0, y - gameRuntime.state.cameraY);
         gameRuntime.ctx.lineTo(gameRuntime.canvas.width, y - gameRuntime.state.cameraY);
-        gameRuntime.ctx.stroke();
       }
+      gameRuntime.ctx.stroke();
       gameRuntime.ctx.restore();
 
       gameRuntime.ctx.save();
       for (const d of gameRuntime.decorations) {
         if (!gameRuntime.isNearScreen(d.x, d.y, 60)) continue;
+        // Bake the rotated emoji once; moving the camera only copies the sprite.
+        const scale=Math.min(2,gameRuntime.viewport.dpr);
+        if(!d.sprite||d.spriteScale!==scale){
+          const side=Math.ceil(d.size*2),sprite=document.createElement('canvas');
+          sprite.width=sprite.height=Math.ceil(side*scale);
+          const context=sprite.getContext('2d');context.scale(scale,scale);
+          context.translate(side/2,side/2);context.rotate(d.rot);
+          context.font=`${d.size}px Apple Color Emoji, Segoe UI Emoji, Jua, Malgun Gothic, sans-serif`;
+          context.textAlign='center';context.textBaseline='middle';context.fillText(d.icon,0,0);
+          d.sprite=sprite;d.spriteScale=scale;d.spriteSide=side;
+        }
         gameRuntime.ctx.globalAlpha = d.alpha;
-        gameRuntime.ctx.translate(gameRuntime.worldToScreenX(d.x), gameRuntime.worldToScreenY(d.y));
-        gameRuntime.ctx.rotate(d.rot);
-        gameRuntime.ctx.font = `${d.size}px Apple Color Emoji, Segoe UI Emoji, Jua, Malgun Gothic, sans-serif`;
-        gameRuntime.ctx.textAlign = "center";
-        gameRuntime.ctx.textBaseline = "middle";
-        gameRuntime.ctx.fillText(d.icon, 0, 0);
-        gameRuntime.ctx.setTransform(gameRuntime.viewport.dpr, 0, 0, gameRuntime.viewport.dpr, 0, 0);
+        gameRuntime.ctx.drawImage(d.sprite,gameRuntime.worldToScreenX(d.x)-d.spriteSide/2,gameRuntime.worldToScreenY(d.y)-d.spriteSide/2,d.spriteSide,d.spriteSide);
       }
       gameRuntime.ctx.restore();
       gameRuntime.ctx.globalAlpha = 1;
@@ -439,7 +442,6 @@ function drawMiniMap() {
 function draw() {
       const now = gameRuntime.gameNow();
       gameRuntime.ctx.setTransform(gameRuntime.viewport.dpr,0,0,gameRuntime.viewport.dpr,0,0);
-      gameRuntime.ctx.clearRect(0, 0, gameRuntime.canvas.width, gameRuntime.canvas.height);
       gameRuntime.drawBackground(now);
       gameRuntime.v2.draw(now);
 

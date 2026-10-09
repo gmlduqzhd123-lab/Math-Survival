@@ -25,7 +25,7 @@ const gameNow = (...args) => systems.gameNow(...args);
     const surface = document.getElementById("game");
     const viewport={width:1000,height:650,dpr:1,scale:1};
     const canvas={get width(){return viewport.width;},get height(){return viewport.height;}};
-    const ctx = surface.getContext("2d");
+    const ctx = surface.getContext("2d", {alpha:false});
 
     const syncCanvasViewport = (...args) => systems.syncCanvasViewport(...args);
 

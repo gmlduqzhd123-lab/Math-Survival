@@ -1,11 +1,12 @@
 // Extracted from upstream. Cross-system state is supplied by the shared runtime.
+import {renderDpr} from './render-budget.js';
 export function createSystem(gameRuntime) {
 function gameNow(){ return gameRuntime.clock; }
 
 function syncCanvasViewport() {
       const box=gameRuntime.surface.getBoundingClientRect(),v=gameRuntime.viewport;
       if(!box.width||!box.height)return false;
-      const width=box.width,height=box.height,dpr=Math.min(3,window.devicePixelRatio||1);
+      const width=box.width,height=box.height,dpr=renderDpr(width,height,window.devicePixelRatio);
       const changed=v.width!==width||v.height!==height||v.dpr!==dpr;
       v.width=width;v.height=height;v.dpr=dpr;
       if(changed){gameRuntime.surface.width=Math.round(width*dpr);gameRuntime.surface.height=Math.round(height*dpr);}
@@ -445,14 +446,17 @@ function update(dt, now) {
       if (gameRuntime.state.hp <= 0) gameRuntime.endGame(false);
       else if (Number.isFinite(gameRuntime.state.winTime) && gameRuntime.state.time >= gameRuntime.state.winTime) gameRuntime.endGame(true);
 
-      gameRuntime.hpEl.textContent = Math.max(0, Math.ceil(gameRuntime.state.hp));
-      gameRuntime.scoreEl.textContent = gameRuntime.state.score;
-      gameRuntime.levelEl.textContent = gameRuntime.state.level;
-      gameRuntime.expEl.textContent = Math.floor((gameRuntime.state.exp / gameRuntime.expNeed()) * 100);
-      gameRuntime.weaponLevelEl.textContent = gameRuntime.state.weaponLevel;
-      gameRuntime.comboEl.textContent = gameRuntime.state.combo;
-      gameRuntime.shieldEl.textContent = gameRuntime.state.shield;
-      gameRuntime.timeEl.textContent = Math.floor(gameRuntime.state.time);
+      // Replacing identical text nodes still invalidates layout on every physics step.
+      for (const [element,value] of [
+        [gameRuntime.hpEl,Math.max(0,Math.ceil(gameRuntime.state.hp))],
+        [gameRuntime.scoreEl,gameRuntime.state.score],
+        [gameRuntime.levelEl,gameRuntime.state.level],
+        [gameRuntime.expEl,Math.floor((gameRuntime.state.exp/gameRuntime.expNeed())*100)],
+        [gameRuntime.weaponLevelEl,gameRuntime.state.weaponLevel],
+        [gameRuntime.comboEl,gameRuntime.state.combo],
+        [gameRuntime.shieldEl,gameRuntime.state.shield],
+        [gameRuntime.timeEl,Math.floor(gameRuntime.state.time)]
+      ]) { const text=String(value);if(element.textContent!==text)element.textContent=text; }
     }
 
 function loop(now) {

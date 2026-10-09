@@ -1,0 +1,100 @@
+{
+  "environment": "Windows Edge headless, synthetic DPR 3, seeded survival, HP protected and growth dialog suppressed",
+  "beforeCommit": "bc60b212688581c17d5ec8429c3aefe0978f638d",
+  "before": [
+    {
+      "name": "desktop",
+      "width": 1920,
+      "height": 1080,
+      "deviceDpr": 3,
+      "frames": {
+        "count": 267,
+        "median": 33.400000000000546,
+        "p95": 100,
+        "over50": 95
+      },
+      "hudMutations": 5824,
+      "viewport": {
+        "width": 1904,
+        "height": 694.40625,
+        "dpr": 3,
+        "scale": 1
+      },
+      "backingPixels": 11898096,
+      "moved": 1971.2977349958996,
+      "simulationMs": 12133.333333333148,
+      "running": true
+    },
+    {
+      "name": "phone",
+      "width": 390,
+      "height": 844,
+      "deviceDpr": 3,
+      "frames": {
+        "count": 711,
+        "median": 16.699999999999818,
+        "p95": 16.80000000000109,
+        "over50": 0
+      },
+      "hudMutations": 5776,
+      "viewport": {
+        "width": 378,
+        "height": 386.15625,
+        "dpr": 3,
+        "scale": 1
+      },
+      "backingPixels": 1313172,
+      "moved": 1677.4689743777674,
+      "simulationMs": 12033.333333333143,
+      "running": true
+    }
+  ],
+  "after": [
+    {
+      "name": "desktop",
+      "width": 1920,
+      "height": 1080,
+      "deviceDpr": 3,
+      "frames": {
+        "count": 713,
+        "median": 16.699999999999818,
+        "p95": 16.899999999999636,
+        "over50": 1
+      },
+      "hudMutations": 23,
+      "viewport": {
+        "width": 1904,
+        "height": 764.609375,
+        "dpr": 1.4355137145618224,
+        "scale": 1
+      },
+      "backingPixels": 3000834,
+      "moved": 1749.5259243577896,
+      "simulationMs": 11983.333333333143,
+      "running": true
+    },
+    {
+      "name": "phone",
+      "width": 390,
+      "height": 844,
+      "deviceDpr": 3,
+      "frames": {
+        "count": 720,
+        "median": 16.699999999999818,
+        "p95": 16.899999999999636,
+        "over50": 0
+      },
+      "hudMutations": 26,
+      "viewport": {
+        "width": 378,
+        "height": 386.15625,
+        "dpr": 3,
+        "scale": 1
+      },
+      "backingPixels": 1313172,
+      "moved": 1669.4917310367248,
+      "simulationMs": 12033.333333333145,
+      "running": true
+    }
+  ]
+}

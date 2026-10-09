@@ -15,7 +15,8 @@
     "test:typography": "node tests/typography.cjs",
     "test:baseline": "node tests/baseline.cjs",
     "build": "node scripts/build.mjs",
-    "bank:generate": "node scripts/question-bank.mjs"
+    "bank:generate": "node scripts/question-bank.mjs",
+    "test:movement": "node tests/movement.cjs"
   },
   "keywords": [],
   "author": "",
