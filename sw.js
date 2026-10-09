@@ -11,6 +11,7 @@ const APP_SHELL = [
     './ys-install.js',
     './src/original.css',
     './src/v2.css',
+    './src/question-visual.js',
     './src/layout.css',
     './src/typography.css',
     './src/sprites.css',

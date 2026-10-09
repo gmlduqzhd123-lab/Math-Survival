@@ -17,7 +17,8 @@
     "build": "node scripts/build.mjs",
     "bank:generate": "node scripts/question-bank.mjs",
     "test:movement": "node tests/movement.cjs",
-    "test:sprites": "node tests/sprites.cjs"
+    "test:sprites": "node tests/sprites.cjs",
+    "test:curriculum-screen": "node tests/curriculum-screen.cjs"
   },
   "keywords": [],
   "author": "",
