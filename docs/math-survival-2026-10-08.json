@@ -1,0 +1,187 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-08T23:25:20.371Z",
+  "config": {
+    "grade": 3,
+    "domain": "all",
+    "unit": "all",
+    "level": 2,
+    "auto": true,
+    "mode": "survival",
+    "target": 10,
+    "limit": 180,
+    "character": "explorer",
+    "weapon": "storm"
+  },
+  "score": 1208,
+  "survivalSeconds": 0,
+  "level": 2,
+  "kills": 2,
+  "correct": 1,
+  "wrong": 1,
+  "accuracy": 50,
+  "bestCombo": 5,
+  "domains": {
+    "number": {
+      "correct": 1,
+      "total": 1,
+      "accuracy": 100
+    },
+    "geometry": {
+      "correct": 0,
+      "total": 1,
+      "accuracy": 0
+    }
+  },
+  "weakProblems": [
+    {
+      "text": "사각형의 변은 몇 개인가요?",
+      "selected": "5",
+      "answer": "4",
+      "explain": "사각형에는 변이 4개 있습니다.",
+      "unit": "g3-shape"
+    }
+  ],
+  "reviewProblems": [
+    {
+      "id": "g3-shape:shapes:4",
+      "grade": 3,
+      "domain": "geometry",
+      "unit": "g3-shape",
+      "unitName": "다각형의 변",
+      "level": 2,
+      "type": "shapes",
+      "operands": [
+        4
+      ],
+      "text": "사각형의 변은 몇 개인가요?",
+      "answer": "4",
+      "explain": "사각형에는 변이 4개 있습니다.",
+      "options": [
+        "5",
+        "3",
+        "4",
+        "6"
+      ],
+      "problem": {
+        "id": "g3-shape:shapes:4",
+        "grade": 3,
+        "domain": "geometry",
+        "unit": "g3-shape",
+        "unitName": "다각형의 변",
+        "level": 2,
+        "type": "shapes",
+        "operands": [
+          4
+        ],
+        "text": "사각형의 변은 몇 개인가요?",
+        "answer": "4",
+        "explain": "사각형에는 변이 4개 있습니다.",
+        "options": [
+          "5",
+          "3",
+          "4",
+          "6"
+        ]
+      },
+      "selected": "5",
+      "correct": false,
+      "elapsed": 3
+    }
+  ],
+  "answers": [
+    {
+      "id": "g3-dec:decimal:2:7",
+      "grade": 3,
+      "domain": "number",
+      "unit": "g3-dec",
+      "unitName": "소수의 덧셈 기초",
+      "level": 2,
+      "type": "decimal",
+      "operands": [
+        2,
+        7
+      ],
+      "text": "0.2 + 0.7 = ?",
+      "answer": "0.9",
+      "explain": "소수점을 맞추어 더하면 0.9입니다. (2+7) ÷ 10",
+      "options": [
+        "0.9",
+        "1.1",
+        "0.8",
+        "1"
+      ],
+      "problem": {
+        "id": "g3-dec:decimal:2:7",
+        "grade": 3,
+        "domain": "number",
+        "unit": "g3-dec",
+        "unitName": "소수의 덧셈 기초",
+        "level": 2,
+        "type": "decimal",
+        "operands": [
+          2,
+          7
+        ],
+        "text": "0.2 + 0.7 = ?",
+        "answer": "0.9",
+        "explain": "소수점을 맞추어 더하면 0.9입니다. (2+7) ÷ 10",
+        "options": [
+          "0.9",
+          "1.1",
+          "0.8",
+          "1"
+        ]
+      },
+      "selected": "0.9",
+      "correct": true,
+      "elapsed": 3
+    },
+    {
+      "id": "g3-shape:shapes:4",
+      "grade": 3,
+      "domain": "geometry",
+      "unit": "g3-shape",
+      "unitName": "다각형의 변",
+      "level": 2,
+      "type": "shapes",
+      "operands": [
+        4
+      ],
+      "text": "사각형의 변은 몇 개인가요?",
+      "answer": "4",
+      "explain": "사각형에는 변이 4개 있습니다.",
+      "options": [
+        "5",
+        "3",
+        "4",
+        "6"
+      ],
+      "problem": {
+        "id": "g3-shape:shapes:4",
+        "grade": 3,
+        "domain": "geometry",
+        "unit": "g3-shape",
+        "unitName": "다각형의 변",
+        "level": 2,
+        "type": "shapes",
+        "operands": [
+          4
+        ],
+        "text": "사각형의 변은 몇 개인가요?",
+        "answer": "4",
+        "explain": "사각형에는 변이 4개 있습니다.",
+        "options": [
+          "5",
+          "3",
+          "4",
+          "6"
+        ]
+      },
+      "selected": "5",
+      "correct": false,
+      "elapsed": 3
+    }
+  ],
+  "outcome": "quit"
+}

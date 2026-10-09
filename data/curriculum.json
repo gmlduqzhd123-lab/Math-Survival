@@ -1,0 +1,12 @@
+{
+ "schemaVersion":1,"description":"초등 1~6학년 학습 범위를 바탕으로 구성한 연습 단원. 학교별 교과서 단원 번호와 다를 수 있습니다.",
+ "domains":{"number":"수와 연산","geometry":"도형과 측정","patterns":"변화와 관계","data":"자료와 가능성"},
+ "grades":[
+ {"grade":1,"units":[{"id":"g1-add","name":"한 자리 수 덧셈","domain":"number","type":"add"},{"id":"g1-sub","name":"10 이하 수 뺄셈","domain":"number","type":"subtract"},{"id":"g1-shapes","name":"삼각형과 사각형","domain":"geometry","type":"shapes"},{"id":"g1-pattern","name":"수의 규칙 찾기","domain":"patterns","type":"patterns"}]},
+ {"grade":2,"units":[{"id":"g2-add","name":"두 자리 수 덧셈","domain":"number","type":"add"},{"id":"g2-sub","name":"두 자리 수 뺄셈","domain":"number","type":"subtract"},{"id":"g2-mul","name":"곱셈구구","domain":"number","type":"multiply"},{"id":"g2-length","name":"m와 cm","domain":"geometry","type":"length"},{"id":"g2-pattern","name":"수의 규칙","domain":"patterns","type":"patterns"}]},
+ {"grade":3,"units":[{"id":"g3-mul","name":"곱셈","domain":"number","type":"multiply"},{"id":"g3-div","name":"나눗셈","domain":"number","type":"divide"},{"id":"g3-dec","name":"소수의 덧셈 기초","domain":"number","type":"decimal"},{"id":"g3-time","name":"분과 초","domain":"geometry","type":"time"},{"id":"g3-shape","name":"다각형의 변","domain":"geometry","type":"shapes"}]},
+ {"grade":4,"units":[{"id":"g4-frac","name":"같은 분모 분수의 덧셈","domain":"number","type":"fraction"},{"id":"g4-dec","name":"소수의 덧셈","domain":"number","type":"decimal"},{"id":"g4-angle","name":"삼각형의 각","domain":"geometry","type":"angle"},{"id":"g4-pattern","name":"규칙과 대응","domain":"patterns","type":"patterns"}]},
+ {"grade":5,"units":[{"id":"g5-frac","name":"다른 분모 분수의 덧셈","domain":"number","type":"unlikeFraction"},{"id":"g5-fracmul","name":"분수의 곱셈","domain":"number","type":"fractionMultiply"},{"id":"g5-dec","name":"소수의 곱셈","domain":"number","type":"decimalMultiply"},{"id":"g5-area","name":"직사각형 넓이","domain":"geometry","type":"area"},{"id":"g5-avg","name":"평균","domain":"data","type":"average"}]},
+ {"grade":6,"units":[{"id":"g6-fracdiv","name":"분수의 나눗셈","domain":"number","type":"fractionDivide"},{"id":"g6-decdiv","name":"소수의 나눗셈","domain":"number","type":"decimalDivide"},{"id":"g6-volume","name":"직육면체 부피","domain":"geometry","type":"volume"},{"id":"g6-percent","name":"백분율","domain":"patterns","type":"percent"},{"id":"g6-ratio","name":"비례식","domain":"patterns","type":"ratio"},{"id":"g6-avg","name":"평균 복습","domain":"data","type":"average"}]}
+ ]
+}

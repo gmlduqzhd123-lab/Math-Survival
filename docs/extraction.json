@@ -1,0 +1,82 @@
+{
+  "source": "https://github.com/gmlduqzhd123-lab/ysschool/blob/main/public/apps/math-survival.html",
+  "groups": {
+    "core": [
+      "gameNow",
+      "syncCanvasViewport",
+      "rand",
+      "randint",
+      "clamp",
+      "distance",
+      "worldToScreenX",
+      "worldToScreenY",
+      "isNearScreen",
+      "updateCamera",
+      "randomPointAroundPlayer",
+      "randomVisiblePoint",
+      "resetGame",
+      "update",
+      "loop",
+      "quitGame",
+      "returnToMainMenu"
+    ],
+    "entities": [
+      "spawnEnemy",
+      "spawnBoss",
+      "updatePet",
+      "petPosition",
+      "makeDecorations",
+      "makePortals",
+      "checkPortals",
+      "drawBackground",
+      "drawCutePlayer",
+      "drawEnemy",
+      "drawPet",
+      "drawMiniMap",
+      "draw"
+    ],
+    "combat": [
+      "spawnExpDrops",
+      "collectExpDrop",
+      "spawnItem",
+      "applyItem",
+      "shoot",
+      "fireLaser",
+      "fireBoomerang",
+      "fireChalkRain",
+      "burst",
+      "explode",
+      "expNeed",
+      "checkLevelUp",
+      "upgradeOptions",
+      "chooseUpgrade",
+      "giveChestReward"
+    ],
+    "math": [
+      "makeProblem",
+      "spawnQuiz",
+      "resolveAnswer"
+    ],
+    "ui": [
+      "stopJoystick",
+      "updateJoystick",
+      "stopDash",
+      "initAudio",
+      "setMuted",
+      "playTone",
+      "startPersistentMusic",
+      "sfx",
+      "showToast",
+      "scorePlus",
+      "unlockAchievement",
+      "createMission",
+      "updateMission",
+      "completeMission",
+      "updateMissionUI",
+      "openLevelUpPanel",
+      "updateWeaponInfo",
+      "endGame",
+      "updateBuffUI"
+    ]
+  }
+}

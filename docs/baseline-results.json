@@ -1,0 +1,26 @@
+{
+  "result": {
+    "started": true,
+    "movement": true,
+    "spawn": true,
+    "attack": true,
+    "collision": true,
+    "quiz": true,
+    "correct": true,
+    "wrong": true,
+    "boss": true,
+    "level": true,
+    "upgrade": true,
+    "experience": true,
+    "item": true,
+    "audio": true,
+    "touch": true,
+    "end": true,
+    "restart": true
+  },
+  "errors": [],
+  "limitations": [
+    "터치는 DOM 존재만 확인. 실제 터치 회귀는 2.0에서 수행.",
+    "사운드는 AudioContext 초기화 확인. 청취 검증 제외."
+  ]
+}

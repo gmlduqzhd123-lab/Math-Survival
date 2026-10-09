@@ -1,0 +1,3231 @@
+{
+  "schemaVersion": 1,
+  "description": "문항 생성기의 단원별 1~5단계 검증용 대표 문항. 실제 게임은 curriculum.json을 기반으로 매번 생성합니다.",
+  "problems": [
+    {
+      "id": "g1-add:add:3:1",
+      "grade": 1,
+      "domain": "number",
+      "unit": "g1-add",
+      "unitName": "한 자리 수 덧셈",
+      "level": 1,
+      "type": "add",
+      "operands": [
+        3,
+        1
+      ],
+      "text": "3 + 1 = ?",
+      "answer": "4",
+      "explain": "3에 1를 더하면 4입니다. 자리별로 더합니다.",
+      "options": [
+        "3",
+        "6",
+        "5",
+        "4"
+      ]
+    },
+    {
+      "id": "g1-add:add:2:5",
+      "grade": 1,
+      "domain": "number",
+      "unit": "g1-add",
+      "unitName": "한 자리 수 덧셈",
+      "level": 2,
+      "type": "add",
+      "operands": [
+        2,
+        5
+      ],
+      "text": "2 + 5 = ?",
+      "answer": "7",
+      "explain": "2에 5를 더하면 7입니다. 자리별로 더합니다.",
+      "options": [
+        "9",
+        "7",
+        "6",
+        "8"
+      ]
+    },
+    {
+      "id": "g1-add:add:6:1",
+      "grade": 1,
+      "domain": "number",
+      "unit": "g1-add",
+      "unitName": "한 자리 수 덧셈",
+      "level": 3,
+      "type": "add",
+      "operands": [
+        6,
+        1
+      ],
+      "text": "6 + 1 = ?",
+      "answer": "7",
+      "explain": "6에 1를 더하면 7입니다. 자리별로 더합니다.",
+      "options": [
+        "8",
+        "9",
+        "7",
+        "6"
+      ]
+    },
+    {
+      "id": "g1-add:add:5:1",
+      "grade": 1,
+      "domain": "number",
+      "unit": "g1-add",
+      "unitName": "한 자리 수 덧셈",
+      "level": 4,
+      "type": "add",
+      "operands": [
+        5,
+        1
+      ],
+      "text": "5 + 1 = ?",
+      "answer": "6",
+      "explain": "5에 1를 더하면 6입니다. 자리별로 더합니다.",
+      "options": [
+        "8",
+        "5",
+        "7",
+        "6"
+      ]
+    },
+    {
+      "id": "g1-add:add:3:8",
+      "grade": 1,
+      "domain": "number",
+      "unit": "g1-add",
+      "unitName": "한 자리 수 덧셈",
+      "level": 5,
+      "type": "add",
+      "operands": [
+        3,
+        8
+      ],
+      "text": "3 + 8 = ?",
+      "answer": "11",
+      "explain": "3에 8를 더하면 11입니다. 자리별로 더합니다.",
+      "options": [
+        "10",
+        "13",
+        "12",
+        "11"
+      ]
+    },
+    {
+      "id": "g1-sub:subtract:3:3",
+      "grade": 1,
+      "domain": "number",
+      "unit": "g1-sub",
+      "unitName": "10 이하 수 뺄셈",
+      "level": 1,
+      "type": "subtract",
+      "operands": [
+        3,
+        3
+      ],
+      "text": "3 − 3 = ?",
+      "answer": "0",
+      "explain": "3에서 3만큼 빼면 0입니다.",
+      "options": [
+        "0",
+        "2",
+        "3",
+        "1"
+      ]
+    },
+    {
+      "id": "g1-sub:subtract:5:4",
+      "grade": 1,
+      "domain": "number",
+      "unit": "g1-sub",
+      "unitName": "10 이하 수 뺄셈",
+      "level": 2,
+      "type": "subtract",
+      "operands": [
+        5,
+        4
+      ],
+      "text": "5 − 4 = ?",
+      "answer": "1",
+      "explain": "5에서 4만큼 빼면 1입니다.",
+      "options": [
+        "3",
+        "0",
+        "1",
+        "2"
+      ]
+    },
+    {
+      "id": "g1-sub:subtract:7:7",
+      "grade": 1,
+      "domain": "number",
+      "unit": "g1-sub",
+      "unitName": "10 이하 수 뺄셈",
+      "level": 3,
+      "type": "subtract",
+      "operands": [
+        7,
+        7
+      ],
+      "text": "7 − 7 = ?",
+      "answer": "0",
+      "explain": "7에서 7만큼 빼면 0입니다.",
+      "options": [
+        "2",
+        "0",
+        "3",
+        "1"
+      ]
+    },
+    {
+      "id": "g1-sub:subtract:2:1",
+      "grade": 1,
+      "domain": "number",
+      "unit": "g1-sub",
+      "unitName": "10 이하 수 뺄셈",
+      "level": 4,
+      "type": "subtract",
+      "operands": [
+        2,
+        1
+      ],
+      "text": "2 − 1 = ?",
+      "answer": "1",
+      "explain": "2에서 1만큼 빼면 1입니다.",
+      "options": [
+        "0",
+        "3",
+        "2",
+        "1"
+      ]
+    },
+    {
+      "id": "g1-sub:subtract:4:4",
+      "grade": 1,
+      "domain": "number",
+      "unit": "g1-sub",
+      "unitName": "10 이하 수 뺄셈",
+      "level": 5,
+      "type": "subtract",
+      "operands": [
+        4,
+        4
+      ],
+      "text": "4 − 4 = ?",
+      "answer": "0",
+      "explain": "4에서 4만큼 빼면 0입니다.",
+      "options": [
+        "1",
+        "3",
+        "2",
+        "0"
+      ]
+    },
+    {
+      "id": "g1-shapes:shapes:4",
+      "grade": 1,
+      "domain": "geometry",
+      "unit": "g1-shapes",
+      "unitName": "삼각형과 사각형",
+      "level": 1,
+      "type": "shapes",
+      "operands": [
+        4
+      ],
+      "text": "사각형의 변은 몇 개인가요?",
+      "answer": "4",
+      "explain": "사각형에는 변이 4개 있습니다.",
+      "options": [
+        "3",
+        "4",
+        "6",
+        "5"
+      ]
+    },
+    {
+      "id": "g1-shapes:shapes:3",
+      "grade": 1,
+      "domain": "geometry",
+      "unit": "g1-shapes",
+      "unitName": "삼각형과 사각형",
+      "level": 2,
+      "type": "shapes",
+      "operands": [
+        3
+      ],
+      "text": "삼각형의 변은 몇 개인가요?",
+      "answer": "3",
+      "explain": "삼각형에는 변이 3개 있습니다.",
+      "options": [
+        "2",
+        "5",
+        "3",
+        "4"
+      ]
+    },
+    {
+      "id": "g1-shapes:shapes:4",
+      "grade": 1,
+      "domain": "geometry",
+      "unit": "g1-shapes",
+      "unitName": "삼각형과 사각형",
+      "level": 3,
+      "type": "shapes",
+      "operands": [
+        4
+      ],
+      "text": "사각형의 변은 몇 개인가요?",
+      "answer": "4",
+      "explain": "사각형에는 변이 4개 있습니다.",
+      "options": [
+        "3",
+        "5",
+        "4",
+        "6"
+      ]
+    },
+    {
+      "id": "g1-shapes:shapes:3",
+      "grade": 1,
+      "domain": "geometry",
+      "unit": "g1-shapes",
+      "unitName": "삼각형과 사각형",
+      "level": 4,
+      "type": "shapes",
+      "operands": [
+        3
+      ],
+      "text": "삼각형의 변은 몇 개인가요?",
+      "answer": "3",
+      "explain": "삼각형에는 변이 3개 있습니다.",
+      "options": [
+        "4",
+        "5",
+        "3",
+        "2"
+      ]
+    },
+    {
+      "id": "g1-shapes:shapes:4",
+      "grade": 1,
+      "domain": "geometry",
+      "unit": "g1-shapes",
+      "unitName": "삼각형과 사각형",
+      "level": 5,
+      "type": "shapes",
+      "operands": [
+        4
+      ],
+      "text": "사각형의 변은 몇 개인가요?",
+      "answer": "4",
+      "explain": "사각형에는 변이 4개 있습니다.",
+      "options": [
+        "5",
+        "3",
+        "6",
+        "4"
+      ]
+    },
+    {
+      "id": "g1-pattern:patterns:7:3",
+      "grade": 1,
+      "domain": "patterns",
+      "unit": "g1-pattern",
+      "unitName": "수의 규칙 찾기",
+      "level": 1,
+      "type": "patterns",
+      "operands": [
+        7,
+        3
+      ],
+      "text": "7, 10, 13, □. 빈칸은?",
+      "answer": "16",
+      "explain": "3씩 커지는 규칙이므로 다음 수는 16입니다.",
+      "options": [
+        "15",
+        "16",
+        "17",
+        "18"
+      ]
+    },
+    {
+      "id": "g1-pattern:patterns:2:4",
+      "grade": 1,
+      "domain": "patterns",
+      "unit": "g1-pattern",
+      "unitName": "수의 규칙 찾기",
+      "level": 2,
+      "type": "patterns",
+      "operands": [
+        2,
+        4
+      ],
+      "text": "2, 6, 10, □. 빈칸은?",
+      "answer": "14",
+      "explain": "4씩 커지는 규칙이므로 다음 수는 14입니다.",
+      "options": [
+        "14",
+        "16",
+        "13",
+        "15"
+      ]
+    },
+    {
+      "id": "g1-pattern:patterns:13:6",
+      "grade": 1,
+      "domain": "patterns",
+      "unit": "g1-pattern",
+      "unitName": "수의 규칙 찾기",
+      "level": 3,
+      "type": "patterns",
+      "operands": [
+        13,
+        6
+      ],
+      "text": "13, 19, 25, □. 빈칸은?",
+      "answer": "31",
+      "explain": "6씩 커지는 규칙이므로 다음 수는 31입니다.",
+      "options": [
+        "31",
+        "32",
+        "33",
+        "30"
+      ]
+    },
+    {
+      "id": "g1-pattern:patterns:12:2",
+      "grade": 1,
+      "domain": "patterns",
+      "unit": "g1-pattern",
+      "unitName": "수의 규칙 찾기",
+      "level": 4,
+      "type": "patterns",
+      "operands": [
+        12,
+        2
+      ],
+      "text": "12, 14, 16, □. 빈칸은?",
+      "answer": "18",
+      "explain": "2씩 커지는 규칙이므로 다음 수는 18입니다.",
+      "options": [
+        "17",
+        "19",
+        "18",
+        "20"
+      ]
+    },
+    {
+      "id": "g1-pattern:patterns:16:13",
+      "grade": 1,
+      "domain": "patterns",
+      "unit": "g1-pattern",
+      "unitName": "수의 규칙 찾기",
+      "level": 5,
+      "type": "patterns",
+      "operands": [
+        16,
+        13
+      ],
+      "text": "16, 29, 42, □. 빈칸은?",
+      "answer": "55",
+      "explain": "13씩 커지는 규칙이므로 다음 수는 55입니다.",
+      "options": [
+        "57",
+        "56",
+        "55",
+        "54"
+      ]
+    },
+    {
+      "id": "g2-add:add:8:16",
+      "grade": 2,
+      "domain": "number",
+      "unit": "g2-add",
+      "unitName": "두 자리 수 덧셈",
+      "level": 1,
+      "type": "add",
+      "operands": [
+        8,
+        16
+      ],
+      "text": "8 + 16 = ?",
+      "answer": "24",
+      "explain": "8에 16를 더하면 24입니다. 자리별로 더합니다.",
+      "options": [
+        "26",
+        "23",
+        "25",
+        "24"
+      ]
+    },
+    {
+      "id": "g2-add:add:30:32",
+      "grade": 2,
+      "domain": "number",
+      "unit": "g2-add",
+      "unitName": "두 자리 수 덧셈",
+      "level": 2,
+      "type": "add",
+      "operands": [
+        30,
+        32
+      ],
+      "text": "30 + 32 = ?",
+      "answer": "62",
+      "explain": "30에 32를 더하면 62입니다. 자리별로 더합니다.",
+      "options": [
+        "63",
+        "61",
+        "64",
+        "62"
+      ]
+    },
+    {
+      "id": "g2-add:add:38:17",
+      "grade": 2,
+      "domain": "number",
+      "unit": "g2-add",
+      "unitName": "두 자리 수 덧셈",
+      "level": 3,
+      "type": "add",
+      "operands": [
+        38,
+        17
+      ],
+      "text": "38 + 17 = ?",
+      "answer": "55",
+      "explain": "38에 17를 더하면 55입니다. 자리별로 더합니다.",
+      "options": [
+        "55",
+        "57",
+        "54",
+        "56"
+      ]
+    },
+    {
+      "id": "g2-add:add:22:61",
+      "grade": 2,
+      "domain": "number",
+      "unit": "g2-add",
+      "unitName": "두 자리 수 덧셈",
+      "level": 4,
+      "type": "add",
+      "operands": [
+        22,
+        61
+      ],
+      "text": "22 + 61 = ?",
+      "answer": "83",
+      "explain": "22에 61를 더하면 83입니다. 자리별로 더합니다.",
+      "options": [
+        "85",
+        "82",
+        "84",
+        "83"
+      ]
+    },
+    {
+      "id": "g2-add:add:35:68",
+      "grade": 2,
+      "domain": "number",
+      "unit": "g2-add",
+      "unitName": "두 자리 수 덧셈",
+      "level": 5,
+      "type": "add",
+      "operands": [
+        35,
+        68
+      ],
+      "text": "35 + 68 = ?",
+      "answer": "103",
+      "explain": "35에 68를 더하면 103입니다. 자리별로 더합니다.",
+      "options": [
+        "104",
+        "102",
+        "103",
+        "105"
+      ]
+    },
+    {
+      "id": "g2-sub:subtract:17:3",
+      "grade": 2,
+      "domain": "number",
+      "unit": "g2-sub",
+      "unitName": "두 자리 수 뺄셈",
+      "level": 1,
+      "type": "subtract",
+      "operands": [
+        17,
+        3
+      ],
+      "text": "17 − 3 = ?",
+      "answer": "14",
+      "explain": "17에서 3만큼 빼면 14입니다.",
+      "options": [
+        "14",
+        "15",
+        "13",
+        "16"
+      ]
+    },
+    {
+      "id": "g2-sub:subtract:11:9",
+      "grade": 2,
+      "domain": "number",
+      "unit": "g2-sub",
+      "unitName": "두 자리 수 뺄셈",
+      "level": 2,
+      "type": "subtract",
+      "operands": [
+        11,
+        9
+      ],
+      "text": "11 − 9 = ?",
+      "answer": "2",
+      "explain": "11에서 9만큼 빼면 2입니다.",
+      "options": [
+        "1",
+        "2",
+        "4",
+        "3"
+      ]
+    },
+    {
+      "id": "g2-sub:subtract:29:6",
+      "grade": 2,
+      "domain": "number",
+      "unit": "g2-sub",
+      "unitName": "두 자리 수 뺄셈",
+      "level": 3,
+      "type": "subtract",
+      "operands": [
+        29,
+        6
+      ],
+      "text": "29 − 6 = ?",
+      "answer": "23",
+      "explain": "29에서 6만큼 빼면 23입니다.",
+      "options": [
+        "23",
+        "25",
+        "24",
+        "22"
+      ]
+    },
+    {
+      "id": "g2-sub:subtract:31:19",
+      "grade": 2,
+      "domain": "number",
+      "unit": "g2-sub",
+      "unitName": "두 자리 수 뺄셈",
+      "level": 4,
+      "type": "subtract",
+      "operands": [
+        31,
+        19
+      ],
+      "text": "31 − 19 = ?",
+      "answer": "12",
+      "explain": "31에서 19만큼 빼면 12입니다.",
+      "options": [
+        "12",
+        "14",
+        "13",
+        "11"
+      ]
+    },
+    {
+      "id": "g2-sub:subtract:29:1",
+      "grade": 2,
+      "domain": "number",
+      "unit": "g2-sub",
+      "unitName": "두 자리 수 뺄셈",
+      "level": 5,
+      "type": "subtract",
+      "operands": [
+        29,
+        1
+      ],
+      "text": "29 − 1 = ?",
+      "answer": "28",
+      "explain": "29에서 1만큼 빼면 28입니다.",
+      "options": [
+        "28",
+        "29",
+        "30",
+        "27"
+      ]
+    },
+    {
+      "id": "g2-mul:multiply:4:8",
+      "grade": 2,
+      "domain": "number",
+      "unit": "g2-mul",
+      "unitName": "곱셈구구",
+      "level": 1,
+      "type": "multiply",
+      "operands": [
+        4,
+        8
+      ],
+      "text": "4 × 8 = ?",
+      "answer": "32",
+      "explain": "4을 8번 더하면 32입니다.",
+      "options": [
+        "34",
+        "33",
+        "31",
+        "32"
+      ]
+    },
+    {
+      "id": "g2-mul:multiply:6:8",
+      "grade": 2,
+      "domain": "number",
+      "unit": "g2-mul",
+      "unitName": "곱셈구구",
+      "level": 2,
+      "type": "multiply",
+      "operands": [
+        6,
+        8
+      ],
+      "text": "6 × 8 = ?",
+      "answer": "48",
+      "explain": "6을 8번 더하면 48입니다.",
+      "options": [
+        "49",
+        "48",
+        "50",
+        "47"
+      ]
+    },
+    {
+      "id": "g2-mul:multiply:8:8",
+      "grade": 2,
+      "domain": "number",
+      "unit": "g2-mul",
+      "unitName": "곱셈구구",
+      "level": 3,
+      "type": "multiply",
+      "operands": [
+        8,
+        8
+      ],
+      "text": "8 × 8 = ?",
+      "answer": "64",
+      "explain": "8을 8번 더하면 64입니다.",
+      "options": [
+        "65",
+        "64",
+        "63",
+        "66"
+      ]
+    },
+    {
+      "id": "g2-mul:multiply:4:7",
+      "grade": 2,
+      "domain": "number",
+      "unit": "g2-mul",
+      "unitName": "곱셈구구",
+      "level": 4,
+      "type": "multiply",
+      "operands": [
+        4,
+        7
+      ],
+      "text": "4 × 7 = ?",
+      "answer": "28",
+      "explain": "4을 7번 더하면 28입니다.",
+      "options": [
+        "28",
+        "27",
+        "30",
+        "29"
+      ]
+    },
+    {
+      "id": "g2-mul:multiply:5:3",
+      "grade": 2,
+      "domain": "number",
+      "unit": "g2-mul",
+      "unitName": "곱셈구구",
+      "level": 5,
+      "type": "multiply",
+      "operands": [
+        5,
+        3
+      ],
+      "text": "5 × 3 = ?",
+      "answer": "15",
+      "explain": "5을 3번 더하면 15입니다.",
+      "options": [
+        "17",
+        "16",
+        "14",
+        "15"
+      ]
+    },
+    {
+      "id": "g2-length:length:7",
+      "grade": 2,
+      "domain": "geometry",
+      "unit": "g2-length",
+      "unitName": "m와 cm",
+      "level": 1,
+      "type": "length",
+      "operands": [
+        7
+      ],
+      "text": "7 m = ? cm",
+      "answer": "700cm",
+      "explain": "1 m = 100 cm이므로 7 × 100 = 700 cm입니다.",
+      "options": [
+        "701cm",
+        "699cm",
+        "702cm",
+        "700cm"
+      ]
+    },
+    {
+      "id": "g2-length:length:3",
+      "grade": 2,
+      "domain": "geometry",
+      "unit": "g2-length",
+      "unitName": "m와 cm",
+      "level": 2,
+      "type": "length",
+      "operands": [
+        3
+      ],
+      "text": "3 m = ? cm",
+      "answer": "300cm",
+      "explain": "1 m = 100 cm이므로 3 × 100 = 300 cm입니다.",
+      "options": [
+        "299cm",
+        "301cm",
+        "302cm",
+        "300cm"
+      ]
+    },
+    {
+      "id": "g2-length:length:5",
+      "grade": 2,
+      "domain": "geometry",
+      "unit": "g2-length",
+      "unitName": "m와 cm",
+      "level": 3,
+      "type": "length",
+      "operands": [
+        5
+      ],
+      "text": "5 m = ? cm",
+      "answer": "500cm",
+      "explain": "1 m = 100 cm이므로 5 × 100 = 500 cm입니다.",
+      "options": [
+        "502cm",
+        "501cm",
+        "499cm",
+        "500cm"
+      ]
+    },
+    {
+      "id": "g2-length:length:5",
+      "grade": 2,
+      "domain": "geometry",
+      "unit": "g2-length",
+      "unitName": "m와 cm",
+      "level": 4,
+      "type": "length",
+      "operands": [
+        5
+      ],
+      "text": "5 m = ? cm",
+      "answer": "500cm",
+      "explain": "1 m = 100 cm이므로 5 × 100 = 500 cm입니다.",
+      "options": [
+        "502cm",
+        "499cm",
+        "501cm",
+        "500cm"
+      ]
+    },
+    {
+      "id": "g2-length:length:9",
+      "grade": 2,
+      "domain": "geometry",
+      "unit": "g2-length",
+      "unitName": "m와 cm",
+      "level": 5,
+      "type": "length",
+      "operands": [
+        9
+      ],
+      "text": "9 m = ? cm",
+      "answer": "900cm",
+      "explain": "1 m = 100 cm이므로 9 × 100 = 900 cm입니다.",
+      "options": [
+        "900cm",
+        "901cm",
+        "899cm",
+        "902cm"
+      ]
+    },
+    {
+      "id": "g2-pattern:patterns:2:4",
+      "grade": 2,
+      "domain": "patterns",
+      "unit": "g2-pattern",
+      "unitName": "수의 규칙",
+      "level": 1,
+      "type": "patterns",
+      "operands": [
+        2,
+        4
+      ],
+      "text": "2, 6, 10, □. 빈칸은?",
+      "answer": "14",
+      "explain": "4씩 커지는 규칙이므로 다음 수는 14입니다.",
+      "options": [
+        "15",
+        "14",
+        "16",
+        "13"
+      ]
+    },
+    {
+      "id": "g2-pattern:patterns:2:2",
+      "grade": 2,
+      "domain": "patterns",
+      "unit": "g2-pattern",
+      "unitName": "수의 규칙",
+      "level": 2,
+      "type": "patterns",
+      "operands": [
+        2,
+        2
+      ],
+      "text": "2, 4, 6, □. 빈칸은?",
+      "answer": "8",
+      "explain": "2씩 커지는 규칙이므로 다음 수는 8입니다.",
+      "options": [
+        "9",
+        "10",
+        "8",
+        "7"
+      ]
+    },
+    {
+      "id": "g2-pattern:patterns:5:3",
+      "grade": 2,
+      "domain": "patterns",
+      "unit": "g2-pattern",
+      "unitName": "수의 규칙",
+      "level": 3,
+      "type": "patterns",
+      "operands": [
+        5,
+        3
+      ],
+      "text": "5, 8, 11, □. 빈칸은?",
+      "answer": "14",
+      "explain": "3씩 커지는 규칙이므로 다음 수는 14입니다.",
+      "options": [
+        "16",
+        "13",
+        "14",
+        "15"
+      ]
+    },
+    {
+      "id": "g2-pattern:patterns:8:6",
+      "grade": 2,
+      "domain": "patterns",
+      "unit": "g2-pattern",
+      "unitName": "수의 규칙",
+      "level": 4,
+      "type": "patterns",
+      "operands": [
+        8,
+        6
+      ],
+      "text": "8, 14, 20, □. 빈칸은?",
+      "answer": "26",
+      "explain": "6씩 커지는 규칙이므로 다음 수는 26입니다.",
+      "options": [
+        "27",
+        "25",
+        "26",
+        "28"
+      ]
+    },
+    {
+      "id": "g2-pattern:patterns:2:11",
+      "grade": 2,
+      "domain": "patterns",
+      "unit": "g2-pattern",
+      "unitName": "수의 규칙",
+      "level": 5,
+      "type": "patterns",
+      "operands": [
+        2,
+        11
+      ],
+      "text": "2, 13, 24, □. 빈칸은?",
+      "answer": "35",
+      "explain": "11씩 커지는 규칙이므로 다음 수는 35입니다.",
+      "options": [
+        "35",
+        "34",
+        "37",
+        "36"
+      ]
+    },
+    {
+      "id": "g3-mul:multiply:5:4",
+      "grade": 3,
+      "domain": "number",
+      "unit": "g3-mul",
+      "unitName": "곱셈",
+      "level": 1,
+      "type": "multiply",
+      "operands": [
+        5,
+        4
+      ],
+      "text": "5 × 4 = ?",
+      "answer": "20",
+      "explain": "5을 4번 더하면 20입니다.",
+      "options": [
+        "19",
+        "20",
+        "22",
+        "21"
+      ]
+    },
+    {
+      "id": "g3-mul:multiply:5:4",
+      "grade": 3,
+      "domain": "number",
+      "unit": "g3-mul",
+      "unitName": "곱셈",
+      "level": 2,
+      "type": "multiply",
+      "operands": [
+        5,
+        4
+      ],
+      "text": "5 × 4 = ?",
+      "answer": "20",
+      "explain": "5을 4번 더하면 20입니다.",
+      "options": [
+        "19",
+        "22",
+        "20",
+        "21"
+      ]
+    },
+    {
+      "id": "g3-mul:multiply:6:5",
+      "grade": 3,
+      "domain": "number",
+      "unit": "g3-mul",
+      "unitName": "곱셈",
+      "level": 3,
+      "type": "multiply",
+      "operands": [
+        6,
+        5
+      ],
+      "text": "6 × 5 = ?",
+      "answer": "30",
+      "explain": "6을 5번 더하면 30입니다.",
+      "options": [
+        "31",
+        "32",
+        "29",
+        "30"
+      ]
+    },
+    {
+      "id": "g3-mul:multiply:7:5",
+      "grade": 3,
+      "domain": "number",
+      "unit": "g3-mul",
+      "unitName": "곱셈",
+      "level": 4,
+      "type": "multiply",
+      "operands": [
+        7,
+        5
+      ],
+      "text": "7 × 5 = ?",
+      "answer": "35",
+      "explain": "7을 5번 더하면 35입니다.",
+      "options": [
+        "34",
+        "37",
+        "36",
+        "35"
+      ]
+    },
+    {
+      "id": "g3-mul:multiply:17:5",
+      "grade": 3,
+      "domain": "number",
+      "unit": "g3-mul",
+      "unitName": "곱셈",
+      "level": 5,
+      "type": "multiply",
+      "operands": [
+        17,
+        5
+      ],
+      "text": "17 × 5 = ?",
+      "answer": "85",
+      "explain": "17을 5번 더하면 85입니다.",
+      "options": [
+        "87",
+        "85",
+        "86",
+        "84"
+      ]
+    },
+    {
+      "id": "g3-div:divide:8:4",
+      "grade": 3,
+      "domain": "number",
+      "unit": "g3-div",
+      "unitName": "나눗셈",
+      "level": 1,
+      "type": "divide",
+      "operands": [
+        8,
+        4
+      ],
+      "text": "8 ÷ 4 = ?",
+      "answer": "2",
+      "explain": "4 × 2 = 8이므로 몫은 2입니다.",
+      "options": [
+        "2",
+        "4",
+        "1",
+        "3"
+      ]
+    },
+    {
+      "id": "g3-div:divide:15:3",
+      "grade": 3,
+      "domain": "number",
+      "unit": "g3-div",
+      "unitName": "나눗셈",
+      "level": 2,
+      "type": "divide",
+      "operands": [
+        15,
+        3
+      ],
+      "text": "15 ÷ 3 = ?",
+      "answer": "5",
+      "explain": "3 × 5 = 15이므로 몫은 5입니다.",
+      "options": [
+        "6",
+        "7",
+        "5",
+        "4"
+      ]
+    },
+    {
+      "id": "g3-div:divide:10:2",
+      "grade": 3,
+      "domain": "number",
+      "unit": "g3-div",
+      "unitName": "나눗셈",
+      "level": 3,
+      "type": "divide",
+      "operands": [
+        10,
+        2
+      ],
+      "text": "10 ÷ 2 = ?",
+      "answer": "5",
+      "explain": "2 × 5 = 10이므로 몫은 5입니다.",
+      "options": [
+        "4",
+        "7",
+        "6",
+        "5"
+      ]
+    },
+    {
+      "id": "g3-div:divide:130:10",
+      "grade": 3,
+      "domain": "number",
+      "unit": "g3-div",
+      "unitName": "나눗셈",
+      "level": 4,
+      "type": "divide",
+      "operands": [
+        130,
+        10
+      ],
+      "text": "130 ÷ 10 = ?",
+      "answer": "13",
+      "explain": "10 × 13 = 130이므로 몫은 13입니다.",
+      "options": [
+        "12",
+        "14",
+        "15",
+        "13"
+      ]
+    },
+    {
+      "id": "g3-div:divide:6:2",
+      "grade": 3,
+      "domain": "number",
+      "unit": "g3-div",
+      "unitName": "나눗셈",
+      "level": 5,
+      "type": "divide",
+      "operands": [
+        6,
+        2
+      ],
+      "text": "6 ÷ 2 = ?",
+      "answer": "3",
+      "explain": "2 × 3 = 6이므로 몫은 3입니다.",
+      "options": [
+        "4",
+        "3",
+        "5",
+        "2"
+      ]
+    },
+    {
+      "id": "g3-dec:decimal:3:5",
+      "grade": 3,
+      "domain": "number",
+      "unit": "g3-dec",
+      "unitName": "소수의 덧셈 기초",
+      "level": 1,
+      "type": "decimal",
+      "operands": [
+        3,
+        5
+      ],
+      "text": "0.3 + 0.5 = ?",
+      "answer": "0.8",
+      "explain": "소수점을 맞추어 더하면 0.8입니다. (3+5) ÷ 10",
+      "options": [
+        "0.9",
+        "0.7",
+        "0.8",
+        "1"
+      ]
+    },
+    {
+      "id": "g3-dec:decimal:3:3",
+      "grade": 3,
+      "domain": "number",
+      "unit": "g3-dec",
+      "unitName": "소수의 덧셈 기초",
+      "level": 2,
+      "type": "decimal",
+      "operands": [
+        3,
+        3
+      ],
+      "text": "0.3 + 0.3 = ?",
+      "answer": "0.6",
+      "explain": "소수점을 맞추어 더하면 0.6입니다. (3+3) ÷ 10",
+      "options": [
+        "0.8",
+        "0.7",
+        "0.5",
+        "0.6"
+      ]
+    },
+    {
+      "id": "g3-dec:decimal:10:9",
+      "grade": 3,
+      "domain": "number",
+      "unit": "g3-dec",
+      "unitName": "소수의 덧셈 기초",
+      "level": 3,
+      "type": "decimal",
+      "operands": [
+        10,
+        9
+      ],
+      "text": "1 + 0.9 = ?",
+      "answer": "1.9",
+      "explain": "소수점을 맞추어 더하면 1.9입니다. (10+9) ÷ 10",
+      "options": [
+        "2",
+        "1.9",
+        "2.1",
+        "1.8"
+      ]
+    },
+    {
+      "id": "g3-dec:decimal:8:2",
+      "grade": 3,
+      "domain": "number",
+      "unit": "g3-dec",
+      "unitName": "소수의 덧셈 기초",
+      "level": 4,
+      "type": "decimal",
+      "operands": [
+        8,
+        2
+      ],
+      "text": "0.8 + 0.2 = ?",
+      "answer": "1",
+      "explain": "소수점을 맞추어 더하면 1입니다. (8+2) ÷ 10",
+      "options": [
+        "1.2",
+        "0.9",
+        "1.1",
+        "1"
+      ]
+    },
+    {
+      "id": "g3-dec:decimal:8:11",
+      "grade": 3,
+      "domain": "number",
+      "unit": "g3-dec",
+      "unitName": "소수의 덧셈 기초",
+      "level": 5,
+      "type": "decimal",
+      "operands": [
+        8,
+        11
+      ],
+      "text": "0.8 + 1.1 = ?",
+      "answer": "1.9",
+      "explain": "소수점을 맞추어 더하면 1.9입니다. (8+11) ÷ 10",
+      "options": [
+        "1.9",
+        "2",
+        "2.1",
+        "1.8"
+      ]
+    },
+    {
+      "id": "g3-time:time:4",
+      "grade": 3,
+      "domain": "geometry",
+      "unit": "g3-time",
+      "unitName": "분과 초",
+      "level": 1,
+      "type": "time",
+      "operands": [
+        4
+      ],
+      "text": "4분은 몇 초인가요?",
+      "answer": "240초",
+      "explain": "1분 = 60초이므로 4 × 60 = 240초입니다.",
+      "options": [
+        "239초",
+        "242초",
+        "241초",
+        "240초"
+      ]
+    },
+    {
+      "id": "g3-time:time:9",
+      "grade": 3,
+      "domain": "geometry",
+      "unit": "g3-time",
+      "unitName": "분과 초",
+      "level": 2,
+      "type": "time",
+      "operands": [
+        9
+      ],
+      "text": "9분은 몇 초인가요?",
+      "answer": "540초",
+      "explain": "1분 = 60초이므로 9 × 60 = 540초입니다.",
+      "options": [
+        "540초",
+        "542초",
+        "541초",
+        "539초"
+      ]
+    },
+    {
+      "id": "g3-time:time:12",
+      "grade": 3,
+      "domain": "geometry",
+      "unit": "g3-time",
+      "unitName": "분과 초",
+      "level": 3,
+      "type": "time",
+      "operands": [
+        12
+      ],
+      "text": "12분은 몇 초인가요?",
+      "answer": "720초",
+      "explain": "1분 = 60초이므로 12 × 60 = 720초입니다.",
+      "options": [
+        "722초",
+        "721초",
+        "719초",
+        "720초"
+      ]
+    },
+    {
+      "id": "g3-time:time:10",
+      "grade": 3,
+      "domain": "geometry",
+      "unit": "g3-time",
+      "unitName": "분과 초",
+      "level": 4,
+      "type": "time",
+      "operands": [
+        10
+      ],
+      "text": "10분은 몇 초인가요?",
+      "answer": "600초",
+      "explain": "1분 = 60초이므로 10 × 60 = 600초입니다.",
+      "options": [
+        "602초",
+        "600초",
+        "601초",
+        "599초"
+      ]
+    },
+    {
+      "id": "g3-time:time:14",
+      "grade": 3,
+      "domain": "geometry",
+      "unit": "g3-time",
+      "unitName": "분과 초",
+      "level": 5,
+      "type": "time",
+      "operands": [
+        14
+      ],
+      "text": "14분은 몇 초인가요?",
+      "answer": "840초",
+      "explain": "1분 = 60초이므로 14 × 60 = 840초입니다.",
+      "options": [
+        "841초",
+        "839초",
+        "840초",
+        "842초"
+      ]
+    },
+    {
+      "id": "g3-shape:shapes:6",
+      "grade": 3,
+      "domain": "geometry",
+      "unit": "g3-shape",
+      "unitName": "다각형의 변",
+      "level": 1,
+      "type": "shapes",
+      "operands": [
+        6
+      ],
+      "text": "육각형의 변은 몇 개인가요?",
+      "answer": "6",
+      "explain": "육각형에는 변이 6개 있습니다.",
+      "options": [
+        "5",
+        "6",
+        "8",
+        "7"
+      ]
+    },
+    {
+      "id": "g3-shape:shapes:6",
+      "grade": 3,
+      "domain": "geometry",
+      "unit": "g3-shape",
+      "unitName": "다각형의 변",
+      "level": 2,
+      "type": "shapes",
+      "operands": [
+        6
+      ],
+      "text": "육각형의 변은 몇 개인가요?",
+      "answer": "6",
+      "explain": "육각형에는 변이 6개 있습니다.",
+      "options": [
+        "7",
+        "8",
+        "5",
+        "6"
+      ]
+    },
+    {
+      "id": "g3-shape:shapes:6",
+      "grade": 3,
+      "domain": "geometry",
+      "unit": "g3-shape",
+      "unitName": "다각형의 변",
+      "level": 3,
+      "type": "shapes",
+      "operands": [
+        6
+      ],
+      "text": "육각형의 변은 몇 개인가요?",
+      "answer": "6",
+      "explain": "육각형에는 변이 6개 있습니다.",
+      "options": [
+        "7",
+        "5",
+        "6",
+        "8"
+      ]
+    },
+    {
+      "id": "g3-shape:shapes:3",
+      "grade": 3,
+      "domain": "geometry",
+      "unit": "g3-shape",
+      "unitName": "다각형의 변",
+      "level": 4,
+      "type": "shapes",
+      "operands": [
+        3
+      ],
+      "text": "삼각형의 변은 몇 개인가요?",
+      "answer": "3",
+      "explain": "삼각형에는 변이 3개 있습니다.",
+      "options": [
+        "5",
+        "4",
+        "2",
+        "3"
+      ]
+    },
+    {
+      "id": "g3-shape:shapes:5",
+      "grade": 3,
+      "domain": "geometry",
+      "unit": "g3-shape",
+      "unitName": "다각형의 변",
+      "level": 5,
+      "type": "shapes",
+      "operands": [
+        5
+      ],
+      "text": "오각형의 변은 몇 개인가요?",
+      "answer": "5",
+      "explain": "오각형에는 변이 5개 있습니다.",
+      "options": [
+        "4",
+        "5",
+        "7",
+        "6"
+      ]
+    },
+    {
+      "id": "g4-frac:fraction:5:5:6",
+      "grade": 4,
+      "domain": "number",
+      "unit": "g4-frac",
+      "unitName": "같은 분모 분수의 덧셈",
+      "level": 1,
+      "type": "fraction",
+      "operands": [
+        5,
+        5,
+        6
+      ],
+      "text": "5/6 + 5/6 = ?",
+      "answer": "5/3",
+      "explain": "분모 6는 그대로 두고 분자를 더합니다. 10/6 = 5/3.",
+      "options": [
+        "7/3",
+        "5/3",
+        "2",
+        "4/3"
+      ]
+    },
+    {
+      "id": "g4-frac:fraction:1:4:5",
+      "grade": 4,
+      "domain": "number",
+      "unit": "g4-frac",
+      "unitName": "같은 분모 분수의 덧셈",
+      "level": 2,
+      "type": "fraction",
+      "operands": [
+        1,
+        4,
+        5
+      ],
+      "text": "1/5 + 4/5 = ?",
+      "answer": "1",
+      "explain": "분모 5는 그대로 두고 분자를 더합니다. 5/5 = 1.",
+      "options": [
+        "1",
+        "1.2",
+        "1.4",
+        "0.8"
+      ]
+    },
+    {
+      "id": "g4-frac:fraction:7:7:13",
+      "grade": 4,
+      "domain": "number",
+      "unit": "g4-frac",
+      "unitName": "같은 분모 분수의 덧셈",
+      "level": 3,
+      "type": "fraction",
+      "operands": [
+        7,
+        7,
+        13
+      ],
+      "text": "7/13 + 7/13 = ?",
+      "answer": "14/13",
+      "explain": "분모 13는 그대로 두고 분자를 더합니다. 14/13 = 14/13.",
+      "options": [
+        "15/13",
+        "1",
+        "14/13",
+        "16/13"
+      ]
+    },
+    {
+      "id": "g4-frac:fraction:6:7:8",
+      "grade": 4,
+      "domain": "number",
+      "unit": "g4-frac",
+      "unitName": "같은 분모 분수의 덧셈",
+      "level": 4,
+      "type": "fraction",
+      "operands": [
+        6,
+        7,
+        8
+      ],
+      "text": "6/8 + 7/8 = ?",
+      "answer": "13/8",
+      "explain": "분모 8는 그대로 두고 분자를 더합니다. 13/8 = 13/8.",
+      "options": [
+        "13/8",
+        "15/8",
+        "7/4",
+        "3/2"
+      ]
+    },
+    {
+      "id": "g4-frac:fraction:2:13:20",
+      "grade": 4,
+      "domain": "number",
+      "unit": "g4-frac",
+      "unitName": "같은 분모 분수의 덧셈",
+      "level": 5,
+      "type": "fraction",
+      "operands": [
+        2,
+        13,
+        20
+      ],
+      "text": "2/20 + 13/20 = ?",
+      "answer": "3/4",
+      "explain": "분모 20는 그대로 두고 분자를 더합니다. 15/20 = 3/4.",
+      "options": [
+        "1/2",
+        "3/4",
+        "1",
+        "5/4"
+      ]
+    },
+    {
+      "id": "g4-dec:decimal:5:3",
+      "grade": 4,
+      "domain": "number",
+      "unit": "g4-dec",
+      "unitName": "소수의 덧셈",
+      "level": 1,
+      "type": "decimal",
+      "operands": [
+        5,
+        3
+      ],
+      "text": "0.5 + 0.3 = ?",
+      "answer": "0.8",
+      "explain": "소수점을 맞추어 더하면 0.8입니다. (5+3) ÷ 10",
+      "options": [
+        "0.8",
+        "1",
+        "0.7",
+        "0.9"
+      ]
+    },
+    {
+      "id": "g4-dec:decimal:5:3",
+      "grade": 4,
+      "domain": "number",
+      "unit": "g4-dec",
+      "unitName": "소수의 덧셈",
+      "level": 2,
+      "type": "decimal",
+      "operands": [
+        5,
+        3
+      ],
+      "text": "0.5 + 0.3 = ?",
+      "answer": "0.8",
+      "explain": "소수점을 맞추어 더하면 0.8입니다. (5+3) ÷ 10",
+      "options": [
+        "0.7",
+        "1",
+        "0.8",
+        "0.9"
+      ]
+    },
+    {
+      "id": "g4-dec:decimal:4:4",
+      "grade": 4,
+      "domain": "number",
+      "unit": "g4-dec",
+      "unitName": "소수의 덧셈",
+      "level": 3,
+      "type": "decimal",
+      "operands": [
+        4,
+        4
+      ],
+      "text": "0.4 + 0.4 = ?",
+      "answer": "0.8",
+      "explain": "소수점을 맞추어 더하면 0.8입니다. (4+4) ÷ 10",
+      "options": [
+        "0.8",
+        "1",
+        "0.9",
+        "0.7"
+      ]
+    },
+    {
+      "id": "g4-dec:decimal:4:6",
+      "grade": 4,
+      "domain": "number",
+      "unit": "g4-dec",
+      "unitName": "소수의 덧셈",
+      "level": 4,
+      "type": "decimal",
+      "operands": [
+        4,
+        6
+      ],
+      "text": "0.4 + 0.6 = ?",
+      "answer": "1",
+      "explain": "소수점을 맞추어 더하면 1입니다. (4+6) ÷ 10",
+      "options": [
+        "1.1",
+        "0.9",
+        "1",
+        "1.2"
+      ]
+    },
+    {
+      "id": "g4-dec:decimal:14:5",
+      "grade": 4,
+      "domain": "number",
+      "unit": "g4-dec",
+      "unitName": "소수의 덧셈",
+      "level": 5,
+      "type": "decimal",
+      "operands": [
+        14,
+        5
+      ],
+      "text": "1.4 + 0.5 = ?",
+      "answer": "1.9",
+      "explain": "소수점을 맞추어 더하면 1.9입니다. (14+5) ÷ 10",
+      "options": [
+        "2",
+        "1.8",
+        "2.1",
+        "1.9"
+      ]
+    },
+    {
+      "id": "g4-angle:angle:30:70",
+      "grade": 4,
+      "domain": "geometry",
+      "unit": "g4-angle",
+      "unitName": "삼각형의 각",
+      "level": 1,
+      "type": "angle",
+      "operands": [
+        30,
+        70
+      ],
+      "text": "삼각형의 두 각이 30도, 70도일 때 나머지 각은?",
+      "answer": "80도",
+      "explain": "삼각형의 세 각의 합은 180도. 180 − 30 − 70 = 80도.",
+      "options": [
+        "79도",
+        "80도",
+        "82도",
+        "81도"
+      ]
+    },
+    {
+      "id": "g4-angle:angle:40:70",
+      "grade": 4,
+      "domain": "geometry",
+      "unit": "g4-angle",
+      "unitName": "삼각형의 각",
+      "level": 2,
+      "type": "angle",
+      "operands": [
+        40,
+        70
+      ],
+      "text": "삼각형의 두 각이 40도, 70도일 때 나머지 각은?",
+      "answer": "70도",
+      "explain": "삼각형의 세 각의 합은 180도. 180 − 40 − 70 = 70도.",
+      "options": [
+        "71도",
+        "72도",
+        "70도",
+        "69도"
+      ]
+    },
+    {
+      "id": "g4-angle:angle:70:40",
+      "grade": 4,
+      "domain": "geometry",
+      "unit": "g4-angle",
+      "unitName": "삼각형의 각",
+      "level": 3,
+      "type": "angle",
+      "operands": [
+        70,
+        40
+      ],
+      "text": "삼각형의 두 각이 70도, 40도일 때 나머지 각은?",
+      "answer": "70도",
+      "explain": "삼각형의 세 각의 합은 180도. 180 − 70 − 40 = 70도.",
+      "options": [
+        "70도",
+        "72도",
+        "69도",
+        "71도"
+      ]
+    },
+    {
+      "id": "g4-angle:angle:30:50",
+      "grade": 4,
+      "domain": "geometry",
+      "unit": "g4-angle",
+      "unitName": "삼각형의 각",
+      "level": 4,
+      "type": "angle",
+      "operands": [
+        30,
+        50
+      ],
+      "text": "삼각형의 두 각이 30도, 50도일 때 나머지 각은?",
+      "answer": "100도",
+      "explain": "삼각형의 세 각의 합은 180도. 180 − 30 − 50 = 100도.",
+      "options": [
+        "102도",
+        "101도",
+        "100도",
+        "99도"
+      ]
+    },
+    {
+      "id": "g4-angle:angle:30:30",
+      "grade": 4,
+      "domain": "geometry",
+      "unit": "g4-angle",
+      "unitName": "삼각형의 각",
+      "level": 5,
+      "type": "angle",
+      "operands": [
+        30,
+        30
+      ],
+      "text": "삼각형의 두 각이 30도, 30도일 때 나머지 각은?",
+      "answer": "120도",
+      "explain": "삼각형의 세 각의 합은 180도. 180 − 30 − 30 = 120도.",
+      "options": [
+        "119도",
+        "120도",
+        "121도",
+        "122도"
+      ]
+    },
+    {
+      "id": "g4-pattern:patterns:2:3",
+      "grade": 4,
+      "domain": "patterns",
+      "unit": "g4-pattern",
+      "unitName": "규칙과 대응",
+      "level": 1,
+      "type": "patterns",
+      "operands": [
+        2,
+        3
+      ],
+      "text": "2, 5, 8, □. 빈칸은?",
+      "answer": "11",
+      "explain": "3씩 커지는 규칙이므로 다음 수는 11입니다.",
+      "options": [
+        "13",
+        "10",
+        "12",
+        "11"
+      ]
+    },
+    {
+      "id": "g4-pattern:patterns:7:3",
+      "grade": 4,
+      "domain": "patterns",
+      "unit": "g4-pattern",
+      "unitName": "규칙과 대응",
+      "level": 2,
+      "type": "patterns",
+      "operands": [
+        7,
+        3
+      ],
+      "text": "7, 10, 13, □. 빈칸은?",
+      "answer": "16",
+      "explain": "3씩 커지는 규칙이므로 다음 수는 16입니다.",
+      "options": [
+        "16",
+        "15",
+        "18",
+        "17"
+      ]
+    },
+    {
+      "id": "g4-pattern:patterns:5:7",
+      "grade": 4,
+      "domain": "patterns",
+      "unit": "g4-pattern",
+      "unitName": "규칙과 대응",
+      "level": 3,
+      "type": "patterns",
+      "operands": [
+        5,
+        7
+      ],
+      "text": "5, 12, 19, □. 빈칸은?",
+      "answer": "26",
+      "explain": "7씩 커지는 규칙이므로 다음 수는 26입니다.",
+      "options": [
+        "25",
+        "26",
+        "27",
+        "28"
+      ]
+    },
+    {
+      "id": "g4-pattern:patterns:8:10",
+      "grade": 4,
+      "domain": "patterns",
+      "unit": "g4-pattern",
+      "unitName": "규칙과 대응",
+      "level": 4,
+      "type": "patterns",
+      "operands": [
+        8,
+        10
+      ],
+      "text": "8, 18, 28, □. 빈칸은?",
+      "answer": "38",
+      "explain": "10씩 커지는 규칙이므로 다음 수는 38입니다.",
+      "options": [
+        "37",
+        "38",
+        "40",
+        "39"
+      ]
+    },
+    {
+      "id": "g4-pattern:patterns:3:12",
+      "grade": 4,
+      "domain": "patterns",
+      "unit": "g4-pattern",
+      "unitName": "규칙과 대응",
+      "level": 5,
+      "type": "patterns",
+      "operands": [
+        3,
+        12
+      ],
+      "text": "3, 15, 27, □. 빈칸은?",
+      "answer": "39",
+      "explain": "12씩 커지는 규칙이므로 다음 수는 39입니다.",
+      "options": [
+        "41",
+        "40",
+        "38",
+        "39"
+      ]
+    },
+    {
+      "id": "g5-frac:unlikeFraction:2:4:3:5",
+      "grade": 5,
+      "domain": "number",
+      "unit": "g5-frac",
+      "unitName": "다른 분모 분수의 덧셈",
+      "level": 1,
+      "type": "unlikeFraction",
+      "operands": [
+        2,
+        4,
+        3,
+        5
+      ],
+      "text": "2/4 + 3/5 = ?",
+      "answer": "11/10",
+      "explain": "분모를 20로 통분하면 10/20 + 12/20 = 11/10입니다.",
+      "options": [
+        "6/5",
+        "13/10",
+        "11/10",
+        "1"
+      ]
+    },
+    {
+      "id": "g5-frac:unlikeFraction:2:3:1:4",
+      "grade": 5,
+      "domain": "number",
+      "unit": "g5-frac",
+      "unitName": "다른 분모 분수의 덧셈",
+      "level": 2,
+      "type": "unlikeFraction",
+      "operands": [
+        2,
+        3,
+        1,
+        4
+      ],
+      "text": "2/3 + 1/4 = ?",
+      "answer": "11/12",
+      "explain": "분모를 12로 통분하면 8/12 + 3/12 = 11/12입니다.",
+      "options": [
+        "5/6",
+        "13/12",
+        "11/12",
+        "1"
+      ]
+    },
+    {
+      "id": "g5-frac:unlikeFraction:1:4:4:5",
+      "grade": 5,
+      "domain": "number",
+      "unit": "g5-frac",
+      "unitName": "다른 분모 분수의 덧셈",
+      "level": 3,
+      "type": "unlikeFraction",
+      "operands": [
+        1,
+        4,
+        4,
+        5
+      ],
+      "text": "1/4 + 4/5 = ?",
+      "answer": "21/20",
+      "explain": "분모를 20로 통분하면 5/20 + 16/20 = 21/20입니다.",
+      "options": [
+        "21/20",
+        "23/20",
+        "1",
+        "11/10"
+      ]
+    },
+    {
+      "id": "g5-frac:unlikeFraction:1:2:2:3",
+      "grade": 5,
+      "domain": "number",
+      "unit": "g5-frac",
+      "unitName": "다른 분모 분수의 덧셈",
+      "level": 4,
+      "type": "unlikeFraction",
+      "operands": [
+        1,
+        2,
+        2,
+        3
+      ],
+      "text": "1/2 + 2/3 = ?",
+      "answer": "7/6",
+      "explain": "분모를 6로 통분하면 3/6 + 4/6 = 7/6입니다.",
+      "options": [
+        "7/6",
+        "3/2",
+        "4/3",
+        "1"
+      ]
+    },
+    {
+      "id": "g5-frac:unlikeFraction:4:5:3:6",
+      "grade": 5,
+      "domain": "number",
+      "unit": "g5-frac",
+      "unitName": "다른 분모 분수의 덧셈",
+      "level": 5,
+      "type": "unlikeFraction",
+      "operands": [
+        4,
+        5,
+        3,
+        6
+      ],
+      "text": "4/5 + 3/6 = ?",
+      "answer": "13/10",
+      "explain": "분모를 30로 통분하면 24/30 + 15/30 = 13/10입니다.",
+      "options": [
+        "7/5",
+        "6/5",
+        "13/10",
+        "3/2"
+      ]
+    },
+    {
+      "id": "g5-fracmul:fractionMultiply:5:5:6:6",
+      "grade": 5,
+      "domain": "number",
+      "unit": "g5-fracmul",
+      "unitName": "분수의 곱셈",
+      "level": 1,
+      "type": "fractionMultiply",
+      "operands": [
+        5,
+        5,
+        6,
+        6
+      ],
+      "text": "5/6 × 5/6 = ?",
+      "answer": "25/36",
+      "explain": "분자는 분자끼리, 분모는 분모끼리 곱한 뒤 약분하면 25/36입니다.",
+      "options": [
+        "3/4",
+        "2/3",
+        "13/18",
+        "25/36"
+      ]
+    },
+    {
+      "id": "g5-fracmul:fractionMultiply:6:4:7:5",
+      "grade": 5,
+      "domain": "number",
+      "unit": "g5-fracmul",
+      "unitName": "분수의 곱셈",
+      "level": 2,
+      "type": "fractionMultiply",
+      "operands": [
+        6,
+        4,
+        7,
+        5
+      ],
+      "text": "6/7 × 4/5 = ?",
+      "answer": "24/35",
+      "explain": "분자는 분자끼리, 분모는 분모끼리 곱한 뒤 약분하면 24/35입니다.",
+      "options": [
+        "5/7",
+        "26/35",
+        "23/35",
+        "24/35"
+      ]
+    },
+    {
+      "id": "g5-fracmul:fractionMultiply:2:2:3:3",
+      "grade": 5,
+      "domain": "number",
+      "unit": "g5-fracmul",
+      "unitName": "분수의 곱셈",
+      "level": 3,
+      "type": "fractionMultiply",
+      "operands": [
+        2,
+        2,
+        3,
+        3
+      ],
+      "text": "2/3 × 2/3 = ?",
+      "answer": "4/9",
+      "explain": "분자는 분자끼리, 분모는 분모끼리 곱한 뒤 약분하면 4/9입니다.",
+      "options": [
+        "4/9",
+        "5/9",
+        "2/3",
+        "1/3"
+      ]
+    },
+    {
+      "id": "g5-fracmul:fractionMultiply:16:9:17:10",
+      "grade": 5,
+      "domain": "number",
+      "unit": "g5-fracmul",
+      "unitName": "분수의 곱셈",
+      "level": 4,
+      "type": "fractionMultiply",
+      "operands": [
+        16,
+        9,
+        17,
+        10
+      ],
+      "text": "16/17 × 9/10 = ?",
+      "answer": "72/85",
+      "explain": "분자는 분자끼리, 분모는 분모끼리 곱한 뒤 약분하면 72/85입니다.",
+      "options": [
+        "74/85",
+        "71/85",
+        "73/85",
+        "72/85"
+      ]
+    },
+    {
+      "id": "g5-fracmul:fractionMultiply:2:13:3:14",
+      "grade": 5,
+      "domain": "number",
+      "unit": "g5-fracmul",
+      "unitName": "분수의 곱셈",
+      "level": 5,
+      "type": "fractionMultiply",
+      "operands": [
+        2,
+        13,
+        3,
+        14
+      ],
+      "text": "2/3 × 13/14 = ?",
+      "answer": "13/21",
+      "explain": "분자는 분자끼리, 분모는 분모끼리 곱한 뒤 약분하면 13/21입니다.",
+      "options": [
+        "13/21",
+        "4/7",
+        "5/7",
+        "2/3"
+      ]
+    },
+    {
+      "id": "g5-dec:decimalMultiply:7:2",
+      "grade": 5,
+      "domain": "number",
+      "unit": "g5-dec",
+      "unitName": "소수의 곱셈",
+      "level": 1,
+      "type": "decimalMultiply",
+      "operands": [
+        7,
+        2
+      ],
+      "text": "0.7 × 0.2 = ?",
+      "answer": "0.14",
+      "explain": "7 × 2 = 14. 소수 자릿수가 모두 2자리이므로 0.14입니다.",
+      "options": [
+        "0.15",
+        "0.16",
+        "0.14",
+        "0.13"
+      ]
+    },
+    {
+      "id": "g5-dec:decimalMultiply:6:2",
+      "grade": 5,
+      "domain": "number",
+      "unit": "g5-dec",
+      "unitName": "소수의 곱셈",
+      "level": 2,
+      "type": "decimalMultiply",
+      "operands": [
+        6,
+        2
+      ],
+      "text": "0.6 × 0.2 = ?",
+      "answer": "0.12",
+      "explain": "6 × 2 = 12. 소수 자릿수가 모두 2자리이므로 0.12입니다.",
+      "options": [
+        "0.14",
+        "0.11",
+        "0.13",
+        "0.12"
+      ]
+    },
+    {
+      "id": "g5-dec:decimalMultiply:4:7",
+      "grade": 5,
+      "domain": "number",
+      "unit": "g5-dec",
+      "unitName": "소수의 곱셈",
+      "level": 3,
+      "type": "decimalMultiply",
+      "operands": [
+        4,
+        7
+      ],
+      "text": "0.4 × 0.7 = ?",
+      "answer": "0.28",
+      "explain": "4 × 7 = 28. 소수 자릿수가 모두 2자리이므로 0.28입니다.",
+      "options": [
+        "0.3",
+        "0.29",
+        "0.28",
+        "0.27"
+      ]
+    },
+    {
+      "id": "g5-dec:decimalMultiply:13:11",
+      "grade": 5,
+      "domain": "number",
+      "unit": "g5-dec",
+      "unitName": "소수의 곱셈",
+      "level": 4,
+      "type": "decimalMultiply",
+      "operands": [
+        13,
+        11
+      ],
+      "text": "1.3 × 1.1 = ?",
+      "answer": "1.43",
+      "explain": "13 × 11 = 143. 소수 자릿수가 모두 2자리이므로 1.43입니다.",
+      "options": [
+        "1.42",
+        "1.43",
+        "1.44",
+        "1.45"
+      ]
+    },
+    {
+      "id": "g5-dec:decimalMultiply:13:13",
+      "grade": 5,
+      "domain": "number",
+      "unit": "g5-dec",
+      "unitName": "소수의 곱셈",
+      "level": 5,
+      "type": "decimalMultiply",
+      "operands": [
+        13,
+        13
+      ],
+      "text": "1.3 × 1.3 = ?",
+      "answer": "1.69",
+      "explain": "13 × 13 = 169. 소수 자릿수가 모두 2자리이므로 1.69입니다.",
+      "options": [
+        "1.71",
+        "1.68",
+        "1.7",
+        "1.69"
+      ]
+    },
+    {
+      "id": "g5-area:area:6:5",
+      "grade": 5,
+      "domain": "geometry",
+      "unit": "g5-area",
+      "unitName": "직사각형 넓이",
+      "level": 1,
+      "type": "area",
+      "operands": [
+        6,
+        5
+      ],
+      "text": "가로 6 cm, 세로 5 cm인 직사각형의 넓이는?",
+      "answer": "30cm²",
+      "explain": "가로 × 세로 = 6 × 5 = 30cm²입니다.",
+      "options": [
+        "30cm²",
+        "29cm²",
+        "32cm²",
+        "31cm²"
+      ]
+    },
+    {
+      "id": "g5-area:area:8:4",
+      "grade": 5,
+      "domain": "geometry",
+      "unit": "g5-area",
+      "unitName": "직사각형 넓이",
+      "level": 2,
+      "type": "area",
+      "operands": [
+        8,
+        4
+      ],
+      "text": "가로 8 cm, 세로 4 cm인 직사각형의 넓이는?",
+      "answer": "32cm²",
+      "explain": "가로 × 세로 = 8 × 4 = 32cm²입니다.",
+      "options": [
+        "33cm²",
+        "31cm²",
+        "32cm²",
+        "34cm²"
+      ]
+    },
+    {
+      "id": "g5-area:area:7:3",
+      "grade": 5,
+      "domain": "geometry",
+      "unit": "g5-area",
+      "unitName": "직사각형 넓이",
+      "level": 3,
+      "type": "area",
+      "operands": [
+        7,
+        3
+      ],
+      "text": "가로 7 cm, 세로 3 cm인 직사각형의 넓이는?",
+      "answer": "21cm²",
+      "explain": "가로 × 세로 = 7 × 3 = 21cm²입니다.",
+      "options": [
+        "20cm²",
+        "22cm²",
+        "21cm²",
+        "23cm²"
+      ]
+    },
+    {
+      "id": "g5-area:area:13:10",
+      "grade": 5,
+      "domain": "geometry",
+      "unit": "g5-area",
+      "unitName": "직사각형 넓이",
+      "level": 4,
+      "type": "area",
+      "operands": [
+        13,
+        10
+      ],
+      "text": "가로 13 cm, 세로 10 cm인 직사각형의 넓이는?",
+      "answer": "130cm²",
+      "explain": "가로 × 세로 = 13 × 10 = 130cm²입니다.",
+      "options": [
+        "132cm²",
+        "129cm²",
+        "131cm²",
+        "130cm²"
+      ]
+    },
+    {
+      "id": "g5-area:area:17:6",
+      "grade": 5,
+      "domain": "geometry",
+      "unit": "g5-area",
+      "unitName": "직사각형 넓이",
+      "level": 5,
+      "type": "area",
+      "operands": [
+        17,
+        6
+      ],
+      "text": "가로 17 cm, 세로 6 cm인 직사각형의 넓이는?",
+      "answer": "102cm²",
+      "explain": "가로 × 세로 = 17 × 6 = 102cm²입니다.",
+      "options": [
+        "104cm²",
+        "103cm²",
+        "101cm²",
+        "102cm²"
+      ]
+    },
+    {
+      "id": "g5-avg:average:5:8:11",
+      "grade": 5,
+      "domain": "data",
+      "unit": "g5-avg",
+      "unitName": "평균",
+      "level": 1,
+      "type": "average",
+      "operands": [
+        5,
+        8,
+        11
+      ],
+      "text": "5, 8, 11의 평균은?",
+      "answer": "8",
+      "explain": "세 수의 합 24을 자료 수 3으로 나누면 8입니다.",
+      "options": [
+        "8",
+        "7",
+        "10",
+        "9"
+      ]
+    },
+    {
+      "id": "g5-avg:average:2:8:14",
+      "grade": 5,
+      "domain": "data",
+      "unit": "g5-avg",
+      "unitName": "평균",
+      "level": 2,
+      "type": "average",
+      "operands": [
+        2,
+        8,
+        14
+      ],
+      "text": "2, 8, 14의 평균은?",
+      "answer": "8",
+      "explain": "세 수의 합 24을 자료 수 3으로 나누면 8입니다.",
+      "options": [
+        "10",
+        "8",
+        "7",
+        "9"
+      ]
+    },
+    {
+      "id": "g5-avg:average:2:10:18",
+      "grade": 5,
+      "domain": "data",
+      "unit": "g5-avg",
+      "unitName": "평균",
+      "level": 3,
+      "type": "average",
+      "operands": [
+        2,
+        10,
+        18
+      ],
+      "text": "2, 10, 18의 평균은?",
+      "answer": "10",
+      "explain": "세 수의 합 30을 자료 수 3으로 나누면 10입니다.",
+      "options": [
+        "10",
+        "9",
+        "12",
+        "11"
+      ]
+    },
+    {
+      "id": "g5-avg:average:4:8:12",
+      "grade": 5,
+      "domain": "data",
+      "unit": "g5-avg",
+      "unitName": "평균",
+      "level": 4,
+      "type": "average",
+      "operands": [
+        4,
+        8,
+        12
+      ],
+      "text": "4, 8, 12의 평균은?",
+      "answer": "8",
+      "explain": "세 수의 합 24을 자료 수 3으로 나누면 8입니다.",
+      "options": [
+        "9",
+        "7",
+        "10",
+        "8"
+      ]
+    },
+    {
+      "id": "g5-avg:average:19:23:27",
+      "grade": 5,
+      "domain": "data",
+      "unit": "g5-avg",
+      "unitName": "평균",
+      "level": 5,
+      "type": "average",
+      "operands": [
+        19,
+        23,
+        27
+      ],
+      "text": "19, 23, 27의 평균은?",
+      "answer": "23",
+      "explain": "세 수의 합 69을 자료 수 3으로 나누면 23입니다.",
+      "options": [
+        "24",
+        "22",
+        "23",
+        "25"
+      ]
+    },
+    {
+      "id": "g6-fracdiv:fractionDivide:4:5:2:3",
+      "grade": 6,
+      "domain": "number",
+      "unit": "g6-fracdiv",
+      "unitName": "분수의 나눗셈",
+      "level": 1,
+      "type": "fractionDivide",
+      "operands": [
+        4,
+        5,
+        2,
+        3
+      ],
+      "text": "4/5 ÷ 2/3 = ?",
+      "answer": "6/5",
+      "explain": "나누는 분수를 뒤집어 곱하면 6/5입니다.",
+      "options": [
+        "1",
+        "8/5",
+        "7/5",
+        "6/5"
+      ]
+    },
+    {
+      "id": "g6-fracdiv:fractionDivide:9:10:5:6",
+      "grade": 6,
+      "domain": "number",
+      "unit": "g6-fracdiv",
+      "unitName": "분수의 나눗셈",
+      "level": 2,
+      "type": "fractionDivide",
+      "operands": [
+        9,
+        10,
+        5,
+        6
+      ],
+      "text": "9/10 ÷ 5/6 = ?",
+      "answer": "27/25",
+      "explain": "나누는 분수를 뒤집어 곱하면 27/25입니다.",
+      "options": [
+        "29/25",
+        "27/25",
+        "28/25",
+        "26/25"
+      ]
+    },
+    {
+      "id": "g6-fracdiv:fractionDivide:8:9:9:10",
+      "grade": 6,
+      "domain": "number",
+      "unit": "g6-fracdiv",
+      "unitName": "분수의 나눗셈",
+      "level": 3,
+      "type": "fractionDivide",
+      "operands": [
+        8,
+        9,
+        9,
+        10
+      ],
+      "text": "8/9 ÷ 9/10 = ?",
+      "answer": "80/81",
+      "explain": "나누는 분수를 뒤집어 곱하면 80/81입니다.",
+      "options": [
+        "82/81",
+        "1",
+        "80/81",
+        "79/81"
+      ]
+    },
+    {
+      "id": "g6-fracdiv:fractionDivide:11:12:7:8",
+      "grade": 6,
+      "domain": "number",
+      "unit": "g6-fracdiv",
+      "unitName": "분수의 나눗셈",
+      "level": 4,
+      "type": "fractionDivide",
+      "operands": [
+        11,
+        12,
+        7,
+        8
+      ],
+      "text": "11/12 ÷ 7/8 = ?",
+      "answer": "22/21",
+      "explain": "나누는 분수를 뒤집어 곱하면 22/21입니다.",
+      "options": [
+        "22/21",
+        "23/21",
+        "1",
+        "8/7"
+      ]
+    },
+    {
+      "id": "g6-fracdiv:fractionDivide:4:5:13:14",
+      "grade": 6,
+      "domain": "number",
+      "unit": "g6-fracdiv",
+      "unitName": "분수의 나눗셈",
+      "level": 5,
+      "type": "fractionDivide",
+      "operands": [
+        4,
+        5,
+        13,
+        14
+      ],
+      "text": "4/5 ÷ 13/14 = ?",
+      "answer": "56/65",
+      "explain": "나누는 분수를 뒤집어 곱하면 56/65입니다.",
+      "options": [
+        "58/65",
+        "56/65",
+        "11/13",
+        "57/65"
+      ]
+    },
+    {
+      "id": "g6-decdiv:decimalDivide:20:5",
+      "grade": 6,
+      "domain": "number",
+      "unit": "g6-decdiv",
+      "unitName": "소수의 나눗셈",
+      "level": 1,
+      "type": "decimalDivide",
+      "operands": [
+        20,
+        5
+      ],
+      "text": "2 ÷ 0.5 = ?",
+      "answer": "4",
+      "explain": "두 수를 모두 10배 하면 20 ÷ 5 = 4입니다.",
+      "options": [
+        "4.2",
+        "4.1",
+        "4",
+        "3.9"
+      ]
+    },
+    {
+      "id": "g6-decdiv:decimalDivide:70:7",
+      "grade": 6,
+      "domain": "number",
+      "unit": "g6-decdiv",
+      "unitName": "소수의 나눗셈",
+      "level": 2,
+      "type": "decimalDivide",
+      "operands": [
+        70,
+        7
+      ],
+      "text": "7 ÷ 0.7 = ?",
+      "answer": "10",
+      "explain": "두 수를 모두 10배 하면 70 ÷ 7 = 10입니다.",
+      "options": [
+        "10",
+        "9.9",
+        "10.1",
+        "10.2"
+      ]
+    },
+    {
+      "id": "g6-decdiv:decimalDivide:8:4",
+      "grade": 6,
+      "domain": "number",
+      "unit": "g6-decdiv",
+      "unitName": "소수의 나눗셈",
+      "level": 3,
+      "type": "decimalDivide",
+      "operands": [
+        8,
+        4
+      ],
+      "text": "0.8 ÷ 0.4 = ?",
+      "answer": "2",
+      "explain": "두 수를 모두 10배 하면 8 ÷ 4 = 2입니다.",
+      "options": [
+        "1.9",
+        "2",
+        "2.2",
+        "2.1"
+      ]
+    },
+    {
+      "id": "g6-decdiv:decimalDivide:12:4",
+      "grade": 6,
+      "domain": "number",
+      "unit": "g6-decdiv",
+      "unitName": "소수의 나눗셈",
+      "level": 4,
+      "type": "decimalDivide",
+      "operands": [
+        12,
+        4
+      ],
+      "text": "1.2 ÷ 0.4 = ?",
+      "answer": "3",
+      "explain": "두 수를 모두 10배 하면 12 ÷ 4 = 3입니다.",
+      "options": [
+        "3.2",
+        "3.1",
+        "3",
+        "2.9"
+      ]
+    },
+    {
+      "id": "g6-decdiv:decimalDivide:24:12",
+      "grade": 6,
+      "domain": "number",
+      "unit": "g6-decdiv",
+      "unitName": "소수의 나눗셈",
+      "level": 5,
+      "type": "decimalDivide",
+      "operands": [
+        24,
+        12
+      ],
+      "text": "2.4 ÷ 1.2 = ?",
+      "answer": "2",
+      "explain": "두 수를 모두 10배 하면 24 ÷ 12 = 2입니다.",
+      "options": [
+        "2.2",
+        "2.1",
+        "1.9",
+        "2"
+      ]
+    },
+    {
+      "id": "g6-volume:volume:2:3:2",
+      "grade": 6,
+      "domain": "geometry",
+      "unit": "g6-volume",
+      "unitName": "직육면체 부피",
+      "level": 1,
+      "type": "volume",
+      "operands": [
+        2,
+        3,
+        2
+      ],
+      "text": "가로 2, 세로 3, 높이 2 cm인 직육면체의 부피는?",
+      "answer": "12cm³",
+      "explain": "가로 × 세로 × 높이 = 12cm³입니다.",
+      "options": [
+        "13cm³",
+        "14cm³",
+        "11cm³",
+        "12cm³"
+      ]
+    },
+    {
+      "id": "g6-volume:volume:6:5:3",
+      "grade": 6,
+      "domain": "geometry",
+      "unit": "g6-volume",
+      "unitName": "직육면체 부피",
+      "level": 2,
+      "type": "volume",
+      "operands": [
+        6,
+        5,
+        3
+      ],
+      "text": "가로 6, 세로 5, 높이 3 cm인 직육면체의 부피는?",
+      "answer": "90cm³",
+      "explain": "가로 × 세로 × 높이 = 90cm³입니다.",
+      "options": [
+        "92cm³",
+        "90cm³",
+        "91cm³",
+        "89cm³"
+      ]
+    },
+    {
+      "id": "g6-volume:volume:4:7:4",
+      "grade": 6,
+      "domain": "geometry",
+      "unit": "g6-volume",
+      "unitName": "직육면체 부피",
+      "level": 3,
+      "type": "volume",
+      "operands": [
+        4,
+        7,
+        4
+      ],
+      "text": "가로 4, 세로 7, 높이 4 cm인 직육면체의 부피는?",
+      "answer": "112cm³",
+      "explain": "가로 × 세로 × 높이 = 112cm³입니다.",
+      "options": [
+        "114cm³",
+        "112cm³",
+        "111cm³",
+        "113cm³"
+      ]
+    },
+    {
+      "id": "g6-volume:volume:13:3:5",
+      "grade": 6,
+      "domain": "geometry",
+      "unit": "g6-volume",
+      "unitName": "직육면체 부피",
+      "level": 4,
+      "type": "volume",
+      "operands": [
+        13,
+        3,
+        5
+      ],
+      "text": "가로 13, 세로 3, 높이 5 cm인 직육면체의 부피는?",
+      "answer": "195cm³",
+      "explain": "가로 × 세로 × 높이 = 195cm³입니다.",
+      "options": [
+        "196cm³",
+        "195cm³",
+        "197cm³",
+        "194cm³"
+      ]
+    },
+    {
+      "id": "g6-volume:volume:5:12:6",
+      "grade": 6,
+      "domain": "geometry",
+      "unit": "g6-volume",
+      "unitName": "직육면체 부피",
+      "level": 5,
+      "type": "volume",
+      "operands": [
+        5,
+        12,
+        6
+      ],
+      "text": "가로 5, 세로 12, 높이 6 cm인 직육면체의 부피는?",
+      "answer": "360cm³",
+      "explain": "가로 × 세로 × 높이 = 360cm³입니다.",
+      "options": [
+        "361cm³",
+        "360cm³",
+        "359cm³",
+        "362cm³"
+      ]
+    },
+    {
+      "id": "g6-percent:percent:70:200",
+      "grade": 6,
+      "domain": "patterns",
+      "unit": "g6-percent",
+      "unitName": "백분율",
+      "level": 1,
+      "type": "percent",
+      "operands": [
+        70,
+        200
+      ],
+      "text": "200의 70%는?",
+      "answer": "140",
+      "explain": "200 × 70/100 = 140입니다.",
+      "options": [
+        "139",
+        "140",
+        "142",
+        "141"
+      ]
+    },
+    {
+      "id": "g6-percent:percent:30:200",
+      "grade": 6,
+      "domain": "patterns",
+      "unit": "g6-percent",
+      "unitName": "백분율",
+      "level": 2,
+      "type": "percent",
+      "operands": [
+        30,
+        200
+      ],
+      "text": "200의 30%는?",
+      "answer": "60",
+      "explain": "200 × 30/100 = 60입니다.",
+      "options": [
+        "62",
+        "61",
+        "60",
+        "59"
+      ]
+    },
+    {
+      "id": "g6-percent:percent:80:200",
+      "grade": 6,
+      "domain": "patterns",
+      "unit": "g6-percent",
+      "unitName": "백분율",
+      "level": 3,
+      "type": "percent",
+      "operands": [
+        80,
+        200
+      ],
+      "text": "200의 80%는?",
+      "answer": "160",
+      "explain": "200 × 80/100 = 160입니다.",
+      "options": [
+        "162",
+        "161",
+        "159",
+        "160"
+      ]
+    },
+    {
+      "id": "g6-percent:percent:10:600",
+      "grade": 6,
+      "domain": "patterns",
+      "unit": "g6-percent",
+      "unitName": "백분율",
+      "level": 4,
+      "type": "percent",
+      "operands": [
+        10,
+        600
+      ],
+      "text": "600의 10%는?",
+      "answer": "60",
+      "explain": "600 × 10/100 = 60입니다.",
+      "options": [
+        "61",
+        "62",
+        "60",
+        "59"
+      ]
+    },
+    {
+      "id": "g6-percent:percent:20:300",
+      "grade": 6,
+      "domain": "patterns",
+      "unit": "g6-percent",
+      "unitName": "백분율",
+      "level": 5,
+      "type": "percent",
+      "operands": [
+        20,
+        300
+      ],
+      "text": "300의 20%는?",
+      "answer": "60",
+      "explain": "300 × 20/100 = 60입니다.",
+      "options": [
+        "59",
+        "62",
+        "61",
+        "60"
+      ]
+    },
+    {
+      "id": "g6-ratio:ratio:6:4:2",
+      "grade": 6,
+      "domain": "patterns",
+      "unit": "g6-ratio",
+      "unitName": "비례식",
+      "level": 1,
+      "type": "ratio",
+      "operands": [
+        6,
+        4,
+        2
+      ],
+      "text": "6 : 4 = 12 : □. 빈칸은?",
+      "answer": "8",
+      "explain": "앞의 수가 2배가 되었으므로 뒤의 수도 4 × 2 = 8입니다.",
+      "options": [
+        "8",
+        "9",
+        "7",
+        "10"
+      ]
+    },
+    {
+      "id": "g6-ratio:ratio:7:7:2",
+      "grade": 6,
+      "domain": "patterns",
+      "unit": "g6-ratio",
+      "unitName": "비례식",
+      "level": 2,
+      "type": "ratio",
+      "operands": [
+        7,
+        7,
+        2
+      ],
+      "text": "7 : 7 = 14 : □. 빈칸은?",
+      "answer": "14",
+      "explain": "앞의 수가 2배가 되었으므로 뒤의 수도 7 × 2 = 14입니다.",
+      "options": [
+        "14",
+        "13",
+        "15",
+        "16"
+      ]
+    },
+    {
+      "id": "g6-ratio:ratio:13:9:2",
+      "grade": 6,
+      "domain": "patterns",
+      "unit": "g6-ratio",
+      "unitName": "비례식",
+      "level": 3,
+      "type": "ratio",
+      "operands": [
+        13,
+        9,
+        2
+      ],
+      "text": "13 : 9 = 26 : □. 빈칸은?",
+      "answer": "18",
+      "explain": "앞의 수가 2배가 되었으므로 뒤의 수도 9 × 2 = 18입니다.",
+      "options": [
+        "20",
+        "17",
+        "18",
+        "19"
+      ]
+    },
+    {
+      "id": "g6-ratio:ratio:3:3:2",
+      "grade": 6,
+      "domain": "patterns",
+      "unit": "g6-ratio",
+      "unitName": "비례식",
+      "level": 4,
+      "type": "ratio",
+      "operands": [
+        3,
+        3,
+        2
+      ],
+      "text": "3 : 3 = 6 : □. 빈칸은?",
+      "answer": "6",
+      "explain": "앞의 수가 2배가 되었으므로 뒤의 수도 3 × 2 = 6입니다.",
+      "options": [
+        "5",
+        "7",
+        "6",
+        "8"
+      ]
+    },
+    {
+      "id": "g6-ratio:ratio:18:7:2",
+      "grade": 6,
+      "domain": "patterns",
+      "unit": "g6-ratio",
+      "unitName": "비례식",
+      "level": 5,
+      "type": "ratio",
+      "operands": [
+        18,
+        7,
+        2
+      ],
+      "text": "18 : 7 = 36 : □. 빈칸은?",
+      "answer": "14",
+      "explain": "앞의 수가 2배가 되었으므로 뒤의 수도 7 × 2 = 14입니다.",
+      "options": [
+        "14",
+        "13",
+        "16",
+        "15"
+      ]
+    },
+    {
+      "id": "g6-avg:average:7:10:13",
+      "grade": 6,
+      "domain": "data",
+      "unit": "g6-avg",
+      "unitName": "평균 복습",
+      "level": 1,
+      "type": "average",
+      "operands": [
+        7,
+        10,
+        13
+      ],
+      "text": "7, 10, 13의 평균은?",
+      "answer": "10",
+      "explain": "세 수의 합 30을 자료 수 3으로 나누면 10입니다.",
+      "options": [
+        "10",
+        "11",
+        "12",
+        "9"
+      ]
+    },
+    {
+      "id": "g6-avg:average:9:16:23",
+      "grade": 6,
+      "domain": "data",
+      "unit": "g6-avg",
+      "unitName": "평균 복습",
+      "level": 2,
+      "type": "average",
+      "operands": [
+        9,
+        16,
+        23
+      ],
+      "text": "9, 16, 23의 평균은?",
+      "answer": "16",
+      "explain": "세 수의 합 48을 자료 수 3으로 나누면 16입니다.",
+      "options": [
+        "17",
+        "18",
+        "16",
+        "15"
+      ]
+    },
+    {
+      "id": "g6-avg:average:8:10:12",
+      "grade": 6,
+      "domain": "data",
+      "unit": "g6-avg",
+      "unitName": "평균 복습",
+      "level": 3,
+      "type": "average",
+      "operands": [
+        8,
+        10,
+        12
+      ],
+      "text": "8, 10, 12의 평균은?",
+      "answer": "10",
+      "explain": "세 수의 합 30을 자료 수 3으로 나누면 10입니다.",
+      "options": [
+        "9",
+        "12",
+        "10",
+        "11"
+      ]
+    },
+    {
+      "id": "g6-avg:average:16:20:24",
+      "grade": 6,
+      "domain": "data",
+      "unit": "g6-avg",
+      "unitName": "평균 복습",
+      "level": 4,
+      "type": "average",
+      "operands": [
+        16,
+        20,
+        24
+      ],
+      "text": "16, 20, 24의 평균은?",
+      "answer": "20",
+      "explain": "세 수의 합 60을 자료 수 3으로 나누면 20입니다.",
+      "options": [
+        "22",
+        "21",
+        "20",
+        "19"
+      ]
+    },
+    {
+      "id": "g6-avg:average:19:24:29",
+      "grade": 6,
+      "domain": "data",
+      "unit": "g6-avg",
+      "unitName": "평균 복습",
+      "level": 5,
+      "type": "average",
+      "operands": [
+        19,
+        24,
+        29
+      ],
+      "text": "19, 24, 29의 평균은?",
+      "answer": "24",
+      "explain": "세 수의 합 72을 자료 수 3으로 나누면 24입니다.",
+      "options": [
+        "24",
+        "25",
+        "23",
+        "26"
+      ]
+    }
+  ]
+}

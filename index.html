@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>매쓰 서바이벌 2.0</title>
+  <link rel="stylesheet" href="./src/original.css"><link rel="stylesheet" href="./src/v2.css">
+</head>
+<body>
+  <div id="wrap">
+    <canvas id="game" width="1000" height="650"></canvas>
+
+    <div id="hud" class="hidden">
+      <div class="hudBox">❤️ 체력 <span id="hp">120</span></div>
+      <div class="hudBox">⭐ 점수 <span id="score">0</span></div>
+      <div class="hudBox">📘 레벨 <span id="level">1</span></div>
+      <div class="hudBox">✨ 경험치 <span id="exp">0</span>%</div>
+      <div class="hudBox">🔮 무기 Lv.<span id="weaponLevel">1</span></div>
+      <div class="hudBox">🔥 콤보 <span id="combo">0</span></div>
+      <div class="hudBox">🛡️ 보호막 <span id="shield">0</span></div>
+      <div class="hudBox">⏱️ 시간 <span id="time">0</span>s</div>
+    </div>
+
+    <div id="questionBox">
+      <div id="questionText">7 × 8 = ?</div>
+      <div id="questionSub">정답 구슬을 먹으면 강화됩니다. 오답 구슬은 피해 주세요!</div>
+    </div>
+
+    <button id="mainMenuBtn" class="hidden">🏠 메인 메뉴</button>
+    <button id="quitGameBtn" class="hidden">⛔ 게임 종료</button>
+    <div id="activeItems"></div>
+    <div id="weaponInfo">🔮 마법구 Lv.1</div>
+    <div id="missionInfo">🎯 오늘의 미션 준비 중</div>
+    <div id="achievementPop"></div>
+    <div id="toast"></div>
+
+    <section id="levelUpPanel">
+      <div class="levelCard">
+        <h2>✨ 레벨 업!</h2>
+        <div class="subtitle">성장 방향을 직접 선택하세요. 선택하는 순간 게임이 이어집니다.</div>
+        <div id="upgradeChoices" class="upgradeGrid"></div>
+      </div>
+    </section>
+
+    <section id="startPanel" class="panel">
+      <div class="card">
+        <h1>🌍 매쓰 서바이벌 <span class="edition">2.0</span></h1>
+        <div class="subtitle">
+          수학으로 강해지는 나만의 모험. 정답 구슬을 찾고, 귀여운 친구와 함께 세 개의 월드를 탐험하세요.
+        </div>
+
+        <details class="originalHelp"><summary>🎮 조작·맵·아이템 안내</summary><div class="tabs">
+          <button class="tab-btn active" id="tabBtn1" onclick="document.getElementById('tabContent1').classList.add('active'); document.getElementById('tabContent2').classList.remove('active'); document.getElementById('tabBtn1').classList.add('active'); document.getElementById('tabBtn2').classList.remove('active');">🎮 조작 & 맵</button>
+          <button class="tab-btn" id="tabBtn2" onclick="document.getElementById('tabContent2').classList.add('active'); document.getElementById('tabContent1').classList.remove('active'); document.getElementById('tabBtn2').classList.add('active'); document.getElementById('tabBtn1').classList.remove('active');">🎁 아이템 & 무기</button>
+        </div>
+
+        <div id="tabContent1" class="tab-content active">
+          <div class="grid">
+            <div class="info">
+              <b>🎮 조작</b><br>
+              이동: <kbd>WASD</kbd> 또는 <kbd>방향키</kbd><br>
+              모바일: 왼쪽 <b>조이스틱</b> / 오른쪽 <b>대시</b><br>
+              대시: <kbd>Space</kbd> / 일시정지: <kbd>P</kbd><br>
+              메인 메뉴: <kbd>ESC</kbd> 또는 화면 버튼<br>
+              게임 종료: <kbd>Q</kbd> 또는 종료 버튼
+            </div>
+            <div class="info">
+              <b>🗺️ 맵 선택</b><br>
+              연산의 숲, 분수 사막, 별빛 도서관<br>
+              맵마다 배경과 장식, 분위기가 다릅니다.
+            </div>
+          </div>
+        </div>
+
+        <div id="tabContent2" class="tab-content">
+          <div class="grid">
+            <div class="info">
+              <b>🔫 무기 확장</b><br>
+              마법구, 다중 발사, 관통 마법, 회전 위성, 수학 레이저, 부메랑 칠판, 분필 비<br>
+              레벨업 때 강화 가능<br>보스전, 포털, 펫 공격까지 추가
+            </div>
+            <div class="info">
+              <b>🎁 아이템 확장</b><br>
+              회복하트, 보호막, 시간얼음, 자석, 폭탄, 별사탕, 연산노트, 번개신발, 경험치책, 무지개연필, 지우개, 시계, 보물상자, 행운클로버, 보석, 순간이동깃털, 경험치 젤리
+            </div>
+          </div>
+        </div>
+
+        </details><div id="v2Setup"></div><div class="row">
+          <select aria-label="전투 난이도" id="difficulty">
+            <option value="easy">전투: 편안하게</option>
+            <option value="normal" selected>전투: 보통</option>
+            <option value="hard">전투: 도전</option>
+          </select>
+
+          <select id="mapSelect">
+            <option value="forest" selected>연산의 숲</option>
+            <option value="desert">분수 사막</option>
+            <option value="library">별빛 도서관</option>
+          </select>
+
+          <button id="startBtn">게임 시작</button>
+          <button id="muteBtn">🔊 소리 켜짐</button>
+        </div>
+
+        <p class="small">
+          큰 맵에서는 캐릭터가 움직이면 화면이 따라갑니다. 정답 구슬과 아이템도 캐릭터 주변에 등장하므로 계속 이동하며 문제를 풀 수 있습니다.
+        </p>
+      </div>
+    </section>
+
+    <section id="gameOverPanel" class="panel hidden">
+      <div class="card">
+        <h1 id="resultTitle">게임 종료</h1>
+        <div class="subtitle" id="resultText"></div>
+        <div class="grid">
+          <div class="info">⭐ 최종 점수<br><b id="finalScore">0</b></div>
+          <div class="info">📘 도달 레벨<br><b id="finalLevel">1</b></div>
+          <div class="info">✅ 정답 수<br><b id="finalCorrect">0</b></div>
+          <div class="info">🔥 최고 콤보<br><b id="finalCombo">0</b></div>
+        </div>
+        <div class="row">
+          <div id="learningReport"></div><div class="exports"><button id="exportJSON">JSON 저장</button><button id="exportCSV">CSV 저장</button></div><button id="restartBtn">다시 도전</button>
+          <button id="toStartBtn">처음 화면</button>
+          <button id="musicBtn">🎵 브금 유지 중</button>
+        </div>
+        <p class="small">브금은 이 화면에서도 계속 재생됩니다. 소리가 필요 없으면 소리 버튼을 눌러 끌 수 있습니다.</p>
+      </div>
+    </section>
+
+    <!-- Mobile UI -->
+    <div id="joystickZone">
+      <div id="joystickStick"></div>
+    </div>
+    <div id="dashBtn" role="button" aria-label="대시">대시</div><button id="skillBtn">특수 스킬 E</button><div id="playControls"><button id="pauseBtn">⏸ 일시정지</button><button id="playSound">🔊 소리</button></div><div id="answerAccess" aria-label="정답 구슬 접근 버튼"></div><div id="explanation" aria-live="polite"></div>
+  </div>
+
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>

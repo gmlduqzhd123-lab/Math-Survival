@@ -1,0 +1,96 @@
+{
+  "date": "2026-10-08T23:25:27.694Z",
+  "browser": "Microsoft Edge / Playwright",
+  "checks": [
+    {
+      "name": "Pages 하위 경로 모듈·JSON 로딩",
+      "passed": true
+    },
+    {
+      "name": "키보드 이동·대시·특수 스킬",
+      "passed": true
+    },
+    {
+      "name": "원본 전투·아이템·펫·경험치·레벨업 회귀",
+      "passed": true
+    },
+    {
+      "name": "정답·오답·콤보·해설·취약 재출제",
+      "passed": true
+    },
+    {
+      "name": "신규 무기 4종 강화·진화·공격",
+      "passed": true
+    },
+    {
+      "name": "보스 3종 × 2패턴·예고·충돌·보상",
+      "passed": true
+    },
+    {
+      "name": "일시정지 동안 시간·버프·공격·위치 고정",
+      "passed": true
+    },
+    {
+      "name": "게임 종료·학습 저장·JSON/CSV 내보내기",
+      "passed": true
+    },
+    {
+      "name": "10회 재시작·배열/스킬/학습 기록 초기화",
+      "passed": true
+    },
+    {
+      "name": "타이머·키보드 이벤트·게임 루프 중복 방지",
+      "passed": true
+    },
+    {
+      "name": "페이지 새로고침 뒤 학습 저장 유지",
+      "passed": true
+    },
+    {
+      "name": "교사 설정·학년/영역/단원·탐험 목표 달성",
+      "passed": true
+    },
+    {
+      "name": "탐험 제한 시간 종료",
+      "passed": true
+    },
+    {
+      "name": "캐릭터 3종 능력치·스킬 및 전투/수학 난이도 분리",
+      "passed": true
+    },
+    {
+      "name": "보스 챌린지 3연전 완료",
+      "passed": true
+    },
+    {
+      "name": "서바이벌 생존 완료 및 체력 소진 종료",
+      "passed": true
+    },
+    {
+      "name": "화면 크기 변경·경계에서 구슬 중복 방지",
+      "passed": true
+    },
+    {
+      "name": "모바일 실제 터치 조이스틱 이동·취소·대시·스킬",
+      "passed": true
+    },
+    {
+      "name": "모바일 핵심 HUD·문제·버튼 경계/겹침",
+      "passed": true
+    },
+    {
+      "name": "모바일 가로 모드",
+      "passed": true
+    },
+    {
+      "name": "소리·애니메이션 감소·저사양·글자 크기",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "limitations": [
+    "터치 검사는 브라우저 입력 이벤트이며 실제 모바일 기기 검사 아님",
+    "오디오는 초기화·음소거 상태 검사이며 청취 검사 아님",
+    "실제 GitHub Pages 배포는 승인 대기"
+  ]
+}

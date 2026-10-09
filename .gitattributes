@@ -1,0 +1,4 @@
+* text=auto eol=lf
+original/index.html -text
+*.png binary
+*.zip binary
