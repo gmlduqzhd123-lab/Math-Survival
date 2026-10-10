@@ -1,0 +1,305 @@
+[
+  {
+    "name": "desktop-abacus",
+    "weapon": "abacus",
+    "difficulty": "normal",
+    "width": 1440,
+    "height": 900,
+    "wallSeconds": 180.232,
+    "final": {
+      "running": true,
+      "time": 176.70000000003276,
+      "hp": 64,
+      "kills": 326,
+      "level": 12,
+      "correct": 6,
+      "levels": {
+        "magic": 4,
+        "abacus": 5
+      },
+      "stuckJoystick": false
+    },
+    "choices": [
+      "🧮구슬 주판 Lv.2피해·개수·속도 강화 / 진화: 빠른 계산 Lv.2",
+      "마법구 강화기본 무기 레벨 +1, 공격력과 탄속 증가",
+      "🧮구슬 주판 Lv.3피해·개수·속도 강화 / 진화: 빠른 계산 Lv.2",
+      "🧮구슬 주판 Lv.4피해·개수·속도 강화 / 진화: 빠른 계산 Lv.2",
+      "🧮구슬 주판 Lv.5피해·개수·속도 강화 / 진화: 빠른 계산 Lv.2",
+      "마법구 강화기본 무기 레벨 +1, 공격력과 탄속 증가",
+      "🧮구슬 주판 한계 돌파추가 피해 +5% (진화 후에도 적용)",
+      "🧮구슬 주판 한계 돌파추가 피해 +5% (진화 후에도 적용)",
+      "🧮구슬 주판 한계 돌파추가 피해 +5% (진화 후에도 적용)",
+      "🧮구슬 주판 한계 돌파추가 피해 +5% (진화 후에도 적용)"
+    ],
+    "snapshots": [
+      {
+        "time": 0,
+        "hp": 140,
+        "kills": 0,
+        "level": 1,
+        "correct": 1,
+        "enemies": 0
+      },
+      {
+        "time": 20.033333333333477,
+        "hp": 140,
+        "kills": 16,
+        "level": 2,
+        "correct": 1,
+        "enemies": 2
+      },
+      {
+        "time": 40.16666666666567,
+        "hp": 140,
+        "kills": 32,
+        "level": 3,
+        "correct": 2,
+        "enemies": 6
+      },
+      {
+        "time": 60.29999999999786,
+        "hp": 140,
+        "kills": 52,
+        "level": 5,
+        "correct": 3,
+        "enemies": 5
+      },
+      {
+        "time": 80.3166666666634,
+        "hp": 140,
+        "kills": 82,
+        "level": 6,
+        "correct": 3,
+        "enemies": 17
+      },
+      {
+        "time": 100.43333333332892,
+        "hp": 140,
+        "kills": 124,
+        "level": 8,
+        "correct": 4,
+        "enemies": 17
+      },
+      {
+        "time": 120.51666666666111,
+        "hp": 140,
+        "kills": 166,
+        "level": 9,
+        "correct": 5,
+        "enemies": 20
+      },
+      {
+        "time": 140.5333333333373,
+        "hp": 119,
+        "kills": 206,
+        "level": 10,
+        "correct": 5,
+        "enemies": 26
+      },
+      {
+        "time": 160.65000000002,
+        "hp": 117,
+        "kills": 258,
+        "level": 11,
+        "correct": 6,
+        "enemies": 35
+      }
+    ],
+    "errors": []
+  },
+  {
+    "name": "phone-star",
+    "weapon": "star",
+    "difficulty": "normal",
+    "width": 390,
+    "height": 844,
+    "touch": true,
+    "wallSeconds": 141.766,
+    "final": {
+      "running": false,
+      "time": 138.65000000000248,
+      "hp": -12,
+      "kills": 186,
+      "level": 7,
+      "correct": 5,
+      "levels": {
+        "magic": 3,
+        "star": 2,
+        "polygon": 3
+      },
+      "stuckJoystick": false
+    },
+    "choices": [
+      "🔷다각형 칼날 Lv.1피해·개수·속도 강화 / 진화: 힘의 연필 Lv.2",
+      "🔷다각형 칼날 Lv.2피해·개수·속도 강화 / 진화: 힘의 연필 Lv.2",
+      "회복력 강화정답과 하트 아이템 회복량 증가, 보호막 +1",
+      "🌟별자리 나침반 Lv.2피해·개수·속도 강화 / 진화: 튼튼한 책가방 Lv.2",
+      "마법구 강화기본 무기 레벨 +1, 공격력과 탄속 증가",
+      "🔷다각형 칼날 Lv.3피해·개수·속도 강화 / 진화: 힘의 연필 Lv.2"
+    ],
+    "snapshots": [
+      {
+        "time": 0,
+        "hp": 140,
+        "kills": 0,
+        "level": 1,
+        "correct": 1,
+        "enemies": 0
+      },
+      {
+        "time": 20.06666666666681,
+        "hp": 140,
+        "kills": 16,
+        "level": 2,
+        "correct": 1,
+        "enemies": 2
+      },
+      {
+        "time": 40.08333333333234,
+        "hp": 140,
+        "kills": 35,
+        "level": 3,
+        "correct": 2,
+        "enemies": 3
+      },
+      {
+        "time": 60.29999999999786,
+        "hp": 140,
+        "kills": 54,
+        "level": 3,
+        "correct": 3,
+        "enemies": 3
+      },
+      {
+        "time": 80.39999999999672,
+        "hp": 140,
+        "kills": 84,
+        "level": 5,
+        "correct": 3,
+        "enemies": 15
+      },
+      {
+        "time": 100.54999999999558,
+        "hp": 140,
+        "kills": 122,
+        "level": 6,
+        "correct": 4,
+        "enemies": 21
+      },
+      {
+        "time": 120.73333333332776,
+        "hp": 140,
+        "kills": 154,
+        "level": 7,
+        "correct": 5,
+        "enemies": 32
+      }
+    ],
+    "errors": []
+  },
+  {
+    "name": "phone-dice-easy",
+    "weapon": "dice",
+    "difficulty": "easy",
+    "width": 360,
+    "height": 640,
+    "touch": true,
+    "wallSeconds": 180.57,
+    "final": {
+      "running": true,
+      "time": 177.6666666667002,
+      "hp": 54.59999999999992,
+      "kills": 235,
+      "level": 6,
+      "correct": 6,
+      "levels": {
+        "magic": 3,
+        "dice": 3,
+        "ruler": 2
+      },
+      "stuckJoystick": false
+    },
+    "choices": [
+      "🎲행운 주사위 Lv.2피해·개수·속도 강화 / 진화: 넓이 노트 Lv.2",
+      "📏무한 자 Lv.1피해·개수·속도 강화 / 진화: 행운 클로버 Lv.2",
+      "마법구 강화기본 무기 레벨 +1, 공격력과 탄속 증가",
+      "🎲행운 주사위 Lv.3피해·개수·속도 강화 / 진화: 넓이 노트 Lv.2",
+      "📏무한 자 Lv.2피해·개수·속도 강화 / 진화: 행운 클로버 Lv.2"
+    ],
+    "snapshots": [
+      {
+        "time": 0,
+        "hp": 140,
+        "kills": 0,
+        "level": 1,
+        "correct": 1,
+        "enemies": 0
+      },
+      {
+        "time": 20.116666666666806,
+        "hp": 140,
+        "kills": 13,
+        "level": 1,
+        "correct": 1,
+        "enemies": 0
+      },
+      {
+        "time": 40.21666666666567,
+        "hp": 140,
+        "kills": 25,
+        "level": 3,
+        "correct": 2,
+        "enemies": 1
+      },
+      {
+        "time": 60.29999999999786,
+        "hp": 140,
+        "kills": 39,
+        "level": 4,
+        "correct": 3,
+        "enemies": 1
+      },
+      {
+        "time": 80.48333333333005,
+        "hp": 140,
+        "kills": 65,
+        "level": 4,
+        "correct": 3,
+        "enemies": 5
+      },
+      {
+        "time": 100.6333333333289,
+        "hp": 140,
+        "kills": 95,
+        "level": 4,
+        "correct": 4,
+        "enemies": 5
+      },
+      {
+        "time": 120.81666666666109,
+        "hp": 127.49999999999997,
+        "kills": 126,
+        "level": 4,
+        "correct": 5,
+        "enemies": 4
+      },
+      {
+        "time": 140.91666666667095,
+        "hp": 112.79999999999995,
+        "kills": 158,
+        "level": 5,
+        "correct": 5,
+        "enemies": 4
+      },
+      {
+        "time": 161.00000000002026,
+        "hp": 113.39999999999998,
+        "kills": 188,
+        "level": 5,
+        "correct": 6,
+        "enemies": 24
+      }
+    ],
+    "errors": []
+  }
+]

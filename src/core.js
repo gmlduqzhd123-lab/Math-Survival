@@ -1,3 +1,4 @@
+import {bossSchedule} from './v3/performance.js';
 // Extracted from upstream. Cross-system state is supplied by the shared runtime.
 import {renderDpr} from './render-budget.js';
 export function createSystem(gameRuntime) {
@@ -176,7 +177,7 @@ function update(dt, now) {
         if (gameRuntime.state.mission.progress >= gameRuntime.state.mission.target) gameRuntime.completeMission();
       }
 
-      if (gameRuntime.state.mode === "survival" && gameRuntime.state.time > 45 + gameRuntime.state.bossIndex * 50 && gameRuntime.state.bossIndex < 3) {
+      if (gameRuntime.state.mode === "survival" && gameRuntime.state.time > (gameRuntime.v3?bossSchedule(gameRuntime.state.difficulty,gameRuntime.state.bossIndex).boss:45 + gameRuntime.state.bossIndex * 50) && gameRuntime.state.bossIndex < 3) {
         gameRuntime.spawnBoss();
       }
 

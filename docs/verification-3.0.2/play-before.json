@@ -1,0 +1,649 @@
+[
+  {
+    "name": "desktop-abacus",
+    "weapon": "abacus",
+    "difficulty": "normal",
+    "width": 1440,
+    "height": 900,
+    "wallSeconds": 125.255,
+    "final": {
+      "running": true,
+      "time": 122.466666666661,
+      "hp": 84,
+      "kills": 168,
+      "level": 8,
+      "correct": 5,
+      "levels": {
+        "magic": 2,
+        "abacus": 1,
+        "clock": 2,
+        "fraction": 1,
+        "laser": 1,
+        "star": 1
+      },
+      "stuckJoystick": false
+    },
+    "choices": [
+      "회복력 강화정답과 하트 아이템 회복량 증가, 보호막 +1",
+      "⏰시간 톱니 Lv.1피해·개수·속도 강화 / 진화: 구슬 자석 Lv.2",
+      "분수 방패 Lv.1Lv.3 + 최고 5콤보 → 완전 분수 방패",
+      "📏수학 레이저가장 가까운 적을 향해 긴 직선 레이저 발사",
+      "🌱생명의 씨앗 Lv.1최대 체력 +12/단계",
+      "🌟별자리 나침반 Lv.1피해·개수·속도 강화 / 진화: 튼튼한 책가방 Lv.2",
+      "⏰시간 톱니 Lv.2피해·개수·속도 강화 / 진화: 구슬 자석 Lv.2"
+    ],
+    "snapshots": [
+      {
+        "time": 0,
+        "hp": 140,
+        "kills": 0,
+        "level": 1,
+        "correct": 1,
+        "enemies": 0
+      },
+      {
+        "time": 0.2333333333333333,
+        "hp": 140,
+        "kills": 0,
+        "level": 1,
+        "correct": 1,
+        "enemies": 0
+      },
+      {
+        "time": 0.4666666666666666,
+        "hp": 140,
+        "kills": 0,
+        "level": 1,
+        "correct": 1,
+        "enemies": 0
+      },
+      {
+        "time": 0.7166666666666672,
+        "hp": 140,
+        "kills": 0,
+        "level": 1,
+        "correct": 1,
+        "enemies": 0
+      },
+      {
+        "time": 19.800000000000157,
+        "hp": 140,
+        "kills": 13,
+        "level": 2,
+        "correct": 1,
+        "enemies": 5
+      },
+      {
+        "time": 20.033333333333477,
+        "hp": 140,
+        "kills": 13,
+        "level": 2,
+        "correct": 1,
+        "enemies": 5
+      },
+      {
+        "time": 20.266666666666797,
+        "hp": 140,
+        "kills": 14,
+        "level": 2,
+        "correct": 1,
+        "enemies": 5
+      },
+      {
+        "time": 20.516666666666783,
+        "hp": 140,
+        "kills": 14,
+        "level": 2,
+        "correct": 1,
+        "enemies": 5
+      },
+      {
+        "time": 39.29999999999905,
+        "hp": 140,
+        "kills": 30,
+        "level": 3,
+        "correct": 2,
+        "enemies": 7
+      },
+      {
+        "time": 39.53333333333237,
+        "hp": 140,
+        "kills": 31,
+        "level": 3,
+        "correct": 2,
+        "enemies": 6
+      },
+      {
+        "time": 39.78333333333236,
+        "hp": 140,
+        "kills": 31,
+        "level": 3,
+        "correct": 2,
+        "enemies": 6
+      },
+      {
+        "time": 40.01666666666568,
+        "hp": 140,
+        "kills": 31,
+        "level": 3,
+        "correct": 2,
+        "enemies": 6
+      },
+      {
+        "time": 58.683333333331284,
+        "hp": 140,
+        "kills": 48,
+        "level": 5,
+        "correct": 2,
+        "enemies": 9
+      },
+      {
+        "time": 58.93333333333127,
+        "hp": 140,
+        "kills": 48,
+        "level": 5,
+        "correct": 2,
+        "enemies": 9
+      },
+      {
+        "time": 59.183333333331255,
+        "hp": 140,
+        "kills": 48,
+        "level": 5,
+        "correct": 2,
+        "enemies": 9
+      },
+      {
+        "time": 59.43333333333124,
+        "hp": 140,
+        "kills": 49,
+        "level": 5,
+        "correct": 2,
+        "enemies": 9
+      },
+      {
+        "time": 78.34999999999684,
+        "hp": 152,
+        "kills": 76,
+        "level": 6,
+        "correct": 3,
+        "enemies": 20
+      },
+      {
+        "time": 78.58333333333016,
+        "hp": 152,
+        "kills": 76,
+        "level": 6,
+        "correct": 3,
+        "enemies": 20
+      },
+      {
+        "time": 78.81666666666348,
+        "hp": 152,
+        "kills": 76,
+        "level": 6,
+        "correct": 3,
+        "enemies": 22
+      },
+      {
+        "time": 79.08333333333013,
+        "hp": 152,
+        "kills": 78,
+        "level": 6,
+        "correct": 3,
+        "enemies": 20
+      },
+      {
+        "time": 97.94999999999573,
+        "hp": 152,
+        "kills": 119,
+        "level": 7,
+        "correct": 4,
+        "enemies": 21
+      },
+      {
+        "time": 98.18333333332905,
+        "hp": 152,
+        "kills": 119,
+        "level": 7,
+        "correct": 4,
+        "enemies": 21
+      },
+      {
+        "time": 98.43333333332903,
+        "hp": 152,
+        "kills": 119,
+        "level": 7,
+        "correct": 4,
+        "enemies": 21
+      },
+      {
+        "time": 98.66666666666235,
+        "hp": 152,
+        "kills": 122,
+        "level": 7,
+        "correct": 4,
+        "enemies": 20
+      },
+      {
+        "time": 117.73333333332793,
+        "hp": 93,
+        "kills": 154,
+        "level": 8,
+        "correct": 4,
+        "enemies": 28
+      },
+      {
+        "time": 117.98333333332792,
+        "hp": 93,
+        "kills": 154,
+        "level": 8,
+        "correct": 4,
+        "enemies": 28
+      },
+      {
+        "time": 118.2333333333279,
+        "hp": 93,
+        "kills": 154,
+        "level": 8,
+        "correct": 4,
+        "enemies": 28
+      },
+      {
+        "time": 118.46666666666123,
+        "hp": 93,
+        "kills": 154,
+        "level": 8,
+        "correct": 4,
+        "enemies": 30
+      }
+    ],
+    "errors": []
+  },
+  {
+    "name": "phone-star",
+    "weapon": "star",
+    "difficulty": "normal",
+    "width": 390,
+    "height": 844,
+    "touch": true,
+    "wallSeconds": 116.733,
+    "final": {
+      "running": false,
+      "time": 114.04999999999481,
+      "hp": -8,
+      "kills": 151,
+      "level": 8,
+      "correct": 4,
+      "levels": {
+        "magic": 1,
+        "star": 1,
+        "quill": 1,
+        "abacus": 2,
+        "clock": 1
+      },
+      "stuckJoystick": false
+    },
+    "choices": [
+      "🪶정답 깃털 Lv.1피해·개수·속도 강화 / 진화: 생명의 씨앗 Lv.2",
+      "🧮구슬 주판 Lv.1피해·개수·속도 강화 / 진화: 빠른 계산 Lv.2",
+      "⏰시간 톱니 Lv.1피해·개수·속도 강화 / 진화: 구슬 자석 Lv.2",
+      "🌱생명의 씨앗 Lv.1최대 체력 +12/단계",
+      "🧮구슬 주판 Lv.2피해·개수·속도 강화 / 진화: 빠른 계산 Lv.2",
+      "🎒튼튼한 책가방 Lv.1접촉 피해 감소",
+      "🎒튼튼한 책가방 Lv.2접촉 피해 감소"
+    ],
+    "snapshots": [
+      {
+        "time": 0.03333333333333333,
+        "hp": 140,
+        "kills": 0,
+        "level": 1,
+        "correct": 1,
+        "enemies": 0
+      },
+      {
+        "time": 0.31666666666666665,
+        "hp": 140,
+        "kills": 0,
+        "level": 1,
+        "correct": 1,
+        "enemies": 0
+      },
+      {
+        "time": 0.55,
+        "hp": 140,
+        "kills": 0,
+        "level": 1,
+        "correct": 1,
+        "enemies": 0
+      },
+      {
+        "time": 0.850000000000001,
+        "hp": 140,
+        "kills": 0,
+        "level": 1,
+        "correct": 1,
+        "enemies": 0
+      },
+      {
+        "time": 20.06666666666681,
+        "hp": 140,
+        "kills": 16,
+        "level": 1,
+        "correct": 1,
+        "enemies": 2
+      },
+      {
+        "time": 20.316666666666794,
+        "hp": 140,
+        "kills": 16,
+        "level": 1,
+        "correct": 1,
+        "enemies": 3
+      },
+      {
+        "time": 20.56666666666678,
+        "hp": 140,
+        "kills": 16,
+        "level": 1,
+        "correct": 1,
+        "enemies": 3
+      },
+      {
+        "time": 20.816666666666766,
+        "hp": 140,
+        "kills": 16,
+        "level": 1,
+        "correct": 1,
+        "enemies": 3
+      },
+      {
+        "time": 39.51666666666571,
+        "hp": 140,
+        "kills": 36,
+        "level": 3,
+        "correct": 2,
+        "enemies": 1
+      },
+      {
+        "time": 39.799999999999024,
+        "hp": 140,
+        "kills": 36,
+        "level": 3,
+        "correct": 2,
+        "enemies": 1
+      },
+      {
+        "time": 40.066666666665675,
+        "hp": 140,
+        "kills": 36,
+        "level": 3,
+        "correct": 2,
+        "enemies": 2
+      },
+      {
+        "time": 40.31666666666566,
+        "hp": 140,
+        "kills": 37,
+        "level": 3,
+        "correct": 2,
+        "enemies": 1
+      },
+      {
+        "time": 59.383333333331244,
+        "hp": 140,
+        "kills": 52,
+        "level": 4,
+        "correct": 2,
+        "enemies": 6
+      },
+      {
+        "time": 59.66666666666456,
+        "hp": 140,
+        "kills": 52,
+        "level": 4,
+        "correct": 2,
+        "enemies": 6
+      },
+      {
+        "time": 59.93333333333121,
+        "hp": 140,
+        "kills": 52,
+        "level": 4,
+        "correct": 2,
+        "enemies": 6
+      },
+      {
+        "time": 78.69999999999682,
+        "hp": 152,
+        "kills": 82,
+        "level": 6,
+        "correct": 3,
+        "enemies": 16
+      },
+      {
+        "time": 78.9999999999968,
+        "hp": 152,
+        "kills": 84,
+        "level": 6,
+        "correct": 3,
+        "enemies": 14
+      },
+      {
+        "time": 79.28333333333012,
+        "hp": 152,
+        "kills": 84,
+        "level": 6,
+        "correct": 3,
+        "enemies": 14
+      },
+      {
+        "time": 98.06666666666239,
+        "hp": 94,
+        "kills": 123,
+        "level": 7,
+        "correct": 4,
+        "enemies": 17
+      },
+      {
+        "time": 98.33333333332904,
+        "hp": 94,
+        "kills": 124,
+        "level": 7,
+        "correct": 4,
+        "enemies": 16
+      },
+      {
+        "time": 98.61666666666235,
+        "hp": 94,
+        "kills": 124,
+        "level": 7,
+        "correct": 4,
+        "enemies": 16
+      },
+      {
+        "time": 98.89999999999567,
+        "hp": 76,
+        "kills": 126,
+        "level": 7,
+        "correct": 4,
+        "enemies": 16
+      }
+    ],
+    "errors": []
+  },
+  {
+    "name": "phone-dice-easy",
+    "weapon": "dice",
+    "difficulty": "easy",
+    "width": 360,
+    "height": 640,
+    "touch": true,
+    "wallSeconds": 95.542,
+    "final": {
+      "running": false,
+      "time": 93.94999999999595,
+      "hp": -17,
+      "kills": 74,
+      "level": 3,
+      "correct": 4,
+      "levels": {
+        "magic": 2,
+        "dice": 1
+      },
+      "stuckJoystick": false
+    },
+    "choices": [
+      "🐹캐릭터 성장최대 체력 +15, 현재 체력 +25, 이동 속도 증가",
+      "✏️힘의 연필 Lv.1피해량 +8%/단계"
+    ],
+    "snapshots": [
+      {
+        "time": 0,
+        "hp": 140,
+        "kills": 0,
+        "level": 1,
+        "correct": 1,
+        "enemies": 0
+      },
+      {
+        "time": 0.3333333333333333,
+        "hp": 140,
+        "kills": 0,
+        "level": 1,
+        "correct": 1,
+        "enemies": 0
+      },
+      {
+        "time": 0.5833333333333335,
+        "hp": 140,
+        "kills": 0,
+        "level": 1,
+        "correct": 1,
+        "enemies": 0
+      },
+      {
+        "time": 20.050000000000143,
+        "hp": 140,
+        "kills": 12,
+        "level": 1,
+        "correct": 1,
+        "enemies": 1
+      },
+      {
+        "time": 20.30000000000013,
+        "hp": 140,
+        "kills": 12,
+        "level": 1,
+        "correct": 1,
+        "enemies": 1
+      },
+      {
+        "time": 20.550000000000114,
+        "hp": 140,
+        "kills": 12,
+        "level": 1,
+        "correct": 1,
+        "enemies": 1
+      },
+      {
+        "time": 20.8000000000001,
+        "hp": 140,
+        "kills": 12,
+        "level": 1,
+        "correct": 1,
+        "enemies": 1
+      },
+      {
+        "time": 39.64999999999903,
+        "hp": 140,
+        "kills": 25,
+        "level": 1,
+        "correct": 2,
+        "enemies": 1
+      },
+      {
+        "time": 39.916666666665684,
+        "hp": 140,
+        "kills": 26,
+        "level": 1,
+        "correct": 2,
+        "enemies": 0
+      },
+      {
+        "time": 40.149999999999004,
+        "hp": 140,
+        "kills": 26,
+        "level": 1,
+        "correct": 2,
+        "enemies": 0
+      },
+      {
+        "time": 40.39999999999899,
+        "hp": 140,
+        "kills": 26,
+        "level": 1,
+        "correct": 2,
+        "enemies": 0
+      },
+      {
+        "time": 59.616666666664564,
+        "hp": 110,
+        "kills": 34,
+        "level": 1,
+        "correct": 2,
+        "enemies": 7
+      },
+      {
+        "time": 59.86666666666455,
+        "hp": 110,
+        "kills": 34,
+        "level": 1,
+        "correct": 2,
+        "enemies": 7
+      },
+      {
+        "time": 60.01666666666454,
+        "hp": 122,
+        "kills": 34,
+        "level": 1,
+        "correct": 3,
+        "enemies": 7
+      },
+      {
+        "time": 79.23333333333012,
+        "hp": 127,
+        "kills": 56,
+        "level": 3,
+        "correct": 3,
+        "enemies": 13
+      },
+      {
+        "time": 79.48333333333011,
+        "hp": 127,
+        "kills": 57,
+        "level": 3,
+        "correct": 3,
+        "enemies": 12
+      },
+      {
+        "time": 79.71666666666343,
+        "hp": 127,
+        "kills": 57,
+        "level": 3,
+        "correct": 3,
+        "enemies": 12
+      },
+      {
+        "time": 79.98333333333008,
+        "hp": 127,
+        "kills": 59,
+        "level": 3,
+        "correct": 3,
+        "enemies": 10
+      }
+    ],
+    "errors": []
+  }
+]

@@ -1,0 +1,94 @@
+[
+  {
+    "name": "phone-star",
+    "weapon": "star",
+    "difficulty": "normal",
+    "width": 390,
+    "height": 844,
+    "touch": true,
+    "wallSeconds": 125.191,
+    "final": {
+      "running": true,
+      "time": 124.13333333332757,
+      "hp": 80,
+      "kills": 175,
+      "level": 8,
+      "correct": 3,
+      "levels": {
+        "magic": 2,
+        "star": 1,
+        "protractor": 2,
+        "clock": 4
+      },
+      "stuckJoystick": false
+    },
+    "choices": [
+      "📐각도 부채 Lv.1피해·개수·속도 강화 / 진화: 수학 충전지 Lv.2",
+      "📐각도 부채 Lv.2피해·개수·속도 강화 / 진화: 수학 충전지 Lv.2",
+      "⏰시간 톱니 Lv.1피해·개수·속도 강화 / 진화: 구슬 자석 Lv.2",
+      "🎒튼튼한 책가방 Lv.1접촉 피해 감소",
+      "⏰시간 톱니 Lv.2피해·개수·속도 강화 / 진화: 구슬 자석 Lv.2",
+      "⏰시간 톱니 Lv.3피해·개수·속도 강화 / 진화: 구슬 자석 Lv.2",
+      "⏰시간 톱니 Lv.4피해·개수·속도 강화 / 진화: 구슬 자석 Lv.2"
+    ],
+    "snapshots": [
+      {
+        "time": 0.19999999999999998,
+        "hp": 140,
+        "kills": 0,
+        "level": 1,
+        "correct": 0,
+        "enemies": 0
+      },
+      {
+        "time": 20.30000000000013,
+        "hp": 140,
+        "kills": 17,
+        "level": 1,
+        "correct": 1,
+        "enemies": 2
+      },
+      {
+        "time": 40.39999999999899,
+        "hp": 140,
+        "kills": 33,
+        "level": 1,
+        "correct": 1,
+        "enemies": 5
+      },
+      {
+        "time": 60.56666666666451,
+        "hp": 140,
+        "kills": 53,
+        "level": 2,
+        "correct": 2,
+        "enemies": 6
+      },
+      {
+        "time": 80.64999999999671,
+        "hp": 140,
+        "kills": 84,
+        "level": 3,
+        "correct": 2,
+        "enemies": 17
+      },
+      {
+        "time": 100.96666666666222,
+        "hp": 140,
+        "kills": 132,
+        "level": 7,
+        "correct": 3,
+        "enemies": 11
+      },
+      {
+        "time": 121.1999999999944,
+        "hp": 112,
+        "kills": 170,
+        "level": 8,
+        "correct": 3,
+        "enemies": 18
+      }
+    ],
+    "errors": []
+  }
+]

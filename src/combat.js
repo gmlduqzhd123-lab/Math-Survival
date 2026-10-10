@@ -1,3 +1,4 @@
+import {selectUpgradeCards} from './v3/weapons-data.js';
 // Extracted from upstream. Cross-system state is supplied by the shared runtime.
 export function createSystem(gameRuntime) {
 function giveChestReward(now) {
@@ -42,7 +43,7 @@ function upgradeOptions() {
         { emoji:"✏️", sprite:"pencil-sword", slot:"chalk", title:"분필 비", desc:"하늘에서 분필이 떨어져 여러 적을 공격", apply(){ gameRuntime.state.chalkRainLevel=Math.min(4,gameRuntime.state.chalkRainLevel+1); gameRuntime.state.weaponLevel++; } },
         { emoji:"🦉", title:"수학요정 강화", desc:"따라다니는 펫의 공격 속도와 공격력 증가", apply(){ gameRuntime.state.petLevel=Math.min(5,gameRuntime.state.petLevel+1); gameRuntime.state.weaponLevel++; } }
       ];
-      return [...(gameRuntime.v3?gameRuntime.v3.weapons.filterLegacy(options):options), ...gameRuntime.v2.upgrades()].sort(() => Math.random() - 0.5).slice(0, 3);
+      return selectUpgradeCards([...(gameRuntime.v3?gameRuntime.v3.weapons.filterLegacy(options):options), ...gameRuntime.v2.upgrades()],gameRuntime.v3?.weapons.levels||{});
     }
 
 function chooseUpgrade(option) {

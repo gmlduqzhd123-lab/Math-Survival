@@ -1,0 +1,48 @@
+[
+  {
+    "name": "desktop",
+    "width": 1920,
+    "height": 1080,
+    "deviceDpr": 3,
+    "frames": {
+      "count": 712,
+      "median": 16.699999999999818,
+      "p95": 16.800000000000182,
+      "over50": 1
+    },
+    "hudMutations": 23,
+    "viewport": {
+      "width": 1904,
+      "height": 800.609375,
+      "dpr": 1.402868034823631,
+      "scale": 1
+    },
+    "backingPixels": 2999533,
+    "moved": 1756.7999999999936,
+    "simulationMs": 11949.999999999813,
+    "running": true
+  },
+  {
+    "name": "phone",
+    "width": 390,
+    "height": 844,
+    "deviceDpr": 3,
+    "frames": {
+      "count": 721,
+      "median": 16.699999999999818,
+      "p95": 16.800000000000182,
+      "over50": 0
+    },
+    "hudMutations": 25,
+    "viewport": {
+      "width": 378,
+      "height": 381.15625,
+      "dpr": 3,
+      "scale": 1
+    },
+    "backingPixels": 1296162,
+    "moved": 1673.478222146915,
+    "simulationMs": 12033.333333333145,
+    "running": true
+  }
+]

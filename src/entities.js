@@ -1,3 +1,4 @@
+import {bossStats} from './v3/performance.js';
 import {drawAnimation} from './v3/graphics.js';
 import {BOSSES} from './v3/content-data.js';
 import {MONSTERS} from './v3/monsters.js';
@@ -41,10 +42,7 @@ function spawnBoss() {
       gameRuntime.enemies.push({
         x: p.x, y: p.y,
         r: 45,
-        hp: 420 + gameRuntime.state.level * 55 + gameRuntime.state.bossIndex * 120,
-        maxHp: 420 + gameRuntime.state.level * 55 + gameRuntime.state.bossIndex * 120,
-        speed: 0.58 + gameRuntime.state.bossIndex * 0.06,
-        damage: 18 + gameRuntime.state.bossIndex * 2,
+        ...bossStats({hp:420 + gameRuntime.state.level * 55 + gameRuntime.state.bossIndex * 120,speed:0.58 + gameRuntime.state.bossIndex * 0.06,damage:18 + gameRuntime.state.bossIndex * 2},gameRuntime.state.difficulty),
         elite: true,
         tiny: false,
         boss: true,

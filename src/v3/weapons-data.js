@@ -17,3 +17,10 @@ export const EVOLUTIONS=Object.keys({...LEGACY_WEAPONS,...NEW_WEAPONS}).map((wea
 export const ULTIMATES=[{id:'galaxy',name:'은하의 정리',weapons:['star','satellite'],style:'orbit',color:'#ccb8ff'},{id:'fortune',name:'무한 확률 폭풍',weapons:['dice','storm'],style:'blast',color:'#f7dd77'},{id:'proof',name:'황금 증명',weapons:['quill','compass'],style:'beam',color:'#81e5d4'},{id:'eternity',name:'영원의 방패',weapons:['clock','fraction'],style:'slow',color:'#92c9ff'}];
 export function weaponStats(id,level,passives={},evolved=false,breaks=0){const w=NEW_WEAPONS[id];if(!w)throw Error('무기 정의 없음');return {...w,damage:w.damage*(1+(level-1)*.28)*(1+(passives.power||0)*.08)*(evolved?1.65:1)*(1+breaks*.05),cooldown:Math.max(200,w.cooldown*(1-(passives.haste||0)*.06)/(1+(level-1)*.09)/(evolved?1.25:1)),count:w.count+Math.floor((level-1)/2)+(evolved?2:0),range:w.range*(1+(passives.area||0)*.08+(level-1)*.05),pierce:w.pierce+Math.floor(level/3)+(evolved?2:0)};}
 export function eligibleEvolution(recipe,inventory,passives,evolved){return !evolved[recipe.weapon]&&(inventory[recipe.weapon]||0)>=recipe.weaponLevel&&(passives[recipe.passive]||0)>=recipe.passiveLevel;}
+
+// One owned weapon is always offered; the remaining cards use an unbiased shuffle.
+export function selectUpgradeCards(options,owned,rng=Math.random){
+ const cards=[...options];for(let i=cards.length-1;i>0;i--){const j=Math.floor(rng()*(i+1));[cards[i],cards[j]]=[cards[j],cards[i]];}
+ const growth=cards.find(o=>o.slot&&Object.hasOwn(owned,o.slot));
+ return growth?[growth,...cards.filter(o=>o!==growth).slice(0,2)]:cards.slice(0,3);
+}

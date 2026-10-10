@@ -16,3 +16,7 @@ export function mergeGems(gems,limit=120){
 }
 export function waveFor(seconds,difficulty='normal'){const wave=1+Math.floor(seconds/30),mult={easy:.7,normal:1,hard:1.25}[difficulty]||1;return {wave,delay:Math.max(180,1100-wave*45)/mult,batch:Math.min(6,1+Math.floor(wave/3)),health:1+Math.min(12,wave*.12),eliteChance:Math.min(.22,.02+wave*.005),types:Math.min(10,2+Math.floor(wave/2))};}
 export function performanceTier(samples,manualLow=false){const slow=samples.filter(n=>n>28).length;return manualLow||samples.length>=90&&slow/samples.length>.25?'low':'normal';}
+
+export function bossStats(base,difficulty='normal'){const k={easy:{hp:.8,speed:.85,damage:.65},normal:{hp:1,speed:1,damage:1},hard:{hp:1.2,speed:1.15,damage:1.3}}[difficulty]||{hp:1,speed:1,damage:1};return {hp:base.hp*k.hp,maxHp:base.hp*k.hp,speed:base.speed*k.speed,damage:base.damage*k.damage};}
+
+export function bossSchedule(difficulty='normal',index=0){const timing={easy:{first:180,interval:150,mid:240},normal:{first:120,interval:120,mid:180},hard:{first:90,interval:100,mid:120}}[difficulty]||{first:120,interval:120,mid:180};return {boss:timing.first+index*timing.interval,mid:timing.mid};}

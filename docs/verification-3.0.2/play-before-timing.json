@@ -1,0 +1,248 @@
+[
+  {
+    "name": "desktop-abacus",
+    "weapon": "abacus",
+    "difficulty": "normal",
+    "width": 1440,
+    "height": 900,
+    "wallSeconds": 126.479,
+    "final": {
+      "running": false,
+      "time": 123.78333333332759,
+      "hp": -11,
+      "kills": 175,
+      "level": 10,
+      "correct": 5,
+      "levels": {
+        "magic": 3,
+        "abacus": 5,
+        "polygon": 3
+      },
+      "stuckJoystick": false
+    },
+    "choices": [
+      "🎒튼튼한 책가방 Lv.1접촉 피해 감소",
+      "🧮구슬 주판 Lv.2피해·개수·속도 강화 / 진화: 빠른 계산 Lv.2",
+      "💥관통 마법마법구가 몬스터를 더 많이 관통",
+      "🧮구슬 주판 Lv.3피해·개수·속도 강화 / 진화: 빠른 계산 Lv.2",
+      "🔷다각형 칼날 Lv.1피해·개수·속도 강화 / 진화: 힘의 연필 Lv.2",
+      "🧮구슬 주판 Lv.4피해·개수·속도 강화 / 진화: 빠른 계산 Lv.2",
+      "🧮구슬 주판 Lv.5피해·개수·속도 강화 / 진화: 빠른 계산 Lv.2",
+      "🔷다각형 칼날 Lv.2피해·개수·속도 강화 / 진화: 힘의 연필 Lv.2"
+    ],
+    "snapshots": [
+      {
+        "time": 0,
+        "hp": 140,
+        "kills": 0,
+        "level": 1,
+        "correct": 1,
+        "enemies": 0
+      },
+      {
+        "time": 20.083333333333474,
+        "hp": 140,
+        "kills": 13,
+        "level": 2,
+        "correct": 1,
+        "enemies": 5
+      },
+      {
+        "time": 40.23333333333233,
+        "hp": 140,
+        "kills": 34,
+        "level": 4,
+        "correct": 2,
+        "enemies": 4
+      },
+      {
+        "time": 60.24999999999786,
+        "hp": 140,
+        "kills": 50,
+        "level": 5,
+        "correct": 3,
+        "enemies": 8
+      },
+      {
+        "time": 80.3166666666634,
+        "hp": 140,
+        "kills": 77,
+        "level": 6,
+        "correct": 3,
+        "enemies": 23
+      },
+      {
+        "time": 100.33333333332892,
+        "hp": 122,
+        "kills": 130,
+        "level": 7,
+        "correct": 4,
+        "enemies": 14
+      },
+      {
+        "time": 120.54999999999444,
+        "hp": 48,
+        "kills": 164,
+        "level": 9,
+        "correct": 5,
+        "enemies": 24
+      }
+    ],
+    "errors": []
+  },
+  {
+    "name": "phone-star",
+    "weapon": "star",
+    "difficulty": "normal",
+    "width": 390,
+    "height": 844,
+    "touch": true,
+    "wallSeconds": 114.474,
+    "final": {
+      "running": false,
+      "time": 110.93333333332832,
+      "hp": -4,
+      "kills": 143,
+      "level": 8,
+      "correct": 4,
+      "levels": {
+        "magic": 4,
+        "star": 3,
+        "quill": 3
+      },
+      "stuckJoystick": false
+    },
+    "choices": [
+      "🪶정답 깃털 Lv.1피해·개수·속도 강화 / 진화: 생명의 씨앗 Lv.2",
+      "💥관통 마법마법구가 몬스터를 더 많이 관통",
+      "🪶정답 깃털 Lv.2피해·개수·속도 강화 / 진화: 생명의 씨앗 Lv.2",
+      "🌟별자리 나침반 Lv.2피해·개수·속도 강화 / 진화: 튼튼한 책가방 Lv.2",
+      "🌟별자리 나침반 Lv.3피해·개수·속도 강화 / 진화: 튼튼한 책가방 Lv.2",
+      "🪶정답 깃털 Lv.3피해·개수·속도 강화 / 진화: 생명의 씨앗 Lv.2",
+      "마법구 강화기본 무기 레벨 +1, 공격력과 탄속 증가"
+    ],
+    "snapshots": [
+      {
+        "time": 0.016666666666666666,
+        "hp": 140,
+        "kills": 0,
+        "level": 1,
+        "correct": 1,
+        "enemies": 0
+      },
+      {
+        "time": 20.150000000000137,
+        "hp": 140,
+        "kills": 15,
+        "level": 2,
+        "correct": 1,
+        "enemies": 3
+      },
+      {
+        "time": 40.416666666665655,
+        "hp": 140,
+        "kills": 35,
+        "level": 3,
+        "correct": 2,
+        "enemies": 3
+      },
+      {
+        "time": 60.433333333331184,
+        "hp": 62,
+        "kills": 50,
+        "level": 5,
+        "correct": 3,
+        "enemies": 10
+      },
+      {
+        "time": 80.68333333333004,
+        "hp": 103,
+        "kills": 88,
+        "level": 6,
+        "correct": 3,
+        "enemies": 14
+      },
+      {
+        "time": 100.98333333332889,
+        "hp": 49,
+        "kills": 128,
+        "level": 7,
+        "correct": 4,
+        "enemies": 18
+      }
+    ],
+    "errors": []
+  },
+  {
+    "name": "phone-dice-easy",
+    "weapon": "dice",
+    "difficulty": "easy",
+    "width": 360,
+    "height": 640,
+    "touch": true,
+    "wallSeconds": 89.933,
+    "final": {
+      "running": false,
+      "time": 88.24999999999628,
+      "hp": -10.974000000000032,
+      "kills": 71,
+      "level": 5,
+      "correct": 3,
+      "levels": {
+        "magic": 2,
+        "dice": 3,
+        "root": 1
+      },
+      "stuckJoystick": false
+    },
+    "choices": [
+      "🎲행운 주사위 Lv.2피해·개수·속도 강화 / 진화: 넓이 노트 Lv.2",
+      "🎒튼튼한 책가방 Lv.1접촉 피해 감소",
+      "🌿지식의 뿌리 Lv.1피해·개수·속도 강화 / 진화: 넓이 노트 Lv.2",
+      "🎲행운 주사위 Lv.3피해·개수·속도 강화 / 진화: 넓이 노트 Lv.2"
+    ],
+    "snapshots": [
+      {
+        "time": 0,
+        "hp": 140,
+        "kills": 0,
+        "level": 1,
+        "correct": 1,
+        "enemies": 0
+      },
+      {
+        "time": 20.000000000000146,
+        "hp": 140,
+        "kills": 12,
+        "level": 2,
+        "correct": 1,
+        "enemies": 1
+      },
+      {
+        "time": 40.199999999999,
+        "hp": 140,
+        "kills": 26,
+        "level": 3,
+        "correct": 2,
+        "enemies": 0
+      },
+      {
+        "time": 60.49999999999785,
+        "hp": 86.01199999999999,
+        "kills": 34,
+        "level": 4,
+        "correct": 3,
+        "enemies": 7
+      },
+      {
+        "time": 80.53333333333005,
+        "hp": 66.01199999999999,
+        "kills": 60,
+        "level": 5,
+        "correct": 3,
+        "enemies": 11
+      }
+    ],
+    "errors": []
+  }
+]
