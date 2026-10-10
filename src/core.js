@@ -193,12 +193,15 @@ function update(dt, now) {
         my += gameRuntime.joystickDelta.y;
       }
 
+      if(mx||my){gameRuntime.player.facing=Math.abs(mx)>Math.abs(my)?(mx>0?2:1):(my>0?0:3);gameRuntime.player.movingUntil=now+120;}
       const mag = Math.hypot(mx, my) || 1;
+      const movementFrom={x:gameRuntime.player.x,y:gameRuntime.player.y};
       gameRuntime.player.x += (mx / mag) * gameRuntime.player.speed * slow * speedBoost;
       gameRuntime.player.y += (my / mag) * gameRuntime.player.speed * slow * speedBoost;
       gameRuntime.player.x = gameRuntime.clamp(gameRuntime.player.x, gameRuntime.player.r, gameRuntime.state.worldW - gameRuntime.player.r);
       gameRuntime.player.y = gameRuntime.clamp(gameRuntime.player.y, gameRuntime.player.r, gameRuntime.state.worldH - gameRuntime.player.r);
 
+      gameRuntime.v3?.dungeon.constrain(gameRuntime.player,movementFrom);
       gameRuntime.updateCamera();
       gameRuntime.checkPortals(now);
 
@@ -207,10 +210,12 @@ function update(dt, now) {
       if (!gameRuntime.v2.settings.reduced) gameRuntime.player.blink += dt / 180;
 
       if ((gameRuntime.keys[" "] || gameRuntime.state.dashRequested) && gameRuntime.player.dashCooldown <= 0) {
+        const dashFrom={x:gameRuntime.player.x,y:gameRuntime.player.y};
         gameRuntime.player.x += (mx / mag) * 92;
         gameRuntime.player.y += (my / mag) * 92;
         gameRuntime.player.x = gameRuntime.clamp(gameRuntime.player.x, gameRuntime.player.r, gameRuntime.state.worldW - gameRuntime.player.r);
         gameRuntime.player.y = gameRuntime.clamp(gameRuntime.player.y, gameRuntime.player.r, gameRuntime.state.worldH - gameRuntime.player.r);
+        gameRuntime.v3?.dungeon.constrain(gameRuntime.player,dashFrom);
         gameRuntime.updateCamera();
         gameRuntime.player.invincible = 620;
         gameRuntime.player.dashCooldown = 1150;
@@ -220,7 +225,7 @@ function update(dt, now) {
 
       gameRuntime.state.dashRequested = false;
       const spawnDelay = Math.max(360, 1180 - gameRuntime.state.time * 4.4 - gameRuntime.state.level * 20);
-      if (now - gameRuntime.state.lastSpawn > spawnDelay) {
+      if (!gameRuntime.v3 && now - gameRuntime.state.lastSpawn > spawnDelay) {
         gameRuntime.state.lastSpawn = now;
         gameRuntime.spawnEnemy();
         if (gameRuntime.state.time > 45 && Math.random() < 0.28) gameRuntime.spawnEnemy();
@@ -251,14 +256,15 @@ function update(dt, now) {
             const sx = gameRuntime.player.x + Math.cos(ang) * 50;
             const sy = gameRuntime.player.y + Math.sin(ang) * 50;
             if (Math.hypot(sx - e.x, sy - e.y) < e.r + 12) {
-              e.hp -= 0.65 + gameRuntime.state.satelliteLevel * 0.14;
+              gameRuntime.damageEnemy(e,0.65 + gameRuntime.state.satelliteLevel * 0.14);
             }
           }
         }
       }
 
       for (const e of gameRuntime.enemies) {
-        if (now >= gameRuntime.state.freezeUntil) {
+        if(gameRuntime.v3&&!e.boss)gameRuntime.v3.battle.move(e,dt,now);
+        else if (now >= gameRuntime.state.freezeUntil) {
           const a = Math.atan2(gameRuntime.player.y - e.y, gameRuntime.player.x - e.x);
           const wobble = Math.sin(gameRuntime.state.time * 2 + e.wobble) * 0.25;
           e.x += Math.cos(a + wobble) * e.speed;
@@ -277,7 +283,7 @@ function update(dt, now) {
               gameRuntime.explode(gameRuntime.player.x, gameRuntime.player.y, 80, 22, false);
               gameRuntime.sfx("shield");
             } else {
-              gameRuntime.state.hp -= e.damage;
+              gameRuntime.state.hp -= e.damage*(1-(gameRuntime.v3?.weapons.passives.armor||0)*.06);
               gameRuntime.state.combo = 0;
               gameRuntime.showToast("몬스터에게 맞았습니다. 거리를 벌리세요!");
               gameRuntime.sfx("hit");
@@ -289,6 +295,7 @@ function update(dt, now) {
 
       for (const p of gameRuntime.projectiles) {
         if (p.kind === "orb" || p.kind === "chalk" || p.kind === "pet") {
+          if(p.homing&&gameRuntime.v3){const target=gameRuntime.v3.battle.grid.near(p.x,p.y,500).sort((a,b)=>gameRuntime.distance(a,p)-gameRuntime.distance(b,p))[0];if(target){const a=Math.atan2(target.y-p.y,target.x-p.x);p.vx=p.vx*.9+Math.cos(a)*.7;p.vy=p.vy*.9+Math.sin(a)*.7;}}
           p.x += p.vx;
           p.y += p.vy;
           p.life--;
@@ -304,11 +311,13 @@ function update(dt, now) {
         }
       }
 
+      gameRuntime.v3?.battle.grid.rebuild(gameRuntime.enemies);
       for (const p of gameRuntime.projectiles) {
         if (p.kind === "laser") continue;
-        for (const e of gameRuntime.enemies) {
-          if (p.life > 0 && Math.hypot(p.x - e.x, p.y - e.y) < p.r + e.r) {
-            e.hp -= p.damage;
+        for (const e of gameRuntime.v3?gameRuntime.v3.battle.grid.near(p.x,p.y,p.r+60):gameRuntime.enemies) {
+          if (p.life > 0 && !p.hitEnemies?.has(e.uid||e) && Math.hypot(p.x - e.x, p.y - e.y) < p.r + e.r) {
+            (p.hitEnemies??=new Set()).add(e.uid||e);
+            if(gameRuntime.v3)gameRuntime.v3.weapons.hit(e,p.damage);else gameRuntime.damageEnemy(e,p.damage);
             if (p.pierce > 0) {
               p.pierce--;
               p.damage *= 0.72;
@@ -329,7 +338,9 @@ function update(dt, now) {
       const defeated = [];
       gameRuntime.enemies = gameRuntime.enemies.filter(e => {
         if (e.hp <= 0) {
+          if(e.escaped){gameRuntime.v3?.battle.killed(e);return false;}
           defeated.push(e);
+          gameRuntime.v3?.killed(e);
           gameRuntime.state.kills++;
           if(e.boss) gameRuntime.state.bossKills++;
           gameRuntime.scorePlus(e.boss ? 650 : e.elite ? 50 : e.tiny ? 16 : 24);
@@ -400,7 +411,7 @@ function update(dt, now) {
         drop.vy *= 0.94;
 
         const d = Math.hypot(gameRuntime.player.x - drop.x, gameRuntime.player.y - drop.y);
-        if (d < 140) {
+        if (d < 140+(gameRuntime.v3?.weapons.passives.magnet||0)*20) {
           drop.x += (gameRuntime.player.x - drop.x) * 0.035;
           drop.y += (gameRuntime.player.y - drop.y) * 0.035;
         }
@@ -443,6 +454,7 @@ function update(dt, now) {
       }
       gameRuntime.floatingTexts = gameRuntime.floatingTexts.filter(ft => ft.life > 0);
 
+      if(gameRuntime.state.hp<=0)gameRuntime.v3?.content.preventDeath();
       if (gameRuntime.state.hp <= 0) gameRuntime.endGame(false);
       else if (Number.isFinite(gameRuntime.state.winTime) && gameRuntime.state.time >= gameRuntime.state.winTime) gameRuntime.endGame(true);
 
@@ -460,6 +472,7 @@ function update(dt, now) {
     }
 
 function loop(now) {
+      gameRuntime.v3?.battle.frame(now-gameRuntime.last);
       gameRuntime.accumulator += Math.min(100, now - gameRuntime.last); gameRuntime.last = now;
       while (gameRuntime.accumulator >= 1000/60) {
         if (gameRuntime.state.running && !gameRuntime.state.paused) { gameRuntime.clock += 1000/60; gameRuntime.update(1000/60, gameRuntime.gameNow()); }

@@ -221,7 +221,7 @@ const gameNow = (...args) => systems.gameNow(...args);
 
     const returnToMainMenu = (...args) => systems.returnToMainMenu(...args);
 
-const runtime = { get clock(){return clock;}, set clock(value){clock=value;},
+const runtime = { damageEnemy(e,amount){if(runtime.v3)runtime.v3.math.damage(e,amount);else e.hp-=amount;}, get clock(){return clock;}, set clock(value){clock=value;},
 get accumulator(){return accumulator;}, set accumulator(value){accumulator=value;},
 get canvas(){return canvas;}, get surface(){return surface;}, get viewport(){return viewport;},
 get ctx(){return ctx;},

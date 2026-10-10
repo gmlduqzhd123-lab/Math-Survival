@@ -1,0 +1,37 @@
+import {NEW_WEAPONS,LEGACY_WEAPONS,PASSIVES,EVOLUTIONS,ULTIMATES,weaponStats,eligibleEvolution} from './weapons-data.js';
+export function createWeapons(r,battle){let levels={},passives={},evolved={},times={},breaks={},effects=[],unlocked={},animationUntil=0,chests=new Set();
+ const s=r.state,p=r.player;
+ function start(){levels={magic:1,[s.startWeapon||'storm']:1};passives={};evolved={};times={};breaks={};effects=[];unlocked={};chests=new Set();animationUntil=0;for(const id of Object.keys(NEW_WEAPONS))s.newWeapons[id]=levels[id]||0;}
+ function hasRoom(id){return Object.hasOwn(levels,id)||Object.keys(levels).length<6;}
+ function gain(id){if(!hasRoom(id))return false;levels[id]=(levels[id]||0)+1;if(Object.hasOwn(NEW_WEAPONS,id))s.newWeapons[id]=Math.min(5,levels[id]);return true;}
+ function hit(e,damage,critical=true){if(e.hp<=0)return;const crit=critical&&Math.random()<.06+(passives.luck||0)*.04+(r.v3?.progress.data.upgrades.luck||0)*.015,amount=damage*(crit?1.75:1);if(r.v3?.math)r.v3.math.damage(e,amount);else e.hp-=amount;if(crit&&!r.v2.settings.low){r.floatingTexts.push({x:e.x,y:e.y-e.r,text:'치명타 '+Math.ceil(amount),color:'#ffd971',life:30});}r.burst(e.x,e.y,'#fee4a6',crit?8:3,2);}
+ function emit(w,angle,homing=false){if(r.projectiles.length>=280)return;r.projectiles.push({kind:'orb',weapon:w.id,x:p.x,y:p.y,vx:Math.cos(angle)*7,vy:Math.sin(angle)*7,r:6+Math.min(5,w.count),damage:w.damage,life:Math.min(130,Math.ceil(w.range/7)),pierce:w.pierce,color:w.color,homing});}
+ function effect(w,x,y,radius,life=450){effects.push({weapon:w.id,style:w.style,x,y,r:radius,until:r.gameNow()+life,color:w.color});if(effects.length>45)effects.shift();}
+ function attack(id,w,now){const targets=battle.grid.near(p.x,p.y,Math.max(700,w.range)),target=targets.sort((a,b)=>r.distance(a,p)-r.distance(b,p))[0];if(!target)return false;const angle=Math.atan2(target.y-p.y,target.x-p.x);w={...w,id};
+  if(['spread','fan','homing'].includes(w.style)){for(let i=0;i<w.count;i++)emit(w,angle+(i-(w.count-1)/2)*(w.style==='fan'?.2:.12),w.style==='homing');}
+  else if(w.style==='return'){for(let i=0;i<w.count;i++)r.projectiles.push({kind:'boomerang',weapon:id,x:p.x,y:p.y,t:0,angle:angle+i*.5,speed:7,r:14,damage:w.damage,life:95,pierce:w.pierce,color:w.color});}
+  else if(w.style==='beam'){for(const e of targets){const dx=e.x-p.x,dy=e.y-p.y,along=dx*Math.cos(angle)+dy*Math.sin(angle),side=Math.abs(-dx*Math.sin(angle)+dy*Math.cos(angle));if(along>0&&along<w.range&&side<28+e.r)hit(e,w.damage);}effects.push({style:'beam',x:p.x,y:p.y,angle,r:w.range,until:now+300,color:w.color});}
+  else if(w.style==='rain'){for(let i=0;i<w.count;i++){const x=target.x+(i-(w.count-1)/2)*36;r.projectiles.push({kind:'chalk',weapon:id,x,y:target.y-220,vx:0,vy:8,r:9,damage:w.damage,life:60,pierce:w.pierce,color:w.color});}}
+  else if(w.style==='zone'){for(let i=0;i<w.count;i++)effects.push({weapon:id,style:'zone',x:target.x+Math.cos(i*2)*50,y:target.y+Math.sin(i*2)*50,r:w.range,until:now+2600,nextHit:now,damage:w.damage,color:w.color});}
+  else if(w.style==='orbit'){for(let i=0;i<w.count;i++){const a=now/450+i*Math.PI*2/w.count,x=p.x+Math.cos(a)*w.range,y=p.y+Math.sin(a)*w.range;for(const e of battle.grid.near(x,y,35))hit(e,w.damage);effect(w,x,y,18,500);}}
+  else{const origin=w.style==='blast'?target:p;for(const e of battle.grid.near(origin.x,origin.y,w.range)){hit(e,w.damage);if(w.style==='slow')e.slowUntil=now+2000;}effect(w,origin.x,origin.y,w.range);}
+  return true;
+ }
+ function syncLegacy(){levels.magic=Math.max(levels.magic||1,Math.min(3,Math.floor((s.attackPower-20)/5)));for(const [id,field]of Object.entries({satellite:'satelliteLevel',laser:'laserLevel',boomerang:'boomerangLevel',chalk:'chalkRainLevel'}))if(s[field])levels[id]=s[field];for(const id of ['storm','compass','fraction','lightning'])if(s.newWeapons[id])levels[id]=s.newWeapons[id];}
+ function tick(now){syncLegacy();for(const [id,level]of Object.entries(levels)){if(!NEW_WEAPONS[id])continue;const stats=weaponStats(id,Math.min(level,5),passives,!!evolved[id],breaks[id]||0);if(now-(times[id]||0)>=stats.cooldown&&attack(id,stats,now))times[id]=now;}
+  for(const fx of effects)if(fx.style==='zone'&&now>=(fx.nextHit||0)){fx.nextHit=now+550;for(const e of battle.grid.near(fx.x,fx.y,fx.r))hit(e,fx.damage);}
+  effects=effects.filter(fx=>now<fx.until).slice(-60);
+  for(const ultimate of ULTIMATES){if(!ultimate.weapons.every(id=>evolved[id]))continue;unlocked[ultimate.id]=true;if(now-(times[ultimate.id]||0)>=9000&&(s.mathEnergy||0)>=20){if(attack(ultimate.id,{style:ultimate.style,range:360,count:10,damage:100,pierce:5,color:ultimate.color},now)){s.mathEnergy-=20;times[ultimate.id]=now;r.showToast('🌠 '+ultimate.name);}}}
+ }
+ function chest(id){syncLegacy();if(chests.has(id))return null;chests.add(id);const recipe=EVOLUTIONS.find(recipe=>eligibleEvolution(recipe,levels,passives,evolved));if(!recipe)return null;evolved[recipe.weapon]=true;s.evolved[recipe.weapon]=true;animationUntil=r.gameNow()+1400;
+  if(!NEW_WEAPONS[recipe.weapon]){if(recipe.weapon==='magic')s.attackPower+=18;if(recipe.weapon==='satellite')s.satelliteLevel=Math.max(4,s.satelliteLevel);if(recipe.weapon==='laser')s.laserLevel=Math.max(4,s.laserLevel);if(recipe.weapon==='boomerang')s.boomerangLevel=Math.max(4,s.boomerangLevel);if(recipe.weapon==='chalk')s.chalkRainLevel=Math.max(4,s.chalkRainLevel);}
+  r.showToast('✨ '+recipe.name);r.sfx('level');return recipe;
+ }
+ function upgrades(){const out=[];for(const [id,w]of Object.entries(NEW_WEAPONS)){if(!hasRoom(id))continue;const level=levels[id]||0;if(level<5)out.push({emoji:w.icon,title:w.name+' Lv.'+(level+1),desc:`피해·개수·속도 강화 / 진화: ${PASSIVES[EVOLUTIONS.find(x=>x.weapon===id).passive].name} Lv.2`,apply(){gain(id);s.weaponLevel++;}});else out.push({emoji:w.icon,title:w.name+' 한계 돌파',desc:'추가 피해 +5% (진화 후에도 적용)',apply(){breaks[id]=(breaks[id]||0)+1;s.weaponLevel++;}});}
+  for(const [id,spec]of Object.entries(PASSIVES)){if((passives[id]||0)>=5||!passives[id]&&Object.keys(passives).length>=6)continue;out.push({emoji:spec.icon,title:spec.name+' Lv.'+((passives[id]||0)+1),desc:spec.description,apply(){passives[id]=(passives[id]||0)+1;if(id==='power')s.attackPower+=3;if(id==='haste')s.fireRate=Math.max(150,s.fireRate*.94);if(id==='heart'){s.maxHp+=12;s.hp=Math.min(s.maxHp,s.hp+12);}if(id==='armor')s.shield=Math.min(8,s.shield+1);}});}return out;
+ }
+ function filterLegacy(options){return options.filter(o=>!o.slot||hasRoom(o.slot)).map(o=>({...o,apply(){if(o.slot&&!hasRoom(o.slot))return;if(o.slot)gain(o.slot);o.apply();}}));}
+ function draw(now){const ctx=r.ctx;for(const fx of effects){if(!r.isNearScreen(fx.x,fx.y,fx.r))continue;ctx.save();ctx.globalAlpha=.4;ctx.strokeStyle=fx.color;ctx.fillStyle=fx.color;ctx.lineWidth=fx.style==='beam'?12:3;ctx.beginPath();const x=r.worldToScreenX(fx.x),y=r.worldToScreenY(fx.y);if(fx.style==='beam'){ctx.moveTo(x,y);ctx.lineTo(x+Math.cos(fx.angle)*fx.r,y+Math.sin(fx.angle)*fx.r);}else{ctx.arc(x,y,fx.r,0,Math.PI*2);if(!r.v2.settings.reduced)ctx.fill();}ctx.stroke();ctx.restore();}
+  if(now<animationUntil&&!r.v2.settings.reduced){ctx.strokeStyle='#f9d77b';ctx.lineWidth=6;ctx.beginPath();ctx.arc(r.worldToScreenX(p.x),r.worldToScreenY(p.y),40+(1400-(animationUntil-now))/12,0,Math.PI*2);ctx.stroke();}}
+ return {start,tick,draw,gain,hit,chest,upgrades,filterLegacy,attack,get levels(){return levels;},get passives(){return passives;},get evolved(){return evolved;},get ultimates(){return unlocked;},get breaks(){return breaks;},get effects(){return effects;}};
+}

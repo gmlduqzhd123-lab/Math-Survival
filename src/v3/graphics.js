@@ -1,0 +1,4 @@
+const images=new Map();
+export const portraitURL=id=>new URL(`./assets/${id}.svg`,import.meta.url).href;
+export function drawPortrait(ctx,id,x,y,size){if(!images.has(id)){const image=new Image();image.src=portraitURL(id);images.set(id,image);}const image=images.get(id);if(!image.complete||!image.naturalWidth)return false;ctx.drawImage(image,x-size/2,y-size/2,size,size);return true;}
+export function drawAnimation(ctx,id,x,y,size,now,{direction=0,moving=true,reduced=false}={}){const key=id+'-sheet';if(!images.has(key)){const image=new Image();image.src=portraitURL(id);images.set(key,image);}const image=images.get(key);if(!image.complete||!image.naturalWidth)return false;const frame=moving&&!reduced?Math.floor(now/150)%3:1,row=Math.min(Math.floor(image.naturalHeight/64)-1,direction);ctx.drawImage(image,frame*64,row*64,64,64,x-size/2,y-size/2,size,size);return true;}

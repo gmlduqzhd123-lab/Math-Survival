@@ -1,3 +1,6 @@
+import {drawAnimation} from './v3/graphics.js';
+import {BOSSES} from './v3/content-data.js';
+import {MONSTERS} from './v3/monsters.js';
 // Extracted from upstream. Cross-system state is supplied by the shared runtime.
 import {drawSprite,CHARACTER_GEAR} from './sprites.js';
 export function createSystem(gameRuntime) {
@@ -45,16 +48,18 @@ function spawnBoss() {
         elite: true,
         tiny: false,
         boss: true,
-        name: names[({forest:0,desert:1,library:2})[gameRuntime.state.currentMapKey]],
+        name: BOSSES[gameRuntime.state.currentMapKey].name,
         bossType: gameRuntime.state.currentMapKey, nextPattern: gameRuntime.gameNow() + 1800, patternIndex: 0,
         wobble: Math.random() * 10
       });
+      gameRuntime.v3?.math.attachBoss(gameRuntime.enemies.at(-1));
       gameRuntime.state.bossIndex++;
       gameRuntime.showToast("⚠️ 수학 보스 등장! 무기와 아이템을 활용하세요!");
       gameRuntime.sfx("boom");
     }
 
 function updatePet(now) {
+      if(gameRuntime.v3?.content.petTick(now))return;
       if (!gameRuntime.state.running || gameRuntime.state.paused) return;
       if (now - gameRuntime.state.lastPetShot < Math.max(520, 1150 - gameRuntime.state.petLevel * 120)) return;
       if (gameRuntime.enemies.length === 0) return;
@@ -113,6 +118,7 @@ function makeDecorations() {
     }
 
 function spawnEnemy() {
+      if(gameRuntime.v3)return gameRuntime.v3.battle.spawn();
       if (gameRuntime.state.mode === "explore") return;
       const p = gameRuntime.randomPointAroundPlayer(520, 760);
       const t = gameRuntime.state.time;
@@ -193,6 +199,7 @@ function drawBackground(now) {
     }
 
 function drawCutePlayer(now) {
+      if(gameRuntime.v3?.content.drawCharacter(now))return;
       gameRuntime.ctx.save();
       gameRuntime.ctx.translate(gameRuntime.worldToScreenX(gameRuntime.player.x), gameRuntime.worldToScreenY(gameRuntime.player.y));
 
@@ -307,6 +314,7 @@ function drawEnemy(e, now) {
       const sx = gameRuntime.worldToScreenX(e.x), sy = gameRuntime.worldToScreenY(e.y);
       if (sx < -60 || sx > gameRuntime.canvas.width + 60 || sy < -60 || sy > gameRuntime.canvas.height + 60) return;
 
+      if(e.species&&drawAnimation(gameRuntime.ctx,'enemy-'+e.species,sx,sy,e.r*2.7,now,{reduced:gameRuntime.v2.settings.reduced})){const ctx=gameRuntime.ctx;if(e.elite){ctx.strokeStyle='#f9ce66';ctx.lineWidth=3;ctx.beginPath();ctx.arc(sx,sy,e.r+5,0,Math.PI*2);ctx.stroke();}if(e.windupUntil>now){ctx.strokeStyle='#fde047';ctx.beginPath();ctx.moveTo(sx,sy);ctx.lineTo(sx+Math.cos(e.aim)*140,sy+Math.sin(e.aim)*140);ctx.stroke();}ctx.fillStyle='#352d49';ctx.fillRect(sx-e.r,sy-e.r-12,e.r*2,4);ctx.fillStyle='#b4ebac';ctx.fillRect(sx-e.r,sy-e.r-12,e.r*2*Math.max(0,e.hp/e.maxHp),4);return;}
       gameRuntime.ctx.save();
       gameRuntime.ctx.translate(sx, sy);
       if (now < gameRuntime.state.freezeUntil) gameRuntime.ctx.globalAlpha = 0.72;
@@ -318,7 +326,7 @@ function drawEnemy(e, now) {
         gameRuntime.ctx.fill();
       }
 
-      gameRuntime.ctx.fillStyle = e.boss ? gameRuntime.state.map.accent : e.elite ? "#ec725f" : e.tiny ? "#45bba0" : gameRuntime.state.map.accent2;
+      gameRuntime.ctx.fillStyle = e.species&&!e.elite ? MONSTERS[e.species].color : e.boss ? gameRuntime.state.map.accent : e.elite ? "#ec725f" : e.tiny ? "#45bba0" : gameRuntime.state.map.accent2;
       gameRuntime.ctx.beginPath();
       gameRuntime.ctx.arc(0, 0, e.r, 0, Math.PI * 2);
       gameRuntime.ctx.fill();
@@ -354,7 +362,7 @@ function drawEnemy(e, now) {
         gameRuntime.ctx.fillStyle = "#facc15";
         gameRuntime.ctx.font = "900 26px Apple Color Emoji, Segoe UI Emoji, Jua, Malgun Gothic, sans-serif";
         gameRuntime.ctx.textAlign = "center";
-        gameRuntime.ctx.fillText(({forest:"🗿",desert:"🐉",library:"👾"})[gameRuntime.state.currentMapKey], 0, -e.r - 18);
+        gameRuntime.ctx.fillText(BOSSES[e.bossType]?.icon||"👾", 0, -e.r - 18);
         gameRuntime.ctx.font = "900 14px Jua, Malgun Gothic, sans-serif";
         gameRuntime.ctx.strokeStyle = "rgba(0,0,0,.7)";
         gameRuntime.ctx.lineWidth = 4;
@@ -371,6 +379,7 @@ function drawEnemy(e, now) {
       }
       gameRuntime.ctx.restore();
 
+      if(e.species&&MONSTERS[e.species]){gameRuntime.ctx.save();gameRuntime.ctx.font='14px Segoe UI Emoji';gameRuntime.ctx.textAlign='center';gameRuntime.ctx.fillText(MONSTERS[e.species].icon,sx,sy-e.r-5);if(e.windupUntil>now){gameRuntime.ctx.strokeStyle='#fde047';gameRuntime.ctx.lineWidth=3;gameRuntime.ctx.beginPath();gameRuntime.ctx.moveTo(sx,sy);gameRuntime.ctx.lineTo(sx+Math.cos(e.aim)*140,sy+Math.sin(e.aim)*140);gameRuntime.ctx.stroke();}gameRuntime.ctx.restore();}
       const w = e.r * 2;
       gameRuntime.ctx.fillStyle = "rgba(0,0,0,.35)";
       gameRuntime.ctx.fillRect(sx - e.r, sy - e.r - 10, w, 5);
@@ -567,6 +576,7 @@ function draw() {
         }
       }
 
+      gameRuntime.v3?.dungeon.draw();
       for (const e of gameRuntime.enemies) gameRuntime.drawEnemy(e, now);
 
       for (const p of gameRuntime.projectiles) {

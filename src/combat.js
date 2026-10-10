@@ -1,6 +1,7 @@
 // Extracted from upstream. Cross-system state is supplied by the shared runtime.
 export function createSystem(gameRuntime) {
 function giveChestReward(now) {
+      gameRuntime.v3?.weapons.chest(crypto.randomUUID());
       const rewards = [
         () => { gameRuntime.state.exp += 65; gameRuntime.floatingTexts.push({x:gameRuntime.player.x,y:gameRuntime.player.y-50,text:"경험치 +65",life:60,color:"#86efac"}); },
         () => { gameRuntime.state.shield = Math.min(8, gameRuntime.state.shield + 2); gameRuntime.floatingTexts.push({x:gameRuntime.player.x,y:gameRuntime.player.y-50,text:"보호막 +2",life:60,color:"#93c5fd"}); },
@@ -31,17 +32,17 @@ function upgradeOptions() {
       const options = [
         { emoji:"🐹", title:"캐릭터 성장", desc:"최대 체력 +15, 현재 체력 +25, 이동 속도 증가", apply(){ gameRuntime.state.maxHp+=15; gameRuntime.state.hp=gameRuntime.clamp(gameRuntime.state.hp+25+gameRuntime.state.healBonus,0,gameRuntime.state.maxHp); gameRuntime.player.speed+=0.12; } },
         { emoji:"❤️", sprite:"healing-heart", title:"회복력 강화", desc:"정답과 하트 아이템 회복량 증가, 보호막 +1", apply(){ gameRuntime.state.healBonus+=4; gameRuntime.state.shield=Math.min(8,gameRuntime.state.shield+1); gameRuntime.state.hp=gameRuntime.clamp(gameRuntime.state.hp+18,0,gameRuntime.state.maxHp); } },
-        { emoji:"🔮", sprite:"knowledge-staff", title:"마법구 강화", desc:"기본 무기 레벨 +1, 공격력과 탄속 증가", apply(){ gameRuntime.state.weaponLevel++; gameRuntime.state.attackPower+=5; gameRuntime.state.projectileSpeed+=0.35; } },
+        { emoji:"🔮", sprite:"knowledge-staff", slot:"magic", title:"마법구 강화", desc:"기본 무기 레벨 +1, 공격력과 탄속 증가", apply(){ gameRuntime.state.weaponLevel++; gameRuntime.state.attackPower+=5; gameRuntime.state.projectileSpeed+=0.35; } },
         { emoji:"🏹", title:"다중 발사", desc:"한 번에 발사하는 마법구 수 증가", apply(){ gameRuntime.state.weaponLevel++; gameRuntime.state.weaponSpread=Math.min(5,gameRuntime.state.weaponSpread+1); gameRuntime.state.attackPower+=2; } },
         { emoji:"💥", title:"관통 마법", desc:"마법구가 몬스터를 더 많이 관통", apply(){ gameRuntime.state.weaponLevel++; gameRuntime.state.weaponPierce=Math.min(4,gameRuntime.state.weaponPierce+1); gameRuntime.state.attackPower+=3; } },
         { emoji:"⚡", title:"연사 강화", desc:"공격 간격 감소, 탄속 증가", apply(){ gameRuntime.state.weaponLevel++; gameRuntime.state.fireRate=Math.max(175,gameRuntime.state.fireRate-42); gameRuntime.state.projectileSpeed+=0.22; } },
-        { emoji:"🪐", title:"회전 위성", desc:"캐릭터 주변을 도는 수학 위성 추가 또는 강화", apply(){ gameRuntime.state.satelliteLevel=Math.min(5,gameRuntime.state.satelliteLevel+1); gameRuntime.state.weaponLevel++; } },
-        { emoji:"📏", title:"수학 레이저", desc:"가장 가까운 적을 향해 긴 직선 레이저 발사", apply(){ gameRuntime.state.laserLevel=Math.min(4,gameRuntime.state.laserLevel+1); gameRuntime.state.weaponLevel++; gameRuntime.state.attackPower+=2; } },
-        { emoji:"📋", sprite:"math-boomerang", title:"부메랑 칠판", desc:"앞뒤로 돌아오는 칠판 무기 추가 또는 강화", apply(){ gameRuntime.state.boomerangLevel=Math.min(4,gameRuntime.state.boomerangLevel+1); gameRuntime.state.weaponLevel++; } },
-        { emoji:"✏️", sprite:"pencil-sword", title:"분필 비", desc:"하늘에서 분필이 떨어져 여러 적을 공격", apply(){ gameRuntime.state.chalkRainLevel=Math.min(4,gameRuntime.state.chalkRainLevel+1); gameRuntime.state.weaponLevel++; } },
+        { emoji:"🪐", slot:"satellite", title:"회전 위성", desc:"캐릭터 주변을 도는 수학 위성 추가 또는 강화", apply(){ gameRuntime.state.satelliteLevel=Math.min(5,gameRuntime.state.satelliteLevel+1); gameRuntime.state.weaponLevel++; } },
+        { emoji:"📏", slot:"laser", title:"수학 레이저", desc:"가장 가까운 적을 향해 긴 직선 레이저 발사", apply(){ gameRuntime.state.laserLevel=Math.min(4,gameRuntime.state.laserLevel+1); gameRuntime.state.weaponLevel++; gameRuntime.state.attackPower+=2; } },
+        { emoji:"📋", sprite:"math-boomerang", slot:"boomerang", title:"부메랑 칠판", desc:"앞뒤로 돌아오는 칠판 무기 추가 또는 강화", apply(){ gameRuntime.state.boomerangLevel=Math.min(4,gameRuntime.state.boomerangLevel+1); gameRuntime.state.weaponLevel++; } },
+        { emoji:"✏️", sprite:"pencil-sword", slot:"chalk", title:"분필 비", desc:"하늘에서 분필이 떨어져 여러 적을 공격", apply(){ gameRuntime.state.chalkRainLevel=Math.min(4,gameRuntime.state.chalkRainLevel+1); gameRuntime.state.weaponLevel++; } },
         { emoji:"🦉", title:"수학요정 강화", desc:"따라다니는 펫의 공격 속도와 공격력 증가", apply(){ gameRuntime.state.petLevel=Math.min(5,gameRuntime.state.petLevel+1); gameRuntime.state.weaponLevel++; } }
       ];
-      return [...options, ...gameRuntime.v2.upgrades()].sort(() => Math.random() - 0.5).slice(0, 3);
+      return [...(gameRuntime.v3?gameRuntime.v3.weapons.filterLegacy(options):options), ...gameRuntime.v2.upgrades()].sort(() => Math.random() - 0.5).slice(0, 3);
     }
 
 function chooseUpgrade(option) {
@@ -190,7 +191,7 @@ function fireLaser(now) {
         const along = dx * Math.cos(ang) + dy * Math.sin(ang);
         const side = Math.abs(-dx * Math.sin(ang) + dy * Math.cos(ang));
         if (along > 0 && along < length && side < 28 + gameRuntime.state.laserLevel * 4) {
-          e.hp -= damage;
+          gameRuntime.damageEnemy(e,damage);
         }
       }
       gameRuntime.sfx("speed");
@@ -261,7 +262,7 @@ function explode(x, y, radius, damage, big) {
       gameRuntime.burst(x, y, big ? "#facc15" : "#93c5fd", big ? 54 : 24, big ? 6 : 4);
       for (const e of gameRuntime.enemies) {
         const d = Math.hypot(e.x - x, e.y - y);
-        if (d < radius) e.hp -= damage * (1 - d / radius * 0.35);
+        if (d < radius) gameRuntime.damageEnemy(e,damage * (1 - d / radius * 0.35));
       }
     }
 return { giveChestReward, expNeed, checkLevelUp, upgradeOptions, chooseUpgrade, spawnExpDrops, collectExpDrop, spawnItem, applyItem, shoot, fireLaser, fireBoomerang, fireChalkRain, burst, explode };

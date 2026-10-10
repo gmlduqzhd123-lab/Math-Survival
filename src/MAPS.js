@@ -1,4 +1,6 @@
+import {NEW_WORLDS} from './v3/content-data.js';
 export const MAPS = {
+      ...NEW_WORLDS,
       forest: {
         name: "연산의 숲",
         worldW: 2800,

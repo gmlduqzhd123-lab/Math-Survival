@@ -26,7 +26,7 @@ function spawnQuiz() {
 
 function resolveAnswer(orb) {
       if (!gameRuntime.state.running || gameRuntime.state.paused || !gameRuntime.state.quizActive) return;
-      gameRuntime.v2.record(orb);
+      if(gameRuntime.v2.record(orb)===false)return;
       gameRuntime.state.quizActive = false;
       gameRuntime.questionBox.style.display = "none";
       gameRuntime.answerOrbs = [];
@@ -44,7 +44,7 @@ function resolveAnswer(orb) {
           gameRuntime.sfx("level");
         }
         gameRuntime.scorePlus(135 + gameRuntime.state.combo * 18);
-        gameRuntime.state.exp += 40;
+        if(!gameRuntime.v3)gameRuntime.state.exp += 40;
         gameRuntime.state.hp = gameRuntime.clamp(gameRuntime.state.hp + 12 + gameRuntime.state.healBonus, 0, gameRuntime.state.maxHp);
         gameRuntime.state.attackPower += 1.2;
 
@@ -62,8 +62,8 @@ function resolveAnswer(orb) {
       } else {
         gameRuntime.state.wrong++;
         gameRuntime.state.combo = 0;
-        if(gameRuntime.state.mode!=="explore"){gameRuntime.state.hp -= 7;
-        gameRuntime.state.slowUntil = gameRuntime.gameNow() + 1800;}
+        if(gameRuntime.state.mode!=="explore"){gameRuntime.state.hp = Math.max(1,gameRuntime.state.hp-(gameRuntime.v3?2:7));
+        if(!gameRuntime.v3)gameRuntime.state.slowUntil = gameRuntime.gameNow() + 1800;}
         gameRuntime.floatingTexts.push({ x: gameRuntime.player.x, y: gameRuntime.player.y - 42, text: `정답: ${gameRuntime.state.currentAnswer}`, life: 70, color: "#fca5a5" });
         gameRuntime.showToast(`오답! 정답은 ${gameRuntime.state.currentAnswer}입니다. ${orb.explain}`);
         gameRuntime.sfx("wrong");

@@ -2,7 +2,7 @@ const http = require('node:http');
 const fs = require('node:fs');
 const path = require('node:path');
 const root = process.env.STATIC_ROOT ? path.resolve(process.env.STATIC_ROOT) : path.resolve(__dirname, '..');
-const types = {'.html':'text/html; charset=utf-8','.js':'text/javascript; charset=utf-8','.json':'application/json; charset=utf-8','.css':'text/css; charset=utf-8','.png':'image/png','.woff2':'font/woff2','.jpg':'image/jpeg','.webmanifest':'application/manifest+json'};
+const types = {'.svg':'image/svg+xml','.html':'text/html; charset=utf-8','.js':'text/javascript; charset=utf-8','.json':'application/json; charset=utf-8','.css':'text/css; charset=utf-8','.png':'image/png','.woff2':'font/woff2','.jpg':'image/jpeg','.webmanifest':'application/manifest+json'};
 http.createServer((req,res)=>{
   let url=decodeURIComponent(req.url.split('?')[0]);
   url=url.replace(/^\/Math-Survival(?:-2)?(?=\/)/,'');

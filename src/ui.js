@@ -1,3 +1,4 @@
+import {TRACKS,frequency} from './v3/music.js';
 // Extracted from upstream. Cross-system state is supplied by the shared runtime.
 import {spriteMarkup} from './sprites.js';
 export function createSystem(gameRuntime) {
@@ -41,6 +42,7 @@ function initAudio() {
       gameRuntime.sfxGain.connect(gameRuntime.masterGain);
       gameRuntime.masterGain.connect(gameRuntime.audioCtx.destination);
       gameRuntime.audioReady = true;
+      gameRuntime.v3?.ui.applyAudio();
       gameRuntime.startPersistentMusic();
     }
 
@@ -48,7 +50,7 @@ function setMuted(value) {
       gameRuntime.muted = value;
       gameRuntime.muteBtn.textContent = gameRuntime.muted ? "🔇 소리 꺼짐" : "🔊 소리 켜짐";
       if (gameRuntime.musicBtn) gameRuntime.musicBtn.textContent = gameRuntime.muted ? "🔇 브금 꺼짐" : "🎵 브금 유지 중";
-      if (gameRuntime.audioReady) gameRuntime.masterGain.gain.value = gameRuntime.muted ? 0 : 1;
+      if (gameRuntime.audioReady) gameRuntime.masterGain.gain.value = gameRuntime.muted ? 0 : 1;gameRuntime.v3?.ui.applyAudio();
     }
 
 function playTone(freq, duration = 0.08, type = "sine", volume = 0.25, target = gameRuntime.sfxGain, delay = 0) {
@@ -69,16 +71,17 @@ function playTone(freq, duration = 0.08, type = "sine", volume = 0.25, target = 
 
 function startPersistentMusic() {
       if (!gameRuntime.audioReady || gameRuntime.musicTimer) return;
-      const lead = [392, 494, 523, 587, 659, 587, 523, 494, 440, 523, 587, 659, 784, 659, 587, 523];
-      const bass = [98, 98, 130.81, 130.81, 146.83, 146.83, 130.81, 130.81];
-      let step = 0;
-      gameRuntime.musicTimer = setInterval(() => {
-        if (!gameRuntime.audioReady || gameRuntime.muted) return;
-        gameRuntime.playTone(lead[step % lead.length], 0.16, "triangle", 0.09, gameRuntime.musicGain, 0);
-        if (step % 2 === 0) gameRuntime.playTone(bass[Math.floor(step / 2) % bass.length], 0.22, "sine", 0.08, gameRuntime.musicGain, 0);
-        if (step % 4 === 2) gameRuntime.playTone(lead[step % lead.length] * 1.5, 0.06, "square", 0.025, gameRuntime.musicGain, 0.02);
+      let step=0,last=0,world='';
+      gameRuntime.musicTimer=setInterval(()=>{
+        if(!gameRuntime.audioReady||gameRuntime.muted||document.hidden||gameRuntime.state.running&&gameRuntime.state.paused)return;
+        const key=gameRuntime.state.currentMapKey||'forest',track=TRACKS[key]||TRACKS.forest,now=performance.now();
+        if(key!==world){world=key;step=0;last=0;}
+        if(now-last<track.tempo)return;last=now;
+        gameRuntime.playTone(frequency(track.lead[step%track.lead.length]),track.tempo/1000*.75,track.voice,.09,gameRuntime.musicGain);
+        if(step%2===0)gameRuntime.playTone(frequency(track.bass[Math.floor(step/2)%track.bass.length]),track.tempo/1000*1.4,'sine',.08,gameRuntime.musicGain);
+        if(step%4===3)gameRuntime.playTone(frequency(track.lead[step%track.lead.length]+12),.07,'triangle',.025,gameRuntime.musicGain,.03);
         step++;
-      }, 245);
+      },40);
     }
 
 function sfx(type) {
@@ -119,7 +122,7 @@ function unlockAchievement(key, title) {
       gameRuntime.achievementPop.classList.add("show");
       clearTimeout(gameRuntime.unlockAchievement.timer);
       gameRuntime.unlockAchievement.timer = setTimeout(() => gameRuntime.achievementPop.classList.remove("show"), 2600);
-      gameRuntime.state.exp += 30;
+      if(!gameRuntime.v3||!["firstCorrect","combo5"].includes(key))gameRuntime.state.exp += 30;
       gameRuntime.scorePlus(150);
       gameRuntime.sfx("level");
     }
@@ -148,7 +151,7 @@ function completeMission() {
       const m = gameRuntime.state.mission;
       if (!m) return;
       gameRuntime.scorePlus(320);
-      gameRuntime.state.exp += 70;
+      if(gameRuntime.v3&&m.type==="correct")gameRuntime.state.mathEnergy=Math.min(100,gameRuntime.state.mathEnergy+10);else gameRuntime.state.exp += 70;
       gameRuntime.state.shield = Math.min(8, gameRuntime.state.shield + 1);
       gameRuntime.spawnItem(gameRuntime.player.x + gameRuntime.rand(-120, 120), gameRuntime.player.y + gameRuntime.rand(-120, 120), "chest");
       gameRuntime.showToast(`미션 완료: ${m.title}! 보물상자가 등장했습니다.`);

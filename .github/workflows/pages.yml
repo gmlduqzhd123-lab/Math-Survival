@@ -1,4 +1,4 @@
-name: Verify and deploy Math Survival 2
+name: Verify and deploy Math Survival 3
 on:
   push:
     branches: [main]
@@ -34,6 +34,7 @@ jobs:
           npm run test:movement
           npm run test:sprites
           npm run test:curriculum-screen
+          npm run test:v3
       - run: npm run build
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3

@@ -8,9 +8,9 @@ const out='test-results/preferences';fs.mkdirSync(out,{recursive:true});
   const browser=await (engine==='chromium'?chromium:webkit).launch({headless:true,...(engine==='chromium'&&!process.env.CI?{channel:'msedge'}:{})});
   for(const [name,width,height]of [['phone',320,568],['tablet',768,1024],['desktop',1920,1080]]){
    const context=await browser.newContext({viewport:{width,height},hasTouch:true,isMobile:name!=='desktop',deviceScaleFactor:2});
-   await context.addInitScript(()=>localStorage.setItem('math-survival-2.settings',JSON.stringify({grade:3,domain:'all',unit:'all',level:2,auto:false,mode:'explore',target:2,limit:180,character:'explorer',weapon:'storm',map:'forest',combat:'easy'})));
+   await context.addInitScript(()=>localStorage.setItem('math-survival-2.settings',JSON.stringify({grade:3,domain:'all',unit:'all',level:2,auto:false,mode:'explore',target:2,limit:0,character:'explorer',weapon:'storm',map:'forest',combat:'easy'})));
    const p=await context.newPage(),errors=[];p.on('pageerror',e=>errors.push(e.message));await p.goto(root+'?qa=1');await p.waitForFunction(()=>window.__game);
-   assert.equal(await p.title(),'매쓰 서바이벌 2.1.2');
+   assert.equal(await p.title(),'매쓰 서바이벌 3.0.1');
    assert(await p.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
    if(name==='desktop')assert.equal(Math.round((await p.locator('#startPanel .card').boundingBox()).width),1240);
    await p.screenshot({path:`${out}/${engine}-${name}-menu.png`});

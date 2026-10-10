@@ -1,0 +1,16 @@
+{
+  "type": "accelerated invulnerable low-tier simulation, not physical-device wall-time play",
+  "wallSeconds": 19.891,
+  "max": {
+    "enemies": 95,
+    "projectiles": 18,
+    "gems": 34,
+    "particles": 88
+  },
+  "final": {
+    "seconds": 1806.149999998686,
+    "created": 85,
+    "active": 70
+  },
+  "errors": []
+}
