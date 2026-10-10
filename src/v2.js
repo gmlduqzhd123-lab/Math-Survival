@@ -26,7 +26,7 @@ export function createV2(r,curriculum){
  let config={},answers=[],result=null,reviewTick=0,started=0,shown=0,sessionId='',finished=true,input=null,lastHud=-Infinity,notice='';
  const combat=createCombatV2(r,settings),s=r.state;combat.reset();r.v3=createV3(r,settings);
  function syncUnits(){const options=availableUnits({grade:Number($('grade').value),domain:$('domain').value,unit:'all'},curriculum);$('unit').innerHTML='<option value="all">選択 영역 전체</option>'.replace('選択','선택')+options.map(u=>'<option value="'+u.id+'">'+esc(u.name)+'</option>').join('');if(!options.length)notice='이 학년에는 선택한 영역의 단원이 없습니다. 다른 영역을 선택하세요.';else notice='';syncLevels();validate();}
- function syncLevels(){const units=availableUnits(configFromUI(),curriculum);if($('curriculumInfo'))$('curriculumInfo').textContent=curriculum.description+' 현재 선택: '+[...new Set(units.map(u=>u.gradeBand))].join(', ')+' · '+($('unit').value==='all'?units.length+'개 연습 단원':units.map(u=>u.achievementStandards.join(', ')+' · '+u.practiceScope).join(' / '));const supported=[1,2,3,4,5].filter(l=>$('unit').value==='all'||units.every(u=>u.supportedLevels.includes(l)));for(const o of $('mathLevel').options){o.disabled=!supported.includes(Number(o.value));o.hidden=o.disabled;}if(supported.length&&!supported.includes(Number($('mathLevel').value)))$('mathLevel').value=String(supported[0]);refreshSelectLabels();}
+ function syncLevels(){const units=availableUnits(configFromUI(),curriculum);const supported=[1,2,3,4,5].filter(l=>$('unit').value==='all'||units.every(u=>u.supportedLevels.includes(l)));for(const o of $('mathLevel').options){o.disabled=!supported.includes(Number(o.value));o.hidden=o.disabled;}if(supported.length&&!supported.includes(Number($('mathLevel').value)))$('mathLevel').value=String(supported[0]);refreshSelectLabels();}
  function configFromUI(){return {grade:Number($('grade').value),domain:$('domain').value,unit:$('unit').value,level:Number($('mathLevel').value),auto:$('autoLevel').checked,mode:baseMode($('mode').value),gameMode:$('mode').value,duration:Number($('duration')?.value||8),target:Number($('target').value),limit:Number($('limit').value),character:$('character').value,weapon:$('startingWeapon').value,questionMode:$('questionMode')?.value||'orbs',pet:$('petSelect')?.value||'fairy',map:r.mapSelect.value,combat:r.difficultyEl.value};}
  function validate(){const cfg=configFromUI(),errors=validateConfig(cfg,curriculum);if(!r.v3.progress.data.characters.includes(cfg.character))errors.push('해금한 캐릭터를 선택하세요.');if(!r.v3.progress.data.pets.includes(cfg.pet))errors.push('해금한 펫을 선택하세요.');$('configErrors').textContent=[notice,...errors].filter(Boolean).join(' ');$('startBtn').disabled=errors.length>0;return !errors.length;}
  function saveSettings(){try{localStorage.setItem('math-survival-2.settings',JSON.stringify({...configFromUI(),...settings,muted:r.muted}));}catch(e){$('configErrors').textContent='설정을 저장하지 못했습니다. '+e.message;}}
@@ -54,7 +54,7 @@ export function createV2(r,curriculum){
   <label>문제 표시<select id="questionMode"><option value="orbs">정답 구슬 · 전투 계속</option><option value="popup">문제 팝업 · 전투 정지</option></select></label><label>수학 난이도<select id="mathLevel">${[1,2,3,4,5].map(l=>`<option value="${l}" ${l===2?'selected':''}>${l}단계</option>`).join('')}</select></label>
   <label>시작 무기<select id="startingWeapon">${Object.entries(WEAPON_CATALOG).map(([id,w])=>`<option value="${id}">${w.icon} ${w.name}</option>`).join('')}</select></label>
   <label class="check"><input type="checkbox" id="autoLevel" checked>단원별 새 문항 5개로 자동 난이도</label><small>도형·소수 의미·그래프 비율·가능성 개념 확인은 1단계로 연습합니다.</small>
-  </div><div class="curriculumNote"><p id="curriculumInfo"></p><a href="https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=141&amp;boardSeq=93458" target="_blank" rel="noopener">2022 개정 수학과 교육과정 · 교육부 고시 원문</a></div><p class="playPolicy">⏱️ 게임 시간 무제한 · 전투 수학 문제는 답한 뒤 30초 간격</p><fieldset id="teacherSettings"><legend>수학 탐험 · 교사 설정</legend><label>목표 문항 수<input id="target" type="number" value="10" min="1" max="100"></label><label>탐험 제한 시간(초 · 0은 무제한)<input id="limit" type="number" value="0" min="0" max="1800"></label><small>제한 시간은 0 또는 30~1800초입니다. 정답·오답 모두 목표 문항 수에 포함합니다. 오답 피해 없이 해설을 읽고 다음 문제로 넘어갑니다.</small></fieldset>
+  </div><p class="playPolicy">⏱️ 게임 시간 무제한 · 전투 수학 문제는 답한 뒤 30초 간격</p><fieldset id="teacherSettings"><legend>수학 탐험 · 교사 설정</legend><label>목표 문항 수<input id="target" type="number" value="10" min="1" max="100"></label><label>탐험 제한 시간(초 · 0은 무제한)<input id="limit" type="number" value="0" min="0" max="1800"></label><small>제한 시간은 0 또는 30~1800초입니다. 정답·오답 모두 목표 문항 수에 포함합니다. 오답 피해 없이 해설을 읽고 다음 문제로 넘어갑니다.</small></fieldset>
   <details class="preferences"><summary>⚙️ 화면·접근성 설정</summary><div class="setupGrid"><label class="check"><input id="reducedMotion" type="checkbox">애니메이션 감소</label><label class="check"><input id="lowPower" type="checkbox">저사양 모드</label><label>문제 글자 크기<select id="fontSize"><option value="1">기본</option><option value="1.15">크게</option><option value="1.3">아주 크게</option></select></label></div></details><div id="historySummary" class="history"></div>`;
   for(const [id,map]of Object.entries(NEW_WORLDS)){const option=document.createElement('option');option.value=id;option.textContent=map.name;r.mapSelect.append(option);}layout();r.v3.mount();$('questionSub').insertAdjacentHTML('beforebegin','<div id="questionVisual" hidden></div>');syncUnits();restoreSettings();r.v3.ui.render();decorateSelects();applySettings();r.setMuted(r.muted);
   const previews=document.createElement('div');previews.className='equipmentPreviews';previews.id='equipmentPreviews';$('v2Setup').querySelector('.setupGrid').after(previews);
@@ -72,6 +72,43 @@ export function createV2(r,curriculum){
   history();
   mountHistory();
   playUI.mount();
+  compactHome();
+ }
+
+ function compactHome(){
+  const root=$('v2Setup'),card=$('startPanel').querySelector('.card');
+  root.querySelector('.setupHeading').remove();
+  root.querySelector('.setupGrid > small').remove();
+  const quick=document.createElement('section');quick.id='quickStart';
+  quick.setAttribute('aria-label','바로 시작');
+  quick.innerHTML='<p class="quickPrompt">학년을 고르고 바로 모험을 시작해요!</p><p id="quickSummary"></p>';
+  root.before(quick);quick.prepend($('grade').closest('label'));
+  for(const id of ['startBtn','startupStatus','repairStartup','configErrors','growthError'])quick.append($(id));
+  const settingsPanel=document.createElement('details');settingsPanel.id='homeSettings';
+  settingsPanel.innerHTML='<summary>⚙️ 설정 바꾸기</summary>';root.before(settingsPanel);
+  const collection=document.createElement('details');collection.id='homeCollection';
+  collection.innerHTML='<summary>🌟 성장·수집</summary>';collection.append($('v3Home'));
+  const teacher=$('teacherTools'),history=$('recordManager'),help=card.querySelector('.originalHelp');
+  history.querySelector('summary').after($('historySummary'));
+  settingsPanel.append(root);settingsPanel.append($('difficulty').closest('.row'));
+  const sound=$('muteBtn');sound.textContent=r.muted?'🔇 소리 꺼짐':'🔊 소리 켜짐';
+  settingsPanel.append(sound);
+  const extras=document.createElement('details');extras.id='homeExtras';
+  extras.innerHTML='<summary>📚 기록·성장·교사용</summary>';extras.append(collection,history,teacher);
+  settingsPanel.after(help,extras);
+  card.querySelector('.subtitle').textContent='움직이고, 정답을 찾고, 더 강해져요.';
+  for(const paragraph of card.querySelectorAll(':scope > .small:not(.copyright)'))paragraph.remove();
+  help.querySelector('ol li').textContent='학년을 고르고 게임 시작을 누르세요. 캐릭터·무기·단원은 ‘설정 바꾸기’에서 바꿀 수 있어요.';
+  const summary=()=>{
+   const mode=$('mode').selectedOptions[0]?.textContent||'',unit=$('unit').selectedOptions[0]?.textContent||'';
+   $('quickSummary').textContent=mode+' · '+unit;
+  };
+  $('startPanel').addEventListener('change',summary);summary();
+  // Shared assignments still use their original configuration and show a brief confirmation.
+  if(new URL(location.href).searchParams.has('task')){
+   const message=document.createElement('p');message.className='assignmentSummary';
+   message.textContent=$('taskStatus').textContent||'공유 과제';quick.prepend(message);
+  }
  }
 
  function history(){const rows=store.data.records,last=rows.at(-1);$('historySummary').textContent='저장된 모험 '+rows.length+'회'+(last?' · 최근 정답률 '+(last.accuracy==null?'응답 없음':last.accuracy+'%'):'')+' · '+(store.error||'실명 없이 이 브라우저에 저장됩니다.')+(store.data.quarantine.length?' · 손상 기록 '+store.data.quarantine.length+'개를 격리했습니다.':'');if($('historyList'))renderHistory();}

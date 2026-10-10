@@ -36,6 +36,7 @@ jobs:
           npm run test:curriculum-screen
           npm run test:v3
           npm run test:simple-play
+          node tests/compact-home.cjs
       - run: npm run build
       - name: Built startup recovery and offline regression
         run: |

@@ -20,3 +20,26 @@ body:not(.game-running) #joystickZone,body:not(.game-running) #dashBtn,body:not(
 @media(orientation:landscape) and (max-height:550px){body.simple-play #wrap{grid-template-areas:'header header' 'field learning' 'field answers' 'touch touch';grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);grid-template-rows:auto minmax(0,1fr) auto 48px}body.simple-play #touchControls{height:48px;grid-template-columns:48px 1fr 48px}body.simple-play #joystickZone,body.simple-play #dashBtn{width:48px;height:48px}body.simple-play #learningArea{max-height:none}}
 @media(min-width:1100px) and (min-height:551px){body.simple-play #touchControls{height:48px;grid-template-columns:48px 1fr 48px}body.simple-play #joystickZone,body.simple-play #dashBtn{width:48px;height:48px}}
 @media(orientation:landscape) and (max-height:550px){body.simple-play:not(.learning-visible) #wrap{grid-template-areas:'header' 'field' 'touch';grid-template-columns:minmax(0,1fr);grid-template-rows:auto minmax(0,1fr) 48px}}
+/* A small entry screen; the original controls remain available in disclosures. */
+#startPanel .card{width:min(680px,100%)}
+#startPanel .titleRow{gap:8px;flex-wrap:wrap}
+#startPanel h1{font-size:clamp(28px,6vw,40px);margin:0}
+#startPanel .subtitle{margin:10px 0 18px;font-size:16px}
+#startPanel .topChips{margin:0;gap:6px}
+#startPanel .installChip{min-height:36px;padding:6px 10px;font-size:13px}
+#quickStart{display:flex;flex-direction:column;gap:10px;margin-bottom:18px}
+#quickStart>label{display:block;font-size:18px}
+#quickStart .selectField{margin-top:6px}
+#quickStart .quickPrompt{order:-1;margin:0;font-size:17px}
+#quickSummary{margin:0;color:#526b61;font-size:14px;line-height:1.5;overflow-wrap:anywhere}
+#startPanel #quickStart #startBtn{width:100%;min-height:60px;margin:0;font-size:24px}
+#quickStart #configErrors:empty,#quickStart #growthError:empty{display:none}
+#quickStart #configErrors,#quickStart #growthError{margin:0}
+#startPanel .card>details{margin:8px 0;padding:0 10px;border-radius:12px;background:#f1f5eb;border:1px solid #dce5d5}
+#startPanel .card>details>summary{font-size:16px;min-height:46px;padding:8px 0}
+#startPanel .card>details>summary::after{content:'＋';margin-left:auto}
+#startPanel .card>details[open]>summary::after{content:'−'}
+#homeSettings .setupGrid{margin-top:12px}
+#startPanel .copyright{font-size:12px;margin:16px 0 0}
+#homeCollection .adventureBanner{padding:10px;font-size:14px}
+.assignmentSummary{margin:0;color:#286b57;font-size:15px}

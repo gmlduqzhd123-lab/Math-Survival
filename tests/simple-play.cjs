@@ -10,7 +10,7 @@ const profiles=[['small-phone',320,568],['phone',390,844],['landscape',844,390],
   for(const [name,width,height]of profiles){
    const context=await browser.newContext({viewport:{width,height},hasTouch:true,isMobile:name!=='desktop'});
    const p=await context.newPage(),errors=[];p.setDefaultTimeout(8000);p.on('pageerror',e=>errors.push(e.message));
-   await p.goto(url+'?qa=1');await p.waitForFunction(()=>window.__game);
+   await p.goto(url+'?qa=1');await p.waitForFunction(()=>window.__game);await require('./home-settings.cjs')(p);
    await p.selectOption('#mode','survival');await p.selectOption('#unit','g3-div');await p.evaluate(()=>document.fonts.ready);await p.locator('#startBtn').tap();await p.waitForFunction(()=>__game.clock>200);
    assert(await p.locator('#healthMeter').isVisible());assert(await p.locator('#experienceMeter').isVisible());
    assert.equal(await p.locator('#answerBar').isVisible(),false);assert.equal(await p.locator('#skillBtn').isVisible(),false);
@@ -33,7 +33,7 @@ const profiles=[['small-phone',320,568],['phone',390,844],['landscape',844,390],
    await p.keyboard.press('p');assert(await p.locator('#playMenu').isVisible());await p.keyboard.press('Escape');assert.equal(await p.locator('#playMenu').isVisible(),false);assert(await p.evaluate(()=>__game.state.running&&!__game.state.paused));
    await p.locator('#pauseBtn').tap();await p.locator('#mainMenuBtn').tap();assert.equal(await p.locator('#playMenu').isVisible(),false);
    assert.equal(await p.evaluate(()=>__game.v2.store.data.records.length),1);
-   await p.reload();await p.waitForFunction(()=>window.__game);assert.equal(await p.evaluate(()=>__game.v2.store.data.records.length),1);
+   await p.reload();await p.waitForFunction(()=>window.__game);await require('./home-settings.cjs')(p);assert.equal(await p.evaluate(()=>__game.v2.store.data.records.length),1);
    await p.selectOption('#mode','explore');await p.locator('#startBtn').tap();assert(await p.locator('#answerAccess').isVisible());
    const i=await p.evaluate(()=>__game.answerOrbs.findIndex(x=>x.correct));await p.locator('#answerAccess button').nth(i).tap();assert(await p.locator('#continueQuestion').isVisible());await p.locator('#continueQuestion').tap();assert(await p.locator('#answerAccess').isVisible());
    await p.locator('#pauseBtn').tap();await p.locator('#mainMenuBtn').tap();

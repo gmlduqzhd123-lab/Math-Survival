@@ -9,10 +9,10 @@ const out='test-results/preferences';fs.mkdirSync(out,{recursive:true});
   for(const [name,width,height]of [['phone',320,568],['tablet',768,1024],['desktop',1920,1080]]){
    const context=await browser.newContext({viewport:{width,height},hasTouch:true,isMobile:name!=='desktop',deviceScaleFactor:2});
    await context.addInitScript(()=>localStorage.setItem('math-survival-2.settings',JSON.stringify({grade:3,domain:'all',unit:'all',level:2,auto:false,mode:'explore',target:2,limit:0,character:'explorer',weapon:'storm',map:'forest',combat:'easy'})));
-   const p=await context.newPage(),errors=[];p.on('pageerror',e=>errors.push(e.message));await p.goto(root+'?qa=1');await p.waitForFunction(()=>window.__game);
+   const p=await context.newPage(),errors=[];p.on('pageerror',e=>errors.push(e.message));await p.goto(root+'?qa=1');await p.waitForFunction(()=>window.__game);await require('./home-settings.cjs')(p);
    assert.equal(await p.title(),'매쓰 서바이벌 3.0.2');
    assert(await p.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
-   if(name==='desktop')assert.equal(Math.round((await p.locator('#startPanel .card').boundingBox()).width),1240);
+   if(name==='desktop')assert.equal(Math.round((await p.locator('#startPanel .card').boundingBox()).width),680);
    await p.screenshot({path:`${out}/${engine}-${name}-menu.png`});
    for(const mode of ['explore','survival','boss']){
     await p.selectOption('#mode',mode);await p.locator('#startBtn').tap();await p.waitForFunction(()=>__game.clock>=200);

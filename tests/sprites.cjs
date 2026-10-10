@@ -6,7 +6,7 @@ const root=process.env.GAME_URL||'http://127.0.0.1:4173/Math-Survival/',out='tes
   const browser=await(engine==='chromium'?chromium:webkit).launch({headless:true,...(engine==='chromium'&&!process.env.CI?{channel:'msedge'}:{})});
   for(const [width,height]of [[320,568],[390,844],[768,1024],[1920,1080]]){
    const context=await browser.newContext({viewport:{width,height},deviceScaleFactor:3,hasTouch:true,isMobile:width<900}),p=await context.newPage(),errors=[];p.on('pageerror',e=>errors.push(e.message));
-   await p.goto(root+'?qa=1');await p.waitForFunction(()=>window.__game);await p.evaluate(()=>__game.sprites.ready);
+   await p.goto(root+'?qa=1');await p.waitForFunction(()=>window.__game);await require('./home-settings.cjs')(p);await p.evaluate(()=>__game.sprites.ready);
    const status=await p.evaluate(()=>__game.sprites.status());assert.equal(status.ready.length,12);assert.deepEqual(status.failed,[]);assert.equal(status.renderSize,128);
    assert(await p.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
    for(const id of ['explorer','mage','guardian']){await p.selectOption('#character',id);assert((await p.locator('#equipmentPreviews img').first().getAttribute('src')).includes({explorer:'pencil-sword',mage:'knowledge-staff',guardian:'invincibility-shield'}[id]));}
@@ -38,7 +38,7 @@ const root=process.env.GAME_URL||'http://127.0.0.1:4173/Math-Survival/',out='tes
   }
   // A missing image must leave a playable game with the original canvas fallback.
   const context=await browser.newContext(),p=await context.newPage(),errors=[];p.on('pageerror',e=>errors.push(e.message));
-  await p.route('**/assets/sprites/*.png',r=>r.abort());await p.goto(root+'?qa=1');await p.waitForFunction(()=>window.__game);await p.evaluate(()=>__game.sprites.ready);assert.equal((await p.evaluate(()=>__game.sprites.status())).failed.length,12);
+  await p.route('**/assets/sprites/*.png',r=>r.abort());await p.goto(root+'?qa=1');await p.waitForFunction(()=>window.__game);await require('./home-settings.cjs')(p);await p.evaluate(()=>__game.sprites.ready);assert.equal((await p.evaluate(()=>__game.sprites.status())).failed.length,12);
   await p.locator('#startBtn').click();await p.waitForFunction(()=>__game.clock>100);assert(await p.evaluate(()=>__game.state.running));assert.deepEqual(errors,[]);await context.close();await browser.close();
  }
  fs.writeFileSync(out+'/report.json',JSON.stringify({url:root,results},null,2));

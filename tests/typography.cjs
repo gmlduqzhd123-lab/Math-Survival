@@ -6,7 +6,7 @@ function check(m){assert(m.scrollWidth<=m.width+1);for(const x of m.items){asser
  const browser=await (engine==='chromium'?chromium:webkit).launch({headless:true,...(engine==='chromium'&&!process.env.CI?{channel:'msedge'}:{})});
  for(const [width,height]of [[320,568],[360,800],[390,844],[430,932],[768,1024],[1024,768],[1920,1080]]){
   const context=await browser.newContext({viewport:{width,height},isMobile:width<768,hasTouch:true,deviceScaleFactor:2}),page=await context.newPage(),errors=[];page.on('pageerror',e=>errors.push(e.message));
-  await page.goto(root+'?qa=1');await page.waitForFunction(()=>window.__game);await page.evaluate(()=>document.fonts.ready);assert(await page.evaluate(()=>[...document.fonts].some(f=>f.family==='Jua'&&f.status==='loaded')&&document.fonts.check('16px Jua','수학 모험 서바이벌')));
+  await page.goto(root+'?qa=1');await page.waitForFunction(()=>window.__game);await require('./home-settings.cjs')(page);await page.evaluate(()=>document.fonts.ready);assert(await page.evaluate(()=>[...document.fonts].some(f=>f.family==='Jua'&&f.status==='loaded')&&document.fonts.check('16px Jua','수학 모험 서바이벌')));
   assert.equal(await page.getByRole('combobox',{name:'게임 모드',exact:true}).count(),1);
   for(const mode of ['survival','boss','explore']){await page.selectOption('#mode',mode);check(await page.evaluate(inspect));}
   for(const grade of [1,2,3,4,5,6]){await page.selectOption('#grade',String(grade));for(const id of await page.locator('#unit option').evaluateAll(es=>es.map(e=>e.value))){await page.selectOption('#unit',id);check(await page.evaluate(inspect));}}

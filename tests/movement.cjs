@@ -9,7 +9,7 @@ const root=process.env.GAME_URL||'http://127.0.0.1:4173/Math-Survival/';
   await context.addInitScript(()=>{let seed=42;Math.random=()=>((seed=(seed*1664525+1013904223)>>>0)/4294967296);});
   const p=await context.newPage(),errors=[];p.on('pageerror',e=>errors.push(e.message));
   if(process.env.PERF_BASELINE)for(const file of ['core.js','entities.js','main.js'])await p.route('**/src/'+file,route=>route.fulfill({contentType:'text/javascript',body:execFileSync('git',['show',process.env.PERF_BASELINE+':src/'+file])}));
-  await p.goto(root+'?qa=1');await p.waitForFunction(()=>window.__game);await p.evaluate(()=>document.fonts.ready);await p.selectOption('#mode','survival');await p.locator('#startBtn').click();
+  await p.goto(root+'?qa=1');await p.waitForFunction(()=>window.__game);await require('./home-settings.cjs')(p);await p.evaluate(()=>document.fonts.ready);await p.selectOption('#mode','survival');await p.locator('#startBtn').click();
   await p.evaluate(()=>{
    const r=__game;r.state.hp=r.state.maxHp=1e8;r.state.exp=-1e6;r.state.mission=null;r.state.bossIndex=3;
    window.samples={frames:[],mutations:0};
