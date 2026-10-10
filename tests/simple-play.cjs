@@ -11,12 +11,12 @@ const profiles=[['small-phone',320,568],['phone',390,844],['landscape',844,390],
    const context=await browser.newContext({viewport:{width,height},hasTouch:true,isMobile:name!=='desktop'});
    const p=await context.newPage(),errors=[];p.setDefaultTimeout(8000);p.on('pageerror',e=>errors.push(e.message));
    await p.goto(url+'?qa=1');await p.waitForFunction(()=>window.__game);
-   await p.selectOption('#mode','survival');await p.locator('#startBtn').tap();await p.waitForFunction(()=>__game.clock>200);
+   await p.selectOption('#mode','survival');await p.selectOption('#unit','g3-div');await p.evaluate(()=>document.fonts.ready);await p.locator('#startBtn').tap();await p.waitForFunction(()=>__game.clock>200);
    assert(await p.locator('#healthMeter').isVisible());assert(await p.locator('#experienceMeter').isVisible());
    assert.equal(await p.locator('#answerBar').isVisible(),false);assert.equal(await p.locator('#skillBtn').isVisible(),false);
    assert.equal(await p.locator('#mainMenuBtn').isVisible(),false);
    const layout=await p.evaluate(()=>({w:document.documentElement.scrollWidth,h:document.documentElement.scrollHeight,field:document.querySelector('#game').getBoundingClientRect().toJSON()}));
-   assert(layout.w<=width&&layout.h<=height);assert(layout.field.height>(name==='landscape'?130:height*.5),'field too small');
+   assert(layout.w<=width&&layout.h<=height);assert(layout.field.height>(name==='landscape'?130:height*.5),'calculation field too small: '+JSON.stringify(layout));
    await p.screenshot({path:`${out}/${engine}-${name}.png`});
    await p.locator('#mapToggle').tap();assert.equal(await p.evaluate(()=>__game.v2.playUI.mapVisible),true);
    await p.locator('#pauseBtn').tap();assert(await p.locator('#playMenu').isVisible());
@@ -39,8 +39,16 @@ const profiles=[['small-phone',320,568],['phone',390,844],['landscape',844,390],
    await p.locator('#pauseBtn').tap();await p.locator('#mainMenuBtn').tap();
    await p.selectOption('#mode','boss');await p.locator('#startBtn').tap();await p.locator('#bossHUD').waitFor({state:'visible'});await p.locator('#pauseBtn').tap();await p.locator('#quitGameBtn').tap();assert.equal(await p.evaluate(()=>__game.v2.result.outcome),'quit');
    await p.locator('#restartBtn').tap();await p.locator('#pauseBtn').tap();await p.locator('#mainMenuBtn').tap();
-   await p.selectOption('#mode','survival');await p.selectOption('#questionMode','popup');await p.locator('#startBtn').tap();assert(await p.locator('#mathPopup').isVisible());assert.equal(await p.locator('#answerBar').isVisible(),false);
-   assert.deepEqual(errors,[]);results.push({engine,profile:name,width,height,passed:true,layout});console.log(`PASS ${engine} ${name}`);await context.close();
+   // Graph questions reserve additional readable space; measure them separately from short calculations.
+   await p.selectOption('#mode','survival');await p.selectOption('#unit','g3-data');await p.locator('#startBtn').tap();
+   await p.locator('#pauseBtn').tap();await p.locator('#playPreferences summary').tap();await p.selectOption('#combatAnswerMode','orbs');await p.locator('#resumePlay').tap();
+   assert(await p.locator('#questionVisual').isVisible());
+   const graph=await p.evaluate(()=>({w:document.documentElement.scrollWidth,h:document.documentElement.scrollHeight,field:document.querySelector('#game').getBoundingClientRect().toJSON(),visual:document.querySelector('#questionVisual').getBoundingClientRect().toJSON(),area:document.querySelector('#learningArea').getBoundingClientRect().toJSON()}));
+   assert(graph.w<=width&&graph.h<=height);assert(graph.field.height>(name==='landscape'?130:height*.4),'graph field too small: '+JSON.stringify(graph));
+   assert(graph.visual.left>=graph.area.left&&graph.visual.right<=graph.area.right,'graph clipped horizontally');assert(graph.visual.bottom<=graph.area.bottom+1,'graph clipped vertically');
+   await p.locator('#pauseBtn').tap();await p.locator('#mainMenuBtn').tap();
+   await p.selectOption('#unit','g3-div');await p.selectOption('#mode','survival');await p.selectOption('#questionMode','popup');await p.locator('#startBtn').tap();assert(await p.locator('#mathPopup').isVisible());assert.equal(await p.locator('#answerBar').isVisible(),false);
+   assert.deepEqual(errors,[]);results.push({engine,profile:name,width,height,passed:true,layout,graph});console.log(`PASS ${engine} ${name}`);await context.close();
   }await browser.close();
  }
  fs.writeFileSync(`${out}/report.json`,JSON.stringify({timestamp:new Date().toISOString(),url,scope:'Desktop browser engines with viewport and touch emulation; no physical device certification',results},null,2));
