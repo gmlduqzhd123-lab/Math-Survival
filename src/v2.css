@@ -40,6 +40,9 @@ body:not(.game-running) #weaponInfo,body:not(.game-running) #missionInfo,body:no
 .titleRow h1{margin:0}
 .installChip{flex:none;width:auto;margin:0;padding:9px 16px;border-radius:999px;border:1px solid #2f6b55;background:#2f6b55;color:#fff;font:inherit;font-size:15px;font-weight:800;cursor:pointer;box-shadow:0 6px 16px #244e4826}
 .installChip:hover{background:#245645}
+.topChips{display:flex;gap:8px;flex:none}
+.qrChip{background:#fff;color:#2f6b55;border-color:#bcd3c6}
+.qrChip:hover{background:#eef5ef}
 .copyright{margin-top:6px}
 .copyright a{color:inherit;text-decoration:underline;text-underline-offset:3px}
 @media (max-width:520px){.installChip{padding:7px 12px;font-size:13px}}
