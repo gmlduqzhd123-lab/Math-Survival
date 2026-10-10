@@ -28,7 +28,7 @@ export function installInput(r) {
     const key=e.key.toLowerCase();
     if(key===' '&&e.target?.closest?.('button,summary'))return;
     if(e.repeat && ['p','e','q','escape'].includes(key)) return;
-    if(key==='escape') {e.preventDefault(); r.returnToMainMenu(); return;}
+    if(key==='escape') {e.preventDefault(); r.v2.pause(); return;}
     if(key==='q') {r.quitGame();return;}
     if(key==='p') {r.v2.pause();return;}
     if(r.state.paused) return;

@@ -22,6 +22,7 @@ function spawnQuiz() {
       });
       gameRuntime.showToast("수학 문제가 등장했습니다! 정답 구슬을 먹으세요.");
       gameRuntime.sfx("item");
+      gameRuntime.v2.playUI.sync();
     }
 
 function resolveAnswer(orb) {

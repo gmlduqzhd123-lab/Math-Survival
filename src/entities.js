@@ -422,7 +422,7 @@ function drawPet(now) {
     }
 
 function drawMiniMap() {
-      if(gameRuntime.canvas.height<220)return;
+      if(!gameRuntime.v2.playUI.mapVisible||gameRuntime.canvas.height<220)return;
       const w = Math.min(156,gameRuntime.canvas.width*.2), h = Math.min(104,gameRuntime.canvas.height*.2), x = gameRuntime.canvas.width - w - 16, y = gameRuntime.canvas.height - h - 16;
       gameRuntime.ctx.save();
       gameRuntime.ctx.globalAlpha = 0.86;
@@ -489,6 +489,7 @@ function draw() {
         gameRuntime.ctx.restore();
       }
 
+      const nearbyItem=gameRuntime.items.reduce((best,item)=>gameRuntime.distance(item,gameRuntime.player)<130&&(!best||gameRuntime.distance(item,gameRuntime.player)<gameRuntime.distance(best,gameRuntime.player))?item:best,null);
       for (const item of gameRuntime.items) {
         if (!gameRuntime.isNearScreen(item.x, item.y, 70)) continue;
         const spec = gameRuntime.itemTypes[item.type];
@@ -522,8 +523,7 @@ function draw() {
         gameRuntime.ctx.fillStyle = "#ffffff";
         gameRuntime.ctx.strokeStyle = "rgba(0,0,0,.55)";
         gameRuntime.ctx.lineWidth = 4;
-        gameRuntime.ctx.strokeText(spec.name, sx, sy + 38);
-        gameRuntime.ctx.fillText(spec.name, sx, sy + 38);
+        if(item===nearbyItem){gameRuntime.ctx.strokeText(spec.name, sx, sy + 38);gameRuntime.ctx.fillText(spec.name, sx, sy + 38);}
         gameRuntime.ctx.restore();
       }
 

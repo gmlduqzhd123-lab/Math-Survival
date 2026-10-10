@@ -1,10 +1,12 @@
 // 매쓰 서바이벌 서비스 워커: 앱 설치(홈 화면에 추가)와 오프라인 열기를 돕는다.
 // 우리 사이트 파일은 새 버전을 먼저 받아 오므로 보통은 CACHE_VERSION을 올릴 필요가 없다.
 // 학습 기록(브라우저 저장소)은 건드리지 않는다.
-const CACHE_VERSION = 'math-survival-v3.0.2';
+const CACHE_VERSION = 'math-survival-v3.0.2-simple-play-1';
 // 같은 주소(gmlduqzhd123-lab.github.io)의 다른 앱들과 저장소를 함께 쓰므로, 이 앱의 이전 캐시만 지운다.
 const CACHE_PREFIX = 'math-survival-v';
 const APP_SHELL = [
+    './src/play-ui.js',
+    './src/play-ui.css',
     './',
     './src/v3/dungeon.js',
     './src/v3/music.js',

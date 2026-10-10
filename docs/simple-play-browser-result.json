@@ -1,0 +1,259 @@
+{
+  "timestamp": "2026-10-10T11:05:57.426Z",
+  "url": "http://127.0.0.1:4173/Math-Survival/",
+  "scope": "Desktop browser engines with viewport and touch emulation; no physical device certification",
+  "results": [
+    {
+      "engine": "chromium",
+      "profile": "small-phone",
+      "width": 320,
+      "height": 568,
+      "passed": true,
+      "layout": {
+        "w": 320,
+        "h": 568,
+        "field": {
+          "x": 6,
+          "y": 125.5,
+          "width": 308,
+          "height": 362.5,
+          "top": 125.5,
+          "right": 314,
+          "bottom": 488,
+          "left": 6
+        }
+      }
+    },
+    {
+      "engine": "chromium",
+      "profile": "phone",
+      "width": 390,
+      "height": 844,
+      "passed": true,
+      "layout": {
+        "w": 390,
+        "h": 844,
+        "field": {
+          "x": 6,
+          "y": 109.25,
+          "width": 378,
+          "height": 654.75,
+          "top": 109.25,
+          "right": 384,
+          "bottom": 764,
+          "left": 6
+        }
+      }
+    },
+    {
+      "engine": "chromium",
+      "profile": "landscape",
+      "width": 844,
+      "height": 390,
+      "passed": true,
+      "layout": {
+        "w": 844,
+        "h": 390,
+        "field": {
+          "x": 8,
+          "y": 69.75,
+          "width": 492.1875,
+          "height": 259.25,
+          "top": 69.75,
+          "right": 500.1875,
+          "bottom": 329,
+          "left": 8
+        }
+      }
+    },
+    {
+      "engine": "chromium",
+      "profile": "tablet",
+      "width": 768,
+      "height": 1024,
+      "passed": true,
+      "layout": {
+        "w": 768,
+        "h": 1024,
+        "field": {
+          "x": 8,
+          "y": 115.75,
+          "width": 752,
+          "height": 826.25,
+          "top": 115.75,
+          "right": 760,
+          "bottom": 942,
+          "left": 8
+        }
+      }
+    },
+    {
+      "engine": "chromium",
+      "profile": "tablet-wide",
+      "width": 1024,
+      "height": 768,
+      "passed": true,
+      "layout": {
+        "w": 1024,
+        "h": 768,
+        "field": {
+          "x": 8,
+          "y": 203.75,
+          "width": 1008,
+          "height": 482.25,
+          "top": 203.75,
+          "right": 1016,
+          "bottom": 686,
+          "left": 8
+        }
+      }
+    },
+    {
+      "engine": "chromium",
+      "profile": "desktop",
+      "width": 1920,
+      "height": 1080,
+      "passed": true,
+      "layout": {
+        "w": 1920,
+        "h": 1080,
+        "field": {
+          "x": 8,
+          "y": 203.75,
+          "width": 1904,
+          "height": 810.25,
+          "top": 203.75,
+          "right": 1912,
+          "bottom": 1014,
+          "left": 8
+        }
+      }
+    },
+    {
+      "engine": "webkit",
+      "profile": "small-phone",
+      "width": 320,
+      "height": 568,
+      "passed": true,
+      "layout": {
+        "w": 320,
+        "h": 568,
+        "field": {
+          "x": 6,
+          "y": 123.5,
+          "width": 308,
+          "height": 364.5,
+          "top": 123.5,
+          "right": 314,
+          "bottom": 488,
+          "left": 6
+        }
+      }
+    },
+    {
+      "engine": "webkit",
+      "profile": "phone",
+      "width": 390,
+      "height": 844,
+      "passed": true,
+      "layout": {
+        "w": 390,
+        "h": 844,
+        "field": {
+          "x": 6,
+          "y": 107.25,
+          "width": 378,
+          "height": 656.75,
+          "top": 107.25,
+          "right": 384,
+          "bottom": 764,
+          "left": 6
+        }
+      }
+    },
+    {
+      "engine": "webkit",
+      "profile": "landscape",
+      "width": 844,
+      "height": 390,
+      "passed": true,
+      "layout": {
+        "w": 844,
+        "h": 390,
+        "field": {
+          "x": 8,
+          "y": 67.75,
+          "width": 492.1875,
+          "height": 261.25,
+          "top": 67.75,
+          "right": 500.1875,
+          "bottom": 329,
+          "left": 8
+        }
+      }
+    },
+    {
+      "engine": "webkit",
+      "profile": "tablet",
+      "width": 768,
+      "height": 1024,
+      "passed": true,
+      "layout": {
+        "w": 768,
+        "h": 1024,
+        "field": {
+          "x": 8,
+          "y": 113.75,
+          "width": 752,
+          "height": 828.25,
+          "top": 113.75,
+          "right": 760,
+          "bottom": 942,
+          "left": 8
+        }
+      }
+    },
+    {
+      "engine": "webkit",
+      "profile": "tablet-wide",
+      "width": 1024,
+      "height": 768,
+      "passed": true,
+      "layout": {
+        "w": 1024,
+        "h": 768,
+        "field": {
+          "x": 8,
+          "y": 113.75,
+          "width": 1008,
+          "height": 572.25,
+          "top": 113.75,
+          "right": 1016,
+          "bottom": 686,
+          "left": 8
+        }
+      }
+    },
+    {
+      "engine": "webkit",
+      "profile": "desktop",
+      "width": 1920,
+      "height": 1080,
+      "passed": true,
+      "layout": {
+        "w": 1920,
+        "h": 1080,
+        "field": {
+          "x": 8,
+          "y": 113.75,
+          "width": 1904,
+          "height": 900.25,
+          "top": 113.75,
+          "right": 1912,
+          "bottom": 1014,
+          "left": 8
+        }
+      }
+    }
+  ]
+}

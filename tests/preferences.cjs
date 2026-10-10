@@ -25,7 +25,7 @@ const out='test-results/preferences';fs.mkdirSync(out,{recursive:true});
      assert(await p.evaluate(()=>{const r=__game;r.resolveAnswer(r.answerOrbs.find(x=>x.correct));const t=r.state.lastQuiz;r.state.mission=null;r.state.paused=false;r.state.levelUpPending=false;r.update(16,t+29999);if(r.state.quizActive)return false;r.update(16,t+30001);return r.state.running&&r.state.quizActive&&r.v2.quizInterval===30000;}));
     }
     if(mode==='survival')await p.screenshot({path:`${out}/${engine}-${name}-game.png`});
-    await p.locator('#mainMenuBtn').tap();
+    if(!await p.locator('#playMenu').isVisible())await p.locator('#pauseBtn').tap();await p.locator('#mainMenuBtn').tap();
    }
    assert.deepEqual(errors,[]);results.push({engine,name,width,height,pass:true});console.log('PASS preferences '+engine+' '+name);await context.close();
   }await browser.close();

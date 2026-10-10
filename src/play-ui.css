@@ -1,0 +1,20 @@
+body.simple-play #wrap{grid-template-areas:'header' 'learning' 'field' 'answers' 'touch';grid-template-columns:minmax(0,1fr);grid-template-rows:auto auto minmax(90px,1fr) auto auto;gap:5px}
+body.simple-play #gameHeader{display:grid;grid-template-columns:minmax(0,1fr) 48px;gap:8px;align-items:center}
+body.simple-play #hud{grid-column:1;grid-row:1;grid-template-columns:1fr 1fr;gap:8px}
+body.simple-play #hud .hudBox{font-size:15px;padding:5px 10px;text-align:left}
+body.simple-play #levelStatus>.hudBox{display:inline;padding:0;margin-left:8px;font-size:12px;background:none;border:0}
+#healthMeter,#experienceMeter{display:block;width:100%;height:8px;margin-top:3px;accent-color:#258865}#healthMeter{accent-color:#e96783}#compactEnergy{float:right;font-size:12px}
+body.simple-play #pauseBtn{grid-column:2;grid-row:1;width:48px;min-height:48px;padding:6px;font-size:24px}
+body.simple-play #questionSub{display:none}body.simple-play #learningArea{max-height:30dvh}body.simple-play #questionBox{padding:6px}body.simple-play #answerBar{display:block}
+body.simple-play #touchControls{grid-template-columns:64px minmax(0,1fr) 64px;height:64px}body.simple-play #joystickZone,body.simple-play #dashBtn{width:64px;height:64px}body.simple-play #joystickStick{width:30px;height:30px;margin-left:-15px;margin-top:-15px}body.simple-play #skillBtn{max-width:160px}
+body.simple-play [hidden]{display:none!important}
+#mapToggle{position:absolute;left:50%;top:10px;transform:translateX(-50%);z-index:4;min-width:44px;min-height:44px;padding:6px;background:#f9f5dfeb;font-size:20px}
+#playMenu{width:min(520px,94vw);max-height:90dvh;overflow:auto;border:1px solid #c8d8c1;border-radius:24px;background:#fffbed;color:#234d40;padding:20px;box-shadow:0 16px 60px #092c3655}
+#playMenu::backdrop{background:#12382ec7}#playMenu h2{margin:0 0 8px;font-size:28px}#playMenu p{line-height:1.6}#playMenu #resumePlay{width:100%;background:#2f7358;color:white;min-height:48px}
+#menuActions{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:12px 0}body.simple-play #menuActions button{position:static!important;transform:none!important;width:100%;font-size:16px;min-height:48px;padding:8px}#menuActions #playSound{grid-column:1/-1}
+#playMenu details{margin-top:10px;background:#edf3e5;border-radius:12px;padding:8px}#playMenu #gameDetails{max-height:none;overflow:visible}#playMenu select{width:100%;font-size:16px;padding:8px}#playPreferences>label{display:block;margin:12px 0}
+#detailedStats{display:grid;grid-template-columns:1fr 1fr;gap:6px}#detailedStats .hudBox{font-size:14px;padding:8px;background:#fffbed}
+@media(max-width:600px){body.simple-play #hud .hudBox{font-size:13px;padding:4px 6px}body.simple-play #levelStatus>.hudBox{font-size:11px}body.simple-play #answerAccess{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(orientation:landscape) and (max-height:550px){body.simple-play #wrap{grid-template-areas:'header header' 'field learning' 'field answers' 'touch touch';grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);grid-template-rows:auto minmax(0,1fr) auto 48px}body.simple-play #touchControls{height:48px;grid-template-columns:48px 1fr 48px}body.simple-play #joystickZone,body.simple-play #dashBtn{width:48px;height:48px}body.simple-play #learningArea{max-height:none}}
+@media(min-width:1100px) and (min-height:551px){body.simple-play #touchControls{height:48px;grid-template-columns:48px 1fr 48px}body.simple-play #joystickZone,body.simple-play #dashBtn{width:48px;height:48px}}
+@media(orientation:landscape) and (max-height:550px){body.simple-play:not(.learning-visible) #wrap{grid-template-areas:'header' 'field' 'touch';grid-template-columns:minmax(0,1fr);grid-template-rows:auto minmax(0,1fr) 48px}}

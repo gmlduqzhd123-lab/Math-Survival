@@ -1,3 +1,4 @@
+import {createPlayUI} from './play-ui.js';
 import {mountTeacher} from './v3/teacher.js';
 import {MODES,baseMode} from './v3/modes.js';
 import {portraitURL} from './v3/graphics.js';
@@ -20,6 +21,7 @@ function refreshSelectLabels(){for(const select of document.querySelectorAll('#s
 function decorateSelects(){const root=$('startPanel');for(const select of root.querySelectorAll('select')){if(select.parentElement.classList.contains('selectField'))continue;const field=document.createElement('div'),value=document.createElement('span');field.className='selectField';value.className='selectValue';value.setAttribute('aria-hidden','true');select.before(field);field.append(select,value);}refreshSelectLabels();root.addEventListener('change',refreshSelectLabels);}
 export function createV2(r,curriculum){
  const settings={reduced:matchMedia('(prefers-reduced-motion: reduce)').matches,low:false,font:1};
+ const playUI=createPlayUI(r);
  const store=createStore();let mastery=createMastery(store.data.mastery);
  let config={},answers=[],result=null,reviewTick=0,started=0,shown=0,sessionId='',finished=true,input=null,lastHud=-Infinity,notice='';
  const combat=createCombatV2(r,settings),s=r.state;combat.reset();r.v3=createV3(r,settings);
@@ -69,6 +71,7 @@ export function createV2(r,curriculum){
   $('answerAccess').addEventListener('click',e=>{const btn=e.target.closest('button[data-index]');if(!btn||!s.running||s.paused||(config.mode!=='explore'&&!$('answerAssist').checked))return;const orb=r.answerOrbs[Number(btn.dataset.index)];if(orb){r.player.x=orb.x;r.player.y=orb.y;r.updateCamera();r.resolveAnswer(orb);}});
   history();
   mountHistory();
+  playUI.mount();
  }
 
  function history(){const rows=store.data.records,last=rows.at(-1);$('historySummary').textContent='저장된 모험 '+rows.length+'회'+(last?' · 최근 정답률 '+(last.accuracy==null?'응답 없음':last.accuracy+'%'):'')+' · '+(store.error||'실명 없이 이 브라우저에 저장됩니다.')+(store.data.quarantine.length?' · 손상 기록 '+store.data.quarantine.length+'개를 격리했습니다.':'');if($('historyList'))renderHistory();}
@@ -79,10 +82,10 @@ export function createV2(r,curriculum){
   $('applyRestore').onclick=()=>{if(!pendingRestore)return;const ok=store.restore(pendingRestore);mastery=createMastery(store.data.mastery);pendingRestore=null;$('applyRestore').hidden=true;$('backupPreview').textContent=ok?'복원을 적용했습니다.':store.error;history();};
   const ask=(ids,all=false)=>{pendingDelete=ids;deleteEverything=all;$('deleteConfirm').hidden=!all&&!ids.length;};$('deleteAll').onclick=()=>ask(store.data.records.map(x=>x.sessionId),true);$('deleteSelected').onclick=()=>ask([...$('historyList').querySelectorAll('input:checked')].map(x=>x.value));$('cancelDelete').onclick=()=>{$('deleteConfirm').hidden=true;};$('confirmDelete').onclick=()=>{const ok=store.remove(pendingDelete,deleteEverything);mastery=createMastery(store.data.mastery);$('deleteConfirm').hidden=true;$('backupPreview').textContent=ok?'기록을 삭제했습니다.':store.error;history();};
  }
- function start(){config=configFromUI();answers=[];reviewTick=0;result=null;started=r.gameNow();sessionId=crypto.randomUUID();finished=false;lastHud=-Infinity;s.explanationPending=false;
+ function start(){playUI.close();config=configFromUI();answers=[];reviewTick=0;result=null;started=r.gameNow();sessionId=crypto.randomUUID();finished=false;lastHud=-Infinity;s.explanationPending=false;
   s.kills=0;s.mode=config.mode;s.character=config.character;s.winTime=config.mode==='explore'&&config.limit>0?config.limit:Infinity;combat.reset();s.newWeapons[config.weapon]=1;
   const c=CHARACTERS[config.character];s.hp=s.maxHp=c.hp;r.player.speed=c.speed;s.attackPower=c.attack;s.fireRate=c.rate;if(config.character==='guardian')s.shield=2;r.v3.start(config);
-  $('explanation').textContent='';$('continueQuestion').hidden=true;$('answerAccess').replaceChildren();$('pauseBtn').textContent='⏸ 일시정지';$('pauseBtn').setAttribute('aria-pressed','false');$('assistLabel').hidden=config.mode==='explore';saveSettings();r.setMuted(r.muted);r.syncCanvasViewport();r.updateCamera();if(config.mode==='boss'){s.currentMapKey=r.mapSelect.value;r.spawnBoss();}r.spawnQuiz();checkpoint();
+  $('explanation').textContent='';$('continueQuestion').hidden=true;$('answerAccess').replaceChildren();$('pauseBtn').textContent='☰';$('pauseBtn').setAttribute('aria-pressed','false');$('assistLabel').hidden=true;saveSettings();r.setMuted(r.muted);r.syncCanvasViewport();r.updateCamera();if(config.mode==='boss'){s.currentMapKey=r.mapSelect.value;r.spawnBoss();}r.spawnQuiz();checkpoint();
  }
  function makeProblem(){const units=availableUnits(config,curriculum),u=units[Math.floor(Math.random()*units.length)];reviewTick++;const rev=reviewTick%3===0?mastery.due(u.id):null;const level=rev?rev.level:mastery.level(u.id,config.level,config.auto,u.supportedLevels);let p;
   for(let tries=0;tries<60;tries++){p=generateProblem({...config,unit:u.id,level,...(config.gameMode==='daily'?{seed:s.dailySeed+reviewTick}: {})},curriculum);if(!rev||p.conceptId!==rev.lastConcept&&!rev.successConcepts.includes(p.conceptId)&&p.operands.join(':')!==rev.operands.join(':'))break;}
@@ -98,20 +101,20 @@ export function createV2(r,curriculum){
  function checkpoint(){return store.checkpoint(snapshot('checkpoint','응답마다 저장'),mastery.units);}
  function tick(dt,now){r.v3.tick(dt,now);combat.tick(now);if(s.quizActive&&now<s.hintUntil)s.problem.hintUsed=true;
   if(config.mode==='boss'&&!r.enemies.some(e=>e.boss)){if(s.bossKills>=3){r.endGame(true);return;}const order=['forest','desert','library','ocean','clockwork','sky'],key=order[(order.indexOf(r.mapSelect.value)+s.bossKills)%3];s.currentMapKey=key;s.map=r.MAPS[key];s.worldW=s.map.worldW;s.worldH=s.map.worldH;r.makeDecorations();r.spawnBoss();}
-  if(now-lastHud<200)return;lastHud=now;$('skillBtn').disabled=now<s.skillReady;$('skillBtn').textContent=now<s.skillReady?'스킬 '+Math.ceil((s.skillReady-now)/1000)+'초':'특수 스킬 E';$('playSound').textContent=r.muted?'🔇 소리':'🔊 소리';
+  if(now-lastHud<200)return;lastHud=now;playUI.sync();$('skillBtn').disabled=now<s.skillReady;$('skillBtn').textContent=now<s.skillReady?'스킬 '+Math.ceil((s.skillReady-now)/1000)+'초':'특수 스킬 E';$('playSound').textContent=r.muted?'🔇 소리':'🔊 소리';
   const boss=r.enemies.find(e=>e.boss),el=$('bossHUD');el.hidden=!boss;if(boss){el.textContent=boss.name+' · '+Math.ceil(boss.hp)+' / '+boss.maxHp;el.style.setProperty('--boss-health',(Math.max(0,boss.hp)/boss.maxHp*100)+'%');}
   if(config.mode==='explore')r.missionInfo.textContent='🧭 탐험 '+answers.length+'/'+config.target+'문항 · 시간 무제한';r.updateWeaponInfo();r.weaponInfo.textContent+=' · '+Object.entries(s.newWeapons).filter(([,lvl])=>lvl).map(([key,lvl])=>(s.evolved[key]?WEAPON_CATALOG[key].evolution:WEAPON_CATALOG[key].name)+' Lv.'+lvl).join(' / ');
  }
  function draw(now){combat.draw(now);r.v3.draw(now);}
  function clearInput(){input?.clear();}
- function pause(){if(!s.running||s.levelUpPending||s.explanationPending||s.mathPopup||s.merchantOpen)return;s.paused=!s.paused;if(s.paused)clearInput();$('pauseBtn').textContent=s.paused?'▶ 계속하기':'⏸ 일시정지';$('pauseBtn').setAttribute('aria-pressed',String(s.paused));}
- function finish(won,quit,outcomeOverride){if(finished)return;finished=true;r.v3.math.hide();clearInput();$('answerAccess').replaceChildren();$('continueQuestion').hidden=true;$('bossHUD').hidden=true;
+ function pause(){if(!s.running||s.mathPopup||s.merchantOpen)return;if(s.levelUpPending||s.explanationPending){if(playUI.isOpen)playUI.close();else playUI.pauseChanged();return;}if(s.paused&&!playUI.isOpen){playUI.pauseChanged();return;}s.paused=!s.paused;if(s.paused)clearInput();playUI.pauseChanged();$('pauseBtn').textContent='☰';$('pauseBtn').setAttribute('aria-pressed',String(s.paused));}
+ function finish(won,quit,outcomeOverride){if(finished)return;finished=true;playUI.close();r.v3.math.hide();clearInput();$('answerAccess').replaceChildren();$('continueQuestion').hidden=true;$('bossHUD').hidden=true;
   const outcome=outcomeOverride||(quit?'quit':s.hp<=0?'defeat':config.mode==='explore'&&answers.length<config.target||config.mode==='boss'&&s.bossKills<3?'time-limit':won?'complete':'defeat');
   const titles={interrupted:'메뉴로 이동 · 기록 저장',quit:'게임 종료',defeat:'전투 종료', 'time-limit':'제한 시간 종료',complete:config.mode==='explore'?'목표 문항 완료':config.mode==='boss'?'보스 3연전 완료':'생존 완료'};
   r.v3.finish(outcome);result=snapshot(outcome,titles[outcome]);const saved=store.save(result,mastery.units);history();$('resultTitle').textContent=titles[outcome];$('resultText').textContent=config.mode==='explore'?'수학 탐험 '+answers.length+'/'+config.target+'문항 · 정답률 '+(result.accuracy==null?'응답 없음':result.accuracy+'%'):config.mode==='boss'?'보스 챌린지 '+s.bossKills+'/3 처치':s.map.name+' · '+result.survivalSeconds+'초 생존';
   $('learningReport').innerHTML='<h2>이번 모험의 학습 기록</h2><p>새 문항 '+(result.newAccuracy==null?'응답 없음':result.newAccuracy+'%')+' · 복습 '+(result.reviewAccuracy==null?'응답 없음':result.reviewAccuracy+'%')+' · 힌트 '+result.hintCount+'회</p><h3>단원별 응답</h3>'+Object.entries(result.units).map(([id,u])=>'<p>'+esc(curriculum.grades.flatMap(g=>g.units).find(x=>x.id===id)?.name||id)+' · '+u.correct+'/'+u.total+' · 새 문항 '+u.newCorrect+'/'+u.newTotal+' · 복습 '+u.reviewCorrect+'/'+u.reviewTotal+(u.total<5?' · 표본이 적습니다':'')+'</p>').join('')+'<h3>오답 해설</h3>'+result.reviewProblems.map(w=>'<div class="reviewRow"><strong>'+esc(w.text)+'</strong><p>선택 '+esc(w.selected)+' → 정답 '+esc(w.answer)+'</p><small>'+esc(w.explain)+'</small></div>').join('')+(answers.length===0?'<p>응답한 문항이 없어 정답률을 계산하지 않았습니다.</p>':result.wrong===0?'<p>이번 응답은 모두 맞혔습니다.</p>':'')+'<p role="status">'+(saved?'이 브라우저에 기록을 저장했습니다.':esc(store.error)+' 현재 결과를 JSON/CSV로 내려받으세요.')+'</p>';
  }
- function interrupt(){r.v3.math.hide();if(answers.length)finish(false,false,'interrupted');else{finished=true;r.v3.finish('interrupted');clearInput();store.discardCheckpoint();}}
- function afterAnswer(){r.v3.modes.answer();checkpoint();if(r.v3.math.afterAnswer())return;if(s.hp<=0){r.endGame(false);return;}if(config.mode==='explore'){s.explanationPending=true;s.paused=true;clearInput();$('continueQuestion').hidden=false;$('continueQuestion').focus();}}
- return {settings,mount,start,validate,setInput(x){input=x;},clearInput,makeProblem,present,record,orbPositions,reposition,tick,draw,pause,finish,interrupt,afterAnswer,upgrades:()=>[...r.v3.weapons.filterLegacy(combat.upgrades().map(o=>({...o,slot:Object.keys(WEAPONS).find(id=>o.title.startsWith(WEAPONS[id].name))}))),...r.v3.weapons.upgrades()],isCorrect:equivalent,combat,get quizInterval(){return 30000;},get config(){return config;},get answers(){return answers;},get result(){return result;},get store(){return store;},get mastery(){return mastery;}};
+ function interrupt(){playUI.close();r.v3.math.hide();if(answers.length)finish(false,false,'interrupted');else{finished=true;r.v3.finish('interrupted');clearInput();store.discardCheckpoint();}}
+ function afterAnswer(){playUI.sync();r.v3.modes.answer();checkpoint();if(r.v3.math.afterAnswer())return;if(s.hp<=0){r.endGame(false);return;}if(config.mode==='explore'){s.explanationPending=true;s.paused=true;clearInput();$('continueQuestion').hidden=false;$('continueQuestion').focus();}}
+ return {settings,playUI,mount,start,validate,setInput(x){input=x;},clearInput,makeProblem,present,record,orbPositions,reposition,tick,draw,pause,finish,interrupt,afterAnswer,upgrades:()=>[...r.v3.weapons.filterLegacy(combat.upgrades().map(o=>({...o,slot:Object.keys(WEAPONS).find(id=>o.title.startsWith(WEAPONS[id].name))}))),...r.v3.weapons.upgrades()],isCorrect:equivalent,combat,get quizInterval(){return 30000;},get config(){return config;},get answers(){return answers;},get result(){return result;},get store(){return store;},get mastery(){return mastery;}};
 }

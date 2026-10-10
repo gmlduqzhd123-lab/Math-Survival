@@ -22,7 +22,8 @@
     "test:v3": "node tests/v3-browser.cjs && node tests/v3-math-browser.cjs && node tests/v3-content-browser.cjs && node tests/v3-progress-browser.cjs && node tests/v3-teacher-browser.cjs && node tests/v3-followup-browser.cjs && node tests/v3-balance-browser.cjs",
     "test:stress": "node tests/v3-stress.cjs",
     "test:build-browser": "node tests/v3-build-browser.cjs",
-    "test:playtest": "node tests/v3-playtest.cjs"
+    "test:playtest": "node tests/v3-playtest.cjs",
+    "test:simple-play": "node tests/simple-play.cjs"
   },
   "keywords": [],
   "author": "",
