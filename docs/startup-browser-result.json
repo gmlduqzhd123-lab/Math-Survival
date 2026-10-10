@@ -1,0 +1,55 @@
+{
+  "timestamp": "2026-10-10T13:47:24.503Z",
+  "results": [
+    {
+      "engine": "chromium",
+      "case": "previous failure reproduced",
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "case": "modern startup",
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "case": "legacy APIs fallback",
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "case": "entry script failure and retry",
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "case": "module failure, reload recovery, isolated offline cache",
+      "passed": true
+    },
+    {
+      "engine": "webkit",
+      "case": "previous failure reproduced",
+      "passed": true
+    },
+    {
+      "engine": "webkit",
+      "case": "modern startup",
+      "passed": true
+    },
+    {
+      "engine": "webkit",
+      "case": "legacy APIs fallback",
+      "passed": true
+    },
+    {
+      "engine": "webkit",
+      "case": "entry script failure and retry",
+      "passed": true
+    },
+    {
+      "engine": "webkit",
+      "case": "module failure, reload recovery, isolated offline cache",
+      "passed": true
+    }
+  ]
+}

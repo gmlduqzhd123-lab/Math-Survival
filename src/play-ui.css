@@ -8,6 +8,8 @@ body.simple-play #pauseBtn{grid-column:2;grid-row:1;width:48px;min-height:48px;p
 body.simple-play #questionSub{display:none}body.simple-play #learningArea{max-height:30dvh}body.simple-play #questionBox{padding:6px}body.simple-play #answerBar{display:block}
 body.simple-play #touchControls{grid-template-columns:64px minmax(0,1fr) 64px;height:64px}body.simple-play #joystickZone,body.simple-play #dashBtn{width:64px;height:64px}body.simple-play #joystickStick{width:30px;height:30px;margin-left:-15px;margin-top:-15px}body.simple-play #skillBtn{max-width:160px}
 body.simple-play [hidden]{display:none!important}
+body:not(.game-running) #joystickZone,body:not(.game-running) #dashBtn,body:not(.game-running) #skillBtn{visibility:hidden}
+#startupStatus{font-size:16px;line-height:1.5;color:#365b40}#repairStartup{min-height:48px}#startBtn:disabled{opacity:.65}
 #mapToggle{position:absolute;left:50%;top:10px;transform:translateX(-50%);z-index:4;min-width:44px;min-height:44px;padding:6px;background:#f9f5dfeb;font-size:20px}
 #playMenu{width:min(520px,94vw);max-height:90dvh;overflow:auto;border:1px solid #c8d8c1;border-radius:24px;background:#fffbed;color:#234d40;padding:20px;box-shadow:0 16px 60px #092c3655}
 #playMenu::backdrop{background:#12382ec7}#playMenu h2{margin:0 0 8px;font-size:28px}#playMenu p{line-height:1.6}#playMenu #resumePlay{width:100%;background:#2f7358;color:white;min-height:48px}

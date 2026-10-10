@@ -37,6 +37,12 @@ jobs:
           npm run test:v3
           npm run test:simple-play
       - run: npm run build
+      - name: Built startup recovery and offline regression
+        run: |
+          PORT=4174 STATIC_ROOT="$PWD/dist" node scripts/serve.cjs > /tmp/math-survival-build.log 2>&1 &
+          READY_URL=http://127.0.0.1:4174/Math-Survival/ node scripts/wait-ready.mjs
+          node tests/startup.cjs
+          npm run test:build-browser
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:

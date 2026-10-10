@@ -139,7 +139,8 @@
             <option value="library">별빛 도서관</option>
           </select>
 
-          <button id="startBtn">게임 시작</button>
+          <button id="startBtn" disabled>게임 시작</button>
+          <p id="startupStatus" role="status">게임을 준비하고 있어요.</p><button id="repairStartup" hidden>새로 불러오기 · 기록 유지</button>
           <button id="muteBtn">🔊 소리 켜짐</button>
         </div>
 
@@ -176,7 +177,7 @@
     <div id="dashBtn" role="button" aria-label="대시">대시</div><button id="skillBtn">특수 스킬 E</button><div id="playControls"><button id="pauseBtn">⏸ 일시정지</button><button id="playSound">🔊 소리</button></div><div id="answerAccess" aria-label="정답 구슬 접근 버튼"></div><div id="explanation" aria-live="polite"></div>
   </div>
 
-  <script type="module" src="./src/main.js"></script>
+  <script src="./src/startup.js?v=startup-2" onerror="document.getElementById('startupStatus').textContent='게임 파일을 불러오지 못했어요. 연결을 확인하고 새로 불러오기를 눌러 주세요.'; var retry=document.getElementById('repairStartup'); retry.hidden=false; retry.onclick=function(){location.reload();};"></script>
   <script>
   // 📱 오프라인 열기 (서비스 워커) — 인터넷이 끊겨도 한 번 열어 본 게임은 다시 열림
   if ('serviceWorker' in navigator && location.protocol.indexOf('http') === 0) {

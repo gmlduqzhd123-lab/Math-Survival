@@ -14,8 +14,8 @@ import {loadSprites,spriteStatus} from './sprites.js';
 const loading=document.createElement('section');loading.id='loadingPanel';loading.innerHTML='<p id="loadMessage" role="status">학습 데이터를 불러오는 중입니다.</p><button id="retryLoad" hidden>다시 불러오기</button>';document.body.append(loading);
 let initialized=false,loadingNow=false;
 async function boot(){if(initialized||loadingNow)return;loadingNow=true;document.getElementById('startBtn').disabled=true;document.getElementById('retryLoad').hidden=true;
- try{const response=await fetch(new URL('../data/curriculum.json',import.meta.url));if(!response.ok)throw new Error('HTTP '+response.status);const data=validateCurriculum(await response.json());initialize(data);initialized=true;loading.remove();}
- catch(e){document.getElementById('loadMessage').textContent='학습 데이터를 불러오지 못했습니다. '+e.message;document.getElementById('retryLoad').hidden=false;}
+ try{const response=await fetch(new URL('../data/curriculum.json',import.meta.url));if(!response.ok)throw new Error('HTTP '+response.status);const data=validateCurriculum(await response.json());initialize(data);initialized=true;loading.remove();window.dispatchEvent(new Event('math-game-ready'));}
+ catch(e){document.getElementById('loadMessage').textContent='학습 데이터를 불러오지 못했습니다. '+e.message;document.getElementById('retryLoad').hidden=false;window.dispatchEvent(new CustomEvent('math-game-load-error',{detail:e.message}));}
  finally{loadingNow=false;}}
 document.getElementById('retryLoad').addEventListener('click',boot);boot();
 function initialize(curriculum){
