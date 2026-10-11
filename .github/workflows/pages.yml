@@ -39,6 +39,7 @@ jobs:
           node tests/compact-home.cjs
           node tests/mobile-gestures.cjs
           node tests/mobile-size.cjs
+          node tests/item-keyboard.cjs
       - run: npm run build
       - name: Built startup recovery and offline regression
         run: |

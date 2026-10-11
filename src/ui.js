@@ -176,6 +176,7 @@ function updateMissionUI() {
 function openLevelUpPanel() {
       gameRuntime.state.levelUpPending = true;
       gameRuntime.state.paused = true;
+      gameRuntime.v2.clearInput();
       gameRuntime.levelUpPanel.classList.add("show");
       gameRuntime.upgradeChoices.innerHTML = "";
 
@@ -187,6 +188,7 @@ function openLevelUpPanel() {
         btn.addEventListener("click", () => gameRuntime.chooseUpgrade(option));
         gameRuntime.upgradeChoices.appendChild(btn);
       });
+      gameRuntime.upgradeChoices.querySelector('button')?.focus();
 
       gameRuntime.showToast(`Lv.${gameRuntime.state.level} 달성! 성장 카드를 선택하세요.`);
       gameRuntime.sfx("level");

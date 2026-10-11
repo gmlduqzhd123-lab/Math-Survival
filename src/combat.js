@@ -47,6 +47,8 @@ function upgradeOptions() {
     }
 
 function chooseUpgrade(option) {
+      if (!gameRuntime.state.levelUpPending) return;
+      if (gameRuntime.levelUpPanel.contains(document.activeElement)) document.activeElement.blur();
       option.apply();
       gameRuntime.state.levelUpQueue--;
       gameRuntime.state.levelUpPending = false;
