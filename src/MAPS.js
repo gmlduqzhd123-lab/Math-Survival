@@ -1,3 +1,4 @@
+import {WORLD_SIZE} from './v3/world.js';
 import {NEW_WORLDS} from './v3/content-data.js';
 export const MAPS = {
       ...NEW_WORLDS,
@@ -32,3 +33,6 @@ export const MAPS = {
         deco: ["📚", "⭐", "🕯️", "🔖", "📐"]
       }
     };
+
+// Shared connected overworld dimensions; dungeon rooms retain their own size.
+for(const map of Object.values(MAPS)){map.worldW=WORLD_SIZE.width;map.worldH=WORLD_SIZE.height;}

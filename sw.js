@@ -5,6 +5,7 @@ const CACHE_VERSION = 'math-survival-v3.0.2-startup-2';
 // 같은 주소(gmlduqzhd123-lab.github.io)의 다른 앱들과 저장소를 함께 쓰므로, 이 앱의 이전 캐시만 지운다.
 const CACHE_PREFIX = 'math-survival-v';
 const APP_SHELL = [
+    './src/v3/world.js',
     './src/cozy-ui.css',
     './src/fonts/PretendardVariable.woff2',
     './src/startup.js',

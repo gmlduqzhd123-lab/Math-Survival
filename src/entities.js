@@ -135,6 +135,7 @@ function spawnEnemy() {
     }
 
 function drawBackground(now) {
+      if(gameRuntime.v3?.world.draw())return;
       const m = gameRuntime.state.map;
       gameRuntime.ctx.fillStyle = m.base;
       gameRuntime.ctx.fillRect(0, 0, gameRuntime.canvas.width, gameRuntime.canvas.height);
@@ -432,6 +433,7 @@ function drawMiniMap() {
       gameRuntime.ctx.lineWidth = 2;
       gameRuntime.ctx.strokeRect(x, y, w, h);
 
+      gameRuntime.v3?.world.minimap(x,y,w,h);
       const px = x + (gameRuntime.player.x / gameRuntime.state.worldW) * w;
       const py = y + (gameRuntime.player.y / gameRuntime.state.worldH) * h;
       gameRuntime.ctx.fillStyle = "#facc15";

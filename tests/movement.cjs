@@ -17,7 +17,7 @@ const root=process.env.GAME_URL||'http://127.0.0.1:4173/Math-Survival/';
    let last=performance.now();function frame(t){samples.frames.push(t-last);last=t;requestAnimationFrame(frame);}requestAnimationFrame(frame);
   });
   await p.keyboard.down('d');await p.waitForTimeout(3000);await p.keyboard.up('d');
-  if(!process.env.PERF_BASELINE)assert(await p.evaluate(()=>{const r=__game;r.drawBackground(r.clock);const cached=r.decorations.filter(d=>d.sprite).map(d=>[d,d.sprite]);r.drawBackground(r.clock);return cached.length>0&&cached.every(([d,sprite])=>d.sprite===sprite);}), 'background sprites are reused');
+  if(!process.env.PERF_BASELINE)assert(await p.evaluate(()=>{const r=__game;r.drawBackground(r.clock);if(r.v3.world.active){const before=r.v3.world.cacheSize;r.drawBackground(r.clock);const after=r.v3.world.cacheSize;return before.chunks>0&&before.chunks===after.chunks&&before.landmarks===after.landmarks;}const cached=r.decorations.filter(d=>d.sprite).map(d=>[d,d.sprite]);r.drawBackground(r.clock);return cached.length>0&&cached.every(([d,sprite])=>d.sprite===sprite);}), 'background sprites are reused');
   await p.evaluate(()=>{for(const a of ['frames'])samples[a]=[];samples.mutations=0;window.moveStart={x:__game.player.x,y:__game.player.y,clock:__game.clock};});
   await p.keyboard.down('a');await p.waitForTimeout(6000);await p.keyboard.up('a');
   await p.keyboard.down('s');await p.waitForTimeout(6000);await p.keyboard.up('s');

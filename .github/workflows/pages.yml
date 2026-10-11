@@ -39,6 +39,7 @@ jobs:
           node tests/compact-home.cjs
           node tests/mobile-gestures.cjs
           node tests/mobile-size.cjs
+          node tests/world-browser.cjs
           node tests/item-keyboard.cjs
           node tests/answer-keyboard.cjs
           node tests/menu-keyboard.cjs
