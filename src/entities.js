@@ -180,7 +180,7 @@ function drawBackground(now) {
           sprite.width=sprite.height=Math.ceil(side*scale);
           const context=sprite.getContext('2d');context.scale(scale,scale);
           context.translate(side/2,side/2);context.rotate(d.rot);
-          context.font=`${d.size}px Apple Color Emoji, Segoe UI Emoji, Jua, Malgun Gothic, sans-serif`;
+          context.font=`${d.size}px Apple Color Emoji, Segoe UI Emoji, Pretendard Variable, Malgun Gothic, sans-serif`;
           context.textAlign='center';context.textBaseline='middle';context.fillText(d.icon,0,0);
           d.sprite=sprite;d.spriteScale=scale;d.spriteSide=side;
         }
@@ -211,7 +211,7 @@ function drawCutePlayer(now) {
         gameRuntime.ctx.stroke();
 
         gameRuntime.ctx.fillStyle = "#e0f2fe";
-        gameRuntime.ctx.font = "900 15px Jua, Malgun Gothic, sans-serif";
+        gameRuntime.ctx.font = "900 15px Pretendard Variable, Malgun Gothic, sans-serif";
         gameRuntime.ctx.textAlign = "center";
         gameRuntime.ctx.fillText("×" + gameRuntime.state.shield, 0, -39);
       }
@@ -358,10 +358,10 @@ function drawEnemy(e, now) {
 
       if (e.boss) {
         gameRuntime.ctx.fillStyle = "#facc15";
-        gameRuntime.ctx.font = "900 26px Apple Color Emoji, Segoe UI Emoji, Jua, Malgun Gothic, sans-serif";
+        gameRuntime.ctx.font = "900 26px Apple Color Emoji, Segoe UI Emoji, Pretendard Variable, Malgun Gothic, sans-serif";
         gameRuntime.ctx.textAlign = "center";
         gameRuntime.ctx.fillText(BOSSES[e.bossType]?.icon||"👾", 0, -e.r - 18);
-        gameRuntime.ctx.font = "900 14px Jua, Malgun Gothic, sans-serif";
+        gameRuntime.ctx.font = "900 14px Pretendard Variable, Malgun Gothic, sans-serif";
         gameRuntime.ctx.strokeStyle = "rgba(0,0,0,.7)";
         gameRuntime.ctx.lineWidth = 4;
         gameRuntime.ctx.strokeText(e.name, 0, e.r + 24);
@@ -411,7 +411,7 @@ function drawPet(now) {
       gameRuntime.ctx.lineTo(4, 7);
       gameRuntime.ctx.closePath();
       gameRuntime.ctx.fill();
-      gameRuntime.ctx.font = "900 11px Jua, Malgun Gothic, sans-serif";
+      gameRuntime.ctx.font = "900 11px Pretendard Variable, Malgun Gothic, sans-serif";
       gameRuntime.ctx.fillStyle = "#fff";
       gameRuntime.ctx.textAlign = "center";
       gameRuntime.ctx.strokeStyle = "rgba(0,0,0,.55)";
@@ -482,7 +482,7 @@ function draw() {
         gameRuntime.ctx.stroke();
 
         gameRuntime.ctx.fillStyle = "#064e3b";
-        gameRuntime.ctx.font = "900 11px Jua, Malgun Gothic, sans-serif";
+        gameRuntime.ctx.font = "900 11px Pretendard Variable, Malgun Gothic, sans-serif";
         gameRuntime.ctx.textAlign = "center";
         gameRuntime.ctx.textBaseline = "middle";
         gameRuntime.ctx.fillText("EXP", sx, sy + 1);
@@ -513,13 +513,13 @@ function draw() {
         gameRuntime.ctx.lineWidth = 4;
         gameRuntime.ctx.stroke();
 
-        gameRuntime.ctx.font = "900 25px Apple Color Emoji, Segoe UI Emoji, Jua, Malgun Gothic, sans-serif";
+        gameRuntime.ctx.font = "900 25px Apple Color Emoji, Segoe UI Emoji, Pretendard Variable, Malgun Gothic, sans-serif";
         gameRuntime.ctx.textAlign = "center";
         gameRuntime.ctx.textBaseline = "middle";
         gameRuntime.ctx.fillStyle = "#111827";
         if(!drawSprite(gameRuntime.ctx,spec.sprite,sx,sy+1,52))gameRuntime.ctx.fillText(spec.icon, sx, sy + 1);
 
-        gameRuntime.ctx.font = "900 12px Jua, Malgun Gothic, sans-serif";
+        gameRuntime.ctx.font = "900 12px Pretendard Variable, Malgun Gothic, sans-serif";
         gameRuntime.ctx.fillStyle = "#ffffff";
         gameRuntime.ctx.strokeStyle = "rgba(0,0,0,.55)";
         gameRuntime.ctx.lineWidth = 4;
@@ -555,17 +555,17 @@ function draw() {
         const labelKey=`${orb.value}:${orb.r}:${gameRuntime.v2.settings.font}`;
         if(orb.labelKey!==labelKey){
           let size=Math.max(16,Math.min(24*gameRuntime.v2.settings.font,orb.r*.85));
-          gameRuntime.ctx.font=`${size}px Jua, Malgun Gothic, sans-serif`;
-          while(size>16&&gameRuntime.ctx.measureText(orb.value).width>orb.r*1.8){size=Math.max(16,size-1);gameRuntime.ctx.font=`${size}px Jua, Malgun Gothic, sans-serif`;}
+          gameRuntime.ctx.font=`650 ${size}px Pretendard Variable, Malgun Gothic, sans-serif`;
+          while(size>16&&gameRuntime.ctx.measureText(orb.value).width>orb.r*1.8){size=Math.max(16,size-1);gameRuntime.ctx.font=`650 ${size}px Pretendard Variable, Malgun Gothic, sans-serif`;}
           orb.labelSize=size;orb.labelKey=labelKey;
         }
-        gameRuntime.ctx.font = `${orb.labelSize}px Jua, Malgun Gothic, sans-serif`;
+        gameRuntime.ctx.font = `650 ${orb.labelSize}px Pretendard Variable, Malgun Gothic, sans-serif`;
         gameRuntime.ctx.textAlign = "center";
         gameRuntime.ctx.textBaseline = "middle";
         gameRuntime.ctx.fillText(orb.value, sx, sy);
 
         if (hint) {
-          gameRuntime.ctx.font = "900 13px Jua, Malgun Gothic, sans-serif";
+          gameRuntime.ctx.font = "900 13px Pretendard Variable, Malgun Gothic, sans-serif";
           gameRuntime.ctx.fillStyle = "#fff7ed";
           gameRuntime.ctx.strokeStyle = "rgba(0,0,0,.55)";
           gameRuntime.ctx.lineWidth = 4;
@@ -604,7 +604,7 @@ function draw() {
           gameRuntime.ctx.fillStyle = "#fbbf24";
           gameRuntime.ctx.fillRect(-p.r, -p.r * 0.45, p.r * 2, p.r * 0.9);
           gameRuntime.ctx.fillStyle = "#111827";
-          gameRuntime.ctx.font = "900 14px Jua, Malgun Gothic, sans-serif";
+          gameRuntime.ctx.font = "900 14px Pretendard Variable, Malgun Gothic, sans-serif";
           gameRuntime.ctx.textAlign = "center";
           gameRuntime.ctx.textBaseline = "middle";
           gameRuntime.ctx.fillText("÷", 0, 0);
@@ -653,7 +653,7 @@ function draw() {
           gameRuntime.ctx.arc(sx, sy, 12, 0, Math.PI * 2);
           gameRuntime.ctx.fill();
           gameRuntime.ctx.fillStyle = "#312e81";
-          gameRuntime.ctx.font = "900 13px Jua, Malgun Gothic, sans-serif";
+          gameRuntime.ctx.font = "900 13px Pretendard Variable, Malgun Gothic, sans-serif";
           gameRuntime.ctx.textAlign = "center";
           gameRuntime.ctx.textBaseline = "middle";
           gameRuntime.ctx.fillText("+", sx, sy);
@@ -667,7 +667,7 @@ function draw() {
         if (!gameRuntime.isNearScreen(ft.x, ft.y, 60)) continue;
         gameRuntime.ctx.globalAlpha = gameRuntime.clamp(ft.life / 45, 0, 1);
         const sx = gameRuntime.worldToScreenX(ft.x), sy = gameRuntime.worldToScreenY(ft.y);
-        gameRuntime.ctx.font = "900 18px Jua, Malgun Gothic, sans-serif";
+        gameRuntime.ctx.font = "900 18px Pretendard Variable, Malgun Gothic, sans-serif";
         gameRuntime.ctx.textAlign = "center";
         gameRuntime.ctx.strokeStyle = "rgba(0,0,0,.65)";
         gameRuntime.ctx.lineWidth = 5;
@@ -683,7 +683,7 @@ function draw() {
         gameRuntime.ctx.save();
         gameRuntime.ctx.globalAlpha = 0.08;
         gameRuntime.ctx.fillStyle = "#ffffff";
-        gameRuntime.ctx.font = "900 42px Jua, Malgun Gothic, sans-serif";
+        gameRuntime.ctx.font = "900 42px Pretendard Variable, Malgun Gothic, sans-serif";
         gameRuntime.ctx.textAlign = "center";
         gameRuntime.ctx.fillText("매쓰 서바이벌", gameRuntime.canvas.width / 2, gameRuntime.canvas.height / 2);
         gameRuntime.ctx.restore();
@@ -694,9 +694,9 @@ function draw() {
         gameRuntime.ctx.fillRect(0, 0, gameRuntime.canvas.width, gameRuntime.canvas.height);
         gameRuntime.ctx.fillStyle = "#fff";
         gameRuntime.ctx.textAlign = "center";
-        gameRuntime.ctx.font = "900 54px Jua, Malgun Gothic, sans-serif";
+        gameRuntime.ctx.font = "900 54px Pretendard Variable, Malgun Gothic, sans-serif";
         gameRuntime.ctx.fillText("일시정지", gameRuntime.canvas.width / 2, gameRuntime.canvas.height / 2);
-        gameRuntime.ctx.font = "700 22px Jua, Malgun Gothic, sans-serif";
+        gameRuntime.ctx.font = "700 22px Pretendard Variable, Malgun Gothic, sans-serif";
         gameRuntime.ctx.fillText("P 키를 누르면 계속합니다. 브금은 계속 유지됩니다.", gameRuntime.canvas.width / 2, gameRuntime.canvas.height / 2 + 44);
       }
     }

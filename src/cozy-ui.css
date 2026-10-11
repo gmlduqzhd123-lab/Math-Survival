@@ -1,0 +1,61 @@
+/* Readable type on a cheerful stationery palette. Keep gameplay layout intact. */
+:root{--ink:#253e3b;--teal:#126358;--paper:#fffdf7}
+body{background:radial-gradient(circle at 12% 12%,#ffe4cd,transparent 42%),radial-gradient(circle at 90% 80%,#d4eee2,transparent 48%),#f5f1e7;line-height:1.55}
+button,input,select,textarea{font-weight:650;letter-spacing:0;text-shadow:none}
+h1,h2,h3{letter-spacing:0;line-height:1.35}
+.panel{background:#f2f4ebe8;backdrop-filter:none}
+.card{border:2px solid #c4d6cd;border-radius:28px;box-shadow:0 8px 0 #d6e2d8,0 16px 34px #294d3918}
+summary{color:#304f46;font-weight:700}
+.subtitle,.small,.info,.history,.playPolicy,.copyright{color:#425d53}
+.small,.info,.history,.playPolicy{font-size:16px;line-height:1.65}
+button{border:2px solid #dfb964;border-radius:16px;background:#ffe4a3;color:#3c3c29;box-shadow:0 3px 0 #dfbd73;font-size:16px}
+button:focus-visible,summary:focus-visible,input:focus-visible,.selectField:focus-within{outline:3px solid #2666b0;outline-offset:3px}
+.selectField{border:2px solid #93b5a7;border-radius:16px;background:#fff;color:#253e3b}
+.selectValue{font-size:17px;font-weight:650}
+#startPanel .card{position:relative;padding:24px;background:radial-gradient(circle at 100% 0,#fff0d6,transparent 36%),#fffdf7}
+#startPanel .titleRow{gap:10px;align-items:center}
+#startPanel h1{font-size:clamp(29px,6.5vw,42px);color:#214f46;letter-spacing:0}
+#startPanel .edition{background:#e5edcc;color:#39562c;border:1px solid #bccf9b;padding:3px 10px;font-family:'Pretendard Variable','Malgun Gothic',sans-serif;font-weight:750}
+#startPanel .subtitle{font-size:17px;font-weight:500;color:#425d53;margin:12px 0 20px}
+#startPanel .installChip{background:#fff;color:#24594e;border:1px solid #aac9bb;box-shadow:0 3px 0 #dce7df;font-size:14px;min-height:40px}
+#startPanel #quickStart{gap:10px;margin-bottom:18px}
+#quickStart .quickPrompt{font-size:18px;font-weight:700;color:#253e3b}
+#quickStart>label{font-size:17px;font-weight:700}
+#quickSummary{font-size:15px;color:#425d53;font-weight:550}
+#startPanel #quickStart #startBtn{border:2px solid #0e574c;background:#126358;box-shadow:0 4px 0 #0b493f;border-radius:20px;color:#fff;font-size:25px;font-weight:750;min-height:62px;letter-spacing:.03em}
+#startPanel .card>details{border:2px solid #c8d9ce;border-radius:18px;margin:10px 0;background:#eef5ec;padding:0 14px;box-shadow:0 2px 0 #e1e9df}
+#startPanel .card>details:nth-of-type(2){background:#fff2e4;border-color:#e3cbb1;box-shadow:0 2px 0 #f2e4d5}
+#startPanel .card>details:nth-of-type(3){background:#eff0fa;border-color:#d2d3e7;box-shadow:0 2px 0 #e5e5ef}
+#startPanel .card>details>summary{font-size:17px;font-weight:650;min-height:52px;padding:10px 0;color:#304f46}
+#startPanel .card>details>summary::after{font-weight:500;color:#42695c;font-size:22px;line-height:1}
+#startPanel .copyright{font-size:13px;font-weight:500;line-height:1.65;margin:20px 0 0;color:#425d53}
+#startPanel .copyright a{color:#304f46;text-underline-offset:3px}
+#startPanel .setupGrid label,#startPanel .preferences,#startPanel .originalHelp{font-size:16px}
+.characterCard strong{font-size:16px}.characterCard small,.catalogEntry small,.upgradeBtn .desc{font-size:14px;color:#425d53;line-height:1.6}
+.resultStats div,.domainResult,.reviewRow p{font-size:16px}.reviewRow small{font-size:14px;color:#425d53}
+body.simple-play #hud .hudBox{font-size:15px;font-weight:650;border:1px solid #b9cdbf;border-radius:14px;color:#253e3b;background:#fffdf7}
+body.simple-play #levelStatus>.hudBox{border:0;background:none;border-radius:0}
+body.simple-play #levelStatus>.hudBox,#compactEnergy{font-size:13px;font-weight:600}
+#questionText{font-weight:750;color:#253e3b;letter-spacing:0}
+#questionBox{background:#fff7de;border:2px solid #e2c57d}
+body.simple-play #answerAccess button{font-size:calc(18px * var(--reading-scale));font-weight:700;color:#253e3b;background:#fff9e9;border:2px solid #d5c28d;border-radius:14px}
+#questionVisual{font-family:inherit;font-size:14px}
+body.simple-play #toast{font-size:16px;font-weight:600;background:#164f44;color:#fff;box-shadow:0 2px 8px #08251a44}
+#playMenu{border:2px solid #b6cdbd;background:#fffdf7}
+body.simple-play.mobile-play #skillBtn{font-size:15px;color:#253e3b;border:2px solid #94b4a3}
+body.simple-play.mobile-play #dashBtn{font-weight:750;color:#38381f;background:#ffdc84;border:2px solid #fff1c4}
+@media(max-width:600px){
+ #startPanel .card{padding:18px;border-radius:24px}
+ #startPanel .subtitle{margin:10px 0 16px;font-size:16px}
+ #startPanel .titleRow{gap:8px}
+ #startPanel .card>details>summary{font-size:16px}
+ #quickStart .quickPrompt{font-size:17px}
+ body.simple-play #hud .hudBox{font-size:14px;padding:4px 6px}
+ body.simple-play #levelStatus>.hudBox,#compactEnergy{font-size:12px}
+}
+@media(max-width:360px){
+ #startPanel .card{padding:16px}
+ #startPanel h1{font-size:29px}
+ #startPanel .installChip{font-size:13px;min-height:36px;padding:5px 9px}
+ #startPanel .subtitle{margin-bottom:14px}
+}

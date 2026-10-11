@@ -24,6 +24,8 @@ const profiles=[['small-phone',320,568],['phone',390,844],['landscape',844,390],
    await p.locator('#playPreferences summary').tap();await p.locator('#autoSkillToggle').uncheck();await p.selectOption('#combatAnswerMode','buttons');
    await p.locator('#menuReduced').check();assert(await p.locator('#reducedMotion').isChecked());
    await p.locator('#resumePlay').tap();assert.equal(await p.locator('#playMenu').isVisible(),false);assert(await p.locator('#skillBtn').isVisible());assert(await p.locator('#answerBar').isVisible());
+   // Isolate this short input check from random pickups that open modal events.
+   await p.evaluate(()=>{__game.items=[];__game.expDrops=[];__game.enemies=[];__game.answerOrbs.forEach((orb,i)=>{orb.x=__game.player.x+1000+i*100;orb.y=__game.player.y+1000;});});
    if(engine==='chromium'){
     const box=await p.locator('#joystickZone').boundingBox(),x=box.x+box.width/2,y=box.y+box.height/2,before=await p.evaluate(()=>__game.player.x);
     const cdp=await context.newCDPSession(p);await cdp.send('Input.dispatchTouchEvent',{type:'touchStart',touchPoints:[{id:1,x,y}]});await cdp.send('Input.dispatchTouchEvent',{type:'touchMove',touchPoints:[{id:1,x:x+22,y}]});await p.waitForTimeout(130);await cdp.send('Input.dispatchTouchEvent',{type:'touchCancel',touchPoints:[]});assert(await p.evaluate(v=>__game.player.x>v&&!__game.isJoystickActive,before));
