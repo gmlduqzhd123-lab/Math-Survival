@@ -2,6 +2,8 @@
 .choiceHint{font-size:15px;color:#425d53;line-height:1.5}
 .levelCard h2{color:#214f46}
 .upgradeBtn.item-selected,#merchantPopup button.item-selected{outline:3px solid #2666b0;outline-offset:3px;border-color:#2666b0;background:#e6f3ff;box-shadow:0 4px 0 #aac8e3}
+body.simple-play #answerAccess button.item-selected,#popupOptions button.item-selected,#continueQuestion.item-selected,#popupContinue.item-selected{outline:3px solid #2666b0;outline-offset:-3px;border-color:#2666b0;background:#e6f3ff;color:#253e3b}
+.answerKeyHint{font-size:13px;line-height:1.4;color:#425d53;margin:3px 0}
 :root{--ink:#253e3b;--teal:#126358;--paper:#fffdf7}
 body{background:radial-gradient(circle at 12% 12%,#ffe4cd,transparent 42%),radial-gradient(circle at 90% 80%,#d4eee2,transparent 48%),#f5f1e7;line-height:1.55}
 button,input,select,textarea{font-weight:650;letter-spacing:0;text-shadow:none}

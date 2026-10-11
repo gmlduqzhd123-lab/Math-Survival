@@ -2,10 +2,16 @@
 export function installInput(r) {
   let pointer = null, dashPointer = null;
   let choiceEnterHeld = false;
-  const choicePanel = () => document.getElementById('playMenu')?.open ? null :
-    r.state.merchantOpen ? document.getElementById('merchantPopup') :
-    r.state.levelUpPending ? r.levelUpPanel : null;
-  const choices = panel => [...panel.querySelectorAll('button:not(:disabled)')];
+  const choicePanel = () => {
+    if(document.getElementById('playMenu')?.open)return null;
+    if(r.state.mathPopup)return document.getElementById(r.state.explanationPending?'popupContinue':'popupOptions');
+    if(r.state.merchantOpen)return document.getElementById('merchantPopup');
+    if(r.state.levelUpPending)return r.levelUpPanel;
+    if(r.state.explanationPending&&!document.getElementById('continueQuestion').hidden)return document.getElementById('continueQuestion');
+    if(r.state.quizActive&&!document.getElementById('answerBar').hidden)return document.getElementById('answerAccess');
+    return null;
+  };
+  const choices = panel => (panel.matches('button')?[panel]:[...panel.querySelectorAll('button:not(:disabled)')]).filter(button=>!button.disabled&&button.getClientRects().length);
   function highlight(button,panel){
     panel.querySelectorAll('.item-selected').forEach(item=>item.classList.remove('item-selected'));
     button.classList.add('item-selected');
@@ -52,11 +58,14 @@ export function installInput(r) {
   window.addEventListener('keydown', e => {
     if(!r.state.running || editing(e.target)) return;
     const key=e.key.toLowerCase();
-    // A held Enter must not buy a second item or activate the newly focused game control.
+    // A held Enter must not consume another reward, answer or continue action.
     if(key==='enter'&&choiceEnterHeld){e.preventDefault();return;}
     const panel=choicePanel();
-    if(panel&&['arrowup','arrowdown','arrowleft','arrowright','enter'].includes(key)){
-      e.preventDefault();clear();
+    if(panel&&['arrowup','arrowdown','arrowleft','arrowright','enter'].includes(key)&&
+      !(key==='enter'&&e.target.closest?.('button')&&!panel.contains(e.target))){
+      e.preventDefault();
+      if(panel.id==='answerAccess')for(const arrow of ['ArrowUp','ArrowDown','ArrowLeft','ArrowRight']){r.keys[arrow]=false;r.keys[arrow.toLowerCase()]=false;}
+      else clear();
       if(key==='enter'){choiceEnterHeld=true;if(e.repeat)return;}
       navigateChoice(panel,key);return;
     }
