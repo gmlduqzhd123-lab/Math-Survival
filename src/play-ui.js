@@ -29,6 +29,10 @@ export function createPlayUI(r){
   $('autoSkillToggle').onchange=e=>{prefs.autoSkill=e.target.checked;save();sync();};$('combatAnswerMode').onchange=e=>{prefs.answers=e.target.value;save();sync();};
   for(const [menu,original]of [['menuReduced','reducedMotion'],['menuLow','lowPower'],['menuFont','fontSize']]){const copy=$(menu),source=$(original);const update=()=>{if(copy.type==='checkbox')copy.checked=source.checked;else copy.value=source.value;};update();copy.onchange=()=>{if(copy.type==='checkbox')source.checked=copy.checked;else source.value=copy.value;source.dispatchEvent(new Event('change'));};source.addEventListener('change',update);}
   const map=document.createElement('button');map.id='mapToggle';map.textContent='🗺';map.setAttribute('aria-label','미니맵 표시');map.setAttribute('aria-pressed',String(prefs.map));$('playfield').append(map);map.onclick=()=>{prefs.map=!prefs.map;map.setAttribute('aria-pressed',String(prefs.map));save();};
+  const mobileControls=matchMedia('(pointer: coarse) and (max-width: 1099px), (pointer: coarse) and (max-height: 550px)');
+  const placeControls=()=>{document.body.classList.toggle('mobile-play',mobileControls.matches);(mobileControls.matches?$('playfield'):$('wrap')).append($('touchControls'));};
+  if(mobileControls.addEventListener)mobileControls.addEventListener('change',placeControls);else mobileControls.addListener(placeControls);
+  placeControls();
  }
  return {mount,sync,pauseChanged,close,get isOpen(){return dialog.open;},get mapVisible(){return prefs.map;}};
 }

@@ -17,12 +17,13 @@ function spawnQuiz() {
       gameRuntime.answerOrbs = [];
       const offsets = gameRuntime.v2.orbPositions();
       problem.options.forEach((value, i) => {
-        gameRuntime.answerOrbs.push({ x: offsets[i].x, y: offsets[i].y, r: Math.min(38,gameRuntime.canvas.height/5), value,
+        gameRuntime.answerOrbs.push({ x: offsets[i].x, y: offsets[i].y, r: offsets[i].r, value,
           correct: gameRuntime.v2.isCorrect(value, problem.answer), explain: problem.explain, pulse: Math.random()*6 });
       });
       gameRuntime.showToast("수학 문제가 등장했습니다! 정답 구슬을 먹으세요.");
       gameRuntime.sfx("item");
       gameRuntime.v2.playUI.sync();
+      gameRuntime.syncCanvasViewport();gameRuntime.updateCamera();gameRuntime.v2.reposition();
     }
 
 function resolveAnswer(orb) {
