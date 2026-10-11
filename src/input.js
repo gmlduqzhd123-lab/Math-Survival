@@ -3,7 +3,12 @@ export function installInput(r) {
   let pointer = null, dashPointer = null;
   let choiceEnterHeld = false;
   const choicePanel = () => {
-    if(document.getElementById('playMenu')?.open)return null;
+    const menu=document.getElementById('playMenu');
+    if(menu?.open)return menu;
+    if(!r.state.running){
+      if([...document.querySelectorAll('[role="dialog"][aria-modal="true"]')].some(dialog=>dialog.getClientRects().length))return null;
+      const home=document.getElementById('startPanel');return home?.getClientRects().length&&!home.classList.contains('hidden')?home:null;
+    }
     if(r.state.mathPopup)return document.getElementById(r.state.explanationPending?'popupContinue':'popupOptions');
     if(r.state.merchantOpen)return document.getElementById('merchantPopup');
     if(r.state.levelUpPending)return r.levelUpPanel;
@@ -11,16 +16,23 @@ export function installInput(r) {
     if(r.state.quizActive&&!document.getElementById('answerBar').hidden)return document.getElementById('answerAccess');
     return null;
   };
-  const choices = panel => (panel.matches('button')?[panel]:[...panel.querySelectorAll('button:not(:disabled)')]).filter(button=>!button.disabled&&button.getClientRects().length);
+  function visibleChoice(button,panel){
+    if(button.disabled||!button.getClientRects().length||getComputedStyle(button).visibility==='hidden')return false;
+    // Closed disclosures may retain descendant layout rectangles in some browsers.
+    for(let parent=button.parentElement;parent&&parent!==panel;parent=parent.parentElement)
+      if(parent.matches('details')&&!parent.open&&!parent.querySelector(':scope>summary')?.contains(button))return false;
+    return true;
+  }
+  const choices = panel => (panel.matches('button')?[panel]:[...panel.querySelectorAll(panel.id==='startPanel'||panel.id==='playMenu'?'button:not(:disabled),summary,a[href]':'button:not(:disabled)')]).filter(button=>visibleChoice(button,panel));
   function highlight(button,panel){
     panel.querySelectorAll('.item-selected').forEach(item=>item.classList.remove('item-selected'));
     button.classList.add('item-selected');
   }
-  document.addEventListener('focusin',e=>{const panel=choicePanel();if(panel&&e.target.matches('button:not(:disabled)')&&panel.contains(e.target))highlight(e.target,panel);});
+  document.addEventListener('focusin',e=>{const panel=choicePanel();if(panel&&e.target.matches('button:not(:disabled),summary,a[href]')&&panel.contains(e.target))highlight(e.target,panel);});
   function navigateChoice(panel,key){
     const buttons=choices(panel);if(!buttons.length)return;
     let index=buttons.indexOf(document.activeElement);
-    if(index<0){buttons[0].focus();return;}
+    if(index<0){(panel.id==='startPanel'?buttons.find(button=>button.id==='startBtn')||buttons[0]:buttons[0]).focus();return;}
     if(key==='enter'){buttons[index].click();return;}
     let next;
     if(key==='arrowleft'||key==='arrowright')next=buttons[(index+(key==='arrowright'?1:-1)+buttons.length)%buttons.length];
@@ -56,7 +68,7 @@ export function installInput(r) {
   for(const event of ['pointerup','pointercancel','lostpointercapture']) r.dashBtn.addEventListener(event,e=>{if(e.pointerId===dashPointer){dashPointer=null;r.stopDash();}});
   const editing = target => target?.closest?.('input,select,textarea,[contenteditable="true"]');
   window.addEventListener('keydown', e => {
-    if(!r.state.running || editing(e.target)) return;
+    if(editing(e.target)) return;
     const key=e.key.toLowerCase();
     // A held Enter must not consume another reward, answer or continue action.
     if(key==='enter'&&choiceEnterHeld){e.preventDefault();return;}
@@ -69,6 +81,7 @@ export function installInput(r) {
       if(key==='enter'){choiceEnterHeld=true;if(e.repeat)return;}
       navigateChoice(panel,key);return;
     }
+    if(!r.state.running)return;
     if(key===' '&&e.target?.closest?.('button,summary'))return;
     if(e.repeat && ['p','e','q','escape'].includes(key)) return;
     if(key==='escape') {e.preventDefault(); r.v2.pause(); return;}

@@ -98,7 +98,7 @@ export function createV2(r,curriculum){
   settingsPanel.after(help,extras);
   card.querySelector('.subtitle').textContent='움직이고, 정답을 찾고, 더 강해져요.';
   for(const paragraph of card.querySelectorAll(':scope > .small:not(.copyright)'))paragraph.remove();
-  help.querySelector('ol li').textContent='학년을 고르고 게임 시작을 누르세요. 캐릭터·무기·단원은 ‘설정 바꾸기’에서 바꿀 수 있어요.';
+  help.querySelector('ol li').textContent='학년을 고르고 게임 시작을 누르세요. 캐릭터·무기·단원은 ‘설정 바꾸기’에서 바꿀 수 있어요. 방향키로 메뉴를 고르고 Enter로 선택하며, 선택창과 입력칸은 Tab으로 이동하세요.';
   const summary=()=>{
    const mode=$('mode').selectedOptions[0]?.textContent||'',unit=$('unit').selectedOptions[0]?.textContent||'';
    $('quickSummary').textContent=mode+' · '+unit;

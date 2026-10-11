@@ -41,6 +41,7 @@ jobs:
           node tests/mobile-size.cjs
           node tests/item-keyboard.cjs
           node tests/answer-keyboard.cjs
+          node tests/menu-keyboard.cjs
       - run: npm run build
       - name: Built startup recovery and offline regression
         run: |
