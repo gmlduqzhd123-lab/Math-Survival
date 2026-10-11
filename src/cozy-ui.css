@@ -47,6 +47,9 @@ body.simple-play #levelStatus>.hudBox,#compactEnergy{font-size:13px;font-weight:
 body.simple-play #answerAccess button{font-size:calc(18px * var(--reading-scale));font-weight:700;color:#253e3b;background:#fff9e9;border:2px solid #d5c28d;border-radius:14px}
 #questionVisual{font-family:inherit;font-size:14px}
 body.simple-play #toast{font-size:16px;font-weight:600;background:#164f44;color:#fff;box-shadow:0 2px 8px #08251a44}
+.exports .exportChoice{flex:1 1 230px;min-width:0}
+.exports .exportChoice button{width:100%;white-space:normal}
+.exports .exportChoice p{margin:10px 4px 0;font-size:15px;line-height:1.6;color:#405c53;overflow-wrap:anywhere}
 #playMenu{border:2px solid #b6cdbd;background:#fffdf7}
 body.simple-play.mobile-play #skillBtn{font-size:15px;color:#253e3b;border:2px solid #94b4a3}
 body.simple-play.mobile-play #dashBtn{font-weight:750;color:#38381f;background:#ffdc84;border:2px solid #fff1c4}
