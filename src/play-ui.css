@@ -59,3 +59,8 @@ body.simple-play.mobile-play #toast{bottom:108px}
 #startPanel .copyright{font-size:12px;margin:16px 0 0}
 #homeCollection .adventureBanner{padding:10px;font-size:14px}
 .assignmentSummary{margin:0;color:#286b57;font-size:15px}
+
+/* Stop browser pull-to-refresh without disabling menu scrolling. */
+html,body{overscroll-behavior-y:none}
+body.game-running #playfield{touch-action:none;overscroll-behavior:none}
+#playMenu,#startPanel,#levelUpPanel,#mathPopup,#merchantPopup{overscroll-behavior:contain}

@@ -45,6 +45,21 @@ export function installInput(r) {
     }
     next.focus();
   }
+  // Contain mobile swipes in the game. Keep scrollable menus usable, including
+  // nested panels, but do not let a boundary drag reach browser pull-to-refresh.
+  let touchY=0;
+  document.addEventListener('touchstart',e=>{touchY=e.touches[0]?.clientY||0;},{passive:true});
+  document.addEventListener('touchmove',e=>{
+    if(!r.state.running||!e.cancelable)return;
+    const y=e.touches[0]?.clientY??touchY,delta=y-touchY;touchY=y;
+    if(e.target.closest?.('input[type="range"],textarea'))return;
+    for(let node=e.target;node&&node!==document.body&&node!==document.documentElement;node=node.parentElement){
+      if(!node.style)continue;
+      const scrollable=/auto|scroll/.test(getComputedStyle(node).overflowY)&&node.scrollHeight>node.clientHeight+1;
+      if(scrollable&&((delta>0&&node.scrollTop>0)||(delta<0&&node.scrollTop+node.clientHeight<node.scrollHeight-1)))return;
+    }
+    e.preventDefault();
+  },{passive:false});
   const zone = r.joystickZone;
   function releaseJoystick() {
     if (pointer !== null && zone.hasPointerCapture?.(pointer)) zone.releasePointerCapture(pointer);

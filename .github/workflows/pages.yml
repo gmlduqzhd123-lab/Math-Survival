@@ -38,6 +38,7 @@ jobs:
           npm run test:simple-play
           node tests/compact-home.cjs
           node tests/mobile-gestures.cjs
+          node tests/mobile-refresh.cjs
           node tests/mobile-size.cjs
           node tests/world-browser.cjs
           node tests/world-playtest.cjs

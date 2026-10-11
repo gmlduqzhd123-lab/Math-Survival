@@ -1,0 +1,12 @@
+const {chromium}=require('playwright'),assert=require('node:assert/strict');
+(async()=>{const b=await chromium.launch({headless:true});try{for(const [width,height] of [[320,568],[390,844],[844,390]]){
+ const c=await b.newContext({viewport:{width,height},isMobile:true,hasTouch:true}),p=await c.newPage();await p.goto((process.env.GAME_URL||'http://127.0.0.1:4173/Math-Survival/')+'?qa=1');await p.waitForFunction(()=>window.__game);await p.click('#startBtn');await p.evaluate(()=>document.fonts.ready);await p.waitForTimeout(200);
+ assert.equal(await p.evaluate(()=>getComputedStyle(document.documentElement).overscrollBehaviorY),'none');assert.equal(await p.locator('#playfield').evaluate(e=>getComputedStyle(e).touchAction),'none');
+ await p.evaluate(()=>{window.guardEvents=[];document.addEventListener('touchmove',e=>guardEvents.push({prevented:e.defaultPrevented,trusted:e.isTrusted}),{passive:true});});
+ const session=await c.newCDPSession(p),hud=await p.locator('#hud').boundingBox(),x=hud.x+40,y=hud.y+12;let navigations=0;p.on('framenavigated',f=>{if(f===p.mainFrame())navigations++;});
+ await session.send('Input.dispatchTouchEvent',{type:'touchStart',touchPoints:[{id:1,x,y}]});for(let dy=20;dy<=140;dy+=20){await session.send('Input.dispatchTouchEvent',{type:'touchMove',touchPoints:[{id:1,x,y:y+dy}]});await p.waitForTimeout(30);}await session.send('Input.dispatchTouchEvent',{type:'touchEnd',touchPoints:[]});
+ assert(await p.evaluate(()=>guardEvents.some(e=>e.trusted&&e.prevented)),'downward HUD drag must be canceled');assert.equal(navigations,0);assert(await p.evaluate(()=>__game.state.running));
+ await p.locator('#pauseBtn').click();await p.evaluate(()=>document.querySelectorAll('#playMenu details').forEach(e=>e.open=true));await p.waitForTimeout(100);const box=await p.locator('#playMenu').boundingBox(),sx=box.x+30,sy=box.y+box.height*.65;
+ await session.send('Input.dispatchTouchEvent',{type:'touchStart',touchPoints:[{id:2,x:sx,y:sy}]});for(let dy=20;dy<=100;dy+=20){await session.send('Input.dispatchTouchEvent',{type:'touchMove',touchPoints:[{id:2,x:sx,y:sy-dy}]});await p.waitForTimeout(25);}await session.send('Input.dispatchTouchEvent',{type:'touchEnd',touchPoints:[]});await p.waitForTimeout(100);
+ assert(await p.locator('#playMenu').evaluate(e=>e.scrollTop>0),'menu must still scroll');assert.equal(navigations,0);await c.close();console.log('PASS downward swipe contained and menu scroll retained '+width);
+ }}finally{await b.close();}})().catch(e=>{console.error(e);process.exit(1);});
