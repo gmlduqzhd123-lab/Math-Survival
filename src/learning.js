@@ -12,4 +12,15 @@ export function summarize(state,answers,config){
 }
 const csvCell=value=>'"'+String(value??'').replaceAll('"','""')+'"';
 export function toCSV(record){const headers=['일시','점수','생존초','레벨','처치','학년','영역','단원','문제','선택','정답','정답여부','해설','세션ID','모드','결과','종료이유','실제수학단계','응답ms','복습','힌트','인스턴스ID'];const rows=record.answers.length?record.answers:[{}];return '\uFEFF'+[headers,...rows.map(r=>[record.date,record.score,record.survivalSeconds,record.level,record.kills,r.grade,r.domain,r.unit,r.text,r.selected,r.answer,r.correct==null?'':r.correct?'정답':'오답',r.explain,record.sessionId,record.config.mode,record.outcome,record.resultReason,r.level,r.responseMs,r.review,r.hintUsed,r.instanceId])].map(row=>row.map(csvCell).join(',')).join('\r\n');}
-export function downloadRecord(record,type){if(!record)return;const blob=new Blob([type==='json'?JSON.stringify(record,null,2):toCSV(record)],{type:type==='json'?'application/json;charset=utf-8':'text/csv;charset=utf-8'});const url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download=`math-survival-${record.date.slice(0,10)}.${type}`;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}
+// Export the same deduplicated questions displayed in the result review.
+export function toReviewCSV(record){
+ const cell=value=>{let text=String(value??'');if(/^[\s]*[=+@-]/.test(text))text="'"+text;return csvCell(text);};
+ return '\uFEFF'+[['문제','내 답','정답','해설'],...(record?.reviewProblems??[]).map(w=>[w.text,w.selected,w.answer,w.explain])].map(row=>row.map(cell).join(',')).join('\r\n');
+}
+export function downloadReview(record){
+ if(!record?.reviewProblems?.length)return;
+ const blob=new Blob([toReviewCSV(record)],{type:'text/csv;charset=utf-8'});
+ const url=URL.createObjectURL(blob),a=document.createElement('a');
+ a.href=url;a.download=`틀린-문제와-해설-${record.date.slice(0,10)}.csv`;a.click();
+ setTimeout(()=>URL.revokeObjectURL(url),1000);
+}

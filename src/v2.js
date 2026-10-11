@@ -8,7 +8,7 @@ import {createV3} from './v3/index.js';
 import {renderQuestionVisual} from './question-visual.js';
 import {generateProblem,equivalent} from './math-engine.js';
 import {CHARACTERS,WEAPONS,createCombatV2} from './combat-v2.js';
-import {summarize,downloadRecord} from './learning.js';
+import {summarize,downloadReview} from './learning.js';
 import {createStore} from './storage.js';
 import {createMastery} from './mastery.js';
 import {availableUnits,validateConfig} from './configuration.js';
@@ -67,7 +67,7 @@ export function createV2(r,curriculum){
   $('reducedMotion').addEventListener('change',e=>{settings.reduced=e.target.checked;applySettings();saveSettings();});$('lowPower').addEventListener('change',e=>{settings.low=e.target.checked;applySettings();saveSettings();});$('fontSize').addEventListener('change',e=>{settings.font=Number(e.target.value);applySettings();saveSettings();});
   $('pauseBtn').addEventListener('click',pause);$('playSound').addEventListener('click',()=>{r.initAudio();r.setMuted(!r.muted);saveSettings();});$('skillBtn').addEventListener('click',combat.skill);
   document.addEventListener('visibilitychange',()=>{if(document.hidden&&s.running&&!s.paused)pause();});
-  for(const type of ['JSON','CSV'])$('export'+type).addEventListener('click',()=>downloadRecord(result,type.toLowerCase()));
+  $('exportCSV').addEventListener('click',()=>downloadReview(result));
   $('answerAccess').addEventListener('click',e=>{const btn=e.target.closest('button[data-index]');if(!btn||!s.running||s.paused||(config.mode!=='explore'&&!$('answerAssist').checked))return;const orb=r.answerOrbs[Number(btn.dataset.index)];if(orb){r.player.x=orb.x;r.player.y=orb.y;r.updateCamera();r.resolveAnswer(orb);}});
   history();
   mountHistory();
@@ -148,7 +148,9 @@ export function createV2(r,curriculum){
   const outcome=outcomeOverride||(quit?'quit':s.hp<=0?'defeat':config.mode==='explore'&&answers.length<config.target||config.mode==='boss'&&s.bossKills<3?'time-limit':won?'complete':'defeat');
   const titles={interrupted:'메뉴로 이동 · 기록 저장',quit:'게임 종료',defeat:'전투 종료', 'time-limit':'제한 시간 종료',complete:config.mode==='explore'?'목표 문항 완료':config.mode==='boss'?'보스 3연전 완료':'생존 완료'};
   r.v3.finish(outcome);result=snapshot(outcome,titles[outcome]);const saved=store.save(result,mastery.units);history();$('resultTitle').textContent=titles[outcome];$('resultText').textContent=config.mode==='explore'?'수학 탐험 '+answers.length+'/'+config.target+'문항 · 정답률 '+(result.accuracy==null?'응답 없음':result.accuracy+'%'):config.mode==='boss'?'보스 챌린지 '+s.bossKills+'/3 처치':s.map.name+' · '+result.survivalSeconds+'초 생존';
-  $('learningReport').innerHTML='<h2>이번 모험의 학습 기록</h2><p>새 문항 '+(result.newAccuracy==null?'응답 없음':result.newAccuracy+'%')+' · 복습 '+(result.reviewAccuracy==null?'응답 없음':result.reviewAccuracy+'%')+' · 힌트 '+result.hintCount+'회</p><h3>단원별 응답</h3>'+Object.entries(result.units).map(([id,u])=>'<p>'+esc(curriculum.grades.flatMap(g=>g.units).find(x=>x.id===id)?.name||id)+' · '+u.correct+'/'+u.total+' · 새 문항 '+u.newCorrect+'/'+u.newTotal+' · 복습 '+u.reviewCorrect+'/'+u.reviewTotal+(u.total<5?' · 표본이 적습니다':'')+'</p>').join('')+'<h3>오답 해설</h3>'+result.reviewProblems.map(w=>'<div class="reviewRow"><strong>'+esc(w.text)+'</strong><p>선택 '+esc(w.selected)+' → 정답 '+esc(w.answer)+'</p><small>'+esc(w.explain)+'</small></div>').join('')+(answers.length===0?'<p>응답한 문항이 없어 정답률을 계산하지 않았습니다.</p>':result.wrong===0?'<p>이번 응답은 모두 맞혔습니다.</p>':'')+'<p role="status">'+(saved?'이 브라우저에 기록을 저장했습니다.':esc(store.error)+' 아래의 기록 저장 버튼으로 이번 결과를 저장해 주세요.')+'</p>';
+  $('exportCSV').disabled=!result.reviewProblems.length;
+  $('exportTableHelp').textContent=result.reviewProblems.length?'위에 나온 틀린 문제·내 답·정답·해설을 엑셀에서 볼 수 있는 파일로 저장해요.':'틀린 문제가 없어 저장할 해설이 없어요.';
+  $('learningReport').innerHTML='<h2>이번 모험의 학습 기록</h2><p>새 문항 '+(result.newAccuracy==null?'응답 없음':result.newAccuracy+'%')+' · 복습 '+(result.reviewAccuracy==null?'응답 없음':result.reviewAccuracy+'%')+' · 힌트 '+result.hintCount+'회</p><h3>단원별 응답</h3>'+Object.entries(result.units).map(([id,u])=>'<p>'+esc(curriculum.grades.flatMap(g=>g.units).find(x=>x.id===id)?.name||id)+' · '+u.correct+'/'+u.total+' · 새 문항 '+u.newCorrect+'/'+u.newTotal+' · 복습 '+u.reviewCorrect+'/'+u.reviewTotal+(u.total<5?' · 표본이 적습니다':'')+'</p>').join('')+'<h3>오답 해설</h3>'+result.reviewProblems.map(w=>'<div class="reviewRow"><strong>'+esc(w.text)+'</strong><p>선택 '+esc(w.selected)+' → 정답 '+esc(w.answer)+'</p><small>'+esc(w.explain)+'</small></div>').join('')+(answers.length===0?'<p>응답한 문항이 없어 정답률을 계산하지 않았습니다.</p>':result.wrong===0?'<p>이번 응답은 모두 맞혔습니다.</p>':'')+'<p role="status">'+(saved?'이 브라우저에 기록을 저장했습니다.':esc(store.error)+(result.reviewProblems.length?' 틀린 문제와 해설은 아래 버튼으로 저장할 수 있어요.':''))+'</p>';
  }
  function interrupt(){playUI.close();r.v3.math.hide();if(answers.length)finish(false,false,'interrupted');else{finished=true;r.v3.finish('interrupted');clearInput();store.discardCheckpoint();}}
  function afterAnswer(){playUI.sync();r.v3.modes.answer();checkpoint();if(r.v3.math.afterAnswer())return;if(s.hp<=0){r.endGame(false);return;}if(config.mode==='explore'){s.explanationPending=true;s.paused=true;clearInput();$('continueQuestion').hidden=false;$('continueQuestion').focus();}}

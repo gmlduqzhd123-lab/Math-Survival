@@ -45,6 +45,7 @@ jobs:
           node tests/item-keyboard.cjs
           node tests/answer-keyboard.cjs
           node tests/menu-keyboard.cjs
+          node tests/review-export.cjs
       - run: npm run build
       - name: Built startup recovery and offline regression
         run: |
