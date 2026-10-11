@@ -9,8 +9,12 @@ const url=process.env.GAME_URL||'http://127.0.0.1:4173/Math-Survival/';
   await p.locator('#startBtn').tap();await p.waitForFunction(()=>__game.clock>200);
   await p.evaluate(()=>{window.touchMenus=[];window.addEventListener('contextmenu',e=>touchMenus.push({id:e.target.id,prevented:e.defaultPrevented}));});
   const session=await context.newCDPSession(p),joy=await p.locator('#joystickZone').boundingBox(),dash=await p.locator('#dashBtn').boundingBox();
-  const a={id:1,x:joy.x+joy.width/2+20,y:joy.y+joy.height/2},d={id:2,x:dash.x+dash.width/2,y:dash.y+dash.height/2};
-  const before=await p.evaluate(()=>__game.player.x);await session.send('Input.dispatchTouchEvent',{type:'touchStart',touchPoints:[a]});await p.waitForTimeout(900);
+  const a={id:1,x:joy.x+joy.width/2,y:joy.y+joy.height/2},d={id:2,x:dash.x+dash.width/2,y:dash.y+dash.height/2};
+  // Hold in place before a short drag so random pickups cannot interrupt the hold assertion.
+  await session.send('Input.dispatchTouchEvent',{type:'touchStart',touchPoints:[a]});await p.waitForTimeout(900);
+  const held=await p.evaluate(()=>({active:__game.isJoystickActive,paused:__game.state.paused,levelUp:__game.state.levelUpPending}));
+  assert(held.active,JSON.stringify(held));
+  const before=await p.evaluate(()=>__game.player.x);a.x+=20;await session.send('Input.dispatchTouchEvent',{type:'touchMove',touchPoints:[a]});await p.waitForTimeout(150);
   assert(await p.evaluate(x=>__game.player.x>x&&__game.isJoystickActive,before));
   await session.send('Input.dispatchTouchEvent',{type:'touchStart',touchPoints:[a,d]});await p.waitForFunction(()=>__game.player.dashCooldown>0);
   await session.send('Input.dispatchTouchEvent',{type:'touchEnd',touchPoints:[d]});assert(await p.evaluate(()=>__game.isJoystickActive));
