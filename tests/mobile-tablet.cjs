@@ -1,6 +1,6 @@
 const {chromium,webkit,devices}=require('playwright');
 const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path');
-const root='http://127.0.0.1:4173/Math-Survival/',out='docs/mobile-tablet-verification';fs.mkdirSync(out,{recursive:true});
+const root=process.env.GAME_URL||'http://127.0.0.1:4173/Math-Survival/',out=process.env.DEVICE_OUT||'test-results/mobile-tablet';fs.mkdirSync(out,{recursive:true});
 const profiles=[
  ['small-phone',320,568,2],['android-phone',360,640,3],['iphone-size',390,844,3],['large-phone',430,932,3],
  ['phone-landscape',844,390,3],['tablet-portrait',768,1024,2],['large-tablet-portrait',820,1180,2],

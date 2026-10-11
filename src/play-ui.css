@@ -2,7 +2,8 @@ body.simple-play #wrap{grid-template-areas:'header' 'learning' 'field' 'answers'
 body.simple-play #gameHeader{display:grid;grid-template-columns:minmax(0,1fr) 48px;gap:8px;align-items:center}
 body.simple-play #hud{grid-column:1;grid-row:1;grid-template-columns:1fr 1fr;gap:8px}
 body.simple-play #hud .hudBox{font-size:15px;padding:5px 10px;text-align:left}
-body.simple-play #levelStatus>.hudBox{display:inline;padding:0;margin-left:8px;font-size:12px;background:none;border:0}
+body.simple-play #levelStatus>.hudBox{display:inline-block;white-space:nowrap;padding:0;margin-left:8px;font-size:12px;background:none;border:0}
+body.simple-play #toast{position:absolute;bottom:10px;width:max-content;max-width:calc(100% - 16px);white-space:normal;overflow:visible;overflow-wrap:anywhere;text-overflow:clip;font-size:14px;line-height:1.4;padding:8px 12px;border-radius:12px;z-index:5}
 #healthMeter,#experienceMeter{display:block;width:100%;height:8px;margin-top:3px;accent-color:#258865}#healthMeter{accent-color:#e96783}#compactEnergy{float:right;font-size:12px}
 body.simple-play #pauseBtn{grid-column:2;grid-row:1;width:48px;min-height:48px;padding:6px;font-size:24px}
 body.simple-play #questionSub{display:none}body.simple-play #learningArea{max-height:30dvh}body.simple-play #questionBox{padding:6px}body.simple-play #answerBar{display:block}

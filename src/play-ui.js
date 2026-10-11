@@ -22,6 +22,7 @@ export function createPlayUI(r){
   $('gameDetails').append(stats,$('v3HUD'));dialog.append($('gameDetails'));$('gameDetails').querySelector('summary').textContent='미션·장비·상세 기록';
   $('assistLabel').hidden=true;$('playPreferences').append($('assistLabel'));
   const hp=$('hp').parentElement,level=$('level').parentElement;hp.id='healthStatus';hp.insertAdjacentHTML('beforeend','<progress id="healthMeter" aria-label="체력" value="120" max="120"></progress>');level.id='levelStatus';level.append($('exp').parentElement);level.insertAdjacentHTML('beforeend','<progress id="experienceMeter" aria-label="경험치" value="0" max="100"></progress><span id="compactEnergy" title="수학 에너지">🔋 0</span>');
+  $('playfield').append($('toast'));
   $('gameHeader').append($('pauseBtn'));$('playControls').remove();$('pauseBtn').textContent='☰';$('pauseBtn').setAttribute('aria-label','게임 메뉴 및 일시정지');$('pauseBtn').setAttribute('aria-controls','playMenu');$('pauseBtn').setAttribute('aria-expanded','false');
   $('resumePlay').onclick=()=>r.v2.pause();dialog.addEventListener('cancel',e=>{e.preventDefault();r.v2.pause();});dialog.addEventListener('keydown',e=>{if(e.key==='Escape')e.stopPropagation();});
   $('autoSkillToggle').checked=prefs.autoSkill;$('combatAnswerMode').value=prefs.answers;
