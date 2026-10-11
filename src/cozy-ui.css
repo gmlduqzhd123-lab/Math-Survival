@@ -65,3 +65,8 @@ body.simple-play.mobile-play #dashBtn{font-weight:750;color:#38381f;background:#
  #startPanel .installChip{font-size:13px;min-height:36px;padding:5px 9px}
  #startPanel .subtitle{margin-bottom:14px}
 }
+/* 휴대폰: 앱 설치·QR을 카드 맨 윗줄 오른쪽에 (제목은 그 아래) */
+@media(max-width:520px){
+ #startPanel .titleRow{flex-wrap:wrap;row-gap:6px}
+ #startPanel .topChips{order:-1;width:100%;justify-content:flex-end}
+}
