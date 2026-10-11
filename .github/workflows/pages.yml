@@ -9,7 +9,7 @@ permissions:
   id-token: write
 concurrency:
   group: math-survival-pages
-  cancel-in-progress: false
+  cancel-in-progress: true
 jobs:
   verify:
     runs-on: ubuntu-latest
