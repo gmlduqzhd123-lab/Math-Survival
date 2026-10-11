@@ -13,10 +13,10 @@ const root=process.env.GAME_URL||'http://127.0.0.1:4173/Math-Survival/',out='tes
    for(const id of ['storm','compass','fraction','lightning']){await p.selectOption('#startingWeapon',id);assert((await p.locator('#equipmentPreviews img').nth(1).getAttribute('src')).includes({storm:'knowledge-staff',compass:'math-boomerang',fraction:'invincibility-shield',lightning:'knowledge-staff'}[id]));}
    await p.selectOption('#character','mage');await p.selectOption('#startingWeapon','compass');
    await p.screenshot({path:`${out}/${engine}-${width}-menu.png`,fullPage:true});
-   await p.locator('.originalHelp summary').click();await p.locator('#tabBtn2').click();
+   await p.locator('.originalHelp > summary').click();await p.locator('#tabBtn2').click();
    assert.equal(await p.locator('.spriteGuide img').count(),11);
    assert(await p.locator('.spriteGuide img').evaluateAll(images=>images.every(i=>i.complete&&i.naturalWidth===256)));
-   await p.locator('.originalHelp summary').click();await p.selectOption('#mode','survival');await p.locator('#startBtn').click();
+   await p.locator('.originalHelp > summary').click();await p.selectOption('#mode','survival');await p.locator('#startBtn').click();
    const checked=await p.evaluate(()=>{
     const r=__game,ctx=r.ctx,draw=ctx.drawImage,seen=new Set();ctx.drawImage=function(image,...args){if(image.dataset?.sprite)seen.add(image.dataset.sprite);return draw.call(this,image,...args);};
     r.enemies=[];r.items=[];r.state.hp=r.state.maxHp=1e6;r.state.exp=-1e6;r.state.mission=null;r.state.bossIndex=3;

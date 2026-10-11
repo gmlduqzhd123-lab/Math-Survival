@@ -83,49 +83,47 @@
         </div>
 
         <details class="originalHelp"><summary>📖 게임 설명서</summary><div class="tabs">
-          <button class="tab-btn active" id="tabBtn1" onclick="document.getElementById('tabContent1').classList.add('active'); document.getElementById('tabContent2').classList.remove('active'); document.getElementById('tabBtn1').classList.add('active'); document.getElementById('tabBtn2').classList.remove('active');">🎮 시작·조작·게임 규칙</button>
-          <button class="tab-btn" id="tabBtn2" onclick="document.getElementById('tabContent2').classList.add('active'); document.getElementById('tabContent1').classList.remove('active'); document.getElementById('tabBtn2').classList.add('active'); document.getElementById('tabBtn1').classList.remove('active');">🎁 아이템 & 무기</button>
+          <button class="tab-btn active" id="tabBtn1" onclick="document.getElementById('tabContent1').classList.add('active'); document.getElementById('tabContent2').classList.remove('active'); document.getElementById('tabBtn1').classList.add('active'); document.getElementById('tabBtn2').classList.remove('active');">🎮 이렇게 놀아요</button>
+          <button class="tab-btn" id="tabBtn2" onclick="document.getElementById('tabContent2').classList.add('active'); document.getElementById('tabContent1').classList.remove('active'); document.getElementById('tabBtn2').classList.add('active'); document.getElementById('tabBtn1').classList.remove('active');">🎁 무기와 아이템</button>
         </div>
 
         <div id="tabContent1" class="tab-content active">
           <div class="manualIntro">
-            <h3>처음이라면 이렇게 시작해요</h3>
-            <ol><li>캐릭터와 시작 무기, 학년·학습 영역·단원을 고르세요. 수학 난이도와 전투 난이도는 각각 설정합니다.</li><li>게임 시작을 누르고 이동하세요. 무기는 자동으로 공격합니다. 문제의 정답 구슬을 먹으면 성장하고, 오답 구슬을 먹으면 피해를 받습니다.</li><li>경험치를 모아 레벨이 오르면 강화 카드 하나를 선택하세요. 아이템 효과는 아래 ‘아이템 &amp; 무기’에서 볼 수 있습니다.</li></ol>
-            <h3>모험과 학습 모드</h3><p>기존 자유 서바이벌·수학 탐험·보스 챌린지와 함께 8·15·20·30분 생존, 성문을 지키는 웨이브 디펜스, 3문항마다 방 보상을 받는 수학 던전, 무한 도전, 날짜 기반 오늘의 도전을 고를 수 있어요.</p><h3>무기 조합과 새 친구</h3><p>무기 6칸과 능력 강화 6칸 안에서 조합하세요. 도감의 조건을 채운 뒤 보물상자를 먹으면 진화합니다. 진화 무기 두 개를 모으면 수학 에너지 20으로 합체 궁극기가 자동 발동합니다. 전투에서 모은 골드로 능력을 키우고 새로운 캐릭터·펫과 함께 모험할 수 있어요.</p><h3>수학 에너지와 보호막</h3><p>정답은 수학 에너지를 채우고 보스의 수학 보호막을 줄입니다. 전투 경험치와 학습 보상은 따로 계산합니다. 팝업 방식을 선택하면 문제와 해설을 읽는 동안 전투 시간이 멈춥니다. 오답 때문에 생명력이 0이 되지는 않아요.</p>
-            <ul><li><b>서바이벌:</b> 시간 제한 없이 생존합니다. 체력이 모두 소진되면 끝납니다.</li><li><b>수학 탐험:</b> 교사가 정한 문항 수만큼 연습합니다. 답안 버튼으로 답하고, 오답 피해 없이 해설을 읽은 뒤 ‘다음 문제’를 누릅니다.</li><li><b>보스 챌린지:</b> 세 월드의 보스를 연달아 물리치세요. 세 보스를 모두 처치하면 완료합니다.</li></ul>
-            <h3>문제·성장·기록</h3>
-            <p>전투 모드에서는 문제를 답한 뒤 30초가 지나면 다음 문제가 나옵니다. ‘전투 답안 접근 보조’를 켜면 답안 버튼으로 해당 구슬까지 즉시 이동합니다. 자동 난이도는 단원별 새 문항 5개를 기준으로 조절하며, 힌트·복습 문항은 난이도 평가에서 제외합니다. 개념 확인 단원은 1단계로 연습합니다.</p>
-            <p>종료 후 정답률과 오답 해설을 확인하고 자세한 기록 또는 엑셀용 기록을 저장할 수 있습니다. 메인 메뉴의 ‘학습 기록 저장·불러오기’에서 모든 학습 기록을 파일로 저장하거나, 저장한 파일을 불러오거나, 기록을 삭제할 수 있습니다. 기록은 현재 기기와 브라우저에 저장됩니다.</p>
-            <p>작은 화면에서는 조이스틱과 대시를 사용하고, 화면·접근성 설정에서 글자 크기·애니메이션 감소·저사양 모드를 조절하세요. PC에서는 브라우저 전체 화면(F11)도 사용할 수 있습니다.</p>
-          </div>
-          <div class="grid">
-            <div class="info">
-              <b>🎮 조작</b><br>
-              이동: <kbd>WASD</kbd> 또는 <kbd>방향키</kbd><br>
-              모바일: 왼쪽 <b>조이스틱</b> / 오른쪽 <b>대시</b><br>
-              특수 스킬: <kbd>E</kbd> 또는 화면 버튼<br>대시: <kbd>Space</kbd> / 일시정지: <kbd>P</kbd><br>
-              메인 메뉴: <kbd>ESC</kbd> 또는 화면 버튼<br>
-              게임 종료: <kbd>Q</kbd> 또는 종료 버튼
-            </div>
-            <div class="info">
-              <b>🗺️ 맵 선택</b><br>
-              연산의 숲, 분수 사막, 별빛 도서관<br>
-              맵마다 배경과 장식, 분위기가 다릅니다.
-            </div>
+            <h3>🌱 처음에는 이것만 해 보세요</h3>
+            <ol><li>내 학년을 고르고 <b>게임 시작</b>을 눌러요.</li><li>캐릭터를 움직여 몬스터를 피해요. <b>공격은 알아서 나가요!</b></li><li>수학 문제를 풀고 <b>정답이 적힌 구슬</b>을 찾아가요.</li><li>레벨이 오르면 카드 하나를 골라 더 강해져요.</li></ol>
+            <h3>🎮 어떻게 움직이나요?</h3>
+            <p><b>휴대폰·태블릿:</b> 왼쪽 동그란 버튼을 밀면 움직여요. 오른쪽 <b>대시</b>를 누르면 잠깐 빠르게 움직여요.</p>
+            <p><b>컴퓨터:</b> <kbd>방향키</kbd>나 <kbd>WASD</kbd>로 움직여요. <kbd>Space</kbd>를 누르면 대시를 해요.</p>
+            <p>카드·메뉴·답안 버튼은 클릭해도 돼요. 키보드로는 <b>방향키로 고르고 Enter로 선택</b>해요. 답안 버튼이 보일 때는 <b>WASD로 캐릭터를 움직여요.</b> 학년이나 설정 입력칸으로 이동할 때는 <kbd>Tab</kbd>을 눌러요.</p>
+            <h3>🔢 수학 문제는 어떻게 푸나요?</h3>
+            <p><b>구슬이 보이면:</b> 정답을 계산한 뒤 그 숫자가 적힌 구슬로 가요. 맞히면 수학 에너지가 차고 보스의 보호막도 줄어요.</p>
+            <p><b>답안 버튼이 보이면:</b> 답을 골라 눌러요. 전투 중에는 고른 구슬로 바로 이동해요. 수학 탐험이나 문제 창에서는 버튼으로 답해요.</p>
+            <p>틀려도 괜찮아요! 해설을 읽고 다시 연습해요. 수학 탐험에서는 틀려도 체력이 줄지 않아요. 전투에서는 조금 줄지만, 오답만으로 체력이 0이 되지는 않아요.</p>
+            <p>‘힌트’가 보이면 도움을 받을 수 있어요. ‘다음 문제’ 버튼이 나오면 해설을 읽고 눌러요. 문제 창과 수학 탐험의 해설을 읽는 동안에는 전투가 멈춰요.</p>
+            <h3>☰ 잠깐 쉬고 싶어요</h3>
+            <p>화면의 <b>☰ 메뉴</b>를 누르세요. 컴퓨터에서는 <kbd>P</kbd>나 <kbd>Esc</kbd>를 눌러도 돼요. 게임이 멈추면 <b>계속하기</b>로 다시 시작해요.</p>
+            <p>메뉴에서 소리와 글자 크기도 바꿀 수 있어요. 특수 스킬은 처음에는 자동으로 나가요. 자동 사용을 끄면 화면 버튼이나 <kbd>E</kbd>로 직접 써요.</p>
+            <h3>📚 모험이 끝나면</h3>
+            <p>맞힌 문제와 틀린 문제의 해설을 볼 수 있어요. <b>자세한 기록 저장</b>은 이번 결과를 보관하고, <b>엑셀용 기록 저장</b>은 결과를 표로 볼 때 써요.</p>
+            <p>첫 화면의 <b>기록·성장·교사용 → 학습 기록 저장·불러오기</b>에서 모든 학습 기록을 저장하거나, 저장한 파일을 불러오거나, 기록을 지울 수 있어요.</p>
+            <p>기록은 지금 쓰는 기기와 브라우저에 남아요. 다른 기기에서는 저장한 파일을 직접 불러와야 해요. 골드와 캐릭터 성장 기록은 <b>골드·성장 기록 저장</b>으로 따로 보관해요.</p>
+            <details><summary>🌟 다른 모험도 해 볼까요?</summary>
+              <p>첫 화면의 <b>설정 바꾸기</b>에서 캐릭터·무기·맵·문제를 바꿔요. 수학 문제의 어려움과 몬스터의 강함은 따로 고를 수 있어요.</p>
+              <ul><li><b>서바이벌:</b> 시간 제한 없이 몬스터를 피해 오래 살아남아요.</li><li><b>수학 탐험:</b> 정해진 수만큼 문제를 풀어요.</li><li><b>보스 챌린지:</b> 큰 보스 세 마리를 차례로 물리쳐요.</li><li><b>타임 서바이벌:</b> 고른 시간만큼 살아남으면 성공이에요.</li><li><b>웨이브 디펜스:</b> 몰려오는 몬스터를 막고 성문을 지켜요.</li><li><b>수학 던전:</b> 문제를 풀며 다음 방으로 나아가요.</li><li><b>무한 도전:</b> 계속 등장하는 보스에 도전해요.</li><li><b>오늘의 도전:</b> 매일 달라지는 조건으로 8분 동안 살아남아요.</li></ul>
+              <p>전투에서는 답을 고른 뒤 30초가 지나면 다음 문제가 나와요. 자동 난이도를 켜면 새 문제 5개를 푼 결과에 따라 문제의 어려움이 바뀌어요. 힌트로 푼 문제와 복습 문제는 여기에 넣지 않아요.</p>
+            </details>
           </div>
         </div>
 
         <div id="tabContent2" class="tab-content">
-          <div class="grid">
-            <div class="info">
-              <b>🔫 무기 확장</b><br>
-              마법구, 다중 발사, 관통 마법, 회전 위성, 수학 레이저, 부메랑 칠판, 분필 비<br>
-              레벨업 때 강화 가능<br>보스전, 포털, 펫 공격까지 추가
-            </div>
-            <div class="info">
-              <b>🎁 아이템 확장</b><br>
-              회복하트, 보호막, 시간얼음, 자석, 폭탄, 별사탕, 연산노트, 번개신발, 경험치책, 무지개연필, 지우개, 시계, 보물상자, 행운클로버, 보석, 순간이동깃털, 경험치 젤리
-            </div>
+          <div class="manualIntro">
+            <h3>⚔️ 무기는 알아서 공격해요</h3>
+            <p>레벨이 오르면 무기를 고르거나 가진 무기를 더 강하게 만들 수 있어요. 무기는 최대 6개, 능력을 키우는 도구도 최대 6개까지 가질 수 있어요.</p>
+            <p>경험치 보석과 경험치책을 모으면 레벨이 올라요. 카드의 설명을 읽고 원하는 힘을 골라 보세요.</p>
+            <details><summary>✨ 더 강한 무기를 만들고 싶어요</summary><p><b>기록·성장·교사용 → 성장·수집 → 도감·진화 조합·업적</b>에서 필요한 무기와 도구를 확인해요. 표시된 레벨까지 키운 뒤 보물상자를 먹으면 무기가 진화해요.</p><p>정해진 조합의 진화 무기 두 개를 모으면 수학 에너지 20을 써서 아주 강한 합체 공격이 자동으로 나가요.</p></details>
+            <h3>🎁 아이템으로 도움을 받아요</h3>
+            <p>아이템 가까이로 가면 먹을 수 있어요. 아래 그림과 설명을 보고 어떤 도움을 주는지 알아보세요.</p>
+            <p>모은 골드는 <b>성장·수집 → 능력 키우기·새 친구 만나기</b>에서 써요. 능력을 키우고 새 캐릭터나 펫과 함께 모험할 수 있어요.</p>
           </div>
         </div>
 

@@ -3,7 +3,7 @@ import {ITEM_SPRITES} from './sprites.js';
 export function createItemTypes(gameRuntime){ const types = {
       heart: {
         icon: "❤️", name: "회복하트", color: "#fb7185",
-        desc: "체력 +32",
+        desc: "체력을 32 회복해요",
         apply(now) {
           gameRuntime.state.hp = gameRuntime.clamp(gameRuntime.state.hp + 32 + gameRuntime.state.healBonus, 0, gameRuntime.state.maxHp);
           gameRuntime.scorePlus(25);
@@ -13,7 +13,7 @@ export function createItemTypes(gameRuntime){ const types = {
       },
       shield: {
         icon: "🛡️", name: "보호막", color: "#38bdf8",
-        desc: "보호막 +2",
+        desc: "공격을 막는 보호막 2개를 얻어요",
         apply(now) {
           gameRuntime.state.shield = Math.min(8, gameRuntime.state.shield + 2);
           gameRuntime.scorePlus(25);
@@ -23,7 +23,7 @@ export function createItemTypes(gameRuntime){ const types = {
       },
       freeze: {
         icon: "❄️", name: "시간얼음", color: "#67e8f9",
-        desc: "몬스터 정지",
+        desc: "몬스터를 잠깐 멈춰요",
         apply(now) {
           gameRuntime.state.freezeUntil = now + 5200;
           gameRuntime.showToast("시간얼음! 몬스터가 잠시 멈춥니다.");
@@ -33,7 +33,7 @@ export function createItemTypes(gameRuntime){ const types = {
       },
       magnet: {
         icon: "🧲", name: "자석", color: "#f97316",
-        desc: "끌어당김",
+        desc: "아이템과 구슬이 가까이 와요",
         apply(now) {
           gameRuntime.state.magnetUntil = now + 10000;
           gameRuntime.showToast("자석 발동! 아이템과 정답 구슬이 가까이 옵니다.");
@@ -42,7 +42,7 @@ export function createItemTypes(gameRuntime){ const types = {
       },
       bomb: {
         icon: "💣", name: "연산폭탄", color: "#facc15",
-        desc: "주변 폭발",
+        desc: "주변 몬스터를 크게 공격해요",
         apply(now) {
           gameRuntime.explode(gameRuntime.player.x, gameRuntime.player.y, 240, 95, true);
           gameRuntime.showToast("연산폭탄! 주변 몬스터를 크게 공격했습니다.");
@@ -51,7 +51,7 @@ export function createItemTypes(gameRuntime){ const types = {
       },
       star: {
         icon: "⭐", name: "별사탕", color: "#fde047",
-        desc: "점수 2배",
+        desc: "잠깐 동안 점수를 두 배로 받아요",
         apply(now) {
           gameRuntime.state.doubleScoreUntil = now + 11000;
           gameRuntime.showToast("별사탕! 11초 동안 점수 2배입니다.");
@@ -60,7 +60,7 @@ export function createItemTypes(gameRuntime){ const types = {
       },
       book: {
         icon: "📘", name: "연산노트", color: "#818cf8",
-        desc: "정답 힌트",
+        desc: "정답을 찾는 힌트를 보여 줘요",
         apply(now) {
           gameRuntime.state.hintUntil = now + 15000;
           gameRuntime.showToast("연산노트! 정답 구슬 힌트가 반짝입니다.");
@@ -69,7 +69,7 @@ export function createItemTypes(gameRuntime){ const types = {
       },
       speed: {
         icon: "⚡", name: "번개신발", color: "#bef264",
-        desc: "이동속도 증가",
+        desc: "잠깐 동안 더 빠르게 움직여요",
         apply(now) {
           gameRuntime.state.speedUntil = now + 9000;
           gameRuntime.showToast("번개신발! 9초 동안 더 빠르게 움직입니다.");
@@ -78,7 +78,7 @@ export function createItemTypes(gameRuntime){ const types = {
       },
       expBook: {
         icon: "📗", name: "경험치책", color: "#4ade80",
-        desc: "경험치 +45",
+        desc: "경험치를 45 얻어 레벨을 올려요",
         apply(now) {
           gameRuntime.state.exp += 45;
           gameRuntime.scorePlus(35);
@@ -89,7 +89,7 @@ export function createItemTypes(gameRuntime){ const types = {
       },
       rainbow: {
         icon: "🌈", name: "무지개연필", color: "#f0abfc",
-        desc: "모든 무기 강화",
+        desc: "가지고 있는 무기들을 강하게 해요",
         apply(now) {
           gameRuntime.state.rainbowUntil = now + 9000;
           gameRuntime.state.attackPower += 3;
@@ -101,7 +101,7 @@ export function createItemTypes(gameRuntime){ const types = {
       },
       eraser: {
         icon: "🧽", name: "지우개", color: "#cbd5e1",
-        desc: "화면 몬스터 약화",
+        desc: "화면 근처 몬스터의 체력을 줄여요",
         apply(now) {
           for (const e of gameRuntime.enemies) {
             if (gameRuntime.isNearScreen(e.x, e.y, 80)) e.hp *= 0.45;
@@ -114,7 +114,7 @@ export function createItemTypes(gameRuntime){ const types = {
       },
       clock: {
         icon: "⏰", name: "집중시계", color: "#93c5fd",
-        desc: "문제 시간 확보",
+        desc: "몬스터를 멈추고 힌트 시간을 늘려요",
         apply(now) {
           gameRuntime.state.freezeUntil = now + 3500;
           gameRuntime.state.hintUntil = now + 9000;
@@ -124,7 +124,7 @@ export function createItemTypes(gameRuntime){ const types = {
       },
       chest: {
         icon: "🎁", name: "보물상자", color: "#fbbf24",
-        desc: "랜덤 보상",
+        desc: "상자를 열면 여러 보상 중 하나를 받아요",
         apply(now) {
           gameRuntime.giveChestReward(now);
           gameRuntime.showToast("보물상자 개봉! 랜덤 보상을 얻었습니다.");
@@ -133,7 +133,7 @@ export function createItemTypes(gameRuntime){ const types = {
       },
       clover: {
         icon: "🍀", name: "행운클로버", color: "#86efac",
-        desc: "드롭률 상승",
+        desc: "잠깐 동안 아이템이 더 자주 나와요",
         apply(now) {
           gameRuntime.state.luckyUntil = now + 12000;
           gameRuntime.scorePlus(40);
@@ -143,7 +143,7 @@ export function createItemTypes(gameRuntime){ const types = {
       },
       gem: {
         icon: "💎", name: "수학보석", color: "#67e8f9",
-        desc: "점수·경험치 획득",
+        desc: "점수와 경험치를 함께 얻어요",
         apply(now) {
           gameRuntime.state.exp += 28;
           gameRuntime.scorePlus(180);
@@ -154,7 +154,7 @@ export function createItemTypes(gameRuntime){ const types = {
       },
       feather: {
         icon: "🪶", name: "순간이동깃털", color: "#ddd6fe",
-        desc: "안전 지점 이동",
+        desc: "다른 곳으로 순간 이동해요",
         apply(now) {
           const p = gameRuntime.randomPointAroundPlayer(360, 620);
           gameRuntime.player.x = p.x;
