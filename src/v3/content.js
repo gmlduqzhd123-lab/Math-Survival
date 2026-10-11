@@ -10,7 +10,7 @@ export function createContent(r,battle,weapons){let events=[],lastPet=0,lastEven
   if(event.type==='secret'){const point=r.randomPointAroundPlayer(450,800);p.x=point.x;p.y=point.y;p.invincible=1500;r.updateCamera();r.spawnItem(p.x+60,p.y,'chest');r.spawnExpDrops(p.x,p.y,75,3);}
   r.sfx('item');return true;
  }
- const goods=[{id:'heal',name:'숲의 수프 · 체력 +50',cost:20,apply(){s.hp=Math.min(s.maxHp,s.hp+50);}},{id:'shield',name:'보호 부적 · 보호막 +2',cost:25,apply(){s.shield=Math.min(8,s.shield+2);}},{id:'energy',name:'별빛 차 · 수학 에너지 +25',cost:25,apply(){s.mathEnergy=Math.min(100,(s.mathEnergy||0)+25);}},{id:'power',name:'힘의 연필 · 패시브 +1',cost:30,apply(){const card=weapons.upgrades().find(x=>x.title.startsWith('힘의 연필'));if(!card)return false;card.apply();}}];
+ const goods=[{id:'heal',name:'숲의 수프 · 체력 +50',cost:20,apply(){s.hp=Math.min(s.maxHp,s.hp+50);}},{id:'shield',name:'보호 부적 · 보호막 +2',cost:25,apply(){s.shield=Math.min(8,s.shield+2);}},{id:'energy',name:'별빛 차 · 수학 에너지 +25',cost:25,apply(){s.mathEnergy=Math.min(100,(s.mathEnergy||0)+25);}},{id:'power',name:'힘의 연필 · 능력 강화 +1',cost:30,apply(){const card=weapons.upgrades().find(x=>x.title.startsWith('힘의 연필'));if(!card)return false;card.apply();}}];
  function closeShop(){if(!shop)return;shop.remove();shop=null;s.merchantOpen=false;s.paused=shopWasPaused;}
  function available(good){if(good.id==='heal')return s.hp<s.maxHp;if(good.id==='shield')return s.shield<8;if(good.id==='energy')return (s.mathEnergy||0)<100;return weapons.upgrades().some(x=>x.title.startsWith('힘의 연필'));}
  function purchase(id){const good=goods.find(g=>g.id===id);if(!shop||!good||runGold<good.cost||!available(good))return false;if(good.apply()===false)return false;runGold-=good.cost;r.sfx('item');closeShop();return true;}

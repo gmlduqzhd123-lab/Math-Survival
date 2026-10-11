@@ -18,7 +18,7 @@ function validateMastery(data,quarantine){
  }return out;
 }
 export function validateDatabase(data){
- if(!plain(data)||data.schemaVersion!==2||!Array.isArray(data.records)||!plain(data.mastery))throw new Error('지원하는 schemaVersion 2 백업이 아닙니다.');
+ if(!plain(data)||data.schemaVersion!==2||!Array.isArray(data.records)||!plain(data.mastery))throw new Error('이 게임에서 저장한 모든 학습 기록 파일이 아닙니다.');
  const db=empty(),ids=new Set();for(const [i,row]of data.records.entries()){
   if(!validRecord(row)){db.quarantine.push({index:i,reason:'잘못된 기록',row});continue;}
   if(ids.has(row.sessionId))continue;ids.add(row.sessionId);db.records.push(row);
@@ -49,7 +49,7 @@ export function createStore(storage){
   checkpoint(row,mastery){data.checkpoint={...row,outcome:'checkpoint'};data.mastery=structuredClone(mastery);return persist();},
   save(row,mastery){if(!validRecord(row)){error='기록 형식이 올바르지 않습니다.';return false;}data.records=data.records.filter(x=>x.sessionId!==row.sessionId);data.records.push(row);data.checkpoint=null;data.mastery=structuredClone(mastery);return persist();},
   preview(text){
-   if(new TextEncoder().encode(text).length>MAX_BACKUP_BYTES)throw new Error('백업은 10 MiB 이하여야 합니다.');const parsed=JSON.parse(text),incoming=validateDatabase(parsed);
+   if(new TextEncoder().encode(text).length>MAX_BACKUP_BYTES)throw new Error('10MB 이하의 학습 기록 파일을 선택해 주세요.');const parsed=JSON.parse(text),incoming=validateDatabase(parsed);
    if(incoming.quarantine.length>(parsed.quarantine?.length||0))throw new Error('잘못된 기록이 포함된 백업입니다. 복원을 적용하지 않았습니다.');
    const ids=new Set(data.records.map(x=>x.sessionId));return {incoming,added:incoming.records.filter(x=>!ids.has(x.sessionId)).length,duplicates:incoming.records.filter(x=>ids.has(x.sessionId)).length};
   },

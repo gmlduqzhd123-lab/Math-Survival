@@ -23,5 +23,5 @@ export const NEW_WORLDS={
  sky:{name:'도형 하늘정원',worldW:3300,worldH:2250,base:'#233b54',grid:'rgba(213,242,252,.13)',accent:'#90c5bd',accent2:'#d0eae1',deco:['☁️','🌟','🔷','🌱','🪽']}
 };
 export const BOSSES={forest:{name:'구구단 골렘',icon:'🗿',gold:35},desert:{name:'분수 드래곤',icon:'🐉',gold:45},library:{name:'도형 마왕',icon:'👾',gold:55},ocean:{name:'소수 크라켄',icon:'🐙',gold:65},clockwork:{name:'확률 기계왕',icon:'🤖',gold:75},sky:{name:'다각형 천룡',icon:'🐲',gold:90}};
-export const MAP_EVENTS={treasure:{name:'보물방',icon:'🎁',description:'보물상자와 경험치 보석'},merchant:{name:'숲의 상인',icon:'🦝',description:'이번 판 골드 20으로 회복/패시브 구매'},altar:{name:'강화 제단',icon:'⛩️',description:'수학 에너지 20으로 공격력 강화'},secret:{name:'비밀 포털',icon:'🌀',description:'숨겨진 보물방으로 순간 이동'}};
+export const MAP_EVENTS={treasure:{name:'보물방',icon:'🎁',description:'보물상자와 경험치 보석'},merchant:{name:'숲의 상인',icon:'🦝',description:'이번 판 골드 20으로 회복·능력 강화 구매'},altar:{name:'강화 제단',icon:'⛩️',description:'수학 에너지 20으로 공격력 강화'},secret:{name:'비밀 포털',icon:'🌀',description:'숨겨진 보물방으로 순간 이동'}};
 export const phaseFor=hpRatio=>hpRatio>2/3?1:hpRatio>1/3?2:3;
