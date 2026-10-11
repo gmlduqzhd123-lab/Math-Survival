@@ -15,3 +15,5 @@ test('World discovery resets per run and dungeon receives no overworld events',(
 test('Viewport chunk selection is bounded independently of explored area',()=>{
  for(let y=0;y<5400;y+=900)for(let x=0;x<7200;x+=1200){const chunks=visibleChunks(x,y,430,750);assert(chunks.length<=15);assert(chunks.every(([cx,cy])=>cx>=0&&cx<24&&cy>=0&&cy<18));}assert(visibleChunks(0,0,1920,1080).length<=40);
 });
+
+test('Region discovery announces each place only once per run',()=>{let notices=0;const r={state:{currentMapKey:'forest',worldW:7200,worldH:5400},player:{x:3600,y:2700},showToast(){notices++;},v3:{dungeon:{active:false}}};const w=createWorld(r);w.start();w.tick();r.player.x=2390;w.tick();r.player.x=2410;w.tick();assert.equal(notices,2);assert.equal(w.visited.size,2);});
