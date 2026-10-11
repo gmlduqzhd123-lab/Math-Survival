@@ -6,7 +6,7 @@ export const CHARACTERS={
  guardian:{name:'수학 수호자',icon:'🛡️',color:'#65cdb5',hp:170,speed:3.9,attack:22,rate:510,description:'체력 170 · 보호막 2 · 수호 회복'}
 };
 Object.assign(CHARACTERS,NEW_CHARACTERS);
-export const WEAPONS={storm:{name:'숫자 폭풍',icon:'🌀',evolution:'무한 숫자 폭풍'},compass:{name:'황금 컴퍼스',icon:'📐',evolution:'태양 컴퍼스'},fraction:{name:'분수 방패',icon:'🛡️',evolution:'완전 분수 방패'},lightning:{name:'연산 번개',icon:'⚡',evolution:'연쇄 연산 번개'}};
+export const WEAPONS={storm:{description:"캐릭터 주위로 숫자 구슬을 쏴요.",name:'숫자 폭풍',icon:'🌀',evolution:'무한 숫자 폭풍'},compass:{description:"컴퍼스가 날아갔다 돌아오며 몬스터를 맞혀요.",name:'황금 컴퍼스',icon:'📐',evolution:'태양 컴퍼스'},fraction:{description:"가까운 몬스터를 공격하고 보호막을 조금씩 채워요.",name:'분수 방패',icon:'🛡️',evolution:'완전 분수 방패'},lightning:{description:"번개가 여러 몬스터를 차례로 맞혀요.",name:'연산 번개',icon:'⚡',evolution:'연쇄 연산 번개'}};
 export function hazardContains(h,p){if(h.shape==='circle')return Math.hypot(p.x-h.x,p.y-h.y)<h.r+p.r;if(h.shape==='ring'){const d=Math.hypot(p.x-h.x,p.y-h.y);return Math.abs(d-h.r)<h.width+p.r;}if(h.shape==='rect')return Math.abs(p.x-h.x)<h.w/2+p.r&&Math.abs(p.y-h.y)<h.h/2+p.r;
  const dx=p.x-h.x,dy=p.y-h.y,c=Math.cos(h.angle),s=Math.sin(h.angle),along=dx*c+dy*s,across=-dx*s+dy*c;return along>-p.r&&along<h.length+p.r&&Math.abs(across)<h.width+p.r;}
 export function createCombatV2(r,settings){
@@ -62,6 +62,6 @@ export function createCombatV2(r,settings){
   }
   ctx.strokeStyle=CHARACTERS[s.character||'explorer'].color;ctx.lineWidth=3;ctx.beginPath();ctx.arc(r.worldToScreenX(p.x),r.worldToScreenY(p.y),p.r+7,0,Math.PI*2);ctx.stroke();
  }
- function upgrades(){return Object.entries(WEAPONS).filter(([key])=>s.newWeapons[key]<3).map(([key,w])=>({emoji:w.icon,sprite:WEAPON_SPRITES[key],title:w.name+' Lv.'+(s.newWeapons[key]+1),desc:'Lv.3 + 최고 5콤보 → '+w.evolution,apply(){s.newWeapons[key]++;s.weaponLevel++;}}));}
+ function upgrades(){return Object.entries(WEAPONS).filter(([key])=>s.newWeapons[key]<3).map(([key,w])=>({emoji:w.icon,sprite:WEAPON_SPRITES[key],title:w.name+' '+(s.newWeapons[key]+1)+'단계',desc:w.description+' 이미 있다면 더 강해져요. 3단계로 키우고 한 번이라도 정답을 연속 5번 맞히면 '+w.evolution+'으로 진화해요.',apply(){s.newWeapons[key]++;s.weaponLevel++;}}));}
  return {reset,tick,draw,skill,upgrades,hazards:()=>hazards,evolved};
 }
