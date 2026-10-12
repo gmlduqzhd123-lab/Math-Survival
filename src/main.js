@@ -361,6 +361,11 @@ Object.assign(systems, createcombat(runtime));
 Object.assign(systems, createmath(runtime));
 Object.assign(systems, createui(runtime));
 v2.mount();
+// Only trusted user gestures unlock sound. Later gestures also recover suspended audio.
+const unlockAudio=event=>{if(event.isTrusted&&!runtime.muted)runtime.initAudio();};
+document.addEventListener('pointerdown',unlockAudio,{passive:true});
+document.addEventListener('keydown',unlockAudio);
+document.addEventListener('visibilitychange',()=>{if(document.hidden&&runtime.audioReady)runtime.audioCtx.suspend().catch(()=>{});});
 const input=installInput(runtime);
 v2.setInput(input);
 
