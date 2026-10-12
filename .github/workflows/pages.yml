@@ -47,6 +47,7 @@ jobs:
           node tests/answer-keyboard.cjs
           node tests/menu-keyboard.cjs
           node tests/review-export.cjs
+          node tests/first-paint.cjs
       - run: npm run build
       - name: Built startup recovery and offline regression
         run: |
