@@ -4,7 +4,7 @@ const root=process.env.GAME_URL||'http://127.0.0.1:4173/Math-Survival/';
 const out='test-results/preferences';fs.mkdirSync(out,{recursive:true});
 (async()=>{
  const results=[];
- for(const engine of process.env.CI?['chromium']:['chromium','webkit']){
+ for(const engine of process.env.ENGINES?process.env.ENGINES.split(','):process.env.CI?['chromium']:['chromium','webkit']){
   const browser=await (engine==='chromium'?chromium:webkit).launch({headless:true,...(engine==='chromium'&&!process.env.CI?{channel:'msedge'}:{})});
   for(const [name,width,height]of [['phone',320,568],['tablet',768,1024],['desktop',1920,1080]]){
    const context=await browser.newContext({viewport:{width,height},hasTouch:true,isMobile:name!=='desktop',deviceScaleFactor:2});

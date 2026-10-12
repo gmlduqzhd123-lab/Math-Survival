@@ -4,7 +4,7 @@ const record={schemaVersion:2,sessionId:'preserved-before-startup-fix',date:'202
 const saved={schemaVersion:2,records:[record],mastery:{},checkpoint:null,quarantine:[]};
 (async()=>{
  const results=[];
- for(const engine of process.env.CI?['chromium']:['chromium','webkit']){
+ for(const engine of process.env.ENGINES?process.env.ENGINES.split(','):process.env.CI?['chromium']:['chromium','webkit']){
   const browser=await(engine==='chromium'?chromium:webkit).launch({headless:true,...(engine==='chromium'&&!process.env.CI?{channel:'msedge'}:{})});
   // The former entry point reproduces the pre-layout failure when structuredClone is absent.
   const old=await browser.newContext();await old.addInitScript(()=>window.structuredClone=undefined);

@@ -11,7 +11,7 @@ function readableHome(){
   return {selector,contrast:(Math.max(a,b)+.05)/(Math.min(a,b)+.05),size:parseFloat(style.fontSize),weight:Number(style.fontWeight),shadow:style.textShadow,font:style.fontFamily};
  });
 }
-(async()=>{const results=[];for(const engine of process.env.CI?['chromium']:['chromium','webkit']){
+(async()=>{const results=[];for(const engine of process.env.ENGINES?process.env.ENGINES.split(','):process.env.CI?['chromium']:['chromium','webkit']){
  const browser=await (engine==='chromium'?chromium:webkit).launch({headless:true,...(engine==='chromium'&&!process.env.CI?{channel:'msedge'}:{})});
  for(const [width,height]of [[320,568],[360,800],[390,844],[430,932],[768,1024],[1024,768],[1920,1080]]){
   const context=await browser.newContext({viewport:{width,height},isMobile:width<768,hasTouch:true,deviceScaleFactor:2}),page=await context.newPage(),errors=[];page.on('pageerror',e=>errors.push(e.message));
