@@ -2,7 +2,7 @@ const {chromium,webkit}=require('playwright'),assert=require('node:assert/strict
 const url=process.env.GAME_URL||'http://127.0.0.1:4173/Math-Survival/';
 (async()=>{
  const results=[];fs.mkdirSync('test-results/answer-keyboard',{recursive:true});
- for(const engine of process.env.CI?['chromium']:['chromium','webkit']){
+ for(const engine of process.env.ENGINES?process.env.ENGINES.split(','):process.env.CI?['chromium']:['chromium','webkit']){
   const browser=await (engine==='chromium'?chromium:webkit).launch({headless:true,...(engine==='chromium'&&!process.env.CI?{channel:'msedge'}:{})});
   for(const [width,height]of [[1440,900],[390,844]])for(const mode of ['explore','popup','buttons','orbs']){
    const context=await browser.newContext({viewport:{width,height}}),p=await context.newPage(),errors=[];

@@ -5,7 +5,7 @@ const out='test-results/simple-play';fs.mkdirSync(out,{recursive:true});
 const profiles=[['small-phone',320,568],['phone',390,844],['landscape',844,390],['tablet',768,1024],['tablet-wide',1024,768],['desktop',1920,1080]];
 (async()=>{
  const results=[];
- for(const engine of process.env.CI?['chromium']:['chromium','webkit']){
+ for(const engine of process.env.ENGINES?process.env.ENGINES.split(','):process.env.CI?['chromium']:['chromium','webkit']){
   const browser=await (engine==='chromium'?chromium:webkit).launch({headless:true,...(engine==='chromium'&&!process.env.CI?{channel:'msedge'}:{})});
   for(const [name,width,height]of profiles){
    const context=await browser.newContext({viewport:{width,height},hasTouch:true,isMobile:name!=='desktop'});
