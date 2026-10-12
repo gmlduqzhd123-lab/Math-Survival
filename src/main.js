@@ -14,10 +14,10 @@ import {loadSprites,spriteStatus} from './sprites.js';
 const loading=document.getElementById('loadingPanel');
 let initialized=false,loadingNow=false;
 async function boot(){if(initialized||loadingNow)return;loadingNow=true;document.getElementById('startBtn').disabled=true;document.getElementById('retryLoad').hidden=true;
- try{const response=await fetch(new URL('../data/curriculum.json',import.meta.url));if(!response.ok)throw new Error('HTTP '+response.status);const data=validateCurriculum(await response.json());initialize(data);initialized=true;
+ try{const response=await fetch(new URL('../data/curriculum.json',import.meta.url));if(!response.ok)throw new Error('HTTP '+response.status);const data=validateCurriculum(await response.json());const runtime=initialize(data);initialized=true;
  // Keep the unfinished legacy layout and fallback fonts out of the first paint.
  if(document.fonts)await Promise.race([document.fonts.ready,new Promise(resolve=>setTimeout(resolve,1500))]);
- document.body.classList.remove('app-booting');loading.remove();window.dispatchEvent(new Event('math-game-ready'));}
+ document.body.classList.remove('app-booting');loading.remove();if(new URLSearchParams(location.search).has('qa'))window.__game=runtime;window.dispatchEvent(new Event('math-game-ready'));}
  catch(e){document.getElementById('loadMessage').textContent='학습 데이터를 불러오지 못했습니다. '+e.message;document.getElementById('retryLoad').hidden=false;window.dispatchEvent(new CustomEvent('math-game-load-error',{detail:e.message}));}
  finally{loadingNow=false;}}
 document.getElementById('retryLoad').addEventListener('click',boot);boot();
@@ -363,7 +363,7 @@ Object.assign(systems, createui(runtime));
 v2.mount();
 const input=installInput(runtime);
 v2.setInput(input);
-if(new URLSearchParams(location.search).has('qa')) window.__game = runtime;
+
 
     document.getElementById("startBtn").addEventListener("click", () => {if(v2.validate()) resetGame();});
     document.getElementById("restartBtn").addEventListener("click", resetGame);
@@ -392,4 +392,5 @@ if(new URLSearchParams(location.search).has('qa')) window.__game = runtime;
     updateCamera();
     requestAnimationFrame(loop);
     new ResizeObserver(()=>{if(syncCanvasViewport()){updateCamera();v2.reposition();input.clear();}}).observe(surface.parentElement);
+    return runtime;
 }
