@@ -1,4 +1,4 @@
-import {TRACKS,frequency} from './v3/music.js';
+import {createBGM} from './bgm.js';
 // Extracted from upstream. Cross-system state is supplied by the shared runtime.
 import {spriteMarkup} from './sprites.js';
 export function createSystem(gameRuntime) {
@@ -27,6 +27,7 @@ function stopDash(e) {
 function initAudio() {
       if (gameRuntime.audioReady) {
         if (gameRuntime.audioCtx.state === "suspended") gameRuntime.audioCtx.resume().catch(() => {});
+        gameRuntime.startPersistentMusic?.();
         return;
       }
       const AudioContext = window.AudioContext || window.webkitAudioContext;
@@ -42,6 +43,7 @@ function initAudio() {
       gameRuntime.sfxGain.connect(gameRuntime.masterGain);
       gameRuntime.masterGain.connect(gameRuntime.audioCtx.destination);
       gameRuntime.audioReady = true;
+      if(gameRuntime.audioCtx.state==="suspended")gameRuntime.audioCtx.resume().catch(()=>{});
       gameRuntime.v3?.ui.applyAudio();
       gameRuntime.startPersistentMusic();
     }
@@ -50,7 +52,7 @@ function setMuted(value) {
       gameRuntime.muted = value;
       gameRuntime.muteBtn.textContent = gameRuntime.muted ? "🔇 소리 꺼짐" : "🔊 소리 켜짐";
       if (gameRuntime.musicBtn) gameRuntime.musicBtn.textContent = gameRuntime.muted ? "🔇 브금 꺼짐" : "🎵 브금 유지 중";
-      if (gameRuntime.audioReady) gameRuntime.masterGain.gain.value = gameRuntime.muted ? 0 : 1;gameRuntime.v3?.ui.applyAudio();
+      if (gameRuntime.audioReady) gameRuntime.masterGain.gain.value = gameRuntime.muted ? 0 : 1;gameRuntime.v3?.ui.applyAudio();gameRuntime.v2?.persistSound();
     }
 
 function playTone(freq, duration = 0.08, type = "sine", volume = 0.25, target = gameRuntime.sfxGain, delay = 0) {
@@ -70,18 +72,9 @@ function playTone(freq, duration = 0.08, type = "sine", volume = 0.25, target = 
     }
 
 function startPersistentMusic() {
-      if (!gameRuntime.audioReady || gameRuntime.musicTimer) return;
-      let step=0,last=0,world='';
-      gameRuntime.musicTimer=setInterval(()=>{
-        if(!gameRuntime.audioReady||gameRuntime.muted||document.hidden||gameRuntime.state.running&&gameRuntime.state.paused)return;
-        const key=gameRuntime.state.currentMapKey||'forest',track=TRACKS[key]||TRACKS.forest,now=performance.now();
-        if(key!==world){world=key;step=0;last=0;}
-        if(now-last<track.tempo)return;last=now;
-        gameRuntime.playTone(frequency(track.lead[step%track.lead.length]),track.tempo/1000*.75,track.voice,.09,gameRuntime.musicGain);
-        if(step%2===0)gameRuntime.playTone(frequency(track.bass[Math.floor(step/2)%track.bass.length]),track.tempo/1000*1.4,'sine',.08,gameRuntime.musicGain);
-        if(step%4===3)gameRuntime.playTone(frequency(track.lead[step%track.lead.length]+12),.07,'triangle',.025,gameRuntime.musicGain,.03);
-        step++;
-      },40);
+      if(!gameRuntime.audioReady)return;
+      gameRuntime.musicTimer??=createBGM(gameRuntime.audioCtx,gameRuntime.musicGain,new URL('./assets/music/math-survival-bgm.mp3',import.meta.url));
+      gameRuntime.musicTimer.start();
     }
 
 function sfx(type) {

@@ -170,3 +170,5 @@ Windows 브라우저 검사는 설치된 Edge를 사용합니다. CI에서는 Pl
 이번 2.1 단계 0~2 요청은 **로컬 구현·검증만**이며 원격 게시·PR·배포는 수행하지 않습니다. 워크플로에는 서버 준비 대기와 새 회귀 검사를 연결했지만 원격 실행은 하지 않았습니다. 원본 `ysschool`에 원격 쓰기를 수행하지 않습니다.
 
 출처와 분석: [ORIGIN.md](docs/ORIGIN.md), [SOURCE_ANALYSIS.md](docs/SOURCE_ANALYSIS.md), [PHASE_REPORT.md](docs/PHASE_REPORT.md), [COMPARISON.md](docs/COMPARISON.md).
+
+배경음악: 사용자 제공 MP3를 첫 조작 후 재생하며, 기존 음량·음소거 설정과 오프라인 재생을 지원합니다. 연결 방식과 검증 범위는 [BGM 연결 보고서](docs/BGM_INTEGRATION.md)를 참고하세요.
