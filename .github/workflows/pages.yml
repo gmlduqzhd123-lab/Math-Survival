@@ -47,6 +47,7 @@ jobs:
           node tests/answer-keyboard.cjs
           node tests/menu-keyboard.cjs
           node tests/review-export.cjs
+          node tests/question-cue.cjs
           node tests/first-paint.cjs
           node tests/bgm-browser.cjs
       - run: npm run build
@@ -86,6 +87,7 @@ jobs:
           node tests/item-keyboard.cjs
           node tests/answer-keyboard.cjs
           node tests/menu-keyboard.cjs
+          node tests/question-cue.cjs
           node tests/bgm-browser.cjs
           npm run build
           PORT=4174 STATIC_ROOT="$PWD/dist" node scripts/serve.cjs > /tmp/math-survival-build.log 2>&1 &

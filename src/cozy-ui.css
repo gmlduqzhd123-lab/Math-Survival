@@ -73,3 +73,17 @@ body.simple-play.mobile-play #dashBtn{font-weight:750;color:#38381f;background:#
  #startPanel .titleRow{flex-wrap:wrap;row-gap:6px}
  #startPanel .topChips{order:-1;width:100%;justify-content:flex-end}
 }
+
+/* Larger question and feedback text, plus a visible cue when a new question appears. */
+#questionText{font-size:calc(clamp(22px,1.2vw + 17px,34px) * var(--reading-scale));font-weight:850;line-height:1.3}
+#explanation{font-size:calc(clamp(18px,.4vw + 15px,22px) * var(--reading-scale));line-height:1.45}
+#explanation[data-result=correct]{background:#e8f7ec;border:2px solid #6cbf86;color:#1f5a35}
+#explanation[data-result=wrong]{background:#fdecec;border:2px solid #e29a9a;color:#7a2a2a}
+#newQuestionBadge{display:none;margin:0 auto 4px;width:max-content;padding:2px 12px;border-radius:999px;background:#f5b31f;color:#3b2a00;font-weight:850;font-size:calc(clamp(13px,.3vw + 11px,16px) * var(--reading-scale))}
+#questionBox.newQuestion #newQuestionBadge{display:block}
+#questionBox.newQuestion{border-color:#f5b31f;animation:newQuestionPulse .35s ease-in-out 3}
+@keyframes newQuestionPulse{50%{transform:scale(1.03);box-shadow:0 0 0 4px #f5b31f88}}
+body.reduce-motion #questionBox.newQuestion{animation:none}
+@media(prefers-reduced-motion:reduce){#questionBox.newQuestion{animation:none}}
+.srOnly{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+@media(max-height:640px){#newQuestionBadge{margin-bottom:2px;padding:0 8px;line-height:1.25;font-size:calc(12px * var(--reading-scale))}}
