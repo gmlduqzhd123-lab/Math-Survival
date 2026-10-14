@@ -47,6 +47,7 @@ jobs:
           node tests/answer-keyboard.cjs
           node tests/menu-keyboard.cjs
           node tests/review-export.cjs
+          node tests/question-cue.cjs
       - run: npm run build
       - name: Built startup recovery and offline regression
         run: |
@@ -83,6 +84,7 @@ jobs:
           node tests/item-keyboard.cjs
           node tests/answer-keyboard.cjs
           node tests/menu-keyboard.cjs
+          node tests/question-cue.cjs
           npm run build
           PORT=4174 STATIC_ROOT="$PWD/dist" node scripts/serve.cjs > /tmp/math-survival-build.log 2>&1 &
           READY_URL=http://127.0.0.1:4174/Math-Survival/ node scripts/wait-ready.mjs
