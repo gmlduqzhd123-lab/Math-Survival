@@ -86,3 +86,4 @@ body.simple-play.mobile-play #dashBtn{font-weight:750;color:#38381f;background:#
 body.reduce-motion #questionBox.newQuestion{animation:none}
 @media(prefers-reduced-motion:reduce){#questionBox.newQuestion{animation:none}}
 .srOnly{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+@media(max-height:640px){#newQuestionBadge{margin-bottom:2px;padding:0 8px;line-height:1.25;font-size:calc(12px * var(--reading-scale))}}
