@@ -25,8 +25,11 @@ function stopDash(e) {
     }
 
 function initAudio() {
+      if(gameRuntime.audioReady&&gameRuntime.audioCtx.state==="closed"){
+        gameRuntime.audioReady=false;gameRuntime.musicTimer=null;
+      }
       if (gameRuntime.audioReady) {
-        if (gameRuntime.audioCtx.state === "suspended") gameRuntime.audioCtx.resume().catch(() => {});
+        if (gameRuntime.audioCtx.state !== "running") gameRuntime.audioCtx.resume().catch(() => {});
         gameRuntime.startPersistentMusic?.();
         return;
       }
@@ -43,7 +46,7 @@ function initAudio() {
       gameRuntime.sfxGain.connect(gameRuntime.masterGain);
       gameRuntime.masterGain.connect(gameRuntime.audioCtx.destination);
       gameRuntime.audioReady = true;
-      if(gameRuntime.audioCtx.state==="suspended")gameRuntime.audioCtx.resume().catch(()=>{});
+      if(gameRuntime.audioCtx.state!=="running")gameRuntime.audioCtx.resume().catch(()=>{});
       gameRuntime.v3?.ui.applyAudio();
       gameRuntime.startPersistentMusic();
     }

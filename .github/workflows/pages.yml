@@ -40,6 +40,8 @@ jobs:
           node tests/compact-home.cjs
           node tests/mobile-gestures.cjs
           node tests/mobile-refresh.cjs
+          node tests/mobile-lifecycle.cjs
+          for profile in small-phone phone-landscape tablet-portrait; do DEVICE_ENGINE=chromium DEVICE_PROFILE="$profile" node tests/mobile-tablet.cjs; done
           node tests/mobile-size.cjs
           node tests/world-browser.cjs
           node tests/world-playtest.cjs
@@ -90,6 +92,7 @@ jobs:
           node tests/question-cue.cjs
           node tests/bgm-browser.cjs
           npm run build
+          for profile in small-phone phone-landscape tablet-portrait; do DEVICE_ENGINE=webkit DEVICE_PROFILE="$profile" node tests/mobile-tablet.cjs; done
           PORT=4174 STATIC_ROOT="$PWD/dist" node scripts/serve.cjs > /tmp/math-survival-build.log 2>&1 &
           READY_URL=http://127.0.0.1:4174/Math-Survival/ node scripts/wait-ready.mjs
           node tests/startup.cjs

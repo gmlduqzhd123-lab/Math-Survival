@@ -1,5 +1,5 @@
 const {chromium}=require('playwright'),fs=require('fs'),assert=require('node:assert/strict');
-(async()=>{const browser=await chromium.launch({headless:true,channel:'msedge'});const results=await Promise.all([
+(async()=>{const browser=await chromium.launch({headless:true,...(!process.env.CI?{channel:'msedge'}:{})});const results=await Promise.all([
  {name:'desktop-abacus',weapon:'abacus',difficulty:'normal',width:1440,height:900},
  {name:'phone-star',weapon:'star',difficulty:'normal',width:390,height:844,touch:true},
  {name:'phone-dice-easy',weapon:'dice',difficulty:'easy',width:360,height:640,touch:true}
