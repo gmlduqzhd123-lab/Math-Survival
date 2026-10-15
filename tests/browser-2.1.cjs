@@ -1,5 +1,5 @@
 const {chromium}=require('playwright');const assert=require('node:assert/strict');const fs=require('node:fs');const path=require('node:path');
-const root='http://127.0.0.1:4173/Math-Survival/',out='docs/verification-2.1';fs.mkdirSync(out,{recursive:true});
+const root=process.env.GAME_URL||'http://127.0.0.1:4173/Math-Survival/',out='docs/verification-2.1';fs.mkdirSync(out,{recursive:true});
 const results=[],errors=[];const check=async(name,fn)=>{try{const detail=await fn();results.push({name,pass:true,detail});console.log('PASS '+name);}catch(e){results.push({name,pass:false,error:e.stack});console.log('FAIL '+name+' '+e.message);}};
 (async()=>{const browser=await chromium.launch({...(process.env.CI?{}:{channel:'msedge'}),headless:true});const context=await browser.newContext({acceptDownloads:true,viewport:{width:1440,height:900}});const page=await context.newPage();page.on('pageerror',e=>errors.push(e.message));
 const ready=async(p=page)=>{await p.goto(root+'?qa=1');await p.waitForFunction(()=>window.__game);await require('./home-settings.cjs')(p);};

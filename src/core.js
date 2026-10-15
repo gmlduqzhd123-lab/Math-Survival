@@ -240,6 +240,8 @@ function update(dt, now) {
       if (!gameRuntime.state.quizActive && now - gameRuntime.state.lastQuiz > gameRuntime.v2.quizInterval) {
         gameRuntime.state.lastQuiz = now;
         gameRuntime.spawnQuiz();
+        // A popup stops this update immediately, before attacks or pickups can open another modal.
+        if (gameRuntime.state.paused || !gameRuntime.state.running) return;
       }
 
       gameRuntime.shoot(now);

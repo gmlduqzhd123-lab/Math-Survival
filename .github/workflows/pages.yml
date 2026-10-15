@@ -41,6 +41,10 @@ jobs:
           node tests/mobile-gestures.cjs
           node tests/mobile-refresh.cjs
           node tests/mobile-lifecycle.cjs
+          node tests/response-timing-browser.cjs
+          node tests/growth-restore.cjs
+          node tests/modal-race.cjs
+          node tests/boss-route.cjs
           for profile in small-phone phone-landscape tablet-portrait; do DEVICE_ENGINE=chromium DEVICE_PROFILE="$profile" node tests/mobile-tablet.cjs; done
           node tests/mobile-size.cjs
           node tests/world-browser.cjs
@@ -59,6 +63,7 @@ jobs:
           READY_URL=http://127.0.0.1:4174/Math-Survival/ node scripts/wait-ready.mjs
           node tests/startup.cjs
           npm run test:build-browser
+          node tests/growth-offline.cjs
           GAME_URL=http://127.0.0.1:4174/Math-Survival/ BGM_OFFLINE=1 node tests/bgm-browser.cjs
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
@@ -92,6 +97,9 @@ jobs:
           node tests/question-cue.cjs
           node tests/bgm-browser.cjs
           npm run build
+          node tests/response-timing-browser.cjs
+          ENGINE=webkit node tests/growth-restore.cjs
+          node tests/modal-race.cjs
           for profile in small-phone phone-landscape tablet-portrait; do DEVICE_ENGINE=webkit DEVICE_PROFILE="$profile" node tests/mobile-tablet.cjs; done
           PORT=4174 STATIC_ROOT="$PWD/dist" node scripts/serve.cjs > /tmp/math-survival-build.log 2>&1 &
           READY_URL=http://127.0.0.1:4174/Math-Survival/ node scripts/wait-ready.mjs
