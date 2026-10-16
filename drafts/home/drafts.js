@@ -1,19 +1,23 @@
 // Home-screen design drafts. Injected only for comparison screenshots; not loaded by the game.
 // The grade buttons drive the existing #grade select, so game logic is unchanged.
 (function(){
- const theme=new URLSearchParams(location.search).get('homeTheme')||window.__homeTheme;
- if(theme!=='a'&&theme!=='b')return;
- document.body.classList.add('home-theme-'+theme);
+ const variant=new URLSearchParams(location.search).get('homeTheme')||window.__homeTheme;
+ if(!['a','b','b1','b2'].includes(variant))return;
+ // b1/b2 are title variants of draft B: they share its styles and add their own.
+ const theme=variant[0];
+ document.body.classList.add('home-theme-'+theme);if(variant!==theme)document.body.classList.add('home-theme-'+variant);
  const card=document.querySelector('#startPanel .card'),grade=document.getElementById('grade'),title=document.querySelector('#startPanel h1');
  const base=new URL('../../src/v3/assets/',document.currentScript?.src||location.href).href;
  // Title: keep the text, drop the globe emoji in favour of the character art.
- title.innerHTML='<span class="draftTitle">매쓰 서바이벌</span> <span class="edition">3.0</span>';
+ title.innerHTML=variant==='b1'?'<span class="draftTitle"><span>매쓰</span><span>서바이벌</span></span><span class="edition">3.0</span>':'<span class="draftTitle">매쓰 서바이벌</span> <span class="edition">3.0</span>';
  const pals=theme==='a'?['rabbit','cat','owl']:['fox','panda'];
  const art=document.createElement('div');art.className='draftCharacters';art.setAttribute('aria-hidden','true');
  // Inline each SVG without its gold "+" unlock badge, which reads oddly on a title screen.
  pals.forEach((n,i)=>{const slot=document.createElement('span');slot.className='draftPal';slot.style.setProperty('--i',i);art.append(slot);
   fetch(base+n+'.svg').then(r=>r.text()).then(svg=>{slot.innerHTML=svg.replace(/<circle cx="53" cy="51" r="8"[^>]*\/><path d="M49 51[^>]*\/>/,'');});});
  card.querySelector('.titleRow').after(art);
+ // B-1 flanks the first title line with the two characters instead of a separate row.
+ if(variant==='b1'){const line=title.querySelector('.draftTitle span'),slots=art.querySelectorAll('.draftPal');line.prepend(slots[0]);line.append(slots[1]);art.remove();}
  if(theme==='b'){const deco=document.createElement('div');deco.className='draftRoute';deco.setAttribute('aria-hidden','true');card.prepend(deco);}
  // Grade picker: six buttons instead of the dropdown.
  const names=['숲','사막','도서관','바다','시계','하늘'];

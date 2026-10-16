@@ -1,0 +1,24 @@
+/* Title variants of draft B. Loaded on top of theme-b.css. */
+/* Chips move to their own row so the title can use the full card width. */
+body.home-theme-b1 .titleRow,body.home-theme-b2 .titleRow{display:flex;flex-direction:column;align-items:stretch;gap:6px}
+body.home-theme-b1 .topChips,body.home-theme-b2 .topChips{order:-1;align-self:flex-end}
+
+/* B-1 큰 간판: centered two-line title, characters beside the first line. */
+body.home-theme-b1 #startPanel h1{position:relative;text-align:center;margin:0 auto;font-size:clamp(66px,19vw,112px);line-height:.92}
+body.home-theme-b1 .draftTitle{display:grid;justify-items:center;-webkit-text-stroke:4px #2f4a2e;text-shadow:0 6px 0 #2f4a2e,0 10px 0 #1f331e44}
+body.home-theme-b1 .draftTitle>span{display:flex;align-items:center;gap:.12em}
+body.home-theme-b1 .draftTitle>span:first-child{font-size:.82em;color:#ff9f43}
+body.home-theme-b1 .draftTitle .draftPal{width:.78em;height:.78em;-webkit-text-stroke:0;filter:drop-shadow(0 3px 0 #2f4a2e66)}
+body.home-theme-b1 #startPanel h1 .edition{position:absolute;right:2%;bottom:-.1em;font-size:.26em;transform:rotate(-8deg)}
+body.home-theme-b1 .subtitle{text-align:center;margin-top:10px}
+
+/* B-2 현수막: one-line title on a full-width wooden sign, characters peeking over it. */
+body.home-theme-b2 #startPanel h1{position:relative;box-sizing:border-box;width:100%;margin:56px 0 0;padding:.22em .3em .26em;text-align:center;font-size:clamp(46px,12.6vw,78px);line-height:1;white-space:nowrap;border:4px solid #2f4a2e;border-radius:18px;
+ background:repeating-linear-gradient(0deg,#0000 0 14px,#00000014 14px 16px),linear-gradient(#4f8a4c,#3b6e39);box-shadow:0 6px 0 #2f4a2e,inset 0 3px 0 #ffffff33}
+body.home-theme-b2 #startPanel h1::before,body.home-theme-b2 #startPanel h1::after{content:'';position:absolute;top:-30px;width:8px;height:30px;background:#7a5230;border:3px solid #2f4a2e;border-bottom:0;border-radius:4px 4px 0 0}
+body.home-theme-b2 #startPanel h1::before{left:14%}body.home-theme-b2 #startPanel h1::after{right:14%}
+body.home-theme-b2 .draftTitle{color:#ffe14d;-webkit-text-stroke:3px #1f331e;text-shadow:0 4px 0 #1f331e}
+body.home-theme-b2 #startPanel h1 .edition{position:absolute;right:-6px;top:-16px;font-size:.3em;transform:rotate(8deg)}
+body.home-theme-b2 #startPanel .card>.draftCharacters{justify-content:center;gap:40%;margin:-136px 0 82px;height:60px;z-index:2}
+@media(min-width:700px){body.home-theme-b2 #startPanel .card>.draftCharacters{margin:-196px 0 142px;justify-content:space-between;gap:0;padding:0 calc(14% - 26px)}}
+body.home-theme-b2 .subtitle{text-align:center;margin-top:20px}
