@@ -89,9 +89,9 @@ export function createV2(r,curriculum){
   quick.innerHTML='<p class="quickPrompt">학년을 고르고 바로 모험을 시작해요!</p><p id="quickSummary"></p>';
   root.before(quick);quick.prepend($('grade').closest('label'));
   // Grade cards are a tap shortcut; the native select stays the keyboard and screen-reader control.
-  const gradeLabel=$('grade').closest('label'),worlds=['숲','사막','도서관','바다','시계','하늘'],cards=document.createElement('div');
+  const gradeLabel=$('grade').closest('label'),cards=document.createElement('div');
   gradeLabel.classList.add('srOnly');cards.id='gradeCards';cards.setAttribute('aria-hidden','true');
-  cards.innerHTML=[...$('grade').options].map((o,i)=>'<button type="button" tabindex="-1" data-grade="'+o.value+'"><small>스테이지 '+o.value+'</small><b><i>'+o.value+'</i>학년</b><em>'+worlds[i]+'</em></button>').join('');
+  cards.innerHTML=[...$('grade').options].map(o=>'<button type="button" tabindex="-1" data-grade="'+o.value+'"><small>스테이지 '+o.value+'</small><b><i>'+o.value+'</i>학년</b></button>').join('');
   cards.addEventListener('click',e=>{const card=e.target.closest('button');if(!card)return;$('grade').value=card.dataset.grade;$('grade').dispatchEvent(new Event('change',{bubbles:true}));refreshSelectLabels();});
   $('grade').addEventListener('change',refreshSelectLabels);gradeLabel.after(cards);refreshSelectLabels();
   for(const id of ['startBtn','startupStatus','repairStartup','configErrors','growthError'])quick.append($(id));
