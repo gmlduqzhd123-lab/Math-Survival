@@ -33,7 +33,6 @@
 #gradeCards small{font-size:12px;font-weight:800;color:#7a5f30}
 #gradeCards b{font-family:'Do Hyeon','Jua',sans-serif;font-weight:400;font-size:26px;line-height:1.05}
 #gradeCards i{font-style:normal}
-#gradeCards em{font-style:normal;font-size:12px;font-weight:700;color:#3f5f3d}
 #gradeCards button:nth-child(1){background:#d8f0c4}#gradeCards button:nth-child(2){background:#fde7b0}#gradeCards button:nth-child(3){background:#e6dcfa}
 #gradeCards button:nth-child(4){background:#c9e9f6}#gradeCards button:nth-child(5){background:#f7d9c4}#gradeCards button:nth-child(6){background:#d6ecff}
 #gradeCards button.on{transform:translateY(2px);box-shadow:0 2px 0 #2f4a2e;outline:4px solid #ffd23f;outline-offset:1px}
@@ -60,7 +59,7 @@
  #startPanel .subtitle{margin-top:10px}
  #gradeCards{grid-template-columns:repeat(6,1fr);gap:5px}
  #gradeCards button{padding:4px 2px 5px;border-radius:12px;box-shadow:0 3px 0 #2f4a2e}
- #gradeCards small,#gradeCards em{display:none}
+ #gradeCards small{display:none}
  #gradeCards b{display:grid;justify-items:center;font-size:13px;line-height:1.1}#gradeCards b i{font-size:24px;line-height:1}
 }
 /* Landscape phones: the sign alone carries the title. */
