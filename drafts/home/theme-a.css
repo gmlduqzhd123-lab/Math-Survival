@@ -1,0 +1,44 @@
+/* Draft A: pastel sticker book. Rounded Dongle display type, mint/peach/lavender pastels. */
+@font-face{font-family:'Dongle Draft';src:url('fonts/Dongle-Bold-subset.woff2') format('woff2');font-weight:700;font-display:swap}
+body.home-theme-a #startPanel{background:#fdf6ec}
+body.home-theme-a #startPanel .card{position:relative;overflow:hidden;border:3px solid #fff;border-radius:32px;box-shadow:0 10px 0 #f3e3cf,0 18px 40px #c9a77a33;
+ background:
+  radial-gradient(circle at 12% 18%,#ffe1d6 0 34px,transparent 35px),
+  radial-gradient(circle at 92% 12%,#dff3ea 0 46px,transparent 47px),
+  radial-gradient(circle at 88% 78%,#ece4ff 0 40px,transparent 41px),
+  radial-gradient(#f2e6d6 1.2px,transparent 1.4px) 0 0/18px 18px,
+  #fffaf2}
+body.home-theme-a #startPanel .card::before,body.home-theme-a #startPanel .card::after{position:absolute;font-size:22px;opacity:.75;pointer-events:none}
+body.home-theme-a #startPanel .card::before{content:'⭐';top:118px;left:18px;transform:rotate(-12deg)}
+body.home-theme-a #startPanel .card::after{content:'☁️';top:150px;right:14px}
+body.home-theme-a .titleRow{align-items:center}
+body.home-theme-a #startPanel h1{font-family:'Dongle Draft','Jua',sans-serif;font-weight:700;font-size:clamp(54px,13vw,76px);line-height:.8;letter-spacing:0;margin:6px 0 0}
+body.home-theme-a .draftTitle{color:#ff7a8a;-webkit-text-stroke:2px #fff;paint-order:stroke fill;text-shadow:0 3px 0 #ffd0c2,0 6px 0 #f6b9ab}
+body.home-theme-a #startPanel h1 .edition{font-family:inherit;font-size:.42em;background:#b9e8d6;color:#1f6b55;border:2px solid #fff;border-radius:14px;padding:2px 10px;vertical-align:middle;transform:rotate(6deg);display:inline-block;box-shadow:0 3px 0 #8fd0b9}
+body.home-theme-a .installChip{background:#fff;border:2px solid #f3dccb;box-shadow:0 3px 0 #f3dccb;border-radius:999px}
+body.home-theme-a .subtitle{color:#7a6a5c;font-weight:600;margin-top:2px}
+body.home-theme-a .draftCharacters{display:flex;justify-content:center;gap:6px;margin:4px 0 2px}
+body.home-theme-a .draftPal{width:64px;height:64px;filter:drop-shadow(0 4px 0 #f0dcc6);animation:draftHop 2.4s ease-in-out infinite;animation-delay:calc(var(--i) * .3s)}
+@keyframes draftHop{0%,70%,100%{transform:translateY(0)}80%{transform:translateY(-8px)}}
+body.home-theme-a #quickStart > label{font-size:0;height:0;overflow:hidden;margin:0}
+body.home-theme-a .quickPrompt{order:-1;text-align:center;color:#5d4d40;font-weight:750;margin:4px 0 6px}
+body.home-theme-a #quickStart{display:flex;flex-direction:column}
+body.home-theme-a .draftGrades{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;margin:2px 0 6px}
+body.home-theme-a .draftGrades button{aspect-ratio:1;border-radius:50%;border:3px solid #fff;font-family:'Dongle Draft','Jua',sans-serif;display:grid;place-content:center;line-height:.7;color:#5d4d40;cursor:pointer;padding:0;box-shadow:0 4px 0 #0000001a;transition:transform .15s}
+body.home-theme-a .draftGrades button:nth-child(6n+1){background:#ffd9d2}body.home-theme-a .draftGrades button:nth-child(6n+2){background:#ffe8bd}body.home-theme-a .draftGrades button:nth-child(6n+3){background:#d7f2e3}
+body.home-theme-a .draftGrades button:nth-child(6n+4){background:#d6ecfb}body.home-theme-a .draftGrades button:nth-child(6n+5){background:#e6defc}body.home-theme-a .draftGrades button:nth-child(6n+6){background:#fbdcef}
+body.home-theme-a .draftGrades b{font-size:clamp(30px,8vw,40px)}body.home-theme-a .draftGrades small{font-size:clamp(17px,4.4vw,22px)}
+body.home-theme-a .draftGrades button.on{transform:translateY(-4px) scale(1.06);border-color:#ff7a8a;box-shadow:0 6px 0 #ff7a8a55}
+body.home-theme-a #quickSummary{text-align:center;color:#8a7867}
+body.home-theme-a #startPanel #quickStart #startBtn{min-height:0;font-family:'Dongle Draft','Jua',sans-serif;font-size:clamp(40px,10vw,52px);line-height:1;padding:10px;border-radius:999px;border:3px solid #fff;background:linear-gradient(#ff8f9c,#ff7183);color:#fff;text-shadow:0 2px 0 #d9506255;box-shadow:0 7px 0 #e25d70,0 12px 22px #ff718355}
+body.home-theme-a.reduce-motion .draftCharacters img{animation:none}
+@media(prefers-reduced-motion:reduce){body.home-theme-a .draftPal{animation:none}}
+body.home-theme-a .draftPal,body.home-theme-b .draftPal{display:block}body.home-theme-a .draftPal svg,body.home-theme-b .draftPal svg{width:100%;height:100%;display:block}
+body.home-theme-a .draftPal{width:64px;height:64px}
+body.home-theme-a.reduce-motion .draftPal{animation:none}@media(prefers-reduced-motion:reduce){body.home-theme-a .draftPal{animation:none}}
+/* Bottom menus: match the existing nth-of-type selectors so the draft wins. */
+body.home-theme-a #startPanel .card>details,body.home-theme-a #startPanel .card>details:nth-of-type(2),body.home-theme-a #startPanel .card>details:nth-of-type(3){border:2px solid #fff;border-radius:22px;box-shadow:0 4px 0 #0000000f}
+body.home-theme-a #startPanel .card>details:nth-of-type(1){background:#e8f6ef}
+body.home-theme-a #startPanel .card>details:nth-of-type(2){background:#fff1e3}
+body.home-theme-a #startPanel .card>details:nth-of-type(3){background:#f0ecff}
+body.home-theme-a #startPanel .card>details>summary{color:#4f4237;font-weight:800}

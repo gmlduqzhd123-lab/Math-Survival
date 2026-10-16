@@ -1,0 +1,43 @@
+/* Draft B: adventure map board. Bold Do Hyeon display type, paper map with a dotted route. */
+@font-face{font-family:'DoHyeon Draft';src:url('fonts/DoHyeon-subset.woff2') format('woff2');font-display:swap}
+body.home-theme-b #startPanel{background:#cfe9f2}
+body.home-theme-b #startPanel .card{position:relative;overflow:hidden;border:4px solid #3b5d3a;border-radius:26px;box-shadow:0 8px 0 #2c4a2b,0 18px 36px #1d3a4a44;
+ background:
+  radial-gradient(ellipse at 15% 85%,#bfe3a6 0 70px,transparent 71px),
+  radial-gradient(ellipse at 95% 95%,#9fd3e8 0 90px,transparent 91px),
+  repeating-linear-gradient(0deg,#0000 0 31px,#e7d7b011 31px 32px),
+  repeating-linear-gradient(90deg,#0000 0 31px,#e7d7b011 31px 32px),
+  #fff3d6}
+body.home-theme-b .draftRoute{position:absolute;inset:0;pointer-events:none;
+ background:
+  radial-gradient(circle,#d0663f 0 3px,transparent 3.5px) 0 0/22px 22px;
+ -webkit-mask:linear-gradient(115deg,transparent 46%,#000 47% 49%,transparent 50%);mask:linear-gradient(115deg,transparent 46%,#000 47% 49%,transparent 50%);opacity:.55}
+body.home-theme-b #startPanel .card > *{position:relative}
+body.home-theme-b #startPanel h1{font-family:'DoHyeon Draft','Jua',sans-serif;font-weight:400;font-size:clamp(40px,10.5vw,58px);line-height:1;margin:4px 0 0;letter-spacing:0}
+body.home-theme-b .draftTitle{color:#ffd23f;-webkit-text-stroke:3px #2f4a2e;paint-order:stroke fill;text-shadow:0 4px 0 #2f4a2e,0 7px 0 #1f331e55}
+body.home-theme-b #startPanel h1 .edition{font-family:inherit;font-size:.45em;background:#e2533c;color:#fff;border:3px solid #2f4a2e;border-radius:10px;padding:0 8px;vertical-align:middle;box-shadow:0 3px 0 #2f4a2e}
+body.home-theme-b .installChip{background:#fffaf0;border:3px solid #2f4a2e;box-shadow:0 3px 0 #2f4a2e;border-radius:12px;color:#2f4a2e}
+body.home-theme-b .subtitle{color:#3d5a3c;font-weight:700}
+body.home-theme-b .draftCharacters{display:flex;justify-content:flex-end;gap:2px;margin:-58px 0 0;height:60px;pointer-events:none}
+body.home-theme-b .draftPal{width:58px;height:58px;filter:drop-shadow(0 3px 0 #2f4a2e66)}
+body.home-theme-b #quickStart > label{font-size:0;height:0;overflow:hidden;margin:0}
+body.home-theme-b #quickStart{display:flex;flex-direction:column}
+body.home-theme-b .quickPrompt{order:-1;font-family:'DoHyeon Draft','Jua',sans-serif;font-weight:400;font-size:22px;color:#2f4a2e;margin:10px 0 6px}
+body.home-theme-b .draftGrades{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:0 0 6px}
+body.home-theme-b .draftGrades button{display:grid;justify-items:center;gap:0;padding:6px 4px 8px;border-radius:16px;border:3px solid #2f4a2e;background:#fffaf0;color:#2f4a2e;cursor:pointer;box-shadow:0 4px 0 #2f4a2e;transition:transform .12s}
+body.home-theme-b .draftGrades small{font-size:11px;font-weight:800;color:#8a6d3b;letter-spacing:.02em}
+body.home-theme-b .draftGrades b{font-family:'DoHyeon Draft','Jua',sans-serif;font-weight:400;font-size:26px;line-height:1.05}
+body.home-theme-b .draftGrades em{font-style:normal;font-size:12px;font-weight:700;color:#4c6d4a}
+body.home-theme-b .draftGrades button:nth-child(1){background:#d8f0c4}body.home-theme-b .draftGrades button:nth-child(2){background:#fde7b0}body.home-theme-b .draftGrades button:nth-child(3){background:#e6dcfa}
+body.home-theme-b .draftGrades button:nth-child(4){background:#c9e9f6}body.home-theme-b .draftGrades button:nth-child(5){background:#f7d9c4}body.home-theme-b .draftGrades button:nth-child(6){background:#d6ecff}
+body.home-theme-b .draftGrades button.on{transform:translateY(2px);box-shadow:0 2px 0 #2f4a2e;outline:4px solid #ffd23f;outline-offset:1px}
+body.home-theme-b #quickSummary{color:#4c6d4a;font-weight:600}
+body.home-theme-b #startPanel #quickStart #startBtn{min-height:0;font-family:'DoHyeon Draft','Jua',sans-serif;font-weight:400;font-size:clamp(30px,8vw,38px);padding:12px;border-radius:18px;border:4px solid #2f4a2e;background:linear-gradient(#5cc46b,#3a9d4b);color:#fff;-webkit-text-stroke:1px #2f4a2e;text-shadow:0 3px 0 #2f4a2e;box-shadow:0 8px 0 #2f4a2e,0 14px 24px #2f4a2e44}
+body.home-theme-b .draftPal{width:58px;height:58px}
+/* Bottom menus: match the existing nth-of-type selectors so the draft wins. */
+body.home-theme-b #startPanel .card>details,body.home-theme-b #startPanel .card>details:nth-of-type(2),body.home-theme-b #startPanel .card>details:nth-of-type(3){border:3px solid #2f4a2e;border-radius:16px;box-shadow:0 4px 0 #2f4a2e}
+body.home-theme-b #startPanel .card>details:nth-of-type(1){background:#e5f4d8}
+body.home-theme-b #startPanel .card>details:nth-of-type(2){background:#fff0c8}
+body.home-theme-b #startPanel .card>details:nth-of-type(3){background:#dcefff}
+body.home-theme-b #startPanel .card>details>summary{color:#2f4a2e;font-weight:800}
+@media(min-width:700px){body.home-theme-b .draftCharacters{justify-content:flex-start;margin:-62px 0 0 358px}}
