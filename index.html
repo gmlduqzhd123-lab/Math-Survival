@@ -37,6 +37,8 @@
   <link rel="stylesheet" href="./src/typography.css">
   <link rel="stylesheet" href="./src/play-ui.css">
   <link rel="stylesheet" href="./src/cozy-ui.css">
+  <link rel="preload" href="./src/fonts/DoHyeon-Title.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="./src/home.css">
 <style>
 body.app-booting #wrap{visibility:hidden}
 #loadingPanel{position:fixed;inset:0;z-index:200;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:24px;text-align:center}
@@ -82,7 +84,7 @@ body.app-booting #wrap{visibility:hidden}
 
     <section id="startPanel" class="panel">
       <div class="card">
-        <div class="titleRow"><h1>🌍 매쓰 서바이벌 <span class="edition">3.0</span></h1><span class="topChips"><button type="button" class="installChip" data-ys-install>📲 앱 설치</button><button type="button" class="installChip qrChip" data-qr aria-label="QR 코드로 접속">📱 QR</button></span></div>
+        <div class="titleRow"><h1><span class="homeTitle">매쓰 서바이벌</span> <span class="edition">3.0</span><span class="homePals" aria-hidden="true"><img src="./src/assets/home/fox.svg" alt=""><img src="./src/assets/home/panda.svg" alt=""></span></h1><span class="topChips"><button type="button" class="installChip" data-ys-install>📲 앱 설치</button><button type="button" class="installChip qrChip" data-qr aria-label="QR 코드로 접속">📱 QR</button></span></div>
         <div class="subtitle">
           수학으로 강해지는 나만의 모험. 정답 구슬을 찾고, 귀여운 친구와 함께 여섯 개의 월드를 탐험하세요.
         </div>
@@ -145,7 +147,7 @@ body.app-booting #wrap{visibility:hidden}
             <option value="library">별빛 도서관</option>
           </select>
 
-          <button id="startBtn" disabled>게임 시작</button>
+          <button id="startBtn" disabled>▶ 모험 시작</button>
           <p id="startupStatus" role="status">게임을 준비하고 있어요.</p><button id="repairStartup" hidden>새로 불러오기 · 기록 유지</button>
           <button id="muteBtn">🔊 소리 켜짐</button>
         </div>

@@ -18,7 +18,7 @@ import {spriteMarkup,CHARACTER_GEAR,WEAPON_SPRITES} from './sprites.js';
 const WEAPON_CATALOG={...WEAPONS,...Object.fromEntries(Object.entries(NEW_WEAPONS).map(([id,w])=>[id,{...w,evolution:w.name+' · 완전 진화'}]))};
 const $=id=>document.getElementById(id);
 const esc=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-function refreshSelectLabels(){for(const select of document.querySelectorAll('#startPanel select')){const label=select.parentElement.querySelector('.selectValue');if(label)label.textContent=select.selectedOptions[0]?.textContent||'선택하세요';}}
+function refreshSelectLabels(){for(const select of document.querySelectorAll('#startPanel select')){const label=select.parentElement.querySelector('.selectValue');if(label)label.textContent=select.selectedOptions[0]?.textContent||'선택하세요';}const grade=document.getElementById('grade')?.value;for(const card of document.querySelectorAll('#gradeCards button'))card.classList.toggle('on',card.dataset.grade===grade);}
 function decorateSelects(){const root=$('startPanel');for(const select of root.querySelectorAll('select')){if(select.parentElement.classList.contains('selectField'))continue;const field=document.createElement('div'),value=document.createElement('span');field.className='selectField';value.className='selectValue';value.setAttribute('aria-hidden','true');select.before(field);field.append(select,value);}refreshSelectLabels();root.addEventListener('change',refreshSelectLabels);}
 export function createV2(r,curriculum){
  const settings={reduced:matchMedia('(prefers-reduced-motion: reduce)').matches,low:false,font:1};
@@ -88,6 +88,12 @@ export function createV2(r,curriculum){
   quick.setAttribute('aria-label','바로 시작');
   quick.innerHTML='<p class="quickPrompt">학년을 고르고 바로 모험을 시작해요!</p><p id="quickSummary"></p>';
   root.before(quick);quick.prepend($('grade').closest('label'));
+  // Grade cards are a tap shortcut; the native select stays the keyboard and screen-reader control.
+  const gradeLabel=$('grade').closest('label'),worlds=['숲','사막','도서관','바다','시계','하늘'],cards=document.createElement('div');
+  gradeLabel.classList.add('srOnly');cards.id='gradeCards';cards.setAttribute('aria-hidden','true');
+  cards.innerHTML=[...$('grade').options].map((o,i)=>'<button type="button" tabindex="-1" data-grade="'+o.value+'"><small>스테이지 '+o.value+'</small><b><i>'+o.value+'</i>학년</b><em>'+worlds[i]+'</em></button>').join('');
+  cards.addEventListener('click',e=>{const card=e.target.closest('button');if(!card)return;$('grade').value=card.dataset.grade;$('grade').dispatchEvent(new Event('change',{bubbles:true}));refreshSelectLabels();});
+  $('grade').addEventListener('change',refreshSelectLabels);gradeLabel.after(cards);refreshSelectLabels();
   for(const id of ['startBtn','startupStatus','repairStartup','configErrors','growthError'])quick.append($(id));
   const settingsPanel=document.createElement('details');settingsPanel.id='homeSettings';
   settingsPanel.innerHTML='<summary>⚙️ 설정 바꾸기</summary>';root.before(settingsPanel);
