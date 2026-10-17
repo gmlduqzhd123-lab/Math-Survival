@@ -15,6 +15,14 @@ const profiles=[['desktop',1910,1000,34,22],['tablet',768,1024,25,18],['phone',3
    assert(shown.question>=minQuestion-.5,`${engine} ${name} question font ${shown.question}`);
    assert.equal(shown.badge,'block');assert.equal(shown.live,'polite');assert.equal(shown.announce,'새 문제! '+shown.text);
    assert(shown.scroll<=width,`${engine} ${name} horizontal overflow ${shown.scroll}`);
+   // The cue eases in once; it must not pulse or flash.
+   assert.equal(await p.evaluate(()=>getComputedStyle(document.getElementById('questionBox')).animationIterationCount),'1');
+   // Showing or hiding the question bar resizes the canvas; it must be repainted before the browser shows it,
+   // otherwise the whole field flashes blank for a frame.
+   await p.evaluate(()=>{const c=document.getElementById('game');window.__blank=0;new ResizeObserver(()=>{if(!c.getContext('2d').getImageData(c.width>>1,c.height>>1,1,1).data[3])__blank++;}).observe(c);});
+   await p.evaluate(()=>new Promise(done=>requestAnimationFrame(()=>{const g=__game;g.resolveAnswer(g.answerOrbs.find(o=>o.correct));done();})));await p.waitForTimeout(300);
+   await p.evaluate(()=>new Promise(done=>requestAnimationFrame(()=>{const g=__game;g.state.quizActive=false;g.spawnQuiz();done();})));await p.waitForTimeout(300);
+   assert.equal(await p.evaluate(()=>__blank),0,`${engine} ${name} canvas showed a blank frame`);
    // Wrong answers get their own feedback styling at the larger size.
    await p.evaluate(()=>{const g=__game;g.resolveAnswer(g.answerOrbs.find(o=>!o.correct));});
    const feedback=await p.evaluate(()=>{const e=document.getElementById('explanation');return {font:parseFloat(getComputedStyle(e).fontSize),result:e.dataset.result,text:e.textContent};});

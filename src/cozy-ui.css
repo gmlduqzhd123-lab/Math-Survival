@@ -81,8 +81,9 @@ body.simple-play.mobile-play #dashBtn{font-weight:750;color:#38381f;background:#
 #explanation[data-result=wrong]{background:#fdecec;border:2px solid #e29a9a;color:#7a2a2a}
 #newQuestionBadge{display:none;margin:0 auto 4px;width:max-content;padding:2px 12px;border-radius:999px;background:#f5b31f;color:#3b2a00;font-weight:850;font-size:calc(clamp(13px,.3vw + 11px,16px) * var(--reading-scale))}
 #questionBox.newQuestion #newQuestionBadge{display:block}
-#questionBox.newQuestion{border-color:#f5b31f;animation:newQuestionPulse .35s ease-in-out 3}
-@keyframes newQuestionPulse{50%{transform:scale(1.03);box-shadow:0 0 0 4px #f5b31f88}}
+/* No flashing: the box eases in once, then keeps a steady highlighted border while the badge shows. */
+#questionBox.newQuestion{border-color:#f5b31f;box-shadow:0 0 0 3px #f5b31f66;animation:newQuestionIn .4s ease-out 1}
+@keyframes newQuestionIn{from{opacity:.4;transform:translateY(-6px)}to{opacity:1;transform:none}}
 body.reduce-motion #questionBox.newQuestion{animation:none}
 @media(prefers-reduced-motion:reduce){#questionBox.newQuestion{animation:none}}
 .srOnly{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
