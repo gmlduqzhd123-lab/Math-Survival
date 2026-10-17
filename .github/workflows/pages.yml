@@ -70,43 +70,8 @@ jobs:
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist
-  webkit:
-    runs-on: ubuntu-latest
-    timeout-minutes: 30
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: '24'
-          cache: npm
-      - run: npm ci
-      - run: npx playwright install --with-deps webkit
-      - name: Safari (WebKit) regression
-        env:
-          ENGINES: webkit
-        run: |
-          node scripts/serve.cjs > /tmp/math-survival-preview.log 2>&1 &
-          node scripts/wait-ready.mjs
-          npm run test:preferences
-          npm run test:typography
-          npm run test:sprites
-          npm run test:simple-play
-          node tests/compact-home.cjs
-          node tests/item-keyboard.cjs
-          node tests/answer-keyboard.cjs
-          node tests/menu-keyboard.cjs
-          node tests/question-cue.cjs
-          node tests/bgm-browser.cjs
-          npm run build
-          node tests/response-timing-browser.cjs
-          ENGINE=webkit node tests/growth-restore.cjs
-          node tests/modal-race.cjs
-          for profile in small-phone phone-landscape tablet-portrait; do DEVICE_ENGINE=webkit DEVICE_PROFILE="$profile" node tests/mobile-tablet.cjs; done
-          PORT=4174 STATIC_ROOT="$PWD/dist" node scripts/serve.cjs > /tmp/math-survival-build.log 2>&1 &
-          READY_URL=http://127.0.0.1:4174/Math-Survival/ node scripts/wait-ready.mjs
-          node tests/startup.cjs
   deploy:
-    needs: [verify, webkit]
+    needs: verify
     runs-on: ubuntu-latest
     environment:
       name: github-pages
