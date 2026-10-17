@@ -6,7 +6,7 @@ export function createSurvival(r,settings){
  const budget=()=>settings.low||tier==='low'?90:220;
  function reset(seed){rng=seed==null?Math.random:seeded(seed);enemies.clear();shots.clear();bullets=[];pending=[];samples=[];lastWave=0;lastMerge=0;tier='normal';}
  function spawn(species,point,small=false){if(r.state.mode==='explore'||r.enemies.length>=budget())return null;const w=waveFor(r.state.time,r.state.difficulty),keys=Object.keys(MONSTERS);species??=keys[Math.floor(rng()*w.types)];const range=spawnRange(r.canvas.width,r.canvas.height),spec=MONSTERS[species],pos=point||r.randomPointAroundPlayer(range.near,range.far),elite=!small&&rng()<w.eliteChance,difficulty={easy:.7,normal:1,hard:1.25}[r.state.difficulty];const hp=spec.hp*w.health*(elite?2.1:small?.4:1);
- const e=enemies.take({...pos,species,name:spec.name,r:small?10:spec.r,hp,maxHp:hp,speed:spec.speed*difficulty*1.06*(small?1.2:1),damage:spec.damage*difficulty,elite,tiny:small,wobble:Math.random()*10,nextAction:r.gameNow()+1400});if(e)r.enemies.push(e);return e;
+ const e=enemies.take({...pos,species,name:spec.name,r:small?10:spec.r,hp,maxHp:hp,speed:spec.speed*difficulty*1.2*(small?1.2:1),damage:spec.damage*difficulty,elite,tiny:small,wobble:Math.random()*10,nextAction:r.gameNow()+1400});if(e)r.enemies.push(e);return e;
  }
  function move(e,dt,now){if(now<r.state.freezeUntil)return;const visible=r.isNearScreen(e.x,e.y,250);if(!visible&&now-(e.lastAI||0)<100)return;const scale=visible?1:Math.min(6,(now-(e.lastAI||now-100))/(1000/60));e.lastAI=now;const action=advanceMonster(e,r.v3?.modes.variant==='defense'?{x:r.state.worldW/2,y:r.state.worldH/2}:r.player,now,scale*(now<(e.slowUntil||0)?.45:1));
  e.x=r.clamp(e.x,e.r,r.state.worldW-e.r);e.y=r.clamp(e.y,e.r,r.state.worldH-e.r);

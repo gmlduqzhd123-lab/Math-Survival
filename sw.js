@@ -9,6 +9,7 @@ const APP_SHELL = [
     './src/bgm.js',
     './src/assets/music/math-survival-bgm.mp3',
     './src/v3/world.js',
+    './src/v3/terrain.js',
     './src/cozy-ui.css',
     './src/home.css',
     './src/fonts/DoHyeon-Title.woff2',
