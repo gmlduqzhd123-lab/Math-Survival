@@ -10,7 +10,7 @@ function stopJoystick(e) {
     }
 
 function updateJoystick(clientX, clientY) {
-      const maxDist = 40;
+      const maxDist = Math.min(40, gameRuntime.joystickZone.offsetWidth / 2 || 40);
       let dx = clientX - gameRuntime.joystickCenter.x;
       let dy = clientY - gameRuntime.joystickCenter.y;
       const dist = Math.sqrt(dx * dx + dy * dy);

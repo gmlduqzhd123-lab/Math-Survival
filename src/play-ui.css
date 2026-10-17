@@ -23,19 +23,19 @@ body:not(.game-running) #joystickZone,body:not(.game-running) #dashBtn,body:not(
 @media(orientation:landscape) and (max-height:550px){body.simple-play:not(.learning-visible) #wrap{grid-template-areas:'header' 'field' 'touch';grid-template-columns:minmax(0,1fr);grid-template-rows:auto minmax(0,1fr) 48px}}
 /* A small entry screen; the original controls remain available in disclosures. */
 body.simple-play.mobile-play #wrap{grid-template-areas:'header' 'learning' 'field' 'answers';grid-template-rows:auto auto minmax(180px,1fr) auto;gap:4px;padding:4px}
-body.simple-play.mobile-play #touchControls{position:absolute;left:8px;right:8px;bottom:8px;grid-area:auto;height:88px;grid-template-columns:88px minmax(0,1fr) 88px;z-index:8;pointer-events:none}
-body.simple-play.mobile-play #joystickZone,body.simple-play.mobile-play #dashBtn{width:88px;height:88px;pointer-events:auto;box-shadow:0 2px 8px #08251a66}
+body.simple-play.mobile-play #touchControls{position:absolute;left:8px;right:8px;bottom:8px;grid-area:auto;height:68px;grid-template-columns:68px minmax(0,1fr) 68px;z-index:8;pointer-events:none}
+body.simple-play.mobile-play #joystickZone,body.simple-play.mobile-play #dashBtn{width:68px;height:68px;pointer-events:auto;box-shadow:0 2px 8px #08251a66}
 body.simple-play.mobile-play #joystickZone{background:#cee4ccdd;border-color:#75a597}
-body.simple-play.mobile-play #joystickStick{width:40px;height:40px;margin-left:-20px;margin-top:-20px}
-body.simple-play.mobile-play #dashBtn{font-size:19px}
+body.simple-play.mobile-play #joystickStick{width:30px;height:30px;margin-left:-15px;margin-top:-15px}
+body.simple-play.mobile-play #dashBtn{font-size:16px}
 body.simple-play.mobile-play #skillBtn{pointer-events:auto;max-width:140px;background:#d8ead4ee}
-body.simple-play.mobile-play #toast{bottom:108px}
+body.simple-play.mobile-play #toast{bottom:88px}
 @media(orientation:landscape) and (max-height:550px){
  body.simple-play.mobile-play #wrap{grid-template-areas:'header header' 'field learning' 'field answers';grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);grid-template-rows:auto minmax(0,1fr) auto}
  body.simple-play.mobile-play:not(.learning-visible) #wrap{grid-template-areas:'header' 'field';grid-template-columns:minmax(0,1fr);grid-template-rows:auto minmax(0,1fr)}
- body.simple-play.mobile-play #touchControls{height:72px;grid-template-columns:72px minmax(0,1fr) 72px}
- body.simple-play.mobile-play #joystickZone,body.simple-play.mobile-play #dashBtn{width:72px;height:72px}
- body.simple-play.mobile-play #toast{bottom:92px}
+ body.simple-play.mobile-play #touchControls{height:60px;grid-template-columns:60px minmax(0,1fr) 60px}
+ body.simple-play.mobile-play #joystickZone,body.simple-play.mobile-play #dashBtn{width:60px;height:60px}
+ body.simple-play.mobile-play #toast{bottom:80px}
 }
 #startPanel .card{width:min(680px,100%)}
 #startPanel .titleRow{gap:8px;flex-wrap:wrap}

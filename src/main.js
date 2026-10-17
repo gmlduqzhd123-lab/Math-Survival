@@ -214,6 +214,7 @@ const gameNow = (...args) => systems.gameNow(...args);
     const drawPet = (...args) => systems.drawPet(...args);
 
 
+    const miniMapRect = (...args) => systems.miniMapRect(...args);
     const drawMiniMap = (...args) => systems.drawMiniMap(...args);
 
     const draw = (...args) => systems.draw(...args);
@@ -312,6 +313,7 @@ get drawBackground(){return drawBackground;},
 get drawCutePlayer(){return drawCutePlayer;},
 get drawEnemy(){return drawEnemy;},
 get drawPet(){return drawPet;},
+get miniMapRect(){return miniMapRect;},
 get drawMiniMap(){return drawMiniMap;},
 get draw(){return draw;},
 get giveChestReward(){return giveChestReward;},
