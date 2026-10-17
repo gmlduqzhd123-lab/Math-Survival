@@ -317,7 +317,10 @@ function drawEnemy(e, now) {
       const sx = gameRuntime.worldToScreenX(e.x), sy = gameRuntime.worldToScreenY(e.y);
       if (sx < -60 || sx > gameRuntime.canvas.width + 60 || sy < -60 || sy > gameRuntime.canvas.height + 60) return;
 
-      if(e.species&&drawAnimation(gameRuntime.ctx,'enemy-'+e.species,sx,sy,e.r*2.7,now,{reduced:gameRuntime.v2.settings.reduced})){const ctx=gameRuntime.ctx;if(e.elite){ctx.strokeStyle='#f9ce66';ctx.lineWidth=3;ctx.beginPath();ctx.arc(sx,sy,e.r+5,0,Math.PI*2);ctx.stroke();}if(e.windupUntil>now){ctx.strokeStyle='#fde047';ctx.beginPath();ctx.moveTo(sx,sy);ctx.lineTo(sx+Math.cos(e.aim)*140,sy+Math.sin(e.aim)*140);ctx.stroke();}ctx.fillStyle='#352d49';ctx.fillRect(sx-e.r,sy-e.r-12,e.r*2,4);ctx.fillStyle='#b4ebac';ctx.fillRect(sx-e.r,sy-e.r-12,e.r*2*Math.max(0,e.hp/e.maxHp),4);return;}
+      // Monsters get a ground shadow, a dark outline and a red health bar: things to avoid never look like floor art or pickups.
+      const size=e.r*2.7;
+      if(e.species){gameRuntime.ctx.fillStyle='rgba(8,12,10,.42)';gameRuntime.ctx.beginPath();gameRuntime.ctx.ellipse(sx,sy+size*.4,size*.4,size*.11,0,0,Math.PI*2);gameRuntime.ctx.fill();}
+      if(e.species&&drawAnimation(gameRuntime.ctx,'enemy-'+e.species,sx,sy,size,now,{reduced:gameRuntime.v2.settings.reduced,outline:'#1b1020'})){const ctx=gameRuntime.ctx;if(e.elite){ctx.strokeStyle='#f9ce66';ctx.lineWidth=3;ctx.beginPath();ctx.arc(sx,sy,e.r+5,0,Math.PI*2);ctx.stroke();}if(e.windupUntil>now){ctx.strokeStyle='#fde047';ctx.beginPath();ctx.moveTo(sx,sy);ctx.lineTo(sx+Math.cos(e.aim)*140,sy+Math.sin(e.aim)*140);ctx.stroke();}drawEnemyBar(e,sx,sy-size*.5-6);return;}
       gameRuntime.ctx.save();
       gameRuntime.ctx.translate(sx, sy);
       if (now < gameRuntime.state.freezeUntil) gameRuntime.ctx.globalAlpha = 0.72;
@@ -329,10 +332,18 @@ function drawEnemy(e, now) {
         gameRuntime.ctx.fill();
       }
 
+      gameRuntime.ctx.fillStyle = "rgba(8,12,10,.42)";
+      gameRuntime.ctx.beginPath();
+      gameRuntime.ctx.ellipse(0, e.r * 0.95, e.r * 1.05, e.r * 0.3, 0, 0, Math.PI * 2);
+      gameRuntime.ctx.fill();
+
       gameRuntime.ctx.fillStyle = e.species&&!e.elite ? MONSTERS[e.species].color : e.boss ? gameRuntime.state.map.accent : e.elite ? "#ec725f" : e.tiny ? "#45bba0" : gameRuntime.state.map.accent2;
       gameRuntime.ctx.beginPath();
       gameRuntime.ctx.arc(0, 0, e.r, 0, Math.PI * 2);
       gameRuntime.ctx.fill();
+      gameRuntime.ctx.strokeStyle = "#1b1020";
+      gameRuntime.ctx.lineWidth = 3;
+      gameRuntime.ctx.stroke();
 
       gameRuntime.ctx.fillStyle = e.elite ? "#fecaca" : "#c4b5fd";
       gameRuntime.ctx.beginPath();
@@ -383,11 +394,17 @@ function drawEnemy(e, now) {
       gameRuntime.ctx.restore();
 
       if(e.species&&MONSTERS[e.species]){gameRuntime.ctx.save();gameRuntime.ctx.font='14px Segoe UI Emoji';gameRuntime.ctx.textAlign='center';gameRuntime.ctx.fillText(MONSTERS[e.species].icon,sx,sy-e.r-5);if(e.windupUntil>now){gameRuntime.ctx.strokeStyle='#fde047';gameRuntime.ctx.lineWidth=3;gameRuntime.ctx.beginPath();gameRuntime.ctx.moveTo(sx,sy);gameRuntime.ctx.lineTo(sx+Math.cos(e.aim)*140,sy+Math.sin(e.aim)*140);gameRuntime.ctx.stroke();}gameRuntime.ctx.restore();}
-      const w = e.r * 2;
-      gameRuntime.ctx.fillStyle = "rgba(0,0,0,.35)";
-      gameRuntime.ctx.fillRect(sx - e.r, sy - e.r - 10, w, 5);
-      gameRuntime.ctx.fillStyle = e.elite ? "#fb7185" : e.tiny ? "#34d399" : "#a78bfa";
-      gameRuntime.ctx.fillRect(sx - e.r, sy - e.r - 10, w * gameRuntime.clamp(e.hp / e.maxHp, 0, 1), 5);
+      drawEnemyBar(e, sx, sy - e.r - 8);
+    }
+
+function drawEnemyBar(e, sx, y) {
+      const ctx = gameRuntime.ctx, w = Math.max(26, e.r * 2 + 4), x = sx - w / 2;
+      ctx.fillStyle = "#1b1020";
+      ctx.fillRect(x - 2, y - 2, w + 4, 9);
+      ctx.fillStyle = "#5b2a33";
+      ctx.fillRect(x, y, w, 5);
+      ctx.fillStyle = e.elite ? "#ff8a3d" : "#ff4d5e";
+      ctx.fillRect(x, y, w * gameRuntime.clamp(e.hp / e.maxHp, 0, 1), 5);
     }
 
 function drawPet(now) {
@@ -471,45 +488,76 @@ function draw() {
       gameRuntime.drawBackground(now);
       gameRuntime.v2.draw(now);
 
+      // Pickups hop, cast a small shadow, wear a bright rim and twinkle, so they read as "grab me" next to
+      // flat floor decorations and outlined monsters.
+      const still = gameRuntime.v2.settings.reduced;
+      const twinkle = (ctx, x, y, size, phase) => {
+        const k = still ? 0.7 : Math.max(0, Math.sin(phase));
+        if (k < 0.15) return;
+        ctx.fillStyle = `rgba(255,255,240,${0.95 * k})`;
+        ctx.beginPath();
+        for (let i = 0; i < 8; i++) {
+          const rad = i % 2 ? size * 0.22 : size * k;
+          ctx.lineTo(x + Math.cos(i * Math.PI / 4 - Math.PI / 2) * rad, y + Math.sin(i * Math.PI / 4 - Math.PI / 2) * rad);
+        }
+        ctx.closePath();
+        ctx.fill();
+      };
       for (const drop of gameRuntime.expDrops) {
         if (!gameRuntime.isNearScreen(drop.x, drop.y, 70)) continue;
-        const sx = gameRuntime.worldToScreenX(drop.x), sy = gameRuntime.worldToScreenY(drop.y);
-        const pulse = Math.sin(drop.pulse) * 3.5;
+        const sx = gameRuntime.worldToScreenX(drop.x), gy = gameRuntime.worldToScreenY(drop.y);
+        const hop = still ? 0 : Math.abs(Math.sin(drop.pulse * 0.9)) * 6;
+        const sy = gy - hop;
+        const r = drop.r * 0.7;
         const fade = drop.life < 2500 ? 0.48 + Math.sin(now / 75) * 0.32 : 1;
+        const ctx = gameRuntime.ctx;
 
-        gameRuntime.ctx.save();
-        gameRuntime.ctx.globalAlpha = fade;
-        gameRuntime.ctx.fillStyle = "rgba(255,255,255,.18)";
-        gameRuntime.ctx.beginPath();
+        ctx.save();
+        ctx.globalAlpha = fade;
+        ctx.fillStyle = "rgba(0,0,0,.28)";
+        ctx.beginPath();
+        ctx.ellipse(sx, gy + r * 0.85, r * (0.85 - hop * 0.03), r * 0.28, 0, 0, Math.PI * 2);
+        ctx.fill();
+
+        ctx.fillStyle = "rgba(255,244,170,.30)";
+        ctx.beginPath();
         // Experience gems stay small and unlabeled so answer orbs remain the clearest thing on screen.
-        gameRuntime.ctx.arc(sx, sy, drop.r * 0.7 + 4 + pulse * 0.5, 0, Math.PI * 2);
-        gameRuntime.ctx.fill();
+        ctx.arc(sx, sy, r + 6, 0, Math.PI * 2);
+        ctx.fill();
 
-        const grad = gameRuntime.ctx.createRadialGradient(sx - 4, sy - 5, 2, sx, sy, drop.r + 5);
+        const grad = ctx.createRadialGradient(sx - 3, sy - 4, 1, sx, sy, r);
         grad.addColorStop(0, "#ffffff");
-        grad.addColorStop(0.42, drop.color);
-        grad.addColorStop(1, "rgba(34,197,94,.08)");
-        gameRuntime.ctx.fillStyle = grad;
-        gameRuntime.ctx.beginPath();
-        gameRuntime.ctx.arc(sx, sy, drop.r * 0.7 + pulse * 0.2, 0, Math.PI * 2);
-        gameRuntime.ctx.fill();
+        grad.addColorStop(0.45, drop.color);
+        grad.addColorStop(1, drop.color);
+        ctx.fillStyle = grad;
+        ctx.beginPath();
+        ctx.arc(sx, sy, r, 0, Math.PI * 2);
+        ctx.fill();
 
-        gameRuntime.ctx.strokeStyle = "rgba(255,255,255,.78)";
-        gameRuntime.ctx.lineWidth = 2;
-        gameRuntime.ctx.stroke();
-        gameRuntime.ctx.restore();
+        ctx.strokeStyle = "#fff7c2";
+        ctx.lineWidth = 2.5;
+        ctx.stroke();
+        twinkle(ctx, sx + r * 0.55, sy - r * 0.6, r * 0.75, drop.pulse * 1.3);
+        ctx.restore();
       }
 
       const nearbyItem=gameRuntime.items.reduce((best,item)=>gameRuntime.distance(item,gameRuntime.player)<130&&(!best||gameRuntime.distance(item,gameRuntime.player)<gameRuntime.distance(best,gameRuntime.player))?item:best,null);
       for (const item of gameRuntime.items) {
         if (!gameRuntime.isNearScreen(item.x, item.y, 70)) continue;
         const spec = gameRuntime.itemTypes[item.type];
-        const sx = gameRuntime.worldToScreenX(item.x), sy = gameRuntime.worldToScreenY(item.y);
+        const sx = gameRuntime.worldToScreenX(item.x), gy = gameRuntime.worldToScreenY(item.y);
+        const hop = still ? 0 : Math.abs(Math.sin(item.pulse * 0.8)) * 7;
+        const sy = gy - hop;
         const pulse = Math.sin(item.pulse) * 4;
         const fade = item.life < 2500 ? 0.45 + Math.sin(now / 80) * 0.35 : 1;
 
         gameRuntime.ctx.save();
         gameRuntime.ctx.globalAlpha = fade;
+        gameRuntime.ctx.fillStyle = "rgba(0,0,0,.30)";
+        gameRuntime.ctx.beginPath();
+        gameRuntime.ctx.ellipse(sx, gy + item.r + 6, item.r * 0.9 - hop * 0.6, 6, 0, 0, Math.PI * 2);
+        gameRuntime.ctx.fill();
+
         gameRuntime.ctx.fillStyle = spec.color + "55";
         gameRuntime.ctx.beginPath();
         gameRuntime.ctx.arc(sx, sy, item.r + 10 + pulse, 0, Math.PI * 2);
@@ -523,12 +571,18 @@ function draw() {
         gameRuntime.ctx.strokeStyle = spec.color;
         gameRuntime.ctx.lineWidth = 4;
         gameRuntime.ctx.stroke();
+        gameRuntime.ctx.strokeStyle = "#fffbe0";
+        gameRuntime.ctx.lineWidth = 2.5;
+        gameRuntime.ctx.beginPath();
+        gameRuntime.ctx.arc(sx, sy, item.r + 7, 0, Math.PI * 2);
+        gameRuntime.ctx.stroke();
 
         gameRuntime.ctx.font = "900 25px Apple Color Emoji, Segoe UI Emoji, Pretendard Variable, Malgun Gothic, sans-serif";
         gameRuntime.ctx.textAlign = "center";
         gameRuntime.ctx.textBaseline = "middle";
         gameRuntime.ctx.fillStyle = "#111827";
         if(!drawSprite(gameRuntime.ctx,spec.sprite,sx,sy+1,52))gameRuntime.ctx.fillText(spec.icon, sx, sy + 1);
+        twinkle(gameRuntime.ctx, sx + item.r * 0.8, sy - item.r * 0.8, 9, item.pulse * 1.1);
 
         gameRuntime.ctx.font = "900 12px Pretendard Variable, Malgun Gothic, sans-serif";
         gameRuntime.ctx.fillStyle = "#ffffff";
