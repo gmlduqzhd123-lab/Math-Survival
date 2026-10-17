@@ -62,6 +62,6 @@ export function createCombatV2(r,settings){
   }
   ctx.strokeStyle=CHARACTERS[s.character||'explorer'].color;ctx.lineWidth=3;ctx.beginPath();ctx.arc(r.worldToScreenX(p.x),r.worldToScreenY(p.y),p.r+7,0,Math.PI*2);ctx.stroke();
  }
- function upgrades(){return Object.entries(WEAPONS).filter(([key])=>s.newWeapons[key]<3).map(([key,w])=>({emoji:w.icon,sprite:WEAPON_SPRITES[key],title:w.name+' '+(s.newWeapons[key]+1)+'단계',desc:w.description+' 이미 있다면 더 강해져요. 3단계로 키우고 한 번이라도 정답을 연속 5번 맞히면 '+w.evolution+'으로 진화해요.',apply(){s.newWeapons[key]++;s.weaponLevel++;}}));}
+ function upgrades(){return Object.entries(WEAPONS).filter(([key])=>s.newWeapons[key]<3).map(([key,w])=>({emoji:w.icon,sprite:WEAPON_SPRITES[key],title:w.name+' '+(s.newWeapons[key]+1)+'단계',desc:w.description+' 이미 있다면 더 강해져요.',tip:'3단계 + 정답 5번 연속 = '+w.evolution,apply(){s.newWeapons[key]++;s.weaponLevel++;}}));}
  return {reset,tick,draw,skill,upgrades,hazards:()=>hazards,evolved};
 }

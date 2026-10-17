@@ -22,7 +22,8 @@ async function answer(page){const value=await page.evaluate(()=>__game.state.pro
    // If a pending reward already exists, dismissing a math explanation must keep it paused.
    await page.evaluate(()=>{__game.spawnQuiz();__game.state.levelUpQueue=1;__game.openLevelUpPanel();});
    await answer(page);assert(await page.evaluate(()=>__game.state.levelUpPending&&__game.state.paused));
-   await page.locator('#upgradeChoices button').first().tap();assert(await page.evaluate(()=>!__game.state.paused));
+   // A correct answer also grants experience, so it may queue one more reward card.
+   while(await page.evaluate(()=>__game.state.levelUpPending))await page.locator('#upgradeChoices button').first().tap();assert(await page.evaluate(()=>!__game.state.paused));
    assert.deepEqual(errors,[]);console.log('PASS '+engine+' same-frame question/EXP pause ordering and pending reward pause');
   }finally{await browser.close();}
  }

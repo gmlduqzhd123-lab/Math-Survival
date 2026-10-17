@@ -1,3 +1,4 @@
+import {ORB_HOLD_MS} from './core.js';
 import {bossStats} from './v3/performance.js';
 import {drawAnimation} from './v3/graphics.js';
 import {BOSSES} from './v3/content-data.js';
@@ -467,7 +468,8 @@ function draw() {
         gameRuntime.ctx.globalAlpha = fade;
         gameRuntime.ctx.fillStyle = "rgba(255,255,255,.18)";
         gameRuntime.ctx.beginPath();
-        gameRuntime.ctx.arc(sx, sy, drop.r + 9 + pulse, 0, Math.PI * 2);
+        // Experience gems stay small and unlabeled so answer orbs remain the clearest thing on screen.
+        gameRuntime.ctx.arc(sx, sy, drop.r * 0.7 + 4 + pulse * 0.5, 0, Math.PI * 2);
         gameRuntime.ctx.fill();
 
         const grad = gameRuntime.ctx.createRadialGradient(sx - 4, sy - 5, 2, sx, sy, drop.r + 5);
@@ -476,18 +478,12 @@ function draw() {
         grad.addColorStop(1, "rgba(34,197,94,.08)");
         gameRuntime.ctx.fillStyle = grad;
         gameRuntime.ctx.beginPath();
-        gameRuntime.ctx.arc(sx, sy, drop.r + pulse * 0.25, 0, Math.PI * 2);
+        gameRuntime.ctx.arc(sx, sy, drop.r * 0.7 + pulse * 0.2, 0, Math.PI * 2);
         gameRuntime.ctx.fill();
 
         gameRuntime.ctx.strokeStyle = "rgba(255,255,255,.78)";
-        gameRuntime.ctx.lineWidth = 2.5;
+        gameRuntime.ctx.lineWidth = 2;
         gameRuntime.ctx.stroke();
-
-        gameRuntime.ctx.fillStyle = "#064e3b";
-        gameRuntime.ctx.font = "900 11px Pretendard Variable, Malgun Gothic, sans-serif";
-        gameRuntime.ctx.textAlign = "center";
-        gameRuntime.ctx.textBaseline = "middle";
-        gameRuntime.ctx.fillText("EXP", sx, sy + 1);
         gameRuntime.ctx.restore();
       }
 
@@ -552,6 +548,14 @@ function draw() {
         gameRuntime.ctx.strokeStyle = hint ? "#fef3c7" : "rgba(255,255,255,.82)";
         gameRuntime.ctx.lineWidth = hint ? 5 : 3;
         gameRuntime.ctx.stroke();
+
+        if (orb.hold > 0) {
+          gameRuntime.ctx.strokeStyle = "#16a34a";
+          gameRuntime.ctx.lineWidth = 7;
+          gameRuntime.ctx.beginPath();
+          gameRuntime.ctx.arc(sx, sy, orb.r + 8, -Math.PI / 2, -Math.PI / 2 + Math.PI * 2 * Math.min(1, orb.hold / ORB_HOLD_MS));
+          gameRuntime.ctx.stroke();
+        }
 
         gameRuntime.ctx.fillStyle = "#082f49";
         const labelKey=`${orb.value}:${orb.r}:${gameRuntime.v2.settings.font}`;
@@ -669,7 +673,7 @@ function draw() {
         if (!gameRuntime.isNearScreen(ft.x, ft.y, 60)) continue;
         gameRuntime.ctx.globalAlpha = gameRuntime.clamp(ft.life / 45, 0, 1);
         const sx = gameRuntime.worldToScreenX(ft.x), sy = gameRuntime.worldToScreenY(ft.y);
-        gameRuntime.ctx.font = "900 18px Pretendard Variable, Malgun Gothic, sans-serif";
+        gameRuntime.ctx.font = `900 ${ft.big ? 28 : 18}px Pretendard Variable, Malgun Gothic, sans-serif`;
         gameRuntime.ctx.textAlign = "center";
         gameRuntime.ctx.strokeStyle = "rgba(0,0,0,.65)";
         gameRuntime.ctx.lineWidth = 5;

@@ -95,11 +95,17 @@ function sfx(type) {
       if (type === "speed") { gameRuntime.playTone(880,.06,"square",.13); gameRuntime.playTone(1175,.06,"square",.12,gameRuntime.sfxGain,.05); }
     }
 
-function showToast(msg) {
+// Answer feedback stays readable: ordinary notices that arrive while it shows are skipped.
+let importantToastUntil = 0;
+function showToast(msg, important = false) {
+      const now = performance.now();
+      if (!important && now < importantToastUntil) return;
+      const duration = important ? 2800 : 1500;
+      if (important) importantToastUntil = now + duration;
       gameRuntime.toast.textContent = msg;
       gameRuntime.toast.classList.add("show");
       clearTimeout(gameRuntime.showToast.timer);
-      gameRuntime.showToast.timer = setTimeout(() => gameRuntime.toast.classList.remove("show"), 1500);
+      gameRuntime.showToast.timer = setTimeout(() => gameRuntime.toast.classList.remove("show"), duration);
     }
 
 function scorePlus(amount) {
@@ -180,7 +186,7 @@ function openLevelUpPanel() {
       options.forEach(option => {
         const btn = document.createElement("button");
         btn.className = "upgradeBtn";
-        btn.innerHTML = `<span class="emoji">${option.sprite?spriteMarkup(option.sprite):option.emoji}</span><span class="title">${option.title}</span><span class="desc">${option.desc}</span>`;
+        btn.innerHTML = `<span class="emoji">${option.sprite?spriteMarkup(option.sprite):option.emoji}</span><span class="title">${option.title}</span><span class="desc">${option.desc}</span>${option.tip?`<span class="tip">✨ ${option.tip}</span>`:""}`;
         btn.addEventListener("click", () => gameRuntime.chooseUpgrade(option));
         gameRuntime.upgradeChoices.appendChild(btn);
       });
