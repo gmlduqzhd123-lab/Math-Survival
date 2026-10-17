@@ -4,6 +4,9 @@ export function createplayer(){ return {
       r: 19,
       speed: 4.35,
       dashCooldown: 0,
+      dashSteps: 0,
+      dashUntil: 0,
+      dashTrail: [],
       invincible: 0,
       blink: 0
     }; }

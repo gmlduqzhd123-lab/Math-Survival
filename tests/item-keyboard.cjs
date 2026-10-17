@@ -26,6 +26,10 @@ const url=process.env.GAME_URL||'http://127.0.0.1:4173/Math-Survival/';
    // Actual shop rewards; unaffordable/unavailable buttons are skipped.
    await p.evaluate(()=>{const r=__game;r.state.hp=r.state.maxHp;r.state.shield=0;r.state.mathEnergy=0;for(let i=0;i<100;i++)r.v3.content.killed({elite:false});r.v3.content.interact(r.v3.content.spawnEvent('merchant'));});
    assert(await p.locator('#merchantPopup [data-good="heal"]').isDisabled());
+   // The shop floats over the game in the middle of the screen; the page must not scroll down to it.
+   const shop=await p.evaluate(()=>({scroll:scrollY,doc:document.documentElement.scrollHeight,card:document.querySelector('#merchantPopup .card').getBoundingClientRect().toJSON()}));
+   assert.equal(shop.scroll,0);assert(shop.doc<=height,'page grew under the shop: '+JSON.stringify(shop));
+   assert(shop.card.top>=0&&shop.card.bottom<=height&&Math.abs(shop.card.left+shop.card.width/2-width/2)<2,'shop card not centered: '+JSON.stringify(shop));
    await p.locator('#merchantPopup [data-good="shield"]').evaluate(e=>{if(document.activeElement!==e||!e.classList.contains('item-selected'))throw Error('shop initial focus');});
    await p.keyboard.press('ArrowRight');await p.locator('#merchantPopup [data-good="energy"]').evaluate(e=>{if(document.activeElement!==e)throw Error('shop navigation');});
    const gold=await p.evaluate(()=>__game.v3.content.runGold);await p.keyboard.press('Enter');assert.equal(await p.locator('#merchantPopup').count(),0);assert.equal(await p.evaluate(()=>__game.state.mathEnergy),25);assert.equal(await p.evaluate(()=>__game.v3.content.runGold),gold-25);
