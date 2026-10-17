@@ -2,6 +2,7 @@ import {bossSchedule} from './v3/performance.js';
 // Extracted from upstream. Cross-system state is supplied by the shared runtime.
 import {renderDpr} from './render-budget.js';
 export const ORB_HOLD_MS = 600;
+export const DASH_STEPS = 4, DASH_TRAIL_MS = 220;
 export function createSystem(gameRuntime) {
 function gameNow(){ return gameRuntime.clock; }
 
@@ -135,6 +136,9 @@ function resetGame() {
       gameRuntime.player.y = gameRuntime.state.worldH / 2;
       gameRuntime.player.invincible = 0;
       gameRuntime.player.dashCooldown = 0;
+      gameRuntime.player.dashSteps = 0;
+      gameRuntime.player.dashUntil = 0;
+      gameRuntime.player.dashTrail = [];
       gameRuntime.player.speed = 4.35;
 
       gameRuntime.enemies = [];
@@ -213,18 +217,28 @@ function update(dt, now) {
       if (!gameRuntime.v2.settings.reduced) gameRuntime.player.blink += dt / 180;
 
       if ((gameRuntime.keys[" "] || gameRuntime.state.dashRequested) && gameRuntime.player.dashCooldown <= 0) {
+        // Glide over a few frames instead of jumping 92px at once: a one-frame jump snapped the
+        // whole map under the camera, which read as the screen flashing. Afterimages show the dash.
+        gameRuntime.player.dashX = (mx / mag) * 92 / DASH_STEPS;
+        gameRuntime.player.dashY = (my / mag) * 92 / DASH_STEPS;
+        gameRuntime.player.dashSteps = DASH_STEPS;
+        gameRuntime.player.dashUntil = now + 620;
+        gameRuntime.player.invincible = 620;
+        gameRuntime.player.dashCooldown = 1150;
+        gameRuntime.sfx("dash");
+      }
+      if (gameRuntime.player.dashSteps > 0) {
         const dashFrom={x:gameRuntime.player.x,y:gameRuntime.player.y};
-        gameRuntime.player.x += (mx / mag) * 92;
-        gameRuntime.player.y += (my / mag) * 92;
+        gameRuntime.player.dashTrail.push({x:dashFrom.x,y:dashFrom.y,at:now});
+        gameRuntime.player.x += gameRuntime.player.dashX;
+        gameRuntime.player.y += gameRuntime.player.dashY;
         gameRuntime.player.x = gameRuntime.clamp(gameRuntime.player.x, gameRuntime.player.r, gameRuntime.state.worldW - gameRuntime.player.r);
         gameRuntime.player.y = gameRuntime.clamp(gameRuntime.player.y, gameRuntime.player.r, gameRuntime.state.worldH - gameRuntime.player.r);
         gameRuntime.v3?.dungeon.constrain(gameRuntime.player,dashFrom);
+        gameRuntime.player.dashSteps--;
         gameRuntime.updateCamera();
-        gameRuntime.player.invincible = 620;
-        gameRuntime.player.dashCooldown = 1150;
-        gameRuntime.burst(gameRuntime.player.x, gameRuntime.player.y, "#bfdbfe", 18, 3.3);
-        gameRuntime.sfx("dash");
       }
+      gameRuntime.player.dashTrail = gameRuntime.player.dashTrail.filter(g => now - g.at < DASH_TRAIL_MS);
 
       gameRuntime.state.dashRequested = false;
       const spawnDelay = Math.max(360, 1180 - gameRuntime.state.time * 4.4 - gameRuntime.state.level * 20);

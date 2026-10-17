@@ -1,4 +1,4 @@
-import {ORB_HOLD_MS} from './core.js';
+import {ORB_HOLD_MS,DASH_TRAIL_MS} from './core.js';
 import {bossStats} from './v3/performance.js';
 import {drawAnimation} from './v3/graphics.js';
 import {BOSSES} from './v3/content-data.js';
@@ -203,7 +203,8 @@ function drawCutePlayer(now) {
       gameRuntime.ctx.save();
       gameRuntime.ctx.translate(gameRuntime.worldToScreenX(gameRuntime.player.x), gameRuntime.worldToScreenY(gameRuntime.player.y));
 
-      if (gameRuntime.player.invincible > 0) gameRuntime.ctx.globalAlpha = gameRuntime.v2.settings.reduced ? 0.75 : 0.42 + Math.sin(now / 38) * 0.26;
+      // A dash already shows afterimages, so only damage invincibility blinks.
+      if (gameRuntime.player.invincible > 0 && now >= (gameRuntime.player.dashUntil || 0)) gameRuntime.ctx.globalAlpha = gameRuntime.v2.settings.reduced ? 0.75 : 0.42 + Math.sin(now / 38) * 0.26;
 
       if (gameRuntime.state.shield > 0) {
         gameRuntime.ctx.strokeStyle = "rgba(125, 211, 252, .82)";
@@ -675,6 +676,15 @@ function draw() {
       }
 
       gameRuntime.drawPet(now);
+      gameRuntime.ctx.save();
+      for (const g of gameRuntime.player.dashTrail || []) {
+        gameRuntime.ctx.globalAlpha = Math.max(0, 0.32 * (1 - (now - g.at) / DASH_TRAIL_MS));
+        gameRuntime.ctx.fillStyle = "#bfdbfe";
+        gameRuntime.ctx.beginPath();
+        gameRuntime.ctx.arc(gameRuntime.worldToScreenX(g.x), gameRuntime.worldToScreenY(g.y), gameRuntime.player.r + 4, 0, Math.PI * 2);
+        gameRuntime.ctx.fill();
+      }
+      gameRuntime.ctx.restore();
       gameRuntime.drawCutePlayer(now);
 
       for (const ft of gameRuntime.floatingTexts) {
@@ -703,7 +713,7 @@ function draw() {
         gameRuntime.ctx.restore();
       }
 
-      if (gameRuntime.state.paused && !gameRuntime.state.levelUpPending && !gameRuntime.state.mathPopup) {
+      if (gameRuntime.state.paused && !gameRuntime.state.levelUpPending && !gameRuntime.state.mathPopup && !gameRuntime.state.merchantOpen) {
         gameRuntime.ctx.fillStyle = "rgba(0,0,0,.46)";
         gameRuntime.ctx.fillRect(0, 0, gameRuntime.canvas.width, gameRuntime.canvas.height);
         gameRuntime.ctx.fillStyle = "#fff";
