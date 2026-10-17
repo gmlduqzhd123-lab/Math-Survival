@@ -8,6 +8,7 @@ const isFull=p=>p.evaluate(()=>!!document.fullscreenElement);
  const browser=await chromium.launch({headless:true,...(!process.env.CI?{channel:'msedge'}:{})});
  for(const [name,width,height,mobile]of profiles){
   const context=await browser.newContext({viewport:{width,height},hasTouch:mobile,isMobile:mobile});
+  await context.addInitScript(()=>{if(!localStorage.getItem('math-survival.ui.v1'))localStorage.setItem('math-survival.ui.v1',JSON.stringify({fullscreen:true}));});
   const p=await context.newPage(),errors=[];p.setDefaultTimeout(8000);p.on('pageerror',e=>errors.push(e.message));
   await p.goto(url+'?qa=1');await p.waitForFunction(()=>window.__game);await require('./home-settings.cjs')(p);
   await p.selectOption('#mode','survival');await p.evaluate(()=>document.fonts.ready);
