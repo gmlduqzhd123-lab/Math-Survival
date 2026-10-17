@@ -1,13 +1,14 @@
 // Obstacles and ground decorations for the overworld. Obstacles block the player and monsters;
 // every pair keeps a walkable gap, roads and landmark plazas stay clear, so no area is ever sealed off.
 export const PASS_GAP=110,ROAD_CLEAR=125,PLAZA_CLEAR=470,CELL=300;
+// Ground details are muted and never white or sky blue, so nothing on the floor reads as an orb to pick up.
 const KINDS={
- forest:{mix:['tree','tree','tree','bush','rock','pond','fence'],deco:['flower','flower','mushroom','tuft','tuft','pebble'],petals:['#ffb3c7','#ffe28a','#f4f1ff','#c9b6ff']},
- desert:{mix:['cactus','cactus','rock','rock','pond','fence'],deco:['tuft','pebble','pebble','flower','shell'],petals:['#ffcf73','#ff9f80','#fff0c2']},
- library:{mix:['pillar','pillar','crystal','bush','pond','fence'],deco:['sparkle','sparkle','flower','mushroom','pebble'],petals:['#c8d2ff','#ffe3a0','#f7c6ff']},
- ocean:{mix:['coral','coral','rock','rock','pond','fence'],deco:['shell','shell','tuft','pebble','sparkle'],petals:['#ffc1b8','#fff1c9','#b9f4e6']},
- clockwork:{mix:['gear','gear','pillar','rock','pond','fence'],deco:['bolt','bolt','pebble','tuft','flower'],petals:['#ffd38a','#e6c7a5','#fff1c9']},
- sky:{mix:['cloud','cloud','crystal','pillar','pond','fence'],deco:['sparkle','sparkle','flower','tuft'],petals:['#fff6c2','#ffd3ec','#d7f1ff']}
+ forest:{mix:['tree','tree','tree','bush','rock','pond','fence'],deco:['flower','flower','mushroom','tuft','tuft','pebble'],petals:['#c97f99','#c9a552','#9c84c4']},
+ desert:{mix:['cactus','cactus','rock','rock','pond','fence'],deco:['tuft','pebble','pebble','flower','shell'],petals:['#c99446','#c97f63','#b98a5c']},
+ library:{mix:['pillar','pillar','crystal','bush','pond','fence'],deco:['tuft','tuft','flower','mushroom','pebble'],petals:['#8f86c4','#c09a55','#b680bf']},
+ ocean:{mix:['coral','coral','rock','rock','pond','fence'],deco:['shell','shell','tuft','pebble','tuft'],petals:['#c98880','#c4a263','#74a898']},
+ clockwork:{mix:['gear','gear','pillar','rock','pond','fence'],deco:['bolt','bolt','pebble','tuft','flower'],petals:['#b88d55','#a07f62','#b97a5c']},
+ sky:{mix:['cloud','cloud','crystal','pillar','pond','fence'],deco:['tuft','tuft','flower','pebble'],petals:['#c4a855','#c483a6','#8d96c4']}
 };
 // Blocking footprint per kind as ellipses [dx,dy,rx,ry] in units of the drawn size, traced from
 // drawObstacle so the character stops where the art ends instead of walking over canopies and rims.
@@ -75,13 +76,12 @@ export function drawObstacle(c,o,x,y,l,t=0){const r=o.s||o.r,v=o.seed%7;c.save()
 
 // Small, non-blocking ground details painted into the cached background chunks.
 export function decorateTile(c,key,rand,scale,low){const theme=KINDS[key];if(!theme)return;const count=low?6:16;
- for(let i=0;i<count;i++){const kind=theme.deco[Math.floor(rand()*theme.deco.length)],x=rand()*300,y=rand()*300,s=(.8+rand()*.6)*Math.max(.35,scale),petal=theme.petals[Math.floor(rand()*theme.petals.length)];c.save();c.translate(x,y);c.scale(s,s);
-  if(kind==='flower'){c.strokeStyle='#3f7a4c';c.lineWidth=2;c.beginPath();c.moveTo(0,8);c.lineTo(0,0);c.stroke();for(let k=0;k<5;k++)ellipse(c,Math.cos(k*1.256)*4,Math.sin(k*1.256)*4,3.2,3.2,petal);ellipse(c,0,0,2.2,2.2,'#ffcf4d');}
-  else if(kind==='mushroom'){c.fillStyle='#f3e7d2';c.fillRect(-2,-2,4,8);c.fillStyle=rand()<.5?'#e2554f':'#b08cff';c.beginPath();c.arc(0,-2,6,Math.PI,0);c.fill();ellipse(c,-2,-5,1.2,1.2,'#fff');ellipse(c,2.5,-4,1,1,'#fff');}
-  else if(kind==='tuft'){c.strokeStyle='rgba(170,220,150,.55)';c.lineWidth=2;c.beginPath();for(const a of [-.5,0,.5]){c.moveTo(0,4);c.lineTo(a*8,-6);}c.stroke();}
-  else if(kind==='pebble'){ellipse(c,0,0,4,2.6,'rgba(210,214,206,.5)');ellipse(c,6,2,2.5,1.8,'rgba(210,214,206,.4)');}
+ for(let i=0;i<count;i++){const kind=theme.deco[Math.floor(rand()*theme.deco.length)],x=rand()*300,y=rand()*300,s=(.55+rand()*.35)*Math.max(.35,scale),petal=theme.petals[Math.floor(rand()*theme.petals.length)];c.save();c.globalAlpha=.55;c.translate(x,y);c.scale(s,s);
+  if(kind==='flower'){c.strokeStyle='#3f7a4c';c.lineWidth=2;c.beginPath();c.moveTo(0,8);c.lineTo(0,0);c.stroke();for(let k=0;k<5;k++)ellipse(c,Math.cos(k*1.256)*4,Math.sin(k*1.256)*4,3.2,3.2,petal);ellipse(c,0,0,2,2,'#b8963c');}
+  else if(kind==='mushroom'){c.fillStyle='#bfb29c';c.fillRect(-2,-2,4,8);c.fillStyle=rand()<.5?'#b5524d':'#8a72c4';c.beginPath();c.arc(0,-2,6,Math.PI,0);c.fill();}
+  else if(kind==='tuft'){c.strokeStyle='rgba(120,170,110,.5)';c.lineWidth=2;c.beginPath();for(const a of [-.5,0,.5]){c.moveTo(0,4);c.lineTo(a*8,-6);}c.stroke();}
+  else if(kind==='pebble'){ellipse(c,0,0,4,2.2,'rgba(20,32,24,.35)');ellipse(c,6,2,2.5,1.4,'rgba(20,32,24,.3)');}
   else if(kind==='shell'){c.fillStyle=petal;c.beginPath();c.moveTo(0,4);c.arc(0,4,6,Math.PI*1.1,Math.PI*1.9);c.closePath();c.fill();}
-  else if(kind==='sparkle'){c.fillStyle=petal;c.globalAlpha=.7;c.beginPath();for(let k=0;k<8;k++){const rad=k%2?1.6:5;c.lineTo(Math.cos(k*Math.PI/4)*rad,Math.sin(k*Math.PI/4)*rad);}c.closePath();c.fill();}
-  else if(kind==='bolt'){c.strokeStyle='rgba(230,205,160,.6)';c.lineWidth=2;c.beginPath();c.arc(0,0,4,0,Math.PI*2);c.stroke();c.fillStyle='rgba(230,205,160,.6)';c.fillRect(-1,-1,2,2);}
+  else if(kind==='bolt'){c.strokeStyle='rgba(60,45,30,.45)';c.lineWidth=2;c.beginPath();c.moveTo(-4,0);c.lineTo(4,0);c.moveTo(0,-3);c.lineTo(0,3);c.stroke();}
   c.restore();}
 }
