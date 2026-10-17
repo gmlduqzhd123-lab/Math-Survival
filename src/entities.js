@@ -691,7 +691,7 @@ function draw() {
         gameRuntime.ctx.restore();
       }
 
-      if (gameRuntime.state.paused && !gameRuntime.state.levelUpPending) {
+      if (gameRuntime.state.paused && !gameRuntime.state.levelUpPending && !gameRuntime.state.mathPopup) {
         gameRuntime.ctx.fillStyle = "rgba(0,0,0,.46)";
         gameRuntime.ctx.fillRect(0, 0, gameRuntime.canvas.width, gameRuntime.canvas.height);
         gameRuntime.ctx.fillStyle = "#fff";

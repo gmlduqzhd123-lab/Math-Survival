@@ -10,7 +10,10 @@ function syncCanvasViewport() {
       const width=box.width,height=box.height,dpr=renderDpr(width,height,window.devicePixelRatio);
       const changed=v.width!==width||v.height!==height||v.dpr!==dpr;
       v.width=width;v.height=height;v.dpr=dpr;
-      if(changed){gameRuntime.surface.width=Math.round(width*dpr);gameRuntime.surface.height=Math.round(height*dpr);}
+      if(changed){gameRuntime.surface.width=Math.round(width*dpr);gameRuntime.surface.height=Math.round(height*dpr);
+        // Resizing wipes the canvas. Repaint right away so the field never shows a blank frame
+        // when the question bar appears or disappears (this was the full-screen flash).
+        if(gameRuntime.state.running){gameRuntime.updateCamera();gameRuntime.v2?.reposition();gameRuntime.draw();}}
       return changed;
     }
 
