@@ -1,4 +1,6 @@
 import {selectUpgradeCards} from './v3/weapons-data.js';
+// Levels come 1.5x sooner than the original 90 + 34·level curve; answer rewards stay half a level.
+export const EXP_RATE = 1.5;
 // Extracted from upstream. Cross-system state is supplied by the shared runtime.
 export function createSystem(gameRuntime) {
 function giveChestReward(now) {
@@ -15,7 +17,7 @@ function giveChestReward(now) {
       gameRuntime.updateWeaponInfo();
     }
 
-function expNeed() { return 90 + gameRuntime.state.level * 34; }
+function expNeed() { return Math.round((90 + gameRuntime.state.level * 34) / EXP_RATE); }
 
 function checkLevelUp() {
       let need = gameRuntime.expNeed();

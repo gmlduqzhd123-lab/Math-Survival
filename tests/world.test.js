@@ -26,3 +26,14 @@ test('Overworld obstacles leave roads, plazas and sites open and never touch eac
   for(const z of l.regions)assert(!blocked(grid,z.cx,z.cy,40));
   const pond=l.obstacles.find(o=>o.kind!=='fence'),e={x:pond.x+1,y:pond.y,r:19};constrain(grid,e);assert(!blocked(grid,e.x,e.y,18.5));}
 });
+test('Walking or dashing into any obstacle stops on the near side of its drawn shape',async()=>{
+ const {obstacleGrid,constrain,HIT}=await import('../src/v3/terrain.js');
+ for(const key of Object.keys(MAPS)){const l=worldLayout(key),grid=obstacleGrid(l.obstacles),seen=new Set();
+  for(const o of l.obstacles){if(seen.has(o.kind))continue;seen.add(o.kind);
+   // Aim at the middle of the blocking shape so the approach is head-on rather than a glancing slide.
+   const cx=o.x,cy=o.y+(o.kind==='fence'?o.dy:HIT[o.kind][0][1]*o.s);
+   for(const [dx,dy] of [[0,1],[0,-1],[1,0],[-1,0]]){const e={x:cx-dx*(o.r+60),y:cy-dy*(o.r+60),r:19};
+    for(let i=0;i<60;i++){e.x+=dx*8;e.y+=dy*8;constrain(grid,e);}
+    const side=dx*(e.x-cx)+dy*(e.y-cy);assert(side<0,key+' '+o.kind+' passed through from '+dx+','+dy);}}
+  assert(seen.size>=4,key+' kinds');}
+});
