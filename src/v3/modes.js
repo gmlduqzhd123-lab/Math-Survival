@@ -8,5 +8,7 @@ export function createModes(r){let variant='survival',wave=0,nextWave=0,day=null
  }
  function answer(){r.v3.dungeon.answer();}
  function draw(){if(variant!=='defense')return;const ctx=r.ctx,x=r.worldToScreenX(r.state.worldW/2),y=r.worldToScreenY(r.state.worldH/2);ctx.fillStyle='#89c9b7';ctx.fillRect(x-26,y-26,52,52);ctx.fillStyle='#fff';ctx.font='13px Jua';ctx.textAlign='center';ctx.fillText('수학 성문 '+defenseHealth,x,y-32);}
- return {start,tick,answer,draw,get variant(){return variant;},get wave(){return wave;},get day(){return day;},get defenseHealth(){return defenseHealth;}};
+ function save(){return {variant,wave,nextWave,day,defenseHealth};}
+ function load(d){({variant,wave,nextWave,day,defenseHealth}=d);}
+ return {start,tick,answer,draw,save,load,get variant(){return variant;},get wave(){return wave;},get day(){return day;},get defenseHealth(){return defenseHealth;}};
 }

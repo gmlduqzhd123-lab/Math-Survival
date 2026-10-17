@@ -59,6 +59,7 @@ const APP_SHELL = [
     './src/sprites.js',
     './src/state.js',
     './src/storage.js',
+    './src/savegame.js',
     './src/ui.js',
     './src/v2.js',
     './src/version.js',

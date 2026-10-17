@@ -24,5 +24,7 @@ export function createSurvival(r,settings){
  }
  function frame(milliseconds){samples.push(milliseconds);if(samples.length>180)samples.shift();const next=performanceTier(samples,settings.low);if(next==='low'&&tier!=='low'){tier='low';r.showToast('화면 효과와 적 수를 자동으로 줄였습니다.');}}
  function draw(){const ctx=r.ctx;for(const shot of bullets){ctx.fillStyle=shot.frost?'#a6defa':'#ed9c9c';ctx.beginPath();ctx.arc(r.worldToScreenX(shot.x),r.worldToScreenY(shot.y),shot.r,0,Math.PI*2);ctx.fill();}}
- return {reset,spawn,move,killed,tick,draw,frame,grid,enemiesPool:enemies,shotPool:shots,get bullets(){return bullets;},get tier(){return tier;},get wave(){return lastWave;}};
+ // Restored monsters rejoin the pool so kills release them as usual. Bosses never came from the pool.
+ function load(d,list){lastWave=d.wave;tier=d.tier==='low'?'low':'normal';r.enemies=list.map(e=>e.boss?e:enemies.take(e)).filter(Boolean);}
+ return {reset,spawn,move,killed,tick,draw,frame,load,grid,enemiesPool:enemies,shotPool:shots,get bullets(){return bullets;},get tier(){return tier;},get wave(){return lastWave;}};
 }
