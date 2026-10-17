@@ -105,11 +105,11 @@ function collectExpDrop(drop) {
     }
 
 function spawnItem(x = null, y = null, forcedType = null) {
-      const keys = Object.keys(gameRuntime.itemTypes);
+      const keys = Object.keys(gameRuntime.itemTypes).filter(key => !gameRuntime.itemTypes[key].special);
       const type = forcedType || keys[gameRuntime.randint(0, keys.length - 1)];
       const spec = gameRuntime.itemTypes[type];
       const p = x == null ? gameRuntime.randomVisiblePoint() : {x, y};
-      gameRuntime.items.push({
+      const item = {
         type,
         x: gameRuntime.clamp(p.x, 42, gameRuntime.state.worldW - 42),
         y: gameRuntime.clamp(p.y, 42, gameRuntime.state.worldH - 42),
@@ -120,11 +120,13 @@ function spawnItem(x = null, y = null, forcedType = null) {
         color: spec.color,
         icon: spec.icon,
         name: spec.name
-      });
+      };
+      gameRuntime.items.push(item);
+      return item;
     }
 
 function applyItem(item, now) {
-      gameRuntime.itemTypes[item.type].apply(now);
+      gameRuntime.itemTypes[item.type].apply(now, item);
       gameRuntime.updateMission("collect", 1);
       gameRuntime.burst(item.x, item.y, item.color, 22, 3.4);
       gameRuntime.floatingTexts.push({ x: item.x, y: item.y - 28, text: item.name, life: 55, color: item.color });

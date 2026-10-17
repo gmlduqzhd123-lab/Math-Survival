@@ -386,7 +386,7 @@ function update(dt, now) {
           gameRuntime.scorePlus(e.boss ? 650 : e.elite ? 50 : e.tiny ? 16 : 24);
           if (e.boss) {
             gameRuntime.unlockAchievement("boss", "수학 보스 격파");
-            gameRuntime.showToast(`${e.name} 격파! 보물상자가 쏟아집니다.`);
+            gameRuntime.showToast(`${e.name} 격파! 반짝이는 보스 왕관을 주우세요.`, true);
           }
           const expValue = e.boss ? 150 : e.elite ? 24 : e.tiny ? 7 : 12;
           const expCount = e.boss ? 10 : e.elite ? 4 : e.tiny ? 1 : 2;
@@ -402,6 +402,8 @@ function update(dt, now) {
           gameRuntime.spawnItem(e.x - 70, e.y, "chest");
           gameRuntime.spawnItem(e.x + 70, e.y, "gem");
           gameRuntime.spawnItem(e.x, e.y + 70, "clover");
+          // Special boss reward: lasts a minute so it can be picked up after the fight.
+          Object.assign(gameRuntime.spawnItem(e.x, e.y - 20, "bossTreasure"), {r: 28, life: 60000, power: e.midBoss ? "mid" : "boss"});
         } else {
           const dropChance = (now < gameRuntime.state.luckyUntil ? 0.24 : 0) + (e.elite ? 0.48 : 0.12);
           if (Math.random() < dropChance) gameRuntime.spawnItem(e.x, e.y);
@@ -482,6 +484,10 @@ function update(dt, now) {
         }
       }
       gameRuntime.items = gameRuntime.items.filter(item => !item.collected && item.life > 0);
+      if (gameRuntime.state.levelCheckAt && now >= gameRuntime.state.levelCheckAt) {
+        gameRuntime.state.levelCheckAt = 0;
+        gameRuntime.checkLevelUp();
+      }
 
       for (const pt of gameRuntime.particles) {
         pt.x += pt.vx;

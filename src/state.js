@@ -33,6 +33,7 @@ export function createstate(){ return {
 
       levelUpPending: false,
       levelUpQueue: 0,
+      levelCheckAt: 0,
 
       weaponLevel: 1,
       attackPower: 22,

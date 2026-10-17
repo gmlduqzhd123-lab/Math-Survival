@@ -152,6 +152,24 @@ export function createItemTypes(gameRuntime){ const types = {
           gameRuntime.checkLevelUp();
         }
       },
+      bossTreasure: {
+        icon: "👑", name: "보스 왕관", color: "#facc15", special: true,
+        desc: "보스를 쓰러뜨리면 나와요. 최대 체력·공격력·경험치가 크게 올라요",
+        apply(now, item) {
+          const mid = item?.power === "mid", hp = mid ? 12 : 25, attack = mid ? 2 : 4, exp = mid ? 60 : 120;
+          gameRuntime.state.maxHp += hp;
+          gameRuntime.state.hp = gameRuntime.state.maxHp;
+          gameRuntime.state.attackPower += attack;
+          gameRuntime.state.exp += exp;
+          gameRuntime.scorePlus(mid ? 150 : 300);
+          gameRuntime.showToast(`👑 보스 왕관! 최대 체력 +${hp}(가득 회복) · 공격력 +${attack} · 경험치 +${exp}`, true);
+          gameRuntime.sfx("level");
+          gameRuntime.burst(gameRuntime.player.x, gameRuntime.player.y, "#facc15", 40, 5);
+          gameRuntime.floatingTexts.push({ x: gameRuntime.player.x, y: gameRuntime.player.y - 70, text: `체력 +${hp} · 공격력 +${attack} · 경험치 +${exp}`, life: 150, color: "#ffd971" });
+          // Let the reward message show before a level-up card covers the screen.
+          gameRuntime.state.levelCheckAt = now + 2500;
+        }
+      },
       feather: {
         icon: "🪶", name: "순간이동깃털", color: "#ddd6fe",
         desc: "다른 곳으로 순간 이동해요",

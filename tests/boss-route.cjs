@@ -14,7 +14,7 @@ const {chromium}=require('playwright'),assert=require('node:assert/strict');
     for(let i=0;i<3;i++){
      const boss=r.enemies.find(e=>e.boss);if(!boss)throw Error('Missing challenge boss');
      route.push(boss.bossType);boss.hp=0;r.state.paused=false;r.state.levelUpPending=false;
-     r.update(16,r.clock);if(r.state.running)r.v2.tick(16,r.clock);
+     r.update(16,r.clock);if(!r.items.some(item=>item.type==='bossTreasure'))throw Error('Boss dropped no crown');r.items=r.items.filter(item=>item.type!=='bossTreasure');if(r.state.running)r.v2.tick(16,r.clock);
     }
     return {route,running:r.state.running,kills:r.state.bossKills,outcome:r.v2.result?.outcome};
    });
