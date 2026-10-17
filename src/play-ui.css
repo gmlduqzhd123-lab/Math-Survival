@@ -64,3 +64,8 @@ body.simple-play.mobile-play #toast{bottom:108px}
 html,body{overscroll-behavior-y:none}
 body.game-running #playfield{touch-action:none;overscroll-behavior:none}
 #playMenu,#startPanel,#levelUpPanel,#mathPopup,#merchantPopup{overscroll-behavior:contain}
+/* 키보드 조작 안내: 조이스틱 오른쪽·대시 버튼 왼쪽. 터치 기기와 좁은 화면에서는 숨김 */
+.keyHint{grid-row:1;grid-column:2;align-self:center;font-size:12px;line-height:1.2;color:#4f6b5d;white-space:nowrap;pointer-events:none}.keyHint kbd{display:inline-block;padding:1px 5px;border:1px solid #9fbcae;border-bottom-width:2px;border-radius:5px;background:#fffdf6;font:inherit;font-weight:700;color:#2f4b3f}
+#moveKeyHint{justify-self:start}#dashKeyHint{justify-self:end}
+body:not(.game-running) .keyHint,body.mobile-play .keyHint{display:none}
+@media(hover:none),(max-width:639px){.keyHint{display:none}}
