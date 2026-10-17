@@ -423,9 +423,17 @@ function drawPet(now) {
       gameRuntime.ctx.restore();
     }
 
+// On touch screens the joystick and dash button sit over the bottom corners, so the minimap moves to the top right.
+function miniMapRect() {
+      if(!gameRuntime.v2.playUI.mapVisible||gameRuntime.canvas.height<220)return null;
+      const w = Math.min(156,gameRuntime.canvas.width*.2), h = Math.min(104,gameRuntime.canvas.height*.2), top = document.body.classList.contains('mobile-play');
+      return {x:gameRuntime.canvas.width - w - (top?10:16), y:top?10:gameRuntime.canvas.height - h - 16, w, h};
+    }
+
 function drawMiniMap() {
-      if(!gameRuntime.v2.playUI.mapVisible||gameRuntime.canvas.height<220)return;
-      const w = Math.min(156,gameRuntime.canvas.width*.2), h = Math.min(104,gameRuntime.canvas.height*.2), x = gameRuntime.canvas.width - w - 16, y = gameRuntime.canvas.height - h - 16;
+      const rect = miniMapRect();
+      if(!rect)return;
+      const {x, y, w, h} = rect;
       gameRuntime.ctx.save();
       gameRuntime.ctx.globalAlpha = 0.86;
       gameRuntime.ctx.fillStyle = "rgba(15,23,42,.78)";
@@ -706,5 +714,5 @@ function draw() {
         gameRuntime.ctx.fillText("P 키를 누르면 계속합니다. 브금은 계속 유지됩니다.", gameRuntime.canvas.width / 2, gameRuntime.canvas.height / 2 + 44);
       }
     }
-return { makePortals, checkPortals, spawnBoss, updatePet, petPosition, makeDecorations, spawnEnemy, drawBackground, drawCutePlayer, drawEnemy, drawPet, drawMiniMap, draw };
+return { makePortals, checkPortals, spawnBoss, updatePet, petPosition, makeDecorations, spawnEnemy, drawBackground, drawCutePlayer, drawEnemy, drawPet, miniMapRect, drawMiniMap, draw };
 }

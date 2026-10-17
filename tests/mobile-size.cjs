@@ -10,7 +10,7 @@ async function measure(browser,url,width,height){
 }
 (async()=>{fs.mkdirSync('test-results/mobile-size',{recursive:true});const browser=await chromium.launch({headless:true,...(!process.env.CI?{channel:'msedge'}:{})}),results=[];
  for(const [width,height]of [[320,568],[390,844],[844,390],[768,1024]]){
-  const old=process.env.BASELINE_URL?await measure(browser,process.env.BASELINE_URL,width,height):null,current=await measure(browser,url,width,height),size=width>height&&height<=550?72:88;
+  const old=process.env.BASELINE_URL?await measure(browser,process.env.BASELINE_URL,width,height):null,current=await measure(browser,url,width,height),size=width>height&&height<=550?60:68;
   assert.equal(current.joy.width,size);assert.equal(current.dash.width,size);assert(current.scrollW<=width&&current.scrollH<=height);
   assert.equal(current.orbs.length,4);for(const orb of current.orbs)assert(orb.y+orb.r<=current.touch.top-current.canvas.top-4,'answer orb behind controls');
   for(const orb of current.orbs){const x=orb.x+current.canvas.left,y=orb.y+current.canvas.top;assert(!(x+orb.r>current.map.left&&x-orb.r<current.map.right&&y+orb.r>current.map.top&&y-orb.r<current.map.bottom),'answer orb behind map button');}
