@@ -3,6 +3,9 @@ import {bossSchedule} from './v3/performance.js';
 import {renderDpr} from './render-budget.js';
 export const ORB_HOLD_MS = 600;
 export const DASH_STEPS = 4, DASH_TRAIL_MS = 220;
+// Walking pace multiplier on top of each character's speed (1.5× the original pace). Saved runs keep
+// their stored character speed, so they speed up too. Dash distance grows with it.
+export const MOVE_SCALE = 1.5, DASH_DISTANCE = 120;
 export function createSystem(gameRuntime) {
 function gameNow(){ return gameRuntime.clock; }
 
@@ -42,19 +45,30 @@ function updateCamera() {
     }
 
 function randomPointAroundPlayer(minR, maxR) {
-      const a = gameRuntime.rand(0, Math.PI * 2);
-      const r = gameRuntime.rand(minR, maxR);
-      return {
-        x: gameRuntime.clamp(gameRuntime.player.x + Math.cos(a) * r, 70, gameRuntime.state.worldW - 70),
-        y: gameRuntime.clamp(gameRuntime.player.y + Math.sin(a) * r, 70, gameRuntime.state.worldH - 70)
-      };
+      // Retry a few times so spawns and pickups never land inside a rock or pond.
+      let point;
+      for (let tries = 0; tries < 8; tries++) {
+        const a = gameRuntime.rand(0, Math.PI * 2);
+        const r = gameRuntime.rand(minR, maxR);
+        point = {
+          x: gameRuntime.clamp(gameRuntime.player.x + Math.cos(a) * r, 70, gameRuntime.state.worldW - 70),
+          y: gameRuntime.clamp(gameRuntime.player.y + Math.sin(a) * r, 70, gameRuntime.state.worldH - 70)
+        };
+        if (!gameRuntime.v3?.world.blocked(point.x, point.y, 40)) break;
+      }
+      return point;
     }
 
 function randomVisiblePoint() {
-      return {
-        x: gameRuntime.clamp(gameRuntime.state.cameraX + gameRuntime.rand(90, gameRuntime.canvas.width - 90), 60, gameRuntime.state.worldW - 60),
-        y: gameRuntime.clamp(gameRuntime.state.cameraY + gameRuntime.rand(100, gameRuntime.canvas.height - 80), 60, gameRuntime.state.worldH - 60)
-      };
+      let point;
+      for (let tries = 0; tries < 8; tries++) {
+        point = {
+          x: gameRuntime.clamp(gameRuntime.state.cameraX + gameRuntime.rand(90, gameRuntime.canvas.width - 90), 60, gameRuntime.state.worldW - 60),
+          y: gameRuntime.clamp(gameRuntime.state.cameraY + gameRuntime.rand(100, gameRuntime.canvas.height - 80), 60, gameRuntime.state.worldH - 60)
+        };
+        if (!gameRuntime.v3?.world.blocked(point.x, point.y, 40)) break;
+      }
+      return point;
     }
 
 function resetGame(resume) {
@@ -203,12 +217,13 @@ function update(dt, now) {
       if(mx||my){gameRuntime.player.facing=Math.abs(mx)>Math.abs(my)?(mx>0?2:1):(my>0?0:3);gameRuntime.player.movingUntil=now+120;}
       const mag = Math.hypot(mx, my) || 1;
       const movementFrom={x:gameRuntime.player.x,y:gameRuntime.player.y};
-      gameRuntime.player.x += (mx / mag) * gameRuntime.player.speed * slow * speedBoost;
-      gameRuntime.player.y += (my / mag) * gameRuntime.player.speed * slow * speedBoost;
+      gameRuntime.player.x += (mx / mag) * gameRuntime.player.speed * MOVE_SCALE * slow * speedBoost;
+      gameRuntime.player.y += (my / mag) * gameRuntime.player.speed * MOVE_SCALE * slow * speedBoost;
       gameRuntime.player.x = gameRuntime.clamp(gameRuntime.player.x, gameRuntime.player.r, gameRuntime.state.worldW - gameRuntime.player.r);
       gameRuntime.player.y = gameRuntime.clamp(gameRuntime.player.y, gameRuntime.player.r, gameRuntime.state.worldH - gameRuntime.player.r);
 
       gameRuntime.v3?.dungeon.constrain(gameRuntime.player,movementFrom);
+      gameRuntime.v3?.world.constrain(gameRuntime.player);
       gameRuntime.updateCamera();
       gameRuntime.checkPortals(now);
 
@@ -219,8 +234,8 @@ function update(dt, now) {
       if ((gameRuntime.keys[" "] || gameRuntime.state.dashRequested) && gameRuntime.player.dashCooldown <= 0) {
         // Glide over a few frames instead of jumping 92px at once: a one-frame jump snapped the
         // whole map under the camera, which read as the screen flashing. Afterimages show the dash.
-        gameRuntime.player.dashX = (mx / mag) * 92 / DASH_STEPS;
-        gameRuntime.player.dashY = (my / mag) * 92 / DASH_STEPS;
+        gameRuntime.player.dashX = (mx / mag) * DASH_DISTANCE / DASH_STEPS;
+        gameRuntime.player.dashY = (my / mag) * DASH_DISTANCE / DASH_STEPS;
         gameRuntime.player.dashSteps = DASH_STEPS;
         gameRuntime.player.dashUntil = now + 620;
         gameRuntime.player.invincible = 620;
@@ -235,6 +250,7 @@ function update(dt, now) {
         gameRuntime.player.x = gameRuntime.clamp(gameRuntime.player.x, gameRuntime.player.r, gameRuntime.state.worldW - gameRuntime.player.r);
         gameRuntime.player.y = gameRuntime.clamp(gameRuntime.player.y, gameRuntime.player.r, gameRuntime.state.worldH - gameRuntime.player.r);
         gameRuntime.v3?.dungeon.constrain(gameRuntime.player,dashFrom);
+        gameRuntime.v3?.world.constrain(gameRuntime.player);
         gameRuntime.player.dashSteps--;
         gameRuntime.updateCamera();
       }
@@ -293,6 +309,7 @@ function update(dt, now) {
         } else {
           e.wobble += 0.03;
         }
+        gameRuntime.v3?.world.constrain(e, gameRuntime.player);
 
         if (Math.hypot(gameRuntime.player.x - e.x, gameRuntime.player.y - e.y) < gameRuntime.player.r + e.r) {
           if (gameRuntime.player.invincible <= 0) {

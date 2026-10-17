@@ -17,3 +17,12 @@ test('Viewport chunk selection is bounded independently of explored area',()=>{
 });
 
 test('Region discovery announces each place only once per run',()=>{let notices=0;const r={state:{currentMapKey:'forest',worldW:7200,worldH:5400},player:{x:3600,y:2700},showToast(){notices++;},v3:{dungeon:{active:false}}};const w=createWorld(r);w.start();w.tick();r.player.x=2390;w.tick();r.player.x=2410;w.tick();assert.equal(notices,2);assert.equal(w.visited.size,2);});
+
+test('Overworld obstacles leave roads, plazas and sites open and never touch each other',async()=>{
+ const {PASS_GAP,ROAD_CLEAR,PLAZA_CLEAR,obstacleGrid,blocked,constrain}=await import('../src/v3/terrain.js');
+ for(const key of Object.keys(MAPS)){const l=worldLayout(key);assert(l.obstacles.length>=9*8,key+' has too few obstacles');assert(new Set(l.obstacles.map(o=>o.kind)).size>=4);
+  for(const o of l.obstacles){const z=l.regions[o.region];assert(Math.hypot(o.x-z.cx,o.y-z.cy)>=PLAZA_CLEAR+o.r);for(const s of l.sites)assert(Math.hypot(o.x-s.x,o.y-s.y)>=o.r+150);for(const p of l.obstacles)if(p!==o)assert(Math.hypot(o.x-p.x,o.y-p.y)>=o.r+p.r+PASS_GAP);}
+  const grid=obstacleGrid(l.obstacles);for(const [ax,ay,bx,by] of l.roads)for(let t=0;t<=1;t+=.01)assert(!blocked(grid,ax+(bx-ax)*t,ay+(by-ay)*t,ROAD_CLEAR-10),key+' road blocked');
+  for(const z of l.regions)assert(!blocked(grid,z.cx,z.cy,40));
+  const pond=l.obstacles.find(o=>o.kind!=='fence'),e={x:pond.x+1,y:pond.y,r:19};constrain(grid,e);assert(!blocked(grid,e.x,e.y,18.5));}
+});

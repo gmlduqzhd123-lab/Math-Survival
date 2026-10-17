@@ -1,9 +1,10 @@
 const $=id=>document.getElementById(id);
 // UI preferences never replace learning or progression records.
 export function createPlayUI(r){
- let dialog,focusedAnswer=null,prefs={autoSkill:true,answers:'orbs',map:false,fullscreen:!navigator.webdriver};
+ let dialog,focusedAnswer=null,prefs={autoSkill:true,answers:'orbs',map:true,mapChosen:false,fullscreen:!navigator.webdriver};
  // Automated browsers start windowed so regression suites can still resize the viewport mid-game.
- try{const saved=JSON.parse(localStorage.getItem('math-survival.ui.v1')||'null');if(saved){prefs.autoSkill=saved.autoSkill!==false;prefs.answers=saved.answers==='buttons'?'buttons':'orbs';prefs.map=saved.map===true;if(typeof saved.fullscreen==='boolean')prefs.fullscreen=saved.fullscreen;}}catch{}
+ try{const saved=JSON.parse(localStorage.getItem('math-survival.ui.v1')||'null');if(saved){prefs.autoSkill=saved.autoSkill!==false;prefs.answers=saved.answers==='buttons'?'buttons':'orbs';// The minimap starts shown; only a choice made with the 🗺 button since then turns it off.
+ prefs.mapChosen=saved.mapChosen===true;prefs.map=prefs.mapChosen?saved.map===true:true;if(typeof saved.fullscreen==='boolean')prefs.fullscreen=saved.fullscreen;}}catch{}
  function save(){try{localStorage.setItem('math-survival.ui.v1',JSON.stringify(prefs));}catch{}}
  // Fullscreen hides the browser bars. iPhone Safari has no page fullscreen, so there the 100dvh layout fills the screen instead.
  const root=document.documentElement;
@@ -47,7 +48,7 @@ export function createPlayUI(r){
   $('autoSkillToggle').checked=prefs.autoSkill;$('combatAnswerMode').value=prefs.answers;
   $('autoSkillToggle').onchange=e=>{prefs.autoSkill=e.target.checked;save();sync();};$('combatAnswerMode').onchange=e=>{prefs.answers=e.target.value;save();sync();};
   for(const [menu,original]of [['menuReduced','reducedMotion'],['menuLow','lowPower'],['menuFont','fontSize']]){const copy=$(menu),source=$(original);const update=()=>{if(copy.type==='checkbox')copy.checked=source.checked;else copy.value=source.value;};update();copy.onchange=()=>{if(copy.type==='checkbox')source.checked=copy.checked;else source.value=copy.value;source.dispatchEvent(new Event('change'));};source.addEventListener('change',update);}
-  const map=document.createElement('button');map.id='mapToggle';map.textContent='🗺';map.setAttribute('aria-label','미니맵 표시');map.setAttribute('aria-pressed',String(prefs.map));$('playfield').append(map);map.onclick=()=>{prefs.map=!prefs.map;map.setAttribute('aria-pressed',String(prefs.map));save();};
+  const map=document.createElement('button');map.id='mapToggle';map.textContent='🗺';map.setAttribute('aria-label','미니맵 표시');map.setAttribute('aria-pressed',String(prefs.map));$('playfield').append(map);map.onclick=()=>{prefs.map=!prefs.map;prefs.mapChosen=true;map.setAttribute('aria-pressed',String(prefs.map));save();};
   const mobileControls=matchMedia('(pointer: coarse) and (max-width: 1099px), (pointer: coarse) and (max-height: 550px)');
   const placeControls=()=>{document.body.classList.toggle('mobile-play',mobileControls.matches);(mobileControls.matches?$('playfield'):$('wrap')).append($('touchControls'));};
   if(mobileControls.addEventListener)mobileControls.addEventListener('change',placeControls);else mobileControls.addListener(placeControls);

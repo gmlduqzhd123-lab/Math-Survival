@@ -18,7 +18,7 @@ const profiles=[['small-phone',320,568],['phone',390,844],['landscape',844,390],
    const layout=await p.evaluate(()=>({w:document.documentElement.scrollWidth,h:document.documentElement.scrollHeight,field:document.querySelector('#game').getBoundingClientRect().toJSON()}));
    assert(layout.w<=width&&layout.h<=height);assert(layout.field.height>(name==='landscape'?130:height*.5),'calculation field too small: '+JSON.stringify(layout));
    await p.screenshot({path:`${out}/${engine}-${name}.png`});
-   await p.locator('#mapToggle').tap();assert.equal(await p.evaluate(()=>__game.v2.playUI.mapVisible),true);
+   assert.equal(await p.evaluate(()=>__game.v2.playUI.mapVisible),true,'minimap shows from the start');await p.locator('#mapToggle').tap();assert.equal(await p.evaluate(()=>__game.v2.playUI.mapVisible),false);await p.locator('#mapToggle').tap();assert.equal(await p.evaluate(()=>__game.v2.playUI.mapVisible),true);
    await p.locator('#pauseBtn').tap();assert(await p.locator('#playMenu').isVisible());
    const time=await p.evaluate(()=>__game.clock);await p.waitForTimeout(150);assert.equal(await p.evaluate(()=>__game.clock),time);
    await p.locator('#playPreferences summary').tap();await p.locator('#autoSkillToggle').uncheck();await p.selectOption('#combatAnswerMode','buttons');

@@ -10,8 +10,10 @@ function makePortals() {
       gameRuntime.portals = [];
       const colors = ["#f0abfc", "#67e8f9", "#fde047"];
       for (let i = 0; i < 3; i++) {
-        const a = { x: gameRuntime.rand(180, gameRuntime.state.worldW - 180), y: gameRuntime.rand(180, gameRuntime.state.worldH - 180), color: colors[i], pair: i * 2 + 1, pulse: gameRuntime.rand(0, 6) };
-        const b = { x: gameRuntime.rand(180, gameRuntime.state.worldW - 180), y: gameRuntime.rand(180, gameRuntime.state.worldH - 180), color: colors[i], pair: i * 2, pulse: gameRuntime.rand(0, 6) };
+        // Portals avoid rocks and ponds so both ends stay reachable.
+        const spot = () => { let p; for (let tries = 0; tries < 12; tries++) { p = { x: gameRuntime.rand(180, gameRuntime.state.worldW - 180), y: gameRuntime.rand(180, gameRuntime.state.worldH - 180) }; if (!gameRuntime.v3?.world.blocked(p.x, p.y, 110)) break; } return p; };
+        const a = { ...spot(), color: colors[i], pair: i * 2 + 1, pulse: gameRuntime.rand(0, 6) };
+        const b = { ...spot(), color: colors[i], pair: i * 2, pulse: gameRuntime.rand(0, 6) };
         gameRuntime.portals.push(a, b);
       }
     }
@@ -427,7 +429,9 @@ function drawPet(now) {
 // On touch screens the joystick and dash button sit over the bottom corners, so the minimap moves to the top right.
 function miniMapRect() {
       if(!gameRuntime.v2.playUI.mapVisible||gameRuntime.canvas.height<220)return null;
-      const w = Math.min(156,gameRuntime.canvas.width*.2), h = Math.min(104,gameRuntime.canvas.height*.2), top = document.body.classList.contains('mobile-play');
+      // Same 4:3 shape as the world, about 30% of the play area wide.
+      const top = document.body.classList.contains('mobile-play');
+      const h = Math.min(180, gameRuntime.canvas.width*.3*.75, gameRuntime.canvas.height*.3), w = h/.75;
       return {x:gameRuntime.canvas.width - w - (top?10:16), y:top?10:gameRuntime.canvas.height - h - 16, w, h};
     }
 
