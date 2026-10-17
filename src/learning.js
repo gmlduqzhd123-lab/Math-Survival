@@ -21,6 +21,6 @@ export function downloadReview(record){
  if(!record?.reviewProblems?.length)return;
  const blob=new Blob([toReviewCSV(record)],{type:'text/csv;charset=utf-8'});
  const url=URL.createObjectURL(blob),a=document.createElement('a');
- a.href=url;a.download=`틀린-문제와-해설-${record.date.slice(0,10)}.csv`;a.click();
+ a.href=url;a.download=`틀린-문제와-해설-${record.studentNo?record.studentNo+'번-':''}${record.date.slice(0,10)}.csv`;a.click();
  setTimeout(()=>URL.revokeObjectURL(url),1000);
 }

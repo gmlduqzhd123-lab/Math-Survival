@@ -26,7 +26,8 @@ function checkLevelUp() {
         need = gameRuntime.expNeed();
       }
       if(gameRuntime.state.mode==="explore"){gameRuntime.state.levelUpQueue=0;return;}
-      if (gameRuntime.state.levelUpQueue > 0 && !gameRuntime.state.levelUpPending) gameRuntime.openLevelUpPanel();
+      // In the math popup the reward card waits until the student has read the explanation.
+      if (gameRuntime.state.levelUpQueue > 0 && !gameRuntime.state.levelUpPending && !gameRuntime.state.mathPopup) gameRuntime.openLevelUpPanel();
     }
 
 function upgradeOptions() {

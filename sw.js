@@ -55,6 +55,7 @@ const APP_SHELL = [
     './src/player.js',
     './src/question-visual.js',
     './src/render-budget.js',
+    './src/speech.js',
     './src/sprites.js',
     './src/state.js',
     './src/storage.js',

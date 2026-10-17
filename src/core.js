@@ -1,6 +1,7 @@
 import {bossSchedule} from './v3/performance.js';
 // Extracted from upstream. Cross-system state is supplied by the shared runtime.
 import {renderDpr} from './render-budget.js';
+export const ORB_HOLD_MS = 600;
 export function createSystem(gameRuntime) {
 function gameNow(){ return gameRuntime.clock; }
 
@@ -159,8 +160,6 @@ function resetGame() {
 
       gameRuntime.spawnItem(gameRuntime.player.x - 180, gameRuntime.player.y + 130, "book");
       gameRuntime.spawnItem(gameRuntime.player.x, gameRuntime.player.y + 170, "heart");
-      gameRuntime.spawnItem(gameRuntime.player.x + 180, gameRuntime.player.y + 130, "shield");
-      gameRuntime.spawnItem(gameRuntime.player.x, gameRuntime.player.y - 190, "expBook");
       gameRuntime.spawnItem(gameRuntime.player.x + 260, gameRuntime.player.y, "chest");
       gameRuntime.showToast(`${gameRuntime.state.map.name} 입장! 큰 맵을 돌아다니며 살아남으세요.`);
       gameRuntime.v2.start();
@@ -429,10 +428,14 @@ function update(dt, now) {
 
       for (const orb of gameRuntime.answerOrbs) {
         orb.pulse += dt / 190;
+        // Brushing past an orb while dodging should not count as an answer: stay on it briefly to choose it.
         if (Math.hypot(gameRuntime.player.x - orb.x, gameRuntime.player.y - orb.y) < gameRuntime.player.r + orb.r) {
-          gameRuntime.resolveAnswer(orb);
-          break;
-        }
+          orb.hold = (orb.hold || 0) + dt;
+          if (orb.hold >= ORB_HOLD_MS) {
+            gameRuntime.resolveAnswer(orb);
+            break;
+          }
+        } else orb.hold = 0;
       }
 
       for (const item of gameRuntime.items) {

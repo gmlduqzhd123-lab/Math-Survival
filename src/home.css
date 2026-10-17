@@ -72,3 +72,6 @@
  #startPanel .titleRow h1 .edition{top:-10px}
  #quickStart .quickPrompt{margin:6px 0 4px}
 }
+#quickStart>#studentField{display:flex;flex-wrap:wrap;align-items:center;gap:6px 10px;margin:4px 0 8px;font-size:17px;font-weight:800;color:#2f4a2e}
+#studentField input{width:110px;min-height:44px;padding:6px 10px;border:3px solid #2f4a2e;border-radius:12px;font:inherit;font-size:20px;text-align:center;background:#fffdf5;color:#2f4a2e}
+#studentField small{flex:1 1 180px;font-size:13px;font-weight:600;color:#5b6b52;line-height:1.35;word-break:keep-all}

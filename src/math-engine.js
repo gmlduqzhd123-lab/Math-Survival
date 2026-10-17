@@ -43,7 +43,10 @@ export function generateProblem(config,curriculum,rng){
  case 'area':operands=[a,b];answer=`${a*b}cm²`;unit='cm²';text=`가로 ${a} cm, 세로 ${b} cm인 직사각형의 넓이는?`;explain=`가로 × 세로 = ${a} × ${b} = ${answer}입니다.`;break;
  case 'volume':operands=[a,b,level+1];answer=`${a*b*(level+1)}cm³`;unit='cm³';text=`가로 ${a}, 세로 ${b}, 높이 ${level+1} cm인 직육면체의 부피는?`;explain=`가로 × 세로 × 높이 = ${answer}입니다.`;break;
  case 'angle':{const x=int(rng,2,3+level)*10,y=int(rng,2,3+level)*10;operands=[x,y];answer=`${180-x-y}도`;unit='도';text=`삼각형의 두 각이 ${x}도, ${y}도일 때 나머지 각은?`;explain=`삼각형의 세 각의 합은 180도. 180 − ${x} − ${y} = ${answer}.`;break;}
- case 'shapes':{const shapes=[['삼각형',3],['사각형',4],['오각형',5],['육각형',6]];const [name,n]=shapes[int(rng,0,grade.grade===1?1:3)],orientation=int(rng,0,2);operands=[n,orientation];answer=String(n);text=`${['바로 놓인','돌려 놓인','뒤집어 놓인'][orientation]} ${name}의 변은 몇 개인가요?`;explain=`${name}에는 변이 ${n}개 있습니다. 방향을 바꾸어도 변의 개수는 같습니다.`;break;}
+ case 'shapes':{const shapes=[['삼각형',3],['사각형',4],['오각형',5],['육각형',6]];const [name,n]=shapes[int(rng,0,grade.grade===1?1:3)],orientation=int(rng,0,2),place=['바로 놓인','돌려 놓인','뒤집어 놓인'][orientation];operands=[n,orientation];answer=String(n);
+  // 1학년은 '변' 대신 교과서의 '모양'과 '곧은 선' 표현을 써요.
+  if(grade.grade===1){const shape=n===3?'△(세모)':'□(네모)';text=`${place} ${shape} 모양에서 곧은 선은 몇 개인가요?`;explain=`${shape} 모양에는 곧은 선이 ${n}개 있어요. 방향을 바꾸어도 곧은 선의 개수는 같아요.`;}
+  else{text=`${place} ${name}의 변은 몇 개인가요?`;explain=`${name}에는 변이 ${n}개 있습니다. 방향을 바꾸어도 변의 개수는 같습니다.`;}break;}
  case 'patterns':operands=[a,b];answer=String(a+3*b);text=`${a}, ${a+b}, ${a+2*b}, □. 빈칸은?`;explain=`${b}씩 커지는 규칙이므로 다음 수는 ${answer}입니다.`;break;
  case 'average':operands=[a,a+b,a+2*b];answer=String(a+b);text=`${a}, ${a+b}, ${a+2*b}의 평균은?`;explain=`세 수의 합 ${3*(a+b)}을 자료 수 3으로 나누면 ${answer}입니다.`;break;
  case 'percent':{const p=int(rng,1,9)*10,total=int(rng,1,level+2)*100;operands=[p,total];answer=String(p*total/100);text=`${total}의 ${p}%는?`;explain=`${total} × ${p}/100 = ${answer}입니다.`;break;}
@@ -87,7 +90,9 @@ export function generateProblem(config,curriculum,rng){
  while(opts.length<4){
   let value;
   const offset=(k%2?1:-1)*Math.ceil(k/2);
-  if(answer.includes('/')){const [n,d]=answer.split('/').map(Number);if(n+offset<0){k++;continue;}value=frac(n+offset,d);}
+  // Fraction questions keep fraction choices even when the answer is a whole number (no 1.0333 next to 25/36).
+  const fractionAnswer=answer.includes('/')||/^fraction|Fraction$/.test(type)&&Number.isInteger(Number(answer));
+  if(fractionAnswer){const [n,d]=answer.includes('/')?answer.split('/').map(Number):[Number(answer)*Math.round(1/step),Math.round(1/step)];if(n+offset<0){k++;continue;}value=frac(n+offset,d);}
   else {const raw=parseFloat(answer),next=Math.round((raw+step*offset)*10000)/10000;if(next<0){k++;continue;}value=String(next)+unit;}
   const key=rational(value);if(!canonical.has(key)){canonical.add(key);opts.push(value);misconceptions[key]='near-value';}k++;
  }

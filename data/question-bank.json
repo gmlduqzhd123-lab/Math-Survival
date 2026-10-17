@@ -1,16 +1,16 @@
 {
   "schemaVersion": 2,
   "curriculumVersion": "2022-revised-practice-v3",
-  "generatorVersion": "4",
+  "generatorVersion": "5",
   "description": "44 연습 단원 × 5개 대표 표본. 지원 단계에서 생성한 표본이며 전체 교육과정 평가를 대체하지 않습니다.",
   "problems": [
     {
       "id": "g1-add:add:1:2",
       "conceptId": "g1-add:add:1:2",
-      "instanceId": "f8607317-cc1d-4f5a-9988-414ab013d493",
+      "instanceId": "976e9ef6-7b5f-49bc-874f-971f32d4de05",
       "seed": 20261009,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 1,
       "explanationSteps": [
         "1에 2를 더하면 3입니다.",
@@ -52,10 +52,10 @@
     {
       "id": "g1-add:add:1:5",
       "conceptId": "g1-add:add:1:5",
-      "instanceId": "82090c45-37d9-4324-8fd8-2b477e71d18c",
+      "instanceId": "04e149d4-8b30-4a14-86df-574b12827ced",
       "seed": 20261010,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 2,
       "explanationSteps": [
         "1에 5를 더하면 6입니다.",
@@ -97,10 +97,10 @@
     {
       "id": "g1-add:add:2:4",
       "conceptId": "g1-add:add:2:4",
-      "instanceId": "5e534b43-cc87-4209-a891-9d34e1531060",
+      "instanceId": "0625b0c4-21c3-42ab-899b-50f465c055d7",
       "seed": 20261011,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 3,
       "explanationSteps": [
         "2에 4를 더하면 6입니다.",
@@ -142,10 +142,10 @@
     {
       "id": "g1-add:add:3:3",
       "conceptId": "g1-add:add:3:3",
-      "instanceId": "4409d095-24b3-4646-a94d-a31b506ff04b",
+      "instanceId": "d801c0d3-7860-4f9b-a7b9-2e30ac1ca9e3",
       "seed": 20261012,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 4,
       "explanationSteps": [
         "3에 3를 더하면 6입니다.",
@@ -187,10 +187,10 @@
     {
       "id": "g1-add:add:4:1",
       "conceptId": "g1-add:add:4:1",
-      "instanceId": "0b9a1f50-2b85-4132-918e-f002c56323e5",
+      "instanceId": "94ed872d-edbf-4f1c-a5a6-fd49b2d1a662",
       "seed": 20261013,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 5,
       "explanationSteps": [
         "4에 1를 더하면 5입니다.",
@@ -232,10 +232,10 @@
     {
       "id": "g1-sub:subtract:5:3",
       "conceptId": "g1-sub:subtract:5:3",
-      "instanceId": "7f63e220-c841-481b-9bc9-3bf8fe7788b6",
+      "instanceId": "e1bbc1f4-38ee-4771-a6fb-60a4acb14c88",
       "seed": 20261014,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 1,
       "explanationSteps": [
         "5에서 3만큼 빼면 2입니다."
@@ -276,10 +276,10 @@
     {
       "id": "g1-sub:subtract:6:2",
       "conceptId": "g1-sub:subtract:6:2",
-      "instanceId": "e3f9e353-c3d4-4689-b8e1-ac811039581a",
+      "instanceId": "a56bbbc5-04e2-4fb3-a711-4368fd3248cc",
       "seed": 20261015,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 2,
       "explanationSteps": [
         "6에서 2만큼 빼면 4입니다."
@@ -320,10 +320,10 @@
     {
       "id": "g1-sub:subtract:7:7",
       "conceptId": "g1-sub:subtract:7:7",
-      "instanceId": "7eea5528-6900-427b-93bc-42e513296ce8",
+      "instanceId": "e3fdaeb5-29d2-4426-908d-cb287f9f9b5a",
       "seed": 20261016,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 3,
       "explanationSteps": [
         "7에서 7만큼 빼면 0입니다."
@@ -364,10 +364,10 @@
     {
       "id": "g1-sub:subtract:9:6",
       "conceptId": "g1-sub:subtract:9:6",
-      "instanceId": "73ba6232-eb35-46d0-a5c5-05c250c8fa40",
+      "instanceId": "091ce28b-e8cc-4c3c-975f-2a0f99bec79d",
       "seed": 20261017,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 4,
       "explanationSteps": [
         "9에서 6만큼 빼면 3입니다."
@@ -408,10 +408,10 @@
     {
       "id": "g1-sub:subtract:10:3",
       "conceptId": "g1-sub:subtract:10:3",
-      "instanceId": "2f852606-addc-42fb-af22-5ce22b949720",
+      "instanceId": "335715ae-2ea9-473b-9266-35d0c70a2cfe",
       "seed": 20261018,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 5,
       "explanationSteps": [
         "10에서 3만큼 빼면 7입니다."
@@ -452,14 +452,14 @@
     {
       "id": "g1-shapes:shapes:4:2",
       "conceptId": "g1-shapes:shapes:4:2",
-      "instanceId": "e5305a1c-e7e4-46c5-9453-bf19efaf92a1",
+      "instanceId": "4ef88a01-9674-45e2-a346-70ebfdcb8010",
       "seed": 20261019,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 1,
       "explanationSteps": [
-        "사각형에는 변이 4개 있습니다.",
-        "방향을 바꾸어도 변의 개수는 같습니다."
+        "□(네모) 모양에는 곧은 선이 4개 있어요.",
+        "방향을 바꾸어도 곧은 선의 개수는 같아요."
       ],
       "optionMisconceptions": [
         "miss-one-edge",
@@ -483,9 +483,9 @@
         4,
         2
       ],
-      "text": "뒤집어 놓인 사각형의 변은 몇 개인가요?",
+      "text": "뒤집어 놓인 □(네모) 모양에서 곧은 선은 몇 개인가요?",
       "answer": "4",
-      "explain": "사각형에는 변이 4개 있습니다. 방향을 바꾸어도 변의 개수는 같습니다.",
+      "explain": "□(네모) 모양에는 곧은 선이 4개 있어요. 방향을 바꾸어도 곧은 선의 개수는 같아요.",
       "options": [
         "3",
         "4",
@@ -496,14 +496,14 @@
     {
       "id": "g1-shapes:shapes:4:1",
       "conceptId": "g1-shapes:shapes:4:1",
-      "instanceId": "221fab85-3f89-4914-afc2-b9f0a7dfb84f",
+      "instanceId": "d12dc3c6-d754-4125-aa42-92bed6ee6f51",
       "seed": 20261020,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 1,
       "explanationSteps": [
-        "사각형에는 변이 4개 있습니다.",
-        "방향을 바꾸어도 변의 개수는 같습니다."
+        "□(네모) 모양에는 곧은 선이 4개 있어요.",
+        "방향을 바꾸어도 곧은 선의 개수는 같아요."
       ],
       "optionMisconceptions": [
         "near-value",
@@ -527,9 +527,9 @@
         4,
         1
       ],
-      "text": "돌려 놓인 사각형의 변은 몇 개인가요?",
+      "text": "돌려 놓인 □(네모) 모양에서 곧은 선은 몇 개인가요?",
       "answer": "4",
-      "explain": "사각형에는 변이 4개 있습니다. 방향을 바꾸어도 변의 개수는 같습니다.",
+      "explain": "□(네모) 모양에는 곧은 선이 4개 있어요. 방향을 바꾸어도 곧은 선의 개수는 같아요.",
       "options": [
         "6",
         "5",
@@ -540,14 +540,14 @@
     {
       "id": "g1-shapes:shapes:3:0",
       "conceptId": "g1-shapes:shapes:3:0",
-      "instanceId": "aa5bb4ea-0129-4986-af35-9c5511880c75",
+      "instanceId": "0a9d9247-61ed-415e-abf8-e618c57cd6bd",
       "seed": 20261021,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 1,
       "explanationSteps": [
-        "삼각형에는 변이 3개 있습니다.",
-        "방향을 바꾸어도 변의 개수는 같습니다."
+        "△(세모) 모양에는 곧은 선이 3개 있어요.",
+        "방향을 바꾸어도 곧은 선의 개수는 같아요."
       ],
       "optionMisconceptions": [
         "miss-one-edge",
@@ -571,9 +571,9 @@
         3,
         0
       ],
-      "text": "바로 놓인 삼각형의 변은 몇 개인가요?",
+      "text": "바로 놓인 △(세모) 모양에서 곧은 선은 몇 개인가요?",
       "answer": "3",
-      "explain": "삼각형에는 변이 3개 있습니다. 방향을 바꾸어도 변의 개수는 같습니다.",
+      "explain": "△(세모) 모양에는 곧은 선이 3개 있어요. 방향을 바꾸어도 곧은 선의 개수는 같아요.",
       "options": [
         "2",
         "5",
@@ -584,14 +584,14 @@
     {
       "id": "g1-shapes:shapes:3:2",
       "conceptId": "g1-shapes:shapes:3:2",
-      "instanceId": "eec398e1-4fdb-40a5-8013-3e4597838fc3",
+      "instanceId": "06dc1dd2-ed34-424b-926f-7fa043a8ddd8",
       "seed": 20261022,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 1,
       "explanationSteps": [
-        "삼각형에는 변이 3개 있습니다.",
-        "방향을 바꾸어도 변의 개수는 같습니다."
+        "△(세모) 모양에는 곧은 선이 3개 있어요.",
+        "방향을 바꾸어도 곧은 선의 개수는 같아요."
       ],
       "optionMisconceptions": [
         "extra-edge",
@@ -615,9 +615,9 @@
         3,
         2
       ],
-      "text": "뒤집어 놓인 삼각형의 변은 몇 개인가요?",
+      "text": "뒤집어 놓인 △(세모) 모양에서 곧은 선은 몇 개인가요?",
       "answer": "3",
-      "explain": "삼각형에는 변이 3개 있습니다. 방향을 바꾸어도 변의 개수는 같습니다.",
+      "explain": "△(세모) 모양에는 곧은 선이 3개 있어요. 방향을 바꾸어도 곧은 선의 개수는 같아요.",
       "options": [
         "4",
         "2",
@@ -628,14 +628,14 @@
     {
       "id": "g1-shapes:shapes:3:1",
       "conceptId": "g1-shapes:shapes:3:1",
-      "instanceId": "abce4d48-9783-4481-9211-781950e30b81",
+      "instanceId": "566dc5f5-60de-4fab-847e-8a6c2c97b9f3",
       "seed": 20261023,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 1,
       "explanationSteps": [
-        "삼각형에는 변이 3개 있습니다.",
-        "방향을 바꾸어도 변의 개수는 같습니다."
+        "△(세모) 모양에는 곧은 선이 3개 있어요.",
+        "방향을 바꾸어도 곧은 선의 개수는 같아요."
       ],
       "optionMisconceptions": [
         "correct",
@@ -659,9 +659,9 @@
         3,
         1
       ],
-      "text": "돌려 놓인 삼각형의 변은 몇 개인가요?",
+      "text": "돌려 놓인 △(세모) 모양에서 곧은 선은 몇 개인가요?",
       "answer": "3",
-      "explain": "삼각형에는 변이 3개 있습니다. 방향을 바꾸어도 변의 개수는 같습니다.",
+      "explain": "△(세모) 모양에는 곧은 선이 3개 있어요. 방향을 바꾸어도 곧은 선의 개수는 같아요.",
       "options": [
         "3",
         "5",
@@ -672,10 +672,10 @@
     {
       "id": "g1-pattern:patterns:4:4",
       "conceptId": "g1-pattern:patterns:4:4",
-      "instanceId": "a5b34275-de31-4af6-a254-68ab6be46e27",
+      "instanceId": "17af7204-c602-4c22-9c15-7b0df007304b",
       "seed": 20261024,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 1,
       "explanationSteps": [
         "4씩 커지는 규칙이므로 다음 수는 16입니다."
@@ -715,10 +715,10 @@
     {
       "id": "g1-pattern:patterns:6:3",
       "conceptId": "g1-pattern:patterns:6:3",
-      "instanceId": "04d0bdd1-7034-400e-b83f-0a2c2dd544c0",
+      "instanceId": "82a8c792-c5f4-46ba-a78c-bc314fc61e56",
       "seed": 20261025,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 2,
       "explanationSteps": [
         "3씩 커지는 규칙이므로 다음 수는 15입니다."
@@ -758,10 +758,10 @@
     {
       "id": "g1-pattern:patterns:9:9",
       "conceptId": "g1-pattern:patterns:9:9",
-      "instanceId": "b69c70c5-5613-48ca-b5af-4209b040dc48",
+      "instanceId": "78d646ab-0574-48bd-b889-eb35f732d542",
       "seed": 20261026,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 3,
       "explanationSteps": [
         "9씩 커지는 규칙이므로 다음 수는 36입니다."
@@ -801,10 +801,10 @@
     {
       "id": "g1-pattern:patterns:12:8",
       "conceptId": "g1-pattern:patterns:12:8",
-      "instanceId": "a47c80b7-e662-49d2-bbfe-12dd53ff2074",
+      "instanceId": "85a04b2e-4d88-434a-9cf3-f35bdbe45274",
       "seed": 20261027,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 4,
       "explanationSteps": [
         "8씩 커지는 규칙이므로 다음 수는 36입니다."
@@ -844,10 +844,10 @@
     {
       "id": "g1-pattern:patterns:16:5",
       "conceptId": "g1-pattern:patterns:16:5",
-      "instanceId": "e56eeb9f-04e1-4d73-85cd-c48b546ae670",
+      "instanceId": "91983c94-10ef-44d5-a86b-98528355be7c",
       "seed": 20261028,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 5,
       "explanationSteps": [
         "5씩 커지는 규칙이므로 다음 수는 31입니다."
@@ -887,10 +887,10 @@
     {
       "id": "g1-data:tableCount:4:4",
       "conceptId": "g1-data:tableCount:4:4",
-      "instanceId": "973691ca-56f0-4411-9a70-e47721a0e419",
+      "instanceId": "712c12cc-716b-42e4-8259-77cda5a37f09",
       "seed": 20261029,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 1,
       "explanationSteps": [
         "두 자료의 수를 더하면 4 + 4 = 8입니다."
@@ -931,10 +931,10 @@
     {
       "id": "g1-data:tableCount:5:4",
       "conceptId": "g1-data:tableCount:5:4",
-      "instanceId": "80bff960-7a08-41b7-b69f-e1aa9043c98a",
+      "instanceId": "2ed784c7-0a69-4d43-9b46-a8722727a868",
       "seed": 20261030,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 2,
       "explanationSteps": [
         "두 자료의 수를 더하면 5 + 4 = 9입니다."
@@ -975,10 +975,10 @@
     {
       "id": "g1-data:tableCount:1:3",
       "conceptId": "g1-data:tableCount:1:3",
-      "instanceId": "44129311-f2cf-4321-ba79-48cd01a09f0e",
+      "instanceId": "57db6153-cc85-40a2-9fdf-b898eaef930f",
       "seed": 20261031,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 3,
       "explanationSteps": [
         "두 자료의 수를 더하면 1 + 3 = 4입니다."
@@ -1019,10 +1019,10 @@
     {
       "id": "g1-data:tableCount:2:1",
       "conceptId": "g1-data:tableCount:2:1",
-      "instanceId": "2c074284-6cda-45b0-8f60-15b8cb31a63e",
+      "instanceId": "91d100a6-480f-43cf-a6e0-d155910aa2a7",
       "seed": 20261032,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 4,
       "explanationSteps": [
         "두 자료의 수를 더하면 2 + 1 = 3입니다."
@@ -1063,10 +1063,10 @@
     {
       "id": "g1-data:tableCount:3:6",
       "conceptId": "g1-data:tableCount:3:6",
-      "instanceId": "419a48a3-c395-4c5e-919b-0f40b06aa7f7",
+      "instanceId": "3a9e3031-31ca-48df-bd3c-7e457bf10eb2",
       "seed": 20261033,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 5,
       "explanationSteps": [
         "두 자료의 수를 더하면 3 + 6 = 9입니다."
@@ -1107,10 +1107,10 @@
     {
       "id": "g2-add:add:7:8",
       "conceptId": "g2-add:add:7:8",
-      "instanceId": "7041fd74-29b5-41bf-9eeb-1e7ca890f736",
+      "instanceId": "3da055ea-21d6-4595-8b0d-d0ec7bf905e0",
       "seed": 20261034,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 1,
       "explanationSteps": [
         "7에 8를 더하면 15입니다.",
@@ -1151,10 +1151,10 @@
     {
       "id": "g2-add:add:18:4",
       "conceptId": "g2-add:add:18:4",
-      "instanceId": "9b145d81-36aa-4f0a-a11c-42ad8fe5493e",
+      "instanceId": "b89408ba-b822-48c1-92f7-98de78cb3056",
       "seed": 20261035,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 2,
       "explanationSteps": [
         "18에 4를 더하면 22입니다.",
@@ -1195,10 +1195,10 @@
     {
       "id": "g2-add:add:32:46",
       "conceptId": "g2-add:add:32:46",
-      "instanceId": "e3b5a94e-80a8-4e42-983b-43f618fbf8a3",
+      "instanceId": "39a8c502-6154-4900-948c-96b217aae940",
       "seed": 20261036,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 3,
       "explanationSteps": [
         "32에 46를 더하면 78입니다.",
@@ -1239,10 +1239,10 @@
     {
       "id": "g2-add:add:50:37",
       "conceptId": "g2-add:add:50:37",
-      "instanceId": "92face57-7f3f-4f5f-af55-d26a805816d9",
+      "instanceId": "d27c6240-1be6-4735-b4ce-8654c8a69188",
       "seed": 20261037,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 4,
       "explanationSteps": [
         "50에 37를 더하면 87입니다.",
@@ -1283,10 +1283,10 @@
     {
       "id": "g2-add:add:71:15",
       "conceptId": "g2-add:add:71:15",
-      "instanceId": "8337ab11-3a60-405b-9a65-019e88205a55",
+      "instanceId": "730dc93c-d4c0-4d12-b44d-64b57b32f1f4",
       "seed": 20261038,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 5,
       "explanationSteps": [
         "71에 15를 더하면 86입니다.",
@@ -1327,10 +1327,10 @@
     {
       "id": "g2-sub:subtract:14:4",
       "conceptId": "g2-sub:subtract:14:4",
-      "instanceId": "b97d1549-2e52-4675-92b2-bc7e2a6bf7dd",
+      "instanceId": "e0ff9975-b326-40f6-93a3-6642bf23f1b5",
       "seed": 20261039,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 1,
       "explanationSteps": [
         "14에서 4만큼 빼면 10입니다."
@@ -1370,10 +1370,10 @@
     {
       "id": "g2-sub:subtract:30:27",
       "conceptId": "g2-sub:subtract:30:27",
-      "instanceId": "c55d3712-8bc7-40f1-8f4b-0f467fcba650",
+      "instanceId": "938fa2a7-a505-44c5-b817-81f41f4f0297",
       "seed": 20261040,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 2,
       "explanationSteps": [
         "30에서 27만큼 빼면 3입니다."
@@ -1413,10 +1413,10 @@
     {
       "id": "g2-sub:subtract:46:26",
       "conceptId": "g2-sub:subtract:46:26",
-      "instanceId": "6713e76a-d29c-4eae-9bc1-c6094a8a27c3",
+      "instanceId": "d34074fc-e002-4392-8979-3b4e24cc4393",
       "seed": 20261041,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 3,
       "explanationSteps": [
         "46에서 26만큼 빼면 20입니다."
@@ -1456,10 +1456,10 @@
     {
       "id": "g2-sub:subtract:65:15",
       "conceptId": "g2-sub:subtract:65:15",
-      "instanceId": "cc95e250-206e-435d-932c-20ce5af893df",
+      "instanceId": "10fc2e56-feae-4f9b-9a2f-500ff06542fb",
       "seed": 20261042,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 4,
       "explanationSteps": [
         "65에서 15만큼 빼면 50입니다."
@@ -1499,10 +1499,10 @@
     {
       "id": "g2-sub:subtract:85:76",
       "conceptId": "g2-sub:subtract:85:76",
-      "instanceId": "6cc810e8-feda-4e6e-bf60-9d4402458a8a",
+      "instanceId": "bc24fbe7-d9db-4f88-ad3b-70e5e0cd0274",
       "seed": 20261043,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 5,
       "explanationSteps": [
         "85에서 76만큼 빼면 9입니다."
@@ -1542,10 +1542,10 @@
     {
       "id": "g2-mul:multiply:2:2",
       "conceptId": "g2-mul:multiply:2:2",
-      "instanceId": "cf479537-b147-4ad1-944c-dfae1d35f4fa",
+      "instanceId": "d6d6a6ed-3d6a-4afb-9d9d-1f410d6453fe",
       "seed": 20261044,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 1,
       "explanationSteps": [
         "2을 2번 더하면 4입니다."
@@ -1585,10 +1585,10 @@
     {
       "id": "g2-mul:multiply:3:5",
       "conceptId": "g2-mul:multiply:3:5",
-      "instanceId": "71d58df7-bdf1-42e6-a9b3-ba454e377cc1",
+      "instanceId": "d024d2b9-06f6-40c5-bcfb-311ed6d562aa",
       "seed": 20261045,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 2,
       "explanationSteps": [
         "3을 5번 더하면 15입니다."
@@ -1628,10 +1628,10 @@
     {
       "id": "g2-mul:multiply:4:5",
       "conceptId": "g2-mul:multiply:4:5",
-      "instanceId": "82380657-adf7-4c33-b39e-ed1daf9368c2",
+      "instanceId": "58407fa6-83af-4da1-aaa1-31a6fd97a85b",
       "seed": 20261046,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 3,
       "explanationSteps": [
         "4을 5번 더하면 20입니다."
@@ -1671,10 +1671,10 @@
     {
       "id": "g2-mul:multiply:5:4",
       "conceptId": "g2-mul:multiply:5:4",
-      "instanceId": "dcb42b8e-aebc-41f8-b458-10feeffdecdb",
+      "instanceId": "cc0cb354-fea5-4189-88c5-405a18836be8",
       "seed": 20261047,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 4,
       "explanationSteps": [
         "5을 4번 더하면 20입니다."
@@ -1714,10 +1714,10 @@
     {
       "id": "g2-mul:multiply:6:9",
       "conceptId": "g2-mul:multiply:6:9",
-      "instanceId": "a46f02f6-6d3f-4aa1-a246-33b181cce78d",
+      "instanceId": "e5121d57-11e2-4c59-9ca0-0ec4710e145f",
       "seed": 20261048,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 5,
       "explanationSteps": [
         "6을 9번 더하면 54입니다."
@@ -1757,10 +1757,10 @@
     {
       "id": "g2-length:length:6",
       "conceptId": "g2-length:length:6",
-      "instanceId": "529c18dc-7b03-45fe-8607-0f553c88472a",
+      "instanceId": "1e98d8cf-fd25-4826-9fe0-318fe3aefdd4",
       "seed": 20261049,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 1,
       "explanationSteps": [
         "1 m = 100 cm이므로 6 × 100 = 600 cm입니다."
@@ -1799,10 +1799,10 @@
     {
       "id": "g2-length:length:9",
       "conceptId": "g2-length:length:9",
-      "instanceId": "c1dbc7ec-6aba-460a-af73-0df2d6d24e08",
+      "instanceId": "ffee6f9e-5e00-499b-91a9-8dfef034a009",
       "seed": 20261050,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 2,
       "explanationSteps": [
         "1 m = 100 cm이므로 9 × 100 = 900 cm입니다."
@@ -1841,10 +1841,10 @@
     {
       "id": "g2-length:length:12",
       "conceptId": "g2-length:length:12",
-      "instanceId": "c0b0c5c1-c3bd-4952-9049-e29b4fb766b1",
+      "instanceId": "93cef274-ee43-4b67-bb4a-8a393d4ea5f3",
       "seed": 20261051,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 3,
       "explanationSteps": [
         "1 m = 100 cm이므로 12 × 100 = 1200 cm입니다."
@@ -1883,10 +1883,10 @@
     {
       "id": "g2-length:length:16",
       "conceptId": "g2-length:length:16",
-      "instanceId": "90d0b8f8-2a03-44da-9371-af8427f9e407",
+      "instanceId": "a0b5cb55-8b11-4591-8b59-e70a59f7c4d0",
       "seed": 20261052,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 4,
       "explanationSteps": [
         "1 m = 100 cm이므로 16 × 100 = 1600 cm입니다."
@@ -1925,10 +1925,10 @@
     {
       "id": "g2-length:length:3",
       "conceptId": "g2-length:length:3",
-      "instanceId": "69cfcea6-53c3-472a-af5f-6a8d71b2132c",
+      "instanceId": "7f87ffd1-becd-4821-a753-9dbe76d6a54c",
       "seed": 20261053,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 5,
       "explanationSteps": [
         "1 m = 100 cm이므로 3 × 100 = 300 cm입니다."
@@ -1967,10 +1967,10 @@
     {
       "id": "g2-pattern:patterns:2:2",
       "conceptId": "g2-pattern:patterns:2:2",
-      "instanceId": "32d496d2-ba58-4ebd-9d29-fa439b4d7af4",
+      "instanceId": "d4916d26-23fd-40d1-b524-bc08e9be2cf3",
       "seed": 20261054,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 1,
       "explanationSteps": [
         "2씩 커지는 규칙이므로 다음 수는 8입니다."
@@ -2010,10 +2010,10 @@
     {
       "id": "g2-pattern:patterns:4:6",
       "conceptId": "g2-pattern:patterns:4:6",
-      "instanceId": "085ee505-a9c6-4898-ae2e-d58f43bda86d",
+      "instanceId": "40eaed47-b85c-4877-aa2a-cba74fc984b9",
       "seed": 20261055,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 2,
       "explanationSteps": [
         "6씩 커지는 규칙이므로 다음 수는 22입니다."
@@ -2053,10 +2053,10 @@
     {
       "id": "g2-pattern:patterns:6:5",
       "conceptId": "g2-pattern:patterns:6:5",
-      "instanceId": "d036d1ce-0160-4706-850c-d27084f836f6",
+      "instanceId": "0f80d2c2-fb8b-4fa1-a93d-98968fb38f75",
       "seed": 20261056,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 3,
       "explanationSteps": [
         "5씩 커지는 규칙이므로 다음 수는 21입니다."
@@ -2096,10 +2096,10 @@
     {
       "id": "g2-pattern:patterns:8:3",
       "conceptId": "g2-pattern:patterns:8:3",
-      "instanceId": "6251d21d-d2a9-4165-9de8-daace9347c69",
+      "instanceId": "de28a26f-60ac-4524-8fa0-9f27493ef89f",
       "seed": 20261057,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 4,
       "explanationSteps": [
         "3씩 커지는 규칙이므로 다음 수는 17입니다."
@@ -2139,10 +2139,10 @@
     {
       "id": "g2-pattern:patterns:11:12",
       "conceptId": "g2-pattern:patterns:11:12",
-      "instanceId": "646fe4fc-528e-467d-a81f-cc9ef4d73d86",
+      "instanceId": "9baae0da-4704-4b0c-bc90-aa2cc63855a8",
       "seed": 20261058,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 5,
       "explanationSteps": [
         "12씩 커지는 규칙이므로 다음 수는 47입니다."
@@ -2182,10 +2182,10 @@
     {
       "id": "g2-data:pictureGraph:3:3",
       "conceptId": "g2-data:pictureGraph:3:3",
-      "instanceId": "8d4c8c62-a5ab-4877-9a96-d1ec8307ba78",
+      "instanceId": "0569e7d9-3a2b-4265-b5db-37abf4589707",
       "seed": 20261059,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 1,
       "explanationSteps": [
         "두 자료의 수를 더하면 3 + 3 = 6입니다."
@@ -2225,10 +2225,10 @@
     {
       "id": "g2-data:pictureGraph:4:2",
       "conceptId": "g2-data:pictureGraph:4:2",
-      "instanceId": "dd988867-73bc-44ed-a7a1-22d60d78eaa2",
+      "instanceId": "888a196c-0176-45cf-b051-527eed1e53cf",
       "seed": 20261060,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 2,
       "explanationSteps": [
         "두 자료의 수를 더하면 4 + 2 = 6입니다."
@@ -2268,10 +2268,10 @@
     {
       "id": "g2-data:pictureGraph:5:6",
       "conceptId": "g2-data:pictureGraph:5:6",
-      "instanceId": "82913ab0-bac8-414e-bcec-581c8c72c057",
+      "instanceId": "225bf5f5-6191-40f2-bb1a-a7c5cd8bb4f0",
       "seed": 20261061,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 3,
       "explanationSteps": [
         "두 자료의 수를 더하면 5 + 6 = 11입니다."
@@ -2311,10 +2311,10 @@
     {
       "id": "g2-data:pictureGraph:7:5",
       "conceptId": "g2-data:pictureGraph:7:5",
-      "instanceId": "cd9d7557-4960-41be-ad24-c2816732275c",
+      "instanceId": "517e9ad2-9ec2-4c9c-a216-945149334358",
       "seed": 20261062,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 4,
       "explanationSteps": [
         "두 자료의 수를 더하면 7 + 5 = 12입니다."
@@ -2354,10 +2354,10 @@
     {
       "id": "g2-data:pictureGraph:8:3",
       "conceptId": "g2-data:pictureGraph:8:3",
-      "instanceId": "49d65ef2-c733-4147-be64-6bde642a7ece",
+      "instanceId": "78809d48-f948-40da-b1e9-2a301641c3de",
       "seed": 20261063,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 5,
       "explanationSteps": [
         "두 자료의 수를 더하면 8 + 3 = 11입니다."
@@ -2397,10 +2397,10 @@
     {
       "id": "g3-mul:multiply:11:5",
       "conceptId": "g3-mul:multiply:11:5",
-      "instanceId": "eb479802-24b1-4f29-9efe-c42ceb80e4ec",
+      "instanceId": "5ee75e16-dcae-40e2-985a-9397faf8b8bc",
       "seed": 20261064,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 1,
       "explanationSteps": [
         "11을 5번 더하면 55입니다."
@@ -2440,10 +2440,10 @@
     {
       "id": "g3-mul:multiply:16:5",
       "conceptId": "g3-mul:multiply:16:5",
-      "instanceId": "5ea56f82-86eb-4912-a69a-beee91db6f5f",
+      "instanceId": "762588aa-b44b-4698-bce7-4f3ba45007ea",
       "seed": 20261065,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 2,
       "explanationSteps": [
         "16을 5번 더하면 80입니다."
@@ -2483,10 +2483,10 @@
     {
       "id": "g3-mul:multiply:24:3",
       "conceptId": "g3-mul:multiply:24:3",
-      "instanceId": "8f20bcb8-b62c-404c-ab97-c5ae6fc8035e",
+      "instanceId": "d408dca5-a246-4093-82e0-51049eb0d3e3",
       "seed": 20261066,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 3,
       "explanationSteps": [
         "24을 3번 더하면 72입니다."
@@ -2526,10 +2526,10 @@
     {
       "id": "g3-mul:multiply:34:2",
       "conceptId": "g3-mul:multiply:34:2",
-      "instanceId": "a14d20ee-36a8-4e58-ac79-5a6461dac7e6",
+      "instanceId": "60a81514-4809-46bb-8d10-92fe2f87a5c4",
       "seed": 20261067,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 4,
       "explanationSteps": [
         "34을 2번 더하면 68입니다."
@@ -2569,10 +2569,10 @@
     {
       "id": "g3-mul:multiply:47:7",
       "conceptId": "g3-mul:multiply:47:7",
-      "instanceId": "2335e271-acb8-4abc-b164-6a2c05730856",
+      "instanceId": "02e6bbec-28c3-46ea-85f5-25c2269c561b",
       "seed": 20261068,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 5,
       "explanationSteps": [
         "47을 7번 더하면 329입니다."
@@ -2612,10 +2612,10 @@
     {
       "id": "g3-div:divide:15:3",
       "conceptId": "g3-div:divide:15:3",
-      "instanceId": "9687d2a0-5336-4f44-8f2d-8eafc265383a",
+      "instanceId": "31f59de2-8414-4ac2-a1f2-18b1c95b927d",
       "seed": 20261069,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 1,
       "explanationSteps": [
         "3 × 5 = 15이므로 몫은 5입니다."
@@ -2655,10 +2655,10 @@
     {
       "id": "g3-div:divide:14:2",
       "conceptId": "g3-div:divide:14:2",
-      "instanceId": "61666b91-1f50-4823-8efd-c2f1b20513da",
+      "instanceId": "a14316c4-af75-4345-8878-4bc3d976856c",
       "seed": 20261070,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 2,
       "explanationSteps": [
         "2 × 7 = 14이므로 몫은 7입니다."
@@ -2698,10 +2698,10 @@
     {
       "id": "g3-div:divide:50:5",
       "conceptId": "g3-div:divide:50:5",
-      "instanceId": "1504e904-0281-49e7-aa37-09ad24410fd4",
+      "instanceId": "fc9aac86-cf67-4617-9cc2-7d4de04e1da0",
       "seed": 20261071,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 3,
       "explanationSteps": [
         "5 × 10 = 50이므로 몫은 10입니다."
@@ -2741,10 +2741,10 @@
     {
       "id": "g3-div:divide:52:4",
       "conceptId": "g3-div:divide:52:4",
-      "instanceId": "999e0690-08fe-4872-a11c-ee90dbd70e8b",
+      "instanceId": "f82768ee-b570-425c-81ae-f09eb8e7b881",
       "seed": 20261072,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 4,
       "explanationSteps": [
         "4 × 13 = 52이므로 몫은 13입니다."
@@ -2784,10 +2784,10 @@
     {
       "id": "g3-div:divide:34:2",
       "conceptId": "g3-div:divide:34:2",
-      "instanceId": "1f6f29e2-63ba-4405-aa41-fde436d237b3",
+      "instanceId": "9ac3044c-a317-4ffa-aefb-623e5db25ab0",
       "seed": 20261073,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 5,
       "explanationSteps": [
         "2 × 17 = 34이므로 몫은 17입니다."
@@ -2827,10 +2827,10 @@
     {
       "id": "g3-dec:decimalPlace:9",
       "conceptId": "g3-dec:decimalPlace:9",
-      "instanceId": "b9293bcf-b78c-40b4-8f79-73536dc0c190",
+      "instanceId": "2b3e66da-5f07-4871-98b3-c72dbe02137a",
       "seed": 20261074,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 1,
       "explanationSteps": [
         "0.1이 9개이면 0.9입니다.",
@@ -2870,10 +2870,10 @@
     {
       "id": "g3-dec:decimalPlace:1",
       "conceptId": "g3-dec:decimalPlace:1",
-      "instanceId": "162f694e-3ef4-4bad-a62e-f514acd777ee",
+      "instanceId": "6f44cbc0-2576-446f-b401-c45348fa8b9c",
       "seed": 20261075,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 1,
       "explanationSteps": [
         "0.1이 1개이면 0.1입니다.",
@@ -2913,10 +2913,10 @@
     {
       "id": "g3-dec:decimalPlace:1",
       "conceptId": "g3-dec:decimalPlace:1",
-      "instanceId": "5d387b32-6a81-4368-8742-c757666ae64b",
+      "instanceId": "8360ed24-e4fe-470e-9eb2-b2838bedb9f6",
       "seed": 20261076,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 1,
       "explanationSteps": [
         "0.1이 1개이면 0.1입니다.",
@@ -2956,10 +2956,10 @@
     {
       "id": "g3-dec:decimalPlace:1",
       "conceptId": "g3-dec:decimalPlace:1",
-      "instanceId": "e4af6bd8-c50b-4cb0-9e4a-a5915d3c940d",
+      "instanceId": "285d6a9d-9d25-484a-a1b4-017193720205",
       "seed": 20261077,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 1,
       "explanationSteps": [
         "0.1이 1개이면 0.1입니다.",
@@ -2999,10 +2999,10 @@
     {
       "id": "g3-dec:decimalPlace:2",
       "conceptId": "g3-dec:decimalPlace:2",
-      "instanceId": "0cfe30fc-94f6-4dd9-a13a-e681df696e87",
+      "instanceId": "30b6d9f9-0d15-46ab-ac8d-07c7f7077391",
       "seed": 20261078,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 1,
       "explanationSteps": [
         "0.1이 2개이면 0.2입니다.",
@@ -3042,10 +3042,10 @@
     {
       "id": "g3-time:time:4",
       "conceptId": "g3-time:time:4",
-      "instanceId": "a7d2d346-63f5-4304-8f18-3f9110c92d8f",
+      "instanceId": "963d283f-2958-48aa-aac7-63905235e28c",
       "seed": 20261079,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 1,
       "explanationSteps": [
         "1분 = 60초이므로 4 × 60 = 240초입니다."
@@ -3084,10 +3084,10 @@
     {
       "id": "g3-time:time:6",
       "conceptId": "g3-time:time:6",
-      "instanceId": "066e2d88-1b16-4e57-af60-3a7422570415",
+      "instanceId": "80897d42-a4e9-4f87-be5e-187e5122e926",
       "seed": 20261080,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 2,
       "explanationSteps": [
         "1분 = 60초이므로 6 × 60 = 360초입니다."
@@ -3126,10 +3126,10 @@
     {
       "id": "g3-time:time:9",
       "conceptId": "g3-time:time:9",
-      "instanceId": "466f4153-9933-4e30-91b7-b77b02c20656",
+      "instanceId": "460d5177-9eaa-417f-8092-1dd161652908",
       "seed": 20261081,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 3,
       "explanationSteps": [
         "1분 = 60초이므로 9 × 60 = 540초입니다."
@@ -3168,10 +3168,10 @@
     {
       "id": "g3-time:time:12",
       "conceptId": "g3-time:time:12",
-      "instanceId": "d9a56864-8a68-49cb-8ffc-ff7b75357045",
+      "instanceId": "68427f9b-4e25-4afa-9fbd-2eb366fe208d",
       "seed": 20261082,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 4,
       "explanationSteps": [
         "1분 = 60초이므로 12 × 60 = 720초입니다."
@@ -3210,10 +3210,10 @@
     {
       "id": "g3-time:time:16",
       "conceptId": "g3-time:time:16",
-      "instanceId": "fc629504-9f51-45ba-90bf-4cbf6a4798fe",
+      "instanceId": "12b4a6c8-6504-4cde-95f8-3351de9cc060",
       "seed": 20261083,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 5,
       "explanationSteps": [
         "1분 = 60초이므로 16 × 60 = 960초입니다."
@@ -3252,10 +3252,10 @@
     {
       "id": "g3-data:barGraph:32:4",
       "conceptId": "g3-data:barGraph:32:4",
-      "instanceId": "9b555161-b3d7-4c60-8469-ef56c5083f80",
+      "instanceId": "8edc03a0-028b-44be-9efa-fb16b2976e5b",
       "seed": 20261084,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 1,
       "explanationSteps": [
         "두 자료의 수를 더하면 32 + 4 = 36입니다."
@@ -3295,10 +3295,10 @@
     {
       "id": "g3-data:barGraph:49:3",
       "conceptId": "g3-data:barGraph:49:3",
-      "instanceId": "96f14a43-dc6c-4cb1-90dd-75db504a022d",
+      "instanceId": "c6bd8a48-34ae-4ee2-852a-c1dd117ad131",
       "seed": 20261085,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 2,
       "explanationSteps": [
         "두 자료의 수를 더하면 49 + 3 = 52입니다."
@@ -3338,10 +3338,10 @@
     {
       "id": "g3-data:barGraph:13:2",
       "conceptId": "g3-data:barGraph:13:2",
-      "instanceId": "3875dd23-ef06-4f76-a7bf-dc77cf29a295",
+      "instanceId": "dd2c3028-1c37-4b03-9680-4f30be569409",
       "seed": 20261086,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 3,
       "explanationSteps": [
         "두 자료의 수를 더하면 13 + 2 = 15입니다."
@@ -3381,10 +3381,10 @@
     {
       "id": "g3-data:barGraph:21:6",
       "conceptId": "g3-data:barGraph:21:6",
-      "instanceId": "c2262545-d1b1-4c83-b97e-4c5f043efaa3",
+      "instanceId": "9106a866-7f4c-4f0a-855d-e56e972b2d98",
       "seed": 20261087,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 4,
       "explanationSteps": [
         "두 자료의 수를 더하면 21 + 6 = 27입니다."
@@ -3424,10 +3424,10 @@
     {
       "id": "g3-data:barGraph:31:5",
       "conceptId": "g3-data:barGraph:31:5",
-      "instanceId": "21479fbf-0d72-4e04-b60e-cddcda20bfc9",
+      "instanceId": "574481cb-4a85-402c-a1da-acb9a40cb491",
       "seed": 20261088,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 5,
       "explanationSteps": [
         "두 자료의 수를 더하면 31 + 5 = 36입니다."
@@ -3467,10 +3467,10 @@
     {
       "id": "g3-add:add:187:116",
       "conceptId": "g3-add:add:187:116",
-      "instanceId": "b25fc939-0f7a-4396-8764-4959b4d2f95d",
+      "instanceId": "465788fe-9c1f-4107-8c2b-31eb0999c2d0",
       "seed": 20261089,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 1,
       "explanationSteps": [
         "187에 116를 더하면 303입니다.",
@@ -3511,10 +3511,10 @@
     {
       "id": "g3-add:add:279:414",
       "conceptId": "g3-add:add:279:414",
-      "instanceId": "252d3e70-37cd-4a49-a4ca-7730c080467e",
+      "instanceId": "d8c1d31f-aea7-49ae-b03c-7b8ac3bb810f",
       "seed": 20261090,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 2,
       "explanationSteps": [
         "279에 414를 더하면 693입니다.",
@@ -3555,10 +3555,10 @@
     {
       "id": "g3-add:add:400:351",
       "conceptId": "g3-add:add:400:351",
-      "instanceId": "f7301592-b475-48cd-a960-b7a055645134",
+      "instanceId": "154b7d0b-d0b8-4b60-be35-382b21156bd4",
       "seed": 20261091,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 3,
       "explanationSteps": [
         "400에 351를 더하면 751입니다.",
@@ -3599,10 +3599,10 @@
     {
       "id": "g3-add:add:550:187",
       "conceptId": "g3-add:add:550:187",
-      "instanceId": "e9705283-9b4c-4f92-bcb6-0c8a7100b579",
+      "instanceId": "3431f3b9-0339-435c-9d87-3b8b7949d434",
       "seed": 20261092,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 4,
       "explanationSteps": [
         "550에 187를 더하면 737입니다.",
@@ -3643,10 +3643,10 @@
     {
       "id": "g3-add:add:729:822",
       "conceptId": "g3-add:add:729:822",
-      "instanceId": "561e1f4a-35ce-419c-bad5-c6435ab21179",
+      "instanceId": "8f8bcdfb-67cd-49df-be31-9aa5e5aff4f6",
       "seed": 20261093,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 5,
       "explanationSteps": [
         "729에 822를 더하면 1551입니다.",
@@ -3687,10 +3687,10 @@
     {
       "id": "g3-sub:subtract:291:269",
       "conceptId": "g3-sub:subtract:291:269",
-      "instanceId": "4effadb4-a831-4e65-9a6b-24b486094bf4",
+      "instanceId": "b215891e-3ba2-4862-b717-dde218162fff",
       "seed": 20261094,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 1,
       "explanationSteps": [
         "291에서 269만큼 빼면 22입니다."
@@ -3730,10 +3730,10 @@
     {
       "id": "g3-sub:subtract:425:278",
       "conceptId": "g3-sub:subtract:425:278",
-      "instanceId": "1b27ff47-3240-40d2-a329-7f50786fce8d",
+      "instanceId": "164fad73-640d-43da-82c4-dc447cbb4aed",
       "seed": 20261095,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 2,
       "explanationSteps": [
         "425에서 278만큼 빼면 147입니다."
@@ -3773,10 +3773,10 @@
     {
       "id": "g3-sub:subtract:570:200",
       "conceptId": "g3-sub:subtract:570:200",
-      "instanceId": "b8db4006-ea7d-4da2-82b0-eba16b28729a",
+      "instanceId": "dce205ab-6708-470c-a1c1-31571ea6bcda",
       "seed": 20261096,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 3,
       "explanationSteps": [
         "570에서 200만큼 빼면 370입니다."
@@ -3816,10 +3816,10 @@
     {
       "id": "g3-sub:subtract:727:652",
       "conceptId": "g3-sub:subtract:727:652",
-      "instanceId": "abc067cd-bf92-4902-836c-9ad5b107af41",
+      "instanceId": "fd63409e-9b2c-441b-aa7c-b0ecdf4f5547",
       "seed": 20261097,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 4,
       "explanationSteps": [
         "727에서 652만큼 빼면 75입니다."
@@ -3859,10 +3859,10 @@
     {
       "id": "g3-sub:subtract:896:535",
       "conceptId": "g3-sub:subtract:896:535",
-      "instanceId": "287f5107-1cf5-4ae8-97d5-6e49cc6c8c0f",
+      "instanceId": "ee76a936-1dc5-4fa5-9354-0b65dbcc20c2",
       "seed": 20261098,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 5,
       "explanationSteps": [
         "896에서 535만큼 빼면 361입니다."
@@ -3902,10 +3902,10 @@
     {
       "id": "g4-frac:fraction:2:4:8",
       "conceptId": "g4-frac:fraction:2:4:8",
-      "instanceId": "b36d7691-2f43-4df6-8d2c-c137efbe3ebd",
+      "instanceId": "4ed97631-45f1-457d-bca6-7685a1b0062b",
       "seed": 20261099,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 1,
       "explanationSteps": [
         "분모 8는 그대로 두고 분자를 더합니다.",
@@ -3947,10 +3947,10 @@
     {
       "id": "g4-frac:fraction:9:3:11",
       "conceptId": "g4-frac:fraction:9:3:11",
-      "instanceId": "b860c419-4d0d-47ba-b4e1-d35c4ff483fd",
+      "instanceId": "7278754a-0a8f-464a-85a3-03bf3532baef",
       "seed": 20261100,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 2,
       "explanationSteps": [
         "분모 11는 그대로 두고 분자를 더합니다.",
@@ -3992,10 +3992,10 @@
     {
       "id": "g4-frac:fraction:8:1:14",
       "conceptId": "g4-frac:fraction:8:1:14",
-      "instanceId": "e6ee7dd9-dadb-4668-a23e-d82f952b92fd",
+      "instanceId": "1432e289-1ce4-4197-a137-1721876ca6dc",
       "seed": 20261101,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 3,
       "explanationSteps": [
         "분모 14는 그대로 두고 분자를 더합니다.",
@@ -4037,10 +4037,10 @@
     {
       "id": "g4-frac:fraction:1:2:3",
       "conceptId": "g4-frac:fraction:1:2:3",
-      "instanceId": "b7a3b278-4a11-4c6a-82cf-3d49899dc7df",
+      "instanceId": "5aabed16-3c20-4608-b311-d2bbd5eb90eb",
       "seed": 20261102,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 4,
       "explanationSteps": [
         "분모 3는 그대로 두고 분자를 더합니다.",
@@ -4073,7 +4073,7 @@
       "answer": "1",
       "explain": "분모 3는 그대로 두고 분자를 더합니다. 3/3 = 1.",
       "options": [
-        "1.3333",
+        "4/3",
         "1/2",
         "1",
         "2/3"
@@ -4082,10 +4082,10 @@
     {
       "id": "g4-frac:fraction:3:2:4",
       "conceptId": "g4-frac:fraction:3:2:4",
-      "instanceId": "e898f65b-af17-4a3a-b0a0-467100d46525",
+      "instanceId": "1bd5415e-b0b0-499a-bbe8-fed2df23fdf8",
       "seed": 20261103,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 5,
       "explanationSteps": [
         "분모 4는 그대로 두고 분자를 더합니다.",
@@ -4127,10 +4127,10 @@
     {
       "id": "g4-dec:decimal:6:3:2",
       "conceptId": "g4-dec:decimal:6:3:2",
-      "instanceId": "e33a080e-b521-4e81-8519-db4f982d75cb",
+      "instanceId": "86fed319-e9fa-4eb3-98d5-c2cb4224fa84",
       "seed": 20261104,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 1,
       "explanationSteps": [
         "소수점을 맞추어 같은 자릿값끼리 계산하면 0.09입니다."
@@ -4171,10 +4171,10 @@
     {
       "id": "g4-dec:decimal:9:2:2",
       "conceptId": "g4-dec:decimal:9:2:2",
-      "instanceId": "d24290fd-fb3d-4b8b-b9ee-93c73ce706b2",
+      "instanceId": "937a776c-9f0c-43d9-b11a-fb088881f126",
       "seed": 20261105,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 2,
       "explanationSteps": [
         "소수점을 맞추어 같은 자릿값끼리 계산하면 0.11입니다."
@@ -4215,10 +4215,10 @@
     {
       "id": "g4-dec:decimal:12:7:2",
       "conceptId": "g4-dec:decimal:12:7:2",
-      "instanceId": "e5b44585-0f9d-4973-b9fd-fe5c4326a4b2",
+      "instanceId": "72cf0d86-4940-4c1d-b8c3-5adb76d05a48",
       "seed": 20261106,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 3,
       "explanationSteps": [
         "소수점을 맞추어 같은 자릿값끼리 계산하면 0.19입니다."
@@ -4259,10 +4259,10 @@
     {
       "id": "g4-dec:decimal:16:5:2",
       "conceptId": "g4-dec:decimal:16:5:2",
-      "instanceId": "e0dc6f0b-5b82-4aeb-979c-0f14a7c33315",
+      "instanceId": "ba8f2331-4e71-4c15-83f9-c573ac9b8fb1",
       "seed": 20261107,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 4,
       "explanationSteps": [
         "소수점을 맞추어 같은 자릿값끼리 계산하면 0.21입니다."
@@ -4303,10 +4303,10 @@
     {
       "id": "g4-dec:decimal:3:2:2",
       "conceptId": "g4-dec:decimal:3:2:2",
-      "instanceId": "ff0a64eb-4bf7-409e-9894-5a49938adc72",
+      "instanceId": "8de76317-a6e5-46a8-ab00-fff1e713693d",
       "seed": 20261108,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 5,
       "explanationSteps": [
         "소수점을 맞추어 같은 자릿값끼리 계산하면 0.05입니다."
@@ -4347,10 +4347,10 @@
     {
       "id": "g4-angle:angle:20:40",
       "conceptId": "g4-angle:angle:20:40",
-      "instanceId": "ea3b3687-fa4a-4217-a704-a708a056ceff",
+      "instanceId": "2c553205-c5ae-4611-983c-a391f864e347",
       "seed": 20261109,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 1,
       "explanationSteps": [
         "삼각형의 세 각의 합은 180도.",
@@ -4391,10 +4391,10 @@
     {
       "id": "g4-angle:angle:30:40",
       "conceptId": "g4-angle:angle:30:40",
-      "instanceId": "5a7145e5-f9ab-4c73-97d9-3219761e9871",
+      "instanceId": "f50fe35a-32e2-465f-98b9-5e113f008d10",
       "seed": 20261110,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 2,
       "explanationSteps": [
         "삼각형의 세 각의 합은 180도.",
@@ -4435,10 +4435,10 @@
     {
       "id": "g4-angle:angle:30:30",
       "conceptId": "g4-angle:angle:30:30",
-      "instanceId": "8a381f78-fe63-4609-bf12-7a0cd4c77c6a",
+      "instanceId": "3ba4ddb5-c17a-4a3d-b3c4-fa3ffe0b4ee2",
       "seed": 20261111,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 3,
       "explanationSteps": [
         "삼각형의 세 각의 합은 180도.",
@@ -4479,10 +4479,10 @@
     {
       "id": "g4-angle:angle:40:70",
       "conceptId": "g4-angle:angle:40:70",
-      "instanceId": "7c175fd3-d164-4a74-ac06-02e1ea5c888f",
+      "instanceId": "9e093e7a-cf85-45e8-9959-ad3951efad6c",
       "seed": 20261112,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 4,
       "explanationSteps": [
         "삼각형의 세 각의 합은 180도.",
@@ -4523,10 +4523,10 @@
     {
       "id": "g4-angle:angle:50:50",
       "conceptId": "g4-angle:angle:50:50",
-      "instanceId": "10772df9-8b12-4780-bfef-105378a90cc4",
+      "instanceId": "8c47c0b9-a2a1-4871-b9e6-b2e0b5e0d512",
       "seed": 20261113,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 5,
       "explanationSteps": [
         "삼각형의 세 각의 합은 180도.",
@@ -4567,10 +4567,10 @@
     {
       "id": "g4-pattern:patterns:5:2",
       "conceptId": "g4-pattern:patterns:5:2",
-      "instanceId": "c73817a2-67ac-4a7a-804c-a38ad017e24d",
+      "instanceId": "e35ed882-e89c-41d4-971d-64d37625d5dc",
       "seed": 20261114,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 1,
       "explanationSteps": [
         "2씩 커지는 규칙이므로 다음 수는 11입니다."
@@ -4610,10 +4610,10 @@
     {
       "id": "g4-pattern:patterns:8:7",
       "conceptId": "g4-pattern:patterns:8:7",
-      "instanceId": "78cc6c33-a17a-4b3c-bdde-122588617316",
+      "instanceId": "43859962-f094-4d48-92d1-8bbad86c27eb",
       "seed": 20261115,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 2,
       "explanationSteps": [
         "7씩 커지는 규칙이므로 다음 수는 29입니다."
@@ -4653,10 +4653,10 @@
     {
       "id": "g4-pattern:patterns:11:6",
       "conceptId": "g4-pattern:patterns:11:6",
-      "instanceId": "edb92feb-32d4-4518-9eb5-4691503bdc4e",
+      "instanceId": "145cd38c-9fa8-4d76-a92f-332c6678d9d0",
       "seed": 20261116,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 3,
       "explanationSteps": [
         "6씩 커지는 규칙이므로 다음 수는 29입니다."
@@ -4696,10 +4696,10 @@
     {
       "id": "g4-pattern:patterns:15:4",
       "conceptId": "g4-pattern:patterns:15:4",
-      "instanceId": "32dc8590-e386-4fa5-8cb9-2509b9091701",
+      "instanceId": "40ea10da-baf4-4ceb-a90d-02cb6685a0d4",
       "seed": 20261117,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 4,
       "explanationSteps": [
         "4씩 커지는 규칙이므로 다음 수는 27입니다."
@@ -4739,10 +4739,10 @@
     {
       "id": "g4-pattern:patterns:19:13",
       "conceptId": "g4-pattern:patterns:19:13",
-      "instanceId": "e85c758b-bcd2-4f4a-971f-bf8efed8d186",
+      "instanceId": "b4a67375-d0e2-49fd-92de-340ab19a70aa",
       "seed": 20261118,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 5,
       "explanationSteps": [
         "13씩 커지는 규칙이므로 다음 수는 58입니다."
@@ -4782,10 +4782,10 @@
     {
       "id": "g3-shape:shapes:5:1",
       "conceptId": "g3-shape:shapes:5:1",
-      "instanceId": "f642b4f7-336b-40fb-93bf-ff12853b062a",
+      "instanceId": "7b79cd7a-8657-436d-bd31-4f4cfd9f9739",
       "seed": 20261119,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 1,
       "explanationSteps": [
         "오각형에는 변이 5개 있습니다.",
@@ -4826,10 +4826,10 @@
     {
       "id": "g3-shape:shapes:5:0",
       "conceptId": "g3-shape:shapes:5:0",
-      "instanceId": "c73cd130-8c8c-4d7a-b863-04d1f18fb063",
+      "instanceId": "cea8e650-7bb2-4b16-b8b5-84d48f9fa309",
       "seed": 20261120,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 1,
       "explanationSteps": [
         "오각형에는 변이 5개 있습니다.",
@@ -4870,10 +4870,10 @@
     {
       "id": "g3-shape:shapes:5:2",
       "conceptId": "g3-shape:shapes:5:2",
-      "instanceId": "2fa237f5-8195-4f0f-acbd-7cd3d2928518",
+      "instanceId": "25294832-aa2a-4122-9b57-7cada466747d",
       "seed": 20261121,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 1,
       "explanationSteps": [
         "오각형에는 변이 5개 있습니다.",
@@ -4914,10 +4914,10 @@
     {
       "id": "g3-shape:shapes:6:1",
       "conceptId": "g3-shape:shapes:6:1",
-      "instanceId": "b826b079-c6fb-4ca0-8afa-55c3d585c393",
+      "instanceId": "9f1c1abe-36e6-4c32-a9cb-9d87e226755a",
       "seed": 20261122,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 1,
       "explanationSteps": [
         "육각형에는 변이 6개 있습니다.",
@@ -4958,10 +4958,10 @@
     {
       "id": "g3-shape:shapes:6:0",
       "conceptId": "g3-shape:shapes:6:0",
-      "instanceId": "ffbc7228-a721-4d97-8d55-76071dea535a",
+      "instanceId": "0c5ea929-1252-42b0-af1c-442d6c142495",
       "seed": 20261123,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 1,
       "explanationSteps": [
         "육각형에는 변이 6개 있습니다.",
@@ -5002,10 +5002,10 @@
     {
       "id": "g4-data:lineGraph:5:2",
       "conceptId": "g4-data:lineGraph:5:2",
-      "instanceId": "e3c35b36-c30e-46a9-a4e2-ba059bb036be",
+      "instanceId": "e3b26619-b4b2-4c33-89c2-1e0d403cb028",
       "seed": 20261124,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 1,
       "explanationSteps": [
         "오후의 자료 값을 읽으면 7명입니다."
@@ -5045,10 +5045,10 @@
     {
       "id": "g4-data:lineGraph:7:6",
       "conceptId": "g4-data:lineGraph:7:6",
-      "instanceId": "f3d716e7-c9a3-498a-bf2e-a434fcfcb36b",
+      "instanceId": "c8051854-4336-468e-99cb-36762215ee9b",
       "seed": 20261125,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 2,
       "explanationSteps": [
         "오후의 자료 값을 읽으면 13명입니다."
@@ -5088,10 +5088,10 @@
     {
       "id": "g4-data:lineGraph:10:5",
       "conceptId": "g4-data:lineGraph:10:5",
-      "instanceId": "8f7edc1b-c576-4a2d-b525-766b1e062477",
+      "instanceId": "7232f2ff-cd7e-4205-a516-e2ac08fe3edb",
       "seed": 20261126,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 3,
       "explanationSteps": [
         "오후의 자료 값을 읽으면 15명입니다."
@@ -5131,10 +5131,10 @@
     {
       "id": "g4-data:lineGraph:13:2",
       "conceptId": "g4-data:lineGraph:13:2",
-      "instanceId": "a63880ea-596e-46e1-b336-2bf3ec9ddd15",
+      "instanceId": "b4038422-edb4-440d-b30d-cdde337aada1",
       "seed": 20261127,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 4,
       "explanationSteps": [
         "오후의 자료 값을 읽으면 15명입니다."
@@ -5174,10 +5174,10 @@
     {
       "id": "g4-data:lineGraph:17:11",
       "conceptId": "g4-data:lineGraph:17:11",
-      "instanceId": "924f0de5-13f5-4ddf-9db1-41e2e9c46853",
+      "instanceId": "c2af98dc-8171-4c3f-8481-edea69689abe",
       "seed": 20261128,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 5,
       "explanationSteps": [
         "오후의 자료 값을 읽으면 28명입니다."
@@ -5217,10 +5217,10 @@
     {
       "id": "g4-fracsub:fractionSubtract:1:1:3",
       "conceptId": "g4-fracsub:fractionSubtract:1:1:3",
-      "instanceId": "e44df552-59b4-421b-a8e3-9c15e43fedea",
+      "instanceId": "2d371530-54e4-46ef-82ad-5240f500ea2b",
       "seed": 20261129,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 1,
       "explanationSteps": [
         "분모 3는 그대로 두고 분자를 빼면 0입니다."
@@ -5254,17 +5254,17 @@
       "options": [
         "1",
         "0",
-        "0.6667",
-        "0.3333"
+        "2/3",
+        "1/3"
       ]
     },
     {
       "id": "g4-fracsub:fractionSubtract:2:2:3",
       "conceptId": "g4-fracsub:fractionSubtract:2:2:3",
-      "instanceId": "4c44d7bd-46b7-4786-85b2-9d5ddb5e6aae",
+      "instanceId": "6438303f-ba0c-4047-8588-0b03b877ce49",
       "seed": 20261130,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 2,
       "explanationSteps": [
         "분모 3는 그대로 두고 분자를 빼면 0입니다."
@@ -5297,18 +5297,18 @@
       "explain": "분모 3는 그대로 두고 분자를 빼면 0입니다.",
       "options": [
         "0",
-        "0.3333",
+        "1/3",
         "1",
-        "0.6667"
+        "2/3"
       ]
     },
     {
       "id": "g4-fracsub:fractionSubtract:2:1:4",
       "conceptId": "g4-fracsub:fractionSubtract:2:1:4",
-      "instanceId": "720e4649-0371-4751-a600-57d2d5a38540",
+      "instanceId": "014ba3eb-0f9c-422b-b95e-b261e124a2ef",
       "seed": 20261131,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 3,
       "explanationSteps": [
         "분모 4는 그대로 두고 분자를 빼면 1/4입니다."
@@ -5349,10 +5349,10 @@
     {
       "id": "g4-fracsub:fractionSubtract:1:1:5",
       "conceptId": "g4-fracsub:fractionSubtract:1:1:5",
-      "instanceId": "168b4172-2e66-4e7c-9747-503bfba7c51f",
+      "instanceId": "7891eada-a5a8-4f97-bbff-ddd62e774488",
       "seed": 20261132,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 4,
       "explanationSteps": [
         "분모 5는 그대로 두고 분자를 빼면 0입니다."
@@ -5385,18 +5385,18 @@
       "explain": "분모 5는 그대로 두고 분자를 빼면 0입니다.",
       "options": [
         "0",
-        "0.2",
-        "0.6",
-        "0.4"
+        "1/5",
+        "3/5",
+        "2/5"
       ]
     },
     {
       "id": "g4-fracsub:fractionSubtract:5:5:6",
       "conceptId": "g4-fracsub:fractionSubtract:5:5:6",
-      "instanceId": "acf552f7-90e5-4be5-bd00-5512e6125d17",
+      "instanceId": "69c94709-04a9-4827-9da9-8606bba89c21",
       "seed": 20261133,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 5,
       "explanationSteps": [
         "분모 6는 그대로 두고 분자를 빼면 0입니다."
@@ -5428,19 +5428,19 @@
       "answer": "0",
       "explain": "분모 6는 그대로 두고 분자를 빼면 0입니다.",
       "options": [
-        "0.3333",
+        "1/3",
         "0",
-        "0.1667",
-        "0.5"
+        "1/6",
+        "1/2"
       ]
     },
     {
       "id": "g4-decsub:decimalSubtract:5:4:2",
       "conceptId": "g4-decsub:decimalSubtract:5:4:2",
-      "instanceId": "b5e44d2c-5837-46d3-898d-79caa3764083",
+      "instanceId": "b93fc1da-8a14-464f-bbe5-0fece4a90a3f",
       "seed": 20261134,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 1,
       "explanationSteps": [
         "소수점을 맞추어 같은 자릿값끼리 계산하면 0.01입니다."
@@ -5481,10 +5481,10 @@
     {
       "id": "g4-decsub:decimalSubtract:6:5:2",
       "conceptId": "g4-decsub:decimalSubtract:6:5:2",
-      "instanceId": "3880fcf8-88a9-420a-98e2-fdbf7a0413f8",
+      "instanceId": "83c4cc41-1d35-4b54-bbe2-2ec1984ceaad",
       "seed": 20261135,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 2,
       "explanationSteps": [
         "소수점을 맞추어 같은 자릿값끼리 계산하면 0.01입니다."
@@ -5525,10 +5525,10 @@
     {
       "id": "g4-decsub:decimalSubtract:9:3:2",
       "conceptId": "g4-decsub:decimalSubtract:9:3:2",
-      "instanceId": "1efc4558-c43a-471f-8340-167e27e074e0",
+      "instanceId": "8bf0fab4-0da4-4ece-ba82-05710ef9cbed",
       "seed": 20261136,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 3,
       "explanationSteps": [
         "소수점을 맞추어 같은 자릿값끼리 계산하면 0.06입니다."
@@ -5569,10 +5569,10 @@
     {
       "id": "g4-decsub:decimalSubtract:12:11:2",
       "conceptId": "g4-decsub:decimalSubtract:12:11:2",
-      "instanceId": "4f2ca088-b52b-4eb8-8d3a-1f92ba890261",
+      "instanceId": "70c39009-bf35-40cf-9a86-dc35a5da7f16",
       "seed": 20261137,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 4,
       "explanationSteps": [
         "소수점을 맞추어 같은 자릿값끼리 계산하면 0.01입니다."
@@ -5613,10 +5613,10 @@
     {
       "id": "g4-decsub:decimalSubtract:16:9:2",
       "conceptId": "g4-decsub:decimalSubtract:16:9:2",
-      "instanceId": "35448edc-a1ab-41a3-baca-bcfab42a5d0c",
+      "instanceId": "3cf6d3ab-34a7-4c6b-838c-045fcb557816",
       "seed": 20261138,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 5,
       "explanationSteps": [
         "소수점을 맞추어 같은 자릿값끼리 계산하면 0.07입니다."
@@ -5657,10 +5657,10 @@
     {
       "id": "g5-frac:unlikeFraction:2:3:2:4",
       "conceptId": "g5-frac:unlikeFraction:2:3:2:4",
-      "instanceId": "1ff2e3e2-9e78-4922-9417-b5ac8f40943b",
+      "instanceId": "b9a75009-dd12-4855-9fae-dc004586e324",
       "seed": 20261139,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 1,
       "explanationSteps": [
         "분모를 12로 통분하면 8/12 + 6/12 = 7/6입니다."
@@ -5702,10 +5702,10 @@
     {
       "id": "g5-frac:unlikeFraction:2:3:1:4",
       "conceptId": "g5-frac:unlikeFraction:2:3:1:4",
-      "instanceId": "e8cf5b93-33d7-451b-9733-8a675ccb9920",
+      "instanceId": "93491423-4641-455f-9689-aa172722f270",
       "seed": 20261140,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 2,
       "explanationSteps": [
         "분모를 12로 통분하면 8/12 + 3/12 = 11/12입니다."
@@ -5747,10 +5747,10 @@
     {
       "id": "g5-frac:unlikeFraction:1:4:4:5",
       "conceptId": "g5-frac:unlikeFraction:1:4:4:5",
-      "instanceId": "47dd5531-21de-4db7-b942-12bb86e35c1b",
+      "instanceId": "6028ab17-3f2b-41f6-b48d-7d91e3a6bc44",
       "seed": 20261141,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 3,
       "explanationSteps": [
         "분모를 20로 통분하면 5/20 + 16/20 = 21/20입니다."
@@ -5792,10 +5792,10 @@
     {
       "id": "g5-frac:unlikeFraction:4:5:4:6",
       "conceptId": "g5-frac:unlikeFraction:4:5:4:6",
-      "instanceId": "b5002927-f4bb-4d7b-9576-35a36d695425",
+      "instanceId": "61b6f2af-b785-4078-89b9-541e9d772687",
       "seed": 20261142,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 4,
       "explanationSteps": [
         "분모를 30로 통분하면 24/30 + 20/30 = 22/15입니다."
@@ -5837,10 +5837,10 @@
     {
       "id": "g5-frac:unlikeFraction:3:5:3:6",
       "conceptId": "g5-frac:unlikeFraction:3:5:3:6",
-      "instanceId": "31282841-51a5-4b9a-9ea4-acb9edc130a4",
+      "instanceId": "7f777bb7-3447-4274-a66c-5ef692dadfbc",
       "seed": 20261143,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 5,
       "explanationSteps": [
         "분모를 30로 통분하면 18/30 + 15/30 = 11/10입니다."
@@ -5882,10 +5882,10 @@
     {
       "id": "g5-fracmul:fractionMultiply:3:4:4:5",
       "conceptId": "g5-fracmul:fractionMultiply:3:4:4:5",
-      "instanceId": "debc4f90-30c3-4563-a875-feb77c5444a6",
+      "instanceId": "e481aa86-b67c-4e69-8631-6666b1ed3343",
       "seed": 20261144,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 1,
       "explanationSteps": [
         "분자는 분자끼리, 분모는 분모끼리 곱한 뒤 약분하면 3/5입니다."
@@ -5927,10 +5927,10 @@
     {
       "id": "g5-fracmul:fractionMultiply:5:4:6:5",
       "conceptId": "g5-fracmul:fractionMultiply:5:4:6:5",
-      "instanceId": "d74b65d0-8271-4543-aace-1600667a8af8",
+      "instanceId": "59c12ab0-a76c-4238-811d-3a8a051e92b1",
       "seed": 20261145,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 2,
       "explanationSteps": [
         "분자는 분자끼리, 분모는 분모끼리 곱한 뒤 약분하면 2/3입니다."
@@ -5972,10 +5972,10 @@
     {
       "id": "g5-fracmul:fractionMultiply:8:2:9:3",
       "conceptId": "g5-fracmul:fractionMultiply:8:2:9:3",
-      "instanceId": "4fa01caa-8b5b-490c-b26e-77aabb411675",
+      "instanceId": "edf4b8e2-baa5-48c0-b69c-2c064062721b",
       "seed": 20261146,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 3,
       "explanationSteps": [
         "분자는 분자끼리, 분모는 분모끼리 곱한 뒤 약분하면 16/27입니다."
@@ -6017,10 +6017,10 @@
     {
       "id": "g5-fracmul:fractionMultiply:10:9:11:10",
       "conceptId": "g5-fracmul:fractionMultiply:10:9:11:10",
-      "instanceId": "65d662d1-92dc-444f-9601-fa0867d7cef4",
+      "instanceId": "796179a5-1105-450b-a01c-23b7f8060ae1",
       "seed": 20261147,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 4,
       "explanationSteps": [
         "분자는 분자끼리, 분모는 분모끼리 곱한 뒤 약분하면 9/11입니다."
@@ -6062,10 +6062,10 @@
     {
       "id": "g5-fracmul:fractionMultiply:14:7:15:8",
       "conceptId": "g5-fracmul:fractionMultiply:14:7:15:8",
-      "instanceId": "ce0415dc-35e1-473c-a71f-287ae7372ea4",
+      "instanceId": "18ac3803-b7ff-451b-a178-f5dd37a7c380",
       "seed": 20261148,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 5,
       "explanationSteps": [
         "분자는 분자끼리, 분모는 분모끼리 곱한 뒤 약분하면 49/60입니다."
@@ -6107,10 +6107,10 @@
     {
       "id": "g5-dec:decimalMultiply:6:2",
       "conceptId": "g5-dec:decimalMultiply:6:2",
-      "instanceId": "9502ea07-2a8d-4c34-a3c0-68e5fe8debf2",
+      "instanceId": "607fe15b-6141-410c-b65e-4694c5fab9c7",
       "seed": 20261149,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 1,
       "explanationSteps": [
         "6 × 2 = 12.",
@@ -6151,10 +6151,10 @@
     {
       "id": "g5-dec:decimalMultiply:9:6",
       "conceptId": "g5-dec:decimalMultiply:9:6",
-      "instanceId": "87f2dbb0-31d6-4b06-8126-39d8ad6b09b7",
+      "instanceId": "1155ddf0-899d-4798-961f-ea74d91db072",
       "seed": 20261150,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 2,
       "explanationSteps": [
         "9 × 6 = 54.",
@@ -6195,10 +6195,10 @@
     {
       "id": "g5-dec:decimalMultiply:13:6",
       "conceptId": "g5-dec:decimalMultiply:13:6",
-      "instanceId": "e4595ca4-379e-4233-b01a-83137f236fc8",
+      "instanceId": "c682822e-cf0a-4690-98eb-519fbf47c730",
       "seed": 20261151,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 3,
       "explanationSteps": [
         "13 × 6 = 78.",
@@ -6239,10 +6239,10 @@
     {
       "id": "g5-dec:decimalMultiply:2:4",
       "conceptId": "g5-dec:decimalMultiply:2:4",
-      "instanceId": "080756b1-f28f-4ceb-81af-3d1961e23a98",
+      "instanceId": "147f18f4-6390-4e51-b63b-5a8a78461de7",
       "seed": 20261152,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 4,
       "explanationSteps": [
         "2 × 4 = 8.",
@@ -6283,10 +6283,10 @@
     {
       "id": "g5-dec:decimalMultiply:4:12",
       "conceptId": "g5-dec:decimalMultiply:4:12",
-      "instanceId": "1c2ee621-a771-4525-b663-808c0c7011d5",
+      "instanceId": "999006df-84e8-4afb-8931-910220f5dacf",
       "seed": 20261153,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 5,
       "explanationSteps": [
         "4 × 12 = 48.",
@@ -6327,10 +6327,10 @@
     {
       "id": "g5-area:area:3:4",
       "conceptId": "g5-area:area:3:4",
-      "instanceId": "d7eaac91-6840-4df6-b21d-0183fee91fc7",
+      "instanceId": "5c19a8f0-c87a-4dd0-a945-eb36bf61d368",
       "seed": 20261154,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 1,
       "explanationSteps": [
         "가로 × 세로 = 3 × 4 = 12cm²입니다."
@@ -6370,10 +6370,10 @@
     {
       "id": "g5-area:area:4:3",
       "conceptId": "g5-area:area:4:3",
-      "instanceId": "b1522d12-d76d-41b9-a5df-8ac9870ecfff",
+      "instanceId": "2e679f15-55fb-4552-aa50-bcf6d324cd6a",
       "seed": 20261155,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 2,
       "explanationSteps": [
         "가로 × 세로 = 4 × 3 = 12cm²입니다."
@@ -6413,10 +6413,10 @@
     {
       "id": "g5-area:area:6:9",
       "conceptId": "g5-area:area:6:9",
-      "instanceId": "d7330ddc-b898-4e1c-9396-de96f692ad19",
+      "instanceId": "b91b228a-eb85-437c-8762-67d2f05341cc",
       "seed": 20261156,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 3,
       "explanationSteps": [
         "가로 × 세로 = 6 × 9 = 54cm²입니다."
@@ -6456,10 +6456,10 @@
     {
       "id": "g5-area:area:9:8",
       "conceptId": "g5-area:area:9:8",
-      "instanceId": "dfb1dbe0-bb06-4e67-acbf-86d31906169c",
+      "instanceId": "7f487016-ede8-47cb-9f51-0e216465c9e9",
       "seed": 20261157,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 4,
       "explanationSteps": [
         "가로 × 세로 = 9 × 8 = 72cm²입니다."
@@ -6499,10 +6499,10 @@
     {
       "id": "g5-area:area:12:5",
       "conceptId": "g5-area:area:12:5",
-      "instanceId": "d21b96bb-dbdb-40b8-aa61-eaf5f74ec938",
+      "instanceId": "d51021f1-13e5-4c55-8ea4-9ad40e72b0d3",
       "seed": 20261158,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 5,
       "explanationSteps": [
         "가로 × 세로 = 12 × 5 = 60cm²입니다."
@@ -6542,10 +6542,10 @@
     {
       "id": "g5-avg:average:6:11:16",
       "conceptId": "g5-avg:average:6:11:16",
-      "instanceId": "85b0ce84-a1bf-4d9e-94fe-3c4f174b8831",
+      "instanceId": "1b309875-0b4d-4f08-8d5d-f48120ecc1b6",
       "seed": 20261159,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 1,
       "explanationSteps": [
         "세 수의 합 33을 자료 수 3으로 나누면 11입니다."
@@ -6586,10 +6586,10 @@
     {
       "id": "g5-avg:average:8:14:20",
       "conceptId": "g5-avg:average:8:14:20",
-      "instanceId": "e6aa87b9-0275-4e4e-a487-c1c5fe159814",
+      "instanceId": "82608776-844c-4320-9959-d2f1a7bdf2da",
       "seed": 20261160,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 2,
       "explanationSteps": [
         "세 수의 합 42을 자료 수 3으로 나누면 14입니다."
@@ -6630,10 +6630,10 @@
     {
       "id": "g5-avg:average:12:16:20",
       "conceptId": "g5-avg:average:12:16:20",
-      "instanceId": "a157110e-c7bd-47a3-b7d9-193e4b0df844",
+      "instanceId": "e0576e96-fccc-4ade-97c9-4de1db6fdccb",
       "seed": 20261161,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 3,
       "explanationSteps": [
         "세 수의 합 48을 자료 수 3으로 나누면 16입니다."
@@ -6674,10 +6674,10 @@
     {
       "id": "g5-avg:average:16:18:20",
       "conceptId": "g5-avg:average:16:18:20",
-      "instanceId": "0cb57808-d792-49a6-9a85-f07a396bcd84",
+      "instanceId": "4c56b8ec-5726-46d5-9942-41317f1fd8ef",
       "seed": 20261162,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 4,
       "explanationSteps": [
         "세 수의 합 54을 자료 수 3으로 나누면 18입니다."
@@ -6718,10 +6718,10 @@
     {
       "id": "g5-avg:average:2:12:22",
       "conceptId": "g5-avg:average:2:12:22",
-      "instanceId": "dc041925-bec3-4aa0-9125-32580fa3cbd1",
+      "instanceId": "73bba9de-6a85-4d35-8e37-88a9a67dde9f",
       "seed": 20261163,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 5,
       "explanationSteps": [
         "세 수의 합 36을 자료 수 3으로 나누면 12입니다."
@@ -6762,10 +6762,10 @@
     {
       "id": "g5-data:percentGraph:30",
       "conceptId": "g5-data:percentGraph:30",
-      "instanceId": "5828b3cc-973f-43d4-a404-c50949e1a962",
+      "instanceId": "ae272c50-43d1-41b9-b58f-d3402b32a417",
       "seed": 20261164,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 1,
       "explanationSteps": [
         "전체는 100%입니다.",
@@ -6805,10 +6805,10 @@
     {
       "id": "g5-data:percentGraph:40",
       "conceptId": "g5-data:percentGraph:40",
-      "instanceId": "abf9f369-c140-465d-99de-f813281a4adf",
+      "instanceId": "6416af6d-1c1b-4bef-8364-068732a7de33",
       "seed": 20261165,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 1,
       "explanationSteps": [
         "전체는 100%입니다.",
@@ -6848,10 +6848,10 @@
     {
       "id": "g5-data:percentGraph:40",
       "conceptId": "g5-data:percentGraph:40",
-      "instanceId": "9375e97e-76e4-4f93-8cbb-5fc120ea361b",
+      "instanceId": "085a09d4-8bf3-4a9d-ab05-373e44647045",
       "seed": 20261166,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 1,
       "explanationSteps": [
         "전체는 100%입니다.",
@@ -6891,10 +6891,10 @@
     {
       "id": "g5-data:percentGraph:40",
       "conceptId": "g5-data:percentGraph:40",
-      "instanceId": "76079abe-146f-4fe0-ba4f-584452297448",
+      "instanceId": "f401266f-8652-4e38-a150-c71a2e65882a",
       "seed": 20261167,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 1,
       "explanationSteps": [
         "전체는 100%입니다.",
@@ -6934,10 +6934,10 @@
     {
       "id": "g5-data:percentGraph:50",
       "conceptId": "g5-data:percentGraph:50",
-      "instanceId": "675ad0c4-5b75-4634-83e9-fb516de04d62",
+      "instanceId": "9e00ff68-35b9-4ee4-b66e-e27944ad6f2b",
       "seed": 20261168,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 1,
       "explanationSteps": [
         "전체는 100%입니다.",
@@ -6977,10 +6977,10 @@
     {
       "id": "g5-fracsub:unlikeSubtract:3:4:2:3",
       "conceptId": "g5-fracsub:unlikeSubtract:3:4:2:3",
-      "instanceId": "f9ef15c5-7615-47ed-97c6-8da2060e7f92",
+      "instanceId": "9fe6ac70-027d-467e-9e58-f74eeae3b4a8",
       "seed": 20261169,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 1,
       "explanationSteps": [
         "분모를 12로 통분하고 분자를 빼면 1/12입니다."
@@ -7022,10 +7022,10 @@
     {
       "id": "g5-fracsub:unlikeSubtract:3:5:2:4",
       "conceptId": "g5-fracsub:unlikeSubtract:3:5:2:4",
-      "instanceId": "edf376b5-1f7b-4ede-9b82-1fd0db118a95",
+      "instanceId": "ddb5a885-2f28-4e36-b0ad-84dce46a4609",
       "seed": 20261170,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 2,
       "explanationSteps": [
         "분모를 20로 통분하고 분자를 빼면 1/10입니다."
@@ -7067,10 +7067,10 @@
     {
       "id": "g5-fracsub:unlikeSubtract:2:5:1:4",
       "conceptId": "g5-fracsub:unlikeSubtract:2:5:1:4",
-      "instanceId": "df64f5e0-bec5-4f95-8b6f-d6657c70345c",
+      "instanceId": "c7094af8-6bfc-4200-ab42-ef8adb342786",
       "seed": 20261171,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 3,
       "explanationSteps": [
         "분모를 20로 통분하고 분자를 빼면 3/20입니다."
@@ -7112,10 +7112,10 @@
     {
       "id": "g5-fracsub:unlikeSubtract:4:5:1:6",
       "conceptId": "g5-fracsub:unlikeSubtract:4:5:1:6",
-      "instanceId": "bc8681f6-4be2-4639-9e2f-910440208b0c",
+      "instanceId": "f4d7563f-ba5f-4e44-916e-fea5cc1a4ba6",
       "seed": 20261172,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 4,
       "explanationSteps": [
         "분모를 30로 통분하고 분자를 빼면 19/30입니다."
@@ -7157,10 +7157,10 @@
     {
       "id": "g5-fracsub:unlikeSubtract:6:7:3:6",
       "conceptId": "g5-fracsub:unlikeSubtract:6:7:3:6",
-      "instanceId": "42ab857c-5421-4682-a29d-c0f5b32a6471",
+      "instanceId": "94ccaa6d-f0e9-4fb7-85e0-878cef5b24fd",
       "seed": 20261173,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 5,
       "explanationSteps": [
         "분모를 42로 통분하고 분자를 빼면 5/14입니다."
@@ -7202,10 +7202,10 @@
     {
       "id": "g5-correspondence:correspondence:2:3",
       "conceptId": "g5-correspondence:correspondence:2:3",
-      "instanceId": "982201e0-3746-49cf-bab6-a3b26783145f",
+      "instanceId": "1bba2e5c-7c7f-475e-926f-2a08c5e30149",
       "seed": 20261174,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 1,
       "explanationSteps": [
         "관계식에 □ = 2를 넣으면 2 × 3 = 6입니다."
@@ -7245,10 +7245,10 @@
     {
       "id": "g5-correspondence:correspondence:3:7",
       "conceptId": "g5-correspondence:correspondence:3:7",
-      "instanceId": "4bd4c09c-4008-4036-8967-fcc2a8cc3709",
+      "instanceId": "8a889968-fe52-460a-967f-d7522ca86841",
       "seed": 20261175,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 2,
       "explanationSteps": [
         "관계식에 □ = 3를 넣으면 3 × 7 = 21입니다."
@@ -7288,10 +7288,10 @@
     {
       "id": "g5-correspondence:correspondence:4:7",
       "conceptId": "g5-correspondence:correspondence:4:7",
-      "instanceId": "41991770-7842-49b8-910c-2c70e61c35b2",
+      "instanceId": "f3b0dc46-c7d3-4ae2-96f2-fbdd25343d12",
       "seed": 20261176,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 3,
       "explanationSteps": [
         "관계식에 □ = 4를 넣으면 4 × 7 = 28입니다."
@@ -7331,10 +7331,10 @@
     {
       "id": "g5-correspondence:correspondence:6:5",
       "conceptId": "g5-correspondence:correspondence:6:5",
-      "instanceId": "5b90ad57-6e41-4fca-8c85-ea7515905e52",
+      "instanceId": "f7f082c0-824e-48f6-a7a6-3186508e4f6b",
       "seed": 20261177,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 4,
       "explanationSteps": [
         "관계식에 □ = 6를 넣으면 6 × 5 = 30입니다."
@@ -7374,10 +7374,10 @@
     {
       "id": "g5-correspondence:correspondence:9:2",
       "conceptId": "g5-correspondence:correspondence:9:2",
-      "instanceId": "a073ab2c-9835-463d-8691-dcc374c7ca99",
+      "instanceId": "a9516476-d6de-491c-9600-314da279cd7e",
       "seed": 20261178,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 5,
       "explanationSteps": [
         "관계식에 □ = 9를 넣으면 9 × 2 = 18입니다."
@@ -7417,10 +7417,10 @@
     {
       "id": "g5-divisors:commonDivisor:5:4",
       "conceptId": "g5-divisors:commonDivisor:5:4",
-      "instanceId": "27efb51a-56ba-45c5-b78e-7bfd5c144bbb",
+      "instanceId": "31dbb16f-2435-4bc4-9419-1e63a64329bd",
       "seed": 20261179,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 1,
       "explanationSteps": [
         "5의 약수: 1, 5.",
@@ -7462,10 +7462,10 @@
     {
       "id": "g5-divisors:commonDivisor:7:4",
       "conceptId": "g5-divisors:commonDivisor:7:4",
-      "instanceId": "9636026e-b6ea-4ebf-bb51-dc3a01d2d431",
+      "instanceId": "2f873149-2a62-44a7-af68-3da72ca14d4e",
       "seed": 20261180,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 2,
       "explanationSteps": [
         "7의 약수: 1, 7.",
@@ -7507,10 +7507,10 @@
     {
       "id": "g5-divisors:commonDivisor:10:2",
       "conceptId": "g5-divisors:commonDivisor:10:2",
-      "instanceId": "535dbb45-e7bd-41d2-9e53-35c76766af73",
+      "instanceId": "01c934db-77ae-4476-afd4-e3bc9e8ad8b2",
       "seed": 20261181,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 3,
       "explanationSteps": [
         "10의 약수: 1, 2, 5, 10.",
@@ -7552,10 +7552,10 @@
     {
       "id": "g5-divisors:commonDivisor:13:9",
       "conceptId": "g5-divisors:commonDivisor:13:9",
-      "instanceId": "0e6f5a98-aa3e-4ee3-8559-4b9b67f9ae2f",
+      "instanceId": "4cdef212-d505-47ea-b467-e945f064e62a",
       "seed": 20261182,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 4,
       "explanationSteps": [
         "13의 약수: 1, 13.",
@@ -7597,10 +7597,10 @@
     {
       "id": "g5-divisors:commonDivisor:17:7",
       "conceptId": "g5-divisors:commonDivisor:17:7",
-      "instanceId": "a0c18c2e-c62a-4727-93f3-f11714e902e8",
+      "instanceId": "399d224f-ccea-4f6a-8c62-9cc6777ff768",
       "seed": 20261183,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 5,
       "explanationSteps": [
         "17의 약수: 1, 17.",
@@ -7642,10 +7642,10 @@
     {
       "id": "g5-multiples:commonMultiple:7:2",
       "conceptId": "g5-multiples:commonMultiple:7:2",
-      "instanceId": "1f31ac86-9234-423b-8876-63b5dee3178e",
+      "instanceId": "722031e2-4524-4525-ae51-faa28726de3a",
       "seed": 20261184,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 1,
       "explanationSteps": [
         "7의 배수와 2의 배수 중 공통인 가장 작은 수는 14입니다.",
@@ -7686,10 +7686,10 @@
     {
       "id": "g5-multiples:commonMultiple:2:6",
       "conceptId": "g5-multiples:commonMultiple:2:6",
-      "instanceId": "35f3cd15-253a-4413-8e4c-cb4b926df8f8",
+      "instanceId": "8e8e113e-5961-4b2e-9aea-1bc7377693a2",
       "seed": 20261185,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 2,
       "explanationSteps": [
         "2의 배수와 6의 배수 중 공통인 가장 작은 수는 6입니다.",
@@ -7730,10 +7730,10 @@
     {
       "id": "g5-multiples:commonMultiple:3:5",
       "conceptId": "g5-multiples:commonMultiple:3:5",
-      "instanceId": "2dda402e-5101-4c16-8655-9e6083a36123",
+      "instanceId": "e33b140a-07c6-41cd-96ca-45099c6f733f",
       "seed": 20261186,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 3,
       "explanationSteps": [
         "3의 배수와 5의 배수 중 공통인 가장 작은 수는 15입니다.",
@@ -7774,10 +7774,10 @@
     {
       "id": "g5-multiples:commonMultiple:5:3",
       "conceptId": "g5-multiples:commonMultiple:5:3",
-      "instanceId": "da85469c-fac3-4fd5-9c0e-5ffe9ccae8a0",
+      "instanceId": "83f57658-8ccd-4ac5-98b6-1d24f28894d3",
       "seed": 20261187,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 4,
       "explanationSteps": [
         "5의 배수와 3의 배수 중 공통인 가장 작은 수는 15입니다.",
@@ -7818,10 +7818,10 @@
     {
       "id": "g5-multiples:commonMultiple:7:12",
       "conceptId": "g5-multiples:commonMultiple:7:12",
-      "instanceId": "4fb658c6-84ed-4b48-ba5d-1fa497f96460",
+      "instanceId": "39107fc7-0b10-4891-97ff-5f9740eb984b",
       "seed": 20261188,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 5,
       "explanationSteps": [
         "7의 배수와 12의 배수 중 공통인 가장 작은 수는 84입니다.",
@@ -7862,10 +7862,10 @@
     {
       "id": "g6-fracdiv:fractionDivide:4:5:4:5",
       "conceptId": "g6-fracdiv:fractionDivide:4:5:4:5",
-      "instanceId": "19041d86-f9a8-4192-9af3-7cdf807596ee",
+      "instanceId": "b30156ba-cc13-457a-a64f-0c0bd15352b8",
       "seed": 20261189,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 1,
       "explanationSteps": [
         "나누는 분수를 뒤집어 곱하면 1입니다."
@@ -7899,7 +7899,7 @@
       "explain": "나누는 분수를 뒤집어 곱하면 1입니다.",
       "options": [
         "5",
-        "1.05",
+        "21/20",
         "1",
         "16/25"
       ]
@@ -7907,10 +7907,10 @@
     {
       "id": "g6-fracdiv:fractionDivide:6:7:3:4",
       "conceptId": "g6-fracdiv:fractionDivide:6:7:3:4",
-      "instanceId": "d6f03969-0d03-4d42-b5c0-6198363a01ab",
+      "instanceId": "5f27a794-31b3-43f4-aca7-0acbab7dd4d9",
       "seed": 20261190,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 2,
       "explanationSteps": [
         "나누는 분수를 뒤집어 곱하면 8/7입니다."
@@ -7952,10 +7952,10 @@
     {
       "id": "g6-fracdiv:fractionDivide:9:10:9:10",
       "conceptId": "g6-fracdiv:fractionDivide:9:10:9:10",
-      "instanceId": "706939e2-02ed-4351-977c-d9d3897cb76c",
+      "instanceId": "9236fd4d-6dab-4d03-959d-caccaad31082",
       "seed": 20261191,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 3,
       "explanationSteps": [
         "나누는 분수를 뒤집어 곱하면 1입니다."
@@ -7990,17 +7990,17 @@
       "options": [
         "10",
         "1",
-        "1.0111",
+        "91/90",
         "81/100"
       ]
     },
     {
       "id": "g6-fracdiv:fractionDivide:12:13:7:8",
       "conceptId": "g6-fracdiv:fractionDivide:12:13:7:8",
-      "instanceId": "e2a9c17c-3b1f-4dc4-88e7-5285a81f8c5a",
+      "instanceId": "88f00d63-9567-4bd4-a135-fca6188fd5c3",
       "seed": 20261192,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 4,
       "explanationSteps": [
         "나누는 분수를 뒤집어 곱하면 96/91입니다."
@@ -8042,10 +8042,10 @@
     {
       "id": "g6-fracdiv:fractionDivide:15:16:5:6",
       "conceptId": "g6-fracdiv:fractionDivide:15:16:5:6",
-      "instanceId": "20852435-b901-47be-8635-828a30512f1c",
+      "instanceId": "54606e21-4829-4146-a079-6c8135b3be78",
       "seed": 20261193,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 5,
       "explanationSteps": [
         "나누는 분수를 뒤집어 곱하면 9/8입니다."
@@ -8087,10 +8087,10 @@
     {
       "id": "g6-decdiv:decimalDivide:35:50",
       "conceptId": "g6-decdiv:decimalDivide:35:50",
-      "instanceId": "0ec9b677-f1f7-403e-a520-5feb58191dec",
+      "instanceId": "ad2a60fc-a92e-4cef-9d68-8b499ab289cb",
       "seed": 20261194,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 1,
       "explanationSteps": [
         "두 수를 모두 100배 하면 35 ÷ 50 = 0.7입니다."
@@ -8130,10 +8130,10 @@
     {
       "id": "g6-decdiv:decimalDivide:50:50",
       "conceptId": "g6-decdiv:decimalDivide:50:50",
-      "instanceId": "bd4efeb0-1fd2-498c-86f4-58b6d070c8e1",
+      "instanceId": "c5081a16-b380-4da4-a0f0-637aebb72bae",
       "seed": 20261195,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 2,
       "explanationSteps": [
         "두 수를 모두 100배 하면 50 ÷ 50 = 1입니다."
@@ -8173,10 +8173,10 @@
     {
       "id": "g6-decdiv:decimalDivide:8:40",
       "conceptId": "g6-decdiv:decimalDivide:8:40",
-      "instanceId": "9f5bed2e-24a8-4a6e-92ee-d6d02fb6aa1f",
+      "instanceId": "f928f847-3eae-4f75-9f83-dee861fec9e8",
       "seed": 20261196,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 3,
       "explanationSteps": [
         "두 수를 모두 100배 하면 8 ÷ 40 = 0.2입니다."
@@ -8216,10 +8216,10 @@
     {
       "id": "g6-decdiv:decimalDivide:6:20",
       "conceptId": "g6-decdiv:decimalDivide:6:20",
-      "instanceId": "235931d8-af80-4f3f-97f7-06fb7d04ca18",
+      "instanceId": "db9a0eae-77a7-4c59-bb51-063e664a615b",
       "seed": 20261197,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 4,
       "explanationSteps": [
         "두 수를 모두 100배 하면 6 ÷ 20 = 0.3입니다."
@@ -8259,10 +8259,10 @@
     {
       "id": "g6-decdiv:decimalDivide:60:100",
       "conceptId": "g6-decdiv:decimalDivide:60:100",
-      "instanceId": "8404a93f-d413-453c-95fd-ca65db6fc29a",
+      "instanceId": "c4da8cad-41ef-47bd-b0ba-7b6b142d2ced",
       "seed": 20261198,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 5,
       "explanationSteps": [
         "두 수를 모두 100배 하면 60 ÷ 100 = 0.6입니다."
@@ -8302,10 +8302,10 @@
     {
       "id": "g6-volume:volume:3:3:2",
       "conceptId": "g6-volume:volume:3:3:2",
-      "instanceId": "49169cb2-2304-44e5-93ed-f11a68891e99",
+      "instanceId": "58416b9f-d01d-48f9-aaeb-2e30be9abee4",
       "seed": 20261199,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 1,
       "explanationSteps": [
         "가로 × 세로 × 높이 = 18cm³입니다."
@@ -8346,10 +8346,10 @@
     {
       "id": "g6-volume:volume:5:2:3",
       "conceptId": "g6-volume:volume:5:2:3",
-      "instanceId": "51f394b2-e8f5-43ab-8c5b-2d067d6e8121",
+      "instanceId": "9c3cc513-8f6e-487e-a997-84e152d53a1b",
       "seed": 20261200,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 2,
       "explanationSteps": [
         "가로 × 세로 × 높이 = 30cm³입니다."
@@ -8390,10 +8390,10 @@
     {
       "id": "g6-volume:volume:7:8:4",
       "conceptId": "g6-volume:volume:7:8:4",
-      "instanceId": "55b34e8b-1f48-4883-b0b4-5d9eef5e34b2",
+      "instanceId": "485db212-0a74-4b64-9263-a61c30c9f161",
       "seed": 20261201,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 3,
       "explanationSteps": [
         "가로 × 세로 × 높이 = 224cm³입니다."
@@ -8434,10 +8434,10 @@
     {
       "id": "g6-volume:volume:10:6:5",
       "conceptId": "g6-volume:volume:10:6:5",
-      "instanceId": "2499a899-eccd-4572-892f-fc1935457c5b",
+      "instanceId": "ac545b2c-6ee6-4e6f-ab48-68ab4d978e3e",
       "seed": 20261202,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 4,
       "explanationSteps": [
         "가로 × 세로 × 높이 = 300cm³입니다."
@@ -8478,10 +8478,10 @@
     {
       "id": "g6-volume:volume:14:3:6",
       "conceptId": "g6-volume:volume:14:3:6",
-      "instanceId": "53a88777-ddda-4fba-928a-3b7932f9b677",
+      "instanceId": "09541cba-bc20-4d99-9609-a1615becf155",
       "seed": 20261203,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 5,
       "explanationSteps": [
         "가로 × 세로 × 높이 = 252cm³입니다."
@@ -8522,10 +8522,10 @@
     {
       "id": "g6-percent:percent:80:100",
       "conceptId": "g6-percent:percent:80:100",
-      "instanceId": "8cc578f7-bff0-4513-96b8-325ab028d8bb",
+      "instanceId": "e8caf511-8723-4138-8310-85efa40fcddb",
       "seed": 20261204,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 1,
       "explanationSteps": [
         "100 × 80/100 = 80입니다."
@@ -8565,10 +8565,10 @@
     {
       "id": "g6-percent:percent:80:400",
       "conceptId": "g6-percent:percent:80:400",
-      "instanceId": "c40fc055-4c1b-4d07-9d6c-8fe32acd5987",
+      "instanceId": "bcd1f629-928a-402d-80c5-003040d97517",
       "seed": 20261205,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 2,
       "explanationSteps": [
         "400 × 80/100 = 320입니다."
@@ -8608,10 +8608,10 @@
     {
       "id": "g6-percent:percent:80:300",
       "conceptId": "g6-percent:percent:80:300",
-      "instanceId": "f50e6dde-1343-4c31-9d2a-6c5d6ebdd07d",
+      "instanceId": "6a3a5923-4c48-46ae-a010-cb7a59e99a3f",
       "seed": 20261206,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 3,
       "explanationSteps": [
         "300 × 80/100 = 240입니다."
@@ -8651,10 +8651,10 @@
     {
       "id": "g6-percent:percent:90:200",
       "conceptId": "g6-percent:percent:90:200",
-      "instanceId": "e342d8a0-1805-47fd-b440-593f35bbf067",
+      "instanceId": "961ce718-a27d-4659-ab80-a214b7b5d251",
       "seed": 20261207,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 4,
       "explanationSteps": [
         "200 × 90/100 = 180입니다."
@@ -8694,10 +8694,10 @@
     {
       "id": "g6-percent:percent:90:700",
       "conceptId": "g6-percent:percent:90:700",
-      "instanceId": "bde23e44-982c-48a4-9ae1-51022998cd27",
+      "instanceId": "f50c7f90-f3c4-4922-ba9c-3b8ff3212bac",
       "seed": 20261208,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 5,
       "explanationSteps": [
         "700 × 90/100 = 630입니다."
@@ -8737,10 +8737,10 @@
     {
       "id": "g6-ratio:ratio:3:2:2",
       "conceptId": "g6-ratio:ratio:3:2:2",
-      "instanceId": "dbaee529-334b-44ae-b8e7-fe2150ab49c2",
+      "instanceId": "0b2e8ce0-20b1-4d1b-8cd0-a6e94c0465d3",
       "seed": 20261209,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 1,
       "explanationSteps": [
         "앞의 수가 2배가 되었으므로 뒤의 수도 2 × 2 = 4입니다."
@@ -8781,10 +8781,10 @@
     {
       "id": "g6-ratio:ratio:4:7:3",
       "conceptId": "g6-ratio:ratio:4:7:3",
-      "instanceId": "f4b3cfaf-9f1d-457c-b5ef-cae2061418f4",
+      "instanceId": "aa54a838-333b-4591-8e43-9113ba05adea",
       "seed": 20261210,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 2,
       "explanationSteps": [
         "앞의 수가 3배가 되었으므로 뒤의 수도 7 × 3 = 21입니다."
@@ -8825,10 +8825,10 @@
     {
       "id": "g6-ratio:ratio:6:6:4",
       "conceptId": "g6-ratio:ratio:6:6:4",
-      "instanceId": "ab73a4fe-70a0-4931-87ed-27ba28dcda79",
+      "instanceId": "d71458c3-563b-48f3-ac16-8b021e11f4c3",
       "seed": 20261211,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 3,
       "explanationSteps": [
         "앞의 수가 4배가 되었으므로 뒤의 수도 6 × 4 = 24입니다."
@@ -8869,10 +8869,10 @@
     {
       "id": "g6-ratio:ratio:9:4:5",
       "conceptId": "g6-ratio:ratio:9:4:5",
-      "instanceId": "73876a4e-1ab8-4225-90a9-a7c38016c6ef",
+      "instanceId": "b041126c-4e9b-4430-9639-37d17040dfe7",
       "seed": 20261212,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 4,
       "explanationSteps": [
         "앞의 수가 5배가 되었으므로 뒤의 수도 4 × 5 = 20입니다."
@@ -8913,10 +8913,10 @@
     {
       "id": "g6-ratio:ratio:12:13:6",
       "conceptId": "g6-ratio:ratio:12:13:6",
-      "instanceId": "5b458aeb-59d3-4955-91d2-0c417fcf3b36",
+      "instanceId": "a9a97a39-e127-4602-b1f1-ab9c24c3045c",
       "seed": 20261213,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 5,
       "explanationSteps": [
         "앞의 수가 6배가 되었으므로 뒤의 수도 13 × 6 = 78입니다."
@@ -8957,10 +8957,10 @@
     {
       "id": "g6-avg:average:6:10:14",
       "conceptId": "g6-avg:average:6:10:14",
-      "instanceId": "35c00814-54e4-4c31-b217-5e8ec7f2ae93",
+      "instanceId": "6a2139e1-636f-443e-94e6-845bbf0cdb9c",
       "seed": 20261214,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 1,
       "explanationSteps": [
         "세 수의 합 30을 자료 수 3으로 나누면 10입니다."
@@ -9001,10 +9001,10 @@
     {
       "id": "g6-avg:average:8:12:16",
       "conceptId": "g6-avg:average:8:12:16",
-      "instanceId": "1aa7b1f9-70aa-4aaf-8f03-17cdd318345e",
+      "instanceId": "9c829d90-7057-4dcb-a586-a181b1185a69",
       "seed": 20261215,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 2,
       "explanationSteps": [
         "세 수의 합 36을 자료 수 3으로 나누면 12입니다."
@@ -9045,10 +9045,10 @@
     {
       "id": "g6-avg:average:12:14:16",
       "conceptId": "g6-avg:average:12:14:16",
-      "instanceId": "2d801535-7e0a-4afa-acfa-98f369c819aa",
+      "instanceId": "623bbbe8-8832-4961-8480-0f34215404cf",
       "seed": 20261216,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 3,
       "explanationSteps": [
         "세 수의 합 42을 자료 수 3으로 나누면 14입니다."
@@ -9089,10 +9089,10 @@
     {
       "id": "g6-avg:average:16:25:34",
       "conceptId": "g6-avg:average:16:25:34",
-      "instanceId": "6debb02e-3e23-47c8-93e8-1de99a9cf80c",
+      "instanceId": "b2513013-67f3-4398-b8b1-81e664d8c10c",
       "seed": 20261217,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 4,
       "explanationSteps": [
         "세 수의 합 75을 자료 수 3으로 나누면 25입니다."
@@ -9133,10 +9133,10 @@
     {
       "id": "g6-avg:average:2:8:14",
       "conceptId": "g6-avg:average:2:8:14",
-      "instanceId": "8d15c1ea-f3d9-49ed-9b8d-75e49fca367b",
+      "instanceId": "9a0e0a87-b4a3-49a9-8a3e-8eda07b489cd",
       "seed": 20261218,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 5,
       "explanationSteps": [
         "세 수의 합 24을 자료 수 3으로 나누면 8입니다."
@@ -9177,10 +9177,10 @@
     {
       "id": "g6-data:percentGraph:40",
       "conceptId": "g6-data:percentGraph:40",
-      "instanceId": "2abf7a4f-9b81-4eeb-acda-0786510a718f",
+      "instanceId": "e0eb8e52-2554-46f0-a10f-e39db2f8b1a7",
       "seed": 20261219,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 1,
       "explanationSteps": [
         "전체는 100%입니다.",
@@ -9220,10 +9220,10 @@
     {
       "id": "g6-data:percentGraph:40",
       "conceptId": "g6-data:percentGraph:40",
-      "instanceId": "62cd3920-eea9-42fe-b0fb-4653057dbbbd",
+      "instanceId": "6c614404-8d08-465b-853e-3b62aab40a96",
       "seed": 20261220,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 1,
       "explanationSteps": [
         "전체는 100%입니다.",
@@ -9263,10 +9263,10 @@
     {
       "id": "g6-data:percentGraph:40",
       "conceptId": "g6-data:percentGraph:40",
-      "instanceId": "07f00440-2ffe-4348-8103-926cdd60ab4e",
+      "instanceId": "6e7e45cb-2ebd-44dc-a039-0a1d00e72a73",
       "seed": 20261221,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 1,
       "explanationSteps": [
         "전체는 100%입니다.",
@@ -9306,10 +9306,10 @@
     {
       "id": "g6-data:percentGraph:50",
       "conceptId": "g6-data:percentGraph:50",
-      "instanceId": "eba8bf8f-7ec8-40dc-99c2-c26683df3583",
+      "instanceId": "734ca87e-04e9-4b46-935a-2957998631ec",
       "seed": 20261222,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 1,
       "explanationSteps": [
         "전체는 100%입니다.",
@@ -9349,10 +9349,10 @@
     {
       "id": "g6-data:percentGraph:50",
       "conceptId": "g6-data:percentGraph:50",
-      "instanceId": "c4ca570e-1b55-4d9d-bdbc-0581a62b42d3",
+      "instanceId": "de749514-6edc-4bd6-a597-39330684d115",
       "seed": 20261223,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 1,
       "explanationSteps": [
         "전체는 100%입니다.",
@@ -9392,10 +9392,10 @@
     {
       "id": "g6-probability:probability:1:2",
       "conceptId": "g6-probability:probability:1:2",
-      "instanceId": "48de3735-9cb7-44f2-908e-28e81fef7992",
+      "instanceId": "e5b9be97-7912-4548-b64a-febb9fded9bc",
       "seed": 20261224,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 1,
       "explanationSteps": [
         "각 구슬을 뽑을 가능성이 같으므로 빨간 구슬 수 ÷ 전체 구슬 수 = 1/2입니다."
@@ -9435,10 +9435,10 @@
     {
       "id": "g6-probability:probability:1:2",
       "conceptId": "g6-probability:probability:1:2",
-      "instanceId": "647be071-5c1b-4f47-88a1-9b389ce34a2c",
+      "instanceId": "fd9c71bf-894b-4406-a8cc-399eed8bb9c6",
       "seed": 20261225,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 1,
       "explanationSteps": [
         "각 구슬을 뽑을 가능성이 같으므로 빨간 구슬 수 ÷ 전체 구슬 수 = 1/2입니다."
@@ -9478,10 +9478,10 @@
     {
       "id": "g6-probability:probability:1:2",
       "conceptId": "g6-probability:probability:1:2",
-      "instanceId": "a59200ec-0cc1-4734-99d4-fe9fd8f428fc",
+      "instanceId": "37bd85c3-319a-4291-8333-d5b2481c622e",
       "seed": 20261226,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 1,
       "explanationSteps": [
         "각 구슬을 뽑을 가능성이 같으므로 빨간 구슬 수 ÷ 전체 구슬 수 = 1/2입니다."
@@ -9521,10 +9521,10 @@
     {
       "id": "g6-probability:probability:1:2",
       "conceptId": "g6-probability:probability:1:2",
-      "instanceId": "6780ced9-fc85-4f13-ba44-83304e4c1cf2",
+      "instanceId": "d7ef69a0-39f3-45df-b4cc-89f495009808",
       "seed": 20261227,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 1,
       "explanationSteps": [
         "각 구슬을 뽑을 가능성이 같으므로 빨간 구슬 수 ÷ 전체 구슬 수 = 1/2입니다."
@@ -9564,10 +9564,10 @@
     {
       "id": "g6-probability:probability:2:2",
       "conceptId": "g6-probability:probability:2:2",
-      "instanceId": "b5085074-f342-4ac6-9825-ed0d6253bd72",
+      "instanceId": "9a00ed5b-b6b3-449b-9954-5c57fd89b0f7",
       "seed": 20261228,
       "curriculumVersion": "2022-revised-practice-v3",
-      "generatorVersion": "4",
+      "generatorVersion": "5",
       "difficulty": 1,
       "explanationSteps": [
         "각 구슬을 뽑을 가능성이 같으므로 빨간 구슬 수 ÷ 전체 구슬 수 = 1입니다."

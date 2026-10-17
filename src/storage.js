@@ -4,6 +4,7 @@ const plain=x=>x&&typeof x==='object'&&!Array.isArray(x);
 const nonnegative=x=>typeof x==='number'&&Number.isFinite(x)&&x>=0;
 export function validRecord(x){
  if(!plain(x)||x.schemaVersion!==2||typeof x.sessionId!=='string'||!x.sessionId.length||x.sessionId.length>200||typeof x.date!=='string'||!Number.isFinite(Date.parse(x.date))||!plain(x.config)||!Number.isInteger(x.config.grade)||x.config.grade<1||x.config.grade>6||!Array.isArray(x.answers)||!['complete','defeat','quit','interrupted','time-limit','checkpoint','legacy'].includes(x.outcome))return false;
+ if(x.studentNo!=null&&!(Number.isInteger(x.studentNo)&&x.studentNo>=1&&x.studentNo<=99))return false;
  if(['score','survivalSeconds','level','kills','correct','wrong','bestCombo'].some(k=>x[k]!=null&&!nonnegative(x[k])))return false;
  if(x.config.mode!=null&&!['survival','boss','explore'].includes(x.config.mode))return false;
  return x.answers.every(a=>plain(a)&&typeof a.text==='string'&&typeof a.answer==='string'&&typeof a.correct==='boolean'&&typeof a.unit==='string'&&Number.isInteger(a.level)&&a.level>=1&&a.level<=5&&(a.responseMs==null||nonnegative(a.responseMs))&&(a.hintUsed==null||typeof a.hintUsed==='boolean')&&(a.review==null||typeof a.review==='boolean'));

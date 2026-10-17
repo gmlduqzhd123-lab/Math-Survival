@@ -88,3 +88,16 @@ body.reduce-motion #questionBox.newQuestion{animation:none}
 @media(prefers-reduced-motion:reduce){#questionBox.newQuestion{animation:none}}
 .srOnly{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 @media(max-height:640px){#newQuestionBadge{margin-bottom:2px;padding:0 8px;line-height:1.25;font-size:calc(12px * var(--reading-scale))}}
+.upgradeBtn .tip{display:block;margin-top:6px;padding:4px 8px;border-radius:10px;background:#fff4d6;color:#7a5a1e;font-size:12px;font-weight:700;line-height:1.4}
+/* Keyboard tips only help on computers; touch screens hide them. */
+@media(hover:none){.choiceHint,.keyboardOnly,.answerKeyHint{display:none}}
+/* Read-aloud sits at the side of the question so it doesn't make the question area taller. */
+.readAloud{display:inline-flex;align-items:center;justify-content:center;gap:4px;min-height:40px;min-width:44px;padding:4px 10px;border:2px solid #d9ab43;border-radius:999px;background:#fffdf3;color:#5b4613;font:inherit;font-size:14px;font-weight:800;cursor:pointer}
+#questionBox .readAloud{float:right;margin:0 0 2px 6px;padding:2px 4px;min-height:36px;min-width:40px}#questionBox .readAloud .readLabel{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}.readAloud .readIcon{font-size:20px;line-height:1}
+.readAloud[hidden]{display:none!important}
+/* Results: play-again buttons come right after the score so students don't scroll to find them. */
+#gameOverPanel .resultActions{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:12px 0}
+#gameOverPanel .resultActions button{min-height:52px;font-size:18px;font-weight:800}
+@media(max-width:600px){#gameOverPanel .grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}#gameOverPanel .info{padding:10px 12px}}
+/* Graph questions with the read-aloud button need a little more room on small phones. */
+@media(orientation:portrait){body.simple-play #learningArea:has(#questionVisual:not([hidden])){max-height:36dvh}}
