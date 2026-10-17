@@ -1,8 +1,9 @@
 const $=id=>document.getElementById(id);
 // UI preferences never replace learning or progression records.
 export function createPlayUI(r){
- let dialog,focusedAnswer=null,prefs={autoSkill:true,answers:'orbs',map:false,fullscreen:true};
- try{const saved=JSON.parse(localStorage.getItem('math-survival.ui.v1')||'null');if(saved){prefs.autoSkill=saved.autoSkill!==false;prefs.answers=saved.answers==='buttons'?'buttons':'orbs';prefs.map=saved.map===true;prefs.fullscreen=saved.fullscreen!==false;}}catch{}
+ let dialog,focusedAnswer=null,prefs={autoSkill:true,answers:'orbs',map:false,fullscreen:!navigator.webdriver};
+ // Automated browsers start windowed so regression suites can still resize the viewport mid-game.
+ try{const saved=JSON.parse(localStorage.getItem('math-survival.ui.v1')||'null');if(saved){prefs.autoSkill=saved.autoSkill!==false;prefs.answers=saved.answers==='buttons'?'buttons':'orbs';prefs.map=saved.map===true;if(typeof saved.fullscreen==='boolean')prefs.fullscreen=saved.fullscreen;}}catch{}
  function save(){try{localStorage.setItem('math-survival.ui.v1',JSON.stringify(prefs));}catch{}}
  // Fullscreen hides the browser bars. iPhone Safari has no page fullscreen, so there the 100dvh layout fills the screen instead.
  const root=document.documentElement;
