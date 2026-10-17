@@ -558,6 +558,32 @@ function draw() {
         gameRuntime.ctx.ellipse(sx, gy + item.r + 6, item.r * 0.9 - hop * 0.6, 6, 0, 0, Math.PI * 2);
         gameRuntime.ctx.fill();
 
+        if (spec.special) {
+          // Boss reward: turning gold rays and a double ring so it reads as "pick me up" from afar.
+          const ctx = gameRuntime.ctx, spin = still ? 0 : now / 900;
+          ctx.save();
+          ctx.translate(sx, sy);
+          ctx.rotate(spin);
+          ctx.fillStyle = "rgba(255,221,87,.42)";
+          for (let i = 0; i < 8; i++) {
+            ctx.rotate(Math.PI / 4);
+            ctx.beginPath();
+            ctx.moveTo(-7, 0);
+            ctx.lineTo(0, -(item.r + 34 + pulse));
+            ctx.lineTo(7, 0);
+            ctx.fill();
+          }
+          ctx.restore();
+          ctx.strokeStyle = "#fff3a3";
+          ctx.lineWidth = 3;
+          ctx.setLineDash([8, 6]);
+          ctx.lineDashOffset = -spin * 30;
+          ctx.beginPath();
+          ctx.arc(sx, sy, item.r + 16 + pulse, 0, Math.PI * 2);
+          ctx.stroke();
+          ctx.setLineDash([]);
+        }
+
         gameRuntime.ctx.fillStyle = spec.color + "55";
         gameRuntime.ctx.beginPath();
         gameRuntime.ctx.arc(sx, sy, item.r + 10 + pulse, 0, Math.PI * 2);
@@ -581,6 +607,7 @@ function draw() {
         gameRuntime.ctx.textAlign = "center";
         gameRuntime.ctx.textBaseline = "middle";
         gameRuntime.ctx.fillStyle = "#111827";
+        if(spec.special)gameRuntime.ctx.font = "900 34px Apple Color Emoji, Segoe UI Emoji, Pretendard Variable, Malgun Gothic, sans-serif";
         if(!drawSprite(gameRuntime.ctx,spec.sprite,sx,sy+1,52))gameRuntime.ctx.fillText(spec.icon, sx, sy + 1);
         twinkle(gameRuntime.ctx, sx + item.r * 0.8, sy - item.r * 0.8, 9, item.pulse * 1.1);
 
@@ -588,7 +615,7 @@ function draw() {
         gameRuntime.ctx.fillStyle = "#ffffff";
         gameRuntime.ctx.strokeStyle = "rgba(0,0,0,.55)";
         gameRuntime.ctx.lineWidth = 4;
-        if(item===nearbyItem){gameRuntime.ctx.strokeText(spec.name, sx, sy + 38);gameRuntime.ctx.fillText(spec.name, sx, sy + 38);}
+        if(item===nearbyItem||spec.special){gameRuntime.ctx.strokeText(spec.name, sx, sy + item.r + 18);gameRuntime.ctx.fillText(spec.name, sx, sy + item.r + 18);}
         gameRuntime.ctx.restore();
       }
 

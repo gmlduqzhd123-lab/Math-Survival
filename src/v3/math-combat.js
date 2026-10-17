@@ -5,7 +5,8 @@ export class RewardLedger {
  clear(){this.ids.clear();}
 }
 export function energyReward(correct,passiveLevel=0){return correct?12+Math.max(0,Math.min(5,passiveLevel))*2:0;}
-export function bossDamage(hp,amount,shield){return shield>0?Math.max(1,hp-amount*.2):hp-amount;}
+// The math shield only softens hits; a boss whose health reaches 0 still falls.
+export function bossDamage(hp,amount,shield){return shield>0?hp-amount*.2:hp-amount;}
 export function createMathCombat(r){const ledger=new RewardLedger();let popup=false,returnPaused=false;
  function start(config){ledger.clear();popup=config.questionMode==='popup';r.state.mathEnergy=0;r.state.mathRewards=0;hide();}
  function hide(){const panel=document.getElementById('mathPopup');if(panel)panel.hidden=true;r.state.mathPopup=false;}
