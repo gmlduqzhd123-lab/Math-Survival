@@ -372,8 +372,8 @@ const input=installInput(runtime);
 v2.setInput(input);
 
 
-    document.getElementById("startBtn").addEventListener("click", () => {if(v2.validate()) resetGame();});
-    document.getElementById("restartBtn").addEventListener("click", resetGame);
+    document.getElementById("startBtn").addEventListener("click", () => {if(v2.validate()){v2.playUI.startFullscreen();resetGame();}});
+    document.getElementById("restartBtn").addEventListener("click", () => {v2.playUI.startFullscreen();resetGame();});
     mainMenuBtn.addEventListener("click", returnToMainMenu);
     quitGameBtn.addEventListener("click", quitGame);
     document.getElementById("toStartBtn").addEventListener("click", () => {
