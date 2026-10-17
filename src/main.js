@@ -375,12 +375,27 @@ v2.setInput(input);
     document.getElementById("startBtn").addEventListener("click", () => {if(v2.validate()){v2.playUI.startFullscreen();resetGame();}});
     document.getElementById("restartBtn").addEventListener("click", () => {v2.playUI.startFullscreen();resetGame();});
     mainMenuBtn.addEventListener("click", returnToMainMenu);
+    // If the browser refuses to store the run, stay in the game rather than lose it.
+    document.getElementById("saveExitBtn").addEventListener("click", () => {
+      if(!v2.saveRun()){showToast("저장하지 못했어요. 브라우저 저장 공간을 확인해 주세요.");return;}
+      returnToMainMenu({save:true});showToast("모험을 저장했어요. 첫 화면의 ‘이어하기’로 계속할 수 있어요.");
+    });
+    document.getElementById("continueBtn").addEventListener("click", () => {
+      const save=v2.pendingSave();if(!save){v2.refreshContinue();return;}
+      // Boss order and the camera start from the saved map, so the hidden selects follow the save.
+      mapSelect.value=save.v2.config.map;difficultyEl.value=save.v2.config.combat;mapSelect.dispatchEvent(new Event("change",{bubbles:true}));
+      v2.playUI.startFullscreen();resetGame(save);
+    });
+    // Closing the tab or switching apps keeps the run so it can be continued from the first screen.
+    window.addEventListener("pagehide", () => v2.saveRun());
+    document.addEventListener("visibilitychange", () => {if(document.hidden)v2.saveRun();});
     quitGameBtn.addEventListener("click", quitGame);
     document.getElementById("toStartBtn").addEventListener("click", () => {
       gameOverPanel.classList.add("hidden");
       mainMenuBtn.classList.add("hidden");
       quitGameBtn.classList.add("hidden");
       startPanel.classList.remove("hidden");
+      v2.refreshContinue();
       initAudio();
     });
 

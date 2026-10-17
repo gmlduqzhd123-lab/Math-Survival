@@ -57,7 +57,7 @@ function randomVisiblePoint() {
       };
     }
 
-function resetGame() {
+function resetGame(resume) {
       gameRuntime.state.missionDue = null;
       gameRuntime.clock = 0;
       Object.keys(gameRuntime.keys).forEach(k => gameRuntime.keys[k] = false);
@@ -166,7 +166,7 @@ function resetGame() {
       gameRuntime.spawnItem(gameRuntime.player.x, gameRuntime.player.y + 170, "heart");
       gameRuntime.spawnItem(gameRuntime.player.x + 260, gameRuntime.player.y, "chest");
       gameRuntime.showToast(`${gameRuntime.state.map.name} 입장! 큰 맵을 돌아다니며 살아남으세요.`);
-      gameRuntime.v2.start();
+      gameRuntime.v2.start(resume);
     }
 
 function update(dt, now) {
@@ -515,8 +515,9 @@ function quitGame() {
       gameRuntime.endGame(false, true);
     }
 
-function returnToMainMenu() {
-      if(gameRuntime.state.running)gameRuntime.v2.interrupt();
+function returnToMainMenu(options) {
+      // Saving first ends the session without a result screen so the run can be continued.
+      if(gameRuntime.state.running){if(options?.save===true)gameRuntime.v2.suspend();else gameRuntime.v2.interrupt();}
       gameRuntime.state.missionDue=null;
       gameRuntime.state.running = false;
       document.body.classList.remove("game-running");
@@ -549,6 +550,7 @@ function returnToMainMenu() {
 
       gameRuntime.showToast("메인 메뉴로 돌아왔습니다.");
       gameRuntime.updateWeaponInfo();
+      gameRuntime.v2.refreshContinue();
     }
 return { gameNow, syncCanvasViewport, rand, randint, clamp, distance, worldToScreenX, worldToScreenY, isNearScreen, updateCamera, randomPointAroundPlayer, randomVisiblePoint, resetGame, update, loop, quitGame, returnToMainMenu };
 }

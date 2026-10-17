@@ -12,6 +12,7 @@ import {generateProblem,equivalent} from './math-engine.js';
 import {CHARACTERS,WEAPONS,createCombatV2} from './combat-v2.js';
 import {summarize,downloadReview} from './learning.js';
 import {createStore} from './storage.js';
+import {createSaves,captureRun,applyRun,describe,slotFor} from './savegame.js';
 import {createMastery} from './mastery.js';
 import {availableUnits,validateConfig} from './configuration.js';
 import {APP_VERSION,GENERATOR_VERSION} from './version.js';
@@ -27,7 +28,7 @@ function decorateSelects(){const root=$('startPanel');for(const select of root.q
 export function createV2(r,curriculum){
  const settings={reduced:matchMedia('(prefers-reduced-motion: reduce)').matches,low:false,font:1};
  const playUI=createPlayUI(r);
- const store=createStore();let mastery=createMastery(store.data.mastery);
+ const store=createStore(),saves=createSaves();let mastery=createMastery(store.data.mastery),lastAutosave=0;
  let config={},student=null,recentTexts=[],answers=[],result=null,reviewTick=0,started=0,shown=0,sessionId='',finished=true,input=null,lastHud=-Infinity,notice='';
  const popupResponse=createResponseTimer();let windowActive=true;
  const syncResponseVisibility=()=>popupResponse.setActive(!document.hidden&&windowActive);
@@ -36,7 +37,10 @@ export function createV2(r,curriculum){
  function syncLevels(){const units=availableUnits(configFromUI(),curriculum);const supported=[1,2,3,4,5].filter(l=>$('unit').value==='all'||units.every(u=>u.supportedLevels.includes(l)));for(const o of $('mathLevel').options){o.disabled=!supported.includes(Number(o.value));o.hidden=o.disabled;}if(supported.length&&!supported.includes(Number($('mathLevel').value)))$('mathLevel').value=String(supported[0]);refreshSelectLabels();}
  function configFromUI(){return {grade:Number($('grade').value),domain:$('domain').value,unit:$('unit').value,level:Number($('mathLevel').value),auto:$('autoLevel').checked,mode:baseMode($('mode').value),gameMode:$('mode').value,duration:Number($('duration')?.value||8),target:Number($('target').value),limit:Number($('limit').value),character:$('character').value,weapon:$('startingWeapon').value,questionMode:$('questionMode')?.value||'orbs',pet:$('petSelect')?.value||'fairy',map:r.mapSelect.value,combat:r.difficultyEl.value};}
  function validate(){const cfg=configFromUI(),errors=validateConfig(cfg,curriculum);if(!r.v3.progress.data.characters.includes(cfg.character))errors.push('함께 모험할 수 있는 캐릭터를 선택하세요.');if(!r.v3.progress.data.pets.includes(cfg.pet))errors.push('함께 모험할 수 있는 펫을 선택하세요.');$('configErrors').textContent=[notice,...errors].filter(Boolean).join(' ');$('startBtn').disabled=errors.length>0;return !errors.length;}
- function saveSettings(){try{localStorage.setItem('math-survival-2.settings',JSON.stringify({...configFromUI(),...settings,muted:r.muted,studentNo:readStudentNo()}));}catch(e){$('configErrors').textContent='설정을 저장하지 못했습니다. '+e.message;}}
+ function saveSettings(){try{
+  // Settings can be saved while the page is still being built; keep the stored number until its field exists.
+  const studentNo=$('studentNo')?readStudentNo():JSON.parse(localStorage.getItem('math-survival-2.settings')||'{}').studentNo??null;
+  localStorage.setItem('math-survival-2.settings',JSON.stringify({...configFromUI(),...settings,muted:r.muted,studentNo}));}catch(e){$('configErrors').textContent='설정을 저장하지 못했습니다. '+e.message;}}
  function restoreSettings(){try{const raw=localStorage.getItem('math-survival-2.settings');if(!raw)return;const saved=JSON.parse(raw);const errors=validateConfig(saved,curriculum);if(errors.length)throw Error(errors.join(' '));for(const [key,id]of Object.entries({grade:'grade',domain:'domain',level:'mathLevel',mode:'mode',target:'target',limit:'limit',character:'character',weapon:'startingWeapon',combat:'difficulty',map:'mapSelect',pet:'petSelect',questionMode:'questionMode',duration:'duration'}))if(saved[key]!=null)$(id).value=String(saved[key]);if(saved.gameMode)$('mode').value=saved.gameMode;syncUnits();$('unit').value=saved.unit;syncLevels();$('autoLevel').checked=!!saved.auto;settings.reduced=!!saved.reduced;settings.low=!!saved.low;settings.font=[1,1.15,1.3].includes(saved.font)?saved.font:1;$('reducedMotion').checked=settings.reduced;$('lowPower').checked=settings.low;$('fontSize').value=String(settings.font);r.muted=!!saved.muted;}catch(e){notice='저장된 설정을 적용하지 않았습니다. '+e.message;validate();}}
  function applySettings(){document.documentElement.style.setProperty('--reading-scale',settings.font);document.body.classList.toggle('reduce-motion',settings.reduced);document.body.classList.toggle('low-power',settings.low);}
  function layout(){const wrap=$('wrap'),move=(id,ids)=>{const el=document.createElement('div');el.id=id;for(const x of ids)el.append($(x));wrap.prepend(el);return el;};
@@ -82,6 +86,7 @@ export function createV2(r,curriculum){
   mountHistory();
   playUI.mount();
   compactHome();
+  refreshContinue();
  }
 
  function compactHome(){
@@ -102,8 +107,9 @@ export function createV2(r,curriculum){
   studentField.innerHTML='<span>내 번호</span><input id="studentNo" type="number" inputmode="numeric" min="1" max="99" placeholder="예: 12" autocomplete="off"><small>선생님께 기록을 낼 때 써요 · 이름은 쓰지 않아요</small>';
   cards.after(studentField);
   try{const saved=JSON.parse(localStorage.getItem('math-survival-2.settings')||'{}');if(Number.isInteger(saved.studentNo)&&saved.studentNo>=1&&saved.studentNo<=99)$('studentNo').value=String(saved.studentNo);}catch{}
-  $('studentNo').addEventListener('change',()=>{if($('studentNo').value&&!readStudentNo())$('studentNo').value='';saveSettings();});
-  for(const id of ['startBtn','startupStatus','repairStartup','configErrors','growthError'])quick.append($(id));
+  $('studentNo').addEventListener('change',()=>{if($('studentNo').value&&!readStudentNo())$('studentNo').value='';saveSettings();refreshContinue();});
+  const resume=document.createElement('div');resume.id='continueBox';resume.hidden=true;resume.innerHTML='<button type="button" id="continueBtn">▶ 이어하기</button><p id="continueInfo"></p>';quick.append(resume);
+ for(const id of ['startBtn','startupStatus','repairStartup','configErrors','growthError'])quick.append($(id));
   const settingsPanel=document.createElement('details');settingsPanel.id='homeSettings';
   settingsPanel.innerHTML='<summary>⚙️ 설정 바꾸기</summary>';root.before(settingsPanel);
   const collection=document.createElement('details');collection.id='homeCollection';
@@ -138,11 +144,18 @@ export function createV2(r,curriculum){
   $('applyRestore').onclick=()=>{if(!pendingRestore)return;const ok=store.restore(pendingRestore);mastery=createMastery(store.data.mastery);pendingRestore=null;$('applyRestore').hidden=true;$('backupPreview').textContent=ok?'학습 기록을 불러왔습니다.':store.error;history();};
   const ask=(ids,all=false)=>{pendingDelete=ids;deleteEverything=all;$('deleteConfirm').hidden=!all&&!ids.length;};$('deleteAll').onclick=()=>ask(store.data.records.map(x=>x.sessionId),true);$('deleteSelected').onclick=()=>ask([...$('historyList').querySelectorAll('input:checked')].map(x=>x.value));$('cancelDelete').onclick=()=>{$('deleteConfirm').hidden=true;};$('confirmDelete').onclick=()=>{const ok=store.remove(pendingDelete,deleteEverything);mastery=createMastery(store.data.mastery);$('deleteConfirm').hidden=true;$('backupPreview').textContent=ok?'기록을 삭제했습니다.':store.error;history();};
  }
- function start(){playUI.close();popupResponse.reset();config=configFromUI();student=readStudentNo();recentTexts=[];answers=[];reviewTick=0;result=null;started=r.gameNow();sessionId=crypto.randomUUID();finished=false;lastHud=-Infinity;s.explanationPending=false;
+ function start(resume){playUI.close();popupResponse.reset();config=resume?structuredClone(resume.v2.config):configFromUI();student=resume?resume.v2.student:readStudentNo();recentTexts=[];answers=[];reviewTick=0;result=null;started=r.gameNow();sessionId=crypto.randomUUID();finished=false;lastHud=-Infinity;s.explanationPending=false;
   s.kills=0;s.mode=config.mode;s.character=config.character;s.winTime=config.mode==='explore'&&config.limit>0?config.limit:Infinity;combat.reset();s.newWeapons[config.weapon]=1;
   const c=CHARACTERS[config.character];s.hp=s.maxHp=c.hp;r.player.speed=c.speed;s.attackPower=c.attack;s.fireRate=c.rate;if(config.character==='guardian')s.shield=2;r.v3.start(config);
-  $('explanation').textContent='';$('continueQuestion').hidden=true;$('answerAccess').replaceChildren();$('pauseBtn').textContent='☰';$('pauseBtn').setAttribute('aria-pressed','false');$('assistLabel').hidden=true;saveSettings();r.setMuted(r.muted);r.syncCanvasViewport();r.updateCamera();if(config.mode==='boss'){s.currentMapKey=r.mapSelect.value;r.spawnBoss();}r.spawnQuiz();checkpoint();
+  $('explanation').textContent='';$('continueQuestion').hidden=true;$('answerAccess').replaceChildren();$('pauseBtn').textContent='☰';$('pauseBtn').setAttribute('aria-pressed','false');$('assistLabel').hidden=true;saveSettings();r.setMuted(r.muted);r.syncCanvasViewport();r.updateCamera();if(resume)restore(resume);else{saves.remove(slotFor(student));if(config.mode==='boss'){s.currentMapKey=r.mapSelect.value;r.spawnBoss();}}lastAutosave=r.gameNow();r.spawnQuiz();checkpoint();if(resume&&s.levelUpQueue>0&&config.mode!=='explore')r.openLevelUpPanel();
  }
+ // Saving keeps the run in this browser until it is continued or ends. The question on screen is replaced by a new one.
+ function saveRun(){if(!s.running||finished)return false;return saves.put(slotFor(student),captureRun(r,{config,student,answers,sessionId,started,reviewTick,recentTexts}));}
+ function restore(save){({answers,sessionId,started,reviewTick,recentTexts}=structuredClone(save.v2));applyRun(r,save);r.updateWeaponInfo();r.updateMissionUI();r.showToast('저장한 모험을 이어서 시작해요!');}
+ function pendingSave(){const save=saves.get(slotFor(readStudentNo()));if(!save)return null;const cfg=save.v2?.config;if(!cfg||validateConfig(cfg,curriculum).length||!r.v3.progress.data.characters.includes(cfg.character)||!r.v3.progress.data.pets.includes(cfg.pet)||![...r.mapSelect.options].some(o=>o.value===cfg.map)){saves.remove(slotFor(readStudentNo()));return null;}return save;}
+ function refreshContinue(){const box=$('continueBox');if(!box)return;const save=pendingSave();box.hidden=!save;if(!save)return;const d=describe(save),mode=$('mode').querySelector('option[value="'+save.v2.config.gameMode+'"]')?.textContent.split(' · ')[0]||'';$('continueInfo').textContent=[save.v2.student?save.v2.student+'번':'',d.grade,mode,d.level,d.time+' 진행',d.saved?d.saved+' 저장':''].filter(Boolean).join(' · ')+' · 새로 시작하면 저장한 모험은 지워져요.';}
+ // Leave for the main menu but keep the run to continue later. The learning record so far is kept as well.
+ function suspend(){if(!s.running||finished)return false;const ok=saveRun();playUI.close();r.v3.math.hide();r.v3.content.closeShop();clearInput();finished=true;$('answerAccess').replaceChildren();$('continueQuestion').hidden=true;$('bossHUD').hidden=true;if(answers.length)store.save(snapshot('interrupted','저장하고 나가기'),mastery.units);else store.discardCheckpoint();history();return ok;}
  function makeProblem(){const units=availableUnits(config,curriculum),u=units[Math.floor(Math.random()*units.length)];reviewTick++;const rev=reviewTick%3===0?mastery.due(u.id):null;const level=rev?rev.level:mastery.level(u.id,config.level,config.auto,u.supportedLevels);let p;
   for(let tries=0;tries<60;tries++){p=generateProblem({...config,unit:u.id,level,...(config.gameMode==='daily'?{seed:s.dailySeed+reviewTick}: {})},curriculum);const fresh=config.gameMode==='daily'||tries>=20||!recentTexts.includes(p.text);if(fresh&&(!rev||p.conceptId!==rev.lastConcept&&!rev.successConcepts.includes(p.conceptId)&&p.operands.join(':')!==rev.operands.join(':')))break;}
   // Avoid showing the same question again within the last few questions.
@@ -163,7 +176,7 @@ export function createV2(r,curriculum){
  function reposition(){if(!s.quizActive)return;const points=orbPositions();r.answerOrbs.forEach((o,i)=>Object.assign(o,points[i]));}
  function snapshot(outcome,reason){return {...summarize(s,answers,config),...(student?{studentNo:student}:{}),sessionId,appVersion:APP_VERSION,curriculumVersion:curriculum.curriculumVersion,generatorVersion:GENERATOR_VERSION,outcome,resultReason:reason,actualLevels:Object.fromEntries([...new Set(answers.map(x=>x.unit))].map(id=>[id,[...new Set(answers.filter(x=>x.unit===id).map(x=>x.level))]]))};}
  function checkpoint(){return store.checkpoint(snapshot('checkpoint','응답마다 저장'),mastery.units);}
- function tick(dt,now){r.v3.tick(dt,now);combat.tick(now);if(s.quizActive&&now<s.hintUntil)s.problem.hintUsed=true;
+ function tick(dt,now){r.v3.tick(dt,now);if(now-lastAutosave>15000){lastAutosave=now;saveRun();}combat.tick(now);if(s.quizActive&&now<s.hintUntil)s.problem.hintUsed=true;
   if(config.mode==='boss'&&!r.enemies.some(e=>e.boss)){if(s.bossKills>=3){r.endGame(true);return;}const order=['forest','desert','library','ocean','clockwork','sky'],key=order[(order.indexOf(r.mapSelect.value)+s.bossKills)%order.length];s.currentMapKey=key;s.map=r.MAPS[key];s.worldW=s.map.worldW;s.worldH=s.map.worldH;r.makeDecorations();r.spawnBoss();}
   if(now-lastHud<200)return;lastHud=now;playUI.sync();$('skillBtn').disabled=now<s.skillReady;$('skillBtn').textContent=now<s.skillReady?'스킬 '+Math.ceil((s.skillReady-now)/1000)+'초':'특수 스킬 E';$('playSound').textContent=r.muted?'🔇 소리':'🔊 소리';
   const boss=r.enemies.find(e=>e.boss),el=$('bossHUD');el.hidden=!boss;if(boss){el.textContent=boss.name+' · '+Math.ceil(boss.hp)+' / '+boss.maxHp;el.style.setProperty('--boss-health',(Math.max(0,boss.hp)/boss.maxHp*100)+'%');}
@@ -171,8 +184,8 @@ export function createV2(r,curriculum){
  }
  function draw(now){combat.draw(now);r.v3.draw(now);}
  function clearInput(){input?.clear();}
- function pause(){if(!s.running||s.mathPopup||s.merchantOpen)return;if(s.levelUpPending||s.explanationPending){if(playUI.isOpen)playUI.close();else playUI.pauseChanged();return;}if(s.paused&&!playUI.isOpen){playUI.pauseChanged();return;}s.paused=!s.paused;if(s.paused)clearInput();playUI.pauseChanged();$('pauseBtn').textContent='☰';$('pauseBtn').setAttribute('aria-pressed',String(s.paused));}
- function finish(won,quit,outcomeOverride){if(finished)return;finished=true;playUI.close();r.v3.math.hide();clearInput();$('answerAccess').replaceChildren();$('continueQuestion').hidden=true;$('bossHUD').hidden=true;
+ function pause(){if(!s.running||s.mathPopup||s.merchantOpen)return;if(s.levelUpPending||s.explanationPending){if(playUI.isOpen)playUI.close();else playUI.pauseChanged();return;}if(s.paused&&!playUI.isOpen){playUI.pauseChanged();return;}s.paused=!s.paused;if(s.paused){clearInput();saveRun();}playUI.pauseChanged();$('pauseBtn').textContent='☰';$('pauseBtn').setAttribute('aria-pressed',String(s.paused));}
+ function finish(won,quit,outcomeOverride){if(finished)return;finished=true;saves.remove(slotFor(student));playUI.close();r.v3.math.hide();clearInput();$('answerAccess').replaceChildren();$('continueQuestion').hidden=true;$('bossHUD').hidden=true;
   const outcome=outcomeOverride||(quit?'quit':s.hp<=0?'defeat':config.mode==='explore'&&answers.length<config.target||config.mode==='boss'&&s.bossKills<3?'time-limit':won?'complete':'defeat');
   const titles={interrupted:'메뉴로 이동 · 기록 저장',quit:'게임 종료',defeat:'전투 종료', 'time-limit':'제한 시간 종료',complete:config.mode==='explore'?'목표 문항 완료':config.mode==='boss'?'보스 3연전 완료':'생존 완료'};
   r.v3.finish(outcome);result=snapshot(outcome,titles[outcome]);const saved=store.save(result,mastery.units);history();$('resultTitle').textContent=titles[outcome];$('resultText').textContent=(student?studentTag(student)+' · ':'')+(config.mode==='explore'?'수학 탐험 '+answers.length+'/'+config.target+'문항 · 정답률 '+(result.accuracy==null?'응답 없음':result.accuracy+'%'):config.mode==='boss'?'보스 챌린지 '+s.bossKills+'/3 처치':s.map.name+' · '+result.survivalSeconds+'초 생존');
@@ -180,7 +193,7 @@ export function createV2(r,curriculum){
   $('exportTableHelp').textContent=result.reviewProblems.length?'위에 나온 틀린 문제·내 답·정답·해설을 엑셀에서 볼 수 있는 파일로 저장해요.':'틀린 문제가 없어 저장할 해설이 없어요.';
   $('learningReport').innerHTML='<h2>이번 모험의 수학 기록</h2><p>처음 본 문제 '+(result.newAccuracy==null?'없음':result.newAccuracy+'% 맞힘')+' · 다시 푼 문제 '+(result.reviewAccuracy==null?'없음':result.reviewAccuracy+'% 맞힘')+' · 힌트 '+result.hintCount+'번</p><h3>단원별로 맞힌 문제</h3>'+Object.entries(result.units).map(([id,u])=>'<p>'+esc(curriculum.grades.flatMap(g=>g.units).find(x=>x.id===id)?.name||id)+' · '+u.total+'문제 중 '+u.correct+'문제 맞힘</p>').join('')+(result.reviewProblems.length?'<h3>틀린 문제 다시 보기</h3>':'')+result.reviewProblems.map(w=>'<div class="reviewRow"><strong>'+esc(w.text)+'</strong><p>내 답 '+esc(w.selected)+' → 정답 '+esc(w.answer)+'</p><small>'+esc(w.explain)+'</small></div>').join('')+(answers.length===0?'<p>이번에는 푼 문제가 없어요. 다음에는 정답 구슬을 찾아가 봐요!</p>':result.wrong===0?'<p>🎉 이번에 푼 문제를 모두 맞혔어요!</p>':'')+'<p role="status">'+(saved?'이 브라우저에 기록을 저장했습니다.':esc(store.error)+(result.reviewProblems.length?' 틀린 문제와 해설은 아래 버튼으로 저장할 수 있어요.':''))+'</p>';
  }
- function interrupt(){playUI.close();r.v3.math.hide();if(answers.length)finish(false,false,'interrupted');else{finished=true;r.v3.finish('interrupted');clearInput();store.discardCheckpoint();}}
+ function interrupt(){playUI.close();r.v3.math.hide();if(answers.length)finish(false,false,'interrupted');else{finished=true;saves.remove(slotFor(student));r.v3.finish('interrupted');clearInput();store.discardCheckpoint();}}
  function afterAnswer(){playUI.sync();r.v3.modes.answer();checkpoint();if(r.v3.math.afterAnswer())return;if(s.hp<=0){r.endGame(false);return;}if(config.mode==='explore'){s.explanationPending=true;s.paused=true;clearInput();$('continueQuestion').hidden=false;$('continueQuestion').focus();}}
- return {settings,playUI,mount,start,validate,persistSound:saveSettings,setInput(x){input=x;},clearInput,makeProblem,present,record,orbPositions,reposition,tick,draw,pause,finish,interrupt,afterAnswer,upgrades:()=>[...r.v3.weapons.filterLegacy(combat.upgrades().map(o=>({...o,slot:Object.keys(WEAPONS).find(id=>o.title.startsWith(WEAPONS[id].name))}))),...r.v3.weapons.upgrades()],isCorrect:equivalent,combat,get quizInterval(){return 30000;},get config(){return config;},get answers(){return answers;},get result(){return result;},get store(){return store;},get mastery(){return mastery;}};
+ return {settings,playUI,mount,start,validate,saveRun,suspend,pendingSave,refreshContinue,persistSound:saveSettings,setInput(x){input=x;},clearInput,makeProblem,present,record,orbPositions,reposition,tick,draw,pause,finish,interrupt,afterAnswer,upgrades:()=>[...r.v3.weapons.filterLegacy(combat.upgrades().map(o=>({...o,slot:Object.keys(WEAPONS).find(id=>o.title.startsWith(WEAPONS[id].name))}))),...r.v3.weapons.upgrades()],isCorrect:equivalent,combat,get quizInterval(){return 30000;},get config(){return config;},get answers(){return answers;},get result(){return result;},get store(){return store;},get mastery(){return mastery;}};
 }

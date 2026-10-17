@@ -34,5 +34,8 @@ export function createWeapons(r,battle){let levels={},passives={},evolved={},tim
  function filterLegacy(options){return options.filter(o=>!o.slot||hasRoom(o.slot)).map(o=>({...o,apply(){if(o.slot&&!hasRoom(o.slot))return;if(o.slot)gain(o.slot);o.apply();}}));}
  function draw(now){const ctx=r.ctx;for(const fx of effects){if(!r.isNearScreen(fx.x,fx.y,fx.r))continue;ctx.save();ctx.globalAlpha=.4;ctx.strokeStyle=fx.color;ctx.fillStyle=fx.color;ctx.lineWidth=fx.style==='beam'?12:3;ctx.beginPath();const x=r.worldToScreenX(fx.x),y=r.worldToScreenY(fx.y);if(fx.style==='beam'){ctx.moveTo(x,y);ctx.lineTo(x+Math.cos(fx.angle)*fx.r,y+Math.sin(fx.angle)*fx.r);}else{ctx.arc(x,y,fx.r,0,Math.PI*2);if(!r.v2.settings.reduced)ctx.fill();}ctx.stroke();ctx.restore();}
   if(now<animationUntil&&!r.v2.settings.reduced){ctx.strokeStyle='#f9d77b';ctx.lineWidth=6;ctx.beginPath();ctx.arc(r.worldToScreenX(p.x),r.worldToScreenY(p.y),40+(1400-(animationUntil-now))/12,0,Math.PI*2);ctx.stroke();}}
- return {start,tick,draw,gain,hit,chest,upgrades,filterLegacy,attack,get levels(){return levels;},get passives(){return passives;},get evolved(){return evolved;},get ultimates(){return unlocked;},get breaks(){return breaks;},get effects(){return effects;}};
+ // Saved runs keep owned weapons, passives and evolutions; on-screen effects start fresh.
+ function save(){return structuredClone({levels,passives,evolved,times,breaks,unlocked,chests:[...chests]});}
+ function load(d){levels={...d.levels};passives={...d.passives};evolved={...d.evolved};times={...d.times};breaks={...d.breaks};unlocked={...d.unlocked};chests=new Set(d.chests);effects=[];animationUntil=0;}
+ return {start,tick,draw,gain,hit,chest,upgrades,filterLegacy,attack,save,load,get levels(){return levels;},get passives(){return passives;},get evolved(){return evolved;},get ultimates(){return unlocked;},get breaks(){return breaks;},get effects(){return effects;}};
 }

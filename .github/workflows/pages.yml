@@ -57,6 +57,7 @@ jobs:
           node tests/first-paint.cjs
           node tests/bgm-browser.cjs
           node tests/fullscreen.cjs
+          node tests/save-resume.cjs
       - run: npm run build
       - name: Built startup recovery and offline regression
         run: |
