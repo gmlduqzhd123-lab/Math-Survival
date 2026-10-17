@@ -182,7 +182,7 @@ body.app-booting #wrap{visibility:hidden}
     <div id="joystickZone">
       <div id="joystickStick"></div>
     </div>
-    <div id="dashBtn" role="button" aria-label="대시">대시</div><button id="skillBtn">특수 스킬 E</button><div id="playControls"><button id="pauseBtn">⏸ 일시정지</button><button id="playSound">🔊 소리</button></div><div id="answerAccess" aria-label="정답 구슬 접근 버튼"></div><div id="explanation" aria-live="polite"></div>
+    <div id="dashBtn" role="button" aria-label="대시">대시</div><span id="moveKeyHint" class="keyHint" aria-hidden="true">이동 <kbd>방향키</kbd> / <kbd>WASD</kbd></span><span id="dashKeyHint" class="keyHint" aria-hidden="true">대시 <kbd>Space</kbd></span><button id="skillBtn">특수 스킬 E</button><div id="playControls"><button id="pauseBtn">⏸ 일시정지</button><button id="playSound">🔊 소리</button></div><div id="answerAccess" aria-label="정답 구슬 접근 버튼"></div><div id="explanation" aria-live="polite"></div>
   </div>
 
   <script src="./src/startup.js?v=startup-2" onerror="var status=document.getElementById('startupStatus');document.getElementById('loadingPanel').append(status,document.getElementById('repairStartup'));status.hidden=false;status.textContent='게임 파일을 불러오지 못했어요. 연결을 확인하고 새로 불러오기를 눌러 주세요.'; var retry=document.getElementById('repairStartup'); retry.hidden=false; retry.onclick=function(){location.reload();};"></script>
