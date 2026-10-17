@@ -390,6 +390,18 @@ v2.setInput(input);
     window.addEventListener("pagehide", () => v2.saveRun());
     document.addEventListener("visibilitychange", () => {if(document.hidden)v2.saveRun();});
     quitGameBtn.addEventListener("click", quitGame);
+    // Home "quit": keep any run, leave fullscreen, then close. Browsers usually refuse to close a tab
+    // the page did not open, so a goodbye screen tells the student the tab can be closed.
+    const exitPanel = document.getElementById("exitPanel");
+    document.getElementById("exitAppBtn").addEventListener("click", () => {
+      v2.saveRun();v2.playUI.exitFullscreen();document.getElementById("exitSaved").hidden=!v2.pendingSave();
+      startPanel.classList.add("hidden");exitPanel.classList.remove("hidden");
+      setTimeout(() => {try{window.close();}catch{}}, 150);
+      document.getElementById("exitBackBtn").focus();
+    });
+    document.getElementById("exitBackBtn").addEventListener("click", () => {
+      exitPanel.classList.add("hidden");startPanel.classList.remove("hidden");v2.refreshContinue();
+    });
     document.getElementById("toStartBtn").addEventListener("click", () => {
       gameOverPanel.classList.add("hidden");
       mainMenuBtn.classList.add("hidden");

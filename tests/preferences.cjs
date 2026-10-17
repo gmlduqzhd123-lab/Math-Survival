@@ -12,7 +12,7 @@ const out='test-results/preferences';fs.mkdirSync(out,{recursive:true});
    const p=await context.newPage(),errors=[];p.on('pageerror',e=>errors.push(e.message));await p.goto(root+'?qa=1');await p.waitForFunction(()=>window.__game);await require('./home-settings.cjs')(p);
    assert.equal(await p.title(),'매쓰 서바이벌 3.0.2');
    assert(await p.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
-   if(name==='desktop')assert.equal(Math.round((await p.locator('#startPanel .card').boundingBox()).width),680);
+   if(name==='desktop'){assert.equal(Math.round((await p.locator('#startPanel .card').boundingBox()).width),1920);assert.equal(Math.round((await p.locator('#startBtn').boundingBox()).width),760);}
    await p.screenshot({path:`${out}/${engine}-${name}-menu.png`});
    for(const mode of ['explore','survival','boss']){
     await p.selectOption('#mode',mode);await p.locator('#startBtn').tap();await p.waitForFunction(()=>__game.clock>=200);

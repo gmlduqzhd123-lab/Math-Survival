@@ -81,3 +81,22 @@
 #startPanel #continueBtn{min-height:56px;border:3px solid #8a5a12;border-radius:14px;background:#f2b33d linear-gradient(#f6c25a,#e9a42c);color:#3b2605;font-size:clamp(21px,5.6vw,26px);font-weight:850;box-shadow:0 5px 0 #8a5a12}
 #continueInfo{margin:0;font-size:14px;font-weight:600;line-height:1.4;color:#5b4a22;word-break:keep-all}
 body.simple-play #menuActions #saveExitBtn{grid-column:1/-1;background:#fff0c8;border:2px solid #8a5a12;color:#3b2605;font-weight:800}
+/* The first screen fills the whole window edge to edge; the content stays in a readable centered column. */
+#startPanel{display:block;padding:0;background:#fff3d6}
+#startPanel .card{box-sizing:border-box;width:100%;max-width:none;min-height:100%;margin:0;border:0;border-radius:0;box-shadow:none;overflow:visible;
+ display:flex;flex-direction:column;justify-content:safe center;
+ padding-block:max(16px,env(safe-area-inset-top)) max(20px,env(safe-area-inset-bottom));
+ padding-inline:max(16px,env(safe-area-inset-left),calc(50% - 380px)) max(16px,env(safe-area-inset-right),calc(50% - 380px))}
+#startPanel .card{background:radial-gradient(180px 80px at 0 100%,#bfe3a6 99%,transparent 100%),radial-gradient(220px 100px at 100% 100%,#9fd3e8 99%,transparent 100%),#fff3d6}
+#startPanel .card>*{flex-shrink:0}
+/* Narrow phones: three chips reach the characters, so the sign drops below the chip row. */
+@media(max-width:520px){#startPanel .titleRow h1{margin-top:74px}}
+@media(max-width:520px) and (max-height:700px){#startPanel .titleRow h1{margin-top:56px}}
+#startPanel .topChips{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:6px}
+#startPanel .exitChip{background:#fde3dc;border-color:#8a2f1f;box-shadow:0 3px 0 #8a2f1f;color:#7a2416}
+/* Goodbye screen when the browser keeps the tab open after "quit". */
+#exitPanel{z-index:210;padding:16px;background:#fff3d6;place-items:center}
+#exitPanel .card{width:min(520px,100%);margin:auto;text-align:center;border:4px solid #3b5d3a;border-radius:26px;box-shadow:0 8px 0 #2c4a2b;background:#fffaf0}
+#exitPanel h1{font-family:'Do Hyeon','Jua',sans-serif;font-weight:400;color:#2f4a2e;font-size:clamp(30px,7vw,44px);margin:0 0 8px}
+#exitPanel .subtitle{color:#3d5a3c;font-weight:700;font-size:18px;word-break:keep-all}
+#exitBackBtn{min-height:52px;padding:8px 18px;border:3px solid #2f4a2e;border-radius:14px;background:#fffaf0;color:#2f4a2e;font-size:18px;font-weight:800;box-shadow:0 4px 0 #2f4a2e;cursor:pointer}

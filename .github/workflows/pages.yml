@@ -58,6 +58,7 @@ jobs:
           node tests/bgm-browser.cjs
           node tests/fullscreen.cjs
           node tests/save-resume.cjs
+          node tests/home-exit.cjs
       - run: npm run build
       - name: Built startup recovery and offline regression
         run: |
