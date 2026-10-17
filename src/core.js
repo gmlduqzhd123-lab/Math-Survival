@@ -245,12 +245,16 @@ function update(dt, now) {
       if (gameRuntime.player.dashSteps > 0) {
         const dashFrom={x:gameRuntime.player.x,y:gameRuntime.player.y};
         gameRuntime.player.dashTrail.push({x:dashFrom.x,y:dashFrom.y,at:now});
-        gameRuntime.player.x += gameRuntime.player.dashX;
-        gameRuntime.player.y += gameRuntime.player.dashY;
-        gameRuntime.player.x = gameRuntime.clamp(gameRuntime.player.x, gameRuntime.player.r, gameRuntime.state.worldW - gameRuntime.player.r);
-        gameRuntime.player.y = gameRuntime.clamp(gameRuntime.player.y, gameRuntime.player.r, gameRuntime.state.worldH - gameRuntime.player.r);
+        // Small sub-steps so a dash stops at thin fences instead of hopping to their far side.
+        const parts = Math.ceil(Math.hypot(gameRuntime.player.dashX, gameRuntime.player.dashY) / 8) || 1;
+        for (let part = 0; part < parts; part++) {
+          gameRuntime.player.x += gameRuntime.player.dashX / parts;
+          gameRuntime.player.y += gameRuntime.player.dashY / parts;
+          gameRuntime.player.x = gameRuntime.clamp(gameRuntime.player.x, gameRuntime.player.r, gameRuntime.state.worldW - gameRuntime.player.r);
+          gameRuntime.player.y = gameRuntime.clamp(gameRuntime.player.y, gameRuntime.player.r, gameRuntime.state.worldH - gameRuntime.player.r);
+          gameRuntime.v3?.world.constrain(gameRuntime.player);
+        }
         gameRuntime.v3?.dungeon.constrain(gameRuntime.player,dashFrom);
-        gameRuntime.v3?.world.constrain(gameRuntime.player);
         gameRuntime.player.dashSteps--;
         gameRuntime.updateCamera();
       }
