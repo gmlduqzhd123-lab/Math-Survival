@@ -41,8 +41,8 @@ const url=process.env.GAME_URL||'http://127.0.0.1:4173/Math-Survival/';
     [...range.getClientRects()].every(b=>b.left>=box.left&&b.right<=box.right&&b.top>=box.top&&b.bottom<=box.bottom);
   }),'notification clips text or overlaps a control');
   assert(await p.locator('#exp').evaluate(el=>{
-   const range=document.createRange();range.selectNodeContents(el.parentElement);return new Set([...range.getClientRects()].map(b=>Math.round(b.top))).size===1;
-  }),'experience label splits across lines');
+   const range=document.createRange();range.selectNodeContents(el.parentElement);return new Set([...range.getClientRects()].map(b=>Math.round(b.top))).size<=1;
+  }),'experience label splits across lines');// Small landscape phones hide the label and keep the bar.
   await p.screenshot({path:`test-results/mobile-gestures/${width}-rotated.png`});
   assert.deepEqual(errors,[]);results.push({width,height,passed:true,longPressMenus:await p.evaluate(()=>touchMenus)});await context.close();console.log(`PASS trusted mobile gestures ${width}`);
  }await browser.close();fs.writeFileSync('test-results/mobile-gestures/report.json',JSON.stringify({url,scope:'Isolated input scene: Chromium trusted CDP touch hold, two-finger dash, cancel and rotation; full gameplay checked separately; not a physical device test',results},null,2));

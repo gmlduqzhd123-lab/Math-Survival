@@ -1,11 +1,11 @@
 const $=id=>document.getElementById(id);
 // UI preferences never replace learning or progression records.
 export function createPlayUI(r){
- let dialog,focusedAnswer=null,prefs={autoSkill:true,answers:'orbs',map:true,mapChosen:false,fullscreen:!navigator.webdriver};
+ let dialog,focusedAnswer=null,prefs={autoSkill:true,answers:'orbs',map:true,mapChosen:false,fullscreen:!navigator.webdriver,landscapeOnly:!navigator.webdriver};
  // Automated browsers start windowed so regression suites can still resize the viewport mid-game.
  try{const saved=JSON.parse(localStorage.getItem('math-survival.ui.v1')||'null');if(saved){prefs.autoSkill=saved.autoSkill!==false;prefs.answers=saved.answers==='buttons'?'buttons':'orbs';// The minimap starts shown; only a choice made with the 🗺 button since then turns it off.
- prefs.mapChosen=saved.mapChosen===true;prefs.map=prefs.mapChosen?saved.map===true:true;if(typeof saved.fullscreen==='boolean')prefs.fullscreen=saved.fullscreen;}}catch{}
- function save(){try{localStorage.setItem('math-survival.ui.v1',JSON.stringify(prefs));}catch{}}
+ prefs.mapChosen=saved.mapChosen===true;prefs.map=prefs.mapChosen?saved.map===true:true;if(typeof saved.fullscreen==='boolean')prefs.fullscreen=saved.fullscreen;if(typeof saved.landscapeOnly==='boolean')prefs.landscapeOnly=saved.landscapeOnly;}}catch{}
+ function save(){const {landscapeOnly,...kept}=prefs;try{localStorage.setItem('math-survival.ui.v1',JSON.stringify(kept));}catch{}}
  // Fullscreen hides the browser bars. iPhone Safari has no page fullscreen, so there the 100dvh layout fills the screen instead.
  const root=document.documentElement;
  const canFullscreen=()=>!!(root.requestFullscreen||root.webkitRequestFullscreen)&&(document.fullscreenEnabled??document.webkitFullscreenEnabled)!==false;
@@ -14,10 +14,20 @@ export function createPlayUI(r){
  function exitFullscreen(){if(!isFullscreen())return;try{const request=document.exitFullscreen?document.exitFullscreen():document.webkitExitFullscreen();request?.catch?.(()=>{});}catch{}}
  // Called from the start button click so the browser accepts it as a user gesture.
  function startFullscreen(){if(prefs.fullscreen)enterFullscreen();else window.scrollTo(0,0);}
+ // Phones play in landscape. Android fullscreen can lock the screen; everywhere else a held-upright phone pauses with a rotate notice.
+ const phonePortrait=matchMedia('(pointer: coarse) and (orientation: portrait) and (max-width: 599px)');
+ const isPhone=()=>matchMedia('(pointer: coarse)').matches&&Math.min(screen.width,screen.height)<600;
+ function lockLandscape(){if(!prefs.landscapeOnly||!isPhone()||!isFullscreen())return;try{screen.orientation?.lock?.('landscape')?.catch?.(()=>{});}catch{}}
+ let rotatePaused=false;
+ function guardOrientation(){const guard=$('rotateGuard'),s=r.state;if(!guard)return;const need=prefs.landscapeOnly&&s.running&&document.body.classList.contains('game-running')&&phonePortrait.matches;
+  if(need&&!guard.open){if(!s.paused&&!s.mathPopup&&!s.merchantOpen&&!s.levelUpPending&&!s.explanationPending){r.v2.pause();rotatePaused=s.paused;}guard.showModal();}
+  else if(!need&&guard.open){guard.close();if(rotatePaused&&s.running&&s.paused&&dialog.open)r.v2.pause();rotatePaused=false;}}
+ // Landscape phones lay the health/level strip over the top of the field, so canvas labels and the minimap start below it.
+ function syncTopInset(){const v=r.viewport,field=r.surface.getBoundingClientRect(),head=$('gameHeader')?.getBoundingClientRect();v.top=head&&head.height&&field.height&&head.bottom>field.top&&head.top<field.top+field.height/2&&head.left<field.right&&head.right>field.left?Math.ceil(head.bottom-field.top):0;}
  function syncFullscreen(){const button=$('fullscreenBtn');if(!button)return;const on=isFullscreen();button.textContent=on?'↙ 전체화면 끄기':'⛶ 전체화면';button.setAttribute('aria-pressed',String(on));}
  function close(){if(dialog?.open)dialog.close();$('pauseBtn')?.setAttribute('aria-expanded','false');}
  function pauseChanged(){if(r.state.paused&&!dialog.open){dialog.showModal();$('resumePlay').focus();}else if(!r.state.paused&&dialog.open){close();$('pauseBtn').focus();}$('pauseBtn').setAttribute('aria-expanded',String(dialog.open));}
- function sync(){const s=r.state,cfg=r.v2.config;
+ function sync(){const s=r.state,cfg=r.v2.config;syncTopInset();guardOrientation();
   $('healthMeter').max=s.maxHp||120;$('healthMeter').value=Math.max(0,s.hp||0);$('experienceMeter').value=Number($('exp').textContent)||0;$('compactEnergy').textContent='🔋 '+Math.floor(s.mathEnergy||0);
   const answering=s.quizActive&&!s.mathPopup;$('questionBox').hidden=!answering;$('answerBar').hidden=!(answering&&(cfg.mode==='explore'||prefs.answers==='buttons'));
   $('learningArea').hidden=!(answering||(!s.mathPopup&&($('explanation').textContent||s.explanationPending)));
@@ -36,7 +46,7 @@ export function createPlayUI(r){
   dialog.innerHTML='<h2 id="playMenuTitle">잠깐 쉬어가요</h2><p class="keyboardOnly">방향키로 메뉴 이동 · Enter로 선택 · 입력칸은 Tab<br>전투와 게임 시간이 멈췄어요.</p><button id="resumePlay">▶ 계속하기</button><div id="menuActions"></div><details id="playPreferences"><summary>조작·화면 설정</summary><label class="check"><input id="autoSkillToggle" type="checkbox">특수 스킬 자동 사용</label><label>전투 답안 방식<select id="combatAnswerMode"><option value="orbs">정답 구슬 찾아가기</option><option value="buttons">답안 버튼으로 구슬 선택</option></select></label><label class="check"><input id="menuReduced" type="checkbox">애니메이션 감소</label><label class="check"><input id="menuLow" type="checkbox">저사양 모드</label><label>글자 크기<select id="menuFont"><option value="1">기본</option><option value="1.15">크게</option><option value="1.3">아주 크게</option></select></label></details><details><summary>게임 설명</summary><p>방향키·WASD 또는 왼쪽 조이스틱으로 이동해요. 공격은 알아서 나가요. 정답 구슬을 찾으면 수학 에너지가 올라가요.</p><p>오른쪽 대시 버튼이나 Space를 누르면 잠깐 빠르게 움직여요. 특수 스킬을 직접 쓸 때는 E를 눌러요. P나 Esc를 누르면 쉬어갈 수 있어요.</p><p>답안 버튼은 클릭하거나, 방향키로 고른 뒤 Enter로 선택해요. 답안 버튼이 보일 때 캐릭터는 WASD로 움직여요.</p><p>구슬 대신 답안 버튼을 쓰고 싶거나, 특수 스킬을 직접 쓰고 싶으면 위의 조작·화면 설정을 열어 보세요.</p></details>';
   document.body.append(dialog);for(const id of ['saveExitBtn','playSound','mainMenuBtn','quitGameBtn'])$('menuActions').append($(id));
   const full=document.createElement('button');full.id='fullscreenBtn';full.type='button';$('playSound').after(full);
-  if(canFullscreen()){$('menuActions').classList.add('has-fullscreen');full.onclick=()=>{prefs.fullscreen=!isFullscreen();save();if(prefs.fullscreen)enterFullscreen();else exitFullscreen();};syncFullscreen();for(const type of ['fullscreenchange','webkitfullscreenchange'])document.addEventListener(type,syncFullscreen);}
+  if(canFullscreen()){$('menuActions').classList.add('has-fullscreen');full.onclick=()=>{prefs.fullscreen=!isFullscreen();save();if(prefs.fullscreen)enterFullscreen();else exitFullscreen();};syncFullscreen();for(const type of ['fullscreenchange','webkitfullscreenchange'])document.addEventListener(type,()=>{syncFullscreen();lockLandscape();});}
   else{full.remove();if(!matchMedia('(display-mode: standalone)').matches&&!navigator.standalone)$('menuActions').insertAdjacentHTML('afterend','<p id="fullscreenTip" class="small">아이폰에서는 공유 버튼 → ‘홈 화면에 추가’로 열면 주소창 없이 화면 전체로 할 수 있어요.</p>');}
   const stats=document.createElement('div');stats.id='detailedStats';for(const id of ['score','weaponLevel','combo','shield','time'])stats.append($(id).parentElement);
   $('gameDetails').append(stats,$('v3HUD'));dialog.append($('gameDetails'));$('gameDetails').querySelector('summary').textContent='미션·장비·상세 기록';
@@ -53,6 +63,10 @@ export function createPlayUI(r){
   const placeControls=()=>{document.body.classList.toggle('mobile-play',mobileControls.matches);(mobileControls.matches?$('playfield'):$('wrap')).append($('touchControls'));};
   if(mobileControls.addEventListener)mobileControls.addEventListener('change',placeControls);else mobileControls.addListener(placeControls);
   placeControls();
+  const guard=document.createElement('dialog');guard.id='rotateGuard';guard.setAttribute('aria-labelledby','rotateTitle');
+  guard.innerHTML='<div class="rotateBody"><div class="rotatePhone" aria-hidden="true">📱</div><h2 id="rotateTitle">휴대폰을 가로로 돌려 주세요</h2><p>가로로 돌리면 게임이 바로 이어져요.</p></div>';
+  guard.addEventListener('cancel',e=>e.preventDefault());document.body.append(guard);
+  if(phonePortrait.addEventListener)phonePortrait.addEventListener('change',guardOrientation);else phonePortrait.addListener(guardOrientation);
  }
- return {mount,sync,pauseChanged,close,startFullscreen,exitFullscreen,get fullscreen(){return isFullscreen();},get isOpen(){return dialog.open;},get mapVisible(){return prefs.map;}};
+ return {mount,sync,syncTopInset,guardOrientation,pauseChanged,close,startFullscreen,exitFullscreen,get fullscreen(){return isFullscreen();},get isOpen(){return dialog.open;},get mapVisible(){return prefs.map;}};
 }

@@ -443,13 +443,13 @@ function drawPet(now) {
       gameRuntime.ctx.restore();
     }
 
-// On touch screens the joystick and dash button sit over the bottom corners, so the minimap moves to the top right.
+// On touch screens the joystick and dash button sit over the bottom corners, so the minimap moves to the top right (below the landscape health/level strip).
 function miniMapRect() {
       if(!gameRuntime.v2.playUI.mapVisible||gameRuntime.canvas.height<220)return null;
       // Same 4:3 shape as the world, about 30% of the play area wide.
       const top = document.body.classList.contains('mobile-play');
       const h = Math.min(180, gameRuntime.canvas.width*.3*.75, gameRuntime.canvas.height*.3), w = h/.75;
-      return {x:gameRuntime.canvas.width - w - (top?10:16), y:top?10:gameRuntime.canvas.height - h - 16, w, h};
+      return {x:gameRuntime.canvas.width - w - (top?10:16), y:top?(gameRuntime.viewport.top||0)+10:gameRuntime.canvas.height - h - 16, w, h};
     }
 
 function drawMiniMap() {
